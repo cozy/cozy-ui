@@ -1,11 +1,6 @@
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Button from "cozy-ui/transpiled/react/Button";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import React from 'react';
 var styles = {
   "SelectionBar": "styles__SelectionBar___3UOqy",
   "SelectionBar-count": "styles__SelectionBar-count___1e2yD",
@@ -14,6 +9,11 @@ var styles = {
   "spin": "styles__spin___1MUwn",
   "shake": "styles__shake___qrFb_"
 };
+import Button from "cozy-ui/transpiled/react/Button";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var SelectionBarAction = function SelectionBarAction(_ref) {
   var selectedCount = _ref.selectedCount,

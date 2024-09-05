@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
-import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
 import PreviousIcon from "cozy-ui/transpiled/react/Icons/Previous";
 import Paper from "cozy-ui/transpiled/react/Paper";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
+import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
 var barStyle = {
   height: 48
 };

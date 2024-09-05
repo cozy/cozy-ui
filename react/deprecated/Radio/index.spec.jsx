@@ -1,10 +1,9 @@
+import { render, fireEvent } from '@testing-library/react'
 import React, { useState } from 'react'
 
-import { render, fireEvent } from '@testing-library/react'
-
 import Radio from '.'
-import RadioGroup from '../../RadioGroup'
 import FormControlLabel from '../../FormControlLabel'
+import RadioGroup from '../../RadioGroup'
 
 const RadioGroupComponent = ({ radioOnChange, radioName }) => {
   const [radioValue, setRadioValue] = useState('item1')
@@ -76,7 +75,7 @@ xdescribe('Radio', () => {
   })
 
   it(`should handle a 'name' prop`, async () => {
-    const { container } = render(<Radio name={'hello'} />)
+    const { container } = render(<Radio name="hello" />)
 
     const input = container.querySelector('input[type=radio]')
 

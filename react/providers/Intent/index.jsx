@@ -7,8 +7,8 @@ import React, {
 } from 'react'
 
 import { useClient } from 'cozy-client'
-import Spinner from 'cozy-ui/transpiled/react/Spinner'
 import Backdrop from 'cozy-ui/transpiled/react/Backdrop'
+import Spinner from 'cozy-ui/transpiled/react/Spinner'
 
 export const IntentContext = createContext()
 

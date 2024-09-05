@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from "cozy-ui/transpiled/react/styles";
+import React from 'react';
 import Banner from "cozy-ui/transpiled/react/Banner";
 import { LinearProgress } from "cozy-ui/transpiled/react/Progress";
 import Typography from "cozy-ui/transpiled/react/Typography";
+import { withStyles } from "cozy-ui/transpiled/react/styles";
 var progressHeight = '0.125rem';
 
 var styles = function styles(theme) {

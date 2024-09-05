@@ -1,12 +1,11 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { withClient } from 'cozy-client'
 
-import { useI18n } from '../../providers/I18n'
-import { FileDoctype } from '../../proptypes'
 import Button from '../../deprecated/Button'
-
+import { FileDoctype } from '../../proptypes'
+import { useI18n } from '../../providers/I18n'
 import { downloadFile } from '../helpers'
 
 const DownloadButton = ({ client, file, url }) => {

@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Stack from "cozy-ui/transpiled/react/Stack";
+import PropTypes from 'prop-types';
+import React from 'react';
+import getPanelBlocks, { getPanelBlocksSpecs } from "cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks";
 import Paper from "cozy-ui/transpiled/react/Paper";
+import Stack from "cozy-ui/transpiled/react/Stack";
 import Typography from "cozy-ui/transpiled/react/Typography";
 import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
-import getPanelBlocks, { getPanelBlocksSpecs } from "cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks";
 
 var PanelContent = function PanelContent(_ref) {
   var file = _ref.file,
@@ -34,7 +34,7 @@ var PanelContent = function PanelContent(_ref) {
       square: true
     }, /*#__PURE__*/React.createElement(Typography, {
       variant: "h4",
-      className: 'u-pv-1'
+      className: "u-pv-1"
     }, /*#__PURE__*/React.createElement(PanelBlock, {
       file: file
     })));

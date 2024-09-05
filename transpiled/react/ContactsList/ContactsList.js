@@ -1,15 +1,15 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["contacts", "onItemClick"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { Table } from "cozy-ui/transpiled/react/deprecated/Table";
+import React from 'react';
+import ContactRow from "cozy-ui/transpiled/react/ContactsList/ContactRow";
+import { sortContacts, categorizeContacts, sortHeaders } from "cozy-ui/transpiled/react/ContactsList/helpers";
+import withContactsListLocales from "cozy-ui/transpiled/react/ContactsList/locales/withContactsListLocales";
 import List from "cozy-ui/transpiled/react/List";
 import ListSubheader from "cozy-ui/transpiled/react/ListSubheader";
-import { sortContacts, categorizeContacts, sortHeaders } from "cozy-ui/transpiled/react/ContactsList/helpers";
-import ContactRow from "cozy-ui/transpiled/react/ContactsList/ContactRow";
+import { Table } from "cozy-ui/transpiled/react/deprecated/Table";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import withContactsListLocales from "cozy-ui/transpiled/react/ContactsList/locales/withContactsListLocales";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var ContactsList = function ContactsList(_ref) {
   var contacts = _ref.contacts,

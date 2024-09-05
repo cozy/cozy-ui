@@ -1,7 +1,5 @@
-import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
-import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import React, { memo } from 'react';
 var en = {
   footer: {
     buttons: {
@@ -18,6 +16,8 @@ var fr = {
     }
   }
 };
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var locales = {
   en: en,
   fr: fr

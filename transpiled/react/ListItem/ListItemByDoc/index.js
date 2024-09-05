@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import ListItemFile from "cozy-ui/transpiled/react/ListItem/ListItemFile";
-import ListItemContact from "cozy-ui/transpiled/react/ListItem/ListItemContact";
+import React from 'react';
 import { makeDefaultExpandedAttributes } from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes/helpers";
+import ListItemContact from "cozy-ui/transpiled/react/ListItem/ListItemContact";
+import ListItemFile from "cozy-ui/transpiled/react/ListItem/ListItemFile";
 
 var ListItemByDoc = function ListItemByDoc(_ref) {
   var doc = _ref.doc,

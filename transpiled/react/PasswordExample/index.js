@@ -3,13 +3,13 @@ import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["token", "className", "color"],
     _excluded2 = ["password", "color"];
-import React from 'react';
 import cx from 'classnames';
-import InlineCard from "cozy-ui/transpiled/react/deprecated/InlineCard";
+import React from 'react';
 var styles = {
   "Token--number": "styles__Token--number___2EzoN",
   "Token--special": "styles__Token--special___3_rSu"
 };
+import InlineCard from "cozy-ui/transpiled/react/deprecated/InlineCard";
 var alphaRegexp = /^[a-z]$/i;
 var numberRegexp = /^[0-9]$/;
 

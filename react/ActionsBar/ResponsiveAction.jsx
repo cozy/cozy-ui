@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react'
 
+import Button from '../Buttons'
+import Icon from '../Icon'
+import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
 import { makeStyles } from '../styles'
-import Button from '../Buttons'
-import Typography from '../Typography'
-import Icon from '../Icon'
 
 const useDesktopStyles = makeStyles({
   root: {

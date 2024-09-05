@@ -4,8 +4,8 @@ import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import React, { useEffect, useMemo, useState, createContext, useContext } from 'react';
 import { useClient } from 'cozy-client';
-import Spinner from 'cozy-ui/transpiled/react/Spinner';
 import Backdrop from 'cozy-ui/transpiled/react/Backdrop';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
 export var IntentContext = /*#__PURE__*/createContext();
 export var useIntent = function useIntent() {
   var context = useContext(IntentContext);

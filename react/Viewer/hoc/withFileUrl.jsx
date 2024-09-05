@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
-import ViewerSpinner from '../components/ViewerSpinner'
 import NoNetworkViewer from '../ViewersByFile/NoNetworkViewer'
+import ViewerSpinner from '../components/ViewerSpinner'
 import { isFileEncrypted } from '../helpers'
 
 const TTL = 6000

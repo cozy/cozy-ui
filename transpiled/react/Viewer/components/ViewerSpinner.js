@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
-import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
 import Spinner from "cozy-ui/transpiled/react/Spinner";
+import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
 
 var ViewerSpinner = function ViewerSpinner(_ref) {
   var isDesktop = _ref.breakpoints.isDesktop;

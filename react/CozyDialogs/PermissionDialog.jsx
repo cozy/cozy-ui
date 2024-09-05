@@ -1,12 +1,12 @@
-import React from 'react'
 import cx from 'classnames'
-
-import { makeStyles } from '../styles'
-import CozyTheme from '../providers/CozyTheme'
-import ConfirmDialog from './ConfirmDialog'
 import PropTypes from 'prop-types'
+import React from 'react'
+
+import ConfirmDialog from './ConfirmDialog'
 import Icon from '../Icon'
 import Paper from '../Paper'
+import CozyTheme from '../providers/CozyTheme'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   floatingIcon: {

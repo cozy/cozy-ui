@@ -1,6 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import { useState } from 'react';
 import debounce from 'lodash/debounce';
+import { useState } from 'react';
 import useEventListener from "cozy-ui/transpiled/react/hooks/useEventListener";
 import { unRef } from "cozy-ui/transpiled/react/helpers/ref";
 /**

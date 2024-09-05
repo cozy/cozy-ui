@@ -12,16 +12,11 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
+import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
 import { withClient, models } from 'cozy-client';
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
-import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
-import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
-import { isFileEncrypted } from "cozy-ui/transpiled/react/Viewer/helpers";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -38,6 +33,11 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
+import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
+import { isFileEncrypted } from "cozy-ui/transpiled/react/Viewer/helpers";
+import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
 
 var MarkdownRenderer = function MarkdownRenderer(_ref) {
   var text = _ref.text;

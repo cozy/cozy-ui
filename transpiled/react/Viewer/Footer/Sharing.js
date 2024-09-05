@@ -1,11 +1,11 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useClient } from 'cozy-client';
 import { ShareModal, ShareButton } from 'cozy-sharing';
 import { SharingProvider } from 'cozy-sharing/dist/SharingProvider';
-import IconButton from "cozy-ui/transpiled/react/IconButton";
 import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
 import ShareIcon from "cozy-ui/transpiled/react/Icons/Share";
 
 var Sharing = function Sharing(_ref) {

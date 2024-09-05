@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["docs", "actions", "anchorOrigin", "children", "componentsProps", "onClose"];
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import ActionsMenuWrapper from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuWrapper";
+import React, { forwardRef } from 'react';
 import ActionsItems from "cozy-ui/transpiled/react/ActionsMenu/ActionsItems";
+import ActionsMenuWrapper from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuWrapper";
 
 var useTransformOrigin = function useTransformOrigin(_ref) {
   var vertical = _ref.vertical,

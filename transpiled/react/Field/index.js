@@ -10,15 +10,10 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { useState } from 'react';
 import cx from 'classnames';
 import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
-var labelStyles = {
-  "c-label": "styles__c-label___o4ozG",
-  "is-error": "styles__is-error___2Dwem",
-  "c-label--block": "styles__c-label--block___2ZV_7"
-};
+import React, { useState } from 'react';
 var styles = {
   "o-field": "styles__o-field___3n5HM",
   "o-field--inline": "styles__o-field--inline___7JWZ8",
@@ -27,11 +22,16 @@ var styles = {
   "o-field-input-action": "styles__o-field-input-action___2k7a8",
   "o-side-fullwidth": "styles__o-side-fullwidth___7WcCI"
 };
-import Label from "cozy-ui/transpiled/react/Label";
+import ContactPicker from "cozy-ui/transpiled/react/ContactPicker";
 import Input from "cozy-ui/transpiled/react/Input";
+import Label from "cozy-ui/transpiled/react/Label";
+var labelStyles = {
+  "c-label": "styles__c-label___o4ozG",
+  "is-error": "styles__is-error___2Dwem",
+  "c-label--block": "styles__c-label--block___2ZV_7"
+};
 import SelectBox from "cozy-ui/transpiled/react/SelectBox";
 import Textarea from "cozy-ui/transpiled/react/Textarea";
-import ContactPicker from "cozy-ui/transpiled/react/ContactPicker";
 /**
  * PropTypes to pass to Input but not to other components, like SelectBox
  * for example

@@ -2,10 +2,10 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["isOver"];
-import React from 'react';
-import PropTypes from 'prop-types';
 import MuiBackdrop from '@material-ui/core/Backdrop';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   isOver: {

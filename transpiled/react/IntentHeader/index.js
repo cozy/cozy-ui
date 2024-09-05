@@ -1,11 +1,11 @@
-import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "intentHeader": "styles__intentHeader___m5Qjh",
   "intentHeader-title": "styles__intentHeader-title___1r4ex",
   "intentHeader-icon": "styles__intentHeader-icon___3s30C"
 };
-import cx from 'classnames';
 export var IntentHeader = function IntentHeader(_ref) {
   var appName = _ref.appName,
       appEditor = _ref.appEditor,

@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Grid from "cozy-ui/transpiled/react/Grid";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "gridItem-container": "styles__gridItem-container___2Xeyk"
 };
+import Grid from "cozy-ui/transpiled/react/Grid";
 
 var GridItem = function GridItem(_ref) {
   var _onClick = _ref.onClick,

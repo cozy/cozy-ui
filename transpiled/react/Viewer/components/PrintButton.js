@@ -7,15 +7,15 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { useState, useEffect, forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { useWebviewIntent } from 'cozy-intent';
-import Button from "cozy-ui/transpiled/react/Buttons";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import ActionsItems, { actionsItemsComponentPropTypes } from "cozy-ui/transpiled/react/ActionsMenu/ActionsItems";
-import { print } from "cozy-ui/transpiled/react/ActionsMenu/Actions/print";
 import { makeActions } from "cozy-ui/transpiled/react/ActionsMenu/Actions/helpers";
+import { print } from "cozy-ui/transpiled/react/ActionsMenu/Actions/print";
+import ActionsItems, { actionsItemsComponentPropTypes } from "cozy-ui/transpiled/react/ActionsMenu/ActionsItems";
+import Button from "cozy-ui/transpiled/react/Buttons";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
 var ActionComponent = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var action = _ref.action,
       variant = _ref.variant,

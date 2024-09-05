@@ -1,19 +1,19 @@
-import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { isMobile as isMobileDevice } from 'cozy-device-helper';
+import React, { useMemo } from 'react';
 import { isPlainText } from 'cozy-client/dist/models/file';
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
+import { isMobile as isMobileDevice } from 'cozy-device-helper';
 import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
-import ImageViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/ImageViewer";
-import AudioViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/AudioViewer";
-import VideoViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/VideoViewer";
-import PdfJsViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/PdfJsViewer";
-import BlankPaperViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/BlankPaperViewer";
-import TextViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/TextViewer";
-import PdfMobileViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/PdfMobileViewer";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
-import ShortcutViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/ShortcutViewer";
+import AudioViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/AudioViewer";
+import BlankPaperViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/BlankPaperViewer";
+import ImageViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/ImageViewer";
 import OnlyOfficeViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/OnlyOfficeViewer";
+import PdfJsViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/PdfJsViewer";
+import PdfMobileViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/PdfMobileViewer";
+import ShortcutViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/ShortcutViewer";
+import TextViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/TextViewer";
+import VideoViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/VideoViewer";
 import { useEncrypted } from "cozy-ui/transpiled/react/Viewer/providers/EncryptedProvider";
 
 var isBlankPaper = function isBlankPaper(doc) {

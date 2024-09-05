@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
+import React from 'react';
 import { ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu";
+import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     disabledItem: {

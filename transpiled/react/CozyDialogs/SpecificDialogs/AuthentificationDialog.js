@@ -1,14 +1,14 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
-import PermissionDialog from "cozy-ui/transpiled/react/CozyDialogs/PermissionDialog";
-import Buttons from "cozy-ui/transpiled/react/Buttons";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React, { useMemo, useState } from 'react';
 import { useClient } from 'cozy-client';
+import withSpecificDialogsLocales from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/withSpecificDialogsLocales";
+import Buttons from "cozy-ui/transpiled/react/Buttons";
 import CozyAuthentificationIcon from "cozy-ui/transpiled/react/Icons/CozyAuthentification";
 import PasswordField from "cozy-ui/transpiled/react/PasswordField";
-import withSpecificDialogsLocales from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/withSpecificDialogsLocales";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import PermissionDialog from "cozy-ui/transpiled/react/CozyDialogs/PermissionDialog";
 /**
  * Dialog used to authenticate a user in the cozy system.
  * The authentication logic is implemented in the applications.

@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
-import MuiTabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import MuiTabs from '@material-ui/core/Tabs';
+import React from 'react';
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var Tabs = function Tabs(props) {

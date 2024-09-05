@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react'
 import MuiTextField from '@material-ui/core/TextField'
+import React, { forwardRef } from 'react'
 
+import MobileSelect from './MobileSelect'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import { getRandomUUID } from '../helpers/getRandomUUID'
 import { useBreakpoints } from '../providers/Breakpoints'
-import MobileSelect from './MobileSelect'
 
 const TextField = forwardRef(({ select, options, children, ...props }, ref) => {
   // A11Y, https://v4.mui.com/api/text-field/#props

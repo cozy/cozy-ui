@@ -3,9 +3,9 @@ import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProper
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 var _excluded = ["busy", "disabled"],
     _excluded2 = ["children", "icon", "iconOnly", "label", "subtle", "className", "extension", "round", "size", "theme", "align", "extraRight", "tag"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-btn": "styles__c-btn___3kXsk",
   "c-btn--regular": "styles__c-btn--regular___1ilYT",

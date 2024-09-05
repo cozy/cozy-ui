@@ -4,8 +4,9 @@ import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProper
 var _excluded = ["children", "className", "align"],
     _excluded2 = ["children", "className", "style"],
     _excluded3 = ["children", "className", "style"];
-import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "media": "styles__media___1rIBu",
   "media--top": "styles__media--top___1t0j5",
@@ -13,7 +14,6 @@ var styles = {
   "bd": "styles__bd___3SAX2",
   "img": "styles__img___3sztD"
 };
-import cx from 'classnames';
 /**
  * Useful to align image/icon and content.
  */

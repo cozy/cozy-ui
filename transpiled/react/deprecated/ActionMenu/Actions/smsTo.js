@@ -1,8 +1,8 @@
 import React from 'react';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import CommentIcon from "cozy-ui/transpiled/react/Icons/Comment";
-import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 import withActionsLocales from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/locales/withActionsLocales";
+import CommentIcon from "cozy-ui/transpiled/react/Icons/Comment";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 export var smsTo = function smsTo() {
   return {
     name: 'smsTo',

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { models } from 'cozy-client';
 import Typography from "cozy-ui/transpiled/react/Typography";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";

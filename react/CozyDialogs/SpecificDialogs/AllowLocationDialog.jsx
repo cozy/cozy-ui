@@ -1,14 +1,13 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
+import CozyLocation from './icons/CozyLocation'
+import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 import { IllustrationDialog } from '..'
-import { useI18n } from '../../providers/I18n'
+import Button from '../../Buttons'
 import Icon from '../../Icon'
 import Typography from '../../Typography'
-import Button from '../../Buttons'
-import CozyLocation from './icons/CozyLocation'
-
-import withSpecificDialogsLocales from './withSpecificDialogsLocales'
+import { useI18n } from '../../providers/I18n'
 
 const createStyles = () => ({
   typography: {

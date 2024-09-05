@@ -1,29 +1,28 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 import { useClient } from 'cozy-client'
 
-import { DialogTitle, DialogContent } from '../Dialog'
-import CozyTheme from '../providers/CozyTheme'
+import AddContactDialog from './AddContact/AddContactDialog'
+import ContactsListContent from './ContactsListContent'
+import MobileHeader from './MobileHeader'
+import styles from './styles.styl'
+import Button from '../Buttons'
 import {
   TopAnchoredDialog,
   DialogCloseButton,
   useCozyDialog
 } from '../CozyDialogs'
-import useRealtime from '../hooks/useRealtime'
+import { DialogTitle, DialogContent } from '../Dialog'
+import Icon from '../Icon'
+import PlusIcon from '../Icons/Plus'
 import useEventListener from '../hooks/useEventListener'
+import useRealtime from '../hooks/useRealtime'
+import CozyTheme from '../providers/CozyTheme'
 import useBreakpoints from '../providers/Breakpoints'
 import { useI18n } from '../providers/I18n'
-import Button from '../Buttons'
-import PlusIcon from '../Icons/Plus'
-import Icon from '../Icon'
 import TextField from '../TextField'
-import MobileHeader from './MobileHeader'
-import ContactsListContent from './ContactsListContent'
-import AddContactDialog from './AddContact/AddContactDialog'
-
-import styles from './styles.styl'
 
 const ContactsListModal = ({
   onItemClick,

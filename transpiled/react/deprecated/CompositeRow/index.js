@@ -1,16 +1,16 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["style", "className", "primaryText", "primaryTextClassName", "secondaryTextClassName", "secondaryText", "image", "right", "actions", "dense"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "CompositeRow": "styles__CompositeRow___1Dmi2",
   "CompositeRow__dense": "styles__CompositeRow__dense___3p1f3",
   "CompositeRow__body": "styles__CompositeRow__body___1Bjsp"
 };
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
 var denseStyle = {
   height: '48px'
 };

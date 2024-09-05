@@ -1,8 +1,4 @@
 import React from 'react';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import CloudBrokenIcon from "cozy-ui/transpiled/react/Icons/CloudBroken";
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -19,6 +15,10 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import CloudBrokenIcon from "cozy-ui/transpiled/react/Icons/CloudBroken";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 
 var NoNetworkViewer = function NoNetworkViewer(_ref) {
   var t = _ref.t,

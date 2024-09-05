@@ -1,7 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from "cozy-ui/transpiled/react/styles";
+import React from 'react';
 import { getTheme } from "cozy-ui/transpiled/react/MuiCozyTheme/theme";
+import { ThemeProvider } from "cozy-ui/transpiled/react/styles";
 console.log(' ');
 console.log('🟢 BUILDED FROM GA - should be right');
 console.log(' ');

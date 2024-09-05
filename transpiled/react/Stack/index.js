@@ -1,9 +1,9 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["spacing", "tag"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "Stack--m": "styles__Stack--m___1tSpV",
   "Stack--xs": "styles__Stack--xs___2R5lW",

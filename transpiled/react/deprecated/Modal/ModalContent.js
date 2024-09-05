@@ -10,8 +10,9 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
 import cx from 'classnames';
+import React, { Component } from 'react';
+import AnimatedContentHeader from "cozy-ui/transpiled/react/deprecated/Modal/AnimatedContentHeader";
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
   "c-modal-content": "styles__c-modal-content___22N4k",
@@ -47,7 +48,6 @@ var styles = {
   "spin": "styles__spin___1fJIg",
   "shake": "styles__shake___gVu0K"
 };
-import AnimatedContentHeader from "cozy-ui/transpiled/react/deprecated/Modal/AnimatedContentHeader";
 
 function _getChildrenToRender(children) {
   return React.Children.map(children, function (child) {

@@ -1,16 +1,16 @@
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 var styles = {
   "ActionMenuDesktop-ActionMenu": "styles__ActionMenuDesktop-ActionMenu___1iicy",
   "ActionMenuDesktop-ActionMenu-link-disabled": "styles__ActionMenuDesktop-ActionMenu-link-disabled___3QHjm"
 };
+import AppLinker from "cozy-ui/transpiled/react/AppLinker";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import Copy from "cozy-ui/transpiled/react/Icons/Copy";
 import Edit from "cozy-ui/transpiled/react/Icons/Rename";
-import ActionMenu, { ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu";
 import Typography from "cozy-ui/transpiled/react/Typography";
+import ActionMenu, { ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import AppLinker from "cozy-ui/transpiled/react/AppLinker";
 var ActionMenuDesktop = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var onClose = _ref.onClose,
       isEditable = _ref.isEditable,

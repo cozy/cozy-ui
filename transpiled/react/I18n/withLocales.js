@@ -1,5 +1,5 @@
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 var logDeprecatedWithLocale = createDepreciationLogger();
 
 var deprecatedWithLocales = function deprecatedWithLocales(props) {

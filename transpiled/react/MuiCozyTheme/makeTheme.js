@@ -4,16 +4,16 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import { createTheme } from "cozy-ui/transpiled/react/styles";
-import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
-import { createNodeWithThemeCssVars } from "cozy-ui/transpiled/react/utils/color";
 import { makeShadows } from "cozy-ui/transpiled/react/MuiCozyTheme/helpers";
 import { makePalette } from "cozy-ui/transpiled/react/MuiCozyTheme/makePalette";
 import { makeTypography } from "cozy-ui/transpiled/react/MuiCozyTheme/makeTypography";
-import { makeLightNormalOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeLightNormalOverrides";
-import { makeLightInvertedOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeLightInvertedOverrides";
-import { makeDarkNormalOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeDarkNormalOverrides";
 import { makeDarkInvertedOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeDarkInvertedOverrides";
+import { makeDarkNormalOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeDarkNormalOverrides";
+import { makeLightInvertedOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeLightInvertedOverrides";
+import { makeLightNormalOverrides } from "cozy-ui/transpiled/react/MuiCozyTheme/overrides/makeLightNormalOverrides";
+import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import { createTheme } from "cozy-ui/transpiled/react/styles";
+import { createNodeWithThemeCssVars } from "cozy-ui/transpiled/react/utils/color";
 
 var makeOverridesByTheme = function makeOverridesByTheme(theme) {
   return {

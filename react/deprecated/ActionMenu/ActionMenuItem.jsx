@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import { Media, Bd, Img } from '../Media'
-import { spacingProp } from '../../Stack'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import styles from './styles.styl'
+import { spacingProp } from '../../Stack'
+import { Media, Bd, Img } from '../Media'
 
 export const ActionMenuItem = ({
   left,

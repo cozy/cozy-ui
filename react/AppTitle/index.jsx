@@ -1,7 +1,8 @@
-import React from 'react'
-import cx from 'classnames'
 import Typography from '@material-ui/core/Typography'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
+
 import styles from './styles.styl'
 
 export const AppTitle = ({ children, tag, className, ...restProps }) => {

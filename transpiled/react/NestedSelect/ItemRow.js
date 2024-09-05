@@ -5,17 +5,17 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Divider from "cozy-ui/transpiled/react/Divider";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import Divider from "cozy-ui/transpiled/react/Divider";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import Radio from "cozy-ui/transpiled/react/Radios";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import Typography from "cozy-ui/transpiled/react/Typography";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 var infoStyle = {
   color: 'var(--secondaryTextColor)'
 };

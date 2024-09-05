@@ -1,22 +1,22 @@
+import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
-import PropTypes from 'prop-types'
 
-import { isFlagshipApp } from 'cozy-device-helper'
 import { useInstanceInfo } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
+import { isFlagshipApp } from 'cozy-device-helper'
 import flag from 'cozy-flags'
 import { useWebviewIntent } from 'cozy-intent'
 
-import Spinner from '../Spinner'
+import { makeType } from './helpers'
+import withPaywallLocales from './locales/withPaywallLocales'
+import Button from '../Buttons'
 import { IllustrationDialog } from '../CozyDialogs'
 import Icon from '../Icon'
 import CozyUpgradeIcon from '../Icons/CozyUpgrade'
-import Button from '../Buttons'
+import Spinner from '../Spinner'
 import Typography from '../Typography'
-import { makeType } from './helpers'
 import { useI18n } from '../providers/I18n'
-import withPaywallLocales from './locales/withPaywallLocales'
 
 /**
  * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case

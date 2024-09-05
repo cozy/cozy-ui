@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className", "variant", "narrowed", "segmented", "children"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import MuiTabs from '@material-ui/core/Tabs';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 var Tabs = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var className = _ref.className,

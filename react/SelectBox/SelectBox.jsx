@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import ReactSelect, { components } from 'react-select'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import ReactSelect, { components } from 'react-select'
 
 import { isIOSApp } from 'cozy-device-helper'
 
-import Icon from '../Icon'
-import CheckIcon from '../Icons/Check'
-import withBreakpoints from '../helpers/withBreakpoints'
-import TopIcon from '../Icons/Top'
-import BottomIcon from '../Icons/Bottom'
-
-import styles from './styles.styl'
 import ControlDefault from './ControlDefault'
+import styles from './styles.styl'
+import Icon from '../Icon'
+import BottomIcon from '../Icons/Bottom'
+import CheckIcon from '../Icons/Check'
+import TopIcon from '../Icons/Top'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 const heights = {
   tiny: '2rem',
@@ -131,16 +130,15 @@ const DropdownIndicator = props => {
   )
 }
 
-const reactSelectControl = CustomControl => ({
-  innerProps,
-  innerRef,
-  children
-}) => (
-  <div {...innerProps} ref={innerRef}>
-    {CustomControl}
-    <div className={styles['select-control__input']}>{children}</div>
-  </div>
-)
+const reactSelectControl =
+  CustomControl =>
+  ({ innerProps, innerRef, children }) =>
+    (
+      <div {...innerProps} ref={innerRef}>
+        {CustomControl}
+        <div className={styles['select-control__input']}>{children}</div>
+      </div>
+    )
 
 const Option = ({
   children,

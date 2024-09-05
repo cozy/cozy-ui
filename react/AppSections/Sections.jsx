@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
-import Typography from '../Typography'
-import { translate } from '../providers/I18n'
-import withBreakpoints from '../helpers/withBreakpoints'
-
-import AppsSection from './components/AppsSection'
-import DropdownFilter from './components/DropdownFilter'
-
-import { APP_TYPE } from './constants'
-import * as searchUtils from './search'
-import * as catUtils from './categories'
+import flag from 'cozy-flags'
+import { useExtendI18n } from 'cozy-ui/transpiled/react/providers/I18n'
 
 import styles from './Sections.styl'
-
-import withLocales from '../providers/I18n/withLocales'
+import * as catUtils from './categories'
+import AppsSection from './components/AppsSection'
+import DropdownFilter from './components/DropdownFilter'
+import { APP_TYPE } from './constants'
+import { generateI18nConfig } from './generateI18nConfig'
+import { isShortcutFile } from './helpers'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import * as searchUtils from './search'
+import Typography from '../Typography'
+import withBreakpoints from '../helpers/withBreakpoints'
+import { translate } from '../providers/I18n'
+import withLocales from '../providers/I18n/withLocales'
 
 const locales = {
   en,
@@ -109,10 +110,17 @@ export class Sections extends Component {
     const webAppGroups = catUtils.groupApps(
       filteredApps.filter(a => a.type === APP_TYPE.WEBAPP)
     )
+    const shortcutsGroups = catUtils.groupApps(
+      filteredApps.filter(a => isShortcutFile(a))
+    )
+
     const webAppsCategories = Object.keys(webAppGroups)
       .map(cat => catUtils.addLabel({ value: cat }, t))
       .sort(catUtils.sorter)
     const konnectorsCategories = Object.keys(konnectorGroups)
+      .map(cat => catUtils.addLabel({ value: cat }, t))
+      .sort(catUtils.sorter)
+    const shortcutsCategories = Object.keys(shortcutsGroups)
       .map(cat => catUtils.addLabel({ value: cat }, t))
       .sort(catUtils.sorter)
 
@@ -158,6 +166,33 @@ export class Sections extends Component {
               })}
             </div>
           )}
+          {!!shortcutsCategories.length && (
+            <div>
+              {showSubTitles && (
+                <SectionSubtitle>{t('sections.shortcuts')}</SectionSubtitle>
+              )}
+
+              {shortcutsCategories.map(cat => {
+                return (
+                  <AppsSection
+                    key={cat.value}
+                    {...componentsProps?.appsSection}
+                    appsList={shortcutsGroups[cat.value]}
+                    subtitle={
+                      showSubSubTitles ? (
+                        <SectionSubSubtitle>{cat.label}</SectionSubSubtitle>
+                      ) : null
+                    }
+                    IconComponent={IconComponent}
+                    onAppClick={onAppClick}
+                    displaySpecificMaintenanceStyle={
+                      displaySpecificMaintenanceStyle
+                    }
+                  />
+                )
+              })}
+            </div>
+          )}
           {!!konnectorsCategories.length && (
             <div>
               {showSubTitles && (
@@ -188,6 +223,14 @@ export class Sections extends Component {
       </div>
     )
   }
+}
+
+const SectionsWrapper = props => {
+  const config = flag('store.alternative-source')
+  const i18nConfig = generateI18nConfig(config?.categories)
+  useExtendI18n(i18nConfig)
+
+  return <Sections {...props} />
 }
 
 Sections.propTypes = {
@@ -234,6 +277,6 @@ Sections.defaultProps = {
   })
 }
 
-export const Untranslated = withBreakpoints()(Sections)
+export const Untranslated = withBreakpoints()(SectionsWrapper)
 
 export default withLocales(locales)(translate()(Untranslated))

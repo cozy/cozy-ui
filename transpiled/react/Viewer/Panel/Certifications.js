@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import has from 'lodash/has';
-import Typography from "cozy-ui/transpiled/react/Typography";
-import { Media, Img, Bd } from "cozy-ui/transpiled/react/deprecated/Media";
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
 import CarbonCopyIcon from "cozy-ui/transpiled/react/Icons/CarbonCopy";
 import SafeIcon from "cozy-ui/transpiled/react/Icons/Safe";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { Media, Img, Bd } from "cozy-ui/transpiled/react/deprecated/Media";
 import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 
 var Certification = function Certification(_ref) {
@@ -13,7 +13,7 @@ var Certification = function Certification(_ref) {
       title = _ref.title,
       caption = _ref.caption;
   return /*#__PURE__*/React.createElement("div", {
-    className: 'u-ph-2 u-pv-1'
+    className: "u-ph-2 u-pv-1"
   }, /*#__PURE__*/React.createElement(Media, {
     className: "u-mb-half",
     align: "top"

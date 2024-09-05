@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["value", "position", "color", "size", "thickness"];
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import React, { forwardRef } from 'react';
 import MuiCircularProgress from "cozy-ui/transpiled/react/CircularProgress";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   root: {
     position: function position(_ref) {

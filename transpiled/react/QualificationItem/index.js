@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["icon", "label", "isSelected", "onClick"];
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import ButtonBase from "cozy-ui/transpiled/react/ButtonBase";
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
-import FileDuotoneIcon from "cozy-ui/transpiled/react/Icons/FileDuotone";
 import IconStack from "cozy-ui/transpiled/react/IconStack";
+import FileDuotoneIcon from "cozy-ui/transpiled/react/Icons/FileDuotone";
 import Typography from "cozy-ui/transpiled/react/Typography";
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({

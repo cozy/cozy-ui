@@ -2,15 +2,15 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className", "value", "name", "label", "error", "disabled", "style", "gutter", "onChange", "checked"];
-import React from 'react';
+import { useRadioGroup } from '@material-ui/core/RadioGroup';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-input-radio": "styles__c-input-radio___1f4CB",
   "is-error": "styles__is-error___5jyha",
   "c-input-radio--noGutter": "styles__c-input-radio--noGutter___2gFTH"
 };
-import { useRadioGroup } from '@material-ui/core/RadioGroup';
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 var logRadioDepecrated = createDepreciationLogger();
 /**

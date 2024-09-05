@@ -1,8 +1,8 @@
 import React from 'react'
 
-import useBreakpoints from '../providers/Breakpoints'
 import BottomSheet from './BottomSheet'
 import Modal from './Modal'
+import useBreakpoints from '../providers/Breakpoints'
 
 const NestedSelectResponsive = props => {
   const { isMobile } = useBreakpoints()

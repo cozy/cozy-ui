@@ -1,24 +1,23 @@
-import React, { useRef, useState, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import React, { useRef, useState, useMemo } from 'react'
 
-import { makeStyles } from '../styles'
-import useBreakpoints from '../providers/Breakpoints'
+import ResponsiveAction from './ResponsiveAction'
+import withActionsLocales from './locales/withActionsLocales'
+import ActionsMenu from '../ActionsMenu'
+import { makeActions, others } from '../ActionsMenu/Actions'
+import { getOnlyNeededActions } from '../ActionsMenu/Actions/helpers'
+import ActionsItems from '../ActionsMenu/ActionsItems'
 import AppBar from '../AppBar'
-import Toolbar from '../Toolbar'
 import Box from '../Box'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
 import CrossCircleIcon from '../Icons/CrossCircle'
 import DotsIcon from '../Icons/Dots'
-import ActionsMenu from '../ActionsMenu'
-import ActionsItems from '../ActionsMenu/ActionsItems'
-import { getOnlyNeededActions } from '../ActionsMenu/Actions/helpers'
+import Toolbar from '../Toolbar'
+import useBreakpoints from '../providers/Breakpoints'
 import { useI18n } from '../providers/I18n'
-import { makeActions, others } from '../ActionsMenu/Actions'
-
-import ResponsiveAction from './ResponsiveAction'
-import withActionsLocales from './locales/withActionsLocales'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   appBar: ({ isMobile }) => ({
@@ -81,10 +80,10 @@ const ActionsBar = ({
   const showDesktopCloseButton = !!onClose && !isMobile
   const maxActionsDisplayed = isMobile ? 4 : maxDesktopActions
 
-  const cleanedActions = useMemo(() => getOnlyNeededActions(actions, docs), [
-    actions,
-    docs
-  ])
+  const cleanedActions = useMemo(
+    () => getOnlyNeededActions(actions, docs),
+    [actions, docs]
+  )
 
   const countActionsToDisplay =
     cleanedActions.length > maxActionsDisplayed

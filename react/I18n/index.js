@@ -1,6 +1,7 @@
 import React from 'react'
-import DeprecatedI18n, { useI18n as deprecatedUseI18n } from '../providers/I18n'
+
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
+import DeprecatedI18n, { useI18n as deprecatedUseI18n } from '../providers/I18n'
 
 const logDeprecatedFunc = createDepreciationLogger()
 const logDeprecatedComp = createDepreciationLogger()

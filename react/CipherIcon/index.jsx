@@ -1,12 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import { withClient } from 'cozy-client'
+
 import AppIcon from '../AppIcon'
 import Icon from '../Icon'
-import { withClient } from 'cozy-client'
-import { AppDoctype } from '../proptypes'
-
 import KeychainIcon from '../Icons/Keychain'
+import { AppDoctype } from '../proptypes'
 
 class CipherIcon extends React.PureComponent {
   constructor(props) {

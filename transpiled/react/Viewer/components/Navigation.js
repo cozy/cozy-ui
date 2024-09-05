@@ -1,9 +1,7 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import { default as ArrowIcon } from "cozy-ui/transpiled/react/Icons/DropdownClose";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "viewer-nav": "styles__viewer-nav___1MSd7",
   "viewer-nav--visible": "styles__viewer-nav--visible___h_KJD",
@@ -17,6 +15,8 @@ var styles = {
   "viewer-toolbar--hidden": "styles__viewer-toolbar--hidden___3r3Sj",
   "viewer-footer": "styles__viewer-footer___2ieQS"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import { default as ArrowIcon } from "cozy-ui/transpiled/react/Icons/DropdownClose";
 
 var Navigation = function Navigation(_ref) {
   var className = _ref.className,

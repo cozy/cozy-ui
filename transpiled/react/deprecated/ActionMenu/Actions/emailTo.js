@@ -1,8 +1,8 @@
 import React from 'react';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import EmailIcon from "cozy-ui/transpiled/react/Icons/Email";
-import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 import withActionsLocales from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/locales/withActionsLocales";
+import EmailIcon from "cozy-ui/transpiled/react/Icons/Email";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 export var emailTo = function emailTo() {
   return {
     name: 'emailTo',

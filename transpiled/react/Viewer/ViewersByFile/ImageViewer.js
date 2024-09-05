@@ -14,10 +14,8 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
 import Hammer from 'hammerjs';
-import FileImageLoader from "cozy-ui/transpiled/react/FileImageLoader";
-import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
+import React, { Component } from 'react';
 import NoNetworkViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/NoNetworkViewer";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
@@ -35,6 +33,8 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import FileImageLoader from "cozy-ui/transpiled/react/FileImageLoader";
+import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
 var MIN_SCALE = 1;
 var MAX_SCALE = 6;
 var MASS = 10; // If a paning gesture is released while the finger is still moving, the photo will keep paning for a little longer (a if you threw the photo). MASS determines how much the photo will keep paning (the higher the number, the more it will keep going)

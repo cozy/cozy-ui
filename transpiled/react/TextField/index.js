@@ -1,13 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["select", "options", "children"];
-import React, { forwardRef } from 'react';
 import MuiTextField from '@material-ui/core/TextField';
+import React, { forwardRef } from 'react';
+import MobileSelect from "cozy-ui/transpiled/react/TextField/MobileSelect";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
 import { getRandomUUID } from "cozy-ui/transpiled/react/helpers/getRandomUUID";
 import { useBreakpoints } from "cozy-ui/transpiled/react/providers/Breakpoints";
-import MobileSelect from "cozy-ui/transpiled/react/TextField/MobileSelect";
 var TextField = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var select = _ref.select,
       options = _ref.options,

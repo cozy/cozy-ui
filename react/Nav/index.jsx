@@ -1,12 +1,13 @@
-import React, { Children, isValidElement, useState, forwardRef } from 'react'
-import Icon from '../Icon'
-import styles from './styles.styl'
 import cx from 'classnames'
+import React, { Children, isValidElement, useState, forwardRef } from 'react'
+
+import withNavLocales from './locales/withNavLocales'
+import styles from './styles.styl'
+import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import TopIcon from '../Icons/Top'
-import { useI18n } from '../providers/I18n'
-import withNavLocales from './locales/withNavLocales'
 import useBreakpoints from '../providers/Breakpoints'
+import { useI18n } from '../providers/I18n'
 
 export const NavItem = ({ children, secondary, ...restProps }) => (
   <li
@@ -30,16 +31,19 @@ export const NavLink = {
 }
 
 // Generates a styled NavLink for react-routeur v5 and older
-export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
-  <RRNavLink
-    to={to}
-    className={NavLink.className}
-    activeClassName={NavLink.activeClassName}
-    {...rest}
-  >
-    {children}
-  </RRNavLink>
-)
+export const genNavLink =
+  RRNavLink =>
+  ({ to, children, ...rest }) =>
+    (
+      <RRNavLink
+        to={to}
+        className={NavLink.className}
+        activeClassName={NavLink.activeClassName}
+        {...rest}
+      >
+        {children}
+      </RRNavLink>
+    )
 
 // Generates a styled NavLink for react-routeur v6
 export const genNavLinkForV6 = RRNavLink =>

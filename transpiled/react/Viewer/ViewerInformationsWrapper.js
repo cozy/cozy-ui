@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@material-ui/core';
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import InformationPanel from "cozy-ui/transpiled/react/Viewer/components/InformationPanel";
-import Footer from "cozy-ui/transpiled/react/Viewer/components/Footer";
-import PanelContent from "cozy-ui/transpiled/react/Viewer/Panel/PanelContent";
+import PropTypes from 'prop-types';
+import React from 'react';
 import FooterContent from "cozy-ui/transpiled/react/Viewer/Footer/FooterContent";
+import PanelContent from "cozy-ui/transpiled/react/Viewer/Panel/PanelContent";
+import Footer from "cozy-ui/transpiled/react/Viewer/components/Footer";
+import InformationPanel from "cozy-ui/transpiled/react/Viewer/components/InformationPanel";
 import { useSetFlagshipUI } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
 
 var ViewerInformationsWrapper = function ViewerInformationsWrapper(_ref) {

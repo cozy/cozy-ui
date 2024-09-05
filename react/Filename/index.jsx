@@ -1,9 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import Icon, { iconPropType } from '../Icon'
-import Typography from '../Typography'
 import MidEllipsis from '../MidEllipsis'
+import Typography from '../Typography'
 
 const Filename = ({ icon, filename, extension, midEllipsis, variant }) => {
   return (

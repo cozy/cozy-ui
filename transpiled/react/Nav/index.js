@@ -3,8 +3,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "secondary"],
     _excluded2 = ["to", "children"];
+import cx from 'classnames';
 import React, { Children, isValidElement, useState, forwardRef } from 'react';
-import Icon from "cozy-ui/transpiled/react/Icon";
+import withNavLocales from "cozy-ui/transpiled/react/Nav/locales/withNavLocales";
 var styles = {
   "c-nav": "styles__c-nav___33dZy",
   "c-nav-item": "styles__c-nav-item___3XOLK",
@@ -15,12 +16,11 @@ var styles = {
   "c-nav-item-secondary": "styles__c-nav-item-secondary___k14rf",
   "c-nav-limiter": "styles__c-nav-limiter___3oxQU"
 };
-import cx from 'classnames';
+import Icon from "cozy-ui/transpiled/react/Icon";
 import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
 import TopIcon from "cozy-ui/transpiled/react/Icons/Top";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import withNavLocales from "cozy-ui/transpiled/react/Nav/locales/withNavLocales";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 export var NavItem = function NavItem(_ref) {
   var children = _ref.children,
       secondary = _ref.secondary,

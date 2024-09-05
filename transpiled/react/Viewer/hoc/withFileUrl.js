@@ -17,10 +17,10 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
+import React, { Component } from 'react';
 import NoNetworkViewer from "cozy-ui/transpiled/react/Viewer/ViewersByFile/NoNetworkViewer";
+import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
 import { isFileEncrypted } from "cozy-ui/transpiled/react/Viewer/helpers";
 var TTL = 6000;
 var LOADING = 'LOADING';

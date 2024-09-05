@@ -1,6 +1,6 @@
-import { initTranslation } from "cozy-ui/transpiled/react/providers/I18n/translation";
-import { initFormat } from "cozy-ui/transpiled/react/providers/I18n/format";
 import { DEFAULT_LANG } from "cozy-ui/transpiled/react/providers/I18n";
+import { initFormat } from "cozy-ui/transpiled/react/providers/I18n/format";
+import { initTranslation } from "cozy-ui/transpiled/react/providers/I18n/translation";
 
 var getAppOrUiLang = function getAppOrUiLang(defaultLang) {
   var appContainer = document.querySelector('[role=application]');

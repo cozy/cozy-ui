@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStyles } from "cozy-ui/transpiled/react/styles";
 import Dialog from "cozy-ui/transpiled/react/Dialog";
+import { withStyles } from "cozy-ui/transpiled/react/styles";
 /**
  * A Dialog that will not be centered vertically. Useful when
  * the height of the dialog can vary, for example if there are

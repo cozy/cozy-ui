@@ -1,16 +1,14 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import Box from '../Box'
 import CircularProgressWithBackground from './CircularProgressWithBackground'
 import { makeSizeAndThickness } from './helpers'
+import Box from '../Box'
 
 const CircularChart = forwardRef(
   ({ size, primaryProps, secondaryProps, children, ...props }, ref) => {
-    const {
-      primarySizeAndThickness,
-      secondarySizeAndThickness
-    } = makeSizeAndThickness(size, Boolean(secondaryProps))
+    const { primarySizeAndThickness, secondarySizeAndThickness } =
+      makeSizeAndThickness(size, Boolean(secondaryProps))
 
     return (
       <Box

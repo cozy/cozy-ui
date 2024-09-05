@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import Typography from "cozy-ui/transpiled/react/Typography";
 

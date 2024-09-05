@@ -1,4 +1,3 @@
-import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var en = {
   cancel: "Cancel",
   allow: "Allow",
@@ -53,6 +52,7 @@ var fr = {
     }
   }
 };
+import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 export var locales = {
   en: en,
   fr: fr

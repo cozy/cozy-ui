@@ -1,14 +1,13 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import Button from '../Button'
-import useBreakpoints from '../providers/Breakpoints'
-import Icon from '../Icon'
-import IconButton from '../IconButton'
-import { useI18n } from '../providers/I18n'
+import React from 'react'
 
 import styles from './styles.styl'
+import Button from '../Button'
+import Icon from '../Icon'
+import IconButton from '../IconButton'
+import useBreakpoints from '../providers/Breakpoints'
+import { useI18n } from '../providers/I18n'
 
 const SelectionBarAction = ({ selectedCount, selected, action }) => {
   const { isDesktop } = useBreakpoints()

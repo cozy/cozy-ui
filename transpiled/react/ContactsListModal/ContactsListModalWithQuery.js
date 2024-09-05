@@ -1,9 +1,9 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { useQueryAll } from 'cozy-client';
-import { buildContactsQuery } from "cozy-ui/transpiled/react/ContactsListModal/queries";
 import ContactsListModal from "cozy-ui/transpiled/react/ContactsListModal/ContactsListModal";
+import { buildContactsQuery } from "cozy-ui/transpiled/react/ContactsListModal/queries";
 
 var ContactsListModalWithQuery = function ContactsListModalWithQuery(props) {
   var contactsQuery = buildContactsQuery();

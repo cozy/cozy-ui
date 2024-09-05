@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Portal from '../../Portal'
+import React, { Component } from 'react'
+
 import Alert from './Alert'
+import Portal from '../../Portal'
 
 const MINIMUM_ALERT_DURATION = 2000
 

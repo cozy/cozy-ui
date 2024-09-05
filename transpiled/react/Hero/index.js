@@ -2,7 +2,6 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children"];
 import React from 'react';
-import BaseIcon from "cozy-ui/transpiled/react/Icon";
 var styles = {
   "Hero": "styles__Hero___14z7_",
   "Hero-title": "styles__Hero-title___256Uz",
@@ -11,6 +10,7 @@ var styles = {
   "Hero-section": "styles__Hero-section___1BcNz",
   "Hero-cta": "styles__Hero-cta___2KhwU"
 };
+import BaseIcon from "cozy-ui/transpiled/react/Icon";
 import { mkComponent } from "cozy-ui/transpiled/react/utils"; // Cannot use mkComponent since it is not picked up by styleguidist
 
 export var Hero = function Hero(_ref) {

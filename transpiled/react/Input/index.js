@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["autoComplete", "disabled", "type", "id", "className", "value", "placeholder", "error", "size", "fullwidth"];
-import React, { forwardRef } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 var styles = {
   "c-input-text": "styles__c-input-text___3TAv1",
   "is-error": "styles__is-error___3lsCJ",

@@ -1,14 +1,14 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { useClient } from 'cozy-client';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import Button from "cozy-ui/transpiled/react/Buttons";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import IconButton from "cozy-ui/transpiled/react/IconButton";
 import DownloadIcon from "cozy-ui/transpiled/react/Icons/Download";
-import Button from "cozy-ui/transpiled/react/Buttons";
 import Alerter from "cozy-ui/transpiled/react/deprecated/Alerter";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var DownloadButton = function DownloadButton(_ref) {
   var file = _ref.file,

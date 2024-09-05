@@ -17,13 +17,19 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Overlay from "cozy-ui/transpiled/react/deprecated/Overlay";
-import migrateProps from "cozy-ui/transpiled/react/helpers/migrateProps";
-import Portal from "cozy-ui/transpiled/react/Portal";
 import uniqueId from 'lodash/uniqueId';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import AnimatedContentHeader from "cozy-ui/transpiled/react/deprecated/Modal/AnimatedContentHeader";
+import ModalBackButton from "cozy-ui/transpiled/react/deprecated/Modal/ModalBackButton";
+import ModalButtons from "cozy-ui/transpiled/react/deprecated/Modal/ModalButtons";
+import ModalContent from "cozy-ui/transpiled/react/deprecated/Modal/ModalContent";
+import ModalCross from "cozy-ui/transpiled/react/deprecated/Modal/ModalCross";
+import { ModalEffects } from "cozy-ui/transpiled/react/deprecated/Modal/ModalEffects";
+import ModalFooter from "cozy-ui/transpiled/react/deprecated/Modal/ModalFooter";
+import { ModalHeader, ModalBrandedHeader } from "cozy-ui/transpiled/react/deprecated/Modal/ModalHeader";
+import ModalSection from "cozy-ui/transpiled/react/deprecated/Modal/ModalSection";
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
   "c-modal-content": "styles__c-modal-content___22N4k",
@@ -59,16 +65,10 @@ var styles = {
   "spin": "styles__spin___1fJIg",
   "shake": "styles__shake___gVu0K"
 };
-import ModalContent from "cozy-ui/transpiled/react/deprecated/Modal/ModalContent";
-import ModalSection from "cozy-ui/transpiled/react/deprecated/Modal/ModalSection";
-import { ModalHeader, ModalBrandedHeader } from "cozy-ui/transpiled/react/deprecated/Modal/ModalHeader";
-import ModalCross from "cozy-ui/transpiled/react/deprecated/Modal/ModalCross";
-import ModalFooter from "cozy-ui/transpiled/react/deprecated/Modal/ModalFooter";
-import ModalButtons from "cozy-ui/transpiled/react/deprecated/Modal/ModalButtons";
-import AnimatedContentHeader from "cozy-ui/transpiled/react/deprecated/Modal/AnimatedContentHeader";
-import ModalBackButton from "cozy-ui/transpiled/react/deprecated/Modal/ModalBackButton";
-import { ModalEffects } from "cozy-ui/transpiled/react/deprecated/Modal/ModalEffects";
+import Portal from "cozy-ui/transpiled/react/Portal";
+import migrateProps from "cozy-ui/transpiled/react/helpers/migrateProps";
 import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
+import Overlay from "cozy-ui/transpiled/react/deprecated/Overlay";
 var ModalDescription = ModalContent;
 
 var ModalTitle = function ModalTitle(props) {

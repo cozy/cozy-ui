@@ -1,10 +1,10 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Spinner from "cozy-ui/transpiled/react/Spinner";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
 import 'intersection-observer'; // polyfill for safari (mobile and desktop)
 
 var LoadMore = function LoadMore(_ref) {

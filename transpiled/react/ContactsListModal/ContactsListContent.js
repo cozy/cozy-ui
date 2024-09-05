@@ -1,11 +1,11 @@
 import React from 'react';
 import { models } from 'cozy-client';
 var getDisplayName = models.contact.getDisplayName;
+import EmptyMessage from "cozy-ui/transpiled/react/ContactsListModal/EmptyMessage";
+import { withContactsListLocales } from "cozy-ui/transpiled/react/ContactsListModal/withContactsListLocales";
 import ContactsList from "cozy-ui/transpiled/react/ContactsList";
 import Spinner from "cozy-ui/transpiled/react/Spinner";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import EmptyMessage from "cozy-ui/transpiled/react/ContactsListModal/EmptyMessage";
-import { withContactsListLocales } from "cozy-ui/transpiled/react/ContactsListModal/withContactsListLocales";
 
 var mkFilter = function mkFilter(filterStr) {
   return function (contacts) {

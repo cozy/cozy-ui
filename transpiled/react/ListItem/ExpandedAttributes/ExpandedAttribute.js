@@ -1,13 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import ListItem from "cozy-ui/transpiled/react/ListItem";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
+import { copyToClipboard } from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes/helpers";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import CopyIcon from "cozy-ui/transpiled/react/Icons/Copy";
+import ListItem from "cozy-ui/transpiled/react/ListItem";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import Typography from "cozy-ui/transpiled/react/Typography";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { copyToClipboard } from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes/helpers";
 
 var ExpandedAttribute = function ExpandedAttribute(_ref) {
   var label = _ref.label,

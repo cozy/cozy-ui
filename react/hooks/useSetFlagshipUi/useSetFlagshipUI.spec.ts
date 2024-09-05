@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { renderHook } from '@testing-library/react-hooks'
-import { useSetFlagshipUI } from './useSetFlagshipUI'
+
 import { useWebviewIntent } from 'cozy-intent'
+
+import { useSetFlagshipUI } from './useSetFlagshipUI'
 
 jest.mock('cozy-intent')
 

@@ -1,6 +1,7 @@
+import { mount } from 'enzyme'
 import React, { useState } from 'react'
 import { act } from 'react-dom/test-utils'
-import { mount } from 'enzyme'
+
 import Modal, { BODY_CLASS } from '.'
 import { BreakpointsProvider } from '../../providers/Breakpoints'
 
@@ -21,11 +22,7 @@ describe('Modal', () => {
   }
 
   const clickNthButton = (root, n) =>
-    root
-      .find('button')
-      .at(n)
-      .props()
-      .onClick()
+    root.find('button').at(n).props().onClick()
 
   const mountFirstModal = root => clickNthButton(root, 0)
   const mountSecondModal = root => clickNthButton(root, 1)

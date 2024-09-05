@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withClient } from 'cozy-client';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import { downloadFile } from "cozy-ui/transpiled/react/Viewer/helpers";
 
 var DownloadButton = function DownloadButton(_ref) {

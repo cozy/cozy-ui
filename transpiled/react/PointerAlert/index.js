@@ -7,13 +7,13 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import { makeAlertBackgroundColor } from "cozy-ui/transpiled/react/MuiCozyTheme/helpers";
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { AlertPropTypes, AlertDefaultProps } from "cozy-ui/transpiled/react/Alert";
 import Alert from "cozy-ui/transpiled/react/Alert";
+import { makeAlertBackgroundColor } from "cozy-ui/transpiled/react/MuiCozyTheme/helpers";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     topArrow: {

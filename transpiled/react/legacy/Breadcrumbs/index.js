@@ -5,13 +5,10 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "Breadcrumb": "styles__Breadcrumb___2p17B",
   "Breadcrumb__previousButton": "styles__Breadcrumb__previousButton___1FEmP",
@@ -19,6 +16,9 @@ var styles = {
   "Breadcrumb__previousItems": "styles__Breadcrumb__previousItems___20hGg",
   "BreadcrumbSeparator": "styles__BreadcrumbSeparator___37ZIH"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 var BreadcrumbSeparator = function BreadcrumbSeparator() {
   return /*#__PURE__*/React.createElement("span", {

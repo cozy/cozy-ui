@@ -1,9 +1,9 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "disableGutters", "disableElevation", "className"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import Paper from "cozy-ui/transpiled/react/Paper";
 var BottomSheetItem = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,

@@ -1,10 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Divider from "cozy-ui/transpiled/react/Divider";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import Skeleton from "cozy-ui/transpiled/react/Skeleton";
-import Divider from "cozy-ui/transpiled/react/Divider";
 
 var ListItemSkeleton = function ListItemSkeleton(_ref) {
   var hasSecondary = _ref.hasSecondary,

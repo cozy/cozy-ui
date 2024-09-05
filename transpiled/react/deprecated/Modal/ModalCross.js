@@ -1,9 +1,5 @@
-import React from 'react';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import palette from "cozy-ui/transpiled/react/palette";
+import React from 'react';
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
   "c-modal-content": "styles__c-modal-content___22N4k",
@@ -39,6 +35,10 @@ var styles = {
   "spin": "styles__spin___1fJIg",
   "shake": "styles__shake___gVu0K"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
+import palette from "cozy-ui/transpiled/react/palette";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 export var ModalCrossIcon = function ModalCrossIcon(props) {
   var _useBreakpoints = useBreakpoints(),
       isMobile = _useBreakpoints.isMobile;

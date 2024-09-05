@@ -6,9 +6,9 @@
  * Those tests should be kept until `slug` prop is completely removed
  */
 
-import React from 'react'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import React from 'react'
 
 import {
   isMobileApp,
@@ -30,7 +30,7 @@ const setup = ({ app, onAppSwitch }) => {
       <AppLinker
         onAppSwitch={onAppSwitch}
         slug={app.slug}
-        href={'https://fake.link'}
+        href="https://fake.link"
       >
         {({ onClick, href, name }) => (
           <div>

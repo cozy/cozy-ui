@@ -1,6 +1,7 @@
-import React from 'react'
 import { shallow } from 'enzyme'
 import { flatten, merge } from 'lodash'
+import React from 'react'
+
 import Figure from './Figure'
 
 const combine = (...iterables) => {
@@ -30,7 +31,10 @@ describe('Figure', () => {
   ]
 
   const combinations = combine
-    .apply(null, coloredAttributes.map(x => [{ [x]: true }, { [x]: false }]))
+    .apply(
+      null,
+      coloredAttributes.map(x => [{ [x]: true }, { [x]: false }])
+    )
     .map(attrs => {
       return merge.apply(null, [{}, ...attrs])
     })

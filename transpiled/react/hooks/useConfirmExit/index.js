@@ -1,10 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useCallback, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import useEventListener from "cozy-ui/transpiled/react/hooks/useEventListener";
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
-import { ConfirmDialog } from "cozy-ui/transpiled/react/CozyDialogs";
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import React, { useCallback, useRef, useState } from 'react';
 var en = {
   useConfirmExit: {
     back: "Cancel",
@@ -21,6 +17,10 @@ var fr = {
     message: "Des modifications n'ont pas encore pu \xEAtre enregistr\xE9es. Voulez-vous vraiment quitter et perdre ces modifications\xA0?"
   }
 };
+import { ConfirmDialog } from "cozy-ui/transpiled/react/CozyDialogs";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
+import useEventListener from "cozy-ui/transpiled/react/hooks/useEventListener";
 /**
  * Confirmation modal
  * @private

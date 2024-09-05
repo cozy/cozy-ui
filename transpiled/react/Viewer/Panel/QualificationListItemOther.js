@@ -1,14 +1,14 @@
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { getTranslatedNameForOtherMetadata, formatOtherMetadataValue } from 'cozy-client/dist/models/paper';
+import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import Dots from "cozy-ui/transpiled/react/Icons/Dots";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemSecondaryAction from "cozy-ui/transpiled/react/ListItemSecondaryAction";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Dots from "cozy-ui/transpiled/react/Icons/Dots";
-import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var QualificationListItemOther = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var formattedMetadataQualification = _ref.formattedMetadataQualification,
       toggleActionsMenu = _ref.toggleActionsMenu;
@@ -27,7 +27,7 @@ var QualificationListItemOther = /*#__PURE__*/forwardRef(function (_ref, ref) {
     name: name
   });
   return /*#__PURE__*/React.createElement(ListItem, {
-    className: 'u-pl-2 u-pr-3'
+    className: "u-pl-2 u-pr-3"
   }, /*#__PURE__*/React.createElement(QualificationListItemText, {
     primary: formattedTitle,
     secondary: /*#__PURE__*/React.createElement(MidEllipsis, {

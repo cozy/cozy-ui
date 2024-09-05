@@ -1,11 +1,11 @@
 import _toConsumableArray from "@babel/runtime/helpers/toConsumableArray";
-import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useCallback } from 'react';
 import { models, useQuery } from 'cozy-client';
+import FilePickerBodyItem from "cozy-ui/transpiled/react/FilePicker/FilePickerBodyItem";
+import { buildContentFolderQuery } from "cozy-ui/transpiled/react/FilePicker/queries";
 import List from "cozy-ui/transpiled/react/List";
 import LoadMore from "cozy-ui/transpiled/react/LoadMore";
-import { buildContentFolderQuery } from "cozy-ui/transpiled/react/FilePicker/queries";
-import FilePickerBodyItem from "cozy-ui/transpiled/react/FilePicker/FilePickerBodyItem";
 import { isValidFile } from "cozy-ui/transpiled/react/helpers/acceptedTypes";
 var isDirectory = models.file.isDirectory;
 
@@ -70,7 +70,7 @@ var FilePickerBody = function FilePickerBody(_ref) {
       hasDivider: hasDivider
     });
   }), hasMore && /*#__PURE__*/React.createElement(LoadMore, {
-    label: 'loadMore',
+    label: "loadMore",
     fetchMore: fetchMore
   }));
 };

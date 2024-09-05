@@ -1,23 +1,23 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useRef, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import React, { useRef, useState, useMemo } from 'react';
+import ResponsiveAction from "cozy-ui/transpiled/react/ActionsBar/ResponsiveAction";
+import withActionsLocales from "cozy-ui/transpiled/react/ActionsBar/locales/withActionsLocales";
+import ActionsMenu from "cozy-ui/transpiled/react/ActionsMenu";
+import { makeActions, others } from "cozy-ui/transpiled/react/ActionsMenu/Actions";
+import { getOnlyNeededActions } from "cozy-ui/transpiled/react/ActionsMenu/Actions/helpers";
+import ActionsItems from "cozy-ui/transpiled/react/ActionsMenu/ActionsItems";
 import AppBar from "cozy-ui/transpiled/react/AppBar";
-import Toolbar from "cozy-ui/transpiled/react/Toolbar";
 import Box from "cozy-ui/transpiled/react/Box";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import IconButton from "cozy-ui/transpiled/react/IconButton";
 import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
 import CrossCircleIcon from "cozy-ui/transpiled/react/Icons/CrossCircle";
 import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
-import ActionsMenu from "cozy-ui/transpiled/react/ActionsMenu";
-import ActionsItems from "cozy-ui/transpiled/react/ActionsMenu/ActionsItems";
-import { getOnlyNeededActions } from "cozy-ui/transpiled/react/ActionsMenu/Actions/helpers";
+import Toolbar from "cozy-ui/transpiled/react/Toolbar";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { makeActions, others } from "cozy-ui/transpiled/react/ActionsMenu/Actions";
-import ResponsiveAction from "cozy-ui/transpiled/react/ActionsBar/ResponsiveAction";
-import withActionsLocales from "cozy-ui/transpiled/react/ActionsBar/locales/withActionsLocales";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   appBar: function appBar(_ref) {
     var isMobile = _ref.isMobile;

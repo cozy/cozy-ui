@@ -1,7 +1,7 @@
-import React, { Component, createRef } from 'react'
-import PropTypes from 'prop-types'
 import Hammer from 'hammerjs'
 import once from 'lodash/once'
+import PropTypes from 'prop-types'
+import React, { Component, createRef } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 
 import styles from './styles.styl'
@@ -51,8 +51,8 @@ class BottomDrawer extends Component {
 
     // to be completely accurate, `maximumGestureDelta` should be the difference between the top of the menu and the
     // bottom of the page; but using the height is much easier to compute and accurate enough.
-    const maximumGestureDistance = this.menuRef.current.getBoundingClientRect()
-      .height
+    const maximumGestureDistance =
+      this.menuRef.current.getBoundingClientRect().height
     // between 0 and 1, how far down the gesture must be to be considered complete upon release
     const minimumCloseDistance = 0.6
     // a gesture faster than this will dismiss the menu, regardless of distance traveled

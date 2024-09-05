@@ -4,15 +4,12 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useWebviewIntent } from 'cozy-intent';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import SelectionBarAction from "cozy-ui/transpiled/react/SelectionBar/SelectionBarAction";
+import SelectionBarMore from "cozy-ui/transpiled/react/SelectionBar/SelectionBarMore";
 var styles = {
   "SelectionBar": "styles__SelectionBar___3UOqy",
   "SelectionBar-count": "styles__SelectionBar-count___1e2yD",
@@ -21,9 +18,12 @@ var styles = {
   "spin": "styles__spin___1MUwn",
   "shake": "styles__shake___qrFb_"
 };
-import SelectionBarAction from "cozy-ui/transpiled/react/SelectionBar/SelectionBarAction";
-import SelectionBarMore from "cozy-ui/transpiled/react/SelectionBar/SelectionBarMore";
 import useMaxActions from "cozy-ui/transpiled/react/SelectionBar/useMaxActions";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 /*
 
 If you want use SelectionBar component, you must have `actions` parameter, like :

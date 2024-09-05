@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children"];
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
 import Divider from "cozy-ui/transpiled/react/Divider";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Paywall from "cozy-ui/transpiled/react/Paywall/Paywall";
 /**
  * Paywall displayed when user disk space is full

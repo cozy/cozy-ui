@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import ButtonBase from '../ButtonBase'
 import Icon, { iconPropType } from '../Icon'
-import FileDuotoneIcon from '../Icons/FileDuotone'
 import IconStack from '../IconStack'
+import FileDuotoneIcon from '../Icons/FileDuotone'
 import Typography from '../Typography'
 import { makeStyles } from '../styles'
 

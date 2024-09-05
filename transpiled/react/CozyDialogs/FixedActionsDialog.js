@@ -5,14 +5,14 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React from 'react';
 import cx from 'classnames/dedupe';
+import React from 'react';
+import DialogBackButton from "cozy-ui/transpiled/react/CozyDialogs/DialogBackButton";
+import DialogCloseButton from "cozy-ui/transpiled/react/CozyDialogs/DialogCloseButton";
+import dialogPropTypes from "cozy-ui/transpiled/react/CozyDialogs/dialogPropTypes";
 import useCozyDialog from "cozy-ui/transpiled/react/CozyDialogs/useCozyDialog";
 import Dialog, { DialogTitle, DialogActions, DialogContent } from "cozy-ui/transpiled/react/Dialog";
 import Divider from "cozy-ui/transpiled/react/Divider";
-import dialogPropTypes from "cozy-ui/transpiled/react/CozyDialogs/dialogPropTypes";
-import DialogBackButton from "cozy-ui/transpiled/react/CozyDialogs/DialogBackButton";
-import DialogCloseButton from "cozy-ui/transpiled/react/CozyDialogs/DialogCloseButton";
 
 var FixedActionsDialog = function FixedActionsDialog(props) {
   var onClose = props.onClose,

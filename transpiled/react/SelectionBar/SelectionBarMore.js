@@ -1,11 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
-import { ActionMenuWithClose, ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import React, { useState, useRef } from 'react';
 var styles = {
   "SelectionBar": "styles__SelectionBar___3UOqy",
   "SelectionBar-count": "styles__SelectionBar-count___1e2yD",
@@ -14,6 +9,11 @@ var styles = {
   "spin": "styles__spin___1MUwn",
   "shake": "styles__shake___qrFb_"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import { ActionMenuWithClose, ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var SelectionBarMore = function SelectionBarMore(_ref) {
   var actions = _ref.actions,

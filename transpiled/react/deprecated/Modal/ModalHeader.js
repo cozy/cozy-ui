@@ -4,6 +4,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
+import cx from 'classnames';
 import React from 'react';
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
@@ -40,7 +41,6 @@ var styles = {
   "spin": "styles__spin___1fJIg",
   "shake": "styles__shake___gVu0K"
 };
-import cx from 'classnames';
 
 var ModalHeader = function ModalHeader(_ref) {
   var title = _ref.title,

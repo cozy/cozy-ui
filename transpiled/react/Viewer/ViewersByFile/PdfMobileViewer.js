@@ -1,13 +1,9 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useClient } from 'cozy-client';
-import Spinner from "cozy-ui/transpiled/react/Spinner";
-import FileImageLoader from "cozy-ui/transpiled/react/FileImageLoader";
-import DownloadButton from "cozy-ui/transpiled/react/Viewer/NoViewer/DownloadButton";
-import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -24,8 +20,12 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import FileImageLoader from "cozy-ui/transpiled/react/FileImageLoader";
+import Spinner from "cozy-ui/transpiled/react/Spinner";
 import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 import { useAlert } from "cozy-ui/transpiled/react/providers/Alert";
+import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import DownloadButton from "cozy-ui/transpiled/react/Viewer/NoViewer/DownloadButton";
 import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 export var PdfMobileViewer = function PdfMobileViewer(_ref) {
   var file = _ref.file,

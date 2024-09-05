@@ -1,6 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { createContext, useContext, useState, useEffect } from 'react';
 import throttle from 'lodash/throttle';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import breakpointDefs, { getBreakpointsStatus as _getBreakpointsStatus } from "cozy-ui/transpiled/react/helpers/breakpoints";
 
 var getBreakpointsStatus = function getBreakpointsStatus() {

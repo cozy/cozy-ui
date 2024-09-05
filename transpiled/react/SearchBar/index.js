@@ -8,19 +8,19 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { forwardRef, useState, useMemo } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import debounce from 'lodash/debounce';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import PropTypes from 'prop-types';
+import React, { forwardRef, useState, useMemo } from 'react';
 import withOnlyLocales from "cozy-ui/transpiled/react/SearchBar/locales/withOnlyLocales";
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import Paper from "cozy-ui/transpiled/react/Paper";
-import InputBase from "cozy-ui/transpiled/react/InputBase";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
 import Icon from "cozy-ui/transpiled/react/Icon";
-import MagnifierIcon from "cozy-ui/transpiled/react/Icons/Magnifier";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
 import CrossCircleIcon from "cozy-ui/transpiled/react/Icons/CrossCircle";
+import MagnifierIcon from "cozy-ui/transpiled/react/Icons/Magnifier";
+import InputBase from "cozy-ui/transpiled/react/InputBase";
+import Paper from "cozy-ui/transpiled/react/Paper";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     root: {

@@ -8,13 +8,8 @@ var _excluded = ["children", "tag"],
     _excluded5 = ["className"],
     _excluded6 = ["children", "className", "tag", "variant"],
     _excluded7 = ["children", "className", "tag"];
-import React from 'react';
 import cx from 'classnames';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
-import Input from "cozy-ui/transpiled/react/Input";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "wizard-select": "styles__wizard-select___2-yNW",
   "is-error": "styles__is-error___1X2dc",
@@ -49,6 +44,11 @@ var styles = {
   "spin": "styles__spin___1yERN",
   "shake": "styles__shake___YNHmI"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
+import Input from "cozy-ui/transpiled/react/Input";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
 export var Wizard = function Wizard(_ref) {
   var children = _ref.children,
       tag = _ref.tag,
@@ -111,7 +111,8 @@ export var WizardLogo = function WizardLogo(_ref8) {
     className: styles['wizard-logo-img'],
     src: src,
     alt: "",
-    "aria-hidden": "true",
+    "aria-hidden": "true" // eslint-disable-next-line react/no-unknown-property
+    ,
     focusable: "false"
   }), /*#__PURE__*/React.createElement("div", {
     className: styles['wizard-logo-badge']

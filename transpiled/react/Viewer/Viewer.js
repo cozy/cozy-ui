@@ -14,12 +14,12 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import ViewerControls from "cozy-ui/transpiled/react/Viewer/components/ViewerControls";
-import ViewerByFile from "cozy-ui/transpiled/react/Viewer/components/ViewerByFile";
+import React, { Component } from 'react';
 import { toolbarPropsPropType } from "cozy-ui/transpiled/react/Viewer";
+import ViewerByFile from "cozy-ui/transpiled/react/Viewer/components/ViewerByFile";
+import ViewerControls from "cozy-ui/transpiled/react/Viewer/components/ViewerControls";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 var KEY_CODE_LEFT = 37;
 var KEY_CODE_RIGHT = 39;
 var KEY_CODE_ESCAPE = 27;

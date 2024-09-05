@@ -1,6 +1,6 @@
-import overEvery from 'lodash/overEvery';
 import mapValues from 'lodash/mapValues';
 import matches from 'lodash/matches';
+import overEvery from 'lodash/overEvery';
 import { APP_TYPE } from "cozy-ui/transpiled/react/AppSections/constants";
 
 var getDoctypesList = function getDoctypesList(permsObj) {

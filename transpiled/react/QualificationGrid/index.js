@@ -1,21 +1,21 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { Fragment, useState } from 'react';
+import { getThemesList } from "cozy-ui/transpiled/react/QualificationGrid/helpers";
+import withLocales from "cozy-ui/transpiled/react/QualificationGrid/locales/withLocales";
 import Grid from "cozy-ui/transpiled/react/Grid";
-import QualificationItem from "cozy-ui/transpiled/react/QualificationItem";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import BankIcon from "cozy-ui/transpiled/react/Icons/Bank";
+import BillIcon from "cozy-ui/transpiled/react/Icons/Bill";
+import CarIcon from "cozy-ui/transpiled/react/Icons/Car";
+import ChessIcon from "cozy-ui/transpiled/react/Icons/Chess";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import HeartIcon from "cozy-ui/transpiled/react/Icons/Heart";
 import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
 import TeamIcon from "cozy-ui/transpiled/react/Icons/Team";
 import WorkIcon from "cozy-ui/transpiled/react/Icons/Work";
-import ChessIcon from "cozy-ui/transpiled/react/Icons/Chess";
-import HeartIcon from "cozy-ui/transpiled/react/Icons/Heart";
 import HomeIcon from "cozy-ui/transpiled/react/Icons/Home";
-import CarIcon from "cozy-ui/transpiled/react/Icons/Car";
-import BankIcon from "cozy-ui/transpiled/react/Icons/Bank";
-import BillIcon from "cozy-ui/transpiled/react/Icons/Bill";
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
-import withLocales from "cozy-ui/transpiled/react/QualificationGrid/locales/withLocales";
-import { getThemesList } from "cozy-ui/transpiled/react/QualificationGrid/helpers";
+import QualificationItem from "cozy-ui/transpiled/react/QualificationItem";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var IconByName = {
   people: PeopleIcon,
   team: TeamIcon,

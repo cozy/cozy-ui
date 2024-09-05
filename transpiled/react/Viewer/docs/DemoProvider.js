@@ -10,10 +10,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 import React from 'react';
 import { CozyProvider } from 'cozy-client';
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg';
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/providers/Breakpoints";
 import I18n from "cozy-ui/transpiled/react/providers/I18n";
 import { locales } from "cozy-ui/transpiled/react/Viewer/locales/index";
-import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg';
 var demoTextFileResponse = {
   text: function text() {
     return new Promise(function (resolve) {

@@ -1,11 +1,11 @@
-import React from 'react';
 import cx from 'classnames';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
-import ConfirmDialog from "cozy-ui/transpiled/react/CozyDialogs/ConfirmDialog";
 import PropTypes from 'prop-types';
+import React from 'react';
+import ConfirmDialog from "cozy-ui/transpiled/react/CozyDialogs/ConfirmDialog";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import Paper from "cozy-ui/transpiled/react/Paper";
+import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   floatingIcon: {
     top: '-2.25rem',

@@ -1,18 +1,18 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { useClient } from 'cozy-client';
+import { getSharingLink } from 'cozy-client/dist/models/sharing';
 import { isIOS, isMobileApp } from 'cozy-device-helper';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import { exportFilesNative } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
+import Button from "cozy-ui/transpiled/react/Buttons";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import IconButton from "cozy-ui/transpiled/react/IconButton";
 import ReplyIcon from "cozy-ui/transpiled/react/Icons/Reply";
 import ShareIosIcon from "cozy-ui/transpiled/react/Icons/ShareIos";
-import Button from "cozy-ui/transpiled/react/Buttons";
 import Alerter from "cozy-ui/transpiled/react/deprecated/Alerter";
-import { exportFilesNative } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
-import { getSharingLink } from 'cozy-client/dist/models/sharing';
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var ForwardIcon = isIOS() ? ShareIosIcon : ReplyIcon;
 
 var ForwardButton = function ForwardButton(_ref) {

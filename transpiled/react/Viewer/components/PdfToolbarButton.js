@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Button from "cozy-ui/transpiled/react/deprecated/Button";
 
 var PdfToolbarButton = function PdfToolbarButton(_ref) {

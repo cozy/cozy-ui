@@ -1,5 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-import { FlagshipUI } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { getFlagshipMetadata as getFlagshipMetadataFromDeviceHelper } from 'cozy-device-helper';
 /**
  * The goal of this method is to simulate the immersive mode of the flagship app.

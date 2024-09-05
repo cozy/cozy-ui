@@ -7,14 +7,6 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 import React, { useState } from 'react';
-import TextField from "cozy-ui/transpiled/react/TextField";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import InputAdornment from "cozy-ui/transpiled/react/InputAdornment";
-import EyeIcon from "cozy-ui/transpiled/react/Icons/Eye";
-import EyeClosedIcon from "cozy-ui/transpiled/react/Icons/EyeClosed";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var en = {
   "password-field": {
     show: "Show password",
@@ -27,6 +19,14 @@ var fr = {
     hide: "Masquer le mot de passe"
   }
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import EyeIcon from "cozy-ui/transpiled/react/Icons/Eye";
+import EyeClosedIcon from "cozy-ui/transpiled/react/Icons/EyeClosed";
+import InputAdornment from "cozy-ui/transpiled/react/InputAdornment";
+import TextField from "cozy-ui/transpiled/react/TextField";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 export var locales = {
   en: en,
   fr: fr

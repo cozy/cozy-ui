@@ -9,9 +9,9 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 import React, { createContext, useState, useContext, useMemo } from 'react';
-import Snackbar from "cozy-ui/transpiled/react/Snackbar";
 import Alert from "cozy-ui/transpiled/react/Alert";
 import AlertTitle from "cozy-ui/transpiled/react/AlertTitle";
+import Snackbar from "cozy-ui/transpiled/react/Snackbar";
 /**
  * @typedef {import('../../Alert').AlertProps & { message: string, title: string }} ShowAlertArgs
  */

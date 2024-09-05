@@ -14,13 +14,13 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 // This component is inspired by https://material-ui.com/demos/menus/#menulist-composition
 // Since the MuiMenu component doesn't allow another Popover positioning,
 // we have to recompose the Menu component ourselves with basic Mui component
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
-import Popper from '@material-ui/core/Popper';
-import Paper from '@material-ui/core/Paper';
 import MenuList from '@material-ui/core/MenuList';
+import Paper from '@material-ui/core/Paper';
+import Popper from '@material-ui/core/Popper';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { withStyles } from "cozy-ui/transpiled/react/styles";
 import MenuButton from "cozy-ui/transpiled/react/deprecated/Button";
 var styles = {

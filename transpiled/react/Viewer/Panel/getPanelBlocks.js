@@ -1,5 +1,5 @@
-import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock';
 import { models } from 'cozy-client';
+import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock';
 import Certifications from "cozy-ui/transpiled/react/Viewer/Panel/Certifications";
 import Qualification from "cozy-ui/transpiled/react/Viewer/Panel/Qualification";
 var _models$file = models.file,

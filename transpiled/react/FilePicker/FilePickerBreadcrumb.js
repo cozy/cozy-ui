@@ -1,14 +1,14 @@
-import React, { Fragment, useCallback, memo } from 'react';
 import PropTypes from 'prop-types';
-import Typography from "cozy-ui/transpiled/react/Typography";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import React, { Fragment, useCallback, memo } from 'react';
 var styles = {
   "filePickerBreadcrumb-previousPath": "styles__filePickerBreadcrumb-previousPath___3LKJH",
   "filePickerBreadcrumb-icon": "styles__filePickerBreadcrumb-icon___3aFyd",
   "filePickerBreadcrumb-wrapper": "styles__filePickerBreadcrumb-wrapper___3pu1w"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var FilePickerBreadcrumb = function FilePickerBreadcrumb(_ref) {
   var path = _ref.path,

@@ -12,9 +12,9 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { withClient } from 'cozy-client';
 var styles = {
   "c-loading-placeholder": "styles__c-loading-placeholder___3L6Gz",
@@ -22,8 +22,10 @@ var styles = {
   "c-app-icon": "styles__c-app-icon___2_O40",
   "c-app-icon-default": "styles__c-app-icon-default___3CEmt"
 };
+import { isShortcutFile } from "cozy-ui/transpiled/react/AppSections/helpers";
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
 import CubeIcon from "cozy-ui/transpiled/react/Icons/Cube";
+import { ShortcutTile } from "cozy-ui/transpiled/react/ShortcutTile";
 import palette from "cozy-ui/transpiled/react/palette";
 import { AppDoctype } from "cozy-ui/transpiled/react/proptypes";
 var DONE = 'done';
@@ -78,7 +80,9 @@ export var AppIcon = /*#__PURE__*/function (_Component) {
           app = _this$props.app,
           type = _this$props.type,
           priority = _this$props.priority,
-          client = _this$props.client;
+          client = _this$props.client; // Shortcut files used in cozy-store have their own icon in their doctype metadata
+
+      if (isShortcutFile(app)) return;
       return client.getStackClient().getIconURL({
         type: type,
         slug: app.slug || app,
@@ -163,6 +167,12 @@ export var AppIcon = /*#__PURE__*/function (_Component) {
       var _this$state = this.state,
           icon = _this$state.icon,
           status = _this$state.status;
+
+      if (isShortcutFile(this.props.app)) {
+        return /*#__PURE__*/React.createElement(ShortcutTile, {
+          file: this.props.app
+        });
+      }
 
       switch (status) {
         case FETCHING:

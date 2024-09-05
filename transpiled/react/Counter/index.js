@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 var Counter = function Counter(_ref) {
   var count = _ref.count,

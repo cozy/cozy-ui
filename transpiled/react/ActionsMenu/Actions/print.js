@@ -2,15 +2,15 @@ import _extends from "@babel/runtime/helpers/extends";
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import React, { forwardRef } from 'react';
-import logger from 'cozy-logger';
 import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file';
+import logger from 'cozy-logger';
 import { makeBase64FromFile, makePdfBlob } from "cozy-ui/transpiled/react/ActionsMenu/Actions/helpers";
-import PrinterIcon from "cozy-ui/transpiled/react/Icons/Printer";
 import { getActionsI18n } from "cozy-ui/transpiled/react/ActionsMenu/Actions/locales/withActionsLocales";
-import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import Icon from "cozy-ui/transpiled/react/Icon";
+import PrinterIcon from "cozy-ui/transpiled/react/Icons/Printer";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
 export var print = function print() {
   var _getActionsI18n = getActionsI18n(),
       t = _getActionsI18n.t;

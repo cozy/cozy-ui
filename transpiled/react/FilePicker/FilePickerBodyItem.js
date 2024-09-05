@@ -1,25 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import filesize from 'filesize';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { models } from 'cozy-client';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import ListItem from "cozy-ui/transpiled/react/ListItem";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import Divider from "cozy-ui/transpiled/react/Divider";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import FileTypeText from "cozy-ui/transpiled/react/Icons/FileTypeText";
-import FileTypeFolder from "cozy-ui/transpiled/react/Icons/FileTypeFolder";
-import Checkbox from "cozy-ui/transpiled/react/Checkbox";
-import Radio from "cozy-ui/transpiled/react/Radios";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { isValidFile, isValidFolder } from "cozy-ui/transpiled/react/helpers/acceptedTypes";
 var styles = {
   "filePickerBreadcrumb-previousPath": "styles__filePickerBreadcrumb-previousPath___3LKJH",
   "filePickerBreadcrumb-icon": "styles__filePickerBreadcrumb-icon___3aFyd",
   "filePickerBreadcrumb-wrapper": "styles__filePickerBreadcrumb-wrapper___3pu1w"
 };
+import Checkbox from "cozy-ui/transpiled/react/Checkbox";
+import Divider from "cozy-ui/transpiled/react/Divider";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import FileTypeFolder from "cozy-ui/transpiled/react/Icons/FileTypeFolder";
+import FileTypeText from "cozy-ui/transpiled/react/Icons/FileTypeText";
+import ListItem from "cozy-ui/transpiled/react/ListItem";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import Radio from "cozy-ui/transpiled/react/Radios";
+import { isValidFile, isValidFolder } from "cozy-ui/transpiled/react/helpers/acceptedTypes";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var _models$file = models.file,
     isDirectory = _models$file.isDirectory,
     isFile = _models$file.isFile;

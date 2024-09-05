@@ -1,7 +1,7 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import Types from 'prop-types';
 import cx from 'classnames';
+import Types from 'prop-types';
+import React from 'react';
 var styles = {
   "Figure-currency": "Figure__Figure-currency___195-B",
   "Figure-content--positive": "Figure__Figure-content--positive___1qyd8",

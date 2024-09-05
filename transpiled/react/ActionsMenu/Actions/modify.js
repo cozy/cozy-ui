@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React, { forwardRef } from 'react';
 import { generateWebLink } from 'cozy-client';
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import { getActionsI18n } from "cozy-ui/transpiled/react/ActionsMenu/Actions/locales/withActionsLocales";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import PenIcon from "cozy-ui/transpiled/react/Icons/Pen";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
-import { getActionsI18n } from "cozy-ui/transpiled/react/ActionsMenu/Actions/locales/withActionsLocales";
 export var modify = function modify() {
   var _getActionsI18n = getActionsI18n(),
       t = _getActionsI18n.t;

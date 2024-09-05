@@ -13,16 +13,16 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { models } from 'cozy-client';
 var getDisplayName = models.contact.getDisplayName;
-import ContactsListModal from "cozy-ui/transpiled/react/ContactsListModal";
 var styles = {
   "SelectControl": "styles__SelectControl___2OxoO",
   "is-error": "styles__is-error___2s-d5"
 };
+import ContactsListModal from "cozy-ui/transpiled/react/ContactsListModal";
 
 var SelectControl = function SelectControl(props) {
   var className = props.className,

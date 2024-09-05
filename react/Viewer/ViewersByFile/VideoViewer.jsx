@@ -1,8 +1,7 @@
 import React from 'react'
 
-import withFileUrl from '../hoc/withFileUrl'
-
 import styles from './styles.styl'
+import withFileUrl from '../hoc/withFileUrl'
 
 const VideoViewer = ({ file, url }) => (
   <div className={styles['viewer-videoviewer']}>

@@ -2,8 +2,8 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["classes"],
     _excluded2 = ["qualifier"];
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import Badge from "cozy-ui/transpiled/react/Badge";
 import { withStyles } from "cozy-ui/transpiled/react/styles";
 

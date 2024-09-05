@@ -7,19 +7,19 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
-import omit from 'lodash/omit';
 import cx from 'classnames';
-import List from "cozy-ui/transpiled/react/List";
-import Input from "cozy-ui/transpiled/react/Input";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import omit from 'lodash/omit';
+import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react';
 import ItemRow from "cozy-ui/transpiled/react/NestedSelect/ItemRow";
 import { makeHistory } from "cozy-ui/transpiled/react/NestedSelect/helpers";
 var styles = {
   "Modal__back": "styles__Modal__back___qxUn_",
   "search-container--without-title": "styles__search-container--without-title___3P2fe"
 };
+import Input from "cozy-ui/transpiled/react/Input";
+import List from "cozy-ui/transpiled/react/List";
+import Typography from "cozy-ui/transpiled/react/Typography";
 export { ItemRow };
 /**
  * Select like component to choose an option among a list of options.

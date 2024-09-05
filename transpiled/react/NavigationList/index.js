@@ -1,14 +1,14 @@
-import React from 'react';
 import cx from 'classnames';
-import List from "cozy-ui/transpiled/react/List";
-import Stack from "cozy-ui/transpiled/react/Stack";
-import Card from "cozy-ui/transpiled/react/Card";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import ListSubheader from "cozy-ui/transpiled/react/ListSubheader";
+import React from 'react';
 var styles = {
   "DesktopSectionWrapper": "styles__DesktopSectionWrapper___1rIWP"
 };
+import Card from "cozy-ui/transpiled/react/Card";
+import List from "cozy-ui/transpiled/react/List";
+import ListSubheader from "cozy-ui/transpiled/react/ListSubheader";
+import Stack from "cozy-ui/transpiled/react/Stack";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var NavigationList = function NavigationList(_ref) {
   var children = _ref.children,

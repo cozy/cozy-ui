@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "BarTitle": "styles__BarTitle___I5r2e"
 };
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 var BarTitle = function BarTitle(_ref) {
   var noWrap = _ref.noWrap,

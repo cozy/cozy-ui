@@ -13,9 +13,9 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
+import omit from 'lodash/omit';
 import React from 'react';
 import { I18n, translate } from "cozy-ui/transpiled/react/providers/I18n";
-import omit from 'lodash/omit';
 /**
  *
  * @param  {Function|Object} localesOrRequire - Either a function returning the locale for a lang,

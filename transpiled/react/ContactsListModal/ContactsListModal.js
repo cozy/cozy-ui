@@ -1,26 +1,26 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useClient } from 'cozy-client';
-import { DialogTitle, DialogContent } from "cozy-ui/transpiled/react/Dialog";
-import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
-import { TopAnchoredDialog, DialogCloseButton, useCozyDialog } from "cozy-ui/transpiled/react/CozyDialogs";
-import useRealtime from "cozy-ui/transpiled/react/hooks/useRealtime";
-import useEventListener from "cozy-ui/transpiled/react/hooks/useEventListener";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import Button from "cozy-ui/transpiled/react/Buttons";
-import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import TextField from "cozy-ui/transpiled/react/TextField";
-import MobileHeader from "cozy-ui/transpiled/react/ContactsListModal/MobileHeader";
-import ContactsListContent from "cozy-ui/transpiled/react/ContactsListModal/ContactsListContent";
 import AddContactDialog from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactDialog";
+import ContactsListContent from "cozy-ui/transpiled/react/ContactsListModal/ContactsListContent";
+import MobileHeader from "cozy-ui/transpiled/react/ContactsListModal/MobileHeader";
 var styles = {
   "ContactsListModal__addContactContainer": "styles__ContactsListModal__addContactContainer___2W-dE"
 };
+import Button from "cozy-ui/transpiled/react/Buttons";
+import { TopAnchoredDialog, DialogCloseButton, useCozyDialog } from "cozy-ui/transpiled/react/CozyDialogs";
+import { DialogTitle, DialogContent } from "cozy-ui/transpiled/react/Dialog";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
+import useEventListener from "cozy-ui/transpiled/react/hooks/useEventListener";
+import useRealtime from "cozy-ui/transpiled/react/hooks/useRealtime";
+import CozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import TextField from "cozy-ui/transpiled/react/TextField";
 
 var ContactsListModal = function ContactsListModal(_ref) {
   var onItemClick = _ref.onItemClick,

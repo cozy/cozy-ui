@@ -1,23 +1,21 @@
-import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
+import React, { useMemo } from 'react'
 
-import { isMobile as isMobileDevice } from 'cozy-device-helper'
 import { isPlainText } from 'cozy-client/dist/models/file'
+import { isMobile as isMobileDevice } from 'cozy-device-helper'
 
-import { FileDoctype } from '../../proptypes'
 import withBreakpoints from '../../helpers/withBreakpoints'
-
-import ImageViewer from '../ViewersByFile/ImageViewer'
-import AudioViewer from '../ViewersByFile/AudioViewer'
-import VideoViewer from '../ViewersByFile/VideoViewer'
-import PdfJsViewer from '../ViewersByFile/PdfJsViewer'
-import BlankPaperViewer from '../ViewersByFile/BlankPaperViewer'
-import TextViewer from '../ViewersByFile/TextViewer'
-import PdfMobileViewer from '../ViewersByFile/PdfMobileViewer'
+import { FileDoctype } from '../../proptypes'
 import NoViewer from '../NoViewer'
-import ShortcutViewer from '../ViewersByFile/ShortcutViewer'
+import AudioViewer from '../ViewersByFile/AudioViewer'
+import BlankPaperViewer from '../ViewersByFile/BlankPaperViewer'
+import ImageViewer from '../ViewersByFile/ImageViewer'
 import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
-
+import PdfJsViewer from '../ViewersByFile/PdfJsViewer'
+import PdfMobileViewer from '../ViewersByFile/PdfMobileViewer'
+import ShortcutViewer from '../ViewersByFile/ShortcutViewer'
+import TextViewer from '../ViewersByFile/TextViewer'
+import VideoViewer from '../ViewersByFile/VideoViewer'
 import { useEncrypted } from '../providers/EncryptedProvider'
 
 const isBlankPaper = doc => doc.metadata?.paperProps?.isBlank

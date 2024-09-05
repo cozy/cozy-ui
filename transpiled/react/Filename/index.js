@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
-import Typography from "cozy-ui/transpiled/react/Typography";
 import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 var Filename = function Filename(_ref) {
   var icon = _ref.icon,

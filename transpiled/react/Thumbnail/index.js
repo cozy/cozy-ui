@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className", "isStacked", "children"];
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "container": "Thumbnail__container___2Eg5o",
   "wrapper": "Thumbnail__wrapper___ZoPVg",

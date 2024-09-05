@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Input from '@material-ui/core/Input'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import CozyTheme from '../providers/CozyTheme'
 import Icon from '../Icon'
+import IconButton from '../IconButton'
 import PreviousIcon from '../Icons/Previous'
 import Paper from '../Paper'
-import IconButton from '../IconButton'
+import CozyTheme from '../providers/CozyTheme'
 
 const barStyle = {
   height: 48

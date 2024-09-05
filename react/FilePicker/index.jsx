@@ -1,13 +1,13 @@
-import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState, memo } from 'react'
 
-import { makeStyles } from '../styles'
-import { FixedDialog } from '../CozyDialogs'
-import FilePickerHeader from './FilePickerHeader'
-import FilePickerFooter from './FilePickerFooter'
 import FilePickerBody from './FilePickerBody'
-import useBreakpoints from '../providers/Breakpoints'
+import FilePickerFooter from './FilePickerFooter'
+import FilePickerHeader from './FilePickerHeader'
+import { FixedDialog } from '../CozyDialogs'
 import { getCompliantTypes } from '../helpers/acceptedTypes'
+import useBreakpoints from '../providers/Breakpoints'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(() => ({
   paper: {

@@ -1,12 +1,11 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import { makeStyles } from '../styles'
-import { makeAlertBackgroundColor } from '../MuiCozyTheme/helpers'
 import { AlertPropTypes, AlertDefaultProps } from '../Alert'
-
 import Alert from '../Alert'
+import { makeAlertBackgroundColor } from '../MuiCozyTheme/helpers'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(theme => ({
   topArrow: {

@@ -6,9 +6,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 import React, { useMemo } from 'react';
 import { useClient, useQuery, models } from 'cozy-client';
-import Link from "cozy-ui/transpiled/react/Link";
 import AppLinker from "cozy-ui/transpiled/react/AppLinker";
 import FilePath from "cozy-ui/transpiled/react/FilePath";
+import Link from "cozy-ui/transpiled/react/Link";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import { makeWebLink, normalizeAndSpreadAttributes, removeFilenameFromPath } from "cozy-ui/transpiled/react/Viewer/helpers";
 import { buildFileByIdQuery } from "cozy-ui/transpiled/react/Viewer/queries";

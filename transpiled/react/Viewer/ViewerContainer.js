@@ -8,26 +8,26 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { createRef } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import { useExtendI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
-import Modal from "cozy-ui/transpiled/react/Modal";
-import { toolbarPropsPropType } from "cozy-ui/transpiled/react/Viewer/proptypes";
-import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
+import PropTypes from 'prop-types';
+import React, { createRef } from 'react';
 import Viewer from "cozy-ui/transpiled/react/Viewer/Viewer";
 import ViewerInformationsWrapper from "cozy-ui/transpiled/react/Viewer/ViewerInformationsWrapper";
-import EncryptedProvider from "cozy-ui/transpiled/react/Viewer/providers/EncryptedProvider";
-import AlertProvider from "cozy-ui/transpiled/react/providers/Alert";
-import { ActionMenuProvider } from "cozy-ui/transpiled/react/Viewer/providers/ActionMenuProvider";
+import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
 import { locales } from "cozy-ui/transpiled/react/Viewer/locales";
+import { toolbarPropsPropType } from "cozy-ui/transpiled/react/Viewer/proptypes";
+import { ActionMenuProvider } from "cozy-ui/transpiled/react/Viewer/providers/ActionMenuProvider";
+import EncryptedProvider from "cozy-ui/transpiled/react/Viewer/providers/EncryptedProvider";
 var styles = {
   "viewer-wrapper": "styles__viewer-wrapper___2GIXH",
   "flagship-app": "styles__flagship-app___KFqbm"
 };
+import Modal from "cozy-ui/transpiled/react/Modal";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
+import AlertProvider from "cozy-ui/transpiled/react/providers/Alert";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
+import { useExtendI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var ViewerContainer = function ViewerContainer(props) {
   var className = props.className,

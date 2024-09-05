@@ -1,9 +1,8 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
 
 import styles from './styles.styl'
-
 import Icon from '../Icon'
 
 class MaybeLink extends PureComponent {

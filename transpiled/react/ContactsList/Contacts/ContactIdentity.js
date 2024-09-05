@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { models } from 'cozy-client';
-import PropTypes from 'prop-types';
+import ContactName from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactName";
 import { Avatar } from "cozy-ui/transpiled/react/Avatar";
 import { TableCell } from "cozy-ui/transpiled/react/deprecated/Table";
-import ContactName from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactName";
 var styles = {
   "contact": "styles__contact___169nD",
   "contact--clickable": "styles__contact--clickable___1GLTM",

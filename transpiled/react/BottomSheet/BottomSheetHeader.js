@@ -1,5 +1,5 @@
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import { BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
 
 var BottomSheetHeader = function BottomSheetHeader(_ref) {

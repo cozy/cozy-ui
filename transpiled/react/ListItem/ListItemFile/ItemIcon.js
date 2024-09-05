@@ -1,13 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { useClient } from 'cozy-client';
 import { isNote } from 'cozy-client/dist/models/file';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import FiletypeTextIcon from "cozy-ui/transpiled/react/Icons/FileTypeText";
-import FiletypeNoteIcon from "cozy-ui/transpiled/react/Icons/FileTypeNote";
 import FileImageLoader from "cozy-ui/transpiled/react/FileImageLoader";
-import Thumbnail from "cozy-ui/transpiled/react/Thumbnail";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import FiletypeNoteIcon from "cozy-ui/transpiled/react/Icons/FileTypeNote";
+import FiletypeTextIcon from "cozy-ui/transpiled/react/Icons/FileTypeText";
 import Skeleton from "cozy-ui/transpiled/react/Skeleton";
+import Thumbnail from "cozy-ui/transpiled/react/Thumbnail";
 
 var ItemIcon = function ItemIcon(_ref) {
   var icon = _ref.icon,

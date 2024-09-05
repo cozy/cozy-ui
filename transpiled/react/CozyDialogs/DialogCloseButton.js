@@ -1,17 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["onClick"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import CrossMediumIcon from "cozy-ui/transpiled/react/Icons/CrossMedium";
-import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import React from 'react';
+import locales from "cozy-ui/transpiled/react/CozyDialogs/locales";
 var styles = {
   "DialogCloseButton": "styles__DialogCloseButton___cxKPO",
   "DialogBackButton": "styles__DialogBackButton___1c7yH"
 };
-import locales from "cozy-ui/transpiled/react/CozyDialogs/locales";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import CrossMediumIcon from "cozy-ui/transpiled/react/Icons/CrossMedium";
+import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var useI18n = createUseI18n(locales);
 
 var CloseButton = function CloseButton(_ref) {

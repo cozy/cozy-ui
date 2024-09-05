@@ -2,8 +2,8 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className"],
     _excluded2 = ["className"];
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 var styles = {
   "UnorderedList": "styles__UnorderedList___2uFFY",
   "ListItem": "styles__ListItem___3cRoI"

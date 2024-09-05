@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../deprecated/Button'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+
 import Spinner from '../Spinner'
+import Button from '../deprecated/Button'
 
 import 'intersection-observer' // polyfill for safari (mobile and desktop)
 

@@ -8,13 +8,13 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 var styles = {
   "toggle": "styles__toggle___3zVsE",
   "checkbox": "styles__checkbox___3ko96",
   "label": "styles__label___3jY1f"
 };
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 var Toggle = /*#__PURE__*/function (_Component) {
   _inherits(Toggle, _Component);

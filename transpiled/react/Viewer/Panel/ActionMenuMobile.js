@@ -1,15 +1,15 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import AppLinker from "cozy-ui/transpiled/react/AppLinker";
+import BottomSheet, { BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import Copy from "cozy-ui/transpiled/react/Icons/Copy";
+import Edit from "cozy-ui/transpiled/react/Icons/Rename";
 import List from "cozy-ui/transpiled/react/List";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Copy from "cozy-ui/transpiled/react/Icons/Copy";
-import Edit from "cozy-ui/transpiled/react/Icons/Rename";
-import BottomSheet, { BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import AppLinker from "cozy-ui/transpiled/react/AppLinker";
 
 var ActionMenuMobile = function ActionMenuMobile(_ref) {
   var onClose = _ref.onClose,

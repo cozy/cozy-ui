@@ -1,11 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["spaceBetween", "textVariant", "disabled", "fullWidth", "noWrap", "children", "className", "dropdownTextProps"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import DropdownText from "cozy-ui/transpiled/react/DropdownText";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   root: {
     height: 'auto',

@@ -1,6 +1,7 @@
-import React from 'react'
-import Field from '.'
 import { shallow } from 'enzyme'
+import React from 'react'
+
+import Field from '.'
 
 describe('Field component', () => {
   beforeEach(() => {

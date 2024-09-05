@@ -1,15 +1,15 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className", "contact", "onClick", "divider"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { models } from 'cozy-client';
-import ListItem from "cozy-ui/transpiled/react/ListItem";
-import ContactPhone from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactPhone";
-import ContactIdentity from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactIdentity";
 import ContactCozy from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactCozy";
 import ContactEmail from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactEmail";
+import ContactIdentity from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactIdentity";
+import ContactPhone from "cozy-ui/transpiled/react/ContactsList/Contacts/ContactPhone";
+import ListItem from "cozy-ui/transpiled/react/ListItem";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 var _models$contact = models.contact,
     getPrimaryCozy = _models$contact.getPrimaryCozy,

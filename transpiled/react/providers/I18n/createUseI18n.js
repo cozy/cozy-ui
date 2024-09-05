@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
 import Polyglot from 'node-polyglot';
-import { initFormat } from "cozy-ui/transpiled/react/providers/I18n/format";
+import { useMemo } from 'react';
 import { useI18n, DEFAULT_LANG } from "cozy-ui/transpiled/react/providers/I18n";
+import { initFormat } from "cozy-ui/transpiled/react/providers/I18n/format";
 
 var createUseI18n = function createUseI18n(locales) {
   return function () {

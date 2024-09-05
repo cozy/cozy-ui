@@ -1,11 +1,11 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React, { useState } from 'react';
 import { useClient } from 'cozy-client';
-import { FixedDialog } from "cozy-ui/transpiled/react/CozyDialogs";
-import AddContactTitle from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactTitle";
-import AddContactContent from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactContent";
 import AddContactActions from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactActions";
+import AddContactContent from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactContent";
+import AddContactTitle from "cozy-ui/transpiled/react/ContactsListModal/AddContact/AddContactTitle";
 import { handleSubmit } from "cozy-ui/transpiled/react/ContactsListModal/AddContact/helpers";
+import { FixedDialog } from "cozy-ui/transpiled/react/CozyDialogs";
 
 var AddContactDialog = function AddContactDialog(_ref) {
   var onListClose = _ref.onListClose,

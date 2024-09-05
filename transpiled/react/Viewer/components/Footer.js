@@ -1,5 +1,4 @@
 import React from 'react';
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 var styles = {
   "viewer-nav": "styles__viewer-nav___1MSd7",
   "viewer-nav--visible": "styles__viewer-nav--visible___h_KJD",
@@ -13,6 +12,7 @@ var styles = {
   "viewer-toolbar--hidden": "styles__viewer-toolbar--hidden___3r3Sj",
   "viewer-footer": "styles__viewer-footer___2ieQS"
 };
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var Footer = function Footer(_ref) {
   var children = _ref.children;

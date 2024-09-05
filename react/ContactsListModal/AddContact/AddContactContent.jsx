@@ -1,14 +1,13 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-
-import Icon from '../../Icon'
-import PeopleIcon from '../../Icons/People'
-import { Media, Img, Bd } from '../../deprecated/Media'
-import TextField from '../../TextField'
-import Typography from '../../Typography'
-import { withContactsListLocales } from '../withContactsListLocales'
+import React from 'react'
 
 import styles from './styles.styl'
+import Icon from '../../Icon'
+import PeopleIcon from '../../Icons/People'
+import TextField from '../../TextField'
+import Typography from '../../Typography'
+import { Media, Img, Bd } from '../../deprecated/Media'
+import { withContactsListLocales } from '../withContactsListLocales'
 
 const AddContactContent = ({ t, setContactValues }) => {
   const handleChange = ev => {
@@ -28,7 +27,7 @@ const AddContactContent = ({ t, setContactValues }) => {
             className="u-mt-1"
             variant="outlined"
             fullWidth
-            id={'givenName'}
+            id="givenName"
             name="givenName"
             label={t('givenName')}
             onChange={handleChange}
@@ -41,7 +40,7 @@ const AddContactContent = ({ t, setContactValues }) => {
             className="u-mt-1"
             variant="outlined"
             fullWidth
-            id={'familyName'}
+            id="familyName"
             name="familyName"
             label={t('familyName')}
             onChange={handleChange}

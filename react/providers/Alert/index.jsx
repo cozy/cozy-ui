@@ -1,8 +1,8 @@
 import React, { createContext, useState, useContext, useMemo } from 'react'
 
-import Snackbar from '../../Snackbar'
 import Alert from '../../Alert'
 import AlertTitle from '../../AlertTitle'
+import Snackbar from '../../Snackbar'
 
 /**
  * @typedef {import('../../Alert').AlertProps & { message: string, title: string }} ShowAlertArgs

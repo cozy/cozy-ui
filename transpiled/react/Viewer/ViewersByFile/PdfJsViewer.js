@@ -11,17 +11,12 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Document, Page } from 'react-pdf';
 import cx from 'classnames';
-import throttle from 'lodash/throttle';
 import flow from 'lodash/flow';
-import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
-import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
-import ToolbarButton from "cozy-ui/transpiled/react/Viewer/components/PdfToolbarButton";
-import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import throttle from 'lodash/throttle';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { Document, Page } from 'react-pdf';
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -38,6 +33,11 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import ToolbarButton from "cozy-ui/transpiled/react/Viewer/components/PdfToolbarButton";
+import ViewerSpinner from "cozy-ui/transpiled/react/Viewer/components/ViewerSpinner";
+import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 export var MIN_SCALE = 0.25;
 export var MAX_SCALE = 3;
 export var MAX_PAGES = 3;

@@ -1,13 +1,13 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import { FixedDialog } from "cozy-ui/transpiled/react/CozyDialogs";
-import FilePickerHeader from "cozy-ui/transpiled/react/FilePicker/FilePickerHeader";
-import FilePickerFooter from "cozy-ui/transpiled/react/FilePicker/FilePickerFooter";
+import React, { useState, memo } from 'react';
 import FilePickerBody from "cozy-ui/transpiled/react/FilePicker/FilePickerBody";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import FilePickerFooter from "cozy-ui/transpiled/react/FilePicker/FilePickerFooter";
+import FilePickerHeader from "cozy-ui/transpiled/react/FilePicker/FilePickerHeader";
+import { FixedDialog } from "cozy-ui/transpiled/react/CozyDialogs";
 import { getCompliantTypes } from "cozy-ui/transpiled/react/helpers/acceptedTypes";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function () {
   return {
     paper: {

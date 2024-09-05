@@ -1,9 +1,9 @@
 import React from 'react';
-import { I18nContext } from "cozy-ui/transpiled/react/providers/I18n";
-import { BreakpointsProvider } from "cozy-ui/transpiled/react/providers/Breakpoints";
-import { CozyProvider } from 'cozy-client';
 import { Provider } from 'react-redux';
+import { CozyProvider } from 'cozy-client';
 import { WebviewIntentProvider } from 'cozy-intent';
+import { BreakpointsProvider } from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { I18nContext } from "cozy-ui/transpiled/react/providers/I18n";
 
 var BarContextProvider = function BarContextProvider(_ref) {
   var children = _ref.children,

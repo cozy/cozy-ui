@@ -1,17 +1,17 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useRef, useState } from 'react';
 import { getTranslatedNameForContact, formatContactValue } from 'cozy-client/dist/models/paper';
+import ActionMenuWrapper from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuWrapper";
+import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import Dots from "cozy-ui/transpiled/react/Icons/Dots";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemSecondaryAction from "cozy-ui/transpiled/react/ListItemSecondaryAction";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Dots from "cozy-ui/transpiled/react/Icons/Dots";
-import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
 import Spinner from "cozy-ui/transpiled/react/Spinner";
-import useReferencedContactName from "cozy-ui/transpiled/react/Viewer/hooks/useReferencedContactName";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import ActionMenuWrapper from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuWrapper";
+import useReferencedContactName from "cozy-ui/transpiled/react/Viewer/hooks/useReferencedContactName";
 
 var QualificationListItemContact = function QualificationListItemContact(_ref) {
   var file = _ref.file;
@@ -55,7 +55,7 @@ var QualificationListItemContact = function QualificationListItemContact(_ref) {
 
   if (isLoadingContacts) {
     return /*#__PURE__*/React.createElement(ListItem, {
-      className: 'u-pl-2 u-pr-3'
+      className: "u-pl-2 u-pr-3"
     }, /*#__PURE__*/React.createElement(Spinner, {
       color: "var(--secondaryTextColor)"
     }));
@@ -71,7 +71,7 @@ var QualificationListItemContact = function QualificationListItemContact(_ref) {
   }
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ListItem, {
-    className: 'u-ph-2'
+    className: "u-ph-2"
   }, /*#__PURE__*/React.createElement(QualificationListItemText, {
     primary: formattedTitle,
     secondary: formattedValue

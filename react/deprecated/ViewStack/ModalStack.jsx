@@ -1,7 +1,8 @@
 import React from 'react'
-import Modal from '../Modal'
+
 import { ViewStackContext } from './context'
 import { useStack } from './hooks'
+import Modal from '../Modal'
 
 /**
  * Wraps children so that they can push views that will appear as modals.

@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["component"];
-import React, { forwardRef } from 'react';
 import MuiMenuItem from '@material-ui/core/MenuItem';
+import React, { forwardRef } from 'react';
 import ListItem, { LitItemPropTypes } from "cozy-ui/transpiled/react/ListItem";
 var MenuItem = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var component = _ref.component,

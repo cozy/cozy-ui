@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { TableCell } from "cozy-ui/transpiled/react/deprecated/Table";
 var styles = {
   "contact": "styles__contact___169nD",

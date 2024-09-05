@@ -1,9 +1,9 @@
-import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import filesize from 'filesize'
+import React from 'react'
 
-import DemoProvider from './docs/DemoProvider'
 import FilePickerBodyItem from './FilePickerBodyItem'
+import DemoProvider from './docs/DemoProvider'
 import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
 
 const mockFile01 = {

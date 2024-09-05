@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Paywall from "cozy-ui/transpiled/react/Paywall/Paywall";
 import withPaywallLocales from "cozy-ui/transpiled/react/Paywall/locales/withPaywallLocales";
 /**

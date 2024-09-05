@@ -1,15 +1,15 @@
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { isExpired, isExpiringSoon, getTranslatedNameForDateMetadata, formatDateMetadataValue } from 'cozy-client/dist/models/paper';
+import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import Dots from "cozy-ui/transpiled/react/Icons/Dots";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemSecondaryAction from "cozy-ui/transpiled/react/ListItemSecondaryAction";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Dots from "cozy-ui/transpiled/react/Icons/Dots";
 import Typography from "cozy-ui/transpiled/react/Typography";
-import ExpirationAnnotation from "cozy-ui/transpiled/react/Viewer/components/ExpirationAnnotation";
-import QualificationListItemText from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemText";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import ExpirationAnnotation from "cozy-ui/transpiled/react/Viewer/components/ExpirationAnnotation";
 var QualificationListItemDate = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var file = _ref.file,
       formattedMetadataQualification = _ref.formattedMetadataQualification,
@@ -30,7 +30,7 @@ var QualificationListItemDate = /*#__PURE__*/forwardRef(function (_ref, ref) {
   });
   var isExpirationDate = name === 'expirationDate';
   return /*#__PURE__*/React.createElement(ListItem, {
-    className: 'u-pl-2 u-pr-3'
+    className: "u-pl-2 u-pr-3"
   }, /*#__PURE__*/React.createElement(QualificationListItemText, {
     primary: formattedTitle,
     secondary: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Typography, {

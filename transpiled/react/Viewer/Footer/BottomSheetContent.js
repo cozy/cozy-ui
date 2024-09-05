@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
 import getPanelBlocks, { getPanelBlocksSpecs } from "cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks";
 

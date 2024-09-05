@@ -1,13 +1,9 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import range from 'lodash/range';
-import format from 'date-fns/format';
 import cx from 'classnames';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import format from 'date-fns/format';
+import range from 'lodash/range';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 var styles = {
   "DateMonthPicker__YearControls": "styles__DateMonthPicker__YearControls___1DGlB",
   "DateMonthPicker__YearButton": "styles__DateMonthPicker__YearButton___3zNDK",
@@ -16,6 +12,10 @@ var styles = {
   "DateMonthPicker__Year": "styles__DateMonthPicker__Year___387bP",
   "DateMonthPicker__MonthGrid": "styles__DateMonthPicker__MonthGrid___TCFg4"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var MonthButton = function MonthButton(_ref) {
   var monthNum = _ref.monthNum,

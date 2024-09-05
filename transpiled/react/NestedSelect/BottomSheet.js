@@ -1,13 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
+import NestedSelect from "cozy-ui/transpiled/react/NestedSelect/NestedSelect";
+import BottomSheet, { BottomSheetHeader, BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
+import Divider from "cozy-ui/transpiled/react/Divider";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import IconButton from "cozy-ui/transpiled/react/IconButton";
 import ArrowUpIcon from "cozy-ui/transpiled/react/Icons/ArrowUp";
-import BottomSheet, { BottomSheetHeader, BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
 import Typography from "cozy-ui/transpiled/react/Typography";
-import Divider from "cozy-ui/transpiled/react/Divider";
-import NestedSelect from "cozy-ui/transpiled/react/NestedSelect/NestedSelect";
 
 var HeaderComponent = function HeaderComponent(_ref) {
   var title = _ref.title,

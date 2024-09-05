@@ -1,12 +1,12 @@
-import React, { useMemo } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useMemo } from 'react';
+import BottomSheetContent from "cozy-ui/transpiled/react/Viewer/Footer/BottomSheetContent";
+import { extractChildrenCompByName } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
 import BottomSheet, { BottomSheetHeader } from "cozy-ui/transpiled/react/BottomSheet";
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
 import PrintButton from "cozy-ui/transpiled/react/Viewer/components/PrintButton";
-import { extractChildrenCompByName } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
-import BottomSheetContent from "cozy-ui/transpiled/react/Viewer/Footer/BottomSheetContent";
+import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
 
 var FooterButtons = function FooterButtons(_ref) {
   var file = _ref.file,

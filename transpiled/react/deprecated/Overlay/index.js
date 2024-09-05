@@ -11,14 +11,14 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-var styles = {
-  "c-overlay": "styles__c-overlay___8W1LN"
-};
 import cx from 'classnames';
 import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { RemoveScroll } from 'react-remove-scroll';
+var styles = {
+  "c-overlay": "styles__c-overlay___8W1LN"
+};
 var ESC_KEYCODE = 27;
 var nonDOMProps = ['onEscape', 'children', 'className', 'innerRef'];
 

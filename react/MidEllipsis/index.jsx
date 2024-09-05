@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 /** The left-to-right mark (LRM) is a control character (an invisible formatting character)
  * used in computerized typesetting (including word processing in a program like Microsoft Word)

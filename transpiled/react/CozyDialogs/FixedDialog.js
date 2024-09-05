@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
+import DialogBackButton from "cozy-ui/transpiled/react/CozyDialogs/DialogBackButton";
+import DialogCloseButton from "cozy-ui/transpiled/react/CozyDialogs/DialogCloseButton";
+import dialogPropTypes from "cozy-ui/transpiled/react/CozyDialogs/dialogPropTypes";
 import useCozyDialog from "cozy-ui/transpiled/react/CozyDialogs/useCozyDialog";
 import Dialog, { DialogTitle, DialogActions, DialogContent } from "cozy-ui/transpiled/react/Dialog";
 import Divider from "cozy-ui/transpiled/react/Divider";
-import dialogPropTypes from "cozy-ui/transpiled/react/CozyDialogs/dialogPropTypes";
-import DialogBackButton from "cozy-ui/transpiled/react/CozyDialogs/DialogBackButton";
-import DialogCloseButton from "cozy-ui/transpiled/react/CozyDialogs/DialogCloseButton";
 
 var FixedDialog = function FixedDialog(props) {
   var onClose = props.onClose,

@@ -1,15 +1,15 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useRef, useState, createRef, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import React, { useRef, useState, createRef, useMemo, useEffect } from 'react';
 import { isExpiringSoon, formatMetadataQualification, KNOWN_BILLS_ATTRIBUTES_NAMES, getMetadataQualificationType } from 'cozy-client/dist/models/paper';
-import List from "cozy-ui/transpiled/react/List";
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
-import ExpirationAlert from "cozy-ui/transpiled/react/Viewer/components/ExpirationAlert";
 import ActionMenuWrapper from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuWrapper";
 import QualificationListItemContact from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemContact";
 import QualificationListItemDate from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemDate";
 import QualificationListItemInformation from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemInformation";
 import QualificationListItemOther from "cozy-ui/transpiled/react/Viewer/Panel/QualificationListItemOther";
+import List from "cozy-ui/transpiled/react/List";
+import ExpirationAlert from "cozy-ui/transpiled/react/Viewer/components/ExpirationAlert";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 var ComponentFromMetadataQualificationType = {
   contact: QualificationListItemContact,
   date: QualificationListItemDate,
@@ -91,7 +91,7 @@ var Qualification = function Qualification(_ref) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, isExpiringSoon(file) && !isExpirationAlertHidden(file) && /*#__PURE__*/React.createElement(ExpirationAlert, {
     file: file
   }), /*#__PURE__*/React.createElement(List, {
-    className: 'u-pv-1'
+    className: "u-pv-1"
   }, formattedMetadataQualification.map(function (meta, idx) {
     var name = meta.name;
     var metadataQualificationType = getMetadataQualificationType(name);

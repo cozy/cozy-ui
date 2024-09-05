@@ -2,10 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "className", "tag", "isSecondary"];
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Typography from "cozy-ui/transpiled/react/Typography";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "Tile": "styles__Tile___2SqRi",
   "Tile-secondary": "styles__Tile-secondary___2zYdn",
@@ -17,6 +16,7 @@ var styles = {
   "Tile-title-multiline": "styles__Tile-title-multiline___17HPx",
   "Tile-status-accent": "styles__Tile-status-accent___an9au"
 };
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 var Tile = function Tile(_ref) {
   var children = _ref.children,

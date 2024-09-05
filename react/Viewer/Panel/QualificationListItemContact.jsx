@@ -1,21 +1,21 @@
-import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useRef, useState } from 'react'
 
 import {
   getTranslatedNameForContact,
   formatContactValue
 } from 'cozy-client/dist/models/paper'
 
+import ActionMenuWrapper from './ActionMenuWrapper'
+import QualificationListItemText from './QualificationListItemText'
+import Icon from '../../Icon'
+import IconButton from '../../IconButton'
+import Dots from '../../Icons/Dots'
 import ListItem from '../../ListItem'
 import ListItemSecondaryAction from '../../ListItemSecondaryAction'
-import IconButton from '../../IconButton'
-import Icon from '../../Icon'
-import Dots from '../../Icons/Dots'
-import QualificationListItemText from './QualificationListItemText'
 import Spinner from '../../Spinner'
-import useReferencedContactName from '../hooks/useReferencedContactName'
 import { useI18n } from '../../providers/I18n'
-import ActionMenuWrapper from './ActionMenuWrapper'
+import useReferencedContactName from '../hooks/useReferencedContactName'
 
 const QualificationListItemContact = ({ file }) => {
   const { lang } = useI18n()
@@ -36,7 +36,7 @@ const QualificationListItemContact = ({ file }) => {
 
   if (isLoadingContacts) {
     return (
-      <ListItem className={'u-pl-2 u-pr-3'}>
+      <ListItem className="u-pl-2 u-pr-3">
         <Spinner color="var(--secondaryTextColor)" />
       </ListItem>
     )
@@ -51,7 +51,7 @@ const QualificationListItemContact = ({ file }) => {
 
   return (
     <>
-      <ListItem className={'u-ph-2'}>
+      <ListItem className="u-ph-2">
         <QualificationListItemText
           primary={formattedTitle}
           secondary={formattedValue}

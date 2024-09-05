@@ -1,6 +1,7 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
+
 import styles from './styles.styl'
 
 const Stack = ({ spacing, tag: Tag, ...props }) => {

@@ -12,46 +12,11 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component, useState } from 'react';
-import cx from 'classnames';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import cx from 'classnames';
+import React, { Component, useState } from 'react';
 import { useIntervalWhen } from 'rooks';
 import { splitFilename } from 'cozy-client/dist/models/file';
-import { withStyles } from "cozy-ui/transpiled/react/styles";
-import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
-import CheckIcon from "cozy-ui/transpiled/react/Icons/Check";
-import { translate, useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Spinner from "cozy-ui/transpiled/react/Spinner";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import List from "cozy-ui/transpiled/react/List";
-import ListItem from "cozy-ui/transpiled/react/ListItem";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
-import { Img } from "cozy-ui/transpiled/react/deprecated/Media";
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
-var styles = {
-  "upload-queue": "styles__upload-queue___1VtNK",
-  "upload-queue__threshold-bar": "styles__upload-queue__threshold-bar___tTYal",
-  "upload-queue__progress-caption": "styles__upload-queue__progress-caption___1-vXY",
-  "upload-queue__upload-progress": "styles__upload-queue__upload-progress___1q-uS",
-  "upload-queue--popover": "styles__upload-queue--popover___2z1a4",
-  "upload-queue--visible": "styles__upload-queue--visible___DjVRs",
-  "upload-queue-header": "styles__upload-queue-header___c9Vf2",
-  "upload-queue-header-inner": "styles__upload-queue-header-inner___26wpB",
-  "upload-queue-progress": "styles__upload-queue-progress___1CmN-",
-  "upload-queue-content": "styles__upload-queue-content___3MPHo",
-  "upload-queue--collapsed": "styles__upload-queue--collapsed___3cchD",
-  "upload-queue-list": "styles__upload-queue-list___OVvJm",
-  "upload-queue-item--error": "styles__upload-queue-item--error___2sSeV",
-  "upload-queue-item--done": "styles__upload-queue-item--done___2PSJI",
-  "item-file": "styles__item-file___1kfDn",
-  "item-status": "styles__item-status___3FNcY",
-  "spin": "styles__spin___3GZIp",
-  "shake": "styles__shake___u1Pks"
-};
 var localeEn = {
   header: "Uploading %{smart_count} photo to %{app} |||| Uploading %{smart_count} photos to %{app}",
   header_mobile: "Uploading %{done} of %{smart_count}",
@@ -82,7 +47,42 @@ var localeFr = {
     remainingTime: "%{time} restante |||| %{time} restantes"
   }
 };
+var styles = {
+  "upload-queue": "styles__upload-queue___1VtNK",
+  "upload-queue__threshold-bar": "styles__upload-queue__threshold-bar___tTYal",
+  "upload-queue__progress-caption": "styles__upload-queue__progress-caption___1-vXY",
+  "upload-queue__upload-progress": "styles__upload-queue__upload-progress___1q-uS",
+  "upload-queue--popover": "styles__upload-queue--popover___2z1a4",
+  "upload-queue--visible": "styles__upload-queue--visible___DjVRs",
+  "upload-queue-header": "styles__upload-queue-header___c9Vf2",
+  "upload-queue-header-inner": "styles__upload-queue-header-inner___26wpB",
+  "upload-queue-progress": "styles__upload-queue-progress___1CmN-",
+  "upload-queue-content": "styles__upload-queue-content___3MPHo",
+  "upload-queue--collapsed": "styles__upload-queue--collapsed___3cchD",
+  "upload-queue-list": "styles__upload-queue-list___OVvJm",
+  "upload-queue-item--error": "styles__upload-queue-item--error___2sSeV",
+  "upload-queue-item--done": "styles__upload-queue-item--done___2PSJI",
+  "item-file": "styles__item-file___1kfDn",
+  "item-status": "styles__item-status___3FNcY",
+  "spin": "styles__spin___3GZIp",
+  "shake": "styles__shake___u1Pks"
+};
+import Icon from "cozy-ui/transpiled/react/Icon";
+import CheckIcon from "cozy-ui/transpiled/react/Icons/Check";
+import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
+import Spinner from "cozy-ui/transpiled/react/Spinner";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import List from "cozy-ui/transpiled/react/List";
+import ListItem from "cozy-ui/transpiled/react/ListItem";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import { Img } from "cozy-ui/transpiled/react/deprecated/Media";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import { translate, useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import { formatLocallyDistanceToNow } from "cozy-ui/transpiled/react/providers/I18n/format";
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
+import { withStyles } from "cozy-ui/transpiled/react/styles";
 var locales = {
   en: localeEn,
   es: localeEs,

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { splitFilename } from 'cozy-client/dist/models/file';
 import Filename from "cozy-ui/transpiled/react/Filename";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";

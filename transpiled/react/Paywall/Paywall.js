@@ -7,23 +7,23 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 import _regeneratorRuntime from "@babel/runtime/regenerator";
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import PropTypes from 'prop-types';
-import { isFlagshipApp } from 'cozy-device-helper';
 import { useInstanceInfo } from 'cozy-client';
 import { buildPremiumLink } from 'cozy-client/dist/models/instance';
+import { isFlagshipApp } from 'cozy-device-helper';
 import flag from 'cozy-flags';
 import { useWebviewIntent } from 'cozy-intent';
-import Spinner from "cozy-ui/transpiled/react/Spinner";
+import { makeType } from "cozy-ui/transpiled/react/Paywall/helpers";
+import withPaywallLocales from "cozy-ui/transpiled/react/Paywall/locales/withPaywallLocales";
+import Button from "cozy-ui/transpiled/react/Buttons";
 import { IllustrationDialog } from "cozy-ui/transpiled/react/CozyDialogs";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import CozyUpgradeIcon from "cozy-ui/transpiled/react/Icons/CozyUpgrade";
-import Button from "cozy-ui/transpiled/react/Buttons";
+import Spinner from "cozy-ui/transpiled/react/Spinner";
 import Typography from "cozy-ui/transpiled/react/Typography";
-import { makeType } from "cozy-ui/transpiled/react/Paywall/helpers";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import withPaywallLocales from "cozy-ui/transpiled/react/Paywall/locales/withPaywallLocales";
 /**
  * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case
  */

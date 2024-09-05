@@ -1,20 +1,20 @@
 import _toConsumableArray from "@babel/runtime/helpers/toConsumableArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["values", "component", "placeholder", "label", "addButtonLabel", "removeButtonLabel", "onChange", "onAddField"];
-import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
-import { FieldContainer } from "cozy-ui/transpiled/react/Field";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Label from "cozy-ui/transpiled/react/Label";
-import CrossSmallIcon from "cozy-ui/transpiled/react/Icons/CrossSmall";
-import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
-import Stack from "cozy-ui/transpiled/react/Stack";
+import React, { useRef } from 'react';
 var styles = {
   "CollectionField__addBtn": "styles__CollectionField__addBtn___Z0FO-",
   "CollectionField__addBtnIcon": "styles__CollectionField__addBtnIcon___1hA5b",
   "CollectionField__row": "styles__CollectionField__row___Z7bbf"
 };
+import { FieldContainer } from "cozy-ui/transpiled/react/Field";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import CrossSmallIcon from "cozy-ui/transpiled/react/Icons/CrossSmall";
+import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
+import Label from "cozy-ui/transpiled/react/Label";
+import Stack from "cozy-ui/transpiled/react/Stack";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
 /**
  * Handles a collection of form fields.
  * This is a controlled component. You have to give it some values and handle

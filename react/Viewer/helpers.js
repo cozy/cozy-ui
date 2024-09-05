@@ -1,5 +1,4 @@
 import { generateWebLink } from 'cozy-client'
-
 import {
   isEncrypted,
   isFromKonnector,
@@ -7,7 +6,6 @@ import {
   hasCertifications,
   normalize
 } from 'cozy-client/dist/models/file'
-
 import {
   KNOWN_DATE_METADATA_NAMES,
   KNOWN_INFORMATION_METADATA_NAMES,

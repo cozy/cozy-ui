@@ -1,11 +1,11 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import flag from 'cozy-flags';
-import useMediaQuery from "cozy-ui/transpiled/react/hooks/useMediaQuery";
-import MuiCozyTheme from "cozy-ui/transpiled/react/MuiCozyTheme";
 import { CozyThemeContext } from "cozy-ui/transpiled/react/providers/CozyTheme/index";
+import MuiCozyTheme from "cozy-ui/transpiled/react/MuiCozyTheme";
+import useMediaQuery from "cozy-ui/transpiled/react/hooks/useMediaQuery";
 
 var DumbCozyTheme = function DumbCozyTheme(_ref) {
   var _cx;

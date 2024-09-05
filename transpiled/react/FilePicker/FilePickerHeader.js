@@ -1,17 +1,17 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["data"];
-import React, { useCallback, memo } from 'react';
-import PropTypes from 'prop-types';
-import uniqBy from 'lodash/uniqBy';
 import get from 'lodash/get';
+import uniqBy from 'lodash/uniqBy';
+import PropTypes from 'prop-types';
+import React, { useCallback, memo } from 'react';
 import { useQuery, hasQueryBeenLoaded } from 'cozy-client';
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Previous from "cozy-ui/transpiled/react/Icons/Previous";
+import { ROOT_DIR_ID } from "cozy-ui/transpiled/react/FilePicker";
 import FilePickerBreadcrumb from "cozy-ui/transpiled/react/FilePicker/FilePickerBreadcrumb";
 import { buildCurrentFolderQuery } from "cozy-ui/transpiled/react/FilePicker/queries";
-import { ROOT_DIR_ID } from "cozy-ui/transpiled/react/FilePicker";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import Previous from "cozy-ui/transpiled/react/Icons/Previous";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 /**
  * @param {IOCozyFolder} displayedFolder - An io.cozy.files folder
  * @returns {{id: string, name: string}[]}

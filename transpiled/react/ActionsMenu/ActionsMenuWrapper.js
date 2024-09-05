@@ -1,14 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "autoClose", "open", "onClose"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import Menu from "cozy-ui/transpiled/react/Menu";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import React from 'react';
 import BottomSheet from "cozy-ui/transpiled/react/BottomSheet";
-import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import Menu from "cozy-ui/transpiled/react/Menu";
 import Paper from "cozy-ui/transpiled/react/Paper";
 import { useActionMenuEffects } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuEffects";
+import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var ActionsMenuWrapper = function ActionsMenuWrapper(_ref) {
   var children = _ref.children,

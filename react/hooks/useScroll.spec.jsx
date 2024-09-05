@@ -1,4 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks'
+
 import useScroll from './useScroll'
 
 jest.mock('lodash/debounce', () => fn => fn)

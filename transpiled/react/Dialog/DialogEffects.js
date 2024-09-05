@@ -2,9 +2,9 @@ import { getLuminance, useTheme } from '@material-ui/core';
 import { useEffect } from 'react';
 import { isFlagshipApp } from 'cozy-device-helper';
 import { useWebviewIntent } from 'cozy-intent';
-import { ThemeColor, parseArg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { getFlagshipMetadata } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
 import { isRsg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
+import { ThemeColor, parseArg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
 export var DOMStrings;
 
@@ -27,8 +27,7 @@ export var makeOnMount = function makeOnMount(_ref) {
       fullscreen = _ref.fullscreen,
       sidebar = _ref.sidebar,
       rootModal = _ref.rootModal,
-      theme = _ref.theme,
-      isLight = _ref.isLight;
+      theme = _ref.theme;
   var hasBottomBackground = !rootModal;
   var hasTopBackground = cozybar && !rootModal;
   return fullscreen ? {
@@ -131,7 +130,7 @@ export var useDialogSetFlagshipUI = function useDialogSetFlagshipUI(open, onMoun
        *
        * Note that this will also handle abrupt unmounting, as in hiding the dialog without using the open prop.
        */
-      if (open === false || open === undefined) return;
+      if (!open || open === undefined) return;
       parseArg(webviewIntent, onUnmount, "".concat(caller || 'unknown', " (onOpenUnmount)"));
     };
     /**

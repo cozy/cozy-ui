@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["isListItem", "className"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
-import omit from 'lodash/omit';
 import cx from 'classnames';
-import MenuItem from "cozy-ui/transpiled/react/MenuItem";
+import omit from 'lodash/omit';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import ListItem from "cozy-ui/transpiled/react/ListItem";
+import MenuItem from "cozy-ui/transpiled/react/MenuItem";
 
 var cleanPropsForDOM = function cleanPropsForDOM(props) {
   var nonDOMProps = ['docs', 'action', 't', 'f', 'lang'];

@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "className", "disabled", "hidden", "multiple", "onChange"];
 import cx from 'classnames';
-import React from 'react';
-import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-file-input": "styles__c-file-input___YNZSh"
 };

@@ -6,9 +6,9 @@ var _excluded = ["className"],
     _excluded4 = ["className"],
     _excluded5 = ["className"],
     _excluded6 = ["className"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "Table": "styles__Table___39nEw",
   "TableHead": "styles__TableHead___3ZqIs",

@@ -1,13 +1,12 @@
-import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-
-import useEventListener from '../useEventListener'
-import withLocales from '../../providers/I18n/withLocales'
-import { ConfirmDialog } from '../../CozyDialogs'
-import Button from '../../deprecated/Button'
+import React, { useCallback, useRef, useState } from 'react'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import { ConfirmDialog } from '../../CozyDialogs'
+import Button from '../../deprecated/Button'
+import withLocales from '../../providers/I18n/withLocales'
+import useEventListener from '../useEventListener'
 
 /**
  * Confirmation modal

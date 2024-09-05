@@ -1,4 +1,3 @@
-import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var en = {
   navLimiter: {
     showMore: "Show More",
@@ -11,6 +10,7 @@ var fr = {
     showLess: "Voir moins"
   }
 };
+import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 export var locales = {
   en: en,
   fr: fr

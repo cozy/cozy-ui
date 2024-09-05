@@ -2,11 +2,11 @@ import _extends from "@babel/runtime/helpers/extends";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["options", "action", "doctype", "children", "closable", "showCloseButton", "create", "tag", "onComplete", "onDismiss", "iframeProps", "Component"];
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IntentIframe, { iframeProps } from "cozy-ui/transpiled/react/IntentIframe";
+import React, { useState } from 'react';
 import { DialogCloseButton } from "cozy-ui/transpiled/react/CozyDialogs";
 import Dialog from "cozy-ui/transpiled/react/Dialog";
+import IntentIframe, { iframeProps } from "cozy-ui/transpiled/react/IntentIframe";
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a dialog
  * for the specified intent.

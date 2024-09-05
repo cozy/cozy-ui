@@ -1,6 +1,5 @@
-import React from 'react'
-
 import MuiRadio from '@material-ui/core/Radio'
+import React from 'react'
 
 import Icon from '../Icon'
 import RadioCheckedIcon from '../Icons/RadioChecked'

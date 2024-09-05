@@ -2,24 +2,10 @@ import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 var _excluded = ["display", "name", "variant", "IconContent", "description"];
-import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
-import PropTypes from 'prop-types';
 import get from 'lodash/get';
-import AppIcon from "cozy-ui/transpiled/react/AppIcon";
-import Badge from "cozy-ui/transpiled/react/Badge";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconCheckAnimated from "cozy-ui/transpiled/react/Icons/IconCheckAnimated";
-import InfosBadge from "cozy-ui/transpiled/react/InfosBadge";
-import Spinner from "cozy-ui/transpiled/react/Spinner";
-import SvgIconCrossAnimated from "cozy-ui/transpiled/react/Icons/IconCrossAnimated";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import iconOut from "cozy-ui/transpiled/react/Icons/LinkOut";
-import iconPlus from "cozy-ui/transpiled/react/Icons/Plus";
-import iconWarning from "cozy-ui/transpiled/react/Icons/WarningCircle";
-import { alpha, makeStyles } from "cozy-ui/transpiled/react/styles";
-import { nameToColor } from "cozy-ui/transpiled/react/Avatar/helpers";
-import CozyTheme, { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 var styles = {
   "SquareAppIcon-wrapper": "styles__SquareAppIcon-wrapper___2SEuM",
@@ -34,6 +20,20 @@ var styles = {
   "isSuccess": "styles__isSuccess___I6nFq",
   "end-animation": "styles__end-animation___1O0b3"
 };
+import AppIcon from "cozy-ui/transpiled/react/AppIcon";
+import { nameToColor } from "cozy-ui/transpiled/react/Avatar/helpers";
+import Badge from "cozy-ui/transpiled/react/Badge";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconCheckAnimated from "cozy-ui/transpiled/react/Icons/IconCheckAnimated";
+import SvgIconCrossAnimated from "cozy-ui/transpiled/react/Icons/IconCrossAnimated";
+import iconOut from "cozy-ui/transpiled/react/Icons/LinkOut";
+import iconPlus from "cozy-ui/transpiled/react/Icons/Plus";
+import iconWarning from "cozy-ui/transpiled/react/Icons/WarningCircle";
+import InfosBadge from "cozy-ui/transpiled/react/InfosBadge";
+import Spinner from "cozy-ui/transpiled/react/Spinner";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import CozyTheme, { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
+import { alpha, makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     name: _defineProperty({

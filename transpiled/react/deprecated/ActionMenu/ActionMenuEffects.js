@@ -2,8 +2,8 @@
 // TODO: remove eslint-disable and @ts-ignore rules
 import { useTheme } from '@material-ui/core';
 import { isFlagshipApp } from 'cozy-device-helper';
-import { useSetFlagshipUI } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { isRsg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
+import { useSetFlagshipUI } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
 
 var getBottomBackground = function getBottomBackground(theme) {
@@ -19,11 +19,11 @@ var useHook = function useHook() {
 
   useSetFlagshipUI({
     bottomBackground: theme.palette.background.paper,
-    // @ts-ignore
+    // @ts-expect-error
     bottomTheme: isLight ? 'dark' : 'light',
     topOverlay: 'rgba(0, 0, 0, 0.5)',
     topBackground: theme.palette.background.paper,
-    // @ts-ignore
+    // @ts-expect-error
     topTheme: 'light'
   }, {
     bottomBackground: getBottomBackground(theme),

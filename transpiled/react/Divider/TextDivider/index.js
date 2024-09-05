@@ -1,14 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["color", "variant", "textAlign", "children", "className"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "divider": "styles__divider___SuA5q",
   "center": "styles__center___3K8dw"
 };
+import Typography from "cozy-ui/transpiled/react/Typography";
 /**
  * @description This component is composing `<Typography />` and has access to the same props
  */

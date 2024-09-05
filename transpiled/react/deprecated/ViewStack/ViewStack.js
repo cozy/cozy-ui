@@ -1,8 +1,8 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import { useStack } from "cozy-ui/transpiled/react/deprecated/ViewStack/hooks";
-import { ViewStackContext } from "cozy-ui/transpiled/react/deprecated/ViewStack/context"; // This is guessed, I could not see how to interface properly with
+import { ViewStackContext } from "cozy-ui/transpiled/react/deprecated/ViewStack/context";
+import { useStack } from "cozy-ui/transpiled/react/deprecated/ViewStack/hooks"; // This is guessed, I could not see how to interface properly with
 // react-swipeable-views's onTransitionEnd
 
 var STEPPER_TRANSITION_DURATION_MS = 500;

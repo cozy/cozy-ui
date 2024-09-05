@@ -1,5 +1,6 @@
-import testFromStyleguidist from '../test/testFromStyleguidist'
 import path from 'path'
+
+import testFromStyleguidist from '../test/testFromStyleguidist'
 
 // Popper does not work well inside of jest as it heavily relies on DOM APIs (see https://github.com/popperjs/popper-core/issues/478).
 jest.mock('@material-ui/core/Popper', () => {

@@ -2,13 +2,13 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className"],
     _excluded2 = ["className"];
-import React from 'react';
-import Stack from "cozy-ui/transpiled/react/Stack";
 import cx from 'classnames';
+import React from 'react';
 var styles = {
   "OrderedList": "styles__OrderedList___17A_o",
   "ListItem": "styles__ListItem___2Lu4a"
 };
+import Stack from "cozy-ui/transpiled/react/Stack";
 export var OrderedList = function OrderedList(props) {
   var className = props.className,
       rest = _objectWithoutProperties(props, _excluded);

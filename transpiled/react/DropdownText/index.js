@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["spaceBetween", "variant", "disabled", "noWrap", "color", "children", "innerTextProps", "innerIconContainerProps", "innerIconProps"];
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React, { forwardRef } from 'react';
 import Icon from "cozy-ui/transpiled/react/Icon";
 import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     container: {

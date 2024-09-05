@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react'
-import cx from 'classnames'
-import PropTypes from 'prop-types'
-import merge from 'lodash/merge'
 import MuiListItem from '@material-ui/core/ListItem'
 import isMuiElement from '@material-ui/core/utils/isMuiElement'
+import cx from 'classnames'
+import merge from 'lodash/merge'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import { makeStyles } from '../styles'
 import {

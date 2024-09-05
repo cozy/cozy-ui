@@ -17,15 +17,15 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withClient } from 'cozy-client';
 import { checkApp, startApp, isMobileApp, isMobile, openDeeplinkOrRedirect, isAndroid, isFlagshipApp } from 'cozy-device-helper';
 import { WebviewContext } from 'cozy-intent';
 import logger from 'cozy-logger';
+import expiringMemoize from "cozy-ui/transpiled/react/AppLinker/expiringMemoize";
 import { generateUniversalLink, generateWebLink, getUniversalLinkDomain } from "cozy-ui/transpiled/react/AppLinker/native";
 import { NATIVE_APP_INFOS } from "cozy-ui/transpiled/react/AppLinker/native.config";
-import expiringMemoize from "cozy-ui/transpiled/react/AppLinker/expiringMemoize";
 var expirationDelay = 10 * 1000;
 var memoizedCheckApp = expiringMemoize(function (appInfo) {
   return checkApp(appInfo).catch(function () {

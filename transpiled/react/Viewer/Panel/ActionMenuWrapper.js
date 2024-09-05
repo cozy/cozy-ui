@@ -1,15 +1,15 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { useAppLinkWithStoreFallback, useClient } from 'cozy-client';
+import ActionMenuDesktop from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuDesktop";
+import ActionMenuMobile from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuMobile";
+import { useAlert } from "cozy-ui/transpiled/react/providers/Alert";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { useAlert } from "cozy-ui/transpiled/react/providers/Alert";
 import { buildEditAttributePath, isEditableAttribute, getCurrentModel } from "cozy-ui/transpiled/react/Viewer/helpers";
 import useActionMenuContext from "cozy-ui/transpiled/react/Viewer/providers/ActionMenuProvider";
-import ActionMenuMobile from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuMobile";
-import ActionMenuDesktop from "cozy-ui/transpiled/react/Viewer/Panel/ActionMenuDesktop";
 var mespapiersAppSlug = 'mespapiers';
 var ActionMenuWrapper = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var onClose = _ref.onClose,

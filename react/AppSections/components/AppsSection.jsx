@@ -1,11 +1,12 @@
-import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
-import { useI18n } from '../../providers/I18n'
-import useBreakpoints from '../../providers/Breakpoints'
-import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
-import AppTile from '../../AppTile'
+import PropTypes from 'prop-types'
+import React, { useMemo } from 'react'
+
 import styles from './AppsSection.styl'
+import AppTile from '../../AppTile'
+import useBreakpoints from '../../providers/Breakpoints'
+import { useI18n } from '../../providers/I18n'
+import { getTranslatedManifestProperty } from '../helpers'
 
 const makeNameGetter = t => app => getTranslatedManifestProperty(app, 'name', t)
 

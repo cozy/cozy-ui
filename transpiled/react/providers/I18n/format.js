@@ -1,5 +1,5 @@
-import format from 'date-fns/format';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import format from 'date-fns/format';
 import { DEFAULT_LANG } from "cozy-ui/transpiled/react/providers/I18n";
 var locales = {};
 var lang = DEFAULT_LANG;

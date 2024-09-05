@@ -1,7 +1,7 @@
 import React from 'react';
 import Dialog from "cozy-ui/transpiled/react/Dialog";
-import DialogTitle from "cozy-ui/transpiled/react/Dialog/DialogTitle";
 import DialogActions from "cozy-ui/transpiled/react/Dialog/DialogActions";
+import DialogTitle from "cozy-ui/transpiled/react/Dialog/DialogTitle";
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 var logDepecratedExperimentalDialog = createDepreciationLogger();
 export var ExperimentalDialog = function ExperimentalDialog(props) {

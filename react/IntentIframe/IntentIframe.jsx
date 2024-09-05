@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import get from 'lodash/get'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { Intents } from 'cozy-interapp'
 import { withClient } from 'cozy-client'
+import { Intents } from 'cozy-interapp'
 
-import Spinner from '../Spinner'
 import styles from './styles.styl'
+import Spinner from '../Spinner'
 
 const DEFAULT_DATA = {
   // TODO remove `closeable` since it is only there for backward compatibility
@@ -19,15 +19,8 @@ class IntentIframe extends React.Component {
   state = { loading: false }
 
   componentDidMount() {
-    const {
-      action,
-      data,
-      type,
-      onCancel,
-      onError,
-      onTerminate,
-      client
-    } = this.props
+    const { action, data, type, onCancel, onError, onTerminate, client } =
+      this.props
 
     console.warn(
       'Be carful to use `withBreakpoints()` and not `useBreakpoints()` in intents. See https://github.com/cozy/cozy-ui/issues/1807'

@@ -3,10 +3,10 @@ import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["variant", "className", "color", "label", "busy", "disabled", "endIcon"],
     _excluded2 = ["variant", "className"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
 import MuiButton from '@material-ui/core/Button';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import Icon from "cozy-ui/transpiled/react/Icon";
 import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
 var CUSTOM_COLORS = ['success', 'error', 'warning', 'info'];

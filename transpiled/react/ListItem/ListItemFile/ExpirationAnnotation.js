@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { computeExpirationDate, isExpired, makeExpiredMessage, makeExpiresInMessage } from 'cozy-client/dist/models/paper';
 import Typography from "cozy-ui/transpiled/react/Typography";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";

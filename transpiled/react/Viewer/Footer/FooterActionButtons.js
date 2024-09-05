@@ -1,5 +1,5 @@
-import { cloneElement } from 'react';
 import PropTypes from 'prop-types';
+import { cloneElement } from 'react';
 import { mapToAllChildren } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
 
 var FooterActionButtons = function FooterActionButtons(_ref) {

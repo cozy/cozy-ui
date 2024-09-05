@@ -1,8 +1,4 @@
 import React from 'react';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import FileTypeAudioIcon from "cozy-ui/transpiled/react/Icons/FileTypeAudio";
-import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
-import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -19,6 +15,10 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import FileTypeAudioIcon from "cozy-ui/transpiled/react/Icons/FileTypeAudio";
+import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import withFileUrl from "cozy-ui/transpiled/react/Viewer/hoc/withFileUrl";
 
 var AudioViewer = function AudioViewer(_ref) {
   var file = _ref.file,

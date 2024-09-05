@@ -10,18 +10,14 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import flow from 'lodash/flow';
 import cx from 'classnames';
 import Hammer from 'hammerjs';
-import { withStyles } from "cozy-ui/transpiled/react/styles";
-import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
-import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
-import { toolbarPropsPropType } from "cozy-ui/transpiled/react/Viewer";
+import flow from 'lodash/flow';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { infoWidth } from "cozy-ui/transpiled/react/Viewer/components/InformationPanel";
-import Toolbar from "cozy-ui/transpiled/react/Viewer/components/Toolbar";
 import Navigation from "cozy-ui/transpiled/react/Viewer/components/Navigation";
+import Toolbar from "cozy-ui/transpiled/react/Viewer/components/Toolbar";
 var styles = {
   "viewer-nav": "styles__viewer-nav___1MSd7",
   "viewer-nav--visible": "styles__viewer-nav--visible___h_KJD",
@@ -35,6 +31,10 @@ var styles = {
   "viewer-toolbar--hidden": "styles__viewer-toolbar--hidden___3r3Sj",
   "viewer-footer": "styles__viewer-footer___2ieQS"
 };
+import { toolbarPropsPropType } from "cozy-ui/transpiled/react/Viewer";
+import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
+import { withStyles } from "cozy-ui/transpiled/react/styles";
+import { isValidForPanel } from "cozy-ui/transpiled/react/Viewer/helpers";
 var ACTIONS_HIDE_DELAY = 3000;
 
 var customStyles = function customStyles() {

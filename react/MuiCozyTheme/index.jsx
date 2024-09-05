@@ -1,8 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import { ThemeProvider } from '../styles'
 import { getTheme } from './theme'
+import { ThemeProvider } from '../styles'
 
 console.log(' ')
 console.log('🟢 BUILDED FROM GA - should be right')

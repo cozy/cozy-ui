@@ -15,17 +15,17 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import get from 'lodash/get';
-import { Intents } from 'cozy-interapp';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { withClient } from 'cozy-client';
-import Spinner from "cozy-ui/transpiled/react/Spinner";
+import { Intents } from 'cozy-interapp';
 var styles = {
   "intentContainer": "styles__intentContainer___gZbMl",
   "intentPlaceHolder": "styles__intentPlaceHolder___EWSR1",
   "intentContainer__error": "styles__intentContainer__error___yQ7K8"
 };
+import Spinner from "cozy-ui/transpiled/react/Spinner";
 var DEFAULT_DATA = {
   // TODO remove `closeable` since it is only there for backward compatibility
   // https://mattermost.cozycloud.cc/test-team/pl/t1iagfhqp3n8mqf3nchp6bxsur

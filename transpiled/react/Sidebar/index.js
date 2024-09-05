@@ -1,15 +1,15 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "className"];
-import React from 'react';
+import { useTheme } from '@material-ui/core';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "o-sidebar": "styles__o-sidebar___1295j"
 };
 import { useSetFlagshipUI } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/useSetFlagshipUI";
 import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
-import { useTheme } from '@material-ui/core';
 
 var Sidebar = function Sidebar(_ref) {
   var children = _ref.children,

@@ -7,11 +7,9 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "c-empty": "styles__c-empty___3w5oV",
   "c-empty--centered": "styles__c-empty--centered___2ijsY",
@@ -21,6 +19,8 @@ var styles = {
   "c-empty-title": "styles__c-empty-title___2HduE",
   "c-empty-text": "styles__c-empty-text___3HnvR"
 };
+import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
+import Typography from "cozy-ui/transpiled/react/Typography";
 export var Empty = function Empty(_ref) {
   var _icon$props, _icon$props2;
 

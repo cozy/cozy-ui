@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
+import Button from "cozy-ui/transpiled/react/Buttons";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import Typography from "cozy-ui/transpiled/react/Typography";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import Button from "cozy-ui/transpiled/react/Buttons";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import Icon from "cozy-ui/transpiled/react/Icon";
 var useDesktopStyles = makeStyles({
   root: {
     border: 'none !important',

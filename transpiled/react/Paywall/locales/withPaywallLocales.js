@@ -1,4 +1,3 @@
-import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var en = {
   action: {
     loading: "Loading...",
@@ -189,6 +188,7 @@ var fr = {
     }
   }
 };
+import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var locales = {
   en: en,
   fr: fr

@@ -2,15 +2,9 @@ import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/extends";
 var _excluded = ["title", "text", "icon", "actionButton", "isImportant"];
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
-import Stack from "cozy-ui/transpiled/react/Stack";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "Infos": "styles__Infos___tpCYh",
   "Infos--primary": "styles__Infos--primary____iqfw",
@@ -19,6 +13,12 @@ var styles = {
   "Infos-description": "styles__Infos-description___3q8sW",
   "Info-close": "styles__Info-close___EnUCb"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
+import Stack from "cozy-ui/transpiled/react/Stack";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 export var Infos = function Infos(_ref) {
   var description = _ref.description,
       action = _ref.action,

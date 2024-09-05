@@ -1,16 +1,16 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
+import AppLinker from '../../AppLinker'
+import BottomSheet, { BottomSheetItem } from '../../BottomSheet'
+import Icon from '../../Icon'
+import Copy from '../../Icons/Copy'
+import Edit from '../../Icons/Rename'
 import List from '../../List'
 import ListItem from '../../ListItem'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
-import Icon from '../../Icon'
-import Copy from '../../Icons/Copy'
-import Edit from '../../Icons/Rename'
-import BottomSheet, { BottomSheetItem } from '../../BottomSheet'
 import { useI18n } from '../../providers/I18n'
-import AppLinker from '../../AppLinker'
 
 const ActionMenuMobile = ({
   onClose,

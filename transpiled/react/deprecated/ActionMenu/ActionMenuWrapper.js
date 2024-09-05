@@ -1,8 +1,8 @@
 import React from 'react';
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
-import BottomSheet from "cozy-ui/transpiled/react/BottomSheet";
 import NotInlineWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/NotInlineWrapper";
+import BottomSheet from "cozy-ui/transpiled/react/BottomSheet";
+import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 /**
  * @deprecated This component is depreacated, please use [ActionsMenu](#/ActionsMenu) instead.
  */

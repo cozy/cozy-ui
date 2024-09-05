@@ -1,11 +1,11 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["ignoreCozySettings"];
-import React, { createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
+import React, { createContext, useContext } from 'react';
 import log from 'cozy-logger';
-import { isRsg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
 import CozyThemeWithQuery from "cozy-ui/transpiled/react/providers/CozyTheme/CozyThemeWithQuery";
 import DumbCozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme/DumbCozyTheme";
+import { isRsg } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
 export var CozyThemeContext = /*#__PURE__*/createContext();
 /**
  * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean }}

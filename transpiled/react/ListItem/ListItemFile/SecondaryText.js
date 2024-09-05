@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { isExpired, isExpiringSoon } from 'cozy-client/dist/models/paper';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import ExpirationAnnotation from "cozy-ui/transpiled/react/ListItem/ListItemFile/ExpirationAnnotation";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var SecondaryText = function SecondaryText(_ref) {
   var _file$metadata, _file$metadata2;

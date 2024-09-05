@@ -2,13 +2,13 @@
 // Since the MuiMenu component doesn't allow another Popover positioning,
 // we have to recompose the Menu component ourselves with basic Mui component
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import Grow from '@material-ui/core/Grow'
-import Popper from '@material-ui/core/Popper'
-import Paper from '@material-ui/core/Paper'
 import MenuList from '@material-ui/core/MenuList'
+import Paper from '@material-ui/core/Paper'
+import Popper from '@material-ui/core/Popper'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 import { withStyles } from '../../styles'
 import MenuButton from '../Button'

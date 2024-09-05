@@ -1,12 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { splitFilename } from 'cozy-client/dist/models/file';
-import Filename from "cozy-ui/transpiled/react/Filename";
-import FiletypePdfIcon from "cozy-ui/transpiled/react/Icons/FileTypePdf";
-import ListItemBase from "cozy-ui/transpiled/react/ListItem/ListItemBase";
 import ItemIcon from "cozy-ui/transpiled/react/ListItem/ListItemFile/ItemIcon";
 import PrimaryText from "cozy-ui/transpiled/react/ListItem/ListItemFile/PrimaryText";
 import SecondaryText from "cozy-ui/transpiled/react/ListItem/ListItemFile/SecondaryText";
+import Filename from "cozy-ui/transpiled/react/Filename";
+import FiletypePdfIcon from "cozy-ui/transpiled/react/Icons/FileTypePdf";
+import ListItemBase from "cozy-ui/transpiled/react/ListItem/ListItemBase";
 
 var ListItemFile = function ListItemFile(_ref) {
   var file = _ref.file,

@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import Snackbar from '../../Snackbar'
-import Alert from '../../Alert'
-import { useI18n } from '../../providers/I18n'
-
-import withListItemLocales from '../hoc/withListItemLocales'
 import ExpandedAttribute from './ExpandedAttribute'
 import { makeAttrsLabelAndFormattedValue } from './helpers'
+import Alert from '../../Alert'
+import Snackbar from '../../Snackbar'
+import { useI18n } from '../../providers/I18n'
+import withListItemLocales from '../hoc/withListItemLocales'
 
 const ExpandedAttributes = ({ doc, expandedAttributes }) => {
   const { t, f, lang } = useI18n()

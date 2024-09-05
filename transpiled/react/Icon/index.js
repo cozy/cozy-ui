@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["icon", "width", "height", "color", "style", "className", "preserveColor", "rotate", "size", "spin"];
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "icon--spin": "styles__icon--spin___ybfC1",
   "spin": "styles__spin___2Vvw3",

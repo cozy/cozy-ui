@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["size", "className", "children", "color"];
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
 import MuiIconButton from '@material-ui/core/IconButton';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 var muiSupportedColors = ['default', 'inherit', 'primary', 'secondary'];
 var IconButton = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var _ref$size = _ref.size,

@@ -7,11 +7,11 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import { useState } from 'react';
 import cx from 'classnames';
+import { useState } from 'react';
+import DialogTransition from "cozy-ui/transpiled/react/CozyDialogs/DialogTransition";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import DialogTransition from "cozy-ui/transpiled/react/CozyDialogs/DialogTransition";
 var globalId = 0;
 var modalSizes = ['small', 'medium', 'large'];
 var useStyles = makeStyles({

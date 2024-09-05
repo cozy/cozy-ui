@@ -1,5 +1,5 @@
-import React from 'react'
 import uniqueId from 'lodash/uniqueId'
+import React from 'react'
 
 import FileInput from '.'
 

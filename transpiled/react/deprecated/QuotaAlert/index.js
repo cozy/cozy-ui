@@ -1,6 +1,6 @@
 import React from 'react';
-import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 import { QuotaPaywall } from "cozy-ui/transpiled/react/Paywall";
+import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 var logDeprecatedComponent = createDepreciationLogger();
 /**
  * @deprecated This component is depreacated, please use [QuotaPaywall](#/Paywall) instead.

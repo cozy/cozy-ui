@@ -1,11 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React, { forwardRef } from 'react';
-import TelephoneIcon from "cozy-ui/transpiled/react/Icons/Telephone";
 import { getActionsI18n } from "cozy-ui/transpiled/react/ActionsMenu/Actions/locales/withActionsLocales";
-import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import Icon from "cozy-ui/transpiled/react/Icon";
+import TelephoneIcon from "cozy-ui/transpiled/react/Icons/Telephone";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
 import ListItemText from "cozy-ui/transpiled/react/ListItemText";
+import ActionsMenuItem from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem";
 export var call = function call() {
   var _getActionsI18n = getActionsI18n(),
       t = _getActionsI18n.t;

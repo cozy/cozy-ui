@@ -1,17 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
-import { useCozyDialog, DialogCloseButton } from "cozy-ui/transpiled/react/CozyDialogs";
-import Dialog, { DialogTitle, DialogContent } from "cozy-ui/transpiled/react/Dialog";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
-import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
 import NestedSelect from "cozy-ui/transpiled/react/NestedSelect/NestedSelect";
 var styles = {
   "Modal__back": "styles__Modal__back___qxUn_",
   "search-container--without-title": "styles__search-container--without-title___3P2fe"
 };
+import { useCozyDialog, DialogCloseButton } from "cozy-ui/transpiled/react/CozyDialogs";
+import Dialog, { DialogTitle, DialogContent } from "cozy-ui/transpiled/react/Dialog";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
 import List from "cozy-ui/transpiled/react/List";
+import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
 
 var NestedSelectDialogHeader = function NestedSelectDialogHeader(_ref) {
   var onClickBack = _ref.onClickBack,

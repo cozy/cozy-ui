@@ -1,24 +1,16 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import AppIcon from "cozy-ui/transpiled/react/AppIcon";
+import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Tile, { TileTitle, TileSubtitle, TileFooter, TileIcon, TileDescription } from "cozy-ui/transpiled/react/Tile";
-import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import { AppDoctype } from "cozy-ui/transpiled/react/proptypes";
+import React from 'react';
 import { APP_STATUS, getCurrentStatusLabel } from "cozy-ui/transpiled/react/AppTile/helpers";
-var styles = {
-  "AppTile-icon": "styles__AppTile-icon___1f0c0",
-  "AppTile-icon--default": "styles__AppTile-icon--default___1tjiF",
-  "AppTile-icon-maintenance": "styles__AppTile-icon-maintenance___2VOvO",
-  "AppTile-container-maintenance": "styles__AppTile-container-maintenance___u1a1M"
-};
 var en = {
   app_item: {
     by: "By",
     installed: "Installed",
     maintenance: "In maintenance",
-    update: "Update available"
+    update: "Update available",
+    favorite: "Added to home page"
   }
 };
 var fr = {
@@ -26,13 +18,26 @@ var fr = {
     by: "Par",
     installed: "Install\xE9e",
     maintenance: "En maintenance",
-    update: "Mise \xE0 jour dispo."
+    update: "Mise \xE0 jour dispo.",
+    favorite: "Ajout\xE9 sur la page d'accueil"
   }
 };
+var styles = {
+  "AppTile-icon": "styles__AppTile-icon___1f0c0",
+  "AppTile-icon--default": "styles__AppTile-icon--default___1tjiF",
+  "AppTile-icon-maintenance": "styles__AppTile-icon-maintenance___2VOvO",
+  "AppTile-container-maintenance": "styles__AppTile-container-maintenance___u1a1M"
+};
+import AppIcon from "cozy-ui/transpiled/react/AppIcon";
+import { isShortcutFile } from "cozy-ui/transpiled/react/AppSections/helpers.js";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import WrenchCircleIcon from "cozy-ui/transpiled/react/Icons/WrenchCircle";
+import { ShortcutTile } from "cozy-ui/transpiled/react/ShortcutTile";
+import Tile, { TileTitle, TileSubtitle, TileFooter, TileIcon, TileDescription } from "cozy-ui/transpiled/react/Tile";
 import palette from "cozy-ui/transpiled/react/palette";
-import cx from 'classnames';
+import { AppDoctype } from "cozy-ui/transpiled/react/proptypes";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { createUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var locales = {
   en: en,
   fr: fr
@@ -55,6 +60,8 @@ var getAppIconProps = function getAppIconProps() {
 
 var useI18n = createUseI18n(locales);
 export var AppTile = function AppTile(_ref) {
+  var _app$metadata;
+
   var app = _ref.app,
       nameProp = _ref.name,
       namePrefix = _ref.namePrefix,
@@ -63,24 +70,32 @@ export var AppTile = function AppTile(_ref) {
       showStatus = _ref.showStatus,
       IconComponentProp = _ref.IconComponent,
       displaySpecificMaintenanceStyle = _ref.displaySpecificMaintenanceStyle;
-  var name = nameProp || app.name;
 
   var _useI18n = useI18n(),
       t = _useI18n.t;
 
   var _app$developer = app.developer,
       developer = _app$developer === void 0 ? {} : _app$developer;
+
+  var _useBreakpoints = useBreakpoints(),
+      isMobile = _useBreakpoints.isMobile;
+
+  var name = nameProp || app.name;
   var statusLabel = getCurrentStatusLabel(app);
-  var statusToDisplay = Array.isArray(showStatus) ? showStatus.indexOf(statusLabel) > -1 && statusLabel : showStatus && statusLabel;
+  var isStatusArray = Array.isArray(showStatus);
+  var statusToDisplay = isShortcutFile(app) && statusLabel === APP_STATUS.installed && isMobile ? 'favorite' : isStatusArray ? showStatus.indexOf(statusLabel) > -1 && statusLabel : showStatus && statusLabel;
   var IconComponent = IconComponentProp || AppIcon;
   var isInMaintenanceWithSpecificDisplay = displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance;
+  var tileSubtitle = isShortcutFile(app) ? (_app$metadata = app.metadata) === null || _app$metadata === void 0 ? void 0 : _app$metadata.source : developer.name;
   return /*#__PURE__*/React.createElement(Tile, {
     tag: "button",
     type: "button",
     onClick: onClick,
     className: cx(_defineProperty({}, styles['AppTile-container-maintenance'], isInMaintenanceWithSpecificDisplay)),
     isSecondary: statusLabel === APP_STATUS.installed
-  }, /*#__PURE__*/React.createElement(TileIcon, null, /*#__PURE__*/React.createElement(IconComponent, _extends({
+  }, /*#__PURE__*/React.createElement(TileIcon, null, isShortcutFile(app) ? /*#__PURE__*/React.createElement(ShortcutTile, {
+    file: app
+  }) : /*#__PURE__*/React.createElement(IconComponent, _extends({
     app: app,
     className: styles['AppTile-icon']
   }, getAppIconProps())), isInMaintenanceWithSpecificDisplay && /*#__PURE__*/React.createElement(Icon, {
@@ -92,7 +107,7 @@ export var AppTile = function AppTile(_ref) {
     className: styles["AppTile-description"]
   }, /*#__PURE__*/React.createElement(TileTitle, {
     isMultiline: !statusLabel
-  }, namePrefix ? "".concat(namePrefix, " ").concat(name) : name), developer.name && showDeveloper && /*#__PURE__*/React.createElement(TileSubtitle, null, "".concat(t('app_item.by'), " ").concat(developer.name)), statusToDisplay && /*#__PURE__*/React.createElement(TileFooter, {
+  }, namePrefix ? "".concat(namePrefix, " ").concat(name) : name), showDeveloper && /*#__PURE__*/React.createElement(TileSubtitle, null, "".concat(t('app_item.by'), " ").concat(tileSubtitle)), statusToDisplay && /*#__PURE__*/React.createElement(TileFooter, {
     isAccent: statusLabel === APP_STATUS.update
   }, t("app_item.".concat(statusToDisplay)))));
 };

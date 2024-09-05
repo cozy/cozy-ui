@@ -7,17 +7,17 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
 import { useTheme } from '@material-ui/core';
-import set from 'lodash/set';
+import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
+import cx from 'classnames';
 import cloneDeep from 'lodash/cloneDeep';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import set from 'lodash/set';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Doughnut } from 'react-chartjs-2';
 import Typography from "cozy-ui/transpiled/react/Typography";
 import isTesting from "cozy-ui/transpiled/react/helpers/isTesting";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 ChartJS.register(ArcElement, Tooltip);
 var useStyles = makeStyles(function (theme) {
   return {

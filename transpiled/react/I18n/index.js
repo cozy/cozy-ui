@@ -1,6 +1,6 @@
 import React from 'react';
-import DeprecatedI18n, { useI18n as deprecatedUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import DeprecatedI18n, { useI18n as deprecatedUseI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var logDeprecatedFunc = createDepreciationLogger();
 var logDeprecatedComp = createDepreciationLogger();
 export var useI18n = function useI18n(props) {

@@ -1317,10 +1317,9 @@ export function makeDarkInvertedOverrides(theme: any): {
             '&.block': {
                 flexWrap: string;
                 '& $action': {
-                    display: string;
                     width: string;
                     paddingLeft: number;
-                    textAlign: string;
+                    justifyContent: string;
                 };
             };
         };
@@ -1374,6 +1373,24 @@ export function makeDarkInvertedOverrides(theme: any): {
                 minWidth: number;
                 padding: string;
             };
+        };
+    };
+    MuiMobileStepper: {
+        root: {
+            background: string;
+            height: number;
+            padding: number;
+        };
+        dot: {
+            backgroundColor: string;
+            width: string;
+            height: string;
+            margin: string;
+            border: string;
+            boxSizing: string;
+        };
+        dotActive: {
+            border: string;
         };
     };
 } & {

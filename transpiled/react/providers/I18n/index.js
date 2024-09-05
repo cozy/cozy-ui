@@ -15,10 +15,10 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { initTranslation } from "cozy-ui/transpiled/react/providers/I18n/translation";
+import React, { Component, useContext } from 'react';
 import { initFormat } from "cozy-ui/transpiled/react/providers/I18n/format";
+import { initTranslation } from "cozy-ui/transpiled/react/providers/I18n/translation";
 export var DEFAULT_LANG = 'en';
 export var I18nContext = /*#__PURE__*/React.createContext();
 export var useI18n = function useI18n() {

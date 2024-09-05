@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import flow from 'lodash/flow'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
+import flow from 'lodash/flow'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
-import { withStyles } from '../../styles'
-import withBreakpoints from '../../helpers/withBreakpoints'
-
-import { isValidForPanel } from '../helpers'
-import { toolbarPropsPropType } from '..'
 import { infoWidth } from './InformationPanel'
-import Toolbar from './Toolbar'
 import Navigation from './Navigation'
-
+import Toolbar from './Toolbar'
 import styles from './styles.styl'
+import { toolbarPropsPropType } from '..'
+import withBreakpoints from '../../helpers/withBreakpoints'
+import { withStyles } from '../../styles'
+import { isValidForPanel } from '../helpers'
 
 const ACTIONS_HIDE_DELAY = 3000
 
@@ -132,9 +130,8 @@ class ViewerControls extends Component {
       <div
         className={cx(styles['viewer-controls'], {
           [styles['viewer-controls--expanded']]: expanded,
-          [styles[
-            'viewer-controls--display-content-top'
-          ]]: shouldDisplayContentTop,
+          [styles['viewer-controls--display-content-top']]:
+            shouldDisplayContentTop,
           [classes.viewerControlsWithInfo]: showInfoPanel
         })}
         ref={wrapped => {
@@ -190,7 +187,4 @@ ViewerControls.propTypes = {
   showInfoPanel: PropTypes.bool
 }
 
-export default flow(
-  withBreakpoints(),
-  withStyles(customStyles)
-)(ViewerControls)
+export default flow(withBreakpoints(), withStyles(customStyles))(ViewerControls)

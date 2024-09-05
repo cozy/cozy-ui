@@ -1,19 +1,18 @@
 import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
-import { BreakpointsProvider } from '../../providers/Breakpoints'
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
+import { BreakpointsProvider } from '../../providers/Breakpoints'
 import I18n from '../../providers/I18n'
 import { locales } from '../locales/index'
-import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))
 }
 
 const demoFilesByClass = {
-  pdf:
-    'https://raw.githubusercontent.com/rospdf/pdf-php/2ccf7591fc2f18e63342ebfedad7997b08c34ed2/readme.pdf',
+  pdf: 'https://raw.githubusercontent.com/rospdf/pdf-php/2ccf7591fc2f18e63342ebfedad7997b08c34ed2/readme.pdf',
   audio: 'https://viewerdemo.cozycloud.cc/Z.mp3',
   video: 'https://viewerdemo.cozycloud.cc/Nextcloud.mp4',
   text: 'https://viewerdemo.cozycloud.cc/notes.md'

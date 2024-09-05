@@ -1,14 +1,12 @@
-import React, { useState, useCallback, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
 import clamp from 'lodash/clamp'
+import PropTypes from 'prop-types'
+import React, { useState, useCallback, useEffect } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 
+import styles from './styles.styl'
 import Icon from '../../Icon'
 import IconButton from '../../IconButton'
-
-import styles from './styles.styl'
-
 import LeftIcon from '../../Icons/Left'
 import RightIcon from '../../Icons/Right'
 
@@ -42,7 +40,7 @@ const InfosCarrousel = ({
   const hasNextInfos = index === count - 1
 
   const onChangeIndex = useCallback(
-    function(index) {
+    function (index) {
       const { onChangeIndex: onChangeIndexProp } = swipeableProps
       if (onChangeIndexProp) {
         onChangeIndexProp(index)

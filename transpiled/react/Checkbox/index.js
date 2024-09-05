@@ -2,11 +2,11 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["label", "error", "mixed", "disabled"],
     _excluded2 = ["className", "label", "onChange", "children"];
-import React from 'react';
-import cx from 'classnames';
-import PropTypes from 'prop-types';
 import MUICheckbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 var logDepecratedCheckbox = createDepreciationLogger();
 

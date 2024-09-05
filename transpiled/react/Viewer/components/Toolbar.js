@@ -1,22 +1,10 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { useClient } from 'cozy-client';
-import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import PreviousIcon from "cozy-ui/transpiled/react/Icons/Previous";
-import DownloadIcon from "cozy-ui/transpiled/react/Icons/Download";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
-import { downloadFile } from "cozy-ui/transpiled/react/Viewer/helpers";
-import { useEncrypted } from "cozy-ui/transpiled/react/Viewer/providers/EncryptedProvider";
-import { extractChildrenCompByName } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
-import { ToolbarFilePath } from "cozy-ui/transpiled/react/Viewer/components/ToolbarFilePath";
 import PrintButton from "cozy-ui/transpiled/react/Viewer/components/PrintButton";
+import { ToolbarFilePath } from "cozy-ui/transpiled/react/Viewer/components/ToolbarFilePath";
 var styles = {
   "viewer-nav": "styles__viewer-nav___1MSd7",
   "viewer-nav--visible": "styles__viewer-nav--visible___h_KJD",
@@ -30,6 +18,18 @@ var styles = {
   "viewer-toolbar--hidden": "styles__viewer-toolbar--hidden___3r3Sj",
   "viewer-footer": "styles__viewer-footer___2ieQS"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import DownloadIcon from "cozy-ui/transpiled/react/Icons/Download";
+import PreviousIcon from "cozy-ui/transpiled/react/Icons/Previous";
+import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import { extractChildrenCompByName } from "cozy-ui/transpiled/react/Viewer/Footer/helpers";
+import { downloadFile } from "cozy-ui/transpiled/react/Viewer/helpers";
+import { useEncrypted } from "cozy-ui/transpiled/react/Viewer/providers/EncryptedProvider";
 var useClasses = makeStyles(function (theme) {
   return {
     iconButton: _defineProperty({}, theme.breakpoints.down('md'), {

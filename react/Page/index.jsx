@@ -8,6 +8,7 @@
  */
 
 import React from 'react'
+
 import { useKeyboardInfo } from './keyboard'
 import styles from './styles.styl'
 import useBreakpoints from '../providers/Breakpoints'

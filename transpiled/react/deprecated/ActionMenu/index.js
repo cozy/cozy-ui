@@ -1,16 +1,14 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import ActionMenuWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuWrapper";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useActionMenuEffects } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuEffects";
 import { ActionMenuHeader } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuHeader";
 import { ActionMenuItem } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItem";
-import { ActionMenuRadio } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuRadio";
-import { useActionMenuEffects } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuEffects";
 import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
+import { ActionMenuRadio } from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuRadio";
 import ActionMenuWithClose from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuWithClose";
+import ActionMenuWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuWrapper";
 import ActionsItems from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/ActionsItems";
 var styles = {
   "c-actionmenu": "styles__c-actionmenu___IUGX7",
@@ -19,6 +17,8 @@ var styles = {
   "c-actionmenu-item": "styles__c-actionmenu-item___WzUJQ",
   "c-actionmenu-radio": "styles__c-actionmenu-radio___38gls"
 };
+import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 var logDepecratedMenu = createDepreciationLogger();
 var logDepecratedPlacement = createDepreciationLogger();
 var logDepecratedOverflow = createDepreciationLogger();

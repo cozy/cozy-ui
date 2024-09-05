@@ -2,14 +2,15 @@
 
 /* eslint-env jest */
 
-import React from 'react'
 import { render } from '@testing-library/react'
-import CozyClient, { CozyProvider } from 'cozy-client'
+import React from 'react'
 
-import en from '../AppSections/locales/en.json'
-import I18n from '../providers/I18n'
+import CozyClient from 'cozy-client'
 
 import AppTile from '.'
+import en from '../AppSections/locales/en.json'
+import DemoProvider from '../providers/DemoProvider'
+import I18n from '../providers/I18n'
 
 const appMock = {
   slug: 'test',
@@ -41,11 +42,11 @@ const appMock2 = {
 const client = new CozyClient({})
 const Wrapper = props => {
   return (
-    <CozyProvider client={client}>
+    <DemoProvider client={client}>
       <I18n dictRequire={() => en} lang="en">
         <AppTile {...props} />
       </I18n>
-    </CozyProvider>
+    </DemoProvider>
   )
 }
 

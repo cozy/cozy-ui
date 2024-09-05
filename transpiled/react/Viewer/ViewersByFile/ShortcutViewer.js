@@ -1,11 +1,11 @@
+import get from 'lodash/get';
 import React from 'react';
 import { useClient, useFetchShortcut } from 'cozy-client';
-import get from 'lodash/get';
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
+import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith";
 import { ButtonLink } from "cozy-ui/transpiled/react/deprecated/Button";
 import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith";
 import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 
 var ShortcutViewer = function ShortcutViewer(_ref) {
   var t = _ref.t,

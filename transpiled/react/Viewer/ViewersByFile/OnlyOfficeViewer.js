@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Button from "cozy-ui/transpiled/react/deprecated/Button";
 import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 import NoViewer from "cozy-ui/transpiled/react/Viewer/NoViewer";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 
 var OnlyOfficeViewer = function OnlyOfficeViewer(_ref) {
   var file = _ref.file,

@@ -10,9 +10,9 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import React, { Component } from 'react';
 var styles = {
   "c-btn--alert-error": "styles__c-btn--alert-error___3uH5i",
   "c-btn--alert-info": "styles__c-btn--alert-info___1xAkg",
@@ -27,7 +27,7 @@ var styles = {
   "spin": "styles__spin___10b55",
   "shake": "styles__shake___JTDyQ"
 };
-import cx from 'classnames';
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
 export var Alert = /*#__PURE__*/function (_Component) {
   _inherits(Alert, _Component);
 

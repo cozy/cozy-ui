@@ -1,11 +1,10 @@
-import React from 'react'
 import { render, fireEvent, waitFor } from '@testing-library/react'
-
-import DemoProvider from '../providers/DemoProvider'
-import mockClient from '../ContactsListModal/mockClient'
-import contacts from '../ContactsList/_mockContacts.json'
+import React from 'react'
 
 import ContactPicker from '.'
+import contacts from '../ContactsList/_mockContacts.json'
+import mockClient from '../ContactsListModal/mockClient'
+import DemoProvider from '../providers/DemoProvider'
 
 const Wrapper = ({ children }) => {
   return <DemoProvider client={mockClient}>{children}</DemoProvider>

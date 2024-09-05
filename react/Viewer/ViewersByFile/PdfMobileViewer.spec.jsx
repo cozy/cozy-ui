@@ -1,13 +1,12 @@
-import React from 'react'
 import { render, waitFor } from '@testing-library/react'
+import React from 'react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
 import logger from 'cozy-logger'
 
-import { I18n } from '../../providers/I18n'
-
-import EncryptedProvider from '../providers/EncryptedProvider'
 import { PdfMobileViewer } from './PdfMobileViewer'
+import { I18n } from '../../providers/I18n'
+import EncryptedProvider from '../providers/EncryptedProvider'
 
 logger.error = logger.warn = jest.fn()
 

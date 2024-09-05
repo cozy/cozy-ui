@@ -1,12 +1,12 @@
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { BottomSheetItem } from "cozy-ui/transpiled/react/BottomSheet";
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import List from "cozy-ui/transpiled/react/List";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
 import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import Typography from "cozy-ui/transpiled/react/Typography";
 var BottomSheetTitle = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var className = _ref.className,

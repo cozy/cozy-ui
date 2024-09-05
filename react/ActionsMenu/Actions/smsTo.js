@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react'
 
-import CommentIcon from '../../Icons/Comment'
 import { getActionsI18n } from './locales/withActionsLocales'
-import ActionsMenuItem from '../ActionsMenuItem'
-import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
+import CommentIcon from '../../Icons/Comment'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
+import ActionsMenuItem from '../ActionsMenuItem'
 
 export const smsTo = () => {
   const { t } = getActionsI18n()

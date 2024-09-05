@@ -15,16 +15,16 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
+import once from 'lodash/once';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 var styles = {
   "intentModal": "styles__intentModal___1NbfY",
   "intentModal__cross": "styles__intentModal__cross___1ISTs"
 };
-import PropTypes from 'prop-types';
-import once from 'lodash/once';
 import IntentIframe from "cozy-ui/transpiled/react/IntentIframe";
-import Modal from "cozy-ui/transpiled/react/deprecated/Modal";
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import Modal from "cozy-ui/transpiled/react/deprecated/Modal";
 var logIntentModalDepecrated = createDepreciationLogger();
 /**
  * Render a modal for the specified intent.

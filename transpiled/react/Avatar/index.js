@@ -1,7 +1,8 @@
-import React from 'react';
 import cx from 'classnames';
-import PropTypes from 'prop-types';
 import assign from 'lodash/assign';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { nameToColor } from "cozy-ui/transpiled/react/Avatar/helpers";
 var styles = {
   "c-avatar": "styles__c-avatar___PpDI-",
   "c-avatar-image": "styles__c-avatar-image___3yJnb",
@@ -15,10 +16,9 @@ var styles = {
   "c-avatar--image": "styles__c-avatar--image___jDBci",
   "c-avatar--ghost": "styles__c-avatar--ghost___3898R"
 };
+import { createSizeStyle } from "cozy-ui/transpiled/react/Circle";
 import Icon, { iconPropType } from "cozy-ui/transpiled/react/Icon";
 import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
-import { createSizeStyle } from "cozy-ui/transpiled/react/Circle";
-import { nameToColor } from "cozy-ui/transpiled/react/Avatar/helpers";
 
 var createBgColorStyle = function createBgColorStyle(_ref) {
   var text = _ref.text,

@@ -2,10 +2,10 @@ import _extends from "@babel/runtime/helpers/extends";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["options", "action", "doctype", "children", "closable", "create", "tag", "into", "onComplete", "onDismiss"];
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IntentModal from "cozy-ui/transpiled/react/deprecated/IntentModal";
+import React, { useState } from 'react';
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
+import IntentModal from "cozy-ui/transpiled/react/deprecated/IntentModal";
 var logIntentOpenerDepecrated = createDepreciationLogger();
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a modal

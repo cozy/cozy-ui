@@ -1,15 +1,15 @@
-import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
+import React, { useMemo } from 'react'
 
-import { useI18n } from '../../../providers/I18n'
 import { getActionName, getOnlyNeededActions } from './helpers'
+import { useI18n } from '../../../providers/I18n'
 
 const ActionsItems = ({ doc, actions, isLast, setIsRenaming, onClose }) => {
   const { t } = useI18n()
-  const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
-    actions,
-    doc
-  ])
+  const cleanedActions = useMemo(
+    () => getOnlyNeededActions(actions, doc),
+    [actions, doc]
+  )
 
   return cleanedActions.map((actionObject, idx) => {
     const actionName = getActionName(actionObject)

@@ -69,6 +69,8 @@ export var groupApps = function groupApps(apps) {
  * Alphabetical sort on label except for
  *   - 'all' value always at the beginning
  *   - 'others' value always at the end
+ *   - 'cozy' value should be near the beginning, right after 'all'
+ *   - items of type 'file' should appear alphabetically between 'webapp' and 'konnector'
  *
  * @param  {CategoryOption} categoryA
  * @param  {CategoryOption} categoryB
@@ -76,7 +78,26 @@ export var groupApps = function groupApps(apps) {
  */
 
 export var sorter = function sorter(categoryA, categoryB) {
-  return categoryA.value === 'all' && -1 || categoryB.value === 'all' && 1 || categoryA.value === 'others' && 1 || categoryB.value === 'others' && -1 || categoryA.value === 'cozy' && -1 || categoryB.value === 'cozy' && 1 || categoryA.label.localeCompare(categoryB.label);
+  // Always keep 'all' at the beginning
+  if (categoryA.value === 'all') return -1;
+  if (categoryB.value === 'all') return 1; // Always keep 'others' at the end
+
+  if (categoryA.value === 'others') return 1;
+  if (categoryB.value === 'others') return -1; // Keep 'cozy' near the beginning, right after 'all'
+
+  if (categoryA.value === 'cozy') return -1;
+  if (categoryB.value === 'cozy') return 1; // Sort by type order: webapp < file < konnector
+
+  var typeOrder = ['webapp', 'file', 'konnector'];
+  var typeAIndex = typeOrder.indexOf(categoryA.type);
+  var typeBIndex = typeOrder.indexOf(categoryB.type);
+
+  if (typeAIndex !== typeBIndex) {
+    return typeAIndex - typeBIndex;
+  } // Alphabetical sort on label for the rest
+
+
+  return categoryA.label.localeCompare(categoryB.label);
 };
 export var addLabel = function addLabel(cat, t) {
   return _objectSpread(_objectSpread({}, cat), {}, {
@@ -120,11 +141,18 @@ export var generateOptionsFromApps = function generateOptionsFromApps(apps) {
       }));
     }
 
+    if (type === APP_TYPE.FILE) {
+      allCategoryOptions.push(addLabel({
+        value: 'shortcuts',
+        secondary: false
+      }));
+    }
+
     var categoryOptions = Object.keys(catApps).map(function (cat) {
       return addLabel({
         value: cat,
         type: type,
-        secondary: type === APP_TYPE.KONNECTOR
+        secondary: type === APP_TYPE.KONNECTOR || type === APP_TYPE.FILE
       });
     }); // Since options have been labelled, it's possible to sort them
 
@@ -135,7 +163,7 @@ export var generateOptionsFromApps = function generateOptionsFromApps(apps) {
     allCategoryOptions = allCategoryOptions.concat(categoryOptions);
   };
 
-  for (var _i = 0, _arr = [APP_TYPE.WEBAPP, APP_TYPE.KONNECTOR]; _i < _arr.length; _i++) {
+  for (var _i = 0, _arr = [APP_TYPE.WEBAPP, APP_TYPE.FILE, APP_TYPE.KONNECTOR]; _i < _arr.length; _i++) {
     _loop2();
   }
 

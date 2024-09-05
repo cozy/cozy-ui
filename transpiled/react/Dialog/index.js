@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import { default as MUIDialog } from '@material-ui/core/Dialog';
-import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
+import React from 'react';
 import { useDialogEffects } from "cozy-ui/transpiled/react/Dialog/DialogEffects";
+import { useCozyTheme } from "cozy-ui/transpiled/react/providers/CozyTheme";
 
 var Dialog = function Dialog(props) {
   var _useCozyTheme = useCozyTheme(),

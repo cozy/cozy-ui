@@ -818,10 +818,9 @@ export const makeLightNormalOverrides = theme => ({
       '&.block': {
         flexWrap: 'wrap',
         '& $action': {
-          display: 'block',
           width: '100%',
           paddingLeft: 0,
-          textAlign: 'right'
+          justifyContent: 'end'
         }
       }
     },
@@ -832,7 +831,7 @@ export const makeLightNormalOverrides = theme => ({
       flexWrap: 'wrap'
     },
     action: {
-      marginRight: '-6px'
+      marginRight: '-8px'
     }
   },
   MuiAlertTitle: {
@@ -875,6 +874,24 @@ export const makeLightNormalOverrides = theme => ({
         minWidth: 48,
         padding: '0 16px'
       }
+    }
+  },
+  MuiMobileStepper: {
+    root: {
+      background: 'transparent',
+      height: 40,
+      padding: 0
+    },
+    dot: {
+      backgroundColor: 'transparent',
+      width: '10px',
+      height: '10px',
+      margin: '0 3px',
+      border: `1px solid ${theme.palette.border.main}`,
+      boxSizing: 'border-box'
+    },
+    dotActive: {
+      border: 'none'
     }
   }
 })

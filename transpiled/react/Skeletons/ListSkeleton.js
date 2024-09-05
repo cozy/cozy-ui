@@ -1,9 +1,9 @@
 import _toConsumableArray from "@babel/runtime/helpers/toConsumableArray";
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import ListItemSkeleton from "cozy-ui/transpiled/react/Skeletons/ListItemSkeleton";
 import List from "cozy-ui/transpiled/react/List";
 import ListSubheader from "cozy-ui/transpiled/react/ListSubheader";
-import ListItemSkeleton from "cozy-ui/transpiled/react/Skeletons/ListItemSkeleton";
 
 var ListSkeleton = function ListSkeleton(_ref) {
   var count = _ref.count,

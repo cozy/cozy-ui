@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["htmlFor", "className", "children", "block", "error"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-label": "styles__c-label___o4ozG",
   "is-error": "styles__is-error___2Dwem",

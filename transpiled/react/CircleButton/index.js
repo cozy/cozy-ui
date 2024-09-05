@@ -1,14 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className", "label", "variant", "disabled", "fullWidth", "aria-label", "children"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import React from 'react';
+import { makeTypoColor, makeButtonShadow } from "cozy-ui/transpiled/react/CircleButton/helpers";
 import Box from "cozy-ui/transpiled/react/Box";
 import IconButton from "cozy-ui/transpiled/react/IconButton";
 import Typography from "cozy-ui/transpiled/react/Typography";
-import { makeTypoColor, makeButtonShadow } from "cozy-ui/transpiled/react/CircleButton/helpers";
 import { getRandomUUID } from "cozy-ui/transpiled/react/helpers/getRandomUUID";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles(function (theme) {
   return {
     iconButton: {

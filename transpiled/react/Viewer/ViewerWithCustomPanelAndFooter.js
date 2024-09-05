@@ -1,16 +1,16 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["footerProps", "panelInfoProps", "className"];
-import React, { createRef } from 'react';
 import cx from 'classnames';
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import InformationPanel from "cozy-ui/transpiled/react/Viewer/components/InformationPanel";
-import Footer from "cozy-ui/transpiled/react/Viewer/components/Footer";
+import React, { createRef } from 'react';
 import Viewer from "cozy-ui/transpiled/react/Viewer/Viewer";
+import Footer from "cozy-ui/transpiled/react/Viewer/components/Footer";
+import InformationPanel from "cozy-ui/transpiled/react/Viewer/components/InformationPanel";
 var styles = {
   "viewer-wrapper": "styles__viewer-wrapper___2GIXH",
   "flagship-app": "styles__flagship-app___KFqbm"
 };
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
 
 var ViewerWithCustomPanelAndFooter = function ViewerWithCustomPanelAndFooter(props) {
   console.warn('Warning: Please do not use the "ViewerWithCustomPanelAndFooter" Component, replace it with the default export component');

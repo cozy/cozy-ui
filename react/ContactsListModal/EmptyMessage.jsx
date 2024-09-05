@@ -1,5 +1,6 @@
-import React from 'react'
 import cx from 'classnames'
+import React from 'react'
+
 import Typography from '../Typography'
 
 const EmptyMessage = props => {

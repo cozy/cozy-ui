@@ -1,12 +1,12 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Snackbar from "cozy-ui/transpiled/react/Snackbar";
-import Alert from "cozy-ui/transpiled/react/Alert";
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import withListItemLocales from "cozy-ui/transpiled/react/ListItem/hoc/withListItemLocales";
+import React, { useState } from 'react';
 import ExpandedAttribute from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes/ExpandedAttribute";
 import { makeAttrsLabelAndFormattedValue } from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes/helpers";
+import Alert from "cozy-ui/transpiled/react/Alert";
+import Snackbar from "cozy-ui/transpiled/react/Snackbar";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import withListItemLocales from "cozy-ui/transpiled/react/ListItem/hoc/withListItemLocales";
 
 var ExpandedAttributes = function ExpandedAttributes(_ref) {
   var doc = _ref.doc,

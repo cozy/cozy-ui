@@ -1,11 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { getDisplayName } from 'cozy-client/dist/models/contact';
+import useActions from "cozy-ui/transpiled/react/ListItem/ListItemContact/useActions";
 import Filename from "cozy-ui/transpiled/react/Filename";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import ContactsIcon from "cozy-ui/transpiled/react/Icons/Contacts";
 import ListItemBase from "cozy-ui/transpiled/react/ListItem/ListItemBase";
-import useActions from "cozy-ui/transpiled/react/ListItem/ListItemContact/useActions";
 
 var ListItemContact = function ListItemContact(_ref) {
   var _contact$email, _contact$email$;

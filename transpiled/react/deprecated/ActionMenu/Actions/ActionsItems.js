@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import React, { useMemo } from 'react';
 import { getActionName, getOnlyNeededActions } from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/helpers";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 
 var ActionsItems = function ActionsItems(_ref) {
   var doc = _ref.doc,

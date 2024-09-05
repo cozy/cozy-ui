@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import DeviceLaptopIcon from "cozy-ui/transpiled/react/Icons/DeviceLaptop";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-btn-client": "styles__c-btn-client___2ZSQt",
   "spin": "styles__spin____eAxl",
   "shake": "styles__shake___3jgtg"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import DeviceLaptopIcon from "cozy-ui/transpiled/react/Icons/DeviceLaptop";
 
 var ButtonClient = function ButtonClient(props) {
   var label = props.label,

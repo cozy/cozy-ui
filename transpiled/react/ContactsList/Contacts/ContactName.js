@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Typography from "cozy-ui/transpiled/react/Typography";
 
 var ContactName = function ContactName(_ref) {

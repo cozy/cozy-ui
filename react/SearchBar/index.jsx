@@ -1,17 +1,17 @@
-import React, { forwardRef, useState, useMemo } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
 import debounce from 'lodash/debounce'
+import PropTypes from 'prop-types'
+import React, { forwardRef, useState, useMemo } from 'react'
 
-import { useI18n } from '../providers/I18n'
 import withOnlyLocales from './locales/withOnlyLocales'
-import { makeStyles } from '../styles'
-import Paper from '../Paper'
-import InputBase from '../InputBase'
-import IconButton from '../IconButton'
 import Icon from '../Icon'
-import MagnifierIcon from '../Icons/Magnifier'
+import IconButton from '../IconButton'
 import CrossCircleIcon from '../Icons/CrossCircle'
+import MagnifierIcon from '../Icons/Magnifier'
+import InputBase from '../InputBase'
+import Paper from '../Paper'
+import { useI18n } from '../providers/I18n'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(theme => ({
   root: {

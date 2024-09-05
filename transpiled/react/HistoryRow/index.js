@@ -1,14 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["style", "primaryText", "secondaryText", "tag", "downloadLink"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import Circle from "cozy-ui/transpiled/react/Circle";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import DownloadIcon from "cozy-ui/transpiled/react/Icons/Download";
-import FileIcon from "cozy-ui/transpiled/react/Icons/File";
-import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "HistoryRowCircleWrapper": "styles__HistoryRowCircleWrapper___3r8Uo",
   "HistoryRowCircle": "styles__HistoryRowCircle___4FWWa",
@@ -17,6 +11,12 @@ var styles = {
   "HistoryRowMedia": "styles__HistoryRowMedia___2jgYN",
   "HistoryRowMediaImg": "styles__HistoryRowMediaImg___1J9OI"
 };
+import Circle from "cozy-ui/transpiled/react/Circle";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import DownloadIcon from "cozy-ui/transpiled/react/Icons/Download";
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { Media, Bd, Img } from "cozy-ui/transpiled/react/deprecated/Media";
 /**
  *
  * This component display a timeline of file's version

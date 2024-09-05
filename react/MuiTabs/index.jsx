@@ -1,6 +1,7 @@
-import React from 'react'
-import MuiTabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import MuiTabs from '@material-ui/core/Tabs'
+import React from 'react'
+
 import useBreakpoints from '../providers/Breakpoints'
 
 const Tabs = props => {

@@ -7,17 +7,17 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import MuiAlert from '@material-ui/lab/Alert';
 import cx from 'classnames';
 import merge from 'lodash/merge';
-import MuiAlert from '@material-ui/lab/Alert';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import Icon from "cozy-ui/transpiled/react/Icon";
 import CheckCircleIcon from "cozy-ui/transpiled/react/Icons/CheckCircle";
+import InfoIcon from "cozy-ui/transpiled/react/Icons/Info";
 import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
 import WarningCircleIcon from "cozy-ui/transpiled/react/Icons/WarningCircle";
-import InfoIcon from "cozy-ui/transpiled/react/Icons/Info";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var DEFAULT_ICON_SIZE = 16;
 var defaultIconMapping = {
   success: /*#__PURE__*/React.createElement(Icon, {

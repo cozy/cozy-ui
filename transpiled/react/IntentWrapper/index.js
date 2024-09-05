@@ -1,11 +1,11 @@
-import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "intentWrapper": "styles__intentWrapper___1ZMvW",
   "intentHeader": "styles__intentHeader___3TDUp",
   "intentContent": "styles__intentContent___1ilx7"
 };
-import cx from 'classnames';
 import { ModalHeader, ModalContent } from "cozy-ui/transpiled/react/deprecated/Modal";
 export var IntentWrapper = function IntentWrapper(_ref) {
   var children = _ref.children,

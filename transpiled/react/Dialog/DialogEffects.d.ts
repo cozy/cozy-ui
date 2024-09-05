@@ -21,7 +21,7 @@ export declare enum DOMStrings {
     RootModalColor = "color",
     SidebarID = "sidebar"
 }
-export declare const makeOnMount: ({ cozybar, fullscreen, sidebar, rootModal, theme, isLight }: DialogEffectsOptions) => FlagshipUI;
+export declare const makeOnMount: ({ cozybar, fullscreen, sidebar, rootModal, theme }: DialogEffectsOptions) => FlagshipUI;
 export declare const makeOnUnmount: ({ rootModal, theme, immersive, sidebar, cozybar, isLight }: DialogEffectsOptions) => FlagshipUI;
 /**
  * Custom version of useSetFlagshipUi() that is aware of the Dialog component.

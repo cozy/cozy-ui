@@ -1,14 +1,14 @@
+import { render } from '@testing-library/react'
 import React from 'react'
 import { Provider, useStore } from 'react-redux'
 import configureStore from 'redux-mock-store'
-import { render } from '@testing-library/react'
 
-import { useWebviewIntent } from 'cozy-intent'
 import CozyClient, {
   createMockClient,
   CozyProvider,
   useClient
 } from 'cozy-client'
+import { useWebviewIntent } from 'cozy-intent'
 
 import BarContextProvider from '.'
 import I18n, { useI18n, translate } from '../providers/I18n'

@@ -10,10 +10,10 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component, createRef } from 'react';
-import PropTypes from 'prop-types';
 import Hammer from 'hammerjs';
 import once from 'lodash/once';
+import PropTypes from 'prop-types';
+import React, { Component, createRef } from 'react';
 import { RemoveScroll } from 'react-remove-scroll';
 var styles = {
   "with-transition": "styles__with-transition___3OLmI",

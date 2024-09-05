@@ -4,11 +4,9 @@ import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProper
 var _excluded = ["hidden", "className"],
     _excluded2 = ["password", "className"],
     _excluded3 = ["className", "showStrength", "error"];
-import React, { useState } from 'react';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import InputGroup from "cozy-ui/transpiled/react/InputGroup";
-import Input from "cozy-ui/transpiled/react/Input";
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { getStrength } from "cozy-ui/transpiled/react/Labs/PasswordInput/helpers";
 var styles = {
   "PasswordInput": "styles__PasswordInput___3Oa3V",
@@ -19,9 +17,11 @@ var styles = {
   "PasswordInput__strength--strong": "styles__PasswordInput__strength--strong___3yuP0",
   "PasswordInput__visibilityButton": "styles__PasswordInput__visibilityButton___2B6RJ"
 };
-import PropTypes from 'prop-types';
+import Icon from "cozy-ui/transpiled/react/Icon";
 import EyeIcon from "cozy-ui/transpiled/react/Icons/Eye";
 import EyeClosedIcon from "cozy-ui/transpiled/react/Icons/EyeClosed";
+import Input from "cozy-ui/transpiled/react/Input";
+import InputGroup from "cozy-ui/transpiled/react/InputGroup";
 
 var HideShowButton = function HideShowButton(props) {
   var hidden = props.hidden,

@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react'
 
-import TelephoneIcon from '../../Icons/Telephone'
 import { getActionsI18n } from './locales/withActionsLocales'
-import ActionsMenuItem from '../ActionsMenuItem'
-import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
+import TelephoneIcon from '../../Icons/Telephone'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
+import ActionsMenuItem from '../ActionsMenuItem'
 
 export const call = () => {
   const { t } = getActionsI18n()

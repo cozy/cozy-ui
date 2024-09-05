@@ -1,3 +1,38 @@
+## [111.8.1](https://github.com/cozy/cozy-ui/compare/v111.8.0...v111.8.1) (2024-08-28)
+
+
+### Bug Fixes
+
+* **Alert:** Right action margin wasn't correct ([2e462b3](https://github.com/cozy/cozy-ui/commit/2e462b3))
+
+# [111.8.0](https://github.com/cozy/cozy-ui/compare/v111.7.0...v111.8.0) (2024-08-19)
+
+
+### Features
+
+* **MobileStepper:** Add cozy design to MUI export ([d6728f8](https://github.com/cozy/cozy-ui/commit/d6728f8))
+
+# [111.7.0](https://github.com/cozy/cozy-ui/compare/v111.6.0...v111.7.0) (2024-08-14)
+
+
+### Features
+
+* handle shortcuttiles ([e5ff800](https://github.com/cozy/cozy-ui/commit/e5ff800))
+
+# [111.6.0](https://github.com/cozy/cozy-ui/compare/v111.5.0...v111.6.0) (2024-08-14)
+
+
+### Bug Fixes
+
+* handle auto fixable lint errors ([ec1c677](https://github.com/cozy/cozy-ui/commit/ec1c677))
+* manually handle lint errors not auto fixable ([bf9df94](https://github.com/cozy/cozy-ui/commit/bf9df94))
+
+
+### Features
+
+* Prettier to 2.6 (current implicit version) ([0739fc7](https://github.com/cozy/cozy-ui/commit/0739fc7))
+* update lint config ([e9637af](https://github.com/cozy/cozy-ui/commit/e9637af))
+
 # [111.5.0](https://github.com/cozy/cozy-ui/compare/v111.4.0...v111.5.0) (2024-08-13)
 
 

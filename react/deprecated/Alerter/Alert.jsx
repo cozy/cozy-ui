@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import Button from '../Button'
+import React, { Component } from 'react'
 
 import styles from './styles.styl'
-import cx from 'classnames'
+import Button from '../Button'
 
 export class Alert extends Component {
   state = {

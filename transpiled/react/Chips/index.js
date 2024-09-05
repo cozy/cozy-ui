@@ -2,10 +2,10 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["label", "variant", "color", "className"];
-import React, { forwardRef } from 'react';
+import MuiChip from '@material-ui/core/Chip';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import MuiChip from '@material-ui/core/Chip';
+import React, { forwardRef } from 'react';
 var Chips = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var label = _ref.label,
       _ref$variant = _ref.variant,

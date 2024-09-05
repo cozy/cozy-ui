@@ -10,12 +10,12 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { forwardRef } from 'react';
-import cx from 'classnames';
-import PropTypes from 'prop-types';
-import merge from 'lodash/merge';
 import MuiListItem from '@material-ui/core/ListItem';
 import isMuiElement from '@material-ui/core/utils/isMuiElement';
+import cx from 'classnames';
+import merge from 'lodash/merge';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
 import { getLastChild, getChildrenCount, getComponentName, getChildren } from "cozy-ui/transpiled/react/utils/react";
 var useStyles = makeStyles({

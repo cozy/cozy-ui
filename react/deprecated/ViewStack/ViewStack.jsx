@@ -1,7 +1,8 @@
 import React from 'react'
 import SwipeableViews from 'react-swipeable-views'
-import { useStack } from './hooks'
+
 import { ViewStackContext } from './context'
+import { useStack } from './hooks'
 
 // This is guessed, I could not see how to interface properly with
 // react-swipeable-views's onTransitionEnd

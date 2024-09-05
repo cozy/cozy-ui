@@ -7,12 +7,12 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { forwardRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
+import React, { forwardRef, useMemo } from 'react';
 import { useClient } from 'cozy-client';
 import { useWebviewIntent } from 'cozy-intent';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 import { getActionName, getOnlyNeededActions } from "cozy-ui/transpiled/react/ActionsMenu/Actions/helpers";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
 var ActionsItems = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var docs = _ref.docs,
       actions = _ref.actions,

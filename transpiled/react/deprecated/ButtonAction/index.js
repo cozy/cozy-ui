@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["type", "disabled", "children", "label", "leftIcon", "rightIcon", "compact", "className", "onClick"];
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-actionbtn": "styles__c-actionbtn___294nr",
   "c-actionbtn--compact": "styles__c-actionbtn--compact___3CFm-",

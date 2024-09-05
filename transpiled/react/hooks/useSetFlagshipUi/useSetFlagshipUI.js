@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import pickBy from 'lodash/pickBy';
 import identity from 'lodash/identity';
 import isEmpty from 'lodash/isEmpty';
 import isObject from 'lodash/isObject';
+import pickBy from 'lodash/pickBy';
+import { useEffect } from 'react';
 import { useWebviewIntent } from 'cozy-intent';
 import { setRsgFlagshipElements } from "cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers";
 export var ThemeColor;
@@ -17,7 +17,7 @@ export var parseArg = function parseArg(webviewIntent, arg, caller) {
   var validUI = !isEmpty(sanitized) && sanitized;
   setRsgFlagshipElements(sanitized);
   if (!webviewIntent) return;
-  validUI && webviewIntent.call('setFlagshipUI', validUI, caller);
+  validUI && void webviewIntent.call('setFlagshipUI', validUI, caller);
 };
 export var useSetFlagshipUI = function useSetFlagshipUI(onMount, onUnmount, caller) {
   var webviewIntent = useWebviewIntent();

@@ -2,12 +2,12 @@
 
 /* eslint-env jest */
 
-import * as catUtils from './categories'
+import mapValues from 'lodash/mapValues'
 
+import * as catUtils from './categories'
+import en from './locales/en'
 import { I18nContext } from '../jestLib/I18n'
 import mockApps from '../mocks/apps'
-import en from './locales/en'
-import mapValues from 'lodash/mapValues'
 
 const i18nContext = I18nContext({
   locale: en
@@ -104,6 +104,7 @@ describe('generateOptionsFromApps', () => {
         type: 'webapp',
         value: 'others'
       },
+      { label: 'Shortcuts', secondary: false, value: 'shortcuts' },
       {
         label: 'Services',
         secondary: false,
@@ -155,6 +156,11 @@ describe('generateOptionsFromApps', () => {
         secondary: false,
         type: 'webapp',
         value: 'others'
+      },
+      {
+        label: 'Shortcuts',
+        secondary: false,
+        value: 'shortcuts'
       },
       {
         label: 'Services',

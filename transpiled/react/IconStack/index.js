@@ -1,11 +1,11 @@
-import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import migrateProps from "cozy-ui/transpiled/react/helpers/migrateProps";
+import React from 'react';
 var styles = {
   "IconStack-wrapper": "styles__IconStack-wrapper___10dhG",
   "IconStack-foregroundIcon": "styles__IconStack-foregroundIcon___ZvY-t"
 };
+import migrateProps from "cozy-ui/transpiled/react/helpers/migrateProps";
 
 var IconStack = function IconStack(_ref) {
   var backgroundClassName = _ref.backgroundClassName,

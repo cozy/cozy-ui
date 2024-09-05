@@ -15,4 +15,3 @@ export const getFlagshipMetadata: (() => {
     navbarHeight: number;
 }) | (() => import("cozy-device-helper/dist/flagship").FlagshipMetadata);
 export function setRsgFlagshipElements({ topBackground, topOverlay, topTheme, bottomBackground, bottomOverlay, bottomTheme }?: undefined | Partial<FlagshipUI>): void;
-import { FlagshipUI } from "./useSetFlagshipUI";

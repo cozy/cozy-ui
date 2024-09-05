@@ -1,5 +1,5 @@
-import IconSprintContent from "cozy-ui/transpiled/react/Icon/icons-sprite";
 import React from 'react';
+import IconSprintContent from "cozy-ui/transpiled/react/Icon/icons-sprite";
 var displayNone = {
   display: 'none'
 };

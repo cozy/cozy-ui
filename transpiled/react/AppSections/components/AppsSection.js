@@ -4,17 +4,17 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { useMemo } from 'react';
-import PropTypes from 'prop-types';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
-import { getTranslatedManifestProperty } from "cozy-ui/transpiled/react/AppSections/helpers";
 import sortBy from 'lodash/sortBy';
-import AppTile from "cozy-ui/transpiled/react/AppTile";
+import PropTypes from 'prop-types';
+import React, { useMemo } from 'react';
 var styles = {
   "AppsSection": "AppsSection__AppsSection___3WHhE",
   "AppsSection__list": "AppsSection__AppsSection__list___2Uy0E"
 };
+import AppTile from "cozy-ui/transpiled/react/AppTile";
+import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import { getTranslatedManifestProperty } from "cozy-ui/transpiled/react/AppSections/helpers";
 
 var makeNameGetter = function makeNameGetter(t) {
   return function (app) {

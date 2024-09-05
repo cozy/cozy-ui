@@ -1,9 +1,9 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React from 'react';
-import Modal from "cozy-ui/transpiled/react/deprecated/Modal";
 import { ViewStackContext } from "cozy-ui/transpiled/react/deprecated/ViewStack/context";
 import { useStack } from "cozy-ui/transpiled/react/deprecated/ViewStack/hooks";
+import Modal from "cozy-ui/transpiled/react/deprecated/Modal";
 /**
  * Wraps children so that they can push views that will appear as modals.
  *

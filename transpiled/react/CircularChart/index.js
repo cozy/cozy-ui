@@ -1,11 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["size", "primaryProps", "secondaryProps", "children"];
-import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import Box from "cozy-ui/transpiled/react/Box";
+import React, { forwardRef } from 'react';
 import CircularProgressWithBackground from "cozy-ui/transpiled/react/CircularChart/CircularProgressWithBackground";
 import { makeSizeAndThickness } from "cozy-ui/transpiled/react/CircularChart/helpers";
+import Box from "cozy-ui/transpiled/react/Box";
 var CircularChart = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var size = _ref.size,
       primaryProps = _ref.primaryProps,

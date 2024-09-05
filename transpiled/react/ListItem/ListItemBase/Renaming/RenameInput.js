@@ -1,16 +1,16 @@
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React, { useEffect, useReducer, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 import { useClient } from 'cozy-client';
 import { splitFilename } from 'cozy-client/dist/models/file';
-import { makeStyles } from "cozy-ui/transpiled/react/styles";
+import RenameDialog from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/RenameDialog";
+import { renameFile } from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/helpers";
 import Input from "cozy-ui/transpiled/react/Input";
 import InputGroup from "cozy-ui/transpiled/react/InputGroup";
 import Spinner from "cozy-ui/transpiled/react/Spinner";
-import RenameDialog from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/RenameDialog";
-import { renameFile } from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/helpers";
+import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var KEYS = {
   ESCAPE: 'Escape',
   ENTER: 'Enter'

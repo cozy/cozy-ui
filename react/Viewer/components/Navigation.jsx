@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import Icon from '../../Icon'
-import { default as ArrowIcon } from '../../Icons/DropdownClose'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import styles from './styles.styl'
+import Icon from '../../Icon'
+import { default as ArrowIcon } from '../../Icons/DropdownClose'
 
 const Navigation = ({
   className,

@@ -1,10 +1,10 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import { makeStyles } from '../styles'
-import Typography from '../Typography'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
+import Typography from '../Typography'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(theme => ({
   container: {

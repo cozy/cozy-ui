@@ -1,4 +1,3 @@
-import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 var en = {
   themes: {
     activity: "Activity",
@@ -29,6 +28,7 @@ var fr = {
     work_study: "Travail"
   }
 };
+import withOnlyLocales from "cozy-ui/transpiled/react/providers/I18n/withOnlyLocales";
 export var locales = {
   en: en,
   fr: fr

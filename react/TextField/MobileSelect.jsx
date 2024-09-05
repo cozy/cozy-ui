@@ -1,16 +1,16 @@
-import React, { forwardRef, useEffect, useState } from 'react'
-import merge from 'lodash/merge'
 import MuiTextField from '@material-ui/core/TextField'
+import merge from 'lodash/merge'
 import PropTypes from 'prop-types'
+import React, { forwardRef, useEffect, useState } from 'react'
 
+import ActionsMenuItem from '../ActionsMenu/ActionsMenuItem'
+import ActionsMenuWrapper from '../ActionsMenu/ActionsMenuWrapper'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import InputAdornment from '../InputAdornment'
-import ListItemText from '../ListItemText'
 import ListItemIcon from '../ListItemIcon'
+import ListItemText from '../ListItemText'
 import Radio from '../Radios'
-import ActionsMenuWrapper from '../ActionsMenu/ActionsMenuWrapper'
-import ActionsMenuItem from '../ActionsMenu/ActionsMenuItem'
 
 const MobileSelect = forwardRef(
   (
@@ -31,11 +31,13 @@ const MobileSelect = forwardRef(
       onClick?.()
     }
 
-    const handleItemClick = ({ value, children, onClick }) => ev => {
-      onClick?.(merge({}, ev, { target: { value } }))
-      setState({ label: children, value })
-      onChange?.({ target: { value } })
-    }
+    const handleItemClick =
+      ({ value, children, onClick }) =>
+      ev => {
+        onClick?.(merge({}, ev, { target: { value } }))
+        setState({ label: children, value })
+        onChange?.({ target: { value } })
+      }
 
     const handleClose = () => {
       setShowDrawer(false)

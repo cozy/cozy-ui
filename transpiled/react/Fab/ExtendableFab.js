@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["label", "icon", "follow", "topLimit", "scrollOptions"];
 import React from 'react';
+import Fab from "cozy-ui/transpiled/react/Fab";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import useScroll from "cozy-ui/transpiled/react/hooks/useScroll";
-import Fab from "cozy-ui/transpiled/react/Fab";
 
 var ExtendableFab = function ExtendableFab(_ref) {
   var label = _ref.label,

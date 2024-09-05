@@ -1,4 +1,3 @@
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 var en = {
   viewInContacts: "View in Cozy Contacts",
   modify: "Modify",
@@ -15,6 +14,7 @@ var fr = {
   print: "Imprimer",
   call: "Appeler"
 };
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 export var locales = {
   en: en,
   fr: fr

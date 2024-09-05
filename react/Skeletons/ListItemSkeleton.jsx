@@ -1,11 +1,11 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
+import Divider from '../Divider'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
 import Skeleton from '../Skeleton'
-import Divider from '../Divider'
 
 const ListItemSkeleton = ({ hasSecondary, divider }) => {
   return (

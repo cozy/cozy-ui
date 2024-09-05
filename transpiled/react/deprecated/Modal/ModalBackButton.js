@@ -1,9 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["className"];
-import React from 'react';
 import cx from 'classnames';
-import Button from "cozy-ui/transpiled/react/deprecated/Button";
+import React from 'react';
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
   "c-modal-content": "styles__c-modal-content___22N4k",
@@ -41,6 +40,7 @@ var styles = {
 };
 import PreviousIcon from "cozy-ui/transpiled/react/Icons/Previous";
 import useBreakpoints from "cozy-ui/transpiled/react/providers/Breakpoints";
+import Button from "cozy-ui/transpiled/react/deprecated/Button";
 
 var DumbModalBackButton = function DumbModalBackButton(props) {
   var _useBreakpoints = useBreakpoints(),

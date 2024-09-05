@@ -13,13 +13,13 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 var styles = {
   "o-layout": "styles__o-layout___3TSz9",
   "o-layout-2panes": "styles__o-layout-2panes___1CDQw"
 };
-import cx from 'classnames';
 export var Layout = function Layout(_ref) {
   var children = _ref.children,
       className = _ref.className,

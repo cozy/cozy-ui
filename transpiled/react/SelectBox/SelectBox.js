@@ -18,16 +18,12 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactSelect, { components } from 'react-select';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import ReactSelect, { components } from 'react-select';
 import { isIOSApp } from 'cozy-device-helper';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import CheckIcon from "cozy-ui/transpiled/react/Icons/Check";
-import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
-import TopIcon from "cozy-ui/transpiled/react/Icons/Top";
-import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
+import ControlDefault from "cozy-ui/transpiled/react/SelectBox/ControlDefault";
 var styles = {
   "select--disabled": "styles__select--disabled___1W3en",
   "select--fullwidth": "styles__select--fullwidth___2l_xM",
@@ -46,7 +42,11 @@ var styles = {
   "Group": "styles__Group___J6s7k",
   "FixedGroup": "styles__FixedGroup___2izTc"
 };
-import ControlDefault from "cozy-ui/transpiled/react/SelectBox/ControlDefault";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
+import CheckIcon from "cozy-ui/transpiled/react/Icons/Check";
+import TopIcon from "cozy-ui/transpiled/react/Icons/Top";
+import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
 var heights = {
   tiny: '2rem',
   medium: '2.5rem',

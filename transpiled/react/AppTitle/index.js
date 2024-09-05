@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["children", "tag", "className"];
-import React from 'react';
-import cx from 'classnames';
 import Typography from '@material-ui/core/Typography';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-apptitle": "styles__c-apptitle___eqV9l"
 };

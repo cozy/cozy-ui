@@ -1,8 +1,8 @@
 import React from 'react';
-import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
 var styles = {
   "c-file-path": "styles__c-file-path___XvgNN"
 };
+import MidEllipsis from "cozy-ui/transpiled/react/MidEllipsis";
 
 var FilePath = function FilePath(_ref) {
   var children = _ref.children,

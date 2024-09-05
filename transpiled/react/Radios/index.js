@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import MuiRadio from '@material-ui/core/Radio';
+import React from 'react';
 import Icon from "cozy-ui/transpiled/react/Icon";
 import RadioCheckedIcon from "cozy-ui/transpiled/react/Icons/RadioChecked";
 import RadioUncheckedIcon from "cozy-ui/transpiled/react/Icons/RadioUnchecked";

@@ -1,11 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 var _excluded = ["contacts"];
-import React from 'react';
 import PropTypes from 'prop-types';
-import { withContactsListLocales } from "cozy-ui/transpiled/react/ContactsListModal/withContactsListLocales";
+import React from 'react';
 import ContactsListModal from "cozy-ui/transpiled/react/ContactsListModal/ContactsListModal";
 import ContactsListModalWithQuery from "cozy-ui/transpiled/react/ContactsListModal/ContactsListModalWithQuery";
+import { withContactsListLocales } from "cozy-ui/transpiled/react/ContactsListModal/withContactsListLocales";
 
 var ContactsListModalWrapper = function ContactsListModalWrapper(_ref) {
   var contacts = _ref.contacts,

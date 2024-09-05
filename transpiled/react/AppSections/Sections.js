@@ -10,21 +10,20 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Typography from "cozy-ui/transpiled/react/Typography";
-import { translate } from "cozy-ui/transpiled/react/providers/I18n";
-import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
-import AppsSection from "cozy-ui/transpiled/react/AppSections/components/AppsSection";
-import DropdownFilter from "cozy-ui/transpiled/react/AppSections/components/DropdownFilter";
-import { APP_TYPE } from "cozy-ui/transpiled/react/AppSections/constants";
-import * as searchUtils from "cozy-ui/transpiled/react/AppSections/search";
-import * as catUtils from "cozy-ui/transpiled/react/AppSections/categories";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import flag from 'cozy-flags';
+import { useExtendI18n } from 'cozy-ui/transpiled/react/providers/I18n';
 var styles = {
   "Sections__section": "Sections__Sections__section___2onYy"
 };
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
+import * as catUtils from "cozy-ui/transpiled/react/AppSections/categories";
+import AppsSection from "cozy-ui/transpiled/react/AppSections/components/AppsSection";
+import DropdownFilter from "cozy-ui/transpiled/react/AppSections/components/DropdownFilter";
+import { APP_TYPE } from "cozy-ui/transpiled/react/AppSections/constants";
+import { generateI18nConfig } from "cozy-ui/transpiled/react/AppSections/generateI18nConfig";
+import { isShortcutFile } from "cozy-ui/transpiled/react/AppSections/helpers";
 var en = {
   app_categories: {
     all: "All categories",
@@ -53,11 +52,13 @@ var en = {
     tech: "Tech",
     telecom: "Telecom",
     transport: "Transportation",
-    pro: "Work"
+    pro: "Work",
+    shortcuts: "Shortcuts"
   },
   sections: {
     applications: "Applications",
-    konnectors: "Services"
+    konnectors: "Services",
+    shortcuts: "Shortcuts"
   }
 };
 var fr = {
@@ -88,13 +89,20 @@ var fr = {
     tech: "Tech",
     telecom: "Mobile",
     transport: "Voyage et transport",
-    pro: "Travail"
+    pro: "Travail",
+    shortcuts: "Raccourcis"
   },
   sections: {
     applications: "Applications",
-    konnectors: "Services"
+    konnectors: "Services",
+    shortcuts: "Raccourcis"
   }
 };
+import * as searchUtils from "cozy-ui/transpiled/react/AppSections/search";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import withBreakpoints from "cozy-ui/transpiled/react/helpers/withBreakpoints";
+import { translate } from "cozy-ui/transpiled/react/providers/I18n";
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 var locales = {
   en: en,
   fr: fr
@@ -210,12 +218,20 @@ export var Sections = /*#__PURE__*/function (_Component) {
       var webAppGroups = catUtils.groupApps(filteredApps.filter(function (a) {
         return a.type === APP_TYPE.WEBAPP;
       }));
+      var shortcutsGroups = catUtils.groupApps(filteredApps.filter(function (a) {
+        return isShortcutFile(a);
+      }));
       var webAppsCategories = Object.keys(webAppGroups).map(function (cat) {
         return catUtils.addLabel({
           value: cat
         }, t);
       }).sort(catUtils.sorter);
       var konnectorsCategories = Object.keys(konnectorGroups).map(function (cat) {
+        return catUtils.addLabel({
+          value: cat
+        }, t);
+      }).sort(catUtils.sorter);
+      var shortcutsCategories = Object.keys(shortcutsGroups).map(function (cat) {
         return catUtils.addLabel({
           value: cat
         }, t);
@@ -244,6 +260,16 @@ export var Sections = /*#__PURE__*/function (_Component) {
           IconComponent: IconComponent,
           displaySpecificMaintenanceStyle: displaySpecificMaintenanceStyle
         });
+      })), !!shortcutsCategories.length && /*#__PURE__*/React.createElement("div", null, showSubTitles && /*#__PURE__*/React.createElement(SectionSubtitle, null, t('sections.shortcuts')), shortcutsCategories.map(function (cat) {
+        return /*#__PURE__*/React.createElement(AppsSection, _extends({
+          key: cat.value
+        }, componentsProps === null || componentsProps === void 0 ? void 0 : componentsProps.appsSection, {
+          appsList: shortcutsGroups[cat.value],
+          subtitle: showSubSubTitles ? /*#__PURE__*/React.createElement(SectionSubSubtitle, null, cat.label) : null,
+          IconComponent: IconComponent,
+          onAppClick: onAppClick,
+          displaySpecificMaintenanceStyle: displaySpecificMaintenanceStyle
+        }));
       })), !!konnectorsCategories.length && /*#__PURE__*/React.createElement("div", null, showSubTitles && /*#__PURE__*/React.createElement(SectionSubtitle, null, t('sections.konnectors')), konnectorsCategories.map(function (cat) {
         return /*#__PURE__*/React.createElement(AppsSection, _extends({
           key: cat.value
@@ -260,6 +286,14 @@ export var Sections = /*#__PURE__*/function (_Component) {
 
   return Sections;
 }(Component);
+
+var SectionsWrapper = function SectionsWrapper(props) {
+  var config = flag('store.alternative-source');
+  var i18nConfig = generateI18nConfig(config === null || config === void 0 ? void 0 : config.categories);
+  useExtendI18n(i18nConfig);
+  return /*#__PURE__*/React.createElement(Sections, props);
+};
+
 Sections.propTypes = {
   t: PropTypes.func.isRequired,
 
@@ -300,5 +334,5 @@ Sections.defaultProps = {
     })
   })
 };
-export var Untranslated = withBreakpoints()(Sections);
+export var Untranslated = withBreakpoints()(SectionsWrapper);
 export default withLocales(locales)(translate()(Untranslated));

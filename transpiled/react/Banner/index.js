@@ -1,17 +1,17 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import Paper from "cozy-ui/transpiled/react/Paper";
-import Grid from "cozy-ui/transpiled/react/Grid";
-import Divider from "cozy-ui/transpiled/react/Divider";
-import Typography from "cozy-ui/transpiled/react/Typography";
+import React from 'react';
 var styles = {
   "c-banner-wrapper": "styles__c-banner-wrapper___3KlaG",
   "c-banner-icon": "styles__c-banner-icon___1f_LM",
   "c-banner-text": "styles__c-banner-text___1sTVC",
   "c-banner-buttons": "styles__c-banner-buttons___3sLgG"
 };
+import Divider from "cozy-ui/transpiled/react/Divider";
+import Grid from "cozy-ui/transpiled/react/Grid";
+import Paper from "cozy-ui/transpiled/react/Paper";
+import Typography from "cozy-ui/transpiled/react/Typography";
 /**
  * A banner displays a prominent message and related optional actions.
  */

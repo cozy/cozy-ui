@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 import { useClient } from 'cozy-client'
 import { ShareModal, ShareButton } from 'cozy-sharing'
 import { SharingProvider } from 'cozy-sharing/dist/SharingProvider'
 
-import IconButton from '../../IconButton'
 import Icon from '../../Icon'
+import IconButton from '../../IconButton'
 import ShareIcon from '../../Icons/Share'
 
 const Sharing = ({ file, variant }) => {

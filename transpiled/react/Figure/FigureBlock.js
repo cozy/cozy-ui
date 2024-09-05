@@ -1,12 +1,12 @@
-import React from 'react';
-import Types from 'prop-types';
 import classNames from 'classnames';
+import Types from 'prop-types';
+import React from 'react';
 import Figure from "cozy-ui/transpiled/react/Figure/Figure";
-import Typography from "cozy-ui/transpiled/react/Typography";
 var styles = {
   "FigureBlock": "FigureBlock__FigureBlock___YyBoL",
   "FigureBlock-figure": "FigureBlock__FigureBlock-figure___97C8E"
 };
+import Typography from "cozy-ui/transpiled/react/Typography";
 /**
  * Shows a `Figure` with a label, useful for important numbers.
  *

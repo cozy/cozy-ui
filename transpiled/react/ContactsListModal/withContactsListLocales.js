@@ -1,4 +1,3 @@
-import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 var en = {
   cancel: "Cancel",
   save: "Save",
@@ -21,6 +20,7 @@ var fr = {
   searchContact: "Rechercher un contact",
   emptyContact: "Aucun contact"
 };
+import withLocales from "cozy-ui/transpiled/react/providers/I18n/withLocales";
 export var locales = {
   en: en,
   fr: fr

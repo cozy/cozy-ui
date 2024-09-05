@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 import { useClient } from 'cozy-client'
 import {
@@ -13,8 +13,8 @@ import Alert from '../../Alert'
 import Button from '../../Buttons'
 import Link from '../../Link'
 import Typography from '../../Typography'
-import { withViewerLocales } from '../hoc/withViewerLocales'
 import { useI18n } from '../../providers/I18n'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const FILES_DOCTYPE = 'io.cozy.files'
 

@@ -1,4 +1,5 @@
 const path = require('path')
+
 const webpackMerge = require('webpack-merge')
 
 module.exports = {
@@ -58,6 +59,7 @@ module.exports = {
         '../react/Skeletons',
         '../react/Snackbar',
         '../react/Stepper',
+        '../react/MobileStepper',
         '../react/Switch',
         '../react/Tabs',
         '../react/TextField',

@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
-import merge from 'lodash/merge';
 import MuiListSubheader from '@material-ui/core/ListSubheader';
+import merge from 'lodash/merge';
+import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import { makeStyles } from "cozy-ui/transpiled/react/styles";
 var useStyles = makeStyles({
   gutters: {

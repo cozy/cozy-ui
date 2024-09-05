@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-circle": "styles__c-circle___1DuMR",
   "c-circle-text": "styles__c-circle-text___1jFgD"

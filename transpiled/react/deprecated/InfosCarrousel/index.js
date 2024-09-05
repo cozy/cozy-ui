@@ -1,17 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState, useCallback, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import clamp from 'lodash/clamp';
+import PropTypes from 'prop-types';
+import React, { useState, useCallback, useEffect } from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
 var styles = {
   "InfosCarrousel": "styles__InfosCarrousel___1-aJZ",
   "InfosCarrousel-navigation": "styles__InfosCarrousel-navigation___2Cm0M",
   "InfosCarrousel-separator": "styles__InfosCarrousel-separator___3GYRV"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
 import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
 

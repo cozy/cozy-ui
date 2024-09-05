@@ -1,6 +1,6 @@
-import React from 'react';
 import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
+import React from 'react';
 import createDepreciationLogger from "cozy-ui/transpiled/react/helpers/createDepreciationLogger";
 var logRaisedListDepecrated = createDepreciationLogger();
 /**

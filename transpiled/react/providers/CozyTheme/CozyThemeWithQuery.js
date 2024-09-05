@@ -3,8 +3,8 @@ import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProper
 var _excluded = ["data"];
 import React from 'react';
 import { useQuery, isQueryLoading, hasQueryBeenLoaded } from 'cozy-client';
-import { buildSettingsInstanceQuery } from "cozy-ui/transpiled/react/providers/CozyTheme/queries";
 import DumbCozyTheme from "cozy-ui/transpiled/react/providers/CozyTheme/DumbCozyTheme";
+import { buildSettingsInstanceQuery } from "cozy-ui/transpiled/react/providers/CozyTheme/queries";
 
 var CozyThemeWithQuery = function CozyThemeWithQuery(props) {
   var instanceQuery = buildSettingsInstanceQuery();

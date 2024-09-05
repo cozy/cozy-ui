@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-actionmenu": "styles__c-actionmenu___IUGX7",
   "c-actionmenu--inline": "styles__c-actionmenu--inline___1RWrO",

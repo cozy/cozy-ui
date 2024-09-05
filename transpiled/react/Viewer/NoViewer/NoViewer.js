@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import FileIcon from "cozy-ui/transpiled/react/Viewer/NoViewer/FileIcon";
+import React from 'react';
 import DownloadButton from "cozy-ui/transpiled/react/Viewer/NoViewer/DownloadButton";
+import FileIcon from "cozy-ui/transpiled/react/Viewer/NoViewer/FileIcon";
+import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -18,7 +19,6 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
-import { FileDoctype } from "cozy-ui/transpiled/react/proptypes";
 
 var NoViewer = function NoViewer(_ref) {
   var file = _ref.file,

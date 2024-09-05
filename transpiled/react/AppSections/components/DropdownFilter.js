@@ -8,18 +8,18 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
-import SelectBox from "cozy-ui/transpiled/react/SelectBox";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 var styles = {
   "Dropdown__icon": "DropdownFilter__Dropdown__icon___19QZN",
   "Dropdown": "DropdownFilter__Dropdown___afcWb",
   "Select__control": "DropdownFilter__Select__control___3-04c",
   "Select__menu": "DropdownFilter__Select__menu___XLfYX"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import BottomIcon from "cozy-ui/transpiled/react/Icons/Bottom";
+import SelectBox from "cozy-ui/transpiled/react/SelectBox";
 
 var SmallArrow = function SmallArrow() {
   return /*#__PURE__*/React.createElement(Icon, {

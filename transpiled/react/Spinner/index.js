@@ -1,11 +1,7 @@
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Icon from "cozy-ui/transpiled/react/Icon";
-import Typography from "cozy-ui/transpiled/react/Typography";
-import { translate } from "cozy-ui/transpiled/react/providers/I18n";
-import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
+import PropTypes from 'prop-types';
+import React from 'react';
 var styles = {
   "c-spinner": "styles__c-spinner___1snK7",
   "c-spinner--middle": "styles__c-spinner--middle___RwyII",
@@ -13,6 +9,10 @@ var styles = {
   "spin": "styles__spin___3Lqkt",
   "shake": "styles__shake___6gnzB"
 };
+import Icon from "cozy-ui/transpiled/react/Icon";
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
+import Typography from "cozy-ui/transpiled/react/Typography";
+import { translate } from "cozy-ui/transpiled/react/providers/I18n";
 export var Spinner = function Spinner(_ref) {
   var _cx;
 

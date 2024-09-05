@@ -1,8 +1,8 @@
 import React from 'react';
-import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import TelephoneIcon from "cozy-ui/transpiled/react/Icons/Telephone";
-import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 import withActionsLocales from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/locales/withActionsLocales";
+import TelephoneIcon from "cozy-ui/transpiled/react/Icons/Telephone";
+import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
+import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
 export var call = function call() {
   return {
     name: 'call',

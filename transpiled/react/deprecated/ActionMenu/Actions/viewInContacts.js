@@ -1,10 +1,10 @@
 import React from 'react';
 import { generateWebLink, useClient } from 'cozy-client';
+import withActionsLocales from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/locales/withActionsLocales";
+import OpenappIcon from "cozy-ui/transpiled/react/Icons/Openapp";
 import Link from "cozy-ui/transpiled/react/Link";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
-import OpenappIcon from "cozy-ui/transpiled/react/Icons/Openapp";
 import ActionMenuItemWrapper from "cozy-ui/transpiled/react/deprecated/ActionMenu/ActionMenuItemWrapper";
-import withActionsLocales from "cozy-ui/transpiled/react/deprecated/ActionMenu/Actions/locales/withActionsLocales";
 export var viewInContacts = function viewInContacts() {
   return {
     name: 'viewInContacts',

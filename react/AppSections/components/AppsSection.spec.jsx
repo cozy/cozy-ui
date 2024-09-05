@@ -2,19 +2,18 @@
 
 /* eslint-env jest */
 
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
 
-import mockApps from '../../mocks/apps'
-import en from '../locales/en'
-import { I18nContext } from '../../jestLib/I18n'
+import { AppsSection } from './AppsSection'
 import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
+import { I18nContext } from '../../jestLib/I18n'
+import mockApps from '../../mocks/apps'
 import { BreakpointsProvider } from '../../providers/Breakpoints'
 import { I18n } from '../../providers/I18n'
-
-import { AppsSection } from './AppsSection'
+import en from '../locales/en'
 
 const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t

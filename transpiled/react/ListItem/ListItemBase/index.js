@@ -1,19 +1,19 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
-import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react';
+import RenameInput from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/RenameInput";
 import ListItem from "cozy-ui/transpiled/react/ListItem";
-import ListItemText from "cozy-ui/transpiled/react/ListItemText";
-import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
-import ListItemSecondaryAction from "cozy-ui/transpiled/react/ListItemSecondaryAction";
-import IconButton from "cozy-ui/transpiled/react/IconButton";
-import Icon from "cozy-ui/transpiled/react/Icon";
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
-import Checkbox from "cozy-ui/transpiled/react/Checkbox";
 import ActionsMenu from "cozy-ui/transpiled/react/ActionsMenu";
 import ActionsMenuMobileHeader from "cozy-ui/transpiled/react/ActionsMenu/ActionsMenuMobileHeader";
-import withListItemLocales from "cozy-ui/transpiled/react/ListItem/hoc/withListItemLocales";
+import Checkbox from "cozy-ui/transpiled/react/Checkbox";
+import Icon from "cozy-ui/transpiled/react/Icon";
+import IconButton from "cozy-ui/transpiled/react/IconButton";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import ListItemIcon from "cozy-ui/transpiled/react/ListItemIcon";
+import ListItemSecondaryAction from "cozy-ui/transpiled/react/ListItemSecondaryAction";
+import ListItemText from "cozy-ui/transpiled/react/ListItemText";
 import ExpandedAttributes from "cozy-ui/transpiled/react/ListItem/ExpandedAttributes";
-import RenameInput from "cozy-ui/transpiled/react/ListItem/ListItemBase/Renaming/RenameInput";
+import withListItemLocales from "cozy-ui/transpiled/react/ListItem/hoc/withListItemLocales";
 
 var ListItemBase = function ListItemBase(_ref) {
   var doc = _ref.doc,

@@ -1,11 +1,5 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React, { useState } from 'react';
-import Button from "cozy-ui/transpiled/react/Buttons";
-import Empty from "cozy-ui/transpiled/react/Empty";
-import Backdrop from "cozy-ui/transpiled/react/Backdrop";
-import IntentDialogOpener from "cozy-ui/transpiled/react/IntentDialogOpener";
-import IlluGenericNewPage from "cozy-ui/transpiled/react/Viewer/assets/IlluGenericNewPage.svg";
-import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 var styles = {
   "viewer-imageviewer": "styles__viewer-imageviewer___26k0p",
   "viewer-noviewer": "styles__viewer-noviewer___auG-6",
@@ -22,6 +16,12 @@ var styles = {
   "viewer-pdfMobile": "styles__viewer-pdfMobile___25FPg",
   "viewer-pdfMobile--image": "styles__viewer-pdfMobile--image___3gpFL"
 };
+import Backdrop from "cozy-ui/transpiled/react/Backdrop";
+import Button from "cozy-ui/transpiled/react/Buttons";
+import Empty from "cozy-ui/transpiled/react/Empty";
+import IntentDialogOpener from "cozy-ui/transpiled/react/IntentDialogOpener";
+import IlluGenericNewPage from "cozy-ui/transpiled/react/Viewer/assets/IlluGenericNewPage.svg";
+import { withViewerLocales } from "cozy-ui/transpiled/react/Viewer/hoc/withViewerLocales";
 
 var BlankPaperViewer = function BlankPaperViewer(_ref) {
   var _file$metadata, _file$metadata$qualif;

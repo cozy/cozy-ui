@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import React from 'react';
 var styles = {
   "c-modal": "styles__c-modal___dljYk",
@@ -34,7 +35,6 @@ var styles = {
   "spin": "styles__spin___1fJIg",
   "shake": "styles__shake___gVu0K"
 };
-import cx from 'classnames';
 
 var ModalSection = function ModalSection(_ref) {
   var children = _ref.children,

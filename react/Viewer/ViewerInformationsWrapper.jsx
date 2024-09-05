@@ -1,14 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { useTheme } from '@material-ui/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { FileDoctype } from '../proptypes'
-
-import InformationPanel from './components/InformationPanel'
-import Footer from './components/Footer'
-import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
+import PanelContent from './Panel/PanelContent'
+import Footer from './components/Footer'
+import InformationPanel from './components/InformationPanel'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { FileDoctype } from '../proptypes'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const ViewerInformationsWrapper = ({
