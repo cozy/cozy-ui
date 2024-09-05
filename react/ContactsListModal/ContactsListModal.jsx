@@ -17,12 +17,12 @@ import {
 import { DialogTitle, DialogContent } from '../Dialog'
 import Icon from '../Icon'
 import PlusIcon from '../Icons/Plus'
+import TextField from '../TextField'
 import useEventListener from '../hooks/useEventListener'
 import useRealtime from '../hooks/useRealtime'
-import CozyTheme from '../providers/CozyTheme'
 import useBreakpoints from '../providers/Breakpoints'
+import CozyTheme from '../providers/CozyTheme'
 import { useI18n } from '../providers/I18n'
-import TextField from '../TextField'
 
 const ContactsListModal = ({
   onItemClick,
