@@ -22,9 +22,7 @@ jobs:
       # - name: Lint
       #   run: yarn lint
       - name: Generate Sprite and Palette
-        run: |
-          yarn makeSpriteAndPalette
-          ls ./react
+        run: yarn makeSpriteAndPalette
       - name: Build JS
         run: yarn build
       - name: Build CSS
