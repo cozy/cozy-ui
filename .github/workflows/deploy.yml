@@ -63,7 +63,7 @@ jobs:
       - uses: ./.github/actions/build_argos_desktop_cache
       - name: Argos - Create desktop screenshots
         run: |
-          mkdir ./screenshots
+          mkdir -p ./screenshots
           yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
   argosMobile:
     needs: [prepareArgos, build]
@@ -75,7 +75,7 @@ jobs:
       - uses: ./.github/actions/build_argos_mobile_cache
       - name: Argos - Create mobile screenshots
         run: |
-          mkdir ./screenshots
+          mkdir -p ./screenshots
           yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
   argosKss:
     needs: [prepareArgos, build]
@@ -87,7 +87,7 @@ jobs:
       - uses: ./.github/actions/build_argos_kss_cache
       - name: Argos - Create kss screenshots
         run: |
-          mkdir ./screenshots
+          mkdir -p ./screenshots
           yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
   argosUpload:
     needs: [argosDesktop, argosMobile, argosKss]

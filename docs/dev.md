@@ -24,7 +24,7 @@ You have to change `executablePath` value of `prepareBrowser` function to match 
 ```bash
 # Screenshot all the components
 yarn build:all
-mkdir ./screenshots
+mkdir -p ./screenshots
 yarn screenshots
 cp -r screenshots pristine_screenshots
 
