@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup_argos
-      - uses: ./.github/actions/build_cache
+      - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_desktop_cache
       - name: Argos - Create desktop screenshots
         run: |
@@ -71,7 +71,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup_argos
-      - uses: ./.github/actions/build_cache
+      - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_mobile_cache
       - name: Argos - Create mobile screenshots
         run: |
@@ -83,7 +83,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup_argos
-      - uses: ./.github/actions/build_cache
+      - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_kss_cache
       - name: Argos - Create kss screenshots
         run: |
@@ -110,7 +110,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup_modules
-      - uses: ./.github/actions/build_cache
+      - uses: ./.github/actions/build_cache_read
       - name: Deploy
         # if: ${{ github.ref_name == 'master' }}
         # run: |
