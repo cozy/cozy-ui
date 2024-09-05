@@ -1,3 +1,10 @@
+# [111.9.0](https://github.com/cozy/cozy-ui/compare/v111.8.1...v111.9.0) (2024-09-05)
+
+
+### Features
+
+* Add markdwon component ([366def6](https://github.com/cozy/cozy-ui/commit/366def6))
+
 ## [111.8.1](https://github.com/cozy/cozy-ui/compare/v111.8.0...v111.8.1) (2024-08-28)
 
 
