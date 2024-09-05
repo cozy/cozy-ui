@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
 
 import { useInstanceInfo } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
@@ -14,6 +13,7 @@ import Button from '../Buttons'
 import { IllustrationDialog } from '../CozyDialogs'
 import Icon from '../Icon'
 import CozyUpgradeIcon from '../Icons/CozyUpgrade'
+import Markdown from '../Markdown'
 import Spinner from '../Spinner'
 import Typography from '../Typography'
 import { useI18n } from '../providers/I18n'
@@ -94,13 +94,10 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
         />
       }
       content={
-        <ReactMarkdown
-          source={t(`${variant}Paywall.${type}.content`, {
+        <Markdown
+          content={t(`${variant}Paywall.${type}.content`, {
             ...contentInterpolation
           })}
-          renderers={{
-            paragraph: ({ children }) => <p className="u-mt-0">{children}</p>
-          }}
         />
       }
       onClose={onClose}

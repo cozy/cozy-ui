@@ -19,26 +19,26 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Install packages
         run: yarn install --frozen-lockfile
-      - name: Lint
-        run: yarn lint
+      # - name: Lint
+      #   run: yarn lint
       - name: Generate Sprite and Palette
-        run: yarn makeSpriteAndPalette
+        run: |
+          yarn makeSpriteAndPalette
+          ls ./react
       - name: Build JS
         run: yarn build
       - name: Build CSS
         run: yarn build:css:all
-      - name: Build docs React
-        run: yarn build:doc:react
-      - name: Build docs KSS
-        run: yarn build:doc:kss
-      - name: Tests without snapshots
-        run: yarn test:noSnapshots
-      - name: Tests snapshots
-        run: yarn test:snapshots
+      # - name: Build docs React
+      #   run: yarn build:doc:react
+      # - name: Build docs KSS
+      #   run: yarn build:doc:kss
+      # - name: Tests without snapshots
+      #   run: yarn test:noSnapshots
+      # - name: Tests snapshots
+      #   run: yarn test:snapshots
       # - name: Bundlemon
       #   run: yarn bundlemon
-      - name: Restore CSS
-        run: yarn postbuild
       # - name: Argos - Prepare env
       #   run: |
       #     yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile

@@ -110,3 +110,4 @@ export { default as AlertProvider, useAlert } from './Alert';
 export { default as Modal } from './Modal';
 export { ListSkeleton, ListItemSkeleton } from './Skeletons';
 export { default as ActionsBar } from './ActionsBar';
+export { default as Markdown } from './Markdown';

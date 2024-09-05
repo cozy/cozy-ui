@@ -9,7 +9,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { useInstanceInfo } from 'cozy-client';
 import { buildPremiumLink } from 'cozy-client/dist/models/instance';
 import { isFlagshipApp } from 'cozy-device-helper';
@@ -21,6 +20,7 @@ import Button from "cozy-ui/transpiled/react/Buttons";
 import { IllustrationDialog } from "cozy-ui/transpiled/react/CozyDialogs";
 import Icon from "cozy-ui/transpiled/react/Icon";
 import CozyUpgradeIcon from "cozy-ui/transpiled/react/Icons/CozyUpgrade";
+import Markdown from "cozy-ui/transpiled/react/Markdown";
 import Spinner from "cozy-ui/transpiled/react/Spinner";
 import Typography from "cozy-ui/transpiled/react/Typography";
 import { useI18n } from "cozy-ui/transpiled/react/providers/I18n";
@@ -140,16 +140,8 @@ var Paywall = function Paywall(_ref) {
       label: isFlagshipAppIapAvailable === null ? t("action.loading") : canOpenPremiumLink ? t("".concat(variant, "Paywall.").concat(type, ".action")) : t("action.withoutIAP"),
       busy: isFlagshipAppIapAvailable === null
     }),
-    content: /*#__PURE__*/React.createElement(ReactMarkdown, {
-      source: t("".concat(variant, "Paywall.").concat(type, ".content"), _objectSpread({}, contentInterpolation)),
-      renderers: {
-        paragraph: function paragraph(_ref3) {
-          var children = _ref3.children;
-          return /*#__PURE__*/React.createElement("p", {
-            className: "u-mt-0"
-          }, children);
-        }
-      }
+    content: /*#__PURE__*/React.createElement(Markdown, {
+      content: t("".concat(variant, "Paywall.").concat(type, ".content"), _objectSpread({}, contentInterpolation))
     }),
     onClose: onClose
   });
