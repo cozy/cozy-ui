@@ -13,19 +13,15 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
 
 const initialVariants = [
-  { overlap: true, error: false, dot: false, withBorder: false, left: false, bottom: false, small: false, large: false }
+  { overlap: true, dot: false, withBorder: false, left: false, bottom: false, small: false, large: false }
 ]
 
-;
-
-<Variants initialVariants={initialVariants} screenshotAllVariants>
-  {variant => (
+const DemoBadge = ({ variant, ...props }) => {
+  return (
     <Badge
+      {...props}
       className="u-m-half"
       badgeContent={4}
-      color={
-        variant.error ? "error" : variant.secondaryColor ? "secondary" : "primary"
-      }
       variant={variant.dot ? "dot" : "standard"}
       size={variant.large ? "large" : variant.small ? "small" : "medium"}
       anchorOrigin={{
@@ -41,6 +37,19 @@ const initialVariants = [
         color="var(--slateGrey)"
       />
     </Badge>
+  )
+}
+
+;
+
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
+    <>
+      <DemoBadge variant={variant} color="default" />
+      <DemoBadge variant={variant} color="primary" />
+      <DemoBadge variant={variant} color="secondary" />
+      <DemoBadge variant={variant} color="error" />
+    </>
   )}
 </Variants>
 ```
