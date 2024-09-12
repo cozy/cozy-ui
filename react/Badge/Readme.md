@@ -48,7 +48,10 @@ const DemoBadge = ({ variant, ...props }) => {
       <DemoBadge variant={variant} color="default" />
       <DemoBadge variant={variant} color="primary" />
       <DemoBadge variant={variant} color="secondary" />
+      <DemoBadge variant={variant} color="success" />
       <DemoBadge variant={variant} color="error" />
+      <DemoBadge variant={variant} color="warning" />
+      <DemoBadge variant={variant} color="info" />
     </>
   )}
 </Variants>

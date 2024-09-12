@@ -8,6 +8,7 @@ const Badge = ({
   size,
   withBorder,
   overlap: overlapProp,
+  color,
   ...props
 }) => {
   const sizeClasses = {
@@ -28,10 +29,16 @@ const Badge = ({
   return (
     <MuiBadge
       classes={{
-        badge: cx(sizeClasses[size], withBorder ? 'badgeBorder' : null),
+        badge: cx(sizeClasses[size], {
+          badgeBorder: !!withBorder,
+          colorSuccess: color === 'success',
+          colorWarning: color === 'warning',
+          colorInfo: color === 'info'
+        }),
         ...classes
       }}
       overlap={overlap}
+      color={['success', 'warning', 'info'].includes(color) ? 'primary' : color}
       {...props}
     />
   )
@@ -42,7 +49,16 @@ Badge.propTypes = {
     horizontal: PropTypes.oneOf(['left', 'right']),
     vertical: PropTypes.oneOf(['bottom', 'top'])
   }),
-  color: PropTypes.oneOf(['default', 'error', 'primary', 'secondary']),
+  className: PropTypes.string,
+  color: PropTypes.oneOf([
+    'default',
+    'success',
+    'warning',
+    'error',
+    'info',
+    'primary',
+    'secondary'
+  ]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
   variant: PropTypes.oneOf(['standard', 'dot']),

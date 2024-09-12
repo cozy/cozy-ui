@@ -723,6 +723,20 @@ export const makeLightNormalOverrides = theme => ({
         fontSize: '.5rem'
       }
     },
+    colorPrimary: {
+      '&.colorSuccess': {
+        backgroundColor: theme.palette.success.main,
+        color: theme.palette.success.contrastText
+      },
+      '&.colorWarning': {
+        backgroundColor: theme.palette.warning.main,
+        color: theme.palette.warning.contrastText
+      },
+      '&.colorInfo': {
+        backgroundColor: theme.palette.info.main,
+        color: theme.palette.info.contrastText
+      }
+    },
     anchorOriginTopRightRectangular: {
       transform: 'scale(1) translate(37%, -37%)'
     },
