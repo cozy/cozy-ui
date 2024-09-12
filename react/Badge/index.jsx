@@ -42,6 +42,7 @@ Badge.propTypes = {
     horizontal: PropTypes.oneOf(['left', 'right']),
     vertical: PropTypes.oneOf(['bottom', 'top'])
   }),
+  color: PropTypes.oneOf(['default', 'error', 'primary', 'secondary']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
   variant: PropTypes.oneOf(['standard', 'dot']),
