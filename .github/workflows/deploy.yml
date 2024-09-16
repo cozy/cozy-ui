@@ -6,7 +6,6 @@ on:
 env:
   ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
   install:
@@ -110,6 +109,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: ./.github/actions/setup_modules
       - uses: ./.github/actions/build_cache_read
       - name: Deploy
