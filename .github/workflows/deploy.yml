@@ -114,6 +114,3 @@ jobs:
       - name: Deploy
         if: ${{ github.ref_name == 'master' }}
         run: yarn deploy:doc --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
