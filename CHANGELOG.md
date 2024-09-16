@@ -1,3 +1,14 @@
+# [111.10.0](https://github.com/cozy/cozy-ui/compare/v111.9.0...v111.10.0) (2024-09-16)
+
+
+### Features
+
+* Add secret in GA deploy script ([67e17f2](https://github.com/cozy/cozy-ui/commit/67e17f2))
+* **Badge:** Add `success`, `warning`, `info` colors ([2445e51](https://github.com/cozy/cozy-ui/commit/2445e51))
+* Revert adding token, seems not to be the problem ([4898612](https://github.com/cozy/cozy-ui/commit/4898612))
+* Try to use GITHUB_TOKEN to deploy ([8a18c13](https://github.com/cozy/cozy-ui/commit/8a18c13))
+* Update deploy config to avoid Protected branch update failed error ([5a13cfa](https://github.com/cozy/cozy-ui/commit/5a13cfa))
+
 # [111.9.0](https://github.com/cozy/cozy-ui/compare/v111.8.1...v111.9.0) (2024-09-05)
 
 
