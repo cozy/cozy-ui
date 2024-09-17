@@ -1076,7 +1076,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
           "value": "partners",
         },
         Object {
-          "label": "Shortcuts",
+          "label": "Additional apps",
           "secondary": false,
           "value": "shortcuts",
         },
@@ -1482,7 +1482,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
           "value": "partners",
         },
         Object {
-          "label": "Shortcuts",
+          "label": "Additional apps",
           "secondary": false,
           "value": "shortcuts",
         },
