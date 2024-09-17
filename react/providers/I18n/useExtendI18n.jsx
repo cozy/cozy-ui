@@ -1,10 +1,8 @@
 import Polyglot from 'node-polyglot'
+import { useState } from 'react'
 
 import { useI18n } from '.'
 import { extend } from './translation'
-
-// Use to determine if we need to merge locales again, and to avoid useless calls
-let useExtendI18nLang = ''
 
 /**
  * Hook to merge app locales with cozy-ui locales
@@ -13,6 +11,8 @@ let useExtendI18nLang = ''
  */
 const useExtendI18n = locales => {
   const { lang, polyglot } = useI18n()
+  // Use to determine if we need to merge locales again, and to avoid useless calls
+  const [useExtendI18nLang, setUseExtendI18nLang] = useState('')
 
   if (!locales || !lang || !polyglot) return
 
@@ -29,8 +29,8 @@ const useExtendI18n = locales => {
     extend(polyglot.phrases, _polyglot)
     // use merged locales in app
     extend(_polyglot.phrases, polyglot)
-    // set the sitch to avoid useless merge
-    useExtendI18nLang = lang
+    // set the switch to avoid useless merge
+    setUseExtendI18nLang(lang)
   }
 }
 
