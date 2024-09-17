@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import flag from 'cozy-flags'
-import { useExtendI18n } from 'cozy-ui/transpiled/react/providers/I18n'
 
 import styles from './Sections.styl'
 import * as catUtils from './categories'
@@ -17,8 +16,8 @@ import fr from './locales/fr.json'
 import * as searchUtils from './search'
 import Typography from '../Typography'
 import withBreakpoints from '../helpers/withBreakpoints'
-import { translate } from '../providers/I18n'
-import withLocales from '../providers/I18n/withLocales'
+import { useI18n, useExtendI18n } from '../providers/I18n'
+import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
 const locales = {
   en,
@@ -230,7 +229,9 @@ const SectionsWrapper = props => {
   const i18nConfig = generateI18nConfig(config?.categories)
   useExtendI18n(i18nConfig)
 
-  return <Sections {...props} />
+  const { t } = useI18n()
+
+  return <Sections {...props} t={t} />
 }
 
 Sections.propTypes = {
@@ -279,4 +280,4 @@ Sections.defaultProps = {
 
 export const Untranslated = withBreakpoints()(SectionsWrapper)
 
-export default withLocales(locales)(translate()(Untranslated))
+export default withOnlyLocales(locales)(Untranslated)
