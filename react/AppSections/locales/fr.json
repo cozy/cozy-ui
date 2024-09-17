@@ -27,11 +27,11 @@
     "telecom": "Mobile",
     "transport": "Voyage et transport",
     "pro": "Travail",
-    "shortcuts": "Raccourcis"
+    "shortcuts": "App supplémentaires"
   },
   "sections": {
     "applications": "Applications",
     "konnectors": "Services",
-    "shortcuts": "Raccourcis"
+    "shortcuts": "App supplémentaires"
   }
 }

@@ -104,7 +104,7 @@ describe('generateOptionsFromApps', () => {
         type: 'webapp',
         value: 'others'
       },
-      { label: 'Shortcuts', secondary: false, value: 'shortcuts' },
+      { label: 'Additional apps', secondary: false, value: 'shortcuts' },
       {
         label: 'Services',
         secondary: false,
@@ -158,7 +158,7 @@ describe('generateOptionsFromApps', () => {
         value: 'others'
       },
       {
-        label: 'Shortcuts',
+        label: 'Additional apps',
         secondary: false,
         value: 'shortcuts'
       },
