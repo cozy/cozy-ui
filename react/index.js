@@ -30,6 +30,19 @@ export { default as useBrowserOffline } from './hooks/useBrowserOffline'
 export { Layout, Main, Content } from './Layout'
 export { default as MidEllipsis } from './MidEllipsis'
 export { default as ActionsMenu } from './ActionsMenu'
+export {
+  makeActions,
+  fileToArrayBuffer,
+  addFileToPdf,
+  divider,
+  modify,
+  smsTo,
+  call,
+  emailTo,
+  print,
+  viewInContacts,
+  others
+} from './ActionsMenu/Actions'
 export { default as Label } from './Label'
 export { default as Input } from './Input'
 export { default as Checkbox } from './Checkbox'

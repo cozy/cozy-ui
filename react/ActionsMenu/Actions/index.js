@@ -1,4 +1,4 @@
-export { makeActions } from './helpers'
+export { makeActions, fileToArrayBuffer, addFileToPdf } from './helpers'
 export { divider } from './divider'
 export { modify } from './modify'
 export { smsTo } from './smsTo'
