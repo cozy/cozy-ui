@@ -1,3 +1,10 @@
+# [111.11.0](https://github.com/cozy/cozy-ui/compare/v111.10.0...v111.11.0) (2024-09-18)
+
+
+### Features
+
+* Expose `fileToArrayBuffer` from ActionsMenu actions helpers ([72b6e21](https://github.com/cozy/cozy-ui/commit/72b6e21))
+
 # [111.10.0](https://github.com/cozy/cozy-ui/compare/v111.9.0...v111.10.0) (2024-09-16)
 
 
