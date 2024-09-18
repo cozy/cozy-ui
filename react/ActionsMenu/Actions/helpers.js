@@ -177,7 +177,7 @@ const addImageToPdf = async (pdfDoc, file) => {
  * @param {File} file
  * @returns {Promise<ArrayBuffer>}
  */
-const fileToArrayBuffer = async file => {
+export const fileToArrayBuffer = async file => {
   if ('arrayBuffer' in file) return await file.arrayBuffer()
 
   return new Promise((resolve, reject) => {
