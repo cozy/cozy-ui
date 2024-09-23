@@ -1,3 +1,10 @@
+# [111.12.0](https://github.com/cozy/cozy-ui/compare/v111.11.0...v111.12.0) (2024-09-23)
+
+
+### Features
+
+* Remove `ui.darkmode.enabled` flag condition ([67e67cd](https://github.com/cozy/cozy-ui/commit/67e67cd))
+
 # [111.11.0](https://github.com/cozy/cozy-ui/compare/v111.10.0...v111.11.0) (2024-09-18)
 
 
