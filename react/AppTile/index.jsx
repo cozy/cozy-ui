@@ -20,7 +20,6 @@ import Tile, {
 } from '../Tile'
 import palette from '../palette'
 import { AppDoctype } from '../proptypes'
-import useBreakpoints from '../providers/Breakpoints'
 import { createUseI18n } from '../providers/I18n'
 
 const locales = { en, fr }
@@ -52,7 +51,6 @@ export const AppTile = ({
 }) => {
   const { t } = useI18n()
   const { developer = {} } = app
-  const { isMobile } = useBreakpoints()
 
   const name = nameProp || app.name
 
@@ -61,7 +59,7 @@ export const AppTile = ({
   const isStatusArray = Array.isArray(showStatus)
 
   const statusToDisplay =
-    isShortcutFile(app) && statusLabel === APP_STATUS.installed && isMobile
+    isShortcutFile(app) && statusLabel === APP_STATUS.installed
       ? 'favorite'
       : isStatusArray
       ? showStatus.indexOf(statusLabel) > -1 && statusLabel
