@@ -15,7 +15,7 @@ import en from './locales/en.json'
 import fr from './locales/fr.json'
 import * as searchUtils from './search'
 import Typography from '../Typography'
-import withBreakpoints from '../helpers/withBreakpoints'
+import { useBreakpoints } from '../providers/Breakpoints'
 import { useI18n, useExtendI18n } from '../providers/I18n'
 import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
@@ -230,8 +230,9 @@ const SectionsWrapper = props => {
   useExtendI18n(i18nConfig)
 
   const { t } = useI18n()
+  const breakpoints = useBreakpoints()
 
-  return <Sections {...props} t={t} />
+  return <Sections {...props} breakpoints={breakpoints} t={t} />
 }
 
 Sections.propTypes = {
@@ -278,6 +279,4 @@ Sections.defaultProps = {
   })
 }
 
-export const Untranslated = withBreakpoints()(SectionsWrapper)
-
-export default withOnlyLocales(locales)(Untranslated)
+export default withOnlyLocales(locales)(SectionsWrapper)
