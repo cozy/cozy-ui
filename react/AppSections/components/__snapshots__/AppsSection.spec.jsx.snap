@@ -28,7 +28,7 @@ Array [
     "title": "Cozy Photos",
   },
   Object {
-    "developer": "By undefined",
+    "developer": null,
     "status": "Update available",
     "title": "Tasky",
   },
