@@ -69,9 +69,6 @@ export const AppTile = ({
 
   const isInMaintenanceWithSpecificDisplay =
     displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
-  const tileSubtitle = isShortcutFile(app)
-    ? app.metadata?.source
-    : developer.name
 
   return (
     <Tile
@@ -107,8 +104,8 @@ export const AppTile = ({
         <TileTitle isMultiline={!statusLabel}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </TileTitle>
-        {showDeveloper && (
-          <TileSubtitle>{`${t('app_item.by')} ${tileSubtitle}`}</TileSubtitle>
+        {developer.name && showDeveloper && (
+          <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
           <TileFooter isAccent={statusLabel === APP_STATUS.update}>
