@@ -2,8 +2,6 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import flag from 'cozy-flags'
-
 import { CozyThemeContext } from './index'
 import MuiCozyTheme from '../../MuiCozyTheme'
 import useMediaQuery from '../../hooks/useMediaQuery'
@@ -18,11 +16,8 @@ const DumbCozyTheme = ({
   const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
   const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
 
-  const isOnlyLight = !!flag('ui.darkmode.enabled') // should be remove when dark mode is validated on all apps
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
-    ? isOnlyLight
-      ? 'dark'
-      : 'light'
+    ? 'dark'
     : 'light'
   const filteredSettingsThemeType = ['light', 'dark'].includes(
     settingsThemeType
