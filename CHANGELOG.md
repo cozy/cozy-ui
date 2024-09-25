@@ -1,3 +1,17 @@
+# [111.13.0](https://github.com/cozy/cozy-ui/compare/v111.12.0...v111.13.0) (2024-09-25)
+
+
+### Bug Fixes
+
+* **AppTile:** Display the name of the developer instead custom property ([ff428f8](https://github.com/cozy/cozy-ui/commit/ff428f8))
+* **AppTile:** Show favorite label also desktop ([6477abe](https://github.com/cozy/cozy-ui/commit/6477abe))
+* **I18n:** Allow multiple locales extensions in apps by isolating state ([2bf2645](https://github.com/cozy/cozy-ui/commit/2bf2645))
+
+
+### Features
+
+* **AppSections:** Rename shortcuts section to additional apps ([3b53853](https://github.com/cozy/cozy-ui/commit/3b53853))
+
 # [111.12.0](https://github.com/cozy/cozy-ui/compare/v111.11.0...v111.12.0) (2024-09-23)
 
 
