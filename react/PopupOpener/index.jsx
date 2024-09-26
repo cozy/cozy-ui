@@ -14,11 +14,10 @@ export function openCenteredPopup(url, title, w, h) {
   var left = width / 2 - w / 2 + window.screenX
   var top = height / 2 - h / 2 + window.screenY
   var newWindow = window.open(
-    '',
+    url,
     title,
     `scrollbars=yes, width=${w}, height=${h}, top=${top}, left=${left}`
   )
-  newWindow.location.href = url
 
   // Puts focus on the newWindow
   if (window.focus) {
