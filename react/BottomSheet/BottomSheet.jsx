@@ -129,6 +129,7 @@ export const defaultBottomSheetSpringConfig = {
 const defaultSettings = {
   mediumHeightRatio: 0.75,
   mediumHeight: null,
+  hasMinHeightOffset: false,
   isOpenMin: false
 }
 
@@ -142,7 +143,7 @@ const BottomSheet = memo(
     offset,
     children
   }) => {
-    const { mediumHeightRatio, mediumHeight, isOpenMin } = {
+    const { mediumHeightRatio, mediumHeight, isOpenMin, hasMinHeightOffset } = {
       ...defaultSettings,
       ...settings
     }
@@ -244,6 +245,7 @@ const BottomSheet = memo(
         isClosable,
         isOpenMin,
         headerRef,
+        offset: hasMinHeightOffset ? offset : 0,
         actionButtonsHeight,
         actionButtonsBottomMargin
       })
@@ -418,6 +420,8 @@ BottomSheet.propTypes = {
     mediumHeight: PropTypes.number,
     /** Height of the middle snap point, expressed as a percentage of the viewport height */
     mediumHeightRatio: PropTypes.number,
+    /** To include the offset in the min height value */
+    hasMinHeightOffset: PropTypes.bool,
     /** To open the BottomSheet at the minimum height, if have an header */
     isOpenMin: PropTypes.bool
   }),

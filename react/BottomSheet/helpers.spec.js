@@ -152,6 +152,18 @@ describe('computeMinHeight', () => {
 
     expect(res).toBe(85)
   })
+
+  it('should return correct value with offset', () => {
+    const res = computeMinHeight({
+      isClosable: false,
+      headerRef: { current: { offsetHeight: 10 } },
+      offset: 10,
+      actionButtonsHeight: 20,
+      actionButtonsBottomMargin: 30
+    })
+
+    expect(res).toBe(95)
+  })
 })
 
 describe('setTopPosition', () => {
