@@ -455,6 +455,10 @@ export const makeLightNormalOverrides = theme => ({
           maxWidth: '800px'
         }
       },
+      '&.full': {
+        width: '100%',
+        maxWidth: '100%'
+      },
       '&.overflow': {
         overflowY: 'visible !important', // Allow the icon to overflow the dialog, otherwise it will be cut off,
         '& .cozyDialogContent': {
