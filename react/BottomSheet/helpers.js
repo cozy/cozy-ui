@@ -57,6 +57,7 @@ export const computeMinHeight = ({
   isClosable,
   isOpenMin,
   headerRef,
+  offset = 0,
   actionButtonsHeight,
   actionButtonsBottomMargin
 }) => {
@@ -64,6 +65,7 @@ export const computeMinHeight = ({
 
   return (
     headerRef.current.offsetHeight +
+    offset +
     actionButtonsHeight +
     actionButtonsBottomMargin +
     (getFlagshipMetadata().navbarHeight || 0) +

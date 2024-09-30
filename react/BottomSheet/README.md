@@ -46,6 +46,8 @@ import BottomSheet, { BottomSheetItem, BottomSheetTitle } from  'cozy-ui/transp
 * **settings** : `<object>` – Settings that can be modified
   * **mediumHeight** : `<number>` – Height in pixel of the middle snap point
   * **mediumHeightRatio** : `<number>` – Height of the middle snap point, expressed as a percentage of the viewport height
+  * **isOpenMin** : `<boolean>` – To open the BottomSheet at the minimum height, if have an header
+  * **hasMinHeightOffset** : `<boolean>` – To include the offset in the min height value
 * **backdrop** : `<boolean>` – To add a backdrop
 * **skipAnimation** : `<boolean>` – To remove animations
 * **offset** : `<number>` – Add an offset at the bottom
