@@ -6,7 +6,7 @@ import useBreakpoints from '../providers/Breakpoints'
 import { makeStyles } from '../styles'
 
 let globalId = 0
-const modalSizes = ['small', 'medium', 'large']
+const modalSizes = ['small', 'medium', 'large', 'full']
 
 const useStyles = makeStyles({
   paper: {

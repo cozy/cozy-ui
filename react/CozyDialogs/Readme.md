@@ -33,7 +33,7 @@ import Button from  'cozy-ui/transpiled/react/Buttons'
 
 * **componentsProps** : `<object>` – overriden properties of specific components
   * **dialogTitle** : `<object>` – DialogTitle component properties
-* **size** : `<string>` – Can be "s", "m" (default) or "l"
+* **size** : `<string>` – Can be "small", "medium" (default), "large" or "full"
 * **open** : `<boolean>` (required) – To open/close the modal
 * **disableTitleAutoPadding** : `<boolean>` (optional) – Disable title padding calculation that would prevent overlapping with close and back buttons
   * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
@@ -205,6 +205,7 @@ const initialVariants = [{
   showActions: true,
   disableGutters: false,
   hideTitle: false,
+  fullScreen: false,
   withBackground: false
 }]
 
@@ -264,6 +265,11 @@ const initialVariants = [{
               label="Large"
               control={<Radio />}
             />
+            <FormControlLabel
+              value="full"
+              label="Full"
+              control={<Radio />}
+            />
           </RadioGroup>
         </FormControl>
         <div className="u-mt-1">
@@ -283,6 +289,7 @@ const initialVariants = [{
         {state.modalOpened && (
           <DialogComponent
             open
+            {...(variant.fullScreen && { fullScreen: true })}
             size={DialogComponent !== ConfirmDialog ? state.size : undefined}
             onClose={variant.withCloseButton ? handleClose : undefined}
             onBack={variant.withBackButton ? handleBack : undefined}

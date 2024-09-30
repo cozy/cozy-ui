@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default {
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
   open: PropTypes.bool.isRequired,
   disableTitleAutoPadding: PropTypes.bool,
   background: PropTypes.string,
