@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useState, useMemo } from 'react'
 
-import withOnlyLocales from './locales/withOnlyLocales'
+import { locales } from './locales/withOnlyLocales'
 import ButtonBase from '../ButtonBase'
 import Icon from '../Icon'
 import { iconPropType } from '../Icon'
@@ -13,13 +13,21 @@ import MagnifierIcon from '../Icons/Magnifier'
 import InputBase from '../InputBase'
 import Paper from '../Paper'
 import Typography from '../Typography'
-import { useI18n } from '../providers/I18n'
+import { useI18n, useExtendI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
 const sizeToPixel = {
   small: 40,
   medium: 48,
-  large: 56
+  large: 56,
+  auto: 'auto'
+}
+
+const radiusBySize = {
+  small: 20,
+  medium: 24,
+  large: 28,
+  auto: 24
 }
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: ({ size }) => sizeToPixel[size],
     flex: 1,
-    borderRadius: 99,
+    borderRadius: ({ size }) => radiusBySize[size],
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: 'transparent',
@@ -110,6 +118,7 @@ const SearchBar = forwardRef(
       disabledClear,
       className,
       defaultValue,
+      value,
       elevation,
       disabled,
       onChange,
@@ -124,20 +133,21 @@ const SearchBar = forwardRef(
     const [currentValue, setCurrentValue] = useState(defaultValue)
     const [isFocused, setIsFocused] = useState(false)
 
-    const placeholder = placeholderProp || t('search.placeholder')
-    const label = labelProp || t('search.placeholder')
+    const placeholder = placeholderProp || t('SearchBar.placeholder')
+    const label = labelProp || t('SearchBar.placeholder')
+    const spreadValue = value || currentValue
+    const isSelfControlledComp = typeof value === 'undefined'
 
-    const delayedOnChange = useMemo(
-      () => debounce(event => onChange(event), 375),
-      [onChange]
-    )
+    const delayedOnChange = useMemo(() => debounce(onChange, 375), [onChange])
 
     const handleChange = ev => {
-      const value = ev.target.value
+      if (!isSelfControlledComp) return onChange(ev)
 
-      if (value.length >= 1) {
+      const _value = ev.target.value
+
+      if (_value.length >= 1) {
         delayedOnChange(ev)
-        setCurrentValue(value)
+        setCurrentValue(_value)
       } else {
         handleClear(ev)
       }
@@ -187,7 +197,7 @@ const SearchBar = forwardRef(
               {...componentsProps?.inputBase}
               className={classes.inputBase}
               placeholder={disabled ? null : placeholder}
-              value={disabled ? placeholder : currentValue}
+              value={disabled ? placeholder : spreadValue}
               disabled={disabled}
               aria-label={placeholder}
               onChange={handleChange}
@@ -196,7 +206,7 @@ const SearchBar = forwardRef(
             />
           </>
         )}
-        {currentValue && !disabledClear && (
+        {spreadValue && !disabledClear && (
           <IconButton size="medium" onClick={handleClear}>
             <Icon icon={CrossCircleIcon} />
           </IconButton>
@@ -230,11 +240,14 @@ SearchBar.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(['button', 'search']),
   icon: iconPropType,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'auto']),
   componentsProps: PropTypes.shape({
     /** Props spread to InputBase component */
     inputBase: PropTypes.object
   }),
+  /** Used to control the component outside of it */
+  value: PropTypes.string,
+  /** Used only with self-controlled component */
   defaultValue: PropTypes.string,
   disabledClear: PropTypes.bool,
   elevation: PropTypes.bool,
@@ -250,4 +263,10 @@ SearchBar.propTypes = {
   onBlur: PropTypes.func
 }
 
-export default withOnlyLocales(SearchBar)
+const SearchBarWithLocales = props => {
+  useExtendI18n(locales)
+
+  return <SearchBar {...props} />
+}
+
+export default SearchBarWithLocales
