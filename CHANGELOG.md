@@ -1,3 +1,14 @@
+# [111.14.0](https://github.com/cozy/cozy-ui/compare/v111.13.0...v111.14.0) (2024-10-03)
+
+
+### Features
+
+* **BottomSheet:** Add `hasMinHeightOffset` prop ([0e1af92](https://github.com/cozy/cozy-ui/commit/0e1af92))
+* **CozyDialogs:** Add `full` size ([d141068](https://github.com/cozy/cozy-ui/commit/d141068))
+* **CozyDialogs:** We can now propagates props to inner components ([01d9d48](https://github.com/cozy/cozy-ui/commit/01d9d48))
+* **SearchBar:** Add `auto` size and possibility to control it in the app ([038555f](https://github.com/cozy/cozy-ui/commit/038555f))
+* **SearchBar:** Add multiple props to improve component management ([13f8450](https://github.com/cozy/cozy-ui/commit/13f8450))
+
 # [111.13.0](https://github.com/cozy/cozy-ui/compare/v111.12.0...v111.13.0) (2024-09-25)
 
 
