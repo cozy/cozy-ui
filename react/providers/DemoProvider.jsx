@@ -4,7 +4,7 @@ import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
-import { I18nContext } from '../providers/I18n'
+import I18n from '../providers/I18n'
 
 const defaultClient = {
   plugins: {
@@ -28,15 +28,9 @@ const DemoProvider = ({ client, variant, children }) => {
   return (
     <CozyProvider client={client || defaultClient}>
       <BreakpointsProvider>
-        <I18nContext.Provider
-          value={{
-            t: x => x,
-            f: () => '01 Jan. 2022',
-            lang
-          }}
-        >
+        <I18n lang={lang} dictRequire={() => ({})}>
           <CozyTheme variant={variant}>{children}</CozyTheme>
-        </I18nContext.Provider>
+        </I18n>
       </BreakpointsProvider>
     </CozyProvider>
   )
