@@ -92,6 +92,7 @@ const useCozyDialog = props => {
 
   const dividerClassName = 'divider--dialog'
   const dividerProps = {
+    ...componentsProps?.divider,
     classes: {
       root: dividerClassName
     }
@@ -99,12 +100,14 @@ const useCozyDialog = props => {
 
   const dialogActionsClassName = 'cozyDialogActions'
   const dialogActionsProps = {
+    ...componentsProps?.dialogActions,
     classes: {
       root: dialogActionsClassName
     }
   }
 
   const dialogContentProps = {
+    ...componentsProps?.dialogContent,
     classes: {
       root: cx({
         disableGutters
