@@ -109,7 +109,9 @@ export const generateOptionsFromApps = (apps, options = {}) => {
         })
       )
     }
-    if (type === APP_TYPE.FILE) {
+
+    const categories = Object.keys(catApps)
+    if (type === APP_TYPE.FILE && categories.length > 0) {
       allCategoryOptions.push(
         addLabel({
           value: 'shortcuts',
@@ -117,7 +119,8 @@ export const generateOptionsFromApps = (apps, options = {}) => {
         })
       )
     }
-    const categoryOptions = Object.keys(catApps).map(cat => {
+
+    const categoryOptions = categories.map(cat => {
       return addLabel({
         value: cat,
         type: type,
