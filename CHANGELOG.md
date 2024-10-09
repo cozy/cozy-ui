@@ -1,3 +1,10 @@
+## [111.15.2](https://github.com/cozy/cozy-ui/compare/v111.15.1...v111.15.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Add safe area and flagship app height to compute toolbar height ([f452eca](https://github.com/cozy/cozy-ui/commit/f452eca))
+
 ## [111.15.1](https://github.com/cozy/cozy-ui/compare/v111.15.0...v111.15.1) (2024-10-09)
 
 
