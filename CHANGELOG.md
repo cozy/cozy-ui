@@ -1,3 +1,10 @@
+# [111.15.0](https://github.com/cozy/cozy-ui/compare/v111.14.0...v111.15.0) (2024-10-09)
+
+
+### Features
+
+* **Icon:** Add `stop` ([f975a5d](https://github.com/cozy/cozy-ui/commit/f975a5d))
+
 # [111.14.0](https://github.com/cozy/cozy-ui/compare/v111.13.0...v111.14.0) (2024-10-03)
 
 
