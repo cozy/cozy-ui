@@ -115,7 +115,7 @@ If you want to add a new icon to cozy-ui, you must follow these steps:
 * Add the SVG in the `assets/icons/[ui || illus]` folder
 * Optimize it with `yarn svgo assets/icons/[ui || illus]/[new icon file name]`
 * Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
-* Update the documentation by adding the new file in react/Icon/Readme.md. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
+* Update the documentation by adding the new file in `react/Icon/Readme.md`. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
 * Don't forget to check the icon's color on different theme (inverted, etc.)
 * Update the tests by running `yarn makeSpriteAndPalette && yarn build && yarn test -u`
 
