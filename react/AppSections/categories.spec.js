@@ -10,7 +10,14 @@ import { I18nContext } from '../jestLib/I18n'
 import mockApps from '../mocks/apps'
 
 const i18nContext = I18nContext({
-  locale: en
+  locale: {
+    ...en,
+    app_categories: {
+      ...en.app_categories,
+      foo: 'Foo',
+      bar: 'Bar'
+    }
+  }
 })
 const tMock = i18nContext.t
 
@@ -104,7 +111,6 @@ describe('generateOptionsFromApps', () => {
         type: 'webapp',
         value: 'others'
       },
-      { label: 'Additional apps', secondary: false, value: 'shortcuts' },
       {
         label: 'Services',
         secondary: false,
@@ -158,11 +164,6 @@ describe('generateOptionsFromApps', () => {
         value: 'others'
       },
       {
-        label: 'Additional apps',
-        secondary: false,
-        value: 'shortcuts'
-      },
-      {
         label: 'Services',
         secondary: false,
         value: 'konnectors'
@@ -198,5 +199,91 @@ describe('generateOptionsFromApps', () => {
     expect(
       catUtils.generateOptionsFromApps(null, { includeAll: false, addLabel })
     ).toEqual([])
+  })
+
+  it('should return additional apps categories when there more than one', () => {
+    const appsWithAdditionlOnes = [
+      ...mockApps,
+      {
+        _id: 'shortcutA',
+        name: 'Shortcut A',
+        categories: ['foo'],
+        type: 'file',
+        _type: 'io.cozy.files'
+      },
+      {
+        _id: 'shortcutB',
+        name: 'Shortcut B',
+        categories: ['bar'],
+        type: 'file',
+        _type: 'io.cozy.files'
+      }
+    ]
+
+    expect(
+      catUtils.generateOptionsFromApps(appsWithAdditionlOnes, {
+        includeAll: false,
+        addLabel
+      })
+    ).toEqual([
+      {
+        label: 'The essentials',
+        secondary: false,
+        type: 'webapp',
+        value: 'cozy'
+      },
+      {
+        label: 'Partners',
+        secondary: false,
+        type: 'webapp',
+        value: 'partners'
+      },
+      {
+        label: 'Others',
+        secondary: false,
+        type: 'webapp',
+        value: 'others'
+      },
+      {
+        label: 'Additional apps',
+        secondary: false,
+        value: 'shortcuts'
+      },
+      {
+        label: 'Bar',
+        secondary: true,
+        type: 'file',
+        value: 'bar'
+      },
+      {
+        label: 'Foo',
+        secondary: true,
+        type: 'file',
+        value: 'foo'
+      },
+      {
+        label: 'Services',
+        secondary: false,
+        value: 'konnectors'
+      },
+      {
+        label: 'Mobile and Internet',
+        secondary: true,
+        type: 'konnector',
+        value: 'isp'
+      },
+      {
+        label: 'Telecom',
+        secondary: true,
+        type: 'konnector',
+        value: 'telecom'
+      },
+      {
+        label: 'Transportation',
+        secondary: true,
+        type: 'konnector',
+        value: 'transport'
+      }
+    ])
   })
 })
