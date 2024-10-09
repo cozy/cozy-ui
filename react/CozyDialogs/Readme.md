@@ -92,6 +92,8 @@ const hideBottomSheet = () => setState({ bottomSheetOpened: false })
 const showBottomSheet = () => setState({ bottomSheetOpened: true })
 const hideSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: false })
 const showSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: true })
+const hideSecondDialog = () => setState({ secondDialogOpened: false })
+const showSecondDialog = () => setState({ secondDialogOpened: true })
 const hideBSConfirmDialog = () => setState({ BSConfirmDialogOpened: false })
 const showBSConfirmDialog = () => setState({ BSConfirmDialogOpened: true })
 
@@ -188,6 +190,7 @@ initialState = {
   modalOpened: isTesting(),
   bottomSheetOpened: false,
   secondConfirmDialogOpened: false,
+  secondDialogOpened: false,
   BSConfirmDialogOpened: false,
   modal: Dialog,
   size: 'medium',
@@ -323,11 +326,21 @@ const initialVariants = [{
                     <div>
                       <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
                     </div>
+                    <div>
+                      <Button label="Show inner dialog" onClick={showSecondDialog}/>
+                    </div>
                   </Stack>
                 </Typography>
 
                 {state.secondConfirmDialogOpened && (
                   <ConfirmDialog open onClose={hideSecondConfirmDialog}
+                    title="This is a simple title"
+                    content="This is a simple content"
+                  />
+                )}
+
+                {state.secondDialogOpened && (
+                  <Dialog open onClose={hideSecondDialog}
                     title="This is a simple title"
                     content="This is a simple content"
                   />
