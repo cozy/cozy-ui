@@ -1,3 +1,10 @@
+## [111.15.1](https://github.com/cozy/cozy-ui/compare/v111.15.0...v111.15.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* Show additional apps only when there ones ([64c6c5e](https://github.com/cozy/cozy-ui/commit/64c6c5e))
+
 # [111.15.0](https://github.com/cozy/cozy-ui/compare/v111.14.0...v111.15.0) (2024-10-09)
 
 
