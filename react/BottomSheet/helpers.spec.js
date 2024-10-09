@@ -22,19 +22,19 @@ describe('computeMaxHeight', () => {
   it('should return correct value if no arg', () => {
     const res = computeMaxHeight({})
 
-    expect(res).toBe(799)
+    expect(res).toBe(784)
   })
 
   it('should return correct value with height arg', () => {
     const res = computeMaxHeight({ height: 50 })
 
-    expect(res).toBe(750)
+    expect(res).toBe(735)
   })
 
   it('should return correct value with ref arg', () => {
     const res = computeMaxHeight({ ref: { current: { offsetHeight: 50 } } })
 
-    expect(res).toBe(750)
+    expect(res).toBe(735)
   })
 })
 
@@ -397,7 +397,7 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(1)
+        expect(res).toBe(16)
       })
 
       it('should return the toolbar height', () => {
@@ -409,7 +409,7 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(50)
+        expect(res).toBe(65)
       })
 
       it('should return the offset value and border', () => {
@@ -420,7 +420,7 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(49)
+        expect(res).toBe(64)
       })
 
       it('should return the offset value and border and toolbar height', () => {
@@ -432,7 +432,7 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(98)
+        expect(res).toBe(113)
       })
     })
   })
@@ -495,7 +495,7 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(1)
+        expect(res).toBe(16)
       })
 
       it('should return the toolbar height', () => {
@@ -507,7 +507,7 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(50)
+        expect(res).toBe(65)
       })
 
       it('should return the offset value', () => {
@@ -518,7 +518,7 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(49)
+        expect(res).toBe(64)
       })
 
       it('should return the offset value and toolbar height', () => {
@@ -530,7 +530,7 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(98)
+        expect(res).toBe(113)
       })
     })
   })
@@ -540,18 +540,18 @@ describe('computeToolbarHeight', () => {
   it('should return the height prop', () => {
     const res = computeToolbarHeight({ height: 50 })
 
-    expect(res).toBe(50)
+    expect(res).toBe(65)
   })
 
   it('should return the height from ref', () => {
     const res = computeToolbarHeight({ ref: { current: { offsetHeight: 50 } } })
 
-    expect(res).toBe(50)
+    expect(res).toBe(65)
   })
 
   it('should return default value', () => {
     const res = computeToolbarHeight()
 
-    expect(res).toBe(1)
+    expect(res).toBe(16)
   })
 })
