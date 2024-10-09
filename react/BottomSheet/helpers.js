@@ -14,7 +14,11 @@ export const computeToolbarHeight = (toolbarProps = {}) => {
     computedToolbarHeight = ref.current.offsetHeight
   }
 
-  return computedToolbarHeight
+  return (
+    computedToolbarHeight +
+    (getFlagshipMetadata().statusBarHeight || 0) +
+    getSafeAreaValue('top')
+  )
 }
 
 export const computeMaxHeight = toolbarProps => {
