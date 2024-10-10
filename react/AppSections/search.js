@@ -31,6 +31,12 @@ const showMaintenanceMatcher = isShowMaintenance => app => {
   if (isShowMaintenance) return true
   return app.maintenance === undefined
 }
+const slugListMatcher = slugList => app => {
+  console.log('slugListMatcher')
+  console.log('slugList', slugList)
+  if (!Array.isArray(slugList)) return false
+  return slugList.includes(app.slug)
+}
 
 const qualificationLabelsMatcher = label => app => {
   if (!Array.isArray(app.qualification_labels)) return false
@@ -44,7 +50,8 @@ const searchAttrToMatcher = {
   doctype: doctypeMatcher,
   pendingUpdate: pendingUpdateMatcher,
   showMaintenance: showMaintenanceMatcher,
-  qualificationLabels: qualificationLabelsMatcher
+  qualificationLabels: qualificationLabelsMatcher,
+  slugList: slugListMatcher
 }
 
 /**
