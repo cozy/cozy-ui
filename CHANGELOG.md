@@ -1,3 +1,10 @@
+# [111.16.0](https://github.com/cozy/cozy-ui/compare/v111.15.2...v111.16.0) (2024-10-10)
+
+
+### Features
+
+* **Icon:** Add `img` tag and `.png` file support ([c1eeb5d](https://github.com/cozy/cozy-ui/commit/c1eeb5d))
+
 ## [111.15.2](https://github.com/cozy/cozy-ui/compare/v111.15.1...v111.15.2) (2024-10-09)
 
 
