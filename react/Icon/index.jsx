@@ -51,8 +51,23 @@ function Icon(props) {
   if (!icon) return null
 
   const isIconComp = icon.type === Icon
+  const isImg = icon.type === 'img'
 
-  if (isIconComp) return icon
+  if (isIconComp || isImg) return icon
+
+  const isPngPath = typeof icon === 'string' && icon.includes('.png')
+
+  if (isPngPath)
+    return (
+      <img
+        src={icon}
+        className={className}
+        style={style}
+        width={width || size || DEFAULT_SIZE}
+        height={height || size || DEFAULT_SIZE}
+        {...restProps}
+      />
+    )
 
   const Svg = isFunction(icon) ? icon : makeSvgObject(icon)
 
