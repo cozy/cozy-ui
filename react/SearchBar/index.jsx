@@ -195,7 +195,10 @@ const SearchBar = forwardRef(
             {icon && <Icon className={classes.icon} icon={icon} />}
             <InputBase
               {...componentsProps?.inputBase}
-              className={classes.inputBase}
+              className={cx(
+                classes.inputBase,
+                componentsProps?.inputBase?.className
+              )}
               placeholder={disabled ? null : placeholder}
               value={disabled ? placeholder : spreadValue}
               disabled={disabled}
