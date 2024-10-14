@@ -64,3 +64,23 @@ const initialVariants = [{ small: false, medium: true, large: false }]
   )}
 </Variants>
 ```
+
+### Example with embedded button
+
+```jsx
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
+
+;
+
+<IconButton className="u-p-half">
+  <Button
+    component="div"
+    className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
+    classes={{ label: "u-flex u-w-auto" }}
+    label={<Icon icon={StopIcon} size={12} />}
+  />
+</IconButton>
+```
