@@ -14,7 +14,6 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
@@ -73,7 +72,9 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import ArrowUpIcon from 'cozy-ui/transpiled/react/Icons/ArrowUp'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const iconPositions = ['startIcon', 'endIcon']
@@ -82,7 +83,7 @@ const iconPositions = ['startIcon', 'endIcon']
 
 <Grid container>
   {iconPositions.map(iconPosition =>
-    <Grid item xs={12} sm={4} className="u-mb-1" key={iconPosition}>
+    <Grid item xs={12} sm={3} className="u-mb-1" key={iconPosition}>
       <Stack spacing="s">
         <div>{iconPosition}</div>
         {variants.map(variant =>
@@ -90,22 +91,50 @@ const iconPositions = ['startIcon', 'endIcon']
             <Button
               label={variant}
               variant={variant}
-              {...({[`${iconPosition}`]: <Icon icon={PlusIcon}/>})}
+              {...({[`${iconPosition}`]: <Icon icon={PlusIcon} />})}
             />
           </div>
         )}
       </Stack>
     </Grid>
   )}
-  <Grid item xs={12} sm={4} className="u-mb-1">
+  <Grid item xs={12} sm={3} className="u-mb-1">
     <Stack spacing="s">
       <div>label is only icon</div>
         {variants.map(variant =>
           <div key={variant}>
             <Button
               className="u-miw-auto"
-              label={<Icon icon={PlusIcon}/>}
+              label={<Icon icon={PlusIcon} />}
               variant={variant}
+            />
+            <Button
+              className="u-ml-1 u-miw-auto"
+              label={<Icon icon={PlusIcon} />}
+              variant={variant}
+              disabled
+            />
+          </div>
+        )}
+    </Stack>
+  </Grid>
+  <Grid item xs={12} sm={3} className="u-mb-1">
+    <Stack spacing="s">
+      <div>round icon button</div>
+        {variants.map(variant =>
+          <div key={variant}>
+            <Button
+              className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
+              classes={{ label: "u-flex u-w-auto" }}
+              label={<Icon icon={StopIcon} size={12} />}
+              variant={variant}
+            />
+            <Button
+              className="u-ml-1 u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
+              classes={{ label: "u-flex u-w-auto" }}
+              label={<Icon icon={StopIcon} size={12} />}
+              variant={variant}
+              disabled
             />
           </div>
         )}
