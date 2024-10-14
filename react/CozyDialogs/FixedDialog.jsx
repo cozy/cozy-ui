@@ -51,7 +51,7 @@ const FixedDialog = props => {
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner">{content}</div>
       </DialogContent>
-      <Divider />
+      <Divider {...dividerProps} />
       {actions && (
         <DialogActions
           {...dialogActionsProps}
