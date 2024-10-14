@@ -61,9 +61,13 @@ const Dialog = props => {
             <DialogActions
               {...dialogActionsProps}
               disableSpacing
-              className={cx('dialogActionsFluid', {
-                columnLayout: actionsLayout == 'column'
-              })}
+              className={cx(
+                'dialogActionsFluid',
+                {
+                  columnLayout: actionsLayout == 'column'
+                },
+                dialogActionsProps.className
+              )}
             >
               {actions}
             </DialogActions>
