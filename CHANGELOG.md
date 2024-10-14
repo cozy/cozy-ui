@@ -1,3 +1,10 @@
+# [111.18.0](https://github.com/cozy/cozy-ui/compare/v111.17.0...v111.18.0) (2024-10-14)
+
+
+### Features
+
+* **Dialogs:** Spread dialogActions classname to allow override ([fc2c414](https://github.com/cozy/cozy-ui/commit/fc2c414))
+
 # [111.17.0](https://github.com/cozy/cozy-ui/compare/v111.16.0...v111.17.0) (2024-10-14)
 
 
