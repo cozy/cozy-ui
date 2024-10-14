@@ -1,15 +1,21 @@
 import { default as MUIDialog } from '@material-ui/core/Dialog'
+import cx from 'classnames'
 import React from 'react'
 
 import { useDialogEffects } from './DialogEffects'
 import { useCozyTheme } from '../providers/CozyTheme'
 
-const Dialog = props => {
+const Dialog = ({ className, ...props }) => {
   const { type, variant } = useCozyTheme()
 
   useDialogEffects(props.open, props.fullScreen)
 
-  return <MUIDialog className={`CozyTheme--${type}-${variant}`} {...props} />
+  return (
+    <MUIDialog
+      className={cx(`CozyTheme--${type}-${variant}`, className)}
+      {...props}
+    />
+  )
 }
 
 Dialog.defaultProps = {
