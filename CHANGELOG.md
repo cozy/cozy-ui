@@ -1,3 +1,11 @@
+# [111.17.0](https://github.com/cozy/cozy-ui/compare/v111.16.0...v111.17.0) (2024-10-14)
+
+
+### Features
+
+* **CSS:** Add `important` prop on border and overflow class utilities ([eed43c7](https://github.com/cozy/cozy-ui/commit/eed43c7))
+* **SearchBar:** Spread components.inputBase.className to InputBase ([b5dd59c](https://github.com/cozy/cozy-ui/commit/b5dd59c))
+
 # [111.16.0](https://github.com/cozy/cozy-ui/compare/v111.15.2...v111.16.0) (2024-10-10)
 
 
