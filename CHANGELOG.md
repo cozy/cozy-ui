@@ -1,3 +1,11 @@
+## [111.18.1](https://github.com/cozy/cozy-ui/compare/v111.18.0...v111.18.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* **Dialog:** Classnames wasn't merged if set ([8a9453c](https://github.com/cozy/cozy-ui/commit/8a9453c))
+* **FixedDialog:** Bottom divider wasn't fullwidth when small size dialog ([ecceb97](https://github.com/cozy/cozy-ui/commit/ecceb97))
+
 # [111.18.0](https://github.com/cozy/cozy-ui/compare/v111.17.0...v111.18.0) (2024-10-14)
 
 
