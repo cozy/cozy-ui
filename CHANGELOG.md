@@ -1,3 +1,15 @@
+# [111.19.0](https://github.com/cozy/cozy-ui/compare/v111.18.1...v111.19.0) (2024-10-16)
+
+
+### Bug Fixes
+
+* **SearchBar:** Ref wasn't spread correctly ([15fc5fe](https://github.com/cozy/cozy-ui/commit/15fc5fe))
+
+
+### Features
+
+* **SearchBar:** Add `onClear` and `disabledFocus` props ([6c8cabf](https://github.com/cozy/cozy-ui/commit/6c8cabf))
+
 ## [111.18.1](https://github.com/cozy/cozy-ui/compare/v111.18.0...v111.18.1) (2024-10-14)
 
 
