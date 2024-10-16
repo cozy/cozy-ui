@@ -116,12 +116,14 @@ const SearchBar = forwardRef(
       label: labelProp,
       componentsProps,
       disabledClear,
+      disabledFocus,
       className,
       defaultValue,
       value,
       elevation,
       disabled,
       onChange,
+      onClear,
       onFocus,
       onBlur,
       ...props
@@ -155,6 +157,7 @@ const SearchBar = forwardRef(
 
     const handleClear = ev => {
       onChange({ ...ev, target: { ...ev.target, value: '' } })
+      onClear(ev)
       setCurrentValue('')
     }
 
@@ -175,7 +178,7 @@ const SearchBar = forwardRef(
         className={cx(className, classes.root, {
           [classes.flat]: !elevation,
           [classes.elevation]: elevation,
-          [classes.focused]: isFocused,
+          [classes.focused]: isFocused && !disabledFocus,
           [classes.disabled]: disabled
         })}
         ref={ref}
@@ -233,9 +236,11 @@ SearchBar.defaultProps = {
   size: 'small',
   type: 'search',
   disabledClear: false,
+  disabledFocus: false,
   defaultValue: '',
   onChange: () => {},
   onFocus: () => {},
+  onClear: () => {},
   onBlur: () => {}
 }
 
@@ -253,6 +258,7 @@ SearchBar.propTypes = {
   /** Used only with self-controlled component */
   defaultValue: PropTypes.string,
   disabledClear: PropTypes.bool,
+  disabledFocus: PropTypes.bool,
   elevation: PropTypes.bool,
   placeholder: PropTypes.string,
   label: PropTypes.oneOfType([
@@ -263,6 +269,7 @@ SearchBar.propTypes = {
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
+  onClear: PropTypes.func,
   onBlur: PropTypes.func
 }
 
