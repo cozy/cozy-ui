@@ -273,10 +273,10 @@ SearchBar.propTypes = {
   onBlur: PropTypes.func
 }
 
-const SearchBarWithLocales = props => {
+const SearchBarWithLocales = forwardRef((props, ref) => {
   useExtendI18n(locales)
 
-  return <SearchBar {...props} />
-}
+  return <SearchBar {...props} ref={ref} />
+})
 
 export default SearchBarWithLocales
