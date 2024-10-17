@@ -1,3 +1,10 @@
+# [111.20.0](https://github.com/cozy/cozy-ui/compare/v111.19.0...v111.20.0) (2024-10-17)
+
+
+### Features
+
+* Add tab icon ([4431b22](https://github.com/cozy/cozy-ui/commit/4431b22))
+
 # [111.19.0](https://github.com/cozy/cozy-ui/compare/v111.18.1...v111.19.0) (2024-10-16)
 
 
