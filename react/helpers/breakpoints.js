@@ -5,6 +5,18 @@ const medium = 1023
 const small = 768
 const tiny = 543
 
+/**
+ * @typedef BreakpointsStatusType
+ * @property {boolean} isExtraLarge
+ * @property {boolean} isLarge
+ * @property {boolean} isMedium
+ * @property {boolean} isSmall
+ * @property {boolean} isTiny
+ * @property {boolean} isDesktop
+ * @property {boolean} isTablet
+ * @property {boolean} isMobile
+ */
+
 const breakpoints = {
   isExtraLarge: [large + 1],
   isLarge: [medium + 1, large],
@@ -16,6 +28,10 @@ const breakpoints = {
   isMobile: [0, small]
 }
 
+/**
+ * @param {Object} breakpoints
+ * @returns {BreakpointsStatusType}
+ */
 export const getBreakpointsStatus = breakpoints => {
   const width = window.innerWidth
   return mapValues(

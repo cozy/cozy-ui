@@ -4,14 +4,16 @@
   ],
   "exclude": [
     "node_modules",
-    "transpiled"
+    "transpiled",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
   ],
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": "./react",
     "declaration": true,
-    "declarationDir": "./transpiled/react",
+    "declarationDir": "./transpiled",
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -27,7 +29,8 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "es5"
+    "strict": false,
+    "target": "es5",
+    "declarationMap": true
   }
 }

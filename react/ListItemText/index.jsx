@@ -22,6 +22,16 @@ const getTypographyProp = (props, className, ellipsis) => {
       }
 }
 
+/**
+ * @typedef {object} ListItemTextPropTypes
+ * @property {string} [primary] - The primary text of the list item.
+ * @property {string} [secondary] - The secondary text of the list item.
+ * @property {string} [className] - Additional CSS class names for the list item text.
+ */
+
+/**
+ * @type React.ForwardRefRenderFunction<HTMLDivElement, ListItemTextPropTypes>
+ */
 const ListItemText = forwardRef((props, ref) => {
   const {
     primaryText,
