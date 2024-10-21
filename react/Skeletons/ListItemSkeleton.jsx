@@ -7,10 +7,10 @@ import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
 import Skeleton from '../Skeleton'
 
-const ListItemSkeleton = ({ hasSecondary, divider }) => {
+const ListItemSkeleton = ({ hasSecondary, divider, gutters }) => {
   return (
     <>
-      <ListItem>
+      <ListItem gutters={gutters}>
         <ListItemIcon>
           <Skeleton
             className="u-bdrs-4"
@@ -35,7 +35,8 @@ ListItemSkeleton.propTypes = {
   /** Show secondary line or not */
   hasSecondary: PropTypes.bool,
   /** Show divider after the ListItem */
-  divider: PropTypes.bool
+  divider: PropTypes.bool,
+  gutters: PropTypes.string
 }
 
 export default ListItemSkeleton
