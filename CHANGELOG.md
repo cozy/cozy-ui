@@ -1,3 +1,10 @@
+# [111.21.0](https://github.com/cozy/cozy-ui/compare/v111.20.0...v111.21.0) (2024-10-21)
+
+
+### Features
+
+* **ListItemSkeleton:** Add gutters property to mock ListItem behavior ([01ce10a](https://github.com/cozy/cozy-ui/commit/01ce10a))
+
 # [111.20.0](https://github.com/cozy/cozy-ui/compare/v111.19.0...v111.20.0) (2024-10-17)
 
 
