@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { Component } from 'react'
 
 import { withClient } from 'cozy-client'
+import { isEncrypted } from 'cozy-client/dist/models/file'
 import logger from 'cozy-logger'
 
 const PENDING = 'PENDING'
@@ -12,8 +13,7 @@ const FAILED = 'FAILED'
 const GET_LINK = 'GET_LINK'
 
 import { checkImageSource } from './checkImageSource'
-import { isFileEncrypted } from '../Viewer/helpers'
-import { EncryptedContext } from '../Viewer/providers/EncryptedProvider'
+import { EncryptedContext } from '../providers/Encrypted'
 
 export class FileImageLoader extends Component {
   state = {
@@ -60,7 +60,7 @@ export class FileImageLoader extends Component {
 
   loadNextSrc(lastError = null) {
     const { file } = this.props
-    if (isFileEncrypted(file)) {
+    if (isEncrypted(file)) {
       // No link available for encrypted files
       return
     }
