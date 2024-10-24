@@ -1,3 +1,17 @@
+# [112.0.0](https://github.com/cozy/cozy-ui/compare/v111.21.0...v112.0.0) (2024-10-24)
+
+
+### Features
+
+* **hooks:** Add useClientErrors from cozy-client ([deb505e](https://github.com/cozy/cozy-ui/commit/deb505e))
+* **providers:** Add Encrypted from cozy-viewer ([612cff6](https://github.com/cozy/cozy-ui/commit/612cff6))
+* Remove Viewer ([7d2b7ef](https://github.com/cozy/cozy-ui/commit/7d2b7ef))
+
+
+### BREAKING CHANGES
+
+* if you want to use the Viewer, you must import components from `cozy-viewer`. So replace `import Something from 'cozy-ui/transpiled/react/Viewer/...'` by `import Something from 'cozy-viewer/...'`
+
 # [111.21.0](https://github.com/cozy/cozy-ui/compare/v111.20.0...v111.21.0) (2024-10-21)
 
 
