@@ -1,9 +1,11 @@
 import '@testing-library/jest-dom/extend-expect'
 import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+import fetch from 'whatwg-fetch'
 
 configure({ adapter: new Adapter() })
 
+global.fetch = fetch
 global.mount = mount
 global.shallow = shallow
 
@@ -17,7 +19,7 @@ const isDeprecatedLifecycleWarning = (msg, componentName) => {
 }
 
 const ignoreOnConditions = (originalWarn, ignoreConditions) => {
-  return function(...args) {
+  return function (...args) {
     const msg = args[0]
     if (ignoreConditions.some(condition => condition(msg))) {
       return
