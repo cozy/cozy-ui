@@ -182,7 +182,7 @@
     "piwik-react-router": "0.12.1",
     "react-chartjs-2": "4.1.0",
     "react-markdown": "^4.0.8",
-    "react-pdf": "^5.7.2",
+    "react-pdf": "^7.0.0",
     "react-popper": "^2.2.3",
     "react-remove-scroll": "^2.4.0",
     "react-select": "^4.3.0",
