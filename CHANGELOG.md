@@ -1,3 +1,10 @@
+# [112.2.0](https://github.com/cozy/cozy-ui/compare/v112.1.0...v112.2.0) (2024-10-30)
+
+
+### Features
+
+* Remove useless cozy-sharing from peer deps ([5ac6a96](https://github.com/cozy/cozy-ui/commit/5ac6a96))
+
 # [112.1.0](https://github.com/cozy/cozy-ui/compare/v112.0.0...v112.1.0) (2024-10-30)
 
 
