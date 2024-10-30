@@ -51,8 +51,8 @@ jobs:
         run: yarn test:noSnapshots
       - name: Tests snapshots
         run: yarn test:snapshots
-      # - name: Bundlemon
-      #   run: yarn bundlemon
+      - name: BundleMon
+        uses: lironer/bundlemon-action@v1
   argosDesktop:
     needs: [prepareArgos, build]
     runs-on: ubuntu-latest
