@@ -1,3 +1,10 @@
+# [112.1.0](https://github.com/cozy/cozy-ui/compare/v112.0.0...v112.1.0) (2024-10-30)
+
+
+### Features
+
+* Upgrade Bundlemon to 3.1.0 ([e8da4a0](https://github.com/cozy/cozy-ui/commit/e8da4a0))
+
 # [112.0.0](https://github.com/cozy/cozy-ui/compare/v111.21.0...v112.0.0) (2024-10-24)
 
 
