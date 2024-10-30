@@ -100,7 +100,6 @@
     "cozy-harvest-lib": "^6.7.3",
     "cozy-intent": "1.16.1",
     "cozy-logger": "^1.9.0",
-    "cozy-sharing": "^14.1.0",
     "cozy-stack-client": "^47.4.0",
     "css-loader": "0.28.11",
     "cssnano": "4.1.11",
@@ -194,7 +193,6 @@
     "cozy-device-helper": "^2.0.0",
     "cozy-harvest-lib": "^6.7.3",
     "cozy-intent": ">=1.3.0",
-    "cozy-sharing": ">=14.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
