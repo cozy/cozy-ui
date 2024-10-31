@@ -98,7 +98,7 @@
     "cozy-device-helper": "2.0.0",
     "cozy-flags": "^2.10.1",
     "cozy-harvest-lib": "^6.7.3",
-    "cozy-intent": "1.16.1",
+    "cozy-intent": "1.17.3",
     "cozy-logger": "^1.9.0",
     "cozy-stack-client": "^47.4.0",
     "css-loader": "0.28.11",
