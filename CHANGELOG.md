@@ -1,3 +1,10 @@
+# [112.3.0](https://github.com/cozy/cozy-ui/compare/v112.2.0...v112.3.0) (2024-10-31)
+
+
+### Features
+
+* Remove unused react-pdf dep ([ae84e89](https://github.com/cozy/cozy-ui/commit/ae84e89))
+
 # [112.2.0](https://github.com/cozy/cozy-ui/compare/v112.1.0...v112.2.0) (2024-10-30)
 
 
