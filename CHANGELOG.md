@@ -1,3 +1,15 @@
+# [113.0.0](https://github.com/cozy/cozy-ui/compare/v112.3.0...v113.0.0) (2024-11-06)
+
+
+### Features
+
+* Remove cozy-harvest-lib ([df104df](https://github.com/cozy/cozy-ui/commit/df104df))
+
+
+### BREAKING CHANGES
+
+* you do not need anymore cozy-harvest-lib. Please check if you added it in your app only for cozy-ui.
+
 # [112.3.0](https://github.com/cozy/cozy-ui/compare/v112.2.0...v112.3.0) (2024-10-31)
 
 
