@@ -1,13 +1,11 @@
 import React from 'react'
 
 import { IOCozyFile } from 'cozy-client/types/types'
-// @ts-expect-error - The following component is not typed
-import { nameToColor } from 'cozy-ui/react/Avatar/helpers'
-// @ts-expect-error - The following component is not typed
-import Typography from 'cozy-ui/react/Typography'
 
 import styles from '../AppTile/styles.styl'
+import { nameToColor } from '../Avatar/helpers'
 import { TileIcon } from '../Tile'
+import Typography from '../Typography'
 import { makeStyles } from '../styles'
 
 interface ShortcutTileProps {
