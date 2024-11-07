@@ -1,3 +1,15 @@
+# [113.1.0](https://github.com/cozy/cozy-ui/compare/v113.0.0...v113.1.0) (2024-11-07)
+
+
+### Bug Fixes
+
+* **ShortcutTile:** Use relative import ([df81357](https://github.com/cozy/cozy-ui/commit/df81357))
+
+
+### Features
+
+* **Typography:** Add types ([94c9ae6](https://github.com/cozy/cozy-ui/commit/94c9ae6))
+
 # [113.0.0](https://github.com/cozy/cozy-ui/compare/v112.3.0...v113.0.0) (2024-11-06)
 
 
