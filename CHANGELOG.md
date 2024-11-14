@@ -1,3 +1,10 @@
+# [113.2.0](https://github.com/cozy/cozy-ui/compare/v113.1.0...v113.2.0) (2024-11-14)
+
+
+### Features
+
+* Add server icon ([88b8161](https://github.com/cozy/cozy-ui/commit/88b8161))
+
 # [113.1.0](https://github.com/cozy/cozy-ui/compare/v113.0.0...v113.1.0) (2024-11-07)
 
 
