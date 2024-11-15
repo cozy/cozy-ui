@@ -14,12 +14,14 @@ const { variant } = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
 const [isLoading, setLoading] = React.useState(false)
 const [isError, setIsError] = React.useState(false)
+const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
 
 ;
 
 <>
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
-  <Button className="u-mb-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
+  <Button className="u-mb-1 u-mr-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
+  <Button className="u-mb-1" label="Hide shortcut badge" onClick={() => setShortcutBadgeHide(!isShortcutBadgeHide)} />
 
   <Grid container spacing={1} style={{ background: variant === 'inverted' ? `center / cover no-repeat url(${cloudWallpaper})` : 'white' }}
   >
@@ -39,7 +41,7 @@ const [isError, setIsError] = React.useState(false)
       <SquareAppIcon app="testapp" name="No Account long name very very very very long" variant="ghost" />
     </Grid>
     <Grid item>
-      <SquareAppIcon name="Shortcut" variant="shortcut" />
+      <SquareAppIcon name="Shortcut" variant="shortcut" hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
       <SquareAppIcon IconContent={<Icon icon={CozyIcon} size="48" />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
@@ -58,7 +60,7 @@ const [isError, setIsError] = React.useState(false)
               width={32}
               height={32}
               alt={"Shortcut"}
-            />}/>
+            />} hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size="48" />} />
@@ -103,40 +105,78 @@ const { variant } = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
 const [isLoading, setLoading] = React.useState(false)
 const [isError, setIsError] = React.useState(false)
+const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
 
 ;
 
 <>
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
-  <Button className="u-mb-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
+  <Button className="u-mb-1 u-mr-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
+    <Button className="u-mb-1" label="Hide shortcut badge" onClick={() => setShortcutBadgeHide(!isShortcutBadgeHide)} />
 
   <Grid container spacing={4}>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Weather Wiz" description="Get real-time weather updates and forecasts" />
+      <SquareAppIcon
+        display="detailed"
+        name="Weather Wiz"
+        description="Get real-time weather updates and forecasts" />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Meal Planner" description="Plan your meals with nutrition tracking" variant="maintenance" />
+      <SquareAppIcon
+        display="detailed"
+        name="Meal Planner"
+        description="Plan your meals with nutrition tracking"
+        variant="maintenance" />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Travel Tracker" description="Explore and document your travel adventures" variant="error" />
+      <SquareAppIcon
+        display="detailed"
+        name="Travel Tracker"
+        description="Explore and document your travel adventures"
+        variant="error" />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Fitness Friend" variant="add" />
+      <SquareAppIcon
+        display="detailed"
+        name="Fitness Friend"
+        variant="add" />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Mindful Moments" description="Guided meditations for daily mindfulness" variant="ghost" />
+      <SquareAppIcon
+        display="detailed"
+        name="Mindful Moments"
+        description="Guided meditations for daily mindfulness"
+        variant="ghost" />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Study Space" description="Organize your study schedule and resources" variant="shortcut" />
+      <SquareAppIcon
+        display="detailed"
+        name="Study Space"
+        description="Organize your study schedule and resources"
+        variant="shortcut"
+        hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Quick Notes" IconContent={<Icon icon={CozyIcon} size="48" />} variant={isLoading ? 'loading' : 'default'} />
+      <SquareAppIcon
+        display="detailed"
+        name="Quick Notes"
+        IconContent={<Icon icon={CozyIcon} size="48" />}
+        variant={isLoading ? 'loading' : 'default'} />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Daily Budget" description="Manage your daily expenses and budgets" IconContent={<Icon icon={CozyIcon} size="48" />} variant={isError ? 'error' : 'loading'} />
+      <SquareAppIcon
+        display="detailed"
+        name="Daily Budget"
+        description="Manage your daily expenses and budgets"
+        IconContent={<Icon icon={CozyIcon} size="48" />}
+        variant={isError ? 'error' : 'loading'} />
     </Grid>
     <Grid item xs={4}>
-      <SquareAppIcon display="detailed" name="Event Planner" description="Plan and schedule your events effectively" IconContent={<Icon icon={CozyIcon} size="48" />} />
+      <SquareAppIcon
+        display="detailed"
+        name="Event Planner"
+        description="Plan and schedule your events effectively"
+        IconContent={<Icon icon={CozyIcon} size="48" />} />
     </Grid>
   </Grid>
 </>
