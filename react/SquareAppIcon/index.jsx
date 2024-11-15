@@ -100,6 +100,7 @@ export const SquareAppIcon = ({
   variant,
   IconContent,
   description,
+  hideShortcutBadge = false,
   ...appIconProps
 }) => {
   const { variant: themeVariant } = useCozyTheme()
@@ -139,11 +140,13 @@ export const SquareAppIcon = ({
       <CozyTheme variant={squareTheme}>
         <InfosBadge
           badgeContent={
-            variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
+            variant === 'shortcut' && !hideShortcutBadge ? (
+              <Icon size="10" icon={iconOut} />
+            ) : null
           }
           className={cx({ ['u-mr-1']: display === 'detailed' })}
           overlap="rectangular"
-          invisible={variant !== 'shortcut'}
+          invisible={variant !== 'shortcut' || hideShortcutBadge}
         >
           <SquareAppIconSpinner
             variant={variant}
