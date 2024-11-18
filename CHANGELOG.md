@@ -1,3 +1,10 @@
+# [113.3.0](https://github.com/cozy/cozy-ui/compare/v113.2.0...v113.3.0) (2024-11-18)
+
+
+### Features
+
+* **SquareAppIcon:** Hide shortcut badges for a more app like feel ([49d8438](https://github.com/cozy/cozy-ui/commit/49d8438))
+
 # [113.2.0](https://github.com/cozy/cozy-ui/compare/v113.1.0...v113.2.0) (2024-11-14)
 
 
