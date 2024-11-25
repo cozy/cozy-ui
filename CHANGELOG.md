@@ -1,3 +1,11 @@
+# [113.4.0](https://github.com/cozy/cozy-ui/compare/v113.3.0...v113.4.0) (2024-11-25)
+
+
+### Features
+
+* **Actions:** Add viewInDrive ([36bd091](https://github.com/cozy/cozy-ui/commit/36bd091))
+* **Icon:** Add folderOpen ([6d72a55](https://github.com/cozy/cozy-ui/commit/6d72a55))
+
 # [113.3.0](https://github.com/cozy/cozy-ui/compare/v113.2.0...v113.3.0) (2024-11-18)
 
 
