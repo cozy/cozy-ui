@@ -6,5 +6,11 @@
   "smsTo": "Send a message",
   "print": "Print",
   "others": "Others",
+  "editAttribute": "Edit attribute",
+  "copyToClipboard": {
+    "copy": "Copy",
+    "success": "Copied to clipboard",
+    "error": "Cannot copy to clipboard"
+  },
   "call": "Call"
 }
