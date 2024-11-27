@@ -6,5 +6,11 @@
   "smsTo": "Envoyer un message",
   "print": "Imprimer",
   "others": "Autres",
+  "editAttribute": "Editer l'attribut",
+  "copyToClipboard": {
+    "copy": "Copier",
+    "success": "Copié dans le presse-papier",
+    "error": "Impossible de copier dans le presse-papier"
+  },
   "call": "Appeler"
 }
