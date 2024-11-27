@@ -1,3 +1,10 @@
+# [113.5.0](https://github.com/cozy/cozy-ui/compare/v113.4.0...v113.5.0) (2024-11-27)
+
+
+### Features
+
+* **Icons:** Add CloudPlusOutlined icon ([e66cb72](https://github.com/cozy/cozy-ui/commit/e66cb72))
+
 # [113.4.0](https://github.com/cozy/cozy-ui/compare/v113.3.0...v113.4.0) (2024-11-25)
 
 
