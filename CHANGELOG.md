@@ -1,3 +1,10 @@
+# [113.6.0](https://github.com/cozy/cozy-ui/compare/v113.5.0...v113.6.0) (2024-11-27)
+
+
+### Features
+
+* **Icon:** Add Text ([fc7ddcb](https://github.com/cozy/cozy-ui/commit/fc7ddcb))
+
 # [113.5.0](https://github.com/cozy/cozy-ui/compare/v113.4.0...v113.5.0) (2024-11-27)
 
 
