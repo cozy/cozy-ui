@@ -1,3 +1,10 @@
+# [113.7.0](https://github.com/cozy/cozy-ui/compare/v113.6.0...v113.7.0) (2024-11-27)
+
+
+### Features
+
+* **Actions:** Add copyToClipboard and editAttribute ([a7e91a6](https://github.com/cozy/cozy-ui/commit/a7e91a6))
+
 # [113.6.0](https://github.com/cozy/cozy-ui/compare/v113.5.0...v113.6.0) (2024-11-27)
 
 
