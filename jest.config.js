@@ -21,6 +21,5 @@ module.exports = {
   globals: {
     __ALLOW_HTTP__: false,
     cozy: {}
-  },
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  }
 }
