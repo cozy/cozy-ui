@@ -211,6 +211,6 @@ export const getFlagshipCssVar = position =>
  * @returns {array} Array of Mui shadows
  */
 export const makeShadows = (type, variant) =>
-  [...Array(25)].map((_, index) =>
+  [...Array(26)].map((_, index) =>
     getCssVariableValue(`shadow${index}`, type, variant)
   )
