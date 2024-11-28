@@ -55,7 +55,7 @@
     "travis-deploy-once": "travis-deploy-once",
     "start:css": "yarn build:css --watch",
     "prestart:doc": "yarn sprite",
-    "start:doc": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
+    "start:doc": "NODE_OPTIONS=--openssl-legacy-provider env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
     "start:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
     "start": "yarn build --watch",
     "removeEmptyCss": "node scripts/removeEmptyCss.js",
