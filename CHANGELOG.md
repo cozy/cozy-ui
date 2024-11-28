@@ -1,3 +1,10 @@
+## [113.7.1](https://github.com/cozy/cozy-ui/compare/v113.7.0...v113.7.1) (2024-11-28)
+
+
+### Bug Fixes
+
+* **Theme:** Shadow 25 wasn't in Mui theme ([cc5486e](https://github.com/cozy/cozy-ui/commit/cc5486e))
+
 # [113.7.0](https://github.com/cozy/cozy-ui/compare/v113.6.0...v113.7.0) (2024-11-27)
 
 
