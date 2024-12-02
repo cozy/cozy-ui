@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import { flatten, merge } from 'lodash'
 import React from 'react'
 
@@ -39,13 +39,18 @@ describe('Figure', () => {
       return merge.apply(null, [{}, ...attrs])
     })
 
+  // We check for different king of amounts if
+  // - its red if it is negative if coloredNegative is set
+  // - its green if it is positive if coloredPositive is set
+  // - its yellow if it is above the warning limit if coloredWarning is set
+
   for (let amount of amounts) {
     for (let attrs of combinations) {
       it(`should render correctly ${amount} ${formatAttrs(attrs)}`, () => {
-        const el = shallow(
+        const { container } = render(
           <Figure warningLimit={110} total={amount} {...attrs} />
-        ).getElement()
-        expect(el).toMatchSnapshot()
+        )
+        expect(container).toMatchSnapshot()
       })
     }
   }
