@@ -1,3 +1,11 @@
+# [113.8.0](https://github.com/cozy/cozy-ui/compare/v113.7.1...v113.8.0) (2024-12-04)
+
+
+### Features
+
+* Add QualificationIconStack component ([21b48f3](https://github.com/cozy/cozy-ui/commit/21b48f3))
+* **Icon:** Add number ([5fd2bd7](https://github.com/cozy/cozy-ui/commit/5fd2bd7))
+
 ## [113.7.1](https://github.com/cozy/cozy-ui/compare/v113.7.0...v113.7.1) (2024-11-28)
 
 
