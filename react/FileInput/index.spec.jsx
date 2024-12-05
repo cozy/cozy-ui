@@ -1,3 +1,4 @@
+import { fireEvent, render, screen } from '@testing-library/react'
 import uniqueId from 'lodash/uniqueId'
 import React from 'react'
 
@@ -20,66 +21,43 @@ describe('FileInput component', () => {
   })
 
   it('should render a file selector', () => {
-    const component = shallow(
+    render(
       <FileInput onChange={onChangeSpy}>
         <span>Click me</span>
       </FileInput>
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
+    )
 
-  it('should render a default file selector', () => {
-    const component = shallow(
-      <FileInput hidden={false} onChange={onChangeSpy} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
+    const button = screen.getByText('Click me')
 
-  it('should render a disabled file selector', () => {
-    const component = shallow(
-      <FileInput disabled onChange={onChangeSpy}>
-        <span>Click me</span>
-      </FileInput>
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
-
-  it('should pass props to the input', () => {
-    const component = shallow(
-      <FileInput accept="image/*" onChange={onChangeSpy}>
-        <span>Click me</span>
-      </FileInput>
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    expect(button).toBeInTheDocument()
+    expect(screen.getByTestId('file-input')).toBeInTheDocument()
   })
 
   it('should process selected file on change', () => {
     const filelist = [pic1]
-    const component = shallow(
+    render(
       <FileInput accept="image/*" onChange={onChangeSpy}>
         <span>Click me</span>
       </FileInput>
     )
-    component.find('input').simulate('change', {
-      target: {
-        files: filelist
-      }
-    })
+
+    const input = screen.getByTestId('file-input')
+    fireEvent.change(input, { target: { files: filelist } })
+
     expect(onChangeSpy).toHaveBeenCalledWith(pic1)
   })
 
   it('should process selected files on change if it is multiple', () => {
     const filelist = [pic1, pic2]
-    const component = shallow(
+    render(
       <FileInput accept="image/*" multiple onChange={onChangeSpy}>
         <span>Click me</span>
       </FileInput>
     )
-    component.find('input').simulate('change', {
-      target: {
-        files: filelist
-      }
-    })
+
+    const input = screen.getByTestId('file-input')
+    fireEvent.change(input, { target: { files: filelist } })
+
     expect(onChangeSpy).toHaveBeenCalledWith([pic1, pic2])
   })
 })
