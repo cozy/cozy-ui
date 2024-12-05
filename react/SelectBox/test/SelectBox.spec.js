@@ -1,5 +1,6 @@
 'use strict'
 /* eslint-env jest */
+import { render, screen } from '@testing-library/react'
 import React from 'react'
 
 import { isIOSApp } from 'cozy-device-helper'
@@ -81,13 +82,19 @@ describe('SelectBox', () => {
       isIOSApp.mockReturnValue(false)
     })
     it('should not add needclicks if not on iOS', () => {
-      const wrapper = shallow(<SelectBox breakpoints={{}} />)
-      expect(wrapper.prop('classNamePrefix')).toEqual('')
+      render(<SelectBox breakpoints={{}} />)
+
+      const select = screen.getByText('Select...')
+
+      expect(select.className).not.toContain('needsclick')
     })
     it('shoudl add needclick if iOS', () => {
       isIOSApp.mockReturnValue(true)
-      const wrapper = shallow(<SelectBox breakpoints={{}} />)
-      expect(wrapper.prop('classNamePrefix')).toContain('needsclick')
+      render(<SelectBox breakpoints={{}} />)
+
+      const select = screen.getByText('Select...')
+
+      expect(select.className).toContain('needsclick')
     })
   })
 })
