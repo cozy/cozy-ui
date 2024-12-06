@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 
@@ -34,23 +34,31 @@ I18nHelloWorldOldAPI.contextTypes = {
 
 describe('new context api', () => {
   it('should provide t and f and lang through useI18n hook', () => {
-    const root = mount(
+    render(
       <I18n lang="en" dictRequire={() => locales}>
         <I18nHelloWorldHook />
       </I18n>
     )
-    expect(root.html()).toBe('<div>Hello World !<br>6 Jan<br>en</div>')
+    expect(
+      screen.getByText('Hello World !', { exact: false })
+    ).toBeInTheDocument()
+    expect(screen.getByText('6 Jan', { exact: false })).toBeInTheDocument()
+    expect(screen.getByText('en', { exact: false })).toBeInTheDocument()
   })
 })
 
 describe('old context api', () => {
   it('should provide t and f and lang through old context API', () => {
-    const root = mount(
+    render(
       <I18n lang="en" dictRequire={() => locales}>
         <I18nHelloWorldOldAPI />
       </I18n>
     )
-    expect(root.html()).toBe('<div>Hello World !<br>6 Jan<br>en</div>')
+    expect(
+      screen.getByText('Hello World !', { exact: false })
+    ).toBeInTheDocument()
+    expect(screen.getByText('6 Jan', { exact: false })).toBeInTheDocument()
+    expect(screen.getByText('en', { exact: false })).toBeInTheDocument()
   })
 })
 
