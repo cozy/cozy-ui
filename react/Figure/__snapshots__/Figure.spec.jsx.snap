@@ -1,385 +1,449 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--warning___1Pn6n"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--warning___1Pn6n"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--negative___3ACbA"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--negative___3ACbA"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--warning___1Pn6n"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--warning___1Pn6n"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--warning___1Pn6n"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--warning___1Pn6n"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--negative___3ACbA"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--negative___3ACbA"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--warning___1Pn6n"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--warning___1Pn6n"
   >
-    -100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      -100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    4,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      4,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    100,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      100,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className=""
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class=""
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
-<div
-  className="Figure__Figure-content--positive___1qyd8"
->
-  <span
-    className="Figure__Figure-total___MZ7Xt"
+<div>
+  <div
+    class="Figure__Figure-content--positive___1qyd8"
   >
-    500,00
-  </span>
+    <span
+      class="Figure__Figure-total___MZ7Xt"
+    >
+      500,00
+    </span>
+  </div>
 </div>
 `;

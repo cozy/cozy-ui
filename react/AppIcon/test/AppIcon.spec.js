@@ -1,10 +1,17 @@
 'use strict'
 /* eslint-env jest */
 
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
 import React from 'react'
 
 import { AppIcon } from '..'
+import Icon from '../../Icon'
+
+jest.mock('../../Icon', () => ({
+  ...jest.requireActual('../../Icon'),
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="icon-component"></div>)
+}))
 
 describe('AppIcon component', () => {
   const app = {}
@@ -20,6 +27,7 @@ describe('AppIcon component', () => {
 
   beforeEach(() => {
     jest.resetModules()
+    jest.clearAllMocks()
 
     successFetchIcon = jest
       .fn()
@@ -33,17 +41,18 @@ describe('AppIcon component', () => {
   })
 
   it(`renders as loading`, () => {
-    const wrapper = shallow(
+    render(
       <AppIcon app={app} fetchIcon={successFetchIcon} client={mockClient} />
     )
 
-    const component = wrapper.getElement()
-    expect(component).toMatchSnapshot()
+    const loadingElement = screen.getByRole('progressbar')
+
+    expect(loadingElement).toBeInTheDocument()
     expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
     expect(console.error).not.toHaveBeenCalled()
   })
 
-  it(`should provide appData to getIconUrl in order to get icon simply, when oauth not needed`, async done => {
+  it(`should provide appData to getIconUrl in order to get icon simply, when oauth not needed`, async () => {
     const app = {
       name: 'app name',
       slug: 'slug',
@@ -63,92 +72,71 @@ describe('AppIcon component', () => {
         getIconURL: getIconURLMock
       })
     }
-    const wrapper = shallow(
-      <AppIcon
-        app={app}
-        client={mockClient}
-        onReady={() => {
-          wrapper.update()
-          expect(getIconURLMock).toHaveBeenNthCalledWith(1, {
-            appData: app,
-            priority: 'stack',
-            slug: 'slug',
-            type: 'app'
-          })
-          done()
-        }}
-      />
+
+    render(<AppIcon app={app} client={mockClient} />)
+
+    expect(getIconURLMock).toHaveBeenNthCalledWith(1, {
+      appData: app,
+      priority: 'stack',
+      slug: 'slug',
+      type: 'app'
+    })
+  })
+
+  it(`renders correctly`, async () => {
+    render(
+      <AppIcon app={app} fetchIcon={successFetchIcon} client={mockClient} />
+    )
+
+    const iconElement = await screen.findByRole('img')
+    expect(iconElement).toBeInTheDocument()
+
+    expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+    expect(console.error).not.toHaveBeenCalled()
+  })
+
+  it(`renders default when fetch error occurs`, async () => {
+    render(
+      <AppIcon app={app} fetchIcon={failureFetchIcon} client={mockClient} />
+    )
+
+    const iconFallbackElement = await screen.findByTestId('icon-component')
+    expect(iconFallbackElement).toBeInTheDocument()
+
+    expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+    expect(console.error).not.toHaveBeenCalled()
+
+    // Check that the Icon component has been called with a function (CubeIcon function is the default icon)
+    expect(Icon).toHaveBeenCalledWith(
+      expect.objectContaining({
+        icon: expect.any(Function)
+      }),
+      {}
     )
   })
 
-  it(`renders correctly`, async done => {
-    const wrapper = shallow(
-      <AppIcon
-        app={app}
-        fetchIcon={successFetchIcon}
-        client={mockClient}
-        onReady={() => {
-          wrapper.update()
-          const component = wrapper.getElement()
-          expect(component).toMatchSnapshot()
-          expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).not.toHaveBeenCalled()
-          done()
-        }}
-      />
-    )
-  })
-
-  it(`renders default when fetch error occurs`, async done => {
-    const wrapper = shallow(
-      <AppIcon
-        app={app}
-        fetchIcon={failureFetchIcon}
-        client={mockClient}
-        onReady={() => {
-          wrapper.update()
-          const component = wrapper.getElement()
-          expect(component).toMatchSnapshot()
-          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).not.toHaveBeenCalled()
-          done()
-        }}
-      />
-    )
-  })
-
-  it(`renders provided fallbackIcon when fetch error occurs`, async done => {
-    const wrapper = shallow(
+  it(`renders provided fallbackIcon when fetch error occurs`, async () => {
+    render(
       <AppIcon
         app={app}
         fetchIcon={failureFetchIcon}
         client={mockClient}
-        onReady={() => {
-          wrapper.update()
-          const component = wrapper.getElement()
-          expect(component).toMatchSnapshot()
-          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).not.toHaveBeenCalled()
-          done()
-        }}
         fallbackIcon="warning"
       />
     )
-  })
 
-  it(`renders provided fallbackIcon on img error`, async done => {
-    const wrapper = shallow(
-      <AppIcon
-        fetchIcon={() => 'notagoodurl'}
-        onReady={() => {
-          wrapper.simulate('error')
-          wrapper.update()
-          const component = wrapper.getElement()
-          expect(component).toMatchSnapshot()
-          done()
-        }}
-        fallbackIcon="warning"
-      />
+    const iconFallbackElement = await screen.findByTestId('icon-component')
+    expect(iconFallbackElement).toBeInTheDocument()
+
+    expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+    expect(console.error).not.toHaveBeenCalled()
+
+    // Check that the Icon component has been called with "warning"
+    expect(Icon).toHaveBeenCalledWith(
+      expect.objectContaining({
+        icon: 'warning'
+      }),
+      {}
     )
   })
 })

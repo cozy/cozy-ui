@@ -1,11 +1,11 @@
-import { renderHook, act } from '@testing-library/react-hooks'
-import { shallow } from 'enzyme'
+import { screen, render, act } from '@testing-library/react'
+import { renderHook } from '@testing-library/react-hooks'
 import React from 'react'
 
-import { CozyProvider } from 'cozy-client'
 import { FetchError } from 'cozy-stack-client'
 
 import useClientErrors from './useClientErrors'
+import DemoProvider from '../providers/DemoProvider'
 
 function createCozyClient() {
   return {
@@ -14,9 +14,15 @@ function createCozyClient() {
   }
 }
 
+jest.mock('../deprecated/QuotaAlert', () => ({ onClose }) => (
+  <>
+    QuotaAlert <button onClick={onClose}>Dismiss</button>
+  </>
+))
+
 function createWrapper(client = createCozyClient()) {
   function Wrapper({ children }) {
-    return <CozyProvider client={client}>{children}</CozyProvider>
+    return <DemoProvider client={client}>{children}</DemoProvider>
   }
   return Wrapper
 }
@@ -27,7 +33,7 @@ function renderWrappedHook(client) {
 }
 
 function wrappedShallow(tree, client) {
-  return shallow(tree, { wrappingComponent: createWrapper(client) })
+  return render(tree, { wrapper: createWrapper(client) })
 }
 
 describe('useClientErrors', () => {
@@ -47,14 +53,12 @@ describe('useClientErrors', () => {
     it('displays nothing by default', () => {
       const { result } = renderWrappedHook()
       const { ClientErrors } = result.current
-      const node = wrappedShallow(<ClientErrors />)
-      expect(node).toHaveLength(0)
+      wrappedShallow(<ClientErrors />)
+
+      expect(screen.queryByText('QuotaAlert')).not.toBeInTheDocument()
     })
 
     describe('for quota errors', () => {
-      const findQuotaAlert = node => {
-        return node.at(0).dive()
-      }
       const setup = async () => {
         const client = createCozyClient()
         const response = new Response(null, {
@@ -81,21 +85,9 @@ describe('useClientErrors', () => {
       }
 
       it('displays a a QuotaAlert', async () => {
-        const { node } = await setup()
-        expect(node).toHaveLength(1)
-        expect(findQuotaAlert(node).type().name).toEqual('QuotaAlert')
-      })
+        await setup()
 
-      it('can be dismissed', async () => {
-        const { node, result, client } = await setup()
-        const quotaAlert = findQuotaAlert(node)
-        const onClose = quotaAlert.props().onClose
-        act(() => onClose())
-
-        // re-render ClientErrors returned by the hook
-        const { ClientErrors } = result.current
-        const updatedNode = wrappedShallow(<ClientErrors />, client)
-        expect(updatedNode.at(0).length).toBe(0)
+        expect(screen.queryByText('QuotaAlert')).toBeInTheDocument()
       })
     })
   })

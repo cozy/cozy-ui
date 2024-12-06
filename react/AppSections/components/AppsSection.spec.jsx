@@ -2,13 +2,12 @@
 
 /* eslint-env jest */
 
-import { mount } from 'enzyme'
+import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
 
 import { AppsSection } from './AppsSection'
-import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
 import { I18nContext } from '../../jestLib/I18n'
 import mockApps from '../../mocks/apps'
 import { BreakpointsProvider } from '../../providers/Breakpoints'
@@ -19,10 +18,9 @@ const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t
 
 describe('AppsSection component', () => {
-  let component
   const client = {}
   const setup = ({ onAppClick }) => {
-    component = mount(
+    render(
       <CozyProvider client={client}>
         <BreakpointsProvider>
           <I18n lang="en" dictRequire={() => en}>
@@ -36,31 +34,24 @@ describe('AppsSection component', () => {
           </I18n>
         </BreakpointsProvider>
       </CozyProvider>
-    ).find(AppsSection)
+    )
   }
 
   it('should be rendered correctly with apps list, subtitle', () => {
     const mockOnAppClick = jest.fn()
     setup({ onAppClick: mockOnAppClick })
-    expect(
-      component.find(Tile).map(x => {
-        const developer = x.find(TileSubtitle)
-        const status = x.find(TileFooter)
-        return {
-          title: x.find(TileTitle).text(),
-          developer: developer.length ? developer.text() : null,
-          status: status.length ? status.text() : null
-        }
-      })
-    ).toMatchSnapshot()
+
+    mockApps.forEach(app => {
+      expect(screen.getByText(app.name, { exact: false })).toBeInTheDocument()
+    })
   })
 
   it('should run provided onAppClick on AppTile click event', () => {
     const mockOnAppClick = jest.fn()
     setup({ onAppClick: mockOnAppClick })
-    expect(component.find(Tile).length).toBe(mockApps.length)
-    const appItem = component.find(Tile).at(0)
-    appItem.simulate('click')
+
+    const bouilligue = screen.getByText('Bouilligue', { exact: false })
+    fireEvent.click(bouilligue)
     expect(mockOnAppClick.mock.calls.length).toBe(1)
     expect(mockOnAppClick.mock.calls[0][0]).toBe('konnector-bouilligue')
   })

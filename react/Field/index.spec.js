@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import React from 'react'
 
 import Field from '.'
@@ -18,19 +18,42 @@ describe('Field component', () => {
 
   it('should expect object type value for type=select', () => {
     expect(() =>
-      shallow(<Field label="mock field" type="select" value={{}} />)
+      render(
+        <Field
+          label="mock field"
+          type="select"
+          value={{}}
+          onChange={() => {}}
+        />
+      )
     ).not.toThrowError()
     expect(() =>
-      shallow(<Field label="mock field" type="select" value="wrong" />)
+      render(
+        <Field
+          label="mock field"
+          type="select"
+          value="wrong"
+          onChange={() => {}}
+        />
+      )
     ).toThrowError()
   })
 
   it('should expect string type value for all types but select', () => {
     expect(() =>
-      shallow(<Field label="mock field" type="text" value="good" />)
+      render(
+        <Field
+          label="mock field"
+          type="text"
+          value="good"
+          onChange={() => {}}
+        />
+      )
     ).not.toThrowError()
     expect(() =>
-      shallow(<Field label="mock field" type="text" value={{}} />)
+      render(
+        <Field label="mock field" type="text" value={{}} onChange={() => {}} />
+      )
     ).toThrowError()
   })
 })

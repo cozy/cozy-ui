@@ -47,6 +47,7 @@ const FileInput = ({
             onChange(Array.from(e.target.files)[0])
           }
         }}
+        data-testid="file-input"
         {...inputProps}
       />
     </label>

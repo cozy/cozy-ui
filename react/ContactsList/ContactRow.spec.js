@@ -1,6 +1,5 @@
-import { mount } from 'enzyme'
+import { render, screen } from '@testing-library/react'
 import React from 'react'
-import renderer from 'react-test-renderer'
 
 import logger from 'cozy-logger'
 
@@ -16,20 +15,22 @@ const makeContact = attrs => ({
 })
 
 const setup = ({ contact }) => {
-  const root = mount(
+  render(
     <BreakpointsProvider>
       <ContactRow contact={contact} />
     </BreakpointsProvider>
   )
-  return { root }
 }
 
 describe('ContactRow', () => {
   it('should accept the strict minimum', () => {
     const contact = makeContact({ email: [{ address: 'johndoe@localhost' }] })
-    const { root } = setup({ contact })
-    const contactrowemail = root.find('ContactEmail')
-    expect(contactrowemail.text()).toBe(contact.email[0].address)
+    setup({ contact })
+
+    // With a minimal contact, email is displayed twice
+    // - one as display name
+    // - one as email
+    expect(screen.getAllByText('johndoe@localhost').length).toBe(2)
   })
 
   it('should display data', () => {
@@ -39,62 +40,36 @@ describe('ContactRow', () => {
       email: [{ address: 'johndoe@localhost' }],
       cozy: [{ url: 'http://johndoe.mycozy.cloud' }]
     })
-    const { root } = setup({ contact })
-    const contactrowname = root.find('ContactName')
-    expect(contactrowname).toBeDefined()
-    expect(contactrowname.text()).toEqual(
-      expect.stringContaining(contact.name.givenName)
-    )
-    expect(contactrowname.text()).toEqual(
-      expect.stringContaining(contact.name.familyName)
-    )
-    const contactrowphone = root.find('ContactPhone')
-    expect(contactrowphone).toBeDefined()
-    expect(contactrowphone.text()).toBe(contact.phone[0].number)
+    setup({ contact })
 
-    const contactrowcozyurl = root.find('ContactCozy')
-    expect(contactrowcozyurl).toBeDefined()
-    expect(contactrowcozyurl.text()).toBe(contact.cozy[0].url)
+    // We need to check first and last name separatly because they are in two different span
+    expect(screen.getByText('John')).toBeInTheDocument()
+    expect(screen.getByText('Doe')).toBeInTheDocument()
+    expect(screen.getByText('0123456789')).toBeInTheDocument()
+    expect(screen.getByText('johndoe@localhost')).toBeInTheDocument()
+    expect(screen.getByText('http://johndoe.mycozy.cloud')).toBeInTheDocument()
   })
 
   it('should display email for missing information', () => {
     const contact = makeContact({
       email: [{ address: 'johndoe@localhost' }]
     })
-    const { root } = setup({ contact })
-    const contactrowname = root.find('ContactName')
-    expect(contactrowname).toBeDefined()
-    expect(contactrowname.text().trim()).toBe('johndoe@localhost')
-    const contactrowphone = root.find('ContactPhone')
-    expect(contactrowphone).toBeDefined()
-    expect(contactrowphone.text().trim()).toBe('—')
-    const contactrowcozyurl = root.find('ContactCozy')
-    expect(contactrowcozyurl).toBeDefined()
-    expect(contactrowcozyurl.text().trim()).toBe('—')
+    setup({ contact })
+
+    const emailColumn = screen.getByTestId('ContactEmail')
+    expect(emailColumn.textContent).toBe('johndoe@localhost')
+
+    const phoneColumn = screen.getByTestId('ContactPhone')
+    expect(phoneColumn.textContent).toBe('—')
+
+    const cozyColumn = screen.getByTestId('ContactCozy')
+    expect(cozyColumn.textContent).toBe('—')
   })
 
   it('should accept empty array', () => {
     const contact = makeContact({ email: [] })
-    const { root } = setup({ contact })
-    const contactrowemail = root.find('ContactEmail')
-    expect(contactrowemail).toBeDefined()
-    expect(contactrowemail.text()).toBe('—')
-  })
-
-  it('should match the contact snapshot', () => {
-    const contact = makeContact({
-      name: { familyName: 'Doe', givenName: 'John' },
-      phone: [{ number: '0123456789' }],
-      email: [{ address: 'johndoe@localhost' }],
-      cozy: [{ url: 'http://johndoe.mycozy.cloud' }]
-    })
-    const tree = renderer
-      .create(
-        <BreakpointsProvider>
-          <ContactRow contact={contact} />
-        </BreakpointsProvider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+    setup({ contact })
+    const emailColumn = screen.getByTestId('ContactEmail')
+    expect(emailColumn.textContent).toBe('—')
   })
 })

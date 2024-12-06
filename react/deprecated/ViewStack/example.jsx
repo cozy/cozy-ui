@@ -17,7 +17,7 @@ const Slide = ({ number }) => {
   const handleClickPop = async () => {
     await stackPop()
 
-    // No alerts during enzyme tests
+    // No alerts during tests
     if (number === 2 && !global.mount) {
       alert('You went back to the first slide')
     }

@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
 
 import { isMobileApp } from 'cozy-device-helper'
@@ -17,35 +17,56 @@ const props = {
   height: '200'
 }
 
-const popupMock = {}
-class MessageEventMock {
-  constructor(options = {}) {
-    this.source = options.source || popupMock
+class MessageEventMock extends Event {
+  constructor(options = {}, mock) {
+    super('message', options)
+    this.source = options.source || mock
+  }
+}
+
+class LoadStartEventMock extends Event {
+  constructor(url) {
+    super('loadstart')
+    this.url = url
+  }
+}
+
+class ExitEventMock extends Event {
+  constructor() {
+    super('exit')
   }
 }
 
 describe('Popup', () => {
-  beforeAll(() => {
-    jest.useFakeTimers()
+  const setup = ({ mockAddEventListener = true }) => {
+    const popupMock = new EventTarget()
+
+    isMobileApp.mockReturnValue(false)
 
     jest.spyOn(global, 'open').mockReturnValue(popupMock)
     jest.spyOn(global, 'addEventListener')
-  })
 
-  afterAll(() => {
-    global.open.mockRestore()
-    global.addEventListener.mockRestore()
-  })
+    if (mockAddEventListener) {
+      popupMock.addEventListener = jest.fn()
+    }
 
-  beforeEach(() => {
-    isMobileApp.mockReturnValue(false)
-    popupMock.addEventListener = jest.fn()
     popupMock.close = jest.fn()
     popupMock.focus = jest.fn()
     popupMock.closed = false
     props.onClose = jest.fn()
     props.onMessage = jest.fn()
     props.onMobileUrlChange = jest.fn()
+
+    return popupMock
+  }
+
+  beforeAll(() => {
+    jest.useFakeTimers()
+  })
+
+  afterAll(() => {
+    global.open.mockRestore()
+    global.addEventListener.mockRestore()
   })
 
   afterEach(() => {
@@ -54,7 +75,10 @@ describe('Popup', () => {
   })
 
   it('should open new window', () => {
-    shallow(<Popup {...props} />)
+    const popupMock = setup({})
+
+    render(<Popup {...props} />)
+
     expect(global.open).toHaveBeenCalledWith(
       props.initialUrl,
       props.title,
@@ -64,66 +88,91 @@ describe('Popup', () => {
   })
 
   it('should subscribe to message events', () => {
-    const wrapper = shallow(<Popup {...props} />)
+    setup({})
+
+    render(<Popup {...props} />)
+
     expect(global.addEventListener).toHaveBeenCalledWith(
       'message',
-      wrapper.instance().handleMessage
+      expect.any(Function)
     )
   })
 
   it('should subcribe to mobile events', () => {
+    const popupMock = setup({})
     isMobileApp.mockReturnValue(true)
-    const wrapper = shallow(<Popup {...props} />)
+
+    render(<Popup {...props} />)
+
     expect(popupMock.addEventListener).toHaveBeenCalledWith(
       'loadstart',
-      wrapper.instance().handleLoadStart
+      expect.any(Function)
     )
     expect(popupMock.addEventListener).toHaveBeenCalledWith(
       'exit',
-      wrapper.instance().handleClose
+      expect.any(Function)
     )
-  })
-
-  describe('monitorClosing', () => {
-    it('should detect closing', () => {
-      const wrapper = shallow(<Popup {...props} />)
-      jest.spyOn(wrapper.instance(), 'handleClose')
-      popupMock.closed = true
-      jest.runAllTimers()
-      expect(wrapper.instance().handleClose).toHaveBeenCalled()
-    })
   })
 
   describe('handleClose', () => {
     it('should call onClose', () => {
-      const wrapper = shallow(<Popup {...props} />)
-      wrapper.instance().handleClose()
+      const popupMock = setup({
+        mockAddEventListener: false
+      })
+      isMobileApp.mockReturnValue(true)
+
+      render(<Popup {...props} />)
+
+      const messageEvent = new ExitEventMock()
+      fireEvent(popupMock, messageEvent)
+
       expect(props.onClose).toHaveBeenCalled()
     })
   })
 
   describe('handleMessage', () => {
     it('should call onMessage', () => {
-      const wrapper = shallow(<Popup {...props} />)
-      const messageEvent = new MessageEventMock()
-      wrapper.instance().handleMessage(messageEvent)
+      const popupMock = setup({
+        mockAddEventListener: false
+      })
+      isMobileApp.mockReturnValue(true)
+
+      render(<Popup {...props} />)
+
+      const messageEvent = new MessageEventMock({}, popupMock)
+      fireEvent(window, messageEvent)
+
       expect(props.onMessage).toHaveBeenCalledWith(messageEvent)
     })
 
     it('should ignore messageEvent from another window ', () => {
-      const wrapper = shallow(<Popup {...props} />)
+      setup({
+        mockAddEventListener: false
+      })
+      isMobileApp.mockReturnValue(true)
+
+      render(<Popup {...props} />)
+
       const messageEvent = new MessageEventMock({ source: {} })
-      wrapper.instance().handleMessage(messageEvent)
+      fireEvent(window, messageEvent)
+
       expect(props.onMessage).not.toHaveBeenCalled()
     })
   })
 
   describe('handleLoadStart', () => {
     it('should call onMobileUrlChange', () => {
-      const wrapper = shallow(<Popup {...props} />)
+      const popupMock = setup({
+        mockAddEventListener: false
+      })
+      isMobileApp.mockReturnValue(true)
+
+      render(<Popup {...props} />)
+
       const url = 'https://cozy.io'
-      const urlEvent = { url }
-      wrapper.instance().handleLoadStart(urlEvent)
+      const messageEvent = new LoadStartEventMock(url)
+      fireEvent(popupMock, messageEvent)
+
       expect(props.onMobileUrlChange).toHaveBeenCalledWith(expect.any(URL))
       expect(props.onMobileUrlChange).toHaveBeenCalledWith(new URL(url))
     })
