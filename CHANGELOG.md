@@ -1,3 +1,10 @@
+# [113.9.0](https://github.com/cozy/cozy-ui/compare/v113.8.0...v113.9.0) (2024-12-10)
+
+
+### Features
+
+* **QualificationIconStack:** Add `theme` props ([61081a1](https://github.com/cozy/cozy-ui/commit/61081a1))
+
 # [113.8.0](https://github.com/cozy/cozy-ui/compare/v113.7.1...v113.8.0) (2024-12-04)
 
 
