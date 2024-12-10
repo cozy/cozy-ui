@@ -10,7 +10,9 @@ import BankCheckIcon from '../Icons/BankCheck'
 import BenefitIcon from '../Icons/Benefit'
 import BillIcon from '../Icons/Bill'
 import CarIcon from '../Icons/Car'
+import ChessIcon from '../Icons/Chess'
 import ChildIcon from '../Icons/Child'
+import DotsIcon from '../Icons/Dots'
 import EmailIcon from '../Icons/Email'
 import EuroIcon from '../Icons/Euro'
 import ExchangeIcon from '../Icons/Exchange'
@@ -51,13 +53,15 @@ function FileDuotoneWhite(props) {
   )
 }
 
-const qualificationIcon = {
+const IconByLabel = {
   'bank-check': BankCheckIcon,
   bank: BankIcon,
   benefit: BenefitIcon,
   bill: BillIcon,
   car: CarIcon,
+  chess: ChessIcon,
   child: ChildIcon,
+  dots: DotsIcon,
   email: EmailIcon,
   euro: EuroIcon,
   exchange: ExchangeIcon,
@@ -84,8 +88,25 @@ const qualificationIcon = {
   work: WorkIcon
 }
 
-const QualificationIconStack = ({ qualification, ...props }) => {
-  const QualificationIcon = qualificationIcon[getIconByLabel(qualification)]
+const themeIconByLabel = {
+  identity: 'people',
+  family: 'team',
+  work_study: 'work',
+  health: 'heart',
+  home: 'home',
+  transport: 'car',
+  activity: 'chess',
+  finance: 'bank',
+  invoice: 'bill',
+  others: 'dots'
+}
+
+const QualificationIconStack = ({ theme, qualification, ...props }) => {
+  const ForegroundIcon = qualification
+    ? IconByLabel[getIconByLabel(qualification)]
+    : theme
+    ? IconByLabel[themeIconByLabel[theme]]
+    : null
 
   return (
     <IconStack
@@ -96,16 +117,16 @@ const QualificationIconStack = ({ qualification, ...props }) => {
           <Icon icon={FileDuotoneIcon} color="#E049BF" size={32} />
         </>
       }
-      foregroundIcon={
-        <Icon icon={QualificationIcon} color="#E049BF" size={16} />
-      }
+      foregroundIcon={<Icon icon={ForegroundIcon} color="#E049BF" size={16} />}
     />
   )
 }
 
 QualificationIconStack.propTypes = {
   /** The name of the qualification (isp\_invoice, family\_record\_book, etc.) */
-  qualification: PropTypes.string.isRequired
+  qualification: PropTypes.string,
+  /** The name of the qualification theme (indentity, family, etc.) */
+  theme: PropTypes.string
 }
 
 export default QualificationIconStack
