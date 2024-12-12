@@ -1,3 +1,16 @@
+# [114.0.0](https://github.com/cozy/cozy-ui/compare/v113.9.0...v114.0.0) (2024-12-12)
+
+
+### Features
+
+* Add QualificationModal component ([e2ebcc0](https://github.com/cozy/cozy-ui/commit/e2ebcc0))
+* Upgrade packages ([4ca7867](https://github.com/cozy/cozy-ui/commit/4ca7867))
+
+
+### BREAKING CHANGES
+
+* You must have `cozy-client >= 51.6.0` and `cozy-intent >= 2.29.1`
+
 # [113.9.0](https://github.com/cozy/cozy-ui/compare/v113.8.0...v113.9.0) (2024-12-10)
 
 
