@@ -1,3 +1,10 @@
+## [114.0.1](https://github.com/cozy/cozy-ui/compare/v114.0.0...v114.0.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **Export:** Wasn't good for Alert and I18n ([4770b0a](https://github.com/cozy/cozy-ui/commit/4770b0a))
+
 # [114.0.0](https://github.com/cozy/cozy-ui/compare/v113.9.0...v114.0.0) (2024-12-12)
 
 
