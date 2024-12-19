@@ -1,3 +1,17 @@
+# [115.0.0](https://github.com/cozy/cozy-ui/compare/v114.0.1...v115.0.0) (2024-12-19)
+
+
+### Features
+
+* Upgrade date-fns to 2.30.0 ([a89c524](https://github.com/cozy/cozy-ui/commit/a89c524))
+
+
+### BREAKING CHANGES
+
+* The date formatting function (`f` from `useI18n`) changes,
+please refer to this doc.
+https://date-fns.org/v2.30.0/docs/format
+
 ## [114.0.1](https://github.com/cozy/cozy-ui/compare/v114.0.0...v114.0.1) (2024-12-16)
 
 
