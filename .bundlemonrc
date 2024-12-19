@@ -10,8 +10,7 @@
       "maxPercentIncrease": 10
     },
     {
-      "path": "transpiled/react/stylesheet.css",
-      "maxPercentIncrease": 10
+      "path": "transpiled/react/stylesheet.css"
     }
   ],
   "groups": [
