@@ -12,7 +12,7 @@ const SecondaryText = ({ secondary, file }) => {
   if (secondary) return secondary
 
   const date = file?.metadata?.datetime
-    ? f(file?.metadata?.datetime, 'DD/MM/YYYY')
+    ? f(file?.metadata?.datetime, 'dd/LL/yyyy')
     : null
 
   return (

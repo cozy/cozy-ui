@@ -26,7 +26,7 @@ const MonthButton = ({ monthNum, onClick, isSelected }) => {
       )}
       onClick={handleClick}
     >
-      {f(d, 'MMM')}
+      {f(d, 'LLL')}
     </button>
   )
 }
@@ -50,7 +50,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
 
   const handleClickMonth = month => {
     const d = new Date(year, month, 1)
-    onSelect(format(d, 'YYYY-MM-DD'))
+    onSelect(format(d, 'yyyy-LL-dd'))
   }
   return (
     <div>
@@ -93,7 +93,7 @@ const dateMonthProp = function (props, propName, componentName) {
         '` supplied to' +
         ' `' +
         componentName +
-        '`. Should be in the form YYYY-MM.'
+        '`. Should be in the form yyyy-LL.'
     )
   }
 }
