@@ -47,10 +47,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup_modules
       - uses: ./.github/actions/build_cache_read
-      - name: Tests
-        run: yarn test
       - name: BundleMon
         uses: lironer/bundlemon-action@v1
+      - name: Tests
+        run: yarn test
   argosDesktop:
     needs: [prepareArgos, build]
     runs-on: ubuntu-latest
