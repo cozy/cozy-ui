@@ -1,3 +1,10 @@
+## [115.0.2](https://github.com/cozy/cozy-ui/compare/v115.0.1...v115.0.2) (2024-12-20)
+
+
+### Bug Fixes
+
+* **initFormat:** Ensure do not crash if no date is passed ([07564e7](https://github.com/cozy/cozy-ui/commit/07564e7))
+
 ## [115.0.1](https://github.com/cozy/cozy-ui/compare/v115.0.0...v115.0.1) (2024-12-20)
 
 
