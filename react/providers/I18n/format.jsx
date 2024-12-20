@@ -53,7 +53,11 @@ export const initFormat =
     const locale = provideDateFnsLocale(userLang, defaultLang)
     const ensureDate = date && typeof date === 'string' ? new Date(date) : date
 
-    return format(ensureDate, formatStr, { locale, ...opts })
+    try {
+      return format(ensureDate, formatStr, { locale, ...opts })
+    } catch (error) {
+      console.error('Error in initFormat', error)
+    }
   }
 
 export const formatLocallyDistanceToNow = date => {
