@@ -10,6 +10,18 @@ describe('initFormat', () => {
   it('should not throw if a date-fns locale can not be found', () => {
     expect(() => initFormat('unknown-lang', 'unknown-default')).not.toThrow()
   })
+
+  it('should use the correct locale', () => {
+    const f = initFormat('fr', 'en')
+    const date = f(0, 'yyyy-LLLL-dd')
+    expect(date).toBe('1970-janvier-01')
+  })
+
+  it('should fallback english if a date-fns locale can not be found', () => {
+    const f = initFormat('unknown-lang', 'unknown-default')
+    const date = f(0, 'yyyy-LLLL-dd')
+    expect(date).toBe('1970-January-01')
+  })
 })
 
 describe('formatLocallyDistanceToNow', () => {
