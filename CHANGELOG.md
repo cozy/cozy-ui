@@ -1,3 +1,10 @@
+## [115.0.1](https://github.com/cozy/cozy-ui/compare/v115.0.0...v115.0.1) (2024-12-20)
+
+
+### Bug Fixes
+
+* Ensure use correct format locales ([5d078db](https://github.com/cozy/cozy-ui/commit/5d078db)), closes [/github.com/date-fns/date-fns/blob/main/CHANGELOG.md#200---2019-08-20](https://github.com//github.com/date-fns/date-fns/blob/main/CHANGELOG.md/issues/200---2019-08-20)
+
 # [115.0.0](https://github.com/cozy/cozy-ui/compare/v114.0.1...v115.0.0) (2024-12-19)
 
 
