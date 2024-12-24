@@ -1,0 +1,8 @@
+{
+  "cancel": "Cancel",
+  "clear": "Clear",
+  "invalidDate": "Invalid date",
+  "ok": "Ok",
+  "today": "Today",
+  "minDateLabelError": "Date should not be before minimal date (%{date})"
+}
