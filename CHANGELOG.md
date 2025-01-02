@@ -1,3 +1,10 @@
+# [115.1.0](https://github.com/cozy/cozy-ui/compare/v115.0.2...v115.1.0) (2025-01-02)
+
+
+### Features
+
+* **DatePicker:** Add DatePicker component ([1c5fa03](https://github.com/cozy/cozy-ui/commit/1c5fa03))
+
 ## [115.0.2](https://github.com/cozy/cozy-ui/compare/v115.0.1...v115.0.2) (2024-12-20)
 
 
