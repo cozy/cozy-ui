@@ -202,7 +202,6 @@ ___
 
 |name|type|default|description|
 |----|----|-------|-----------|
-|isValid|() => boolean||Function that returns if the value of the input is a valid Date|
 |enableKeyboard|boolean||Enable the keyboard date picker|
 |mode|"date" \| "time" \| "dateTime"|"date"|Picker mode|
 ___
