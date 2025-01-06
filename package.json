@@ -92,12 +92,12 @@
     "browserslist-config-cozy": "0.4.0",
     "bundlemon": "3.1.0",
     "copyfiles": "2.4.1",
-    "cozy-client": "^51.6.0",
+    "cozy-client": "^52.1.0",
     "cozy-device-helper": "2.0.0",
     "cozy-flags": "^2.10.1",
     "cozy-intent": "^2.29.1",
     "cozy-logger": "^1.9.0",
-    "cozy-stack-client": "^51.6.0",
+    "cozy-stack-client": "^52.0.0",
     "css-loader": "0.28.11",
     "cssnano": "4.1.11",
     "cssnano-preset-advanced": "4.0.8",
@@ -183,7 +183,7 @@
     "rooks": "^5.11.2"
   },
   "peerDependencies": {
-    "cozy-client": ">=51.6.0",
+    "cozy-client": ">=52.1.0",
     "cozy-device-helper": "^2.0.0",
     "cozy-intent": ">=2.29.1",
     "react": "^16.8.6",
