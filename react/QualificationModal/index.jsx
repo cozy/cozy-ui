@@ -5,7 +5,7 @@ import { useClient } from 'cozy-client'
 import { themesList } from 'cozy-client/dist/models/document/documentTypeData'
 import { isQualificationNote } from 'cozy-client/dist/models/document/documentTypeDataHelpers'
 import { getBoundT } from 'cozy-client/dist/models/document/locales'
-import { getQualification } from 'cozy-client/dist/models/document/qualification'
+import { isSupportedQualification } from 'cozy-client/dist/models/document/qualification'
 
 import { locales } from './locales'
 import Icon from '../Icon'
@@ -48,11 +48,11 @@ const QualificationModal = ({ file, title, onClose }) => {
   const client = useClient()
   const { t, lang } = useI18n()
 
-  const qualificationLabel = getQualification(file)?.label
+  const qualificationLabel = file.metadata?.qualification?.label
   const options = useMemo(() => makeOptions(lang), [lang])
 
   const isSelected = ({ id, item }) => {
-    return qualificationLabel
+    return isSupportedQualification(qualificationLabel)
       ? qualificationLabel === item?.label
       : id === 'none'
   }
