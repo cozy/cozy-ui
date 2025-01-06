@@ -29,19 +29,7 @@ export class AppLinker extends React.Component {
   }
 
   static getSlug(props) {
-    if (props.app && props.app.slug) {
-      return props.app.slug
-    }
-
-    return props.slug
-  }
-
-  static deprecateSlug(props) {
-    if (props.slug) {
-      console.warn(
-        `AppLinker's 'slug' prop is deprecated, please use 'app.slug' instead`
-      )
-    }
+    return props.app.slug
   }
 
   static getOnClickHref(props, context, imgRef) {
@@ -95,8 +83,6 @@ export class AppLinker extends React.Component {
   render() {
     const { children } = this.props
 
-    AppLinker.deprecateSlug(this.props)
-
     const { href, onClick } = AppLinker.getOnClickHref(
       this.props,
       this.context,
@@ -112,8 +98,6 @@ export class AppLinker extends React.Component {
 }
 
 AppLinker.propTypes = {
-  /** DEPRECATED: please use app.slug prop */
-  slug: PropTypes.string,
   /*
   Full web url : Used by default on desktop browser
   Used as a fallback_uri on mobile web
