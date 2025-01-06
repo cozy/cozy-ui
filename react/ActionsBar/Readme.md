@@ -1,4 +1,4 @@
-Use same actions as `<ActionsMenu />`
+Use same actions as `<ActionsMenu />`.
 
 ```jsx
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
