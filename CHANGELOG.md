@@ -1,3 +1,20 @@
+# [116.0.0](https://github.com/cozy/cozy-ui/compare/v115.1.0...v116.0.0) (2025-01-07)
+
+
+### Bug Fixes
+
+* **QualificationModal:** Now select `none` for unsupported qualification ([cdaba35](https://github.com/cozy/cozy-ui/commit/cdaba35))
+
+
+### Features
+
+* Upgrade cozy-client ([9dd4544](https://github.com/cozy/cozy-ui/commit/9dd4544))
+
+
+### BREAKING CHANGES
+
+* You must have `cozy-client >= 52.1.0`
+
 # [115.1.0](https://github.com/cozy/cozy-ui/compare/v115.0.2...v115.1.0) (2025-01-02)
 
 
