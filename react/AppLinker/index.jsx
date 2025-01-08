@@ -15,12 +15,12 @@ import {
 export class AppLinker extends React.Component {
   static contextType = WebviewContext
 
-  state = {}
+  state = {
+    imgRef: null
+  }
 
   constructor(props) {
     super(props)
-
-    this.imgRef = null
   }
 
   setImgRef = img => {
