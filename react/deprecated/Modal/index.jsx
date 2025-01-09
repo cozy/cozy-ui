@@ -13,10 +13,10 @@ import ModalFooter from './ModalFooter'
 import { ModalHeader, ModalBrandedHeader } from './ModalHeader'
 import ModalSection from './ModalSection'
 import styles from './styles.styl'
-import Portal from '../../Portal'
 import migrateProps from '../../helpers/migrateProps'
 import { useCozyTheme } from '../../providers/CozyTheme'
 import Overlay from '../Overlay'
+import Portal from '../Portal'
 
 const ModalDescription = ModalContent
 

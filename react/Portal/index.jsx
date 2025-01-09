@@ -1,8 +1,7 @@
-import ReactDOM from 'react-dom'
+import Portal from '@material-ui/core/Portal'
 
-const Portal = ({ into, children }) => {
-  const targetElement = document.querySelector(into)
-  return ReactDOM.createPortal(children, targetElement)
-}
+console.info(' ')
+console.info('NEW PORTAL')
+console.info(' ')
 
 export default Portal

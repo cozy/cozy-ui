@@ -1,5 +1,4 @@
 import Fade from '@material-ui/core/Fade'
-import Portal from '@material-ui/core/Portal'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
 import PropTypes from 'prop-types'
 import React, {
@@ -28,6 +27,7 @@ import {
 } from './helpers'
 import stylescss from './styles.styl'
 import Paper from '../Paper'
+import Portal from '../Portal'
 import Stack from '../Stack'
 import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
