@@ -1,3 +1,17 @@
+# [117.0.0](https://github.com/cozy/cozy-ui/compare/v116.0.0...v117.0.0) (2025-01-13)
+
+
+### Features
+
+* Remove cordova stuff from AppLinker ([add9fbb](https://github.com/cozy/cozy-ui/commit/add9fbb))
+* Remove deprecated slug prop from AppLinker ([a3d47e0](https://github.com/cozy/cozy-ui/commit/a3d47e0))
+
+
+### BREAKING CHANGES
+
+* Use app={{ slug: 'drive' }} instead of slug='drive' as
+AppLinker prop. Also, `name` is not passed anymore as render prop.
+
 # [116.0.0](https://github.com/cozy/cozy-ui/compare/v115.1.0...v116.0.0) (2025-01-07)
 
 
