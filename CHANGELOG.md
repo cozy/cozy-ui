@@ -1,3 +1,10 @@
+# [117.1.0](https://github.com/cozy/cozy-ui/compare/v117.0.0...v117.1.0) (2025-01-21)
+
+
+### Features
+
+* Add Download and Add/Remove favorites actions ([6e4bca4](https://github.com/cozy/cozy-ui/commit/6e4bca4))
+
 # [117.0.0](https://github.com/cozy/cozy-ui/compare/v116.0.0...v117.0.0) (2025-01-13)
 
 
