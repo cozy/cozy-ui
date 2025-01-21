@@ -5,6 +5,18 @@
   "emailTo": "Send an email",
   "smsTo": "Send a message",
   "print": "Print",
+  "download": "Download",
+  "favorites": {
+    "add": {
+      "label": "Add to favorites",
+      "success": "%{filename} has been added to favorites |||| These items have been added to favorites"
+    },
+    "remove": {
+      "label": "Remove from favorites",
+      "success": "%{filename} has been removed from favorites |||| These items have been removed from favorites"
+    },
+    "error": "An error occurred, please try again."
+  },
   "others": "Others",
   "editAttribute": "Edit attribute",
   "copyToClipboard": {
