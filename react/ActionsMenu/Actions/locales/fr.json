@@ -5,6 +5,18 @@
   "emailTo": "Envoyer un e-mail",
   "smsTo": "Envoyer un message",
   "print": "Imprimer",
+  "download": "Télécharger",
+  "favorites": {
+    "add": {
+      "label": "Ajouter aux favoris",
+      "success": "%{filename} a été ajouté aux favoris |||| Ces éléments ont été ajoutés aux favoris"
+    },
+    "remove": {
+      "label": "Retirer des favoris",
+      "success": "%{filename} a été retiré des favoris |||| Ces éléments ont été retirés des favoris"
+    },
+    "error": "Une erreur est survenue, merci de réessayer."
+  },
   "others": "Autres",
   "editAttribute": "Editer l'attribut",
   "copyToClipboard": {
