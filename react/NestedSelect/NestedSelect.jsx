@@ -6,8 +6,8 @@ import React, { useState, useRef } from 'react'
 import ItemRow from './ItemRow'
 import { makeHistory } from './helpers'
 import styles from './styles.styl'
-import Input from '../Input'
 import List from '../List'
+import SearchBar from '../SearchBar'
 import Typography from '../Typography'
 
 export { ItemRow }
@@ -117,10 +117,10 @@ const NestedSelect = ({
               [styles['search-container--without-title']]: !currentTitle
             })}
           >
-            <Input
+            <SearchBar
               placeholder={searchOptions.placeholderSearch}
-              onChange={onChange}
               value={state.searchValue}
+              onChange={onChange}
             />
           </div>
         )}
