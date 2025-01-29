@@ -35,9 +35,9 @@ const NestedSelect = ({
   const innerRef = useRef()
   const [state, setState] = useState({
     history: makeHistory(options, canSelectParent),
-    searchValue: '',
-    searchResult: null
+    searchValue: ''
   })
+  const [searchResult, setSearchResult] = useState(null)
 
   const handleBack = () => {
     const [item, ...newHistory] = state.history
@@ -70,12 +70,14 @@ const NestedSelect = ({
     if (onSearch) {
       const searchValue = ev.target.value
       const searchResult = onSearch(searchValue)
-      setState(state => ({ ...state, searchValue, searchResult }))
+      setState(state => ({ ...state, searchValue }))
+      setSearchResult(searchResult)
     }
   }
 
   const onClear = () => {
-    setState(state => ({ ...state, searchValue: '', searchResult: null }))
+    setState(state => ({ ...state, searchValue: '' }))
+    setSearchResult(null)
   }
 
   const current = state.history[0]
@@ -129,8 +131,8 @@ const NestedSelect = ({
           </div>
         )}
 
-        {state.searchResult ? (
-          state.searchResult.length === 0 ? (
+        {searchResult ? (
+          searchResult.length === 0 ? (
             <Typography
               variant="body1"
               className="u-flex u-flex-justify-center u-mb-1 "
@@ -138,14 +140,14 @@ const NestedSelect = ({
               {searchOptions.noDataLabel}
             </Typography>
           ) : (
-            state.searchResult.map((item, index) => (
+            searchResult.map((item, index) => (
               <ItemRow
                 radioPosition={radioPosition}
                 key={item.key || item.title}
                 item={item}
                 onClick={handleClickItem}
                 isSelected={isSelectedWithLevel(item)}
-                isLast={index === state.searchResult.length - 1}
+                isLast={index === searchResult.length - 1}
                 ellipsis={ellipsis}
                 noDivider={noDivider}
               />
