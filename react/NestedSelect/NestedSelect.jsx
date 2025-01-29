@@ -36,7 +36,7 @@ const NestedSelect = ({
   const [state, setState] = useState({
     history: makeHistory(options, canSelectParent),
     searchValue: '',
-    searchResult: []
+    searchResult: null
   })
 
   const handleBack = () => {
@@ -74,12 +74,15 @@ const NestedSelect = ({
     }
   }
 
+  const onClear = () => {
+    setState(state => ({ ...state, searchValue: '', searchResult: null }))
+  }
+
   const current = state.history[0]
   const children = current.children || []
   const level = state.history.length - 1
   const parentItem = transformParentItem(omit(current, 'children'))
 
-  const hasSearchResult = state.searchValue?.length > 0
   const isSelectedWithLevel = item => isSelected(item, level)
   const currentTitle = current.title || title
 
@@ -121,11 +124,12 @@ const NestedSelect = ({
               placeholder={searchOptions.placeholderSearch}
               value={state.searchValue}
               onChange={onChange}
+              onClear={onClear}
             />
           </div>
         )}
 
-        {hasSearchResult ? (
+        {state.searchResult ? (
           state.searchResult.length === 0 ? (
             <Typography
               variant="body1"
