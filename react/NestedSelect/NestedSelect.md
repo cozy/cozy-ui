@@ -155,14 +155,7 @@ const InteractiveExample = () => {
     onSearch: (value) => {
       const options = makeOptions({ withHeaders })
       return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
-    },
-    displaySearchResultItem: item =>
-    <ListItem key={item.id} dense button divider>
-      <ListItemText
-        primary={item.description}
-        ellipsis
-      />
-    </ListItem>
+    }
   })
 
   const handleSelect = item => {
