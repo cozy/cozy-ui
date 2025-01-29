@@ -4,18 +4,28 @@ import React, { useMemo } from 'react'
 import { useClient } from 'cozy-client'
 import { isSupportedQualification } from 'cozy-client/dist/models/document/qualification'
 
-import { makeOptions } from './helpers'
+import { makeOptions, makeSearchOptions } from './helpers'
 import { locales } from './locales'
 import NestedSelectResponsive from '../NestedSelect/NestedSelectResponsive'
 import { useI18n, useExtendI18n } from '../providers/I18n'
 
-const QualificationModal = ({ file, title, onClose }) => {
+const QualificationModal = ({ file, title, noDataLabel, onClose }) => {
   useExtendI18n(locales)
   const client = useClient()
   const { t, lang } = useI18n()
 
   const qualificationLabel = file.metadata?.qualification?.label
   const options = useMemo(() => makeOptions(lang), [lang])
+  const searchOptions = useMemo(
+    () =>
+      makeSearchOptions({
+        options,
+        title,
+        noDataLabel,
+        t
+      }),
+    [options, title, noDataLabel, t]
+  )
 
   const isSelected = ({ id, item }) => {
     return isSupportedQualification(qualificationLabel)
@@ -40,11 +50,11 @@ const QualificationModal = ({ file, title, onClose }) => {
 
   return (
     <NestedSelectResponsive
-      title={title || t('QualificationModal.title')}
       options={options}
       noDivider
       document={file}
       isSelected={isSelected}
+      searchOptions={searchOptions}
       onSelect={handleClick}
       onClose={onClose}
     />
@@ -54,6 +64,7 @@ const QualificationModal = ({ file, title, onClose }) => {
 QualificationModal.propTypes = {
   file: PropTypes.object,
   title: PropTypes.string,
+  noDataLabel: PropTypes.string,
   onClose: PropTypes.func
 }
 

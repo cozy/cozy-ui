@@ -36,3 +36,26 @@ export const makeOptions = lang => {
     ]
   }
 }
+
+export const searchOptionsFn = (options, value) => {
+  const deepOptions = options.children
+    .flatMap(child => child.children)
+    .reduce((acc, curr) => {
+      if (!!curr && !acc.some(el => el.id === curr.id)) {
+        acc.push(curr)
+      }
+      return acc
+    }, [])
+
+  return deepOptions.filter(deepOption =>
+    deepOption.title.toLowerCase().includes(value.toLowerCase())
+  )
+}
+
+export const makeSearchOptions = ({ options, title, noDataLabel, t }) => {
+  return {
+    placeholderSearch: title || t('QualificationModal.title'),
+    noDataLabel: noDataLabel || t('QualificationModal.noDataLabel'),
+    onSearch: value => searchOptionsFn(options, value)
+  }
+}

@@ -1,5 +1,6 @@
 {
   "QualificationModal": {
-    "title": "Document type"
+    "title": "Document type",
+    "noDataLabel": "No result"
   }
 }
