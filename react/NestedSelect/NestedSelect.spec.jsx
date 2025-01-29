@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import { render, fireEvent } from '@testing-library/react'
 
 import NestedSelect from './NestedSelect'
-import { BreakpointsProvider } from '../providers/Breakpoints'
+import DemoProvider from '../providers/DemoProvider'
 
 describe('NestedSelect', () => {
   const makeOption = text => ({
@@ -40,7 +40,7 @@ describe('NestedSelect', () => {
     const options = makeOptions(itemSelected)
 
     return render(
-      <BreakpointsProvider>
+      <DemoProvider>
         <NestedSelect
           canSelectParent={canSelectParent}
           options={options}
@@ -49,7 +49,7 @@ describe('NestedSelect', () => {
           onCancel={onCancel}
           searchOptions={searchOptions}
         />
-      </BreakpointsProvider>
+      </DemoProvider>
     )
   }
 
