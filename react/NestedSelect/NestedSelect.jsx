@@ -1,7 +1,8 @@
 import cx from 'classnames'
+import debounce from 'lodash/debounce'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useMemo } from 'react'
 
 import ItemRow from './ItemRow'
 import { makeHistory } from './helpers'
@@ -38,6 +39,10 @@ const NestedSelect = ({
     searchValue: ''
   })
   const [searchResult, setSearchResult] = useState(null)
+  const delayedSetSearchResult = useMemo(
+    () => debounce(setSearchResult, 250),
+    [setSearchResult]
+  )
 
   const handleBack = () => {
     const [item, ...newHistory] = state.history
@@ -71,13 +76,13 @@ const NestedSelect = ({
       const searchValue = ev.target.value
       const searchResult = onSearch(searchValue)
       setState(state => ({ ...state, searchValue }))
-      setSearchResult(searchResult)
+      delayedSetSearchResult(searchResult)
     }
   }
 
   const onClear = () => {
     setState(state => ({ ...state, searchValue: '' }))
-    setSearchResult(null)
+    delayedSetSearchResult(null)
   }
 
   const current = state.history[0]

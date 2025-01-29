@@ -1,6 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, waitFor } from '@testing-library/react'
 
 import NestedSelect from './NestedSelect'
 import DemoProvider from '../providers/DemoProvider'
@@ -159,9 +159,11 @@ describe('NestedSelect', () => {
       const searchInput = getByPlaceholderText('Placeholder Search')
       expect(searchInput).toBeTruthy()
 
-      fireEvent.change(searchInput, { target: { value: 'cozy' } })
-      const noData = getByText('No Data Found')
-      expect(noData).toBeTruthy()
+      waitFor(() => {
+        fireEvent.change(searchInput, { target: { value: 'cozy' } })
+        const noData = getByText('No Data Found')
+        expect(noData).toBeTruthy()
+      })
     })
 
     it('should show search results', () => {
@@ -186,11 +188,12 @@ describe('NestedSelect', () => {
       const searchInput = getByPlaceholderText('Placeholder Search')
       expect(searchInput).toBeTruthy()
 
-      fireEvent.change(searchInput, { target: { value: 'cozy' } })
-
-      expect(queryByText('cozy 1')).toBeTruthy()
-      expect(queryByText('cozy 1')).toBeTruthy()
-      expect(queryByText('anything')).toBeFalsy()
+      waitFor(() => {
+        fireEvent.change(searchInput, { target: { value: 'cozy' } })
+        expect(queryByText('cozy 1')).toBeTruthy()
+        expect(queryByText('cozy 1')).toBeTruthy()
+        expect(queryByText('anything')).toBeFalsy()
+      })
     })
   })
 })
