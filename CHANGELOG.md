@@ -1,3 +1,17 @@
+# [117.2.0](https://github.com/cozy/cozy-ui/compare/v117.1.0...v117.2.0) (2025-01-30)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Show now result according to searchResult ([debae36](https://github.com/cozy/cozy-ui/commit/debae36))
+
+
+### Features
+
+* **NestedSelect:** Add delay on search result ([fc57533](https://github.com/cozy/cozy-ui/commit/fc57533))
+* **NestedSelect:** Replace Input by SearchBar for search options ([cf01651](https://github.com/cozy/cozy-ui/commit/cf01651))
+* **QualificationModal:** Add search bar ([fab5baa](https://github.com/cozy/cozy-ui/commit/fab5baa))
+
 # [117.1.0](https://github.com/cozy/cozy-ui/compare/v117.0.0...v117.1.0) (2025-01-21)
 
 
