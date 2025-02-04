@@ -38,6 +38,8 @@ export const makeOptions = lang => {
 }
 
 export const searchOptionsFn = (options, value) => {
+  if (!value) return options.children
+
   const deepOptions = options.children
     .flatMap(child => child.children)
     .reduce((acc, curr) => {
