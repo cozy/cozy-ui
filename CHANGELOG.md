@@ -1,3 +1,11 @@
+## [117.2.2](https://github.com/cozy/cozy-ui/compare/v117.2.1...v117.2.2) (2025-02-04)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Now add space between close button and content if no title ([0f20f2a](https://github.com/cozy/cozy-ui/commit/0f20f2a))
+* **QualificationModal:** Now show initial list if search value is empty ([831b53e](https://github.com/cozy/cozy-ui/commit/831b53e))
+
 ## [117.2.1](https://github.com/cozy/cozy-ui/compare/v117.2.0...v117.2.1) (2025-02-04)
 
 
