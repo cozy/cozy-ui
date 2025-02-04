@@ -94,7 +94,12 @@ const NestedSelect = ({
   const currentTitle = current.title || title
 
   return (
-    <span ref={innerRef}>
+    <span
+      ref={innerRef}
+      className={cx({
+        [styles['title-container--without-title']]: !currentTitle
+      })}
+    >
       {HeaderComponent ? (
         <HeaderComponent
           title={currentTitle}
