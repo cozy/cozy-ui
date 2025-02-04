@@ -1,3 +1,10 @@
+## [117.2.1](https://github.com/cozy/cozy-ui/compare/v117.2.0...v117.2.1) (2025-02-04)
+
+
+### Bug Fixes
+
+* **Table:** Adjust selected color ([5e0fd17](https://github.com/cozy/cozy-ui/commit/5e0fd17))
+
 # [117.2.0](https://github.com/cozy/cozy-ui/compare/v117.1.0...v117.2.0) (2025-01-30)
 
 
