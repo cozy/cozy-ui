@@ -31,6 +31,10 @@ export const BreakpointsProvider = ({ children }) => {
   )
 }
 
+/**
+ *
+ * @returns {import('../../helpers/breakpoints').BreakpointsStatusType}
+ */
 export const useBreakpoints = () => {
   const v = useContext(BreakpointsCtx)
   if (v === null) {
