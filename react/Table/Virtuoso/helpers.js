@@ -83,3 +83,7 @@ export const columns = [
     textAlign: 'right'
   }
 ]
+
+export const ItemTypes = {
+  ITEM: 'item'
+}

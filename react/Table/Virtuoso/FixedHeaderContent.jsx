@@ -1,6 +1,7 @@
 import React from 'react'
 
 import TableHeadCell from './TableHeadCell'
+import { columns as columnsH } from './helpers'
 import Checkbox from '../../Checkbox'
 import TableCell from '../../TableCell'
 import TableRow from '../../TableRow'
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
 })
 
 const FixedHeaderContent = ({
-  columns,
+  columns = columnsH,
   order,
   orderBy,
   rowCount,

@@ -1,27 +1,28 @@
 import React from 'react'
 
+import { columns as columnsH } from './helpers'
 import Checkbox from '../../Checkbox'
 import TableCell from '../../TableCell'
 
 const RowContent = ({
   index,
   row,
-  columns,
+  columns = columnsH,
   selected,
   children,
   onSelectClick
 }) => {
-  const isSelected = name => selected.indexOf(name) !== -1
+  const isSelected = rowId => selected.some(item => item.id === rowId)
 
   return (
     <>
       <TableCell align="center" padding="checkbox">
         <Checkbox
-          checked={isSelected(row.name)}
+          checked={isSelected(row.id)}
           inputProps={{
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
-          onChange={() => onSelectClick(row.name)}
+          onChange={() => onSelectClick(row.id)}
         />
       </TableCell>
       {columns.map(column => (
