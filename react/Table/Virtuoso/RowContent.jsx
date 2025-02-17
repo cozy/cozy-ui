@@ -8,21 +8,19 @@ const RowContent = ({
   index,
   row,
   columns,
-  selected,
+  isSelectedItem,
   children,
   onSelectClick
 }) => {
-  const isSelected = name => selected.indexOf(name) !== -1
-
   return (
     <>
       <TableCell align="center" padding="checkbox">
         <Checkbox
-          checked={isSelected(row.name)}
+          checked={isSelectedItem(row)}
           inputProps={{
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
-          onChange={() => onSelectClick(row.name)}
+          onChange={() => onSelectClick(row)}
         />
       </TableCell>
       {columns.map(column => (
