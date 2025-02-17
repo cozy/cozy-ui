@@ -39,7 +39,11 @@ const Filename = ({
   return (
     <Wrapper {...wrapperProps}>
       {icon && (
-        <div className={cx('u-mr-1', { [styles['icon-withPath']]: !!path })}>
+        <div
+          className={cx('u-flex u-pos-relative u-mr-1', {
+            [styles['icon-withPath']]: !!path
+          })}
+        >
           {icon}
         </div>
       )}
