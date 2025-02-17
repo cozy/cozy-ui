@@ -4,6 +4,7 @@ import TableHeadCell from './HeadCell'
 import Checkbox from '../../Checkbox'
 import TableCell from '../../TableCell'
 import TableRow from '../../TableRow'
+import useBreakpoints from '../../providers/Breakpoints'
 import { makeStyles } from '../../styles'
 
 const useStyles = makeStyles({
@@ -29,18 +30,21 @@ const FixedHeaderContent = ({
   onClick,
   onSelectAllClick
 }) => {
+  const { isMobile } = useBreakpoints()
   const classes = useStyles()
 
   return (
     <TableRow>
-      <TableCell align="center" padding="checkbox">
-        <Checkbox
-          indeterminate={selectedCount > 0 && selectedCount < rowCount}
-          checked={rowCount > 0 && selectedCount === rowCount}
-          inputProps={{ 'aria-label': 'select all desserts' }}
-          onChange={onSelectAllClick}
-        />
-      </TableCell>
+      {(!isMobile || selectedCount > 0) && (
+        <TableCell align="center" padding="checkbox">
+          <Checkbox
+            indeterminate={selectedCount > 0 && selectedCount < rowCount}
+            checked={rowCount > 0 && selectedCount === rowCount}
+            inputProps={{ 'aria-label': 'select all desserts' }}
+            onChange={onSelectAllClick}
+          />
+        </TableCell>
+      )}
       {columns.map(column => (
         <TableHeadCell
           key={column.id}
