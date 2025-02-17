@@ -1,18 +1,15 @@
+import cx from 'classnames'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Fragment } from 'react'
 
-import Icon, { iconPropType } from '../Icon'
+import styles from './styles.styl'
+import { iconPropType } from '../Icon'
 import MidEllipsis from '../MidEllipsis'
 import Typography from '../Typography'
 
-const Filename = ({ icon, filename, extension, midEllipsis, variant }) => {
+const NameAndExtension = ({ filename, extension, variant, midEllipsis }) => {
   return (
-    <div className="u-flex u-flex-items-center">
-      {icon && (
-        <div className="u-mr-1">
-          <Icon icon={icon} width={30} height={30} />
-        </div>
-      )}
+    <>
       {filename && (
         <Typography variant={variant} component="span" noWrap>
           {midEllipsis ? <MidEllipsis text={filename} /> : filename}
@@ -23,7 +20,56 @@ const Filename = ({ icon, filename, extension, midEllipsis, variant }) => {
           {extension}
         </Typography>
       )}
-    </div>
+    </>
+  )
+}
+
+const Filename = ({
+  icon,
+  filename,
+  extension,
+  midEllipsis,
+  variant,
+  path
+}) => {
+  const [Wrapper, wrapperProps] = path
+    ? [Fragment, {}]
+    : ['div', { className: cx('u-flex u-flex-items-center') }]
+
+  return (
+    <Wrapper {...wrapperProps}>
+      {icon && (
+        <div
+          className={cx('u-flex u-pos-relative u-mr-1', {
+            [styles['icon-withPath']]: !!path
+          })}
+        >
+          {icon}
+        </div>
+      )}
+      {path ? (
+        <>
+          <div className="u-flex">
+            <NameAndExtension
+              filename={filename}
+              extension={extension}
+              variant={variant}
+              midEllipsis={midEllipsis}
+            />
+          </div>
+          <Typography variant="body2" component="div" noWrap>
+            {path}
+          </Typography>
+        </>
+      ) : (
+        <NameAndExtension
+          filename={filename}
+          extension={extension}
+          variant={variant}
+          midEllipsis={midEllipsis}
+        />
+      )}
+    </Wrapper>
   )
 }
 
