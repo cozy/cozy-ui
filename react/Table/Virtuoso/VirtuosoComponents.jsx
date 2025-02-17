@@ -7,16 +7,19 @@ import TableContainer from '../../TableContainer'
 import TableHead from '../../TableHead'
 import TableRow from '../../TableRow'
 
-const VirtuosoComponents = {
+export const makeVirtuosoComponents = ({ componentsProps }) => ({
   Scroller: forwardRef((props, ref) => (
     <TableContainer component={Paper} {...props} ref={ref} />
   )),
   Table: forwardRef((props, ref) => <Table {...props} ref={ref} />),
   TableHead: forwardRef((props, ref) => <TableHead {...props} ref={ref} />),
   TableRow: forwardRef((props, ref) => (
-    <TableRow {...props} ref={ref} hover={true} />
+    <TableRow
+      {...props}
+      ref={ref}
+      hover={true}
+      onClick={ev => componentsProps?.tableRow?.onClick?.(ev, props)}
+    />
   )),
   TableBody: forwardRef((props, ref) => <TableBody {...props} ref={ref} />)
-}
-
-export default VirtuosoComponents
+})

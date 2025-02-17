@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Cell from './Cell'
 import Checkbox from '../../Checkbox'
@@ -13,6 +13,13 @@ const RowContent = ({
   onSelectClick
 }) => {
   const isSelected = name => selected.indexOf(name) !== -1
+
+  // const [Wrapper, wrapperProps] = componentsProps?.rowContent?.Wrapper
+  //   ? [
+  //       componentsProps.rowContent.Wrapper,
+  //       { row, columns, isSelected: isSelected(row.name) }
+  //     ]
+  //   : [Fragment, {}]
 
   return (
     <>

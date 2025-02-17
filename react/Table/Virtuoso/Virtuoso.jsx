@@ -3,7 +3,7 @@ import { TableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
-import VirtuosoComponents from './VirtuosoComponents'
+import { makeVirtuosoComponents } from './VirtuosoComponents'
 import { stableSort, getComparator } from './helpers'
 
 const VirtualizedTable = ({
@@ -11,6 +11,7 @@ const VirtualizedTable = ({
   columns,
   defaultOrder,
   secondarySort,
+  onRowClick,
   componentsProps
 }) => {
   const [order, setOrder] = useState('asc')
@@ -58,7 +59,7 @@ const VirtualizedTable = ({
   return (
     <TableVirtuoso
       data={data}
-      components={VirtuosoComponents}
+      components={makeVirtuosoComponents({ componentsProps })}
       fixedHeaderContent={() => (
         <FixedHeaderContent
           columns={columns}
