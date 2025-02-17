@@ -94,6 +94,7 @@ module.exports = {
         '../react/Paywall',
         '../react/Sidebar',
         '../react/SquareAppIcon',
+        '../react/Table',
         '../react/QualificationGrid',
         '../react/QualificationIconStack',
         '../react/QualificationItem',
