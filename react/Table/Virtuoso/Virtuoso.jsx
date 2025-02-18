@@ -11,11 +11,14 @@ const VirtualizedTable = ({
   columns,
   defaultOrder,
   secondarySort,
+  selectedItems = [],
+  onSelect = () => {},
+  onSelectAll = () => {},
+  isSelectedItem = () => {},
   componentsProps
 }) => {
   const [order, setOrder] = useState('asc')
   const [orderBy, setOrderBy] = useState(defaultOrder)
-  const [selected, setSelected] = useState([])
 
   const sortedData = stableSort(rows, getComparator(order, orderBy))
   const data = secondarySort ? secondarySort(sortedData) : sortedData
@@ -28,31 +31,10 @@ const VirtualizedTable = ({
 
   const handleSelectAll = event => {
     if (event.target.checked) {
-      const newSelecteds = rows.map(n => n.name)
-      setSelected(newSelecteds)
+      onSelectAll(rows)
       return
     }
-    setSelected([])
-  }
-
-  const handleSelect = name => {
-    const selectedIndex = selected.indexOf(name)
-    let newSelected = []
-
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name)
-    } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1))
-    } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1))
-    } else if (selectedIndex > 0) {
-      newSelected = newSelected.concat(
-        selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1)
-      )
-    }
-
-    setSelected(newSelected)
+    onSelectAll([])
   }
 
   return (
@@ -63,7 +45,7 @@ const VirtualizedTable = ({
         <FixedHeaderContent
           columns={columns}
           rowCount={rows.length}
-          selectedCount={selected.length}
+          selectedCount={selectedItems.length}
           order={order}
           orderBy={orderBy}
           onClick={handleSort}
@@ -75,8 +57,8 @@ const VirtualizedTable = ({
           index={_index}
           row={row}
           columns={columns}
-          selected={selected}
-          onSelectClick={handleSelect}
+          isSelectedItem={isSelectedItem}
+          onSelectClick={onSelect}
         >
           {componentsProps?.rowContent?.children}
         </RowContent>
