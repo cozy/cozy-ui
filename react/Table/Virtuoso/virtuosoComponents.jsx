@@ -7,7 +7,7 @@ import TableContainer from '../../TableContainer'
 import TableHead from '../../TableHead'
 import TableRow from '../../TableRow'
 
-const VirtuosoComponents = {
+const virtuosoComponents = {
   Scroller: forwardRef((props, ref) => (
     <TableContainer component={Paper} {...props} ref={ref} />
   )),
@@ -31,4 +31,4 @@ const VirtuosoComponents = {
   TableBody: forwardRef((props, ref) => <TableBody {...props} ref={ref} />)
 }
 
-export default VirtuosoComponents
+export default virtuosoComponents

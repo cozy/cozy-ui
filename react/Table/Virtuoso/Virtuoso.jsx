@@ -3,8 +3,8 @@ import { TableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
-import VirtuosoComponents from './VirtuosoComponents'
 import { stableSort, getComparator } from './helpers'
+import virtuosoComponents from './virtuosoComponents'
 
 const VirtualizedTable = ({
   rows,
@@ -40,8 +40,7 @@ const VirtualizedTable = ({
   return (
     <TableVirtuoso
       data={data}
-      context={{ isSelectedItem }}
-      components={VirtuosoComponents}
+      components={virtuosoComponents}
       fixedHeaderContent={() => (
         <FixedHeaderContent
           columns={columns}
