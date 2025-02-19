@@ -37,10 +37,12 @@ const VirtualizedTable = ({
     onSelectAll([])
   }
 
+  const components = virtuosoComponents({ isSelectedItem })
+
   return (
     <TableVirtuoso
       data={data}
-      components={virtuosoComponents}
+      components={components}
       fixedHeaderContent={() => (
         <FixedHeaderContent
           columns={columns}
