@@ -40,6 +40,7 @@ const VirtualizedTable = ({
   return (
     <TableVirtuoso
       data={data}
+      context={{ isSelectedItem }}
       components={VirtuosoComponents}
       fixedHeaderContent={() => (
         <FixedHeaderContent

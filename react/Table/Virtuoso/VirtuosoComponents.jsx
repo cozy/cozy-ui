@@ -13,9 +13,21 @@ const VirtuosoComponents = {
   )),
   Table: forwardRef((props, ref) => <Table {...props} ref={ref} />),
   TableHead: forwardRef((props, ref) => <TableHead {...props} ref={ref} />),
-  TableRow: forwardRef((props, ref) => (
-    <TableRow {...props} ref={ref} hover={true} />
-  )),
+  TableRow: forwardRef(({ context, item, ...props }, ref) => {
+    const { isSelectedItem } = context
+    const isSelected = isSelectedItem(item)
+
+    return (
+      <TableRow
+        {...props}
+        ref={ref}
+        context={context}
+        item={item}
+        selected={isSelected}
+        hover
+      />
+    )
+  }),
   TableBody: forwardRef((props, ref) => <TableBody {...props} ref={ref} />)
 }
 
