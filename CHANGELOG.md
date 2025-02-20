@@ -1,3 +1,10 @@
+# [117.3.0](https://github.com/cozy/cozy-ui/compare/v117.2.2...v117.3.0) (2025-02-20)
+
+
+### Features
+
+* Add FileTypeServer illustration ([740ddb7](https://github.com/cozy/cozy-ui/commit/740ddb7))
+
 ## [117.2.2](https://github.com/cozy/cozy-ui/compare/v117.2.1...v117.2.2) (2025-02-04)
 
 
