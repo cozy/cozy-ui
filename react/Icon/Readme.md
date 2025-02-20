@@ -693,6 +693,7 @@ import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
 import FileTypeCodeIcon from 'cozy-ui/transpiled/react/Icons/FileTypeCode'
 import FileTypeFilesIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFiles'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
+import FileTypeServerIcon from 'cozy-ui/transpiled/react/Icons/FileTypeServer'
 import FileTypeImageIcon from 'cozy-ui/transpiled/react/Icons/FileTypeImage'
 import FileTypeNoteIcon from 'cozy-ui/transpiled/react/Icons/FileTypeNote'
 import FileTypePdfIcon from 'cozy-ui/transpiled/react/Icons/FileTypePdf'
@@ -733,6 +734,7 @@ const icons = [
   FileTypeCodeIcon,
   FileTypeFilesIcon,
   FileTypeFolderIcon,
+  FileTypeServerIcon,
   FileTypeImageIcon,
   FileTypeNoteIcon,
   FileTypePdfIcon,
@@ -788,7 +790,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
+const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
 
 ;
 
