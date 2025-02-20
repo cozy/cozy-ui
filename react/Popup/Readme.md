@@ -1,4 +1,4 @@
-A simple Popup which provides handlers for a few events.
+A simple Popup which provides handlers for a few events
 
 ### Simple use case
 
