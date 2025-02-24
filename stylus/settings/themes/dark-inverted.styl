@@ -1,4 +1,5 @@
 palette=json('../../../theme/palette.json', { hash: true })
+paletteTwake=json('../../theme/palette_twake.json', { hash: true })
 
 // @stylint off
 
@@ -65,6 +66,96 @@ palette=json('../../../theme/palette.json', { hash: true })
     --infoColorContrastText palette.Common['white']
 
     $shadowColor = palette.Common['black']
+    --shadow0 none
+    --shadow1 0px 2px 4px 0px alpha($shadowColor, 0.08), 0px 4px 16px 0px alpha($shadowColor, 0.06), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow2 0px 3px 5px 0px alpha($shadowColor, 0.09), 0px 4px 17px 0px alpha($shadowColor, 0.07), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow3 0px 3px 5px -1px alpha($shadowColor, 0.09), 0px 5px 19px 1px alpha($shadowColor, 0.08), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow4 0px 3px 6px -1px alpha($shadowColor, 0.1), 0px 5px 20px 1px alpha($shadowColor, 0.08), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow5 0px 4px 6px -1px alpha($shadowColor, 0.11), 0px 5px 22px 1px alpha($shadowColor, 0.09), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow6 0px 4px 7px -2px alpha($shadowColor, 0.11), 0px 6px 23px 2px alpha($shadowColor, 0.10), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow7 0px 5px 7px -2px alpha($shadowColor, 0.12), 0px 6px 24px 2px alpha($shadowColor, 0.11), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow8 0px 5px 8px -2px alpha($shadowColor, 0.13), 0px 6px 26px 2px alpha($shadowColor, 0.11), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow9 0px 5px 8px -3px alpha($shadowColor, 0.14), 0px 7px 27px 3px alpha($shadowColor, 0.12), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow10 0px 6px 9px -3px alpha($shadowColor, 0.14), 0px 7px 29px 3px alpha($shadowColor, 0.13), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow11 0px 6px 9px -3px alpha($shadowColor, 0.15), 0px 7px 30px 3px alpha($shadowColor, 0.14), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow12 0px 7px 10px -4px alpha($shadowColor, 0.16), 0px 8px 31px 4px alpha($shadowColor, 0.15), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow13 0px 7px 10px -4px alpha($shadowColor, 0.16), 0px 8px 33px 4px alpha($shadowColor, 0.15), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow14 0px 8px 11px -5px alpha($shadowColor, 0.17), 0px 9px 34px 5px alpha($shadowColor, 0.16), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow15 0px 8px 11px -5px alpha($shadowColor, 0.18), 0px 9px 35px 5px alpha($shadowColor, 0.17), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow16 0px 9px 12px -5px alpha($shadowColor, 0.18), 0px 9px 37px 5px alpha($shadowColor, 0.18), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow17 0px 9px 12px -6px alpha($shadowColor, 0.19), 0px 10px 38px 6px alpha($shadowColor, 0.19), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow18 0px 9px 13px -6px alpha($shadowColor, 0.2), 0px 10px 40px 6px alpha($shadowColor, 0.19), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow19 0px 10px 13px -6px alpha($shadowColor, 0.21), 0px 10px 41px 6px alpha($shadowColor, 0.2), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow20 0px 10px 14px -7px alpha($shadowColor, 0.21), 0px 11px 42px 7px alpha($shadowColor, 0.21), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow21 0px 11px 14px -7px alpha($shadowColor, 0.22), 0px 11px 44px 7px alpha($shadowColor, 0.22), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow22 0px 11px 15px -7px alpha($shadowColor, 0.23), 0px 11px 45px 7px alpha($shadowColor, 0.22), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow23 0px 12px 15px -8px alpha($shadowColor, 0.23), 0px 12px 47px 8px alpha($shadowColor, 0.23), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow24 0px 12px 16px -8px alpha($shadowColor, 0.24), 0px 12px 48px 8px alpha($shadowColor, 0.24), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow25 0px 1px 4px alpha($shadowColor, 0.04)
+
+.CozyTheme--dark-inverted
+    --primaryTextColor alpha(paletteTwake.Grey['900'], 0.9)
+    --secondaryTextColor alpha(paletteTwake.Grey['900'], 0.48)
+    --disabledTextColor alpha(paletteTwake.Grey['900'], 0.32)
+    --hintTextColor alpha(paletteTwake.Grey['900'], 0.32)
+    --iconTextColor alpha(paletteTwake.Grey['900'], 0.72)
+
+    --actionColorActive alpha(paletteTwake.Grey['900'], 0.56)
+    --actionColorHover alpha(paletteTwake.Grey['900'], 0.04)
+    --actionColorSelected alpha(paletteTwake.Grey['900'], 0.08)
+    --actionColorDisabled alpha(paletteTwake.Grey['900'], 0.24)
+    --actionColorDisabledBackground alpha(paletteTwake.Grey['900'], 0.12)
+    --actionColorFocus alpha(paletteTwake.Grey['900'], 0.12)
+    --actionColorGhost alpha(paletteTwake.Grey['900'], 0.08)
+    --actionColorHoverGhost alpha(paletteTwake.Grey['900'], 0.16)
+
+    --dividerColor alpha(paletteTwake.Grey['900'], 0.12)
+
+    --borderMainColor alpha(paletteTwake.Grey['900'], 0.16)
+    --borderDisabledColor alpha(paletteTwake.Grey['900'], 0.08)
+    --borderGhostColor alpha(paletteTwake.Grey['900'], 0.48)
+    --borderGhostDisabledColor alpha(paletteTwake.Grey['900'], 0.16)
+
+    --paperBackgroundColor paletteTwake.Primary['400']
+    --defaultBackgroundColor paletteTwake.Primary['400']
+    --contrastBackgroundColor alpha(paletteTwake.Grey['900'], 0.08)
+
+    --primaryColorLight paletteTwake.Grey['700']
+    --primaryColor paletteTwake.Grey['800']
+    --primaryColorDark paletteTwake.Grey['A400']
+    --primaryContrastTextColor paletteTwake.Common['white']
+    --primaryBackground alpha(paletteTwake.Grey['800'], 0.12) // only for deprecated Info & Alerter
+
+    --secondaryColorLight paletteTwake.Grey['700']
+    --secondaryColor paletteTwake.Grey['800']
+    --secondaryColorDark paletteTwake.Grey['A400']
+    --secondaryContrastTextColor paletteTwake.Common['white']
+    --secondaryBackground alpha(paletteTwake.Grey['800'], 0.12) // only for deprecated Info & Alerter
+
+    --errorColorLight paletteTwake.Error['700']
+    --errorColor paletteTwake.Error['800']
+    --errorColorDark paletteTwake.Error['A400']
+    --errorColorContrastText paletteTwake.Common['white']
+    --errorBackground paletteTwake.Error['A400']
+    --errorBackground alpha(paletteTwake.Error['800'], 0.12) // only for deprecated Info & Alerter
+
+    --warningColorLight paletteTwake.Warning['700']
+    --warningColor paletteTwake.Warning['800']
+    --warningColorDark paletteTwake.Warning['A400']
+    --warningColorContrastText paletteTwake.Common['white']
+
+    --successColorLight paletteTwake.Success['700']
+    --successColor paletteTwake.Success['800']
+    --successColorDark paletteTwake.Success['A400']
+    --successColorContrastText paletteTwake.Common['white']
+    --successBackground alpha(paletteTwake.Success['800'], 0.12) // only for deprecated Info & Alerter
+
+    --infoColorLight paletteTwake.Info['700']
+    --infoColor paletteTwake.Info['800']
+    --infoColorDark paletteTwake.Info['A400']
+    --infoColorContrastText paletteTwake.Common['white']
+
+    $shadowColor = paletteTwake.Common['black']
     --shadow0 none
     --shadow1 0px 2px 4px 0px alpha($shadowColor, 0.08), 0px 4px 16px 0px alpha($shadowColor, 0.06), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
     --shadow2 0px 3px 5px 0px alpha($shadowColor, 0.09), 0px 4px 17px 0px alpha($shadowColor, 0.07), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
