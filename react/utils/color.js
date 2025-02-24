@@ -1,4 +1,8 @@
-const getThemeNodeClassName = (type, variant) => `CozyTheme--${type}-${variant}`
+const getThemeNodeClassName = (type, variant) => {
+  const uiTypeName = localStorage.getItem('ui-theme-name') || 'Cozy'
+
+  return `${uiTypeName}Theme--${type}-${variant}`
+}
 
 const getNodeWithThemeCssVars = (type, variant) => {
   const className = getThemeNodeClassName(type, variant)

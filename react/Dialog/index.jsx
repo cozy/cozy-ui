@@ -7,12 +7,13 @@ import { useCozyTheme } from '../providers/CozyTheme'
 
 const Dialog = ({ className, ...props }) => {
   const { type, variant } = useCozyTheme()
+  const uiThemeName = localStorage.getItem('ui-theme-name') || 'Cozy'
 
   useDialogEffects(props.open, props.fullScreen)
 
   return (
     <MUIDialog
-      className={cx(`CozyTheme--${type}-${variant}`, className)}
+      className={cx(`${uiThemeName}Theme--${type}-${variant}`, className)}
       {...props}
     />
   )

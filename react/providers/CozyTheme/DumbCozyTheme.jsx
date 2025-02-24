@@ -15,6 +15,7 @@ const DumbCozyTheme = ({
 }) => {
   const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
   const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
+  const uiThemeName = localStorage.getItem('ui-theme-name') || 'Cozy'
 
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
     ? 'dark'
@@ -40,7 +41,7 @@ const DumbCozyTheme = ({
       <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
         <div
           className={cx(className, {
-            [`CozyTheme--${selfThemeType}-${selfThemeVariant}`]:
+            [`${uiThemeName}Theme--${selfThemeType}-${selfThemeVariant}`]:
               Boolean(selfThemeVariant),
             'u-dc': ignoreItself
           })}
