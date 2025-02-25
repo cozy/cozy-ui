@@ -74,10 +74,10 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiButton: {
     root: {
-      borderRadius: 2,
+      borderRadius: 100,
       height: '2.5rem',
       lineHeight: 'normal',
-      padding: '0 1rem',
+      padding: '10px 24px',
       '&.ghost': {
         borderStyle: 'dashed !important', // important needed to override disable state
         '&:hover': {
@@ -87,21 +87,21 @@ export const makeLightNormalOverrides = theme => ({
     },
     sizeSmall: {
       height: '2rem',
-      padding: '0 0.75rem',
+      padding: '10px 24px',
       '&$text': {
-        padding: '8px 6px'
+        padding: '8px 16px'
       }
     },
     sizeLarge: {
       height: '3rem',
-      padding: '0 1.25rem',
+      padding: '14px 32px',
       '&$text': {
         padding: '14px 10px'
       }
     },
     text: {
       minWidth: 'auto',
-      padding: '11px 8px',
+      padding: '10px 8px',
       '&:not($disabled)': {
         '&.customColor': {
           '&-success': makeTextButtonStyle(theme, 'success'),
@@ -133,10 +133,13 @@ export const makeLightNormalOverrides = theme => ({
         },
         '&.customColor': {
           '&-primary': {
-            color: theme.palette.text.primary,
-            borderColor: theme.palette.border.main,
+            color: theme.palette.primary.main,
+            borderColor: theme.palette.primary.main,
             '&:hover': {
-              backgroundColor: theme.palette.action.hover,
+              backgroundColor: alpha(
+                theme.palette.primary.main,
+                theme.palette.action.hoverOpacity
+              ),
               '@media (hover: none)': {
                 backgroundColor: 'transparent'
               }
@@ -608,6 +611,66 @@ export const makeLightNormalOverrides = theme => ({
       }
     }
   },
+  MuiAvatar: {
+    root: {
+      fontWeight: 600,
+      '&.size': {
+        '&-xs': {
+          width: 16,
+          height: 16,
+          fontSize: 8,
+          '& svg': {
+            width: 10,
+            height: 10
+          }
+        },
+        '&-s': {
+          width: 24,
+          height: 24,
+          fontSize: 11,
+          '& svg': {
+            width: 16,
+            height: 16
+          }
+        },
+        '&-m': {
+          width: 32,
+          height: 32,
+          fontSize: 16,
+          '& svg': {
+            width: 20,
+            height: 20
+          }
+        },
+        '&-l': {
+          width: 48,
+          height: 48,
+          fontSize: 24,
+          '& svg': {
+            width: 28,
+            height: 28
+          }
+        },
+        '&-xl': {
+          width: 64,
+          height: 64,
+          fontSize: 32,
+          '& svg': {
+            width: 36,
+            height: 36
+          }
+        }
+      },
+      '&.disabled': {
+        color: theme.palette.primary.contrastText,
+        background: theme.palette.action.disabledBackground
+      }
+    },
+    colorDefault: {
+      backgroundColor: theme.palette.background.paper,
+      color: theme.palette.text.secondary
+    }
+  },
   MuiDivider: {
     inset: {
       marginLeft: 64,
@@ -674,13 +737,16 @@ export const makeLightNormalOverrides = theme => ({
     root: {
       color: theme.palette.text.secondary,
       '&.small': {
-        padding: 3
+        padding: 8
       },
       '&.medium': {
         padding: 12
       },
       '&.large': {
         padding: 16
+      },
+      '&.xlarge': {
+        padding: 20
       },
       '&.dialogIconButton': {
         backgroundColor: theme.palette.background.paper,
@@ -866,6 +932,9 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiFab: {
     root: {
+      borderRadius: 28,
+      width: 96,
+      height: 96,
       color: theme.palette.text.primary,
       backgroundColor: theme.palette.background.paper,
       '&:hover': {
@@ -875,23 +944,41 @@ export const makeLightNormalOverrides = theme => ({
         backgroundColor: theme.palette.background.paper
       }
     },
+    primary: {
+      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.light,
+      '&:hover': {
+        backgroundColor: darken(theme.palette.primary.light, 0.05),
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.primary.light
+        }
+      }
+    },
     extended: {
-      borderRadius: 56 / 2,
+      borderRadius: 16,
       height: 56,
       minWidth: 56,
       padding: '0 20px',
       '&$sizeSmall': {
-        borderRadius: 40 / 2,
-        height: 40,
-        minWidth: 40,
+        borderRadius: 16,
+        height: 42,
+        minWidth: 42,
         padding: '0 12px'
       },
       '&$sizeMedium': {
-        borderRadius: 48 / 2,
+        borderRadius: 16,
         height: 48,
         minWidth: 48,
         padding: '0 16px'
       }
+    },
+    sizeSmall: {
+      borderRadius: 12
+    },
+    sizeMedium: {
+      borderRadius: 16,
+      width: 56,
+      height: 56
     }
   },
   MuiMobileStepper: {
