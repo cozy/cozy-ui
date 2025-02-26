@@ -3,7 +3,7 @@ import React from 'react'
 import { IOCozyFile } from 'cozy-client/types/types'
 
 import styles from '../AppTile/styles.styl'
-import { nameToColor } from '../Avatar/helpers'
+import { nameToColor } from '../legacy/Avatar/helpers'
 import { TileIcon } from '../Tile'
 import Typography from '../Typography'
 import { makeStyles } from '../styles'

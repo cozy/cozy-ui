@@ -123,7 +123,7 @@ module.exports = {
     {
       name: 'Legacy',
       components: () => [
-        '../react/Avatar',
+        '../react/legacy/Avatar',
         '../react/BarButton',
         '../react/BarTitle',
         '../react/legacy/Breadcrumbs',

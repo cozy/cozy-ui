@@ -4,8 +4,8 @@ import React from 'react'
 import { models } from 'cozy-client'
 
 import ContactName from './ContactName'
-import { Avatar } from '../../Avatar'
 import { TableCell } from '../../deprecated/Table'
+import { Avatar } from '../../legacy/Avatar'
 import styles from '../styles.styl'
 
 const { getDisplayName, getInitials } = models.contact
