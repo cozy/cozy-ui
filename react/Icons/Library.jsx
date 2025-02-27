@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/library.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/library.svg` to regenerate
 import React from 'react'
 
+import SvgLibraryTwake from './Library_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLibrary(props) {
+  if (isTwakeTheme()) return SvgLibraryTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

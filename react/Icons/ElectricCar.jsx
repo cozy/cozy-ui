@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-car.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-car.svg` to regenerate
 import React from 'react'
 
+import SvgElectricCarTwake from './ElectricCar_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgElectricCar(props) {
+  if (isTwakeTheme()) return SvgElectricCarTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

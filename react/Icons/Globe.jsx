@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/globe.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/globe.svg` to regenerate
 import React from 'react'
 
+import SvgGlobeTwake from './Globe_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgGlobe(props) {
+  if (isTwakeTheme()) return SvgGlobeTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

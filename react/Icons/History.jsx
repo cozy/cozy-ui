@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/history.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/history.svg` to regenerate
 import React from 'react'
 
+import SvgHistoryTwake from './History_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgHistory(props) {
+  if (isTwakeTheme()) return SvgHistoryTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

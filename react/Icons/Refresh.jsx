@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/refresh.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/refresh.svg` to regenerate
 import React from 'react'
 
+import SvgRefreshTwake from './Refresh_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRefresh(props) {
+  if (isTwakeTheme()) return SvgRefreshTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/lightbulb.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lightbulb.svg` to regenerate
 import React from 'react'
 
+import SvgLightbulbTwake from './Lightbulb_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLightbulb(props) {
+  if (isTwakeTheme()) return SvgLightbulbTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

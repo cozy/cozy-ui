@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/star.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/star.svg` to regenerate
 import React from 'react'
 
+import SvgStarTwake from './Star_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgStar(props) {
+  if (isTwakeTheme()) return SvgStarTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

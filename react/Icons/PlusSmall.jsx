@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/plus-small.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/plus-small.svg` to regenerate
 import React from 'react'
 
+import SvgPlusSmallTwake from './PlusSmall_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPlusSmall(props) {
+  if (isTwakeTheme()) return SvgPlusSmallTwake(props)
   return (
     <svg viewBox="0 0 12 12" {...props}>
       <defs>

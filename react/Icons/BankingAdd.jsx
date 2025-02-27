@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/banking-add.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/banking-add.svg` to regenerate
 import React from 'react'
 
+import SvgBankingAddTwake from './BankingAdd_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgBankingAdd(props) {
+  if (isTwakeTheme()) return SvgBankingAddTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

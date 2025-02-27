@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/shield.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/shield.svg` to regenerate
 import React from 'react'
 
+import SvgShieldTwake from './Shield_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgShield(props) {
+  if (isTwakeTheme()) return SvgShieldTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder-moveto.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder-moveto.svg` to regenerate
 import React from 'react'
 
+import SvgFolderMovetoTwake from './FolderMoveto_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFolderMoveto(props) {
+  if (isTwakeTheme()) return SvgFolderMovetoTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

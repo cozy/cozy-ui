@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/qualify.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/qualify.svg` to regenerate
 import React from 'react'
 
+import SvgQualifyTwake from './Qualify_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgQualify(props) {
+  if (isTwakeTheme()) return SvgQualifyTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

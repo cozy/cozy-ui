@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/copy.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/copy.svg` to regenerate
 import React from 'react'
 
+import SvgCopyTwake from './Copy_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCopy(props) {
+  if (isTwakeTheme()) return SvgCopyTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

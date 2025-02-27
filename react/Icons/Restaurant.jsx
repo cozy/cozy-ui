@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/restaurant.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/restaurant.svg` to regenerate
 import React from 'react'
 
+import SvgRestaurantTwake from './Restaurant_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRestaurant(props) {
+  if (isTwakeTheme()) return SvgRestaurantTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/unknow.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/unknow.svg` to regenerate
 import React from 'react'
 
+import SvgUnknowTwake from './Unknow_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgUnknow(props) {
+  if (isTwakeTheme()) return SvgUnknowTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

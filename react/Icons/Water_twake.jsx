@@ -1,0 +1,12 @@
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/water_twake.svg` to regenerate;
+import React from 'react'
+
+function SvgWaterTwake(props) {
+  return (
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M6.4 0C2.136 3.64 0 6.784 0 9.44 0 13.424 3.04 16 6.4 16c3.36 0 6.4-2.576 6.4-6.56 0-2.656-2.136-5.8-6.4-9.44zm0 14.4c-2.68 0-4.8-2.056-4.8-4.96 0-1.872 1.56-4.352 4.8-7.312 3.24 2.96 4.8 5.432 4.8 7.312 0 2.904-2.12 4.96-4.8 4.96zM3.064 9.6a.6.6 0 01.592.496c.328 1.776 1.824 2.384 2.912 2.296a.602.602 0 01.632.6c0 .32-.256.584-.576.6-1.704.104-3.696-.872-4.152-3.296a.6.6 0 01.592-.696z" />
+    </svg>
+  )
+}
+
+export default SvgWaterTwake

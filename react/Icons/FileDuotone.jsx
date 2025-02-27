@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-duotone.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-duotone.svg` to regenerate
 import React from 'react'
 
+import SvgFileDuotoneTwake from './FileDuotone_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileDuotone(props) {
+  if (isTwakeTheme()) return SvgFileDuotoneTwake(props)
   return (
     <svg viewBox="0 0 26 32" {...props}>
       <g fillRule="evenodd">
