@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/number.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/number.svg` to regenerate
 import React from 'react'
 
+import SvgNumberTwake from './Number_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgNumber(props) {
+  if (isTwakeTheme()) return SvgNumberTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/swap.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/swap.svg` to regenerate
 import React from 'react'
 
+import SvgSwapTwake from './Swap_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSwap(props) {
+  if (isTwakeTheme()) return SvgSwapTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/face-id.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/face-id.svg` to regenerate
 import React from 'react'
 
+import SvgFaceIdTwake from './FaceId_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFaceId(props) {
+  if (isTwakeTheme()) return SvgFaceIdTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

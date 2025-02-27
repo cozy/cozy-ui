@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tram.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tram.svg` to regenerate
 import React from 'react'
 
+import SvgTramTwake from './Tram_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTram(props) {
+  if (isTwakeTheme()) return SvgTramTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

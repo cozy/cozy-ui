@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/file-outline.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-outline.svg` to regenerate
 import React from 'react'
 
+import SvgFileOutlineTwake from './FileOutline_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileOutline(props) {
+  if (isTwakeTheme()) return SvgFileOutlineTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

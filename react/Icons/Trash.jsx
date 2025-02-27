@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/trash.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/trash.svg` to regenerate
 import React from 'react'
 
+import SvgTrashTwake from './Trash_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTrash(props) {
+  if (isTwakeTheme()) return SvgTrashTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

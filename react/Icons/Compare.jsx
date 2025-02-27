@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/compare.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/compare.svg` to regenerate
 import React from 'react'
 
+import SvgCompareTwake from './Compare_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCompare(props) {
+  if (isTwakeTheme()) return SvgCompareTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/download.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/download.svg` to regenerate
 import React from 'react'
 
+import SvgDownloadTwake from './Download_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgDownload(props) {
+  if (isTwakeTheme()) return SvgDownloadTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

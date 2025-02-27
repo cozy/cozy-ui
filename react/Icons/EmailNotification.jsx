@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/email-notification.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/email-notification.svg` to regenerate
 import React from 'react'
 
+import SvgEmailNotificationTwake from './EmailNotification_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgEmailNotification(props) {
+  if (isTwakeTheme()) return SvgEmailNotificationTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

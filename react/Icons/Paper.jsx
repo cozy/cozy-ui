@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paper.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paper.svg` to regenerate
 import React from 'react'
 
+import SvgPaperTwake from './Paper_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPaper(props) {
+  if (isTwakeTheme()) return SvgPaperTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

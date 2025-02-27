@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/work.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/work.svg` to regenerate
 import React from 'react'
 
+import SvgWorkTwake from './Work_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgWork(props) {
+  if (isTwakeTheme()) return SvgWorkTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

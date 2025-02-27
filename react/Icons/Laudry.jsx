@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laudry.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laudry.svg` to regenerate
 import React from 'react'
 
+import SvgLaudryTwake from './Laudry_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLaudry(props) {
+  if (isTwakeTheme()) return SvgLaudryTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M10.425 11.475A3.5 3.5 0 015.5 11.5l4.95-4.95a3.5 3.5 0 01-.025 4.925z" />

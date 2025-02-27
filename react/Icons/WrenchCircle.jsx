@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/wrench-circle.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wrench-circle.svg` to regenerate
 import React from 'react'
 
+import SvgWrenchCircleTwake from './WrenchCircle_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgWrenchCircle(props) {
+  if (isTwakeTheme()) return SvgWrenchCircleTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

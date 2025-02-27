@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/album-remove.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/album-remove.svg` to regenerate
 import React from 'react'
 
+import SvgAlbumRemoveTwake from './AlbumRemove_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgAlbumRemove(props) {
+  if (isTwakeTheme()) return SvgAlbumRemoveTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

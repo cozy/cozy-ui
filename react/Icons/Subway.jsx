@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/subway.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/subway.svg` to regenerate
 import React from 'react'
 
+import SvgSubwayTwake from './Subway_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSubway(props) {
+  if (isTwakeTheme()) return SvgSubwayTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

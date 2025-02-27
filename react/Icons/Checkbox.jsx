@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/checkbox.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/checkbox.svg` to regenerate
 import React from 'react'
 
+import SvgCheckboxTwake from './Checkbox_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCheckbox(props) {
+  if (isTwakeTheme()) return SvgCheckboxTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M14 14V8.243l2-2V14a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2h11.757l-2 2H2v12h12z" />

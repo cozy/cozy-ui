@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/remboursement.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/remboursement.svg` to regenerate
 import React from 'react'
 
+import SvgRemboursementTwake from './Remboursement_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRemboursement(props) {
+  if (isTwakeTheme()) return SvgRemboursementTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

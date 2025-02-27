@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lock-screen.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lock-screen.svg` to regenerate
 import React from 'react'
 
+import SvgLockScreenTwake from './LockScreen_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLockScreen(props) {
+  if (isTwakeTheme()) return SvgLockScreenTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M4 2h8v2h2V2a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h2v-2H4V2z" />

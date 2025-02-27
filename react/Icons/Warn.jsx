@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/warn.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/warn.svg` to regenerate
 import React from 'react'
 
+import SvgWarnTwake from './Warn_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgWarn(props) {
+  if (isTwakeTheme()) return SvgWarnTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <path

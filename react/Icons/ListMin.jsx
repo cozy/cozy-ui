@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/list-min.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/list-min.svg` to regenerate
 import React from 'react'
 
+import SvgListMinTwake from './ListMin_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgListMin(props) {
+  if (isTwakeTheme()) return SvgListMinTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

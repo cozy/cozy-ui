@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/chess.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/chess.svg` to regenerate
 import React from 'react'
 
+import SvgChessTwake from './Chess_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgChess(props) {
+  if (isTwakeTheme()) return SvgChessTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

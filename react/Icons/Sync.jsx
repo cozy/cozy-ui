@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/sync.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/sync.svg` to regenerate
 import React from 'react'
 
+import SvgSyncTwake from './Sync_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSync(props) {
+  if (isTwakeTheme()) return SvgSyncTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

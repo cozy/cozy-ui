@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder.svg` to regenerate
 import React from 'react'
 
+import SvgFolderTwake from './Folder_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFolder(props) {
+  if (isTwakeTheme()) return SvgFolderTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

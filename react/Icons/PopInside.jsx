@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pop-inside.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pop-inside.svg` to regenerate
 import React from 'react'
 
+import SvgPopInsideTwake from './PopInside_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPopInside(props) {
+  if (isTwakeTheme()) return SvgPopInsideTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

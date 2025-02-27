@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tab.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tab.svg` to regenerate
 import React from 'react'
 
+import SvgTabTwake from './Tab_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTab(props) {
+  if (isTwakeTheme()) return SvgTabTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

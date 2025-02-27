@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/flash-auto.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/flash-auto.svg` to regenerate
 import React from 'react'
 
+import SvgFlashAutoTwake from './FlashAuto_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFlashAuto(props) {
+  if (isTwakeTheme()) return SvgFlashAutoTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

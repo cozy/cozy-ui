@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-scooter.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-scooter.svg` to regenerate
 import React from 'react'
 
+import SvgElectricScooterTwake from './ElectricScooter_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgElectricScooter(props) {
+  if (isTwakeTheme()) return SvgElectricScooterTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M4.736.17c.018-.053-.012-.11-.075-.143-.088-.046-.212-.032-.276.03L.115 4.15A.345.345 0 000 4.398c0 .232.265.42.593.42h1.592l-.658 3.021c-.011.053.021.106.084.137.09.043.213.027.274-.037l4.011-4.142A.34.34 0 006 3.561c0-.231-.265-.419-.593-.419H3.765L4.736.171z" />

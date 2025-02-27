@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/telephone.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/telephone.svg` to regenerate
 import React from 'react'
 
+import SvgTelephoneTwake from './Telephone_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTelephone(props) {
+  if (isTwakeTheme()) return SvgTelephoneTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

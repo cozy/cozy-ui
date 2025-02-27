@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/radio-checked.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/radio-checked.svg` to regenerate
 import React from 'react'
 
+import SvgRadioCheckedTwake from './RadioChecked_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRadioChecked(props) {
+  if (isTwakeTheme()) return SvgRadioCheckedTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

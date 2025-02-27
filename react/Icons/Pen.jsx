@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/pen.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pen.svg` to regenerate
 import React from 'react'
 
+import SvgPenTwake from './Pen_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPen(props) {
+  if (isTwakeTheme()) return SvgPenTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <defs>

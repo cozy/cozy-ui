@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/share.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/share.svg` to regenerate
 import React from 'react'
 
+import SvgShareTwake from './Share_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgShare(props) {
+  if (isTwakeTheme()) return SvgShareTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

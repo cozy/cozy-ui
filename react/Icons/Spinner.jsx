@@ -1,9 +1,13 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/spinner.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/spinner.svg` to regenerate
 import React from 'react'
 
+import SvgSpinnerTwake from './Spinner_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSpinner(props) {
+  if (isTwakeTheme()) return SvgSpinnerTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props} role="progressbar" aria-busy="true">
+    <svg viewBox="0 0 32 32" {...props}>
       <path
         opacity={0.25}
         d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"

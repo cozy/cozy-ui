@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/rise.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/rise.svg` to regenerate
 import React from 'react'
 
+import SvgRiseTwake from './Rise_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRise(props) {
+  if (isTwakeTheme()) return SvgRiseTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

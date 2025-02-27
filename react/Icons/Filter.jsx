@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/filter.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/filter.svg` to regenerate
 import React from 'react'
 
+import SvgFilterTwake from './Filter_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFilter(props) {
+  if (isTwakeTheme()) return SvgFilterTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

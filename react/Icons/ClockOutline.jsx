@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/clock-outline.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/clock-outline.svg` to regenerate
 import React from 'react'
 
+import SvgClockOutlineTwake from './ClockOutline_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgClockOutline(props) {
+  if (isTwakeTheme()) return SvgClockOutlineTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

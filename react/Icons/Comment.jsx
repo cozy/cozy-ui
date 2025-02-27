@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/comment.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/comment.svg` to regenerate
 import React from 'react'
 
+import SvgCommentTwake from './Comment_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgComment(props) {
+  if (isTwakeTheme()) return SvgCommentTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

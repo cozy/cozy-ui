@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/reply.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/reply.svg` to regenerate
 import React from 'react'
 
+import SvgReplyTwake from './Reply_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgReply(props) {
+  if (isTwakeTheme()) return SvgReplyTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

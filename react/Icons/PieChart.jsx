@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/pie-chart.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pie-chart.svg` to regenerate
 import React from 'react'
 
+import SvgPieChartTwake from './PieChart_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPieChart(props) {
+  if (isTwakeTheme()) return SvgPieChartTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
