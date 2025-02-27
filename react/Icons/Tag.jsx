@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tag.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tag.svg` to regenerate
 import React from 'react'
 
+import SvgTagTwake from './Tag_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTag(props) {
+  if (isTwakeTheme()) return SvgTagTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M5 6a1 1 0 100-2 1 1 0 000 2z" />

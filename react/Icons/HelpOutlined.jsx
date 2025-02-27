@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/help-outlined.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/help-outlined.svg` to regenerate
 import React from 'react'
 
+import SvgHelpOutlinedTwake from './HelpOutlined_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgHelpOutlined(props) {
+  if (isTwakeTheme()) return SvgHelpOutlinedTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

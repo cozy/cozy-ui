@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/eye-closed.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/eye-closed.svg` to regenerate
 import React from 'react'
 
+import SvgEyeClosedTwake from './EyeClosed_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgEyeClosed(props) {
+  if (isTwakeTheme()) return SvgEyeClosedTwake(props)
   return (
     <svg viewBox="0 0 20 20" {...props}>
       <g fillRule="evenodd">

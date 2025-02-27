@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/safe.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/safe.svg` to regenerate
 import React from 'react'
 
+import SvgSafeTwake from './Safe_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSafe(props) {
+  if (isTwakeTheme()) return SvgSafeTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

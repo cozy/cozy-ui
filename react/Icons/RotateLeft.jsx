@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/rotate-left.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/rotate-left.svg` to regenerate
 import React from 'react'
 
+import SvgRotateLeftTwake from './RotateLeft_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgRotateLeft(props) {
+  if (isTwakeTheme()) return SvgRotateLeftTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

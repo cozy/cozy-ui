@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/attachment.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/attachment.svg` to regenerate
 import React from 'react'
 
+import SvgAttachmentTwake from './Attachment_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgAttachment(props) {
+  if (isTwakeTheme()) return SvgAttachmentTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

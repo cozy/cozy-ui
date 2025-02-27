@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/printer.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/printer.svg` to regenerate
 import React from 'react'
 
+import SvgPrinterTwake from './Printer_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPrinter(props) {
+  if (isTwakeTheme()) return SvgPrinterTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

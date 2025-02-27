@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/school.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/school.svg` to regenerate
 import React from 'react'
 
+import SvgSchoolTwake from './School_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgSchool(props) {
+  if (isTwakeTheme()) return SvgSchoolTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

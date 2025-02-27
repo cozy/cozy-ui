@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text-info.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text-info.svg` to regenerate
 import React from 'react'
 
+import SvgTextInfoTwake from './TextInfo_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTextInfo(props) {
+  if (isTwakeTheme()) return SvgTextInfoTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/album.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/album.svg` to regenerate
 import React from 'react'
 
+import SvgAlbumTwake from './Album_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgAlbum(props) {
+  if (isTwakeTheme()) return SvgAlbumTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

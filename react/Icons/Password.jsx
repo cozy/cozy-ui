@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/password.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/password.svg` to regenerate
 import React from 'react'
 
+import SvgPasswordTwake from './Password_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPassword(props) {
+  if (isTwakeTheme()) return SvgPasswordTwake(props)
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/task.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/task.svg` to regenerate
 import React from 'react'
 
+import SvgTaskTwake from './Task_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTask(props) {
+  if (isTwakeTheme()) return SvgTaskTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path d="M5 4a1 1 0 000 2h6a1 1 0 100-2H5zM4 8a1 1 0 011-1h6a1 1 0 110 2H5a1 1 0 01-1-1zm1 2a1 1 0 100 2h6a1 1 0 100-2H5z" />

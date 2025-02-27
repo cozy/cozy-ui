@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/groups.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/groups.svg` to regenerate
 import React from 'react'
 
+import SvgGroupsTwake from './Groups_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgGroups(props) {
+  if (isTwakeTheme()) return SvgGroupsTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/justice.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/justice.svg` to regenerate
 import React from 'react'
 
+import SvgJusticeTwake from './Justice_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgJustice(props) {
+  if (isTwakeTheme()) return SvgJusticeTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

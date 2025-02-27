@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/shop.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/shop.svg` to regenerate
 import React from 'react'
 
+import SvgShopTwake from './Shop_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgShop(props) {
+  if (isTwakeTheme()) return SvgShopTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path

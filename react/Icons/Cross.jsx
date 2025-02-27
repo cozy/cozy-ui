@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/cross.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross.svg` to regenerate
 import React from 'react'
 
+import SvgCrossTwake from './Cross_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCross(props) {
+  if (isTwakeTheme()) return SvgCrossTwake(props)
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
