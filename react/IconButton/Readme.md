@@ -81,6 +81,7 @@ import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
     className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
     classes={{ label: "u-flex u-w-auto" }}
     label={<Icon icon={StopIcon} size={12} />}
+    size={isTwakeTheme() ? "small" : "medium"}
   />
 </IconButton>
 ```

@@ -1,66 +1,78 @@
-export const makeTwakeTypography = palette => ({
+export const makeTwakeTypography = () => ({
   fontFamily: 'var(--primaryFont)',
   h1: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    lineHeight: 1.087,
-    letterSpacing: -0.8
+    fontSize: 45,
+    fontWeight: 600,
+    lineHeight: 1.087
   },
   h2: {
     fontSize: 32,
-    fontWeight: 'bold',
-    lineHeight: 1.313,
-    letterSpacing: -0.4
+    fontWeight: 600,
+    lineHeight: 1.313
   },
   h3: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: 600,
     lineHeight: 1.167
   },
   h4: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 22,
+    fontWeight: 600,
     lineHeight: 1.167
   },
   h5: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    lineHeight: 1.313
+    fontSize: 16,
+    fontWeight: 500,
+    lineHeight: 1.313,
+    letterSpacing: '0.15px'
   },
   h6: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    lineHeight: 1.313
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: 1.313,
+    letterSpacing: '0.1px'
   },
   subtitle1: {
-    fontWeight: 'bold',
     fontSize: 14,
+    fontWeight: 500,
     lineHeight: 1.358,
-    textTransform: 'uppercase'
+    letterSpacing: '0.1px'
   },
   subtitle2: {
-    fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: 14,
+    fontWeight: 600,
     lineHeight: 1.334,
-    textTransform: 'uppercase'
+    letterSpacing: '0.25px'
   },
   body1: {
     fontSize: 16,
-    lineHeight: 1.313
+    fontWeight: 400,
+    lineHeight: 1.313,
+    letterSpacing: '-0.15px'
   },
   body2: {
     fontSize: 14,
-    lineHeight: 1.313
+    fontWeight: 500,
+    lineHeight: 1.313,
+    letterSpacing: '0.25px'
   },
   button: {
-    fontWeight: 'bold',
-    fontSize: 14,
-    lineHeight: 1.313
+    fontSize: 16,
+    fontWeight: 500,
+    lineHeight: 1.313,
+    textTransform: 'inherit'
   },
   caption: {
     fontSize: 12,
+    fontWeight: 500,
     lineHeight: 1.313,
-    color: palette.text.secondary,
-    display: 'block'
+    letterSpacing: '0.5px'
+  },
+  overline: {
+    fontSize: 12,
+    fontWeight: 500,
+    lineHeight: '16px',
+    letterSpacing: '0.4px',
+    textTransform: 'inherit'
   }
 })
