@@ -184,6 +184,7 @@
   "peerDependencies": {
     "cozy-client": ">=52.1.0",
     "cozy-device-helper": "^2.0.0",
+    "cozy-flags": ">=2.10.1",
     "cozy-intent": ">=2.29.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
