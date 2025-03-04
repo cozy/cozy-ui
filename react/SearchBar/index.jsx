@@ -8,11 +8,13 @@ import ButtonBase from '../ButtonBase'
 import Icon from '../Icon'
 import { iconPropType } from '../Icon'
 import IconButton from '../IconButton'
+import CrossIcon from '../Icons/Cross'
 import CrossCircleIcon from '../Icons/CrossCircle'
 import MagnifierIcon from '../Icons/Magnifier'
 import InputBase from '../InputBase'
 import Paper from '../Paper'
 import Typography from '../Typography'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { useI18n, useExtendI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
@@ -42,6 +44,9 @@ const useStyles = makeStyles(theme => ({
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: 'transparent',
+    backgroundColor: isTwakeTheme()
+      ? theme.palette.background.default
+      : theme.palette.background.paper,
     '&:hover': {
       '&:not($disabled):not($focused)': {
         '& $focusHighlight': {
@@ -51,7 +56,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   flat: {
-    backgroundColor: theme.palette.background.contrast
+    backgroundColor: isTwakeTheme()
+      ? theme.palette.background.default
+      : theme.palette.background.contrast
   },
   inputBase: {
     flex: 1,
@@ -214,7 +221,7 @@ const SearchBar = forwardRef(
         )}
         {spreadValue && !disabledClear && (
           <IconButton size="medium" onClick={handleClear}>
-            <Icon icon={CrossCircleIcon} />
+            <Icon icon={isTwakeTheme() ? CrossIcon : CrossCircleIcon} />
           </IconButton>
         )}
         <span className={cx(classes.commonHighlight, classes.focusHighlight)} />
