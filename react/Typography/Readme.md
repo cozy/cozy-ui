@@ -15,6 +15,7 @@ const variants = [
   'h4',
   'h5',
   'button',
+  'overline',
   'subtitle1',
   'subtitle2',
   'body1',
