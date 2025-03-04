@@ -4,6 +4,8 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import Icon from '../Icon'
+import CheckSquareIcon from '../Icons/CheckSquare'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 const logDepecratedCheckbox = createDepreciationLogger()
@@ -19,6 +21,14 @@ const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
       color={error ? 'secondary' : 'primary'}
       indeterminate={mixed}
       disabled={disabled}
+      checkedIcon={
+        <div
+          className="u-flex u-flex-items-center u-flex-justify-center"
+          style={{ width: 24, height: 24 }}
+        >
+          <Icon icon={CheckSquareIcon} size={18} />
+        </div>
+      }
       {...props}
     />
   )
