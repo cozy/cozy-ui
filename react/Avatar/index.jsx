@@ -1,77 +1,42 @@
+import AvatarMui from '@material-ui/core/Avatar'
 import cx from 'classnames'
-import assign from 'lodash/assign'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { nameToColor } from './helpers'
-import styles from './styles.styl'
-import { createSizeStyle } from '../Circle'
-import Icon, { iconPropType } from '../Icon'
-import PeopleIcon from '../Icons/People'
+import { colorMapping } from './helpers'
+import { makeStyles } from '../styles'
 
-const createBgColorStyle = ({ text, textId }) =>
-  text ? { backgroundColor: `${nameToColor(textId || text)}` } : {}
+const useStyles = makeStyles(theme => ({
+  colorDefault: {
+    color: ({ color }) => (color ? theme.palette.primary.contrastText : ''),
+    background: ({ color }) => colorMapping[color]
+  }
+}))
 
-export const Avatar = ({
-  text,
-  textId,
-  image,
-  size,
-  className,
-  style,
-  disabled,
-  ghost,
-  icon
-}) => {
-  const sizeStyle = createSizeStyle(size)
-  const bgColorStyle = createBgColorStyle({ text, textId })
-  const avatarStyle = assign(bgColorStyle, sizeStyle, style)
-  const IconToRender = Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon
+const Avatar = ({ className, color, size, disabled, ...props }) => {
+  const classes = useStyles({ color })
+
   return (
-    <div
-      data-testid="Avatar" // used by a test in cozy-contacts
-      className={cx(
-        styles['c-avatar'],
-        text ? styles['c-avatar--text'] : '',
-        image ? styles['c-avatar--image'] : '',
-        disabled ? styles['c-avatar--disabled'] : '',
-        ghost ? styles['c-avatar--ghost'] : '',
-        className
-      )}
-      style={avatarStyle}
-    >
-      {image && <img src={image} className={styles['c-avatar-image']} alt="" />}
-      {!image && text && (
-        <span className={styles['c-avatar-initials']}>{text}</span>
-      )}
-      {!image && !text && IconToRender}
-    </div>
+    <AvatarMui
+      classes={classes}
+      className={cx(className, `size-${size}`, { disabled: !!disabled })}
+      {...props}
+    />
   )
 }
 
 Avatar.propTypes = {
-  text: PropTypes.string,
-  image: PropTypes.string,
+  className: PropTypes.string,
   size: PropTypes.oneOfType([
-    PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
+    PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
     PropTypes.number
   ]),
-  className: PropTypes.string,
-  disabled: PropTypes.bool,
-  icon: PropTypes.oneOfType([PropTypes.node, iconPropType]),
-  ghost: PropTypes.bool,
-  style: PropTypes.object
+  color: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
 Avatar.defaultProps = {
-  text: '',
-  image: '',
-  size: 'medium',
-  className: '',
-  disabled: false,
-  icon: PeopleIcon,
-  ghost: false,
-  style: {}
+  size: 'm'
 }
 
 export default Avatar
