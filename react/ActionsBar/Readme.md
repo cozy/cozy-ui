@@ -7,7 +7,7 @@ import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename'
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
 import ActionsBar from 'cozy-ui/transpiled/react/ActionsBar'
-import { makeActions, modify, emailTo, print, viewInContacts, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
+import { makeActions, modify, emailTo, download, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
 
 const selectedItem = {
     _id: 1,
@@ -21,7 +21,7 @@ const doc = {
   email: [{ address: 'johndoe@cozy.cc' }],
 }
 
-initialState = { selected: isTesting() ? [doc, doc] : [] }
+initialState = { selected: isTesting() ? [doc, doc] : [doc, doc] }
 
 const addSelected = () => setState(previousState => {
     const arr = previousState.selected
@@ -35,7 +35,7 @@ const removeSelected = () => setState(previousState => {
     return { selected: arr }
 })
 
-const actions = makeActions([ modify, viewInContacts, call, smsTo, emailTo ])
+const actions = makeActions([ modify, call, download, smsTo, emailTo ])
 
 ;
 
