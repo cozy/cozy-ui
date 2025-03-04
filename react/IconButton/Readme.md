@@ -16,7 +16,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const columns = [{ title: 'default', disabled: false }, { title: 'disabled', disabled: true }]
-const initialVariants = [{ small: false, medium: true, large: false }]
+const initialVariants = [{ small: false, medium: true, large: false, xlarge: false }]
 // -->
 
 ;
