@@ -1,3 +1,4 @@
 {
-  "selected": "%{smart_count} item selected |||| %{smart_count} items selected"
+  "selected": "%{smart_count} item selected |||| %{smart_count} items selected",
+  "selected_light": "%{smart_count} item |||| %{smart_count} items"
 }
