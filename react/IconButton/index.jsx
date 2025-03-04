@@ -35,7 +35,7 @@ IconButton.propTypes = {
     'secondary',
     'error'
   ]),
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge'])
 }
 
 export default IconButton
