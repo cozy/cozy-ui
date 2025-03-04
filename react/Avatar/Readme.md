@@ -1,49 +1,71 @@
-#### Available sizes: xsmall, small, medium (default), large, xlarge
+### Grouped
 
-The size can also be specifically defined using a number of pixels.
+```jsx
+
+import AvatarGroup, { spacingByAvatarSize } from 'cozy-ui/transpiled/react/AvatarGroup'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import { supportedColors } from 'cozy-ui/transpiled/react/Avatar/helpers'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
+import cozyLogo from '../../docs/cozy-logo_white_128.png'
+
+const sizes = ['xs', 's', 'm', 'l', 'xl']
+
+;
+
+sizes.map(size => (
+  <AvatarGroup className="u-mb-half" key={size} max={5} size={size}>
+    <Avatar size={size} color={supportedColors[0]}>AB</Avatar>
+    <Avatar size={size} color={supportedColors[1]}>BC</Avatar>
+    <Avatar size={size} color={supportedColors[2]}><Icon icon={LinkIcon} /></Avatar>
+    <Avatar size={size} src={cozyLogo} />
+    <Avatar size={size} color={supportedColors[4]}>EF</Avatar>
+    <Avatar size={size} color={supportedColors[5]}>FG</Avatar>
+  </AvatarGroup>
+))
+```
+
+### Mui
 
 ```jsx
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
-import Avatar from 'cozy-ui/transpiled/react/Avatar';
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import { supportedColors } from 'cozy-ui/transpiled/react/Avatar/helpers'
+import Icon from 'cozy-ui/transpiled/react/Icon'
 
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
-import palette from 'cozy-ui/transpiled/react/palette';
-import Variants from 'cozy-ui/docs/components/Variants';
+import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
+import Variants from 'cozy-ui/docs/components/Variants'
 
-const getStyle = size => ({
-  styleOverlap: {
-    marginLeft: size === 'xsmall' ? '-0.5rem' : '-1rem'
-  },
-  custom: {
-    color: 'black', backgroundColor: palette.seafoamGreen
-    }
-})
+const sizes = ['xs', 's', 'm', 'l', 'xl']
 
-const sizes = ['xsmall', 'small', 'medium', 'large', 'xlarge', 24];
+const initialVariants = [{ disabled: false }]
 
-const initialVariants = [
-  { disabled: false, ghost: false, overlap: false },
-];
+;
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
     <>
-      {sizes.map((size, idx) => (
-        <React.Fragment key={size}>
-          {idx === sizes.length - 1 && <hr />}
-          <div className="u-flex u-mb-half">
-            <Avatar size={size} style={variant.overlap ? getStyle(size).styleOverlap : null} disabled={variant.disabled} ghost={variant.ghost} />
-            <Avatar size={size} style={variant.overlap ? getStyle(size).styleOverlap : null} text="CD" disabled={variant.disabled} ghost={variant.ghost} />
-            <Avatar size={size} style={variant.overlap ? getStyle(size).styleOverlap : null} image={cozyLogo} disabled={variant.disabled} ghost={variant.ghost} />
-            <Avatar size={size} style={variant.overlap ? getStyle(size).styleOverlap : null} icon={LinkIcon} disabled={variant.disabled} ghost={variant.ghost} />
-            <Avatar size={size} style={variant.overlap ? {...getStyle(size).styleOverlap, ...getStyle().custom} : getStyle().custom} text="CD" disabled={variant.disabled} ghost={variant.ghost} />
-            <Avatar size={size} style={variant.overlap ? getStyle(size).styleOverlap : null} icon={<Icon icon={WarningIcon} />} disabled={variant.disabled} ghost={variant.ghost} />
-          </div>
-        </React.Fragment>
+      {supportedColors.map(color => (
+        <div key={color} className="u-flex u-flex-items-center u-mb-half" style={{ gap: '0.5rem' }}>
+          {sizes.map(size => (
+            <React.Fragment key={size}>
+              <Avatar size={size} color={color} disabled={variant.disabled} />
+              <Avatar size={size} color={color} disabled={variant.disabled}>AB</Avatar>
+              <Avatar size={size} color={color} disabled={variant.disabled}><Icon icon={LinkIcon} /></Avatar>
+            </React.Fragment>
+          ))}
+        </div>
       ))}
+      <div className="u-flex u-flex-items-center u-mb-half" style={{ gap: '0.5rem' }}>
+        {sizes.map(size => (
+          <React.Fragment key={size}>
+            <Avatar size={size} src={cozyLogo} disabled={variant.disabled} />
+            <Avatar size={size} disabled={variant.disabled} />
+          </React.Fragment>
+        ))}
+      </div>
     </>
   )}
 </Variants>
