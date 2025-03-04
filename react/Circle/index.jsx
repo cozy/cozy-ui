@@ -3,11 +3,26 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
+const sizeNameToPx = {
+  xsmall: 16,
+  small: 32,
+  medium: 40,
+  large: 48,
+  xlarge: 64
+}
+const sizeNameToPx_Twake = {
+  xsmall: 16,
+  small: 24,
+  medium: 32,
+  large: 48,
+  xlarge: 64
+}
 
 export const createSizeStyle = size => {
-  const sizeToPixel = Number.isInteger(size)
-    ? size
-    : { xsmall: 16, small: 32, medium: 40, large: 48, xlarge: 64 }[size]
+  const sizeConverter = isTwakeTheme() ? sizeNameToPx_Twake : sizeNameToPx
+  const sizeToPixel = Number.isInteger(size) ? size : sizeConverter[size]
   return { '--circleSize': `${sizeToPixel}px` }
 }
 

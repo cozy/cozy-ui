@@ -14,6 +14,7 @@
 
     &:not(.c-avatar--image)
         background-color var(--silver) !important // to override inline style props
+        background var(--silver) !important // to override inline style props
 
     & .c-avatar-image
         filter grayscale(1)
@@ -21,6 +22,7 @@
 
 .c-avatar--ghost
     background-color transparent !important // to override inline style props
+    background transparent !important // to override inline style props
     border 1px dashed var(--borderGhostColor)
     color var(--secondaryTextColor)
 
