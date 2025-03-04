@@ -207,6 +207,7 @@ module.exports = {
   context: {
     utils: path.resolve(__dirname, 'utils'),
     isTesting: path.resolve(__dirname, '../react/helpers/isTesting'),
+    isTwakeTheme: path.resolve(__dirname, '../react/helpers/isTwakeTheme'),
     content: path.resolve(__dirname, 'fixtures/content')
   },
   styles: {
