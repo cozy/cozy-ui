@@ -5,10 +5,12 @@ Read the original [Tooltip component](https://v4.mui.com/api/tooltip/)
 documentation for more information.
 
 ```jsx
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
-import Tooltip from 'cozy-ui/transpiled/react/Tooltip';
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
+import Tooltip from 'cozy-ui/transpiled/react/Tooltip'
+
+;
 
 <Tooltip
   {...(isTesting() && { open: true } )}
