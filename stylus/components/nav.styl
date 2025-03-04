@@ -14,14 +14,14 @@ $nav
     +medium-screen()
         display          flex
         justify-content  space-around
-        margin           rem(5 0 4)
+        margin           6px 0 4px
         padding-right    0
 
 
 $nav-item
     position        relative
     z-index         var(--zIndex-app)
-    height          rem(48)
+    height          rem(44)
     box-sizing      border-box
     cursor          pointer
 
@@ -29,7 +29,7 @@ $nav-item
         content        ''
         position       absolute
         z-index        var(--zIndex-below)
-        border-radius  rem(0 3 3 0)
+        border-radius  0 8px 8px 0
         top 0
         left 0
         right rem(16)
@@ -52,42 +52,47 @@ $nav-item
 
 $nav-item-icon
     display inline-block
-    margin-right rem(11)
-    color var(--actionColorActive)
+    margin-right 12px
+    color var(--primaryTextColor)
     fill currentColor
 
     svg
         display block
 
-    .is-active &
-        color var(--primaryColor)
-
     :hover > &
-        color var(--actionColorActive)
+        // color var(--actionColorActive)
 
     +medium-screen()
         display block
         margin-right 0
 
         svg
-            margin 0 auto 3px
-            width rem(24)
-            height rem(24)
+            margin 4px auto 5px
+            width rem(16)
+            height rem(16)
 
 $nav-item-text
+    font-size 16px
+    font-weight 500
+    letter-spacing 0.15px
+
     +medium-screen()
         display block
         text-align center
         white-space nowrap
+        font-size 12px
+
+        .is-active &
+            color var(--primaryTextColor)
 
 $nav-link
     display              flex
     box-shadow           border-box
     padding-left         rem(24)
     padding-right        rem(16)
-    line-height          1.5
+    line-height          1.375
     text-decoration      none
-    color                var(--actionColorActive)
+    color                var(--primaryTextColor)
     height               100%
     align-items          center
     flex                 1
@@ -102,15 +107,22 @@ $nav-link
         font-weight  bold
         color  var(--primaryTextColor)
 
+        +medium-screen()
+            background-color initial
+
         .c-nav-icon
             color var(--primaryColor)
+
+            +medium-screen()
+                color var(--primaryTextColor)
+
 
     +medium-screen()
         display              block
         height               auto
         padding              0
         text-align           center
-        font-size            rem(10)
+        font-size            rem(11)
         line-height          rem(12)
         background-position  center top
         background-size      rem(24)
@@ -122,9 +134,10 @@ $nav-link
 
 $nav-item-secondary
     height auto
+    margin 3px 0
 
     & + &
-        margin-top .125rem
+        // margin-top .125rem
 
     +medium-screen()
         &
@@ -135,10 +148,10 @@ $nav-item-secondary
         content        ''
         position       absolute
         z-index        var(--zIndex-below)
-        border-radius  rem(3 0 0 3)
+        border-radius  8px 0 0 8px
         top 0
         right 0
-        left rem(48)
+        left rem(45)
         bottom 0
         background     var(--actionColorHover)
 
@@ -147,19 +160,18 @@ $nav-item-secondary
             content none
 
 $nav-link-secondary
-    padding .5rem 1rem
-    margin-left 3rem
-    border-radius 4px 0 0 4px
+    padding 8px 16px
+    margin-left 2.8rem
+    border-radius 8px 0 0 8px
     box-shadow none
     font-size $small-font-size
-    color var(--actionColorActive)
+    color var(--primaryTextColor)
     text-decoration none
     height auto
 
     &.is-active
         color var(--primaryContrastTextColor)
-        border-right 1px solid var(--actionColorActive)
-        background-color var(--actionColorActive)
+        background-color var(--secondaryColor)
 
 $nav-limiter
     background transparent
