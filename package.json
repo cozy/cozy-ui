@@ -173,7 +173,6 @@
     "node-polyglot": "^2.5.0",
     "normalize.css": "^8.0.0",
     "pdf-lib": "1.17.1",
-    "piwik-react-router": "0.12.1",
     "react-chartjs-2": "4.1.0",
     "react-markdown": "^4.0.8",
     "react-popper": "^2.2.3",
