@@ -72,8 +72,8 @@ import Archive from 'cozy-ui/transpiled/react/Icons/Archive'
 import ArrowUp from 'cozy-ui/transpiled/react/Icons/ArrowUp'
 import Attachment from 'cozy-ui/transpiled/react/Icons/Attachment'
 import Attention from 'cozy-ui/transpiled/react/Icons/Attention'
-import BankCheck from 'cozy-ui/transpiled/react/Icons/BankCheck'
 import Bank from 'cozy-ui/transpiled/react/Icons/Bank'
+import BankCheck from 'cozy-ui/transpiled/react/Icons/BankCheck'
 import Banking from 'cozy-ui/transpiled/react/Icons/Banking'
 import BankingAdd from 'cozy-ui/transpiled/react/Icons/BankingAdd'
 import Bell from 'cozy-ui/transpiled/react/Icons/Bell'
@@ -112,8 +112,9 @@ import ClockOutline from 'cozy-ui/transpiled/react/Icons/ClockOutline'
 import Cloud from 'cozy-ui/transpiled/react/Icons/Cloud'
 import CloudHappy from 'cozy-ui/transpiled/react/Icons/CloudHappy'
 import CloudPlusOutlined from 'cozy-ui/transpiled/react/Icons/CloudPlusOutlined'
-import Collect from 'cozy-ui/transpiled/react/Icons/Collect'
+import CloudSync from 'cozy-ui/transpiled/react/Icons/CloudSync'
 import Cocktail from 'cozy-ui/transpiled/react/Icons/Cocktail'
+import Collect from 'cozy-ui/transpiled/react/Icons/Collect'
 import Comment from 'cozy-ui/transpiled/react/Icons/Comment'
 import Company from 'cozy-ui/transpiled/react/Icons/Company'
 import Compare from 'cozy-ui/transpiled/react/Icons/Compare'
@@ -341,10 +342,10 @@ const icons = [
   ArrowUp,
   Attachment,
   Attention,
-  BankCheck,
   Bank,
-  BankingAdd,
+  BankCheck,
   Banking,
+  BankingAdd,
   Bell,
   Benefit,
   Bike,
@@ -381,8 +382,9 @@ const icons = [
   Cloud,
   CloudHappy,
   CloudPlusOutlined,
-  Collect,
+  CloudSync,
   Cocktail,
+  Collect,
   Comment,
   Company,
   Compare,
@@ -665,7 +667,7 @@ const Example = () => {
 <Example />
 ```
 
-## SVGr illustrations
+### SVGr illustrations
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
@@ -682,11 +684,13 @@ import CozyAuthentificationIcon from 'cozy-ui/transpiled/react/Icons/CozyAuthent
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import CozyLogoIcon from 'cozy-ui/transpiled/react/Icons/CozyLogo'
 import CozyUpgradeIcon from 'cozy-ui/transpiled/react/Icons/CozyUpgrade'
+import CrossWhiteIcon from 'cozy-ui/transpiled/react/Icons/CrossWhite'
 import DashWhiteIcon from 'cozy-ui/transpiled/react/Icons/DashWhite'
 import DeviceBrowserIcon from 'cozy-ui/transpiled/react/Icons/DeviceBrowser'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
 import DeviceTabletIcon from 'cozy-ui/transpiled/react/Icons/DeviceTablet'
+import DotsWhiteIcon from 'cozy-ui/transpiled/react/Icons/DotsWhite'
 import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
 import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
 import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
@@ -707,6 +711,7 @@ import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
 import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
 import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
 import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
+import ShareGrey08Icon from 'cozy-ui/transpiled/react/Icons/ShareGrey08'
 import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
 import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
@@ -723,11 +728,13 @@ const icons = [
   CozyLogoIcon,
   CozyUpgradeIcon,
   CreditCardLargeIcon,
+  CrossWhiteIcon,
   DashWhiteIcon,
   DeviceBrowserIcon,
   DeviceLaptopIcon,
   DevicePhoneIcon,
   DeviceTabletIcon,
+  DotsWhiteIcon,
   FileTypeAudioIcon,
   FileTypeBankingAccountIcon,
   FileTypeBinIcon,
@@ -748,6 +755,7 @@ const icons = [
   KeychainIcon,
   LogoutLargeIcon,
   PapersIcon,
+  ShareGrey08Icon,
   StoreIcon,
   TopSelectIcon,
   TrashDuotoneIcon
@@ -783,28 +791,7 @@ const handleInputRangeChange = ev => {
 </div>
 ```
 
-### Available illustrations
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import Typography from 'cozy-ui/transpiled/react/Typography'
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
-
-const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
-
-;
-
-<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
-  <Sprite />
-  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
-      <Icon icon={ icon }/>
-      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
-    </div>
-  )}
-</div>
-```
-
-### Permissions Icons
+### SVGr permissions icons
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
@@ -926,7 +913,7 @@ const Example = () => {
 <Example />
 ```
 
-### Available UI icons from Sprite
+### Available icons from Sprite
 
 When using `Icon`, you can either give a React component or use the identifier
 of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
@@ -948,6 +935,27 @@ const availableIcons = ['album-add','album-remove','album','answer','apple','arc
   {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
       <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
+    </div>
+  )}
+</div>
+```
+
+### Available illustrations from Sprite
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
+
+const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
+
+;
+
+<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+  <Sprite />
+  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+      <Icon icon={ icon }/>
+      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
     </div>
   )}
 </div>
