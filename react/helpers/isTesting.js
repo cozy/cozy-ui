@@ -1,5 +1,2 @@
-module.exports = () => {
-  return (
-    navigator && navigator.userAgent && navigator.userAgent.includes('Argos')
-  )
-}
+export default () =>
+  navigator && navigator.userAgent && navigator.userAgent.includes('Argos')
