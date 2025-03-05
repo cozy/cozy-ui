@@ -1,50 +1,47 @@
 import format from 'date-fns/format'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import {
+  enGB as enLocale,
+  fr as frLocale,
+  es as esLocale
+} from 'date-fns/locale'
 
 import { DEFAULT_LANG } from '.'
 
-const locales = {}
-let lang = DEFAULT_LANG
+let currentLocale
 
-/**
- * Ensure that the locale is in the correct format for date-fns (see 2.0.0 BC https://github.com/date-fns/date-fns/blob/main/CHANGELOG.md#200---2019-08-20)
- * @param {string} lang
- */
-const ensureLocaleFormat = lang => {
+const getDateFnsLocale = lang => {
   switch (lang) {
     case 'en':
-      return 'en-US'
-    case 'zh_cn':
-      return 'zh-CN'
-    case 'zh_tw':
-      return 'zh-TW'
+      return enLocale
+    case 'fr':
+      return frLocale
+    case 'es':
+      return esLocale
     default:
-      return lang
+      throw new Error('Locale not found')
   }
 }
 
 const getWarningMessage = lang =>
-  `The "${lang}" locale isn't supported by date-fns. or has not been included in the build. Check if you have configured a ContextReplacementPlugin that is too restrictive.`
+  `The "${lang}" locale isn't supported by date-fns or has not been included in the build. Check if you have configured a ContextReplacementPlugin that is too restrictive.`
 
 export const provideDateFnsLocale = (userLang, defaultLang = DEFAULT_LANG) => {
-  lang = ensureLocaleFormat(userLang)
-  const ensureDefaultLang = ensureLocaleFormat(defaultLang)
   try {
-    locales[
-      ensureDefaultLang
-    ] = require(`date-fns/locale/${ensureDefaultLang}/index.js`)
-  } catch (err) {
-    console.warn(getWarningMessage(ensureDefaultLang))
+    const userLocale = getDateFnsLocale(userLang)
+    currentLocale = userLocale
+    return userLocale
+  } catch (e) {
+    console.warn(getWarningMessage(userLang))
   }
 
-  if (lang && lang !== ensureDefaultLang) {
-    try {
-      locales[lang] = require(`date-fns/locale/${lang}/index.js`)
-    } catch (e) {
-      console.warn(getWarningMessage(lang))
-    }
+  try {
+    const defaultLocale = getDateFnsLocale(defaultLang)
+    currentLocale = defaultLocale
+    return defaultLocale
+  } catch (err) {
+    console.warn(getWarningMessage(defaultLang))
   }
-  return locales[lang]
 }
 
 export const initFormat =
@@ -61,5 +58,5 @@ export const initFormat =
   }
 
 export const formatLocallyDistanceToNow = date => {
-  return formatDistanceToNow(date, { locale: locales[lang] })
+  return formatDistanceToNow(date, { locale: currentLocale })
 }
