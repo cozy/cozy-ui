@@ -676,6 +676,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
+import ChatIcon from 'cozy-ui/transpiled/react/Icons/Chat'
 import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
 import CloudSync2 from 'cozy-ui/transpiled/react/Icons/CloudSync2'
@@ -691,6 +692,7 @@ import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
 import DeviceTabletIcon from 'cozy-ui/transpiled/react/Icons/DeviceTablet'
 import DotsWhiteIcon from 'cozy-ui/transpiled/react/Icons/DotsWhite'
+import DriveIcon from 'cozy-ui/transpiled/react/Icons/Drive'
 import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
 import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
 import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
@@ -710,7 +712,10 @@ import ForbiddenSignIcon from 'cozy-ui/transpiled/react/Icons/ForbiddenSign'
 import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
 import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
 import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
+import MailIcon from 'cozy-ui/transpiled/react/Icons/Mail'
+import NotesIcon from 'cozy-ui/transpiled/react/Icons/Notes'
 import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
+import PassIcon from 'cozy-ui/transpiled/react/Icons/Pass'
 import ShareGrey08Icon from 'cozy-ui/transpiled/react/Icons/ShareGrey08'
 import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
@@ -719,6 +724,7 @@ import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
 const icons = [
   AccountIcon,
   BottomSelectIcon,
+  ...(isTwakeTheme() ? [ChatIcon] : []),
   CheckWhiteIcon,
   CloudBrokenIcon,
   CloudSync2,
@@ -735,6 +741,7 @@ const icons = [
   DevicePhoneIcon,
   DeviceTabletIcon,
   DotsWhiteIcon,
+  ...(isTwakeTheme() ? [DriveIcon] : []),
   FileTypeAudioIcon,
   FileTypeBankingAccountIcon,
   FileTypeBinIcon,
@@ -754,7 +761,10 @@ const icons = [
   GoogleIcon,
   KeychainIcon,
   LogoutLargeIcon,
+  ...(isTwakeTheme() ? [MailIcon] : []),
+  ...(isTwakeTheme() ? [NotesIcon] : []),
   PapersIcon,
+  ...(isTwakeTheme() ? [PassIcon] : []),
   ShareGrey08Icon,
   StoreIcon,
   TopSelectIcon,
