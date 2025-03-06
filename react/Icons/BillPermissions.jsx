@@ -1,7 +1,11 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/bill.svg` to regenerate;
 import React from 'react'
 
+import SvgBillPermissionsTwake from './BillPermissions_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgBillPermissions(props) {
+  if (isTwakeTheme()) return SvgBillPermissionsTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">

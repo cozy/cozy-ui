@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/versioning.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/versioning.svg` to regenerate
 import React from 'react'
 
+import SvgVersioningTwake from './Versioning_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgVersioning(props) {
+  if (isTwakeTheme()) return SvgVersioningTwake(props)
   return (
     <svg viewBox="0 0 48 48" fill="none" {...props}>
       <path

@@ -1,7 +1,11 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/home.svg` to regenerate;
 import React from 'react'
 
+import SvgHomePermissionsTwake from './HomePermissions_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgHomePermissions(props) {
+  if (isTwakeTheme()) return SvgHomePermissionsTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">

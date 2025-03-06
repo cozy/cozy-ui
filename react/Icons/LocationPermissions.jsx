@@ -1,7 +1,11 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/location.svg` to regenerate;
 import React from 'react'
 
+import SvgLocationPermissionsTwake from './LocationPermissions_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLocationPermissions(props) {
+  if (isTwakeTheme()) return SvgLocationPermissionsTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
