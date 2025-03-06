@@ -19,6 +19,7 @@ module.exports = {
         '../react/AppLinker',
         '../react/AppTile',
         '../react/AppTitle',
+        '../react/Avatar',
         '../react/Badge',
         '../react/Banner',
         '../react/Breadcrumbs',
