@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/profile.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/profile.svg` to regenerate
 import React from 'react'
 
+import SvgProfileTwake from './Profile_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgProfile(props) {
+  if (isTwakeTheme()) return SvgProfileTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <defs>

@@ -1,7 +1,11 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/contacts.svg` to regenerate;
 import React from 'react'
 
+import SvgContactsTwake from './Contacts_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgContacts(props) {
+  if (isTwakeTheme()) return SvgContactsTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <g fillRule="evenodd" clipRule="evenodd">

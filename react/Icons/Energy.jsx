@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/energy.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/energy.svg` to regenerate
 import React from 'react'
 
+import SvgEnergyTwake from './Energy_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgEnergy(props) {
+  if (isTwakeTheme()) return SvgEnergyTwake(props)
   return (
     <svg viewBox="0 0 16 16" fill="none" {...props}>
       <path fill="#fff" d="M0 0h16v16H0z" />

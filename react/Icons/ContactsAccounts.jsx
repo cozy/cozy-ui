@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/contacts-accounts.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/contacts-accounts.svg` to regenerate
 import React from 'react'
 
+import SvgContactsAccountsTwake from './ContactsAccounts_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgContactsAccounts(props) {
+  if (isTwakeTheme()) return SvgContactsAccountsTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">

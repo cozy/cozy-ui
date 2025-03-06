@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/tags.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/tags.svg` to regenerate
 import React from 'react'
 
+import SvgTagsTwake from './Tags_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTags(props) {
+  if (isTwakeTheme()) return SvgTagsTwake(props)
   return (
     <svg viewBox="0 0 16 16" fill="#5d6165" fillRule="evenodd" {...props}>
       <path d="M5 6a1 1 0 100-2 1 1 0 000 2z" />
