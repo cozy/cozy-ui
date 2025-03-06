@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/bank-groups.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/bank-groups.svg` to regenerate
 import React from 'react'
 
+import SvgBankGroupsTwake from './BankGroups_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgBankGroups(props) {
+  if (isTwakeTheme()) return SvgBankGroupsTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">

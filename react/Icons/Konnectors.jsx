@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/konnectors.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/konnectors.svg` to regenerate
 import React from 'react'
 
+import SvgKonnectorsTwake from './Konnectors_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgKonnectors(props) {
+  if (isTwakeTheme()) return SvgKonnectorsTwake(props)
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">

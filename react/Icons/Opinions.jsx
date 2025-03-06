@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/opinions.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/opinions.svg` to regenerate
 import React from 'react'
 
+import SvgOpinionsTwake from './Opinions_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgOpinions(props) {
+  if (isTwakeTheme()) return SvgOpinionsTwake(props)
   return (
     <svg viewBox="0 0 48 48" fill="none" {...props}>
       <path
