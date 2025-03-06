@@ -65,6 +65,7 @@ module.exports = {
         '../react/Tabs',
         '../react/TextField',
         '../react/Thumbnail',
+        '../react/ToggleButtonGroup',
         '../react/Tooltip',
         '../react/Typography',
         '../react/Markdown'
