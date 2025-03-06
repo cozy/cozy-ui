@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/check-white.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/check-white.svg` to regenerate
 import React from 'react'
 
+import SvgCheckWhiteTwake from './CheckWhite_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCheckWhite(props) {
+  if (isTwakeTheme()) return SvgCheckWhiteTwake(props)
   return (
     <svg viewBox="0 0 20 20" {...props}>
       <path

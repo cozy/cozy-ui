@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/forbidden-sign.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/forbidden-sign.svg` to regenerate
 import React from 'react'
 
+import SvgForbiddenSignTwake from './ForbiddenSign_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgForbiddenSign(props) {
+  if (isTwakeTheme()) return SvgForbiddenSignTwake(props)
   return (
     <svg viewBox="0 0 96 96" {...props}>
       <g fill="none" fillRule="evenodd">

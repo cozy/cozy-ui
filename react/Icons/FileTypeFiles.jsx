@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/file-type-files.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-files.svg` to regenerate
 import React from 'react'
 
+import SvgFileTypeFilesTwake from './FileTypeFiles_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileTypeFiles(props) {
+  if (isTwakeTheme()) return SvgFileTypeFilesTwake(props)
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <g fill="none" fillRule="evenodd">

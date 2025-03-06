@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-server.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-server.svg` to regenerate
 import React from 'react'
 
+import SvgFileTypeServerTwake from './FileTypeServer_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileTypeServer(props) {
+  if (isTwakeTheme()) return SvgFileTypeServerTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path

@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/permissions/contacts_twake.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/illus/contacts_twake.svg` to regenerate;
 import React from 'react'
 
 function SvgContactsTwake(props) {
@@ -9,9 +9,9 @@ function SvgContactsTwake(props) {
         width={16}
         height={16}
         rx={5.284}
-        fill="url(#contacts_twake_svg__paint0_linear_11302_323)"
+        fill="url(#contacts_twake_svg__paint0_linear_11294_1829)"
       />
-      <g filter="url(#contacts_twake_svg__filter0_d_11302_323)">
+      <g filter="url(#contacts_twake_svg__filter0_d_11294_1829)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -21,7 +21,7 @@ function SvgContactsTwake(props) {
       </g>
       <defs>
         <linearGradient
-          id="contacts_twake_svg__paint0_linear_11302_323"
+          id="contacts_twake_svg__paint0_linear_11294_1829"
           x1={2.774}
           y1={14.564}
           x2={15.094}
@@ -32,7 +32,7 @@ function SvgContactsTwake(props) {
           <stop offset={1} stopColor="#FFB2A8" />
         </linearGradient>
         <filter
-          id="contacts_twake_svg__filter0_d_11302_323"
+          id="contacts_twake_svg__filter0_d_11294_1829"
           x={2.04}
           y={2.203}
           width={11.994}
@@ -52,11 +52,11 @@ function SvgContactsTwake(props) {
           <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
           <feBlend
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_11302_323"
+            result="effect1_dropShadow_11294_1829"
           />
           <feBlend
             in="SourceGraphic"
-            in2="effect1_dropShadow_11302_323"
+            in2="effect1_dropShadow_11294_1829"
             result="shape"
           />
         </filter>

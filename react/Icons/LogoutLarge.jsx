@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/logout-large.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/logout-large.svg` to regenerate
 import React from 'react'
 
+import SvgLogoutLargeTwake from './LogoutLarge_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgLogoutLarge(props) {
+  if (isTwakeTheme()) return SvgLogoutLargeTwake(props)
   return (
     <svg viewBox="0 0 44 44" {...props}>
       <g fill="none" fillRule="evenodd">

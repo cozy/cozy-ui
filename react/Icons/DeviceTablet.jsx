@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/device-tablet.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/device-tablet.svg` to regenerate
 import React from 'react'
 
+import SvgDeviceTabletTwake from './DeviceTablet_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgDeviceTablet(props) {
+  if (isTwakeTheme()) return SvgDeviceTabletTwake(props)
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <g fill="none" fillRule="evenodd" transform="translate(4)">

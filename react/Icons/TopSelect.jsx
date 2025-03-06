@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/top-select.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/top-select.svg` to regenerate
 import React from 'react'
 
+import SvgTopSelectTwake from './TopSelect_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTopSelect(props) {
+  if (isTwakeTheme()) return SvgTopSelectTwake(props)
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path

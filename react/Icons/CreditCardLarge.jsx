@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/credit-card-large.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/credit-card-large.svg` to regenerate
 import React from 'react'
 
+import SvgCreditCardLargeTwake from './CreditCardLarge_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCreditCardLarge(props) {
+  if (isTwakeTheme()) return SvgCreditCardLargeTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path

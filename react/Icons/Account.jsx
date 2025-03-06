@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/account.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/account.svg` to regenerate
 import React from 'react'
 
+import SvgAccountTwake from './Account_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgAccount(props) {
+  if (isTwakeTheme()) return SvgAccountTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <g fillRule="evenodd" clipRule="evenodd" fill="#855CEA">
