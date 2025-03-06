@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/keychain.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/keychain.svg` to regenerate
 import React from 'react'
 
+import SvgKeychainTwake from './Keychain_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgKeychain(props) {
+  if (isTwakeTheme()) return SvgKeychainTwake(props)
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <g fill="none" fillRule="evenodd">

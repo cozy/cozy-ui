@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/store.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/store.svg` to regenerate
 import React from 'react'
 
+import SvgStoreTwake from './Store_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgStore(props) {
+  if (isTwakeTheme()) return SvgStoreTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path

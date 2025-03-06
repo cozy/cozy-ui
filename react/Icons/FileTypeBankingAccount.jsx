@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-banking-account.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-banking-account.svg` to regenerate
 import React from 'react'
 
+import SvgFileTypeBankingAccountTwake from './FileTypeBankingAccount_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileTypeBankingAccount(props) {
+  if (isTwakeTheme()) return SvgFileTypeBankingAccountTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path
