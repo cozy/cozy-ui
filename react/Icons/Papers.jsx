@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/papers.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/papers.svg` to regenerate
 import React from 'react'
 
+import SvgPapersTwake from './Papers_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgPapers(props) {
+  if (isTwakeTheme()) return SvgPapersTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path

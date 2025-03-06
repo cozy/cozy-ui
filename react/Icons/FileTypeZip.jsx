@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/file-type-zip.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-zip.svg` to regenerate
 import React from 'react'
 
+import SvgFileTypeZipTwake from './FileTypeZip_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgFileTypeZip(props) {
+  if (isTwakeTheme()) return SvgFileTypeZipTwake(props)
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <g fill="none" fillRule="evenodd" transform="translate(3)">

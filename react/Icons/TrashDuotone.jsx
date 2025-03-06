@@ -1,7 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/trash-duotone.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/trash-duotone.svg` to regenerate
 import React from 'react'
 
+import SvgTrashDuotoneTwake from './TrashDuotone_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgTrashDuotone(props) {
+  if (isTwakeTheme()) return SvgTrashDuotoneTwake(props)
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path
