@@ -1,3 +1,17 @@
+# [118.0.0](https://github.com/cozy/cozy-ui/compare/v117.3.0...v118.0.0) (2025-03-07)
+
+
+### Features
+
+* Migrate date formatting to es module ([9d4ab11](https://github.com/cozy/cozy-ui/commit/9d4ab11))
+* Migrate to es module ([b677678](https://github.com/cozy/cozy-ui/commit/b677678))
+* Remove tracking API ([a2dade9](https://github.com/cozy/cozy-ui/commit/a2dade9))
+
+
+### BREAKING CHANGES
+
+* 'cozy-ui/transpiled/react/helpers/tracker' endpoint has been removed. It was unused since we removed Piwik. You can safely delete the code.
+
 # [117.3.0](https://github.com/cozy/cozy-ui/compare/v117.2.2...v117.3.0) (2025-02-20)
 
 
