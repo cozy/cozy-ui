@@ -7562,19 +7562,19 @@ body {
   line-height: 1;
 }
 
-.c-avatar--PpDI- {
+.c-avatar--3jjlO {
   background-color: var(--paleGrey);
   color: var(--silver);
   position: relative;
 }
-.c-avatar--PpDI- svg {
+.c-avatar--3jjlO svg {
   width: 50%;
   height: 50%;
 }
-.c-avatar-image--3yJnb {
+.c-avatar-image--UhZDi {
   width: 100%;
 }
-.c-avatar--PpDI- {
+.c-avatar--3jjlO {
   --circleSize: 2.5rem;
   width: var(--circleSize);
   height: var(--circleSize);
@@ -7589,57 +7589,59 @@ body {
   background-color: var(--dodgerBlue);
   color: var(--white);
 }
-.c-avatar--xsmall--3H2Io {
+.c-avatar--xsmall--3Hc22 {
   width: 1rem;
   height: 1rem;
   min-width: 1rem;
   min-height: 1rem;
   font-size: calc(1rem / 2.28);
 }
-.c-avatar--small--1Y_Pv {
+.c-avatar--small--2oZc6 {
   width: 2rem;
   height: 2rem;
   min-width: 2rem;
   min-height: 2rem;
   font-size: calc(2rem / 2.28);
 }
-.c-avatar--large--1Z_HZ {
+.c-avatar--large--3eKYs {
   width: 3rem;
   height: 3rem;
   min-width: 3rem;
   min-height: 3rem;
   font-size: calc(3rem / 2.28);
 }
-.c-avatar--xlarge--3Qe0b {
+.c-avatar--xlarge--1KzNe {
   width: 4rem;
   height: 4rem;
   min-width: 4rem;
   min-height: 4rem;
   font-size: calc(4rem / 2.28);
 }
-.c-avatar-initials--310qC {
+.c-avatar-initials--2dEdT {
   font-weight: bold;
   line-height: 1;
 }
-.c-avatar--text--2dvna {
+.c-avatar--text--3Xssl {
   color: #fff;
 }
-.c-avatar--disabled--xoLOy.c-avatar--image--jDBci {
+.c-avatar--disabled--3rlUN.c-avatar--image--2GZnA {
   background-color: #fff !important;
 }
-.c-avatar--disabled--xoLOy:not(.c-avatar--image--jDBci) {
+.c-avatar--disabled--3rlUN:not(.c-avatar--image--2GZnA) {
   background-color: var(--silver) !important;
+  background: var(--silver) !important;
 }
-.c-avatar--disabled--xoLOy .c-avatar-image--3yJnb {
+.c-avatar--disabled--3rlUN .c-avatar-image--UhZDi {
   filter: grayscale(1);
   opacity: 0.3;
 }
-.c-avatar--ghost--3898R {
+.c-avatar--ghost--3aaZ2 {
   background-color: transparent !important;
+  background: transparent !important;
   border: 1px dashed var(--borderGhostColor);
   color: var(--secondaryTextColor);
 }
-.c-avatar--ghost--3898R .c-avatar-image--3yJnb {
+.c-avatar--ghost--3aaZ2 .c-avatar-image--UhZDi {
   filter: grayscale(1);
   opacity: 0.3;
 }
@@ -9287,7 +9289,7 @@ body {
 }
 
 :root {
-  --sidebarHeight: 3rem;
+  --sidebarHeight: 3.25rem;
 }
 .o-sidebar--1295j {
   width: 13.75rem;
@@ -9316,14 +9318,14 @@ body {
   .c-nav--33dZy {
     display: flex;
     justify-content: space-around;
-    margin: 0.313rem 0 0.25rem;
+    margin: 6px 0 4px;
     padding-right: 0;
   }
 }
 .c-nav-item--3XOLK {
   position: relative;
   z-index: var(--zIndex-app);
-  height: 3rem;
+  height: 2.75rem;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -9331,7 +9333,7 @@ body {
   content: '';
   position: absolute;
   z-index: var(--zIndex-below);
-  border-radius: 0 0.188rem 0.188rem 0;
+  border-radius: 0 8px 8px 0;
   top: 0;
   left: 0;
   right: 1rem;
@@ -9357,18 +9359,12 @@ body {
 }
 .c-nav-icon--hrJUe {
   display: inline-block;
-  margin-right: 0.688rem;
-  color: var(--actionColorActive);
+  margin-right: 12px;
+  color: var(--primaryTextColor);
   fill: currentColor;
 }
 .c-nav-icon--hrJUe svg {
   display: block;
-}
-.is-active--2D0jN .c-nav-icon--hrJUe {
-  color: var(--primaryColor);
-}
-:hover > .c-nav-icon--hrJUe {
-  color: var(--actionColorActive);
 }
 @media (max-width: 63.938rem) {
   .c-nav-icon--hrJUe {
@@ -9376,16 +9372,25 @@ body {
     margin-right: 0;
   }
   .c-nav-icon--hrJUe svg {
-    margin: 0 auto 3px;
-    width: 1.5rem;
-    height: 1.5rem;
+    margin: 4px auto 5px;
+    width: 1rem;
+    height: 1rem;
   }
+}
+.c-nav-text--1J3yU {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
 }
 @media (max-width: 63.938rem) {
   .c-nav-text--1J3yU {
     display: block;
     text-align: center;
     white-space: nowrap;
+    font-size: 12px;
+  }
+  .is-active--2D0jN .c-nav-text--1J3yU {
+    color: var(--primaryTextColor);
   }
 }
 .c-nav-link--3mK6W {
@@ -9393,9 +9398,9 @@ body {
   box-shadow: border-box;
   padding-left: 1.5rem;
   padding-right: 1rem;
-  line-height: 1.5;
+  line-height: 1.375;
   text-decoration: none;
-  color: var(--actionColorActive);
+  color: var(--primaryTextColor);
   height: 100%;
   align-items: center;
   flex: 1;
@@ -9410,8 +9415,18 @@ body {
   font-weight: bold;
   color: var(--primaryTextColor);
 }
+@media (max-width: 63.938rem) {
+  .c-nav-link--3mK6W.is-active--2D0jN {
+    background-color: initial;
+  }
+}
 .c-nav-link--3mK6W.is-active--2D0jN .c-nav-icon--hrJUe {
   color: var(--primaryColor);
+}
+@media (max-width: 63.938rem) {
+  .c-nav-link--3mK6W.is-active--2D0jN .c-nav-icon--hrJUe {
+    color: var(--primaryTextColor);
+  }
 }
 @media (max-width: 63.938rem) {
   .c-nav-link--3mK6W {
@@ -9419,7 +9434,7 @@ body {
     height: auto;
     padding: 0;
     text-align: center;
-    font-size: 0.625rem;
+    font-size: 0.688rem;
     line-height: 0.75rem;
     background-position: center top;
     background-size: 1.5rem;
@@ -9432,9 +9447,7 @@ body {
 }
 .c-nav-item-secondary--k14rf {
   height: auto;
-}
-.c-nav-item-secondary--k14rf + .c-nav-item-secondary--k14rf {
-  margin-top: 0.125rem;
+  margin: 3px 0;
 }
 @media (max-width: 63.938rem) {
   .c-nav-item-secondary--k14rf {
@@ -9445,10 +9458,10 @@ body {
   content: '';
   position: absolute;
   z-index: var(--zIndex-below);
-  border-radius: 0.188rem 0 0 0.188rem;
+  border-radius: 8px 0 0 8px;
   top: 0;
   right: 0;
-  left: 3rem;
+  left: 2.813rem;
   bottom: 0;
   background: var(--actionColorHover);
 }
@@ -9458,19 +9471,18 @@ body {
   }
 }
 .c-nav-item-secondary--k14rf .c-nav-link--3mK6W {
-  padding: 0.5rem 1rem;
-  margin-left: 3rem;
-  border-radius: 4px 0 0 4px;
+  padding: 8px 16px;
+  margin-left: 2.8rem;
+  border-radius: 8px 0 0 8px;
   box-shadow: none;
   font-size: 0.875rem;
-  color: var(--actionColorActive);
+  color: var(--primaryTextColor);
   text-decoration: none;
   height: auto;
 }
 .c-nav-item-secondary--k14rf .c-nav-link--3mK6W.is-active--2D0jN {
   color: var(--primaryContrastTextColor);
-  border-right: 1px solid var(--actionColorActive);
-  background-color: var(--actionColorActive);
+  background-color: var(--secondaryColor);
 }
 .c-nav-item-secondary--k14rf .c-nav-limiter--3oxQU {
   background: transparent;
