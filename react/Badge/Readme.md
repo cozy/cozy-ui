@@ -65,7 +65,7 @@ Badges can be combined — in this example, we have an item with a new qualifica
 import Badge from 'cozy-ui/transpiled/react/Badge'
 import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
 
 ;
