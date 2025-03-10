@@ -13,7 +13,13 @@ export const makeLightNormalTwakeOverrides = theme => {
     MuiButton: {
       root: {
         borderRadius: 100,
-        padding: '10px 24px'
+        padding: '10px 24px',
+        '&.ghost': {
+          border: 0,
+          '&:hover': {
+            border: 0
+          }
+        }
       },
       sizeSmall: {
         height: '2.25rem',
@@ -30,6 +36,15 @@ export const makeLightNormalTwakeOverrides = theme => {
       },
       outlined: {
         '&:not($disabled)': {
+          '&.ghost': {
+            backgroundColor: theme.palette.background.default,
+            '&:hover': {
+              backgroundColor: darken(theme.palette.background.default, 0.05),
+              '@media (hover: none)': {
+                backgroundColor: darken(theme.palette.background.default, 0.05)
+              }
+            }
+          },
           '&.customColor': {
             '&-primary': {
               color: theme.palette.primary.main,
@@ -39,6 +54,10 @@ export const makeLightNormalTwakeOverrides = theme => {
                   theme.palette.primary.main,
                   theme.palette.action.hoverOpacity
                 )
+              },
+              '&.ghost': {
+                color: theme.palette.text.primary,
+                borderColor: theme.palette.background.default
               }
             }
           }
