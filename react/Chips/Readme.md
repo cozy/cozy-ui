@@ -9,7 +9,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
 import Divider from "cozy-ui/transpiled/react/Divider"
@@ -117,7 +117,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
 import Divider from "cozy-ui/transpiled/react/Divider"

@@ -13,7 +13,7 @@ import BarButton from 'cozy-ui/transpiled/react/BarButton'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
 import Figure from 'cozy-ui/transpiled/react/Figure'
 
 const props = [{}, { disabled: true}, { busy: true }]
