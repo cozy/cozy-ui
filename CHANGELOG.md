@@ -1,3 +1,33 @@
+# [119.0.0](https://github.com/cozy/cozy-ui/compare/v118.0.0...v119.0.0) (2025-03-10)
+
+
+### Features
+
+* Add Avatar and AvatarGroup ([2d40db1](https://github.com/cozy/cozy-ui/commit/2d40db1))
+* Add cozy-flags as peerDep ([7c1ea57](https://github.com/cozy/cozy-ui/commit/7c1ea57))
+* Add helpers to use Twake theme ([6701dcd](https://github.com/cozy/cozy-ui/commit/6701dcd))
+* Add logic to use a other theme than cozy's ([fcc9647](https://github.com/cozy/cozy-ui/commit/fcc9647))
+* Add new twake icons and SVGR components ([911c503](https://github.com/cozy/cozy-ui/commit/911c503))
+* Add ToggleButton and ToggleButtonGroup ([e98f54a](https://github.com/cozy/cozy-ui/commit/e98f54a))
+* Add Twake app icons ([133d58c](https://github.com/cozy/cozy-ui/commit/133d58c))
+* Add Twake illustration icons ([168bd4f](https://github.com/cozy/cozy-ui/commit/168bd4f))
+* Add Twake permissions icons ([3258cef](https://github.com/cozy/cozy-ui/commit/3258cef))
+* Adjust ActionsBar ([bb2aff3](https://github.com/cozy/cozy-ui/commit/bb2aff3))
+* Adjust SearchBar ([43f728e](https://github.com/cozy/cozy-ui/commit/43f728e))
+* Adjust twake ghost button ([49b1af7](https://github.com/cozy/cozy-ui/commit/49b1af7))
+* Adjust Twake theme ([0179de7](https://github.com/cozy/cozy-ui/commit/0179de7))
+* **IconButton:** Add xlarge value for size prop ([9d4e440](https://github.com/cozy/cozy-ui/commit/9d4e440))
+* Modify Checkbox ([ade8443](https://github.com/cozy/cozy-ui/commit/ade8443))
+* Modify Circle and LegacyAvatar ([15cb6a2](https://github.com/cozy/cozy-ui/commit/15cb6a2))
+* Modify Sidebar and Nav ([5f3a2ba](https://github.com/cozy/cozy-ui/commit/5f3a2ba))
+* Move Avatar to legacy folder ([d671f14](https://github.com/cozy/cozy-ui/commit/d671f14))
+
+
+### BREAKING CHANGES
+
+* You must now import `Avatar` and `nameToColor` from `cozy-ui/transpiled/react/legacy/Avatar` instead of `cozy-ui/transpiled/react/Avatar`
+* You must have `cozy-flags >= 2.10.1`
+
 # [118.0.0](https://github.com/cozy/cozy-ui/compare/v117.3.0...v118.0.0) (2025-03-07)
 
 
