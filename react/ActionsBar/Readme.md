@@ -21,7 +21,7 @@ const doc = {
   email: [{ address: 'johndoe@cozy.cc' }],
 }
 
-initialState = { selected: isTesting() ? [doc, doc] : [doc, doc] }
+initialState = { selected: isTesting() ? [doc, doc] : [] }
 
 const addSelected = () => setState(previousState => {
     const arr = previousState.selected
