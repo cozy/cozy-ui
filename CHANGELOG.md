@@ -1,3 +1,10 @@
+## [119.0.2](https://github.com/cozy/cozy-ui/compare/v119.0.1...v119.0.2) (2025-03-11)
+
+
+### Bug Fixes
+
+* **Cube:** Missed `ref` props ([d7c4010](https://github.com/cozy/cozy-ui/commit/d7c4010))
+
 ## [119.0.1](https://github.com/cozy/cozy-ui/compare/v119.0.0...v119.0.1) (2025-03-11)
 
 
