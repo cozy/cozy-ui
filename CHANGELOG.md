@@ -1,3 +1,10 @@
+## [119.0.3](https://github.com/cozy/cozy-ui/compare/v119.0.2...v119.0.3) (2025-03-11)
+
+
+### Bug Fixes
+
+* Now rely on method instead of local storage to get theme name ([74118ec](https://github.com/cozy/cozy-ui/commit/74118ec))
+
 ## [119.0.2](https://github.com/cozy/cozy-ui/compare/v119.0.1...v119.0.2) (2025-03-11)
 
 
