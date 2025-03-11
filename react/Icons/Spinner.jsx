@@ -7,7 +7,7 @@ import { isTwakeTheme } from '../helpers/isTwakeTheme'
 function SvgSpinner(props) {
   if (isTwakeTheme()) return SvgSpinnerTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
+    <svg viewBox="0 0 32 32" {...props} role="progressbar" aria-busy="true">
       <path
         opacity={0.25}
         d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
