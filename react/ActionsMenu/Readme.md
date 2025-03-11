@@ -4,6 +4,25 @@ You can pass a reference to a custom DOM element through the `ref` prop to attac
 
 A header `ActionsMenuMobileHeader` can be used to provide context on the menu actions. Since on desktop, we display a popper and not a `BottomSheet`, context for the user is not lost, so the header would be redundant. This is why it is not rendered unless we are on mobile.
 
+## Available actions
+
+cozy-ui exposes a list of ready-to-use action : 
+- makeActions
+- divider
+- modify
+- smsTo
+- call
+- emailTo
+- print (requires to add `pdf-lib` in the app)
+- download
+- addToFavorites
+- removeFromFavorites
+- viewInContacts
+- viewInDrive
+- copyToClipboard
+- editAttribute
+- others
+
 ### How to create and use actions
 
 An action is a simple function that returns an object with specific keys:
