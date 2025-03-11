@@ -1,5 +1,7 @@
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 const getThemeNodeClassName = (type, variant) => {
-  const uiTypeName = localStorage.getItem('ui-theme-name') || 'Cozy'
+  const uiTypeName = isTwakeTheme() ? 'Twake' : 'Cozy'
 
   return `${uiTypeName}Theme--${type}-${variant}`
 }

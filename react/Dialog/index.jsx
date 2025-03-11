@@ -3,11 +3,12 @@ import cx from 'classnames'
 import React from 'react'
 
 import { useDialogEffects } from './DialogEffects'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const Dialog = ({ className, ...props }) => {
   const { type, variant } = useCozyTheme()
-  const uiThemeName = localStorage.getItem('ui-theme-name') || 'Cozy'
+  const uiThemeName = isTwakeTheme() ? 'Twake' : 'Cozy'
 
   useDialogEffects(props.open, props.fullScreen)
 

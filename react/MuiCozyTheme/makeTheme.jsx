@@ -11,6 +11,7 @@ import { makeDarkNormalTwakeOverrides } from './overrides/twake/makeDarkNormalOv
 import { makeLightInvertedTwakeOverrides } from './overrides/twake/makeLightInvertedOverrides'
 import { makeLightNormalTwakeOverrides } from './overrides/twake/makeLightNormalOverrides'
 import isTesting from '../helpers/isTesting'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { createTheme } from '../styles'
 import { createNodeWithThemeCssVars } from '../utils/color'
 
@@ -60,7 +61,7 @@ const themesCommonConfig = {
 }
 
 export const makeTheme = (type, variant) => {
-  const uiThemeName = localStorage.getItem('ui-theme-name') || 'Cozy'
+  const uiThemeName = isTwakeTheme() ? 'Twake' : 'Cozy'
   // to hold the values of css variables, recoverable by getCssVariableValue()
   createNodeWithThemeCssVars(type, variant)
 
