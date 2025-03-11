@@ -1,3 +1,10 @@
+## [119.0.1](https://github.com/cozy/cozy-ui/compare/v119.0.0...v119.0.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* **Spinner:** Missed `role` and `aria-busy` props ([f7f0894](https://github.com/cozy/cozy-ui/commit/f7f0894))
+
 # [119.0.0](https://github.com/cozy/cozy-ui/compare/v118.0.0...v119.0.0) (2025-03-10)
 
 
