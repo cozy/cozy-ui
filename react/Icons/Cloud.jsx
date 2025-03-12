@@ -1,7 +1,11 @@
 // Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/cloud.svg` to regenerate;
 import React from 'react'
 
+import SvgCloudTwake from './Cloud_twake'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
+
 function SvgCloud(props) {
+  if (isTwakeTheme()) return SvgCloudTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <defs>
