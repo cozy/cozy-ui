@@ -10,6 +10,60 @@ export const makeLightNormalTwakeOverrides = theme => {
         padding: 8
       }
     },
+    MuiSwitch: {
+      root: {
+        width: 50,
+        height: 40,
+        padding: '6px 1px'
+      },
+      switchBase: {
+        padding: 5,
+        top: 5,
+        color: theme.palette.text.icon,
+        '& .cozySwitchThumb': {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: 20,
+          height: 20,
+          borderRadius: '50%',
+          boxShadow: theme.shadows[1],
+          backgroundColor: theme.palette.common.white
+        }
+      },
+      track: {
+        width: 44,
+        height: '100%',
+        borderRadius: 100
+      },
+      thumb: {
+        width: 20,
+        height: 20
+      },
+      colorPrimary: {
+        '&$disabled + $track': {
+          opacity: 1,
+          backgroundColor: theme.palette.action.disabledBackground
+        }
+      },
+      colorSecondary: {
+        '&$checked': {
+          color: theme.palette.success.main
+        },
+        '&$disabled + $track': {
+          opacity: 1,
+          backgroundColor: theme.palette.action.disabledBackground
+        }
+      },
+      disabled: {
+        '&$checked + $track': {
+          backgroundColor: theme.palette.action.disabledBackground
+        },
+        '& .cozySwitchThumb': {
+          backgroundColor: theme.palette.background.default
+        }
+      }
+    },
     MuiButton: {
       root: {
         borderRadius: 100,
