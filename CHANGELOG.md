@@ -1,3 +1,10 @@
+# [119.1.0](https://github.com/cozy/cozy-ui/compare/v119.0.3...v119.1.0) (2025-03-12)
+
+
+### Features
+
+* Adjust cloud, company and from-user icons ([32dd9a2](https://github.com/cozy/cozy-ui/commit/32dd9a2))
+
 ## [119.0.3](https://github.com/cozy/cozy-ui/compare/v119.0.2...v119.0.3) (2025-03-11)
 
 
