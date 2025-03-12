@@ -1,3 +1,10 @@
+# [119.2.0](https://github.com/cozy/cozy-ui/compare/v119.1.0...v119.2.0) (2025-03-12)
+
+
+### Features
+
+* **Switch:** Adjust style component ([4e89011](https://github.com/cozy/cozy-ui/commit/4e89011))
+
 # [119.1.0](https://github.com/cozy/cozy-ui/compare/v119.0.3...v119.1.0) (2025-03-12)
 
 
