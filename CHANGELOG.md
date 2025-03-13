@@ -1,3 +1,15 @@
+# [120.0.0](https://github.com/cozy/cozy-ui/compare/v119.2.0...v120.0.0) (2025-03-13)
+
+
+### Features
+
+* Set pdf-lib as a peerDep ([15604af](https://github.com/cozy/cozy-ui/commit/15604af))
+
+
+### BREAKING CHANGES
+
+* If you use print action, please add pdf-lib as a dep in your app because it is now a peerDep in cozy-ui. `yarn add pdf-lib@1.17.1`
+
 # [119.2.0](https://github.com/cozy/cozy-ui/compare/v119.1.0...v119.2.0) (2025-03-12)
 
 
