@@ -72,6 +72,91 @@ export const makeLightNormalOverrides = theme => ({
       }
     }
   },
+  MuiToggleButtonGroup: {
+    groupedHorizontal: {
+      '&.rounded': {
+        marginRight: 12,
+        '&:last-child': {
+          marginRight: 0
+        },
+        '&:not(:first-child)': {
+          borderTopLeftRadius: 'inherit',
+          borderBottomLeftRadius: 'inherit',
+          marginLeft: 'inherit',
+          borderLeft: 'inherit'
+        },
+        '&:not(:last-child)': {
+          '&.rounded': {
+            borderTopRightRadius: 'inherit',
+            borderBottomRightRadius: 'inherit'
+          }
+        }
+      }
+    }
+  },
+  MuiToggleButton: {
+    root: {
+      borderRadius: 0,
+      color: theme.palette.text.secondary,
+      border: `1px solid ${theme.palette.border.main}`,
+      padding: 15,
+      '&$selected': {
+        color: theme.palette.text.primary,
+        backgroundColor: 'transparent',
+        '&:not($disabled)': {
+          '&.customColor': {
+            '&-primary': {
+              color: theme.palette.primary.main
+            }
+          }
+        }
+      },
+      '&$disabled': {
+        color: theme.palette.text.disabled
+      },
+      '&.rounded': {
+        border: 0,
+        borderRadius: theme.shape.borderRadius,
+        padding: '10px 12px',
+        '&$selected': {
+          backgroundColor: theme.palette.action.selected,
+          '&:not($disabled)': {
+            '&.customColor': {
+              '&-primary': {
+                color: theme.palette.text.primary,
+                backgroundColor: alpha(
+                  theme.palette.primary.main,
+                  theme.palette.action.selectedOpacity
+                ),
+                '&:hover': {
+                  textDecoration: 'none',
+                  backgroundColor: alpha(
+                    theme.palette.primary.main,
+                    theme.palette.action.activatedOpacity
+                  ),
+                  '@media (hover: none)': {
+                    backgroundColor: 'transparent'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    sizeSmall: {
+      padding: 11,
+      '&.rounded': {
+        padding: '7px 10px'
+      }
+    },
+    sizeLarge: {
+      padding: 19,
+      '&.rounded': {
+        padding: 12
+      }
+    }
+  },
   MuiButton: {
     root: {
       borderRadius: 2,
