@@ -1,3 +1,16 @@
+# [121.0.0](https://github.com/cozy/cozy-ui/compare/v120.0.0...v121.0.0) (2025-03-13)
+
+
+### Features
+
+* Revert "feat: Set pdf-lib as a peerDep" ([dd73546](https://github.com/cozy/cozy-ui/commit/dd73546))
+
+
+### BREAKING CHANGES
+
+* Remove pdf-lib as a dep in your app if you added it
+in cozy-ui 120.0.0
+
 # [120.0.0](https://github.com/cozy/cozy-ui/compare/v119.2.0...v120.0.0) (2025-03-13)
 
 
