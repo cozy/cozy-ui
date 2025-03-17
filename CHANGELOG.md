@@ -1,3 +1,10 @@
+## [121.1.1](https://github.com/cozy/cozy-ui/compare/v121.1.0...v121.1.1) (2025-03-17)
+
+
+### Bug Fixes
+
+* **Avatar:** Style wasn't correct ([932b3ec](https://github.com/cozy/cozy-ui/commit/932b3ec))
+
 # [121.1.0](https://github.com/cozy/cozy-ui/compare/v121.0.0...v121.1.0) (2025-03-17)
 
 
