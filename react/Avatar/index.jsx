@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { colorMapping } from './helpers'
+import { colorMapping, supportedColors, nameToColor } from './helpers'
 import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(theme => ({
@@ -13,13 +13,34 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Avatar = ({ className, color, size, disabled, ...props }) => {
-  const classes = useStyles({ color })
+const Avatar = ({
+  className,
+  color,
+  size,
+  border,
+  innerBorder,
+  disabled,
+  ...props
+}) => {
+  const defaultColor =
+    typeof props.children === 'string' ? nameToColor(props.children) : undefined
+  const classes = useStyles({
+    color:
+      color === 'none'
+        ? undefined
+        : supportedColors.includes(color)
+        ? color
+        : defaultColor
+  })
 
   return (
     <AvatarMui
       classes={classes}
-      className={cx(className, `size-${size}`, { disabled: !!disabled })}
+      className={cx(className, `size-${size}`, {
+        disabled: !!disabled,
+        border: !!border,
+        innerBorder: !!innerBorder
+      })}
       {...props}
     />
   )
@@ -31,7 +52,7 @@ Avatar.propTypes = {
     PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
     PropTypes.number
   ]),
-  color: PropTypes.string,
+  color: PropTypes.oneOf([...supportedColors, 'none']),
   disabled: PropTypes.bool
 }
 

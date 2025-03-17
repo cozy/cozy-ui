@@ -701,6 +701,77 @@ export const makeLightNormalOverrides = theme => ({
       }
     }
   },
+  MuiAvatarGroup: {
+    avatar: {
+      border: `2px solid ${theme.palette.background.paper}`
+    }
+  },
+  MuiAvatar: {
+    root: {
+      fontWeight: 600,
+      '&.size': {
+        '&-xs': {
+          width: 16,
+          height: 16,
+          fontSize: 8,
+          '& svg': {
+            width: 8,
+            height: 8
+          }
+        },
+        '&-s': {
+          width: 24,
+          height: 24,
+          fontSize: 12,
+          '& svg': {
+            width: 12,
+            height: 12
+          }
+        },
+        '&-m': {
+          width: 32,
+          height: 32,
+          fontSize: 16,
+          '& svg': {
+            width: 16,
+            height: 16
+          }
+        },
+        '&-l': {
+          width: 48,
+          height: 48,
+          fontSize: 24,
+          '& svg': {
+            width: 24,
+            height: 24
+          }
+        },
+        '&-xl': {
+          width: 64,
+          height: 64,
+          fontSize: 32,
+          '& svg': {
+            width: 32,
+            height: 32
+          }
+        }
+      },
+      '&.disabled': {
+        color: theme.palette.primary.contrastText,
+        background: 'var(--silver)', // should be semantic but used legacy component color for now
+        '& img': {
+          filter: 'grayscale(1) brightness(2)',
+          opacity: 0.5
+        }
+      },
+      '&.border': {
+        border: `2px solid ${theme.palette.background.paper}`
+      },
+      '&.innerBorder': {
+        boxShadow: `inset 0px 0px 0px 1px ${theme.palette.border.main}`
+      }
+    }
+  },
   MuiCheckbox: {
     colorSecondary: {
       '&$checked': {

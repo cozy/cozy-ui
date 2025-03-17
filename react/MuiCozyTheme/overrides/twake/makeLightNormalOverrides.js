@@ -171,22 +171,23 @@ export const makeLightNormalTwakeOverrides = theme => {
         height: 56
       }
     },
+    MuiAvatarGroup: {
+      root: {
+        '& > div:last-child': {
+          boxShadow: `inset 0px 0px 0px 1px ${theme.palette.border.main}`
+        }
+      }
+    },
     MuiAvatar: {
       root: {
-        fontWeight: 600,
         '&.size': {
           '&-xs': {
-            width: 16,
-            height: 16,
-            fontSize: 8,
             '& svg': {
               width: 10,
               height: 10
             }
           },
           '&-s': {
-            width: 24,
-            height: 24,
             fontSize: 11,
             '& svg': {
               width: 16,
@@ -194,36 +195,23 @@ export const makeLightNormalTwakeOverrides = theme => {
             }
           },
           '&-m': {
-            width: 32,
-            height: 32,
-            fontSize: 16,
             '& svg': {
               width: 20,
               height: 20
             }
           },
           '&-l': {
-            width: 48,
-            height: 48,
-            fontSize: 24,
             '& svg': {
               width: 28,
               height: 28
             }
           },
           '&-xl': {
-            width: 64,
-            height: 64,
-            fontSize: 32,
             '& svg': {
               width: 36,
               height: 36
             }
           }
-        },
-        '&.disabled': {
-          color: theme.palette.primary.contrastText,
-          background: theme.palette.action.disabledBackground
         }
       },
       colorDefault: {
