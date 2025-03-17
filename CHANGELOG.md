@@ -1,3 +1,11 @@
+# [121.1.0](https://github.com/cozy/cozy-ui/compare/v121.0.0...v121.1.0) (2025-03-17)
+
+
+### Features
+
+* Add `u-bdrs-5` and `u-bdrs-6` utility classes ([8a031f4](https://github.com/cozy/cozy-ui/commit/8a031f4))
+* Adjust style for ToggleButton and ToggleButtonGroupe ([d618a4a](https://github.com/cozy/cozy-ui/commit/d618a4a))
+
 # [121.0.0](https://github.com/cozy/cozy-ui/compare/v120.0.0...v121.0.0) (2025-03-13)
 
 
