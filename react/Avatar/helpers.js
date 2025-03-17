@@ -40,6 +40,17 @@ export const colorMapping = {
   pluviophile: 'linear-gradient(136deg, #A1D6F4 14.84%, #52CEC2 96.03%)',
   cornflower: 'linear-gradient(135deg, #86D9D3 0%, #1CCFB4 100%)',
   paleGreen: 'linear-gradient(135deg, #E2FA17 0%, #75D8CB 100%)',
-  moonBlue: 'linear-gradient(136deg, #6DCFFF 14.84%, #3D88F8 96.03%)',
-  undefined: ''
+  moonBlue: 'linear-gradient(136deg, #6DCFFF 14.84%, #3D88F8 96.03%)'
+}
+
+const colors = Object.values(supportedColors).filter(Boolean)
+
+const makeKey = (colors, name) =>
+  Array.from(name.toUpperCase())
+    .map(letter => letter.charCodeAt(0))
+    .reduce((sum, number) => sum + number, 0) % colors.length
+
+export const nameToColor = (name = '') => {
+  const key = makeKey(colors, name)
+  return colors[key]
 }
