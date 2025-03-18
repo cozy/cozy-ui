@@ -11,9 +11,10 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const props = [{ color: 'primary' }, { color: 'inherit', default: true }]
-const initialVariants = [{ small: false, medium: false, large: true }]
+const initialVariants = [{ small: false, medium: true, large: false }]
 
 ;
+
 <Variants initialVariants={initialVariants} radio screenshotAllVariants>
   {variant => (
     <Grid container>
