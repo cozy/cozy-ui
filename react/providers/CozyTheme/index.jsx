@@ -27,6 +27,14 @@ export const useCozyTheme = () => {
   return context
 }
 
+/**
+ * CozyTheme component.
+ *
+ * @component
+ * @param {object} props
+ * @param {boolean} [props.ignoreCozySettings] - Whether to ignore Cozy settings.
+ * @returns {JSX.Element} The rendered CozyTheme component.
+ */
 const CozyTheme = ({ ignoreCozySettings, ...props }) => {
   const Comp =
     ignoreCozySettings || process.env.NODE_ENV === 'test' || isRsg

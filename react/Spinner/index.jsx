@@ -6,10 +6,22 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import SpinnerIcon from '../Icons/Spinner'
 import Typography from '../Typography'
-import { translate } from '../providers/I18n'
+import { useI18n } from '../providers/I18n'
 
+/**
+ * @typedef SpinnerProps
+ * @property {string} [loadingType] - The type of loading.
+ * @property {boolean} [middle] - Whether to position the spinner in the middle.
+ * @property {boolean} [noMargin] - Whether to remove margin around the spinner.
+ * @property {string} [color] - The color of the spinner.
+ * @property {'tiny'|'small'|'medium'|'large'|'xlarge'|'xxlarge'} [size] - The size of the spinner.
+ * @property {string} [className] - The additional CSS class name for the spinner.
+ */
+
+/**
+ * @param {SpinnerProps} props
+ */
 export const Spinner = ({
-  t,
   loadingType,
   middle,
   noMargin,
@@ -17,6 +29,7 @@ export const Spinner = ({
   size,
   className
 }) => {
+  const { t } = useI18n()
   const realsizeMapping = {
     tiny: 8,
     small: 12,
@@ -73,4 +86,4 @@ Spinner.defaultProps = {
   className: ''
 }
 
-export default translate()(Spinner)
+export default Spinner
