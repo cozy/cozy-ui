@@ -9394,6 +9394,7 @@ body {
   .c-nav-icon--hrJUe {
     display: block;
     margin-right: 0;
+    color: var(--secondaryTextColor);
   }
   .c-nav-icon--hrJUe svg {
     margin: 4px auto 5px;
@@ -9462,6 +9463,7 @@ body {
     line-height: 0.75rem;
     background-position: center top;
     background-size: 1.5rem;
+    color: color var(--secondaryTextColor);
   }
   .c-nav-link--3mK6W.is-active--2D0jN,
   .c-nav-link--3mK6W:hover {
