@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import styles from './styles.styl'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 
 export const Layout = ({ children, className, monoColumn, ...rest }) => {
   return (
     <div
       className={cx(
         monoColumn ? styles['o-layout'] : styles['o-layout-2panes'],
-        className
+        className,
+        { [styles['o-layout--rounded']]: isTwakeTheme() }
       )}
       {...rest}
     >
