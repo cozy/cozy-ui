@@ -1,3 +1,11 @@
+## [121.1.2](https://github.com/cozy/cozy-ui/compare/v121.1.1...v121.1.2) (2025-03-19)
+
+
+### Bug Fixes
+
+* **Fab:** Default size wasn't correct ([2e0325a](https://github.com/cozy/cozy-ui/commit/2e0325a))
+* **Nav:** Text and icon colors wasn't correct on mobile ([46ffea9](https://github.com/cozy/cozy-ui/commit/46ffea9))
+
 ## [121.1.1](https://github.com/cozy/cozy-ui/compare/v121.1.0...v121.1.1) (2025-03-17)
 
 
