@@ -1,27 +1,15 @@
 import LinearProgress from '@material-ui/core/LinearProgress'
 import cx from 'classnames'
-import React, { Component, useState } from 'react'
-import { useIntervalWhen } from 'rooks'
+import React, { Component } from 'react'
 
-import { splitFilename } from 'cozy-client/dist/models/file'
-
+import Item from './Item'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
 import styles from './styles.styl'
-import Icon from '../Icon'
-import CheckIcon from '../Icons/Check'
-import CrossIcon from '../Icons/Cross'
-import WarningIcon from '../Icons/Warning'
-import Spinner from '../Spinner'
-import Typography from '../Typography'
 import List from '../List'
-import ListItem from '../ListItem'
-import ListItemText from '../ListItemText'
-import ListItemIcon from '../ListItemIcon'
-import { Img } from '../deprecated/Media'
+import Typography from '../Typography'
 import Button from '../deprecated/Button'
-import { translate, useI18n } from '../providers/I18n'
 import { formatLocallyDistanceToNow } from '../providers/I18n/format'
 import withLocales from '../providers/I18n/withLocales'
 import { withStyles } from '../styles'
@@ -58,173 +46,16 @@ export const uploadStatus = {
   ERROR_STATUSES
 }
 
-const Pending = translate()(props => (
-  <Typography variant="subtitle1" color="primary">
-    {props.t('item.pending')}
-  </Typography>
-))
-
 export const formatRemainingTime = durationInSec => {
   const later = Date.now() + durationInSec * 1000
   return formatLocallyDistanceToNow(later)
 }
-
-// https://date-fns.org/v2.28.0/docs/formatDistanceToNow
-const numberOfReferencesForPluralForm = durationInSec =>
-  durationInSec < 90 || (durationInSec > 2670 && durationInSec < 5370) ? 1 : 2
-
-const RemainingTime = ({ durationInSec }) => {
-  const { t } = useI18n()
-
-  return (
-    <Typography
-      variant="caption"
-      className={cx(styles['upload-queue__progress-caption'], 'u-ellipsis')}
-    >
-      {t('item.remainingTime', {
-        time: formatRemainingTime(durationInSec),
-        smart_count: numberOfReferencesForPluralForm(durationInSec)
-      })}
-    </Typography>
-  )
-}
-
-const FileLinearProgress = withStyles(theme => ({
-  root: {
-    borderRadius: theme.shape.borderRadius
-  },
-  colorPrimary: {
-    backgroundColor: theme.palette.background.default
-  },
-  barColorPrimary: {
-    backgroundColor: 'var(--emerald)'
-  }
-}))(LinearProgress)
 
 const QueueLinearProgress = withStyles({
   root: {
     height: '2px'
   }
 })(LinearProgress)
-
-const FileUploadProgress = ({ progress: progressProps }) => {
-  const [progress, setProgress] = useState(progressProps)
-  useIntervalWhen(
-    () => {
-      setProgress(progressProps)
-    },
-    1000,
-    true,
-    true
-  )
-
-  return (
-    <div className={styles['upload-queue__upload-progress']}>
-      <div className="u-flex-grow-1 u-pr-1">
-        <FileLinearProgress
-          variant="determinate"
-          value={(progress.loaded / progress.total) * 100}
-        />
-      </div>
-      <div className="u-flex-shrink">
-        {progress.remainingTime ? (
-          <RemainingTime durationInSec={progress.remainingTime} />
-        ) : null}
-      </div>
-    </div>
-  )
-}
-
-const Item = translate()(
-  ({ file, status, isDirectory, progress, getMimeTypeIcon }) => {
-    const { CANCEL, LOADING, DONE_STATUSES, ERROR_STATUSES } = uploadStatus
-    const { filename, extension } = splitFilename(file)
-    let statusIcon
-    let done = false
-    let error = false
-    /**
-     * Status came from the Upload Queue, but sometimes we're using
-     * manual upload without using the Upload Queue system but we're still
-     * using the UI component. When this is the case, the file handles on
-     * his own its status.
-     */
-    const statusToUse = file.status ? file.status : status
-
-    if (statusToUse === LOADING) {
-      statusIcon = !progress ? (
-        <Spinner className="u-ml-half" color="var(--primaryColor)" />
-      ) : null
-    } else if (statusToUse === CANCEL) {
-      statusIcon = (
-        <Icon
-          className="u-ml-half"
-          icon={CrossIcon}
-          color="var(--errorColor)"
-        />
-      )
-    } else if (ERROR_STATUSES.includes(statusToUse)) {
-      error = true
-      statusIcon = (
-        <Icon
-          className="u-ml-half"
-          icon={WarningIcon}
-          color="var(--errorColor)"
-        />
-      )
-    } else if (DONE_STATUSES.includes(statusToUse)) {
-      done = true
-      statusIcon = (
-        <Icon
-          className="u-ml-half"
-          icon={CheckIcon}
-          color="var(--successColor)"
-        />
-      )
-    } else if (statusToUse === PENDING) {
-      statusIcon = <Pending />
-    }
-
-    return (
-      <ListItem
-        divider
-        data-testid="upload-queue-item"
-        className={cx('u-ph-1', {
-          [styles['upload-queue-item--done']]: done,
-          [styles['upload-queue-item--error']]: error
-        })}
-      >
-        {getMimeTypeIcon ? (
-          <ListItemIcon className="u-ta-center">
-            <Icon
-              icon={getMimeTypeIcon(isDirectory, file.name, file.type)}
-              size={32}
-              className="u-mr-1"
-            />
-          </ListItemIcon>
-        ) : null}
-        <ListItemText disableTypography>
-          <div data-testid="upload-queue-item-name" className="u-ellipsis">
-            <Typography variant="body1" className="u-ellipsis">
-              {filename}
-              {extension && (
-                <Typography
-                  component="span"
-                  variant="body1"
-                  color="textSecondary"
-                  className="u-dib"
-                >
-                  {extension}
-                </Typography>
-              )}
-            </Typography>
-          </div>
-          {progress ? <FileUploadProgress progress={progress} /> : null}
-        </ListItemText>
-        <Img className={styles['item-status']}>{statusIcon}</Img>
-      </ListItem>
-    )
-  }
-)
 
 export class UploadQueue extends Component {
   state = {

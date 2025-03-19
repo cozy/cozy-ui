@@ -12,7 +12,8 @@ the upload queue:
 ```jsx
 import isTesting from '../helpers/isTesting'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import UploadQueue from 'cozy-ui/transpiled/react/UploadQueue';
+import UploadQueue from 'cozy-ui/transpiled/react/UploadQueue'
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 
 const initialState = {
   popover: false
@@ -35,6 +36,9 @@ const data = {
     file: { name: 'Photo - generic failure error.jpg', type: 'file' },
     status: 'failed'
   }, {
+    file: { name: 'Photo - generic failure error with a very long name - really long - 2020/04/16.txt', type: 'file' },
+    status: 'failed'
+  }, {
     file: { name: 'File with a very long name - really long - 2020/04/16.txt', type: 'file' },
     progress: {
       loaded: 100,
@@ -49,10 +53,12 @@ const data = {
   }],
   doneCount: 1,
   successCount: 1
-};
+}
+
+;
 
 <>
-  popover: <input type="checkbox" value={state.popover} onChange={() => setState({ popover: !state.popover })}/>
+  <Checkbox label="Popover" value={state.popover} onChange={() => setState({ popover: !state.popover })} />
   <UploadQueue
     lang='fr'
     app='Cozy Drive'
@@ -61,6 +67,7 @@ const data = {
     doneCount={data.doneCount}
     successCount={data.successCount}
     popover={state.popover}
+    purgeQueue={() => {}}
   />
   {isTesting() && (
     <>
