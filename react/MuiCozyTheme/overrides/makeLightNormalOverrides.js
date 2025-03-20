@@ -160,9 +160,16 @@ export const makeLightNormalOverrides = theme => ({
   MuiButton: {
     root: {
       borderRadius: 2,
-      height: '2.5rem',
       lineHeight: 'normal',
       padding: '0 1rem',
+      '&.customSize': {
+        '&-default': {
+          height: '2.5rem'
+        },
+        '&-auto': {
+          minHeight: '2.5rem'
+        }
+      },
       '&.ghost': {
         borderStyle: 'dashed !important', // important needed to override disable state
         '&:hover': {
@@ -171,15 +178,29 @@ export const makeLightNormalOverrides = theme => ({
       }
     },
     sizeSmall: {
-      height: '2rem',
       padding: '0 0.75rem',
+      '&.customSize': {
+        '&-default': {
+          height: '2rem'
+        },
+        '&-auto': {
+          minHeight: '2rem'
+        }
+      },
       '&$text': {
         padding: '8px 6px'
       }
     },
     sizeLarge: {
-      height: '3rem',
       padding: '0 1.25rem',
+      '&.customSize': {
+        '&-default': {
+          height: '3rem'
+        },
+        '&-auto': {
+          minHeight: '3rem'
+        }
+      },
       '&$text': {
         padding: '14px 10px'
       }

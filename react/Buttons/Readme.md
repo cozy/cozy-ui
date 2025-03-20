@@ -125,14 +125,14 @@ const iconPositions = ['startIcon', 'endIcon']
         {variants.map(variant =>
           <div key={variant}>
             <Button
-              className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
+              className="u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
               size={isTwakeTheme() ? "small" : "medium"}
               label={<Icon icon={StopIcon} size={12} />}
               variant={variant}
             />
             <Button
-              className="u-ml-1 u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
+              className="u-ml-1 u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
               label={<Icon icon={StopIcon} size={12} />}
               size={isTwakeTheme() ? "small" : "medium"}
@@ -270,4 +270,39 @@ const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error'
     </Grid>
   )}
 </Grid>
+```
+
+### Auto height
+
+```jsx
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Paper from 'cozy-ui/transpiled/react/Paper'
+import Variants from 'cozy-ui/docs/components/Variants'
+
+const buttonVariants = ['primary', 'secondary', 'ghost', 'text']
+const sizes = ['small', 'medium', 'large']
+const initialVariants = [{ autoHeight: false }]
+
+;
+
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
+    <Grid container>
+      {sizes.map(size =>
+        <Grid item xs={12} sm={4} className="u-mb-1" key={size}>
+          <Stack spacing="s">
+            <div>{size}</div>
+            {buttonVariants.map(buttonVariant =>
+              <div key={buttonVariant + size} className="u-w-4">
+                <Button label={`${buttonVariant} with long label`} variant={buttonVariant} size={size} height={variant.autoHeight ? 'auto' : 'default'} />
+              </div>
+            )}
+          </Stack>
+        </Grid>
+      )}
+    </Grid>
+  )}
+</Variants>
 ```

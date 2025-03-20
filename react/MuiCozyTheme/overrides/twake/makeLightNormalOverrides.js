@@ -76,8 +76,15 @@ export const makeLightNormalTwakeOverrides = theme => {
         }
       },
       sizeSmall: {
-        height: '2.25rem',
         padding: '10px 16px',
+        '&.customSize': {
+          '&-default': {
+            height: '2.25rem'
+          },
+          '&-auto': {
+            minHeight: '2.25rem'
+          }
+        },
         '&$text': {
           padding: '8px 16px'
         }
