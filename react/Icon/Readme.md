@@ -720,6 +720,7 @@ import ShareGrey08Icon from 'cozy-ui/transpiled/react/Icons/ShareGrey08'
 import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
 import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
+import TwakeWorkplace from 'cozy-ui/transpiled/react/Icons/TwakeWorkplace'
 
 const icons = [
   AccountIcon,
@@ -768,7 +769,8 @@ const icons = [
   ShareGrey08Icon,
   StoreIcon,
   TopSelectIcon,
-  TrashDuotoneIcon
+  TrashDuotoneIcon,
+  ...(isTwakeTheme() ? [TwakeWorkplace] : []),
 ]
 
 const wrapperStyle = {
