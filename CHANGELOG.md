@@ -1,3 +1,11 @@
+# [121.2.0](https://github.com/cozy/cozy-ui/compare/v121.1.2...v121.2.0) (2025-03-20)
+
+
+### Features
+
+* **Layout:** Add rounded style ([2350069](https://github.com/cozy/cozy-ui/commit/2350069))
+* **UploadQueue:** Adjust style ([49f10c8](https://github.com/cozy/cozy-ui/commit/49f10c8))
+
 ## [121.1.2](https://github.com/cozy/cozy-ui/compare/v121.1.1...v121.1.2) (2025-03-19)
 
 
