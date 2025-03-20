@@ -64,6 +64,14 @@ export const makeLightNormalTwakeOverrides = theme => {
         }
       }
     },
+    MuiLinearProgress: {
+      root: {
+        height: 3
+      },
+      colorPrimary: {
+        backgroundColor: theme.palette.divider
+      }
+    },
     MuiButton: {
       root: {
         borderRadius: 100,
