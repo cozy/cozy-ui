@@ -10,7 +10,17 @@ const CUSTOM_COLORS = ['success', 'error', 'warning', 'info']
 
 const DefaultButton = forwardRef(
   (
-    { variant, className, color, label, busy, disabled, endIcon, ...props },
+    {
+      variant,
+      className,
+      color,
+      label,
+      busy,
+      disabled,
+      height,
+      endIcon,
+      ...props
+    },
     ref
   ) => {
     const customColor = CUSTOM_COLORS.includes(color) ? color : 'primary'
@@ -24,6 +34,7 @@ const DefaultButton = forwardRef(
         ref={ref}
         className={cx(
           { [`customColor-${customColor}`]: customColor },
+          { [`customSize-${height}`]: height },
           className
         )}
         color={_color}
@@ -103,11 +114,13 @@ Buttons.propTypes = {
     'error',
     'warning',
     'info'
-  ])
+  ]),
+  height: PropTypes.oneOf(['default', 'auto'])
 }
 
 Buttons.defaultProps = {
-  variant: 'primary'
+  variant: 'primary',
+  height: 'default'
 }
 
 export default Buttons
