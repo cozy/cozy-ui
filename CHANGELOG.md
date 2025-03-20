@@ -1,3 +1,12 @@
+# [121.3.0](https://github.com/cozy/cozy-ui/compare/v121.2.0...v121.3.0) (2025-03-20)
+
+
+### Features
+
+* Add Workplace icon ([d48aa3f](https://github.com/cozy/cozy-ui/commit/d48aa3f))
+* Adjust LinearProgress style ([4b4c160](https://github.com/cozy/cozy-ui/commit/4b4c160))
+* **Buttons:** Add auto height for multiline purpose ([88a3181](https://github.com/cozy/cozy-ui/commit/88a3181))
+
 # [121.2.0](https://github.com/cozy/cozy-ui/compare/v121.1.2...v121.2.0) (2025-03-20)
 
 
