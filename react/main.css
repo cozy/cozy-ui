@@ -6680,6 +6680,8 @@ body {
   flex-flow: column nowrap;
   align-items: stretch;
 }
+@media (min-width: 64rem) {
+}
 @media (max-width: 63.938rem) {
 }
 @media (max-width: 63.938rem) {
@@ -6990,6 +6992,8 @@ body {
 .c-modal-header--branded--17z1P,
 .c-modal-footer--3JCxm {
   flex: 0 0 auto;
+}
+@media (min-width: 64rem) {
 }
 @media (max-width: 63.938rem) {
 }
@@ -9250,6 +9254,18 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+@media (min-width: 64rem) {
+  .o-layout--rounded--1WX4D main,
+  .o-layout-2panes--rounded--1FuZT main {
+    background-color: var(--defaultBackgroundColor);
+  }
+  .o-layout--rounded--1WX4D main > [role=main],
+  .o-layout-2panes--rounded--1FuZT main > [role=main] {
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 1rem;
+    background-color: var(--paperBackgroundColor);
+  }
+}
 @media (max-width: 63.938rem) {
   .o-layout--3TSz9,
   .o-layout-2panes--1CDQw {
@@ -9317,10 +9333,15 @@ body {
 }
 .o-sidebar--1295j {
   width: 13.75rem;
-  border-right: 0.063rem solid var(--dividerColor);
   background-color: var(--defaultBackgroundColor);
   overflow-y: auto;
   overflow-x: hidden;
+}
+.o-sidebar--border--32tfw {
+  border-right: 0.063rem solid var(--dividerColor);
+}
+.o-sidebar--large--1mT8H {
+  width: 14.75rem;
 }
 @media (max-width: 63.938rem) {
   .o-sidebar--1295j {
@@ -9821,12 +9842,13 @@ body {
 }
 .upload-queue--1VtNK {
   border: 0.0625rem solid var(--dividerColor);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   background-color: var(--paperBackgroundColor);
   display: flex;
   flex-direction: column;
   max-width: 90%;
   width: 30rem;
+  overflow: hidden;
 }
 .upload-queue__threshold-bar--tTYal {
   min-width: 10rem;
@@ -9844,7 +9866,7 @@ body {
 .upload-queue--popover--2z1a4 {
   z-index: var(--zIndex-popover);
   border: 0.063rem solid var(--dividerColor);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0.063rem 0.188rem 0 rgba(50,54,63,0.19), 0 0.375rem 1.125rem 0 rgba(50,54,63,0.19);
   background-color: var(--paperBackgroundColor);
   position: fixed;
@@ -9866,6 +9888,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 2rem;
+  min-height: 2rem;
   background-color: var(--defaultBackgroundColor);
   font-weight: bold;
   margin: 0;
@@ -10674,6 +10697,8 @@ body {
 .wizard-header--2_r05,
 .wizard-footer---ZrgM {
   flex: 0 0 auto;
+}
+@media (min-width: 64rem) {
 }
 @media (max-width: 63.938rem) {
 }
