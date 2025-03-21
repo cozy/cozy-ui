@@ -769,7 +769,7 @@ const icons = [
   PapersIcon,
   ...(isTwakeTheme() ? [PassIcon] : []),
   ShareGrey08Icon,
-  StoreIcon,
+  ...(isTwakeTheme() ? [StoreIcon] : []),
   TopSelectIcon,
   TrashDuotoneIcon,
   ...(isTwakeTheme() ? [TwakeWorkplace] : []),
