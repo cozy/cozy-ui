@@ -677,6 +677,7 @@ import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
 import ChatIcon from 'cozy-ui/transpiled/react/Icons/Chat'
+import ChatTextIcon from 'cozy-ui/transpiled/react/Icons/ChatText'
 import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
 import CloudSync2 from 'cozy-ui/transpiled/react/Icons/CloudSync2'
@@ -693,6 +694,7 @@ import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
 import DeviceTabletIcon from 'cozy-ui/transpiled/react/Icons/DeviceTablet'
 import DotsWhiteIcon from 'cozy-ui/transpiled/react/Icons/DotsWhite'
 import DriveIcon from 'cozy-ui/transpiled/react/Icons/Drive'
+import DriveTextIcon from 'cozy-ui/transpiled/react/Icons/DriveText'
 import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
 import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
 import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
@@ -713,19 +715,25 @@ import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
 import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
 import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
 import MailIcon from 'cozy-ui/transpiled/react/Icons/Mail'
+import MailTextIcon from 'cozy-ui/transpiled/react/Icons/MailText'
 import NotesIcon from 'cozy-ui/transpiled/react/Icons/Notes'
+import NotesTextIcon from 'cozy-ui/transpiled/react/Icons/NotesText'
 import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
 import PassIcon from 'cozy-ui/transpiled/react/Icons/Pass'
+import PassTextIcon from 'cozy-ui/transpiled/react/Icons/PassText'
 import ShareGrey08Icon from 'cozy-ui/transpiled/react/Icons/ShareGrey08'
 import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
+import StoreTextIcon from 'cozy-ui/transpiled/react/Icons/StoreText'
 import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
 import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
 import TwakeWorkplace from 'cozy-ui/transpiled/react/Icons/TwakeWorkplace'
+import TwakeTextIcon from 'cozy-ui/transpiled/react/Icons/TwakeText'
+import WorkplaceTextIcon from 'cozy-ui/transpiled/react/Icons/WorkplaceText'
 
 const icons = [
   AccountIcon,
   BottomSelectIcon,
-  ...(isTwakeTheme() ? [ChatIcon] : []),
+  ...(isTwakeTheme() ? [ChatIcon, ChatTextIcon] : []),
   CheckWhiteIcon,
   CloudBrokenIcon,
   CloudSync2,
@@ -742,7 +750,7 @@ const icons = [
   DevicePhoneIcon,
   DeviceTabletIcon,
   DotsWhiteIcon,
-  ...(isTwakeTheme() ? [DriveIcon] : []),
+  ...(isTwakeTheme() ? [DriveIcon, DriveTextIcon] : []),
   FileTypeAudioIcon,
   FileTypeBankingAccountIcon,
   FileTypeBinIcon,
@@ -762,15 +770,15 @@ const icons = [
   GoogleIcon,
   KeychainIcon,
   LogoutLargeIcon,
-  ...(isTwakeTheme() ? [MailIcon] : []),
-  ...(isTwakeTheme() ? [NotesIcon] : []),
+  ...(isTwakeTheme() ? [MailIcon, MailTextIcon] : []),
+  ...(isTwakeTheme() ? [NotesIcon, NotesTextIcon] : []),
   PapersIcon,
-  ...(isTwakeTheme() ? [PassIcon] : []),
+  ...(isTwakeTheme() ? [PassIcon, PassTextIcon] : []),
   ShareGrey08Icon,
-  StoreIcon,
+  ...(isTwakeTheme() ? [StoreIcon, StoreTextIcon] : []),
   TopSelectIcon,
   TrashDuotoneIcon,
-  ...(isTwakeTheme() ? [TwakeWorkplace] : []),
+  ...(isTwakeTheme() ? [TwakeWorkplace, TwakeTextIcon, WorkplaceTextIcon] : []),
 ]
 
 const wrapperStyle = {
