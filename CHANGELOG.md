@@ -1,3 +1,12 @@
+# [121.4.0](https://github.com/cozy/cozy-ui/compare/v121.3.0...v121.4.0) (2025-03-24)
+
+
+### Features
+
+* Add DesktopDownload icon ([97766b5](https://github.com/cozy/cozy-ui/commit/97766b5))
+* Adjust PhoneDownload Icon ([8bd5753](https://github.com/cozy/cozy-ui/commit/8bd5753))
+* **Banner:** Add possibility to hide bottom divider ([cc5a2c8](https://github.com/cozy/cozy-ui/commit/cc5a2c8))
+
 # [121.3.0](https://github.com/cozy/cozy-ui/compare/v121.2.0...v121.3.0) (2025-03-20)
 
 
