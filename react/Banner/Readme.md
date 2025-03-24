@@ -22,6 +22,7 @@ const initialVariants = [{
   buttonOne: true,
   buttonTwo: true,
   inline: true,
+  noDivider: false,
   backgroundColor: true,
   disableIconStyles: false
 }]
@@ -39,6 +40,7 @@ const initialVariants = [{
       buttonOne={variant.buttonOne && buttonOne}
       buttonTwo={variant.buttonTwo && buttonTwo}
       inline={variant.inline}
+      noDivider={variant.noDivider}
       disableIconStyles={variant.disableIconStyles}
     />
   )}

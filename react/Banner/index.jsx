@@ -19,6 +19,7 @@ const Banner = ({
   buttonOne,
   buttonTwo,
   inline,
+  noDivider,
   disableIconStyles
 }) => {
   const position = {
@@ -76,7 +77,7 @@ const Banner = ({
           </Grid>
         </div>
       </Paper>
-      <Divider />
+      {!noDivider && <Divider />}
     </>
   )
 }
@@ -94,6 +95,8 @@ Banner.propTypes = {
   buttonTwo: PropTypes.node,
   /** Show banner on one line (only desktop) */
   inline: PropTypes.bool,
+  /** Disables the bottom divider */
+  noDivider: PropTypes.bool,
   /** Disables the styles of the wrapper around the icon */
   disableIconWrapper: PropTypes.bool
 }
