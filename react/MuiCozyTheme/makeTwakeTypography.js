@@ -69,10 +69,10 @@ export const makeTwakeTypography = () => ({
     letterSpacing: '0.5px'
   },
   overline: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: 500,
     lineHeight: '16px',
-    letterSpacing: '0.4px',
+    letterSpacing: '0.5px',
     textTransform: 'inherit'
   }
 })
