@@ -1,3 +1,10 @@
+# [121.5.0](https://github.com/cozy/cozy-ui/compare/v121.4.0...v121.5.0) (2025-03-25)
+
+
+### Features
+
+* **Typography:** Adjust overline style ([352e215](https://github.com/cozy/cozy-ui/commit/352e215))
+
 # [121.4.0](https://github.com/cozy/cozy-ui/compare/v121.3.0...v121.4.0) (2025-03-24)
 
 
