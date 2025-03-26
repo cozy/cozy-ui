@@ -17,6 +17,7 @@ import iconWarning from '../Icons/WarningCircle'
 import InfosBadge from '../InfosBadge'
 import Spinner from '../Spinner'
 import Typography from '../Typography'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { nameToColor } from '../legacy/Avatar/helpers'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { alpha, makeStyles } from '../styles'
@@ -180,7 +181,10 @@ export const SquareAppIcon = ({
             overlap="rectangular"
             style={
               variant === 'shortcut' && !IconContent
-                ? { backgroundColor: nameToColor(name) }
+                ? {
+                    [isTwakeTheme() ? 'background' : 'backgroundColor']:
+                      nameToColor(name)
+                  }
                 : null
             }
           >
