@@ -2,9 +2,9 @@ import cx from 'classnames'
 import React from 'react'
 
 import Badge from '../Badge'
-import { withStyles } from '../styles'
+import { makeStyles } from '../styles'
 
-const customStyles = () => ({
+const useStyles = makeStyles({
   qualifier: {
     height: '1.125rem', // compensation of the specific border size
     minWidth: '1.125rem',
@@ -14,17 +14,18 @@ const customStyles = () => ({
   }
 })
 
-const InfosBadge = withStyles(customStyles)(({ classes, ...props }) => {
-  const { qualifier, ...customClasses } = classes
+const InfosBadge = ({ classes, ...props }) => {
+  const _classes = useStyles()
+
   return (
     <Badge
       classes={{
-        badge: cx(qualifier, customClasses)
+        badge: cx(_classes.qualifier, classes)
       }}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       {...props}
     />
   )
-})
+}
 
 export default InfosBadge
