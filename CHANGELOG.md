@@ -1,3 +1,21 @@
+# [121.8.0](https://github.com/cozy/cozy-ui/compare/v121.7.0...v121.8.0) (2025-03-27)
+
+
+### Bug Fixes
+
+* **Badge:** Force 100% radius ([cf87bbd](https://github.com/cozy/cozy-ui/commit/cf87bbd))
+* Change error.50 Twake color ([02554fb](https://github.com/cozy/cozy-ui/commit/02554fb))
+* **SquareAppIcon:** Background color for shortcut wasn't correct ([fa86122](https://github.com/cozy/cozy-ui/commit/fa86122))
+
+
+### Features
+
+* **CozyTheme:** Add theme name in hook result ([1dcb245](https://github.com/cozy/cozy-ui/commit/1dcb245))
+* **InfosBadge:** Adjust Twake theme ([e71cd73](https://github.com/cozy/cozy-ui/commit/e71cd73))
+* **MuiTheme:** Add theme type and variant ([be59079](https://github.com/cozy/cozy-ui/commit/be59079))
+* Remove set of font in Twake theme css ([4851971](https://github.com/cozy/cozy-ui/commit/4851971))
+* **SquareAppIcon:** Adjust Twake theme ([40ec0f7](https://github.com/cozy/cozy-ui/commit/40ec0f7))
+
 # [121.7.0](https://github.com/cozy/cozy-ui/compare/v121.6.0...v121.7.0) (2025-03-27)
 
 
