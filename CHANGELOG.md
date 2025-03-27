@@ -1,3 +1,11 @@
+# [121.6.0](https://github.com/cozy/cozy-ui/compare/v121.5.0...v121.6.0) (2025-03-27)
+
+
+### Features
+
+* Add Twake apps text icons ([6881702](https://github.com/cozy/cozy-ui/commit/6881702))
+* Rewritten AppTitle component ([59e37b9](https://github.com/cozy/cozy-ui/commit/59e37b9))
+
 # [121.5.0](https://github.com/cozy/cozy-ui/compare/v121.4.0...v121.5.0) (2025-03-25)
 
 
