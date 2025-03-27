@@ -36,6 +36,7 @@ const DumbCozyTheme = ({
       value={{
         type: selfThemeType,
         variant: selfThemeVariant,
+        name: uiThemeName,
         isLight: selfThemeType === 'light'
       }}
     >
