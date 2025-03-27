@@ -1,3 +1,10 @@
+# [121.7.0](https://github.com/cozy/cozy-ui/compare/v121.6.0...v121.7.0) (2025-03-27)
+
+
+### Features
+
+* Add CloudRainbow, Mosaic and PersonAdd icons ([dc8b4b0](https://github.com/cozy/cozy-ui/commit/dc8b4b0))
+
 # [121.6.0](https://github.com/cozy/cozy-ui/compare/v121.5.0...v121.6.0) (2025-03-27)
 
 
