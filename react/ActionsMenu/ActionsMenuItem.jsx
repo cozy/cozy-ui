@@ -12,6 +12,15 @@ const cleanPropsForDOM = props => {
   return omit(props, nonDOMProps)
 }
 
+/**
+ * @typedef ListItemTextPropTypes
+ * @property {boolean} [isListItem] - Whether the ActionsMenuItem will return a ListItem or MenuItem.
+ * @property {string} [className] - Additional CSS class names for the list item text.
+ */
+
+/**
+ * @type React.ForwardRefRenderFunction<HTMLDivElement, ListItemTextPropTypes>
+ */
 const ActionsMenuItem = forwardRef(
   ({ isListItem, className, ...props }, ref) => {
     const Component = isListItem ? ListItem : MenuItem
