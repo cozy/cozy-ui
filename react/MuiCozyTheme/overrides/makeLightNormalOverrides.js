@@ -885,6 +885,7 @@ export const makeLightNormalOverrides = theme => ({
     badge: {
       boxSizing: 'content-box',
       padding: 0,
+      borderRadius: '100%',
       '&.badgeBorder': {
         border: `2px solid ${theme.palette.background.paper}`
       },
