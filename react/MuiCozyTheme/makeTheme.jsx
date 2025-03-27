@@ -71,6 +71,8 @@ export const makeTheme = (type, variant) => {
     typography:
       uiThemeName === 'Cozy' ? makeTypography(palette) : makeTwakeTypography(),
     shadows: makeShadows(type, variant),
+    type,
+    variant,
     palette
   })
 
