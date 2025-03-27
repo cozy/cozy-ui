@@ -7569,6 +7569,15 @@ body {
   align-items: center;
   margin: 0;
 }
+.c-apptitle-light--49VIZ {
+  fill: 'black';
+}
+.c-apptitle-dark--13RM5 {
+  fill: 'white';
+}
+.c-apptitle-app-icon--oQp8q {
+  margin-right: 4px;
+}
 
 .c-circle--1DuMR {
   --circleSize: 2.5rem;
