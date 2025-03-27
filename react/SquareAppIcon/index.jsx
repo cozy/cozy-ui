@@ -5,7 +5,8 @@ import React, { useEffect, useState } from 'react'
 
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 
-import styles from './styles.styl'
+import stylesCozy from './styles.styl'
+import stylesTwake from './styles_twake.styl'
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
 import Icon from '../Icon'
@@ -19,16 +20,29 @@ import Spinner from '../Spinner'
 import Typography from '../Typography'
 import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { nameToColor } from '../legacy/Avatar/helpers'
+import { useBreakpoints } from '../providers/Breakpoints'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { alpha, makeStyles } from '../styles'
 
+const styles = isTwakeTheme() ? stylesTwake : stylesCozy
+
+const makeTwakeColor = theme =>
+  theme.variant === 'inverted' || theme.type === 'dark'
+    ? 'var(--white)'
+    : 'var(--black)'
+
 const useStyles = makeStyles(theme => ({
   name: {
-    color: 'var(--primaryTextColor)',
+    color: isTwakeTheme() ? makeTwakeColor(theme) : 'var(--primaryTextColor)',
+    textShadow: isTwakeTheme()
+      ? theme.variant === 'inverted' || theme.type === 'dark'
+        ? '0px 0px 10px rgba(0, 0, 0, 0.10), 0px 0px 2px rgba(0, 0, 0, 0.20), 0.5px 0.5px 1px rgba(0, 0, 0, 0.50)'
+        : undefined
+      : undefined,
     width: '5.5rem',
     textAlign: 'center',
-    fontSize: '0.875rem',
-    lineHeight: '1.188rem',
+    fontSize: isTwakeTheme() ? undefined : '0.875rem',
+    lineHeight: isTwakeTheme() ? undefined : '1.188rem',
     margin: '0.5rem 0.25rem 0 0.25rem',
     lineClamp: '2',
     boxOrient: 'vertical',
@@ -36,8 +50,8 @@ const useStyles = makeStyles(theme => ({
     height: '2.375rem',
     [theme.breakpoints.down('sm')]: {
       width: '3.75rem',
-      fontSize: '0.6875rem',
-      lineHeight: '1rem',
+      fontSize: isTwakeTheme() ? undefined : '0.6875rem',
+      lineHeight: isTwakeTheme() ? undefined : '1rem',
       margin: '0.25rem 0.25rem 0 0.25rem',
       height: '2rem'
     }
@@ -60,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto'
   },
   shadow: {
-    boxShadow: theme.shadows[1]
+    boxShadow: isTwakeTheme() ? undefined : theme.shadows[1]
   },
   errorIcon: {
     fill: 'var(--errorColor)',
@@ -72,9 +86,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '6rem',
+    minWidth: '6rem',
     [theme.breakpoints.down('sm')]: {
-      width: '4.25rem'
+      minWidth: '4.25rem'
     }
   },
   detailedTileWrapper: {
@@ -105,6 +119,7 @@ export const SquareAppIcon = ({
   ...appIconProps
 }) => {
   const { variant: themeVariant } = useCozyTheme()
+  const { isMobile } = useBreakpoints()
   const classes = useStyles()
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
@@ -127,7 +142,9 @@ export const SquareAppIcon = ({
     prevVariant.current = variant
   }, [variant])
 
-  const squareTheme = ['add', 'ghost'].includes(variant)
+  const exceptionVariant = [isTwakeTheme() ? 'ghost' : 'add', 'ghost']
+
+  const squareTheme = exceptionVariant.includes(variant)
     ? themeVariant
     : 'normal'
 
@@ -158,16 +175,15 @@ export const SquareAppIcon = ({
               styles['SquareAppIcon-wrapper'],
               styles[`SquareAppIcon-wrapper-${variant}`],
               {
-                [classes.squareAppIconGhost]: ['ghost', 'add'].includes(
-                  variant
-                ),
-                [classes.shadow]: !['add', 'ghost'].includes(variant)
+                [classes.squareAppIconGhost]:
+                  exceptionVariant.includes(variant),
+                [classes.shadow]: !exceptionVariant.includes(variant)
               }
             )}
             badgeContent={
               variant === 'error' ? (
                 <Icon
-                  size="16"
+                  size={16}
                   className={cx(classes.errorIcon)}
                   icon={iconWarning}
                 />
@@ -213,7 +229,7 @@ export const SquareAppIcon = ({
                 >
                   {animationState && (
                     <Icon
-                      size="32"
+                      size={32}
                       icon={
                         animationState === 'success'
                           ? IconCheckAnimated
@@ -227,6 +243,10 @@ export const SquareAppIcon = ({
                   <Icon icon={iconPlus} color="var(--primaryColor)" />
                 ) : IconContent ? (
                   IconContent
+                ) : isTwakeTheme() ? (
+                  <div className="u-w-1-half-s u-h-1-half-s u-w-2 u-h-2">
+                    <AppIcon {...appIconProps} />
+                  </div>
                 ) : (
                   <AppIcon {...appIconProps} />
                 )}
@@ -244,7 +264,7 @@ export const SquareAppIcon = ({
             { [classes.nameInverted]: themeVariant === 'inverted' },
             'u-spacellipsis'
           )}
-          variant="h6"
+          variant={isTwakeTheme() ? (isMobile ? 'overline' : 'h6') : 'h6'}
           align="center"
         >
           {appName}

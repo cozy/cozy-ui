@@ -7,6 +7,7 @@ import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import { useCozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
@@ -18,7 +19,7 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
 
 ;
 
-<>
+<BreakpointsProvider>
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
   <Button className="u-mb-1" label="Hide shortcut badge" onClick={() => setShortcutBadgeHide(!isShortcutBadgeHide)} />
@@ -44,10 +45,10 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
       <SquareAppIcon name="Shortcut" variant="shortcut" hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
-      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size="48" />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
+      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
     </Grid>
     <Grid item>
-      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size="48" />} name="Loading" variant={isError ? 'error' : 'loading'} />
+      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} name="Loading" variant={isError ? 'error' : 'loading'} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Shortcut" variant="shortcut" IconContent={<img
@@ -63,7 +64,7 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
             />} hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
-      <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size="48" />} />
+      <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Icon Grid" IconContent={(
@@ -84,7 +85,7 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
       )} />
     </Grid>
   </Grid>
-</>
+</BreakpointsProvider>
 ```
 
 ### Using the "detailed" display mode
@@ -98,6 +99,7 @@ import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import { useCozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
@@ -109,7 +111,7 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
 
 ;
 
-<>
+<BreakpointsProvider>
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
     <Button className="u-mb-1" label="Hide shortcut badge" onClick={() => setShortcutBadgeHide(!isShortcutBadgeHide)} />
@@ -179,5 +181,5 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
         IconContent={<Icon icon={CozyIcon} size="48" />} />
     </Grid>
   </Grid>
-</>
+</BreakpointsProvider>
 ```
