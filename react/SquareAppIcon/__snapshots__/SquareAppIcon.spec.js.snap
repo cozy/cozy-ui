@@ -37,7 +37,7 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
         />
       </span>
       <span
-        class="MuiBadge-badge-43 Component-qualifier-41 MuiBadge-anchorOriginBottomRightRectangular-51 MuiBadge-invisible-64"
+        class="MuiBadge-badge-43 makeStyles-qualifier-41 MuiBadge-anchorOriginBottomRightRectangular-51 MuiBadge-invisible-64"
       />
     </span>
   </div>
@@ -86,7 +86,7 @@ exports[`SquareAppIcon component should render an app correctly with the given n
         />
       </span>
       <span
-        class="MuiBadge-badge-11 Component-qualifier-9 MuiBadge-anchorOriginBottomRightRectangular-19 MuiBadge-invisible-32"
+        class="MuiBadge-badge-11 makeStyles-qualifier-9 MuiBadge-anchorOriginBottomRightRectangular-19 MuiBadge-invisible-32"
       />
     </span>
   </div>
@@ -135,7 +135,7 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
         />
       </span>
       <span
-        class="MuiBadge-badge-75 Component-qualifier-73 MuiBadge-anchorOriginBottomRightRectangular-83 MuiBadge-invisible-96"
+        class="MuiBadge-badge-75 makeStyles-qualifier-73 MuiBadge-anchorOriginBottomRightRectangular-83 MuiBadge-invisible-96"
       />
     </span>
   </div>
@@ -191,7 +191,7 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
         />
       </span>
       <span
-        class="MuiBadge-badge-203 Component-qualifier-201 MuiBadge-anchorOriginBottomRightRectangular-211 MuiBadge-invisible-224"
+        class="MuiBadge-badge-203 makeStyles-qualifier-201 MuiBadge-anchorOriginBottomRightRectangular-211 MuiBadge-invisible-224"
       />
     </span>
   </div>
@@ -250,7 +250,7 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
         </span>
       </span>
       <span
-        class="MuiBadge-badge-171 Component-qualifier-169 MuiBadge-anchorOriginBottomRightRectangular-179 MuiBadge-invisible-192"
+        class="MuiBadge-badge-171 makeStyles-qualifier-169 MuiBadge-anchorOriginBottomRightRectangular-179 MuiBadge-invisible-192"
       />
     </span>
   </div>
@@ -299,7 +299,7 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
         />
       </span>
       <span
-        class="MuiBadge-badge-139 Component-qualifier-137 MuiBadge-anchorOriginBottomRightRectangular-147 MuiBadge-invisible-160"
+        class="MuiBadge-badge-139 makeStyles-qualifier-137 MuiBadge-anchorOriginBottomRightRectangular-147 MuiBadge-invisible-160"
       />
     </span>
   </div>
@@ -348,7 +348,7 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
         />
       </span>
       <span
-        class="MuiBadge-badge-107 Component-qualifier-105 MuiBadge-anchorOriginBottomRightRectangular-115 MuiBadge-invisible-128"
+        class="MuiBadge-badge-107 makeStyles-qualifier-105 MuiBadge-anchorOriginBottomRightRectangular-115 MuiBadge-invisible-128"
       />
     </span>
   </div>
@@ -385,7 +385,7 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
         />
       </span>
       <span
-        class="MuiBadge-badge-235 Component-qualifier-233 MuiBadge-anchorOriginBottomRightRectangular-243"
+        class="MuiBadge-badge-235 makeStyles-qualifier-233 MuiBadge-anchorOriginBottomRightRectangular-243"
       >
         <svg
           class="styles__icon___23x3R"
@@ -447,7 +447,7 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
         />
       </span>
       <span
-        class="MuiBadge-badge-329 Component-qualifier-327 MuiBadge-anchorOriginBottomRightRectangular-337 MuiBadge-invisible-350"
+        class="MuiBadge-badge-329 makeStyles-qualifier-327 MuiBadge-anchorOriginBottomRightRectangular-337 MuiBadge-invisible-350"
       />
     </span>
   </div>
