@@ -2,15 +2,17 @@ import cx from 'classnames'
 import React from 'react'
 
 import Badge from '../Badge'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   qualifier: {
-    height: '1.125rem', // compensation of the specific border size
-    minWidth: '1.125rem',
+    height: isTwakeTheme() ? '24px' : '1.125rem', // compensation of the specific border size
+    minWidth: isTwakeTheme() ? '24px' : '1.125rem',
     backgroundColor: 'var(--paperBackgroundColor)',
     color: 'var(--iconTextColor)',
-    border: '1px solid var(--borderMainColor)'
+    border: isTwakeTheme() ? undefined : '1px solid var(--borderMainColor)',
+    boxShadow: isTwakeTheme() ? 'var(--shadow3)' : undefined
   }
 })
 
