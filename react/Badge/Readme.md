@@ -73,10 +73,10 @@ import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
 <InfosBadge
   badgeContent={
     <Badge color="error" variant="dot" size="small">
-      <Icon icon={LinkIcon} size="10" />
+      <Icon icon={LinkIcon} size={isTwakeTheme() ? 16 : 10} />
     </Badge>
   }
 >
-  <Avatar text="CD" size="small" />
+  <Avatar text="CD" size={isTwakeTheme() ? 'medium' : 'small'} />
 </InfosBadge>
 ```
