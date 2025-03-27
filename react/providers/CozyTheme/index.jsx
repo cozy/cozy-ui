@@ -10,7 +10,7 @@ import { isRsg } from '../../hooks/useSetFlagshipUi/helpers'
 export const CozyThemeContext = createContext()
 
 /**
- * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean }}
+ * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean, name: 'Twake'|'Cozy' }}
  */
 export const useCozyTheme = () => {
   const context = useContext(CozyThemeContext)
@@ -21,7 +21,12 @@ export const useCozyTheme = () => {
       '`CozyThemeContext` is missing. `useCozyTheme()` must be used within a `<CozyTheme>`. `light normal` is returned as fallback value.'
     )
 
-    return { type: 'light', variant: 'normal', isLight: true }
+    return {
+      type: 'light',
+      variant: 'normal',
+      isLight: true,
+      name: 'Cozy'
+    }
   }
 
   return context
