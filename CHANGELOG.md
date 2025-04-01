@@ -1,3 +1,11 @@
+# [121.9.0](https://github.com/cozy/cozy-ui/compare/v121.8.0...v121.9.0) (2025-04-01)
+
+
+### Features
+
+* Add .u-bg-transparent utility class ([bbbb018](https://github.com/cozy/cozy-ui/commit/bbbb018))
+* Add .u-elevation-0 utility class ([1e3f322](https://github.com/cozy/cozy-ui/commit/1e3f322))
+
 # [121.8.0](https://github.com/cozy/cozy-ui/compare/v121.7.0...v121.8.0) (2025-03-27)
 
 
