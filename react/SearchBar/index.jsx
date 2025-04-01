@@ -181,7 +181,7 @@ const SearchBar = forwardRef(
     return (
       <Paper
         component="form"
-        elevation={elevation ? 1 : 0}
+        elevation={elevation}
         className={cx(className, classes.root, {
           [classes.flat]: !elevation,
           [classes.elevation]: elevation,
@@ -238,7 +238,7 @@ const SearchBar = forwardRef(
 SearchBar.displayName = 'SearchBar'
 
 SearchBar.defaultProps = {
-  elevation: true,
+  elevation: 1,
   icon: MagnifierIcon,
   size: 'small',
   type: 'search',
@@ -266,7 +266,7 @@ SearchBar.propTypes = {
   defaultValue: PropTypes.string,
   disabledClear: PropTypes.bool,
   disabledFocus: PropTypes.bool,
-  elevation: PropTypes.bool,
+  elevation: PropTypes.number,
   placeholder: PropTypes.string,
   label: PropTypes.oneOfType([
     PropTypes.string,

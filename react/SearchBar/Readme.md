@@ -10,7 +10,7 @@ import Radio from 'cozy-ui/transpiled/react/Radios'
 import FormControl from 'cozy-ui/transpiled/react/FormControl'
 import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 
-const initialVariants = [{ elevation: true, button: false, customIcon: false, disabledClear: false }]
+const initialVariants = [{ button: false, customIcon: false, disabledClear: false }]
 initialState = { size: 'small' }
 
 ;
@@ -52,7 +52,16 @@ initialState = { size: 'small' }
         </FormControl>
         <Typography className="u-mb-half">Normal</Typography>
         <SearchBar className="u-mb-2"
-          elevation={variant.elevation}
+          elevation={0}
+          size={state.size}
+          disabledClear={variant.disabledClear}
+          type={variant.button ? "button" : "search"}
+          icon={variant.customIcon ? CloudIcon : undefined}
+          label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
+        />
+        <Typography className="u-mb-half">With elevation</Typography>
+        <SearchBar className="u-mb-2"
+          elevation={10}
           size={state.size}
           disabledClear={variant.disabledClear}
           type={variant.button ? "button" : "search"}
@@ -62,7 +71,6 @@ initialState = { size: 'small' }
         <Typography className="u-mb-half">Disabled</Typography>
         <SearchBar
           disabled
-          elevation={variant.elevation}
           size={state.size}
           disabledClear={variant.disabledClear}
           type={variant.button ? "button" : "search"}
