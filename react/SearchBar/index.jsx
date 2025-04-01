@@ -25,6 +25,13 @@ const sizeToPixel = {
   auto: 'auto'
 }
 
+const fontSizeToPixel = {
+  small: 14,
+  medium: 16,
+  large: 16,
+  auto: 16
+}
+
 const radiusBySize = {
   small: 20,
   medium: 24,
@@ -62,6 +69,7 @@ const useStyles = makeStyles(theme => ({
   },
   inputBase: {
     flex: 1,
+    fontSize: ({ size }) => (isTwakeTheme() ? fontSizeToPixel[size] : 16),
     paddingLeft: ({ icon }) => !icon && '1rem'
   },
   buttonBase: {
