@@ -636,6 +636,9 @@ body {
 .u-bg-white {
   background-color: var(--white) !important;
 }
+.u-bg-transparent--3__Oi {
+  background-color: transparent !important;
+}
 .u-bdrs-0 {
   border-radius: 0 !important;
 }
@@ -2498,6 +2501,9 @@ body {
 }
 .u-shake--jk9eC {
   animation-name: shake--2YFRJ;
+}
+.u-elevation-0--2pGVx {
+  box-shadow: none !important;
 }
 .u-elevation-1--3BDa_ {
   box-shadow: 0 4px 12px 0 rgba(0,0,0,0.08);
