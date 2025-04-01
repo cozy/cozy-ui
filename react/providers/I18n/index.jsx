@@ -14,6 +14,9 @@ export const DEFAULT_LANG = 'en'
 
 export const I18nContext = React.createContext()
 
+/**
+ * @returns {{ t: (key: string) => string, lang: string }}
+ */
 export const useI18n = () => {
   const context = useContext(I18nContext)
 
