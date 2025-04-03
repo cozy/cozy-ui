@@ -23,7 +23,7 @@ import Typography from '../Typography'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const SLUG_TO_ICONS = {
-  chat: {
+  twakechat: {
     icon: ChatIcon,
     text: ChatTextIcon
   },
@@ -31,7 +31,7 @@ const SLUG_TO_ICONS = {
     icon: DriveIcon,
     text: DriveTextIcon
   },
-  mail: {
+  twakemail: {
     icon: MailIcon,
     text: MailTextIcon
   },
