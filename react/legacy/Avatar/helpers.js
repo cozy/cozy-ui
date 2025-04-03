@@ -28,6 +28,10 @@ const colors = [
 
 const twakeColors = Object.values(colorMapping).filter(Boolean)
 
+/**
+ * @param {string} name
+ * @returns {string}
+ */
 export const nameToColor = (name = '') => {
   const _colors = isTwakeTheme() ? twakeColors : colors
   const key = makeKey(_colors, name)
