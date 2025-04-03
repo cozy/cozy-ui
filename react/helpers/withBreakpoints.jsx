@@ -11,6 +11,9 @@ import breakpoints, { getBreakpointsStatus } from './breakpoints'
  * `breakpoints` values will reflect if the window.innerWidth is under
  * those breakpoints.
  *
+ * @param {number[]} bp
+ * @returns {(Wrapped: any) => JSX.Element}
+ *
  * @Example
  * ````
  * // here we define `mobile` as a screen under 1000px
@@ -61,6 +64,7 @@ const withBreakpoints =
     Aware.displayName = `withBreakpoints(${
       Wrapped.displayName || Wrapped.name
     })`
+
     return Aware
   }
 

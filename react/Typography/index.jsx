@@ -9,7 +9,7 @@ import React, { forwardRef } from 'react'
  */
 
 /**
- * @type React.ForwardRefRenderFunction<HTMLDivElement, TypographyPropTypes & MuiTypography>
+ * @type React.ForwardRefRenderFunction<HTMLDivElement, TypographyPropTypes & import('@material-ui/core/Typography').TypographyProps>
  */
 const Typography = forwardRef(({ color, variant, children, ...props }, ref) => {
   const madeColor =
