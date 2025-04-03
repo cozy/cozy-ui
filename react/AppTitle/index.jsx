@@ -84,7 +84,7 @@ const AppTitle = ({ slug, tag, className, children, ...otherProps }) => {
         className={cx(
           'u-mr-half',
           'u-w-auto',
-          isLight ? styles['c-app-title-light'] : styles['c-app-title-dark']
+          isLight ? styles['c-apptitle-light'] : styles['c-apptitle-dark']
         )}
       />
       <Icon
