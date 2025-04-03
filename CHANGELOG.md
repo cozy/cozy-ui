@@ -1,3 +1,19 @@
+# [122.0.0](https://github.com/cozy/cozy-ui/compare/v121.9.0...v122.0.0) (2025-04-03)
+
+
+### Features
+
+* Accept a number as elevation in SearchBar ([280fc63](https://github.com/cozy/cozy-ui/commit/280fc63))
+* Update font size of SearchBar ([60ea8e8](https://github.com/cozy/cozy-ui/commit/60ea8e8))
+
+
+### BREAKING CHANGES
+
+* SearchBar accepts now a number as elevation instead
+of a bool. If you used `elevation={true}` you can use
+`elevation={1}` and if you used `elevation={false}` you can use
+`elevation={0}.` Default value is kept (it was true so it is 1).
+
 # [121.9.0](https://github.com/cozy/cozy-ui/compare/v121.8.0...v121.9.0) (2025-04-01)
 
 
