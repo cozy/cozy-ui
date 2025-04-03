@@ -1,3 +1,12 @@
+## [122.0.1](https://github.com/cozy/cozy-ui/compare/v122.0.0...v122.0.1) (2025-04-03)
+
+
+### Bug Fixes
+
+* Update Workplace text icon ([7dae601](https://github.com/cozy/cozy-ui/commit/7dae601))
+* Use correct slug for Twake Chat and Twake Mail ([dd1e5fa](https://github.com/cozy/cozy-ui/commit/dd1e5fa))
+* Use correct stylus classes ([5c62e32](https://github.com/cozy/cozy-ui/commit/5c62e32))
+
 # [122.0.0](https://github.com/cozy/cozy-ui/compare/v121.9.0...v122.0.0) (2025-04-03)
 
 
