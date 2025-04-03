@@ -91,7 +91,10 @@ const AppTitle = ({ slug, tag, className, children, ...otherProps }) => {
         icon={titleData.text}
         width="auto"
         height="22"
-        className={cx('u-w-auto', slug === 'home' ? 'u-mt-half' : undefined)}
+        className={cx(
+          'u-w-auto',
+          slug === 'home' ? styles['c-apptitle-home-icon'] : undefined
+        )}
       />
     </div>
   )
