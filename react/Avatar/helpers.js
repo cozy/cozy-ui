@@ -50,6 +50,10 @@ const makeKey = (colors, name) =>
     .map(letter => letter.charCodeAt(0))
     .reduce((sum, number) => sum + number, 0) % colors.length
 
+/**
+ * @param {string} name
+ * @returns {string}
+ */
 export const nameToColor = (name = '') => {
   const key = makeKey(colors, name)
   return colors[key]
