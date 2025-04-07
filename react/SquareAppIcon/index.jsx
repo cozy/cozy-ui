@@ -118,7 +118,7 @@ export const SquareAppIcon = ({
   hideShortcutBadge = false,
   ...appIconProps
 }) => {
-  const { variant: themeVariant } = useCozyTheme()
+  const { variant: themeVariant, type } = useCozyTheme()
   const { isMobile } = useBreakpoints()
   const classes = useStyles()
   const appName =
@@ -172,8 +172,9 @@ export const SquareAppIcon = ({
           />
           <Badge
             className={cx(
-              styles['SquareAppIcon-wrapper'],
+              styles[`SquareAppIcon-wrapper`],
               styles[`SquareAppIcon-wrapper-${variant}`],
+              styles[`SquareAppIcon-wrapper--${type}`],
               {
                 [classes.squareAppIconGhost]:
                   exceptionVariant.includes(variant),
