@@ -8,7 +8,6 @@ $mobileIconPadding = constants['mobileIconPadding']
 
 .SquareAppIcon-wrapper
     box-sizing border-box
-    background linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), rgba(255, 251, 254, 0.80) // we don't want to be theme responsive
     border-radius 100%
     height $iconSize
     width $iconSize
@@ -17,6 +16,12 @@ $mobileIconPadding = constants['mobileIconPadding']
     +small-screen()
         height $mobileIconSize
         width $mobileIconSize
+
+    &--light
+        background linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), rgba(255, 251, 254, 0.80)
+
+    &--dark
+        background linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), #2C3039
 
 .SquareAppIcon-icon-container
     display flex
