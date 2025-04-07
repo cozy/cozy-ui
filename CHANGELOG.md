@@ -1,3 +1,10 @@
+# [122.1.0](https://github.com/cozy/cozy-ui/compare/v122.0.1...v122.1.0) (2025-04-07)
+
+
+### Features
+
+* **SquareAppIcon:** Dark mode in Twake theme ([0089ee0](https://github.com/cozy/cozy-ui/commit/0089ee0))
+
 ## [122.0.1](https://github.com/cozy/cozy-ui/compare/v122.0.0...v122.0.1) (2025-04-03)
 
 
