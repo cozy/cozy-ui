@@ -3,7 +3,7 @@ import React from 'react'
 
 function SvgFallbackTwake(props) {
   return (
-    <svg viewBox="0 0 15 16" fill="none" {...props}>
+    <svg viewBox="0 0 15 16" {...props}>
       <path
         d="M3.2.5h5.792L13.9 5.407V12.8a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V3.2A2.7 2.7 0 013.2.5z"
         fill="#E8EDF3"

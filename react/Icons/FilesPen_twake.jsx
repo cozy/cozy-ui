@@ -3,7 +3,7 @@ import React from 'react'
 
 function SvgFilesPenTwake(props) {
   return (
-    <svg viewBox="0 0 15 16" fill="none" {...props}>
+    <svg viewBox="0 0 15 16" {...props}>
       <path
         d="M3.2.4h5.834L14 5.366V12.8a2.8 2.8 0 01-2.8 2.8h-8a2.8 2.8 0 01-2.8-2.8V3.2A2.8 2.8 0 013.2.4z"
         fill="#E8EDF3"

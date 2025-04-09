@@ -3,12 +3,8 @@ import React from 'react'
 
 function SvgEnergyTwake(props) {
   return (
-    <svg viewBox="0 0 16 16" fill="none" {...props}>
-      <path
-        d="M10 5H6v11h4V5zM4 9H0v7h4V9zm12-9h-4v16h4V0z"
-        fill="#1D212A"
-        fillOpacity={0.9}
-      />
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M10 5H6v11h4V5zM4 9H0v7h4V9zm12-9h-4v16h4V0z" />
     </svg>
   )
 }
