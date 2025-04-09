@@ -10,7 +10,7 @@ import Radio from 'cozy-ui/transpiled/react/Radios'
 import FormControl from 'cozy-ui/transpiled/react/FormControl'
 import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 
-const initialVariants = [{ button: false, customIcon: false, disabledClear: false }]
+const initialVariants = [{ button: false, customIcon: false, disabledClear: false, disabledHover: false }]
 initialState = { size: 'small' }
 
 ;
@@ -55,6 +55,7 @@ initialState = { size: 'small' }
           elevation={0}
           size={state.size}
           disabledClear={variant.disabledClear}
+          disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
           icon={variant.customIcon ? CloudIcon : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
@@ -64,6 +65,7 @@ initialState = { size: 'small' }
           elevation={10}
           size={state.size}
           disabledClear={variant.disabledClear}
+          disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
           icon={variant.customIcon ? CloudIcon : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
@@ -73,6 +75,7 @@ initialState = { size: 'small' }
           disabled
           size={state.size}
           disabledClear={variant.disabledClear}
+          disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
           icon={variant.customIcon ? CloudIcon : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}

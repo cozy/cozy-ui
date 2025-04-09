@@ -132,6 +132,7 @@ const SearchBar = forwardRef(
       componentsProps,
       disabledClear,
       disabledFocus,
+      disabledHover,
       className,
       defaultValue,
       value,
@@ -232,7 +233,11 @@ const SearchBar = forwardRef(
             <Icon icon={isTwakeTheme() ? CrossIcon : CrossCircleIcon} />
           </IconButton>
         )}
-        <span className={cx(classes.commonHighlight, classes.focusHighlight)} />
+        {!disabledHover && (
+          <span
+            className={cx(classes.commonHighlight, classes.focusHighlight)}
+          />
+        )}
         {disabled && (
           <span
             className={cx(classes.commonHighlight, classes.disableHighlight)}
@@ -252,6 +257,7 @@ SearchBar.defaultProps = {
   type: 'search',
   disabledClear: false,
   disabledFocus: false,
+  disabledHover: false,
   defaultValue: '',
   onChange: () => {},
   onFocus: () => {},
@@ -274,6 +280,7 @@ SearchBar.propTypes = {
   defaultValue: PropTypes.string,
   disabledClear: PropTypes.bool,
   disabledFocus: PropTypes.bool,
+  disabledHover: PropTypes.bool,
   elevation: PropTypes.number,
   placeholder: PropTypes.string,
   label: PropTypes.oneOfType([
