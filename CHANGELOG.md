@@ -1,3 +1,10 @@
+## [122.1.1](https://github.com/cozy/cozy-ui/compare/v122.1.0...v122.1.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **Icons:** Remove forced color on illus and permission icons ([734bf91](https://github.com/cozy/cozy-ui/commit/734bf91))
+
 # [122.1.0](https://github.com/cozy/cozy-ui/compare/v122.0.1...v122.1.0) (2025-04-07)
 
 
