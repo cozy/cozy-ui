@@ -1,3 +1,10 @@
+# [122.2.0](https://github.com/cozy/cozy-ui/compare/v122.1.1...v122.2.0) (2025-04-10)
+
+
+### Features
+
+* **SearchBar:** Allow to disable hover ([7c97fe1](https://github.com/cozy/cozy-ui/commit/7c97fe1))
+
 ## [122.1.1](https://github.com/cozy/cozy-ui/compare/v122.1.0...v122.1.1) (2025-04-09)
 
 
