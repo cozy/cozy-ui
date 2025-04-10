@@ -1,3 +1,12 @@
+# [122.3.0](https://github.com/cozy/cozy-ui/compare/v122.2.0...v122.3.0) (2025-04-10)
+
+
+### Features
+
+* Add contacts in AppTitle ([c0058e7](https://github.com/cozy/cozy-ui/commit/c0058e7))
+* App title colors were overriden by icon default colors ([9e5ca1f](https://github.com/cozy/cozy-ui/commit/9e5ca1f))
+* Update slug of Cozy Twake apps ([1d7904f](https://github.com/cozy/cozy-ui/commit/1d7904f))
+
 # [122.2.0](https://github.com/cozy/cozy-ui/compare/v122.1.1...v122.2.0) (2025-04-10)
 
 
