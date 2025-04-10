@@ -6,6 +6,8 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import ChatIcon from '../Icons/Chat'
 import ChatTextIcon from '../Icons/ChatText'
+import ContactsIcon from '../Icons/Contacts'
+import ContactsTextIcon from '../Icons/ContactsText'
 import DriveIcon from '../Icons/Drive'
 import DriveTextIcon from '../Icons/DriveText'
 import MailIcon from '../Icons/Mail'
@@ -26,6 +28,10 @@ const SLUG_TO_ICONS = {
   chat: {
     icon: ChatIcon,
     text: ChatTextIcon
+  },
+  contacts: {
+    icon: ContactsIcon,
+    text: ContactsTextIcon
   },
   drive: {
     icon: DriveIcon,
