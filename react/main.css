@@ -7576,10 +7576,10 @@ body {
   margin: 0;
 }
 .c-apptitle-light--49VIZ {
-  fill: 'black';
+  fill: var(--black) !important;
 }
 .c-apptitle-dark--13RM5 {
-  fill: 'white';
+  fill: var(--white) !important;
 }
 .c-apptitle-app-icon--oQp8q {
   margin-right: 4px;
