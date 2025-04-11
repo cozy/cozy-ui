@@ -1,3 +1,10 @@
+# [122.4.0](https://github.com/cozy/cozy-ui/compare/v122.3.0...v122.4.0) (2025-04-11)
+
+
+### Features
+
+* Add typing for IconButton, ListItemIcon, ListItemText & Switch ([2bd8ae5](https://github.com/cozy/cozy-ui/commit/2bd8ae5))
+
 # [122.3.0](https://github.com/cozy/cozy-ui/compare/v122.2.0...v122.3.0) (2025-04-10)
 
 
