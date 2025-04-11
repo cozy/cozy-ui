@@ -233,6 +233,20 @@ export const makeLightNormalTwakeOverrides = theme => {
         backgroundColor: theme.palette.background.paper,
         color: theme.palette.text.secondary
       }
+    },
+    MuiDialog: {
+      paper: {
+        '&.small': {
+          [theme.breakpoints.down('md')]: {
+            borderRadius: 14
+          }
+        }
+      }
+    },
+    MuiPaper: {
+      rounded: {
+        borderRadius: 14
+      }
     }
   })
 
