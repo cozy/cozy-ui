@@ -22,6 +22,9 @@ const getTypographyProp = (props, className, ellipsis) => {
       }
 }
 
+/**
+ * @type React.ForwardRefRenderFunction<HTMLDivElement, import('@material-ui/core/ListItemText').ListItemTextProps>
+ */
 const ListItemText = forwardRef((props, ref) => {
   const {
     primaryText,
