@@ -4,6 +4,9 @@ import React from 'react'
 import Icon from '../Icon'
 import { isTwakeTheme } from '../helpers/isTwakeTheme'
 
+/**
+ * @type JSX.Element<HTMLDivElement, import('@material-ui/core/Switch').SwitchProps>
+ */
 const Switch = ({ icon, ...props }) => {
   const _icon = (
     <span className="cozySwitchThumb">
