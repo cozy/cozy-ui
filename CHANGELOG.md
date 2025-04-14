@@ -1,3 +1,10 @@
+# [122.6.0](https://github.com/cozy/cozy-ui/compare/v122.5.0...v122.6.0) (2025-04-14)
+
+
+### Features
+
+* Add u-bdrs-7 and u-bdrs-8 ([c2a3c8d](https://github.com/cozy/cozy-ui/commit/c2a3c8d))
+
 # [122.5.0](https://github.com/cozy/cozy-ui/compare/v122.4.0...v122.5.0) (2025-04-14)
 
 
