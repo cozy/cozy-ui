@@ -1,3 +1,10 @@
+# [122.5.0](https://github.com/cozy/cozy-ui/compare/v122.4.0...v122.5.0) (2025-04-14)
+
+
+### Features
+
+* **Nav:** Spread classname on NavItem, NavText and NavIcon ([2396f11](https://github.com/cozy/cozy-ui/commit/2396f11))
+
 # [122.4.0](https://github.com/cozy/cozy-ui/compare/v122.3.0...v122.4.0) (2025-04-11)
 
 
