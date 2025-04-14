@@ -9,10 +9,11 @@ import TopIcon from '../Icons/Top'
 import useBreakpoints from '../providers/Breakpoints'
 import { useI18n } from '../providers/I18n'
 
-export const NavItem = ({ children, secondary, ...restProps }) => (
+export const NavItem = ({ className, children, secondary, ...restProps }) => (
   <li
     className={cx(
       styles['c-nav-item'],
+      className,
       secondary ? styles['c-nav-item-secondary'] : null
     )}
     {...restProps}
@@ -21,8 +22,8 @@ export const NavItem = ({ children, secondary, ...restProps }) => (
   </li>
 )
 
-export const NavText = ({ children }) => (
-  <span className={styles['c-nav-text']}>{children}</span>
+export const NavText = ({ className, children }) => (
+  <span className={cx(styles['c-nav-text'], className)}>{children}</span>
 )
 
 export const NavLink = {
@@ -57,16 +58,16 @@ export const genNavLinkForV6 = RRNavLink =>
     />
   ))
 
-export const NavIcon = ({ icon }) => (
-  <span className={cx(styles['c-nav-icon'])}>
+export const NavIcon = ({ className, icon }) => (
+  <span className={cx(styles['c-nav-icon'], className)}>
     <Icon icon={icon} aria-hidden="true" focusable="false" />
   </span>
 )
 
-const Nav = ({ children }) => {
+const Nav = ({ className, children }) => {
   return (
     <nav role="navigation">
-      <ul className={styles['c-nav']}>{children}</ul>
+      <ul className={cx(styles['c-nav'], className)}>{children}</ul>
     </nav>
   )
 }
