@@ -1,3 +1,15 @@
+# [122.7.0](https://github.com/cozy/cozy-ui/compare/v122.6.0...v122.7.0) (2025-04-15)
+
+
+### Bug Fixes
+
+* Remove white border in Twake icons ([876aaa1](https://github.com/cozy/cozy-ui/commit/876aaa1))
+
+
+### Features
+
+* Update Contacts Twake icon ([cf53a2e](https://github.com/cozy/cozy-ui/commit/cf53a2e))
+
 # [122.6.0](https://github.com/cozy/cozy-ui/compare/v122.5.0...v122.6.0) (2025-04-14)
 
 
