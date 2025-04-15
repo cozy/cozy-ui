@@ -10,14 +10,6 @@ function SvgTwakeWorkplace(props) {
         width={21.51}
         height={21.51}
         rx={6.563}
-        fill="#fff"
-      />
-      <rect
-        x={0.498}
-        y={0.495}
-        width={21.51}
-        height={21.51}
-        rx={6.563}
         fill="url(#workplace_twake_svg__paint0_linear_1573_14803)"
       />
       <rect

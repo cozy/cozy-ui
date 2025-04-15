@@ -10,14 +10,6 @@ function SvgNotes(props) {
         width={32}
         height={32}
         rx={10.568}
-        fill="#fff"
-      />
-      <rect
-        x={0.718}
-        y={0.718}
-        width={32}
-        height={32}
-        rx={10.568}
         fill="url(#notes_svg__paint0_linear_11347_30909)"
       />
       <g filter="url(#notes_svg__filter0_d_11347_30909)">

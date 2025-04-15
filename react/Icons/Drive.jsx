@@ -10,14 +10,6 @@ function SvgDrive(props) {
         width={32}
         height={32}
         rx={10.568}
-        fill="#fff"
-      />
-      <rect
-        x={0.618}
-        y={0.718}
-        width={32}
-        height={32}
-        rx={10.568}
         fill="url(#drive_svg__paint0_linear_11347_30928)"
       />
       <g filter="url(#drive_svg__filter0_d_11347_30928)" fill="#fff">

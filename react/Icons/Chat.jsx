@@ -11,14 +11,6 @@ function SvgChat(props) {
           width={32.017}
           height={32.017}
           rx={10.574}
-          fill="#fff"
-        />
-        <rect
-          x={0.704}
-          y={0.704}
-          width={32.017}
-          height={32.017}
-          rx={10.574}
           fill="url(#chat_svg__paint0_linear_11347_30938)"
         />
         <g filter="url(#chat_svg__filter0_d_11347_30938)">
