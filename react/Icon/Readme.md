@@ -70,6 +70,7 @@ import Answer from 'cozy-ui/transpiled/react/Icons/Answer'
 import Apple from 'cozy-ui/transpiled/react/Icons/Apple'
 import Archive from 'cozy-ui/transpiled/react/Icons/Archive'
 import ArrowUp from 'cozy-ui/transpiled/react/Icons/ArrowUp'
+import Assistant from 'cozy-ui/transpiled/react/Icons/Assistant'
 import Attachment from 'cozy-ui/transpiled/react/Icons/Attachment'
 import Attention from 'cozy-ui/transpiled/react/Icons/Attention'
 import Bank from 'cozy-ui/transpiled/react/Icons/Bank'
@@ -344,6 +345,7 @@ const icons = [
   Apple,
   Archive,
   ArrowUp,
+  ...(isTwakeTheme() ? [Assistant] : []),
   Attachment,
   Attention,
   Bank,
