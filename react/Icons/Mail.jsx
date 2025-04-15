@@ -10,14 +10,6 @@ function SvgMail(props) {
         width={32}
         height={32}
         rx={10.568}
-        fill="#fff"
-      />
-      <rect
-        x={0.582}
-        y={0.718}
-        width={32}
-        height={32}
-        rx={10.568}
         fill="url(#mail_svg__paint0_linear_11347_30933)"
       />
       <g filter="url(#mail_svg__filter0_d_11347_30933)">

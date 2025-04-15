@@ -4,7 +4,6 @@ import React from 'react'
 function SvgStoreTwake(props) {
   return (
     <svg viewBox="0 0 16 16" fill="none" {...props}>
-      <rect width={16} height={16} rx={5.284} fill="#fff" />
       <rect
         width={16}
         height={16}
