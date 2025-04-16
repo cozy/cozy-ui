@@ -3,11 +3,16 @@ import React from 'react'
 
 import styles from './styles.styl'
 import Typography from '../Typography'
+import { isTwakeTheme } from '../helpers/isTwakeTheme'
 
 const BarTitle = ({ noWrap, children }) => {
   return (
     <div className={styles.BarTitle}>
-      <Typography variant="h5" component="h1" noWrap={noWrap}>
+      <Typography
+        variant={isTwakeTheme() ? 'h4' : 'h5'}
+        component="h1"
+        noWrap={noWrap}
+      >
         {children}
       </Typography>
     </div>
