@@ -1,3 +1,10 @@
+# [122.9.0](https://github.com/cozy/cozy-ui/compare/v122.8.0...v122.9.0) (2025-04-16)
+
+
+### Features
+
+* **BarTitle:** Adjust font size for Twake theme ([cba1b13](https://github.com/cozy/cozy-ui/commit/cba1b13))
+
 # [122.8.0](https://github.com/cozy/cozy-ui/compare/v122.7.0...v122.8.0) (2025-04-16)
 
 
