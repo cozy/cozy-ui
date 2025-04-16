@@ -1,3 +1,10 @@
+# [122.8.0](https://github.com/cozy/cozy-ui/compare/v122.7.0...v122.8.0) (2025-04-16)
+
+
+### Features
+
+* Add Assistant icon ([bf045d0](https://github.com/cozy/cozy-ui/commit/bf045d0))
+
 # [122.7.0](https://github.com/cozy/cozy-ui/compare/v122.6.0...v122.7.0) (2025-04-15)
 
 
