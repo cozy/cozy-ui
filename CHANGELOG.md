@@ -1,3 +1,10 @@
+# [122.10.0](https://github.com/cozy/cozy-ui/compare/v122.9.0...v122.10.0) (2025-04-16)
+
+
+### Features
+
+* **Sprite:** Add Twake icons ([8caa508](https://github.com/cozy/cozy-ui/commit/8caa508))
+
 # [122.9.0](https://github.com/cozy/cozy-ui/compare/v122.8.0...v122.9.0) (2025-04-16)
 
 
