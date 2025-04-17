@@ -45,7 +45,7 @@ const SLUG_TO_ICONS = {
     icon: NotesIcon,
     text: NotesTextIcon
   },
-  pass: {
+  passwords: {
     icon: PassIcon,
     text: PassTextIcon
   },
