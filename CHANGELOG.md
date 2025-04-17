@@ -1,3 +1,10 @@
+## [122.10.1](https://github.com/cozy/cozy-ui/compare/v122.10.0...v122.10.1) (2025-04-17)
+
+
+### Bug Fixes
+
+* **AppTitle:** Bad passwords slug ([a6794c7](https://github.com/cozy/cozy-ui/commit/a6794c7))
+
 # [122.10.0](https://github.com/cozy/cozy-ui/compare/v122.9.0...v122.10.0) (2025-04-16)
 
 
