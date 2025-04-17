@@ -14,7 +14,7 @@ $nav
     +medium-screen()
         display          flex
         justify-content  space-around
-        margin           6px 0 4px
+        margin           14px 0 4px
         padding-right    0
 
 
@@ -59,9 +59,6 @@ $nav-item-icon
     svg
         display block
 
-    :hover > &
-        // color var(--actionColorActive)
-
     +medium-screen()
         display block
         margin-right 0
@@ -69,8 +66,8 @@ $nav-item-icon
 
         svg
             margin 4px auto 5px
-            width rem(16)
-            height rem(16)
+            width rem(20)
+            height rem(20)
 
 $nav-item-text
     font-size 16px
@@ -82,9 +79,10 @@ $nav-item-text
         text-align center
         white-space nowrap
         font-size 12px
+        color var(--secondaryTextColor)
 
         .is-active &
-            color var(--primaryTextColor)
+            color var(--primaryColor)
 
 $nav-link
     display              flex
@@ -113,10 +111,6 @@ $nav-link
 
         .c-nav-icon
             color var(--primaryColor)
-
-            +medium-screen()
-                color var(--primaryTextColor)
-
 
     +medium-screen()
         display              block
