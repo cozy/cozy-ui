@@ -18,6 +18,8 @@ import PassIcon from '../Icons/Pass'
 import PassTextIcon from '../Icons/PassText'
 import StoreIcon from '../Icons/Store'
 import StoreTextIcon from '../Icons/StoreText'
+import PhotosIcon from '../Icons/Photos'
+import PhotosTextIcon from '../Icons/PhotosText'
 import TwakeTextIcon from '../Icons/TwakeText'
 import TwakeWorkplaceIcon from '../Icons/TwakeWorkplace'
 import WorkplaceTextIcon from '../Icons/WorkplaceText'
@@ -52,6 +54,10 @@ const SLUG_TO_ICONS = {
   store: {
     icon: StoreIcon,
     text: StoreTextIcon
+  },
+  photos: {
+    icon: PhotosIcon,
+    text: PhotosTextIcon
   },
   home: {
     icon: TwakeWorkplaceIcon,
