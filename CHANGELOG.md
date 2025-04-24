@@ -1,3 +1,10 @@
+# [122.11.0](https://github.com/cozy/cozy-ui/compare/v122.10.1...v122.11.0) (2025-04-24)
+
+
+### Features
+
+* Add Photos icon and title ([d89dcf9](https://github.com/cozy/cozy-ui/commit/d89dcf9))
+
 ## [122.10.1](https://github.com/cozy/cozy-ui/compare/v122.10.0...v122.10.1) (2025-04-17)
 
 
