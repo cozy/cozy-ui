@@ -111,7 +111,8 @@ const useCozyDialog = props => {
     classes: {
       root: cx({
         disableGutters
-      })
+      }),
+      ...componentsProps?.dialogContent?.classes
     },
     className: 'cozyDialogContent'
   }
