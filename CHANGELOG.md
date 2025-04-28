@@ -1,3 +1,10 @@
+## [122.11.1](https://github.com/cozy/cozy-ui/compare/v122.11.0...v122.11.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* Expose overriding DialogContent classes ([a4f6de6](https://github.com/cozy/cozy-ui/commit/a4f6de6))
+
 # [122.11.0](https://github.com/cozy/cozy-ui/compare/v122.10.1...v122.11.0) (2025-04-24)
 
 
