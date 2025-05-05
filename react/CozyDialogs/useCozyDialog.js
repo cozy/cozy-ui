@@ -114,7 +114,10 @@ const useCozyDialog = props => {
       }),
       ...componentsProps?.dialogContent?.classes
     },
-    className: 'cozyDialogContent'
+    className: cx(
+      'cozyDialogContent',
+      componentsProps?.dialogContent?.className
+    )
   }
 
   return {
