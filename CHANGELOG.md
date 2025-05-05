@@ -1,3 +1,11 @@
+# [122.12.0](https://github.com/cozy/cozy-ui/compare/v122.11.1...v122.12.0) (2025-05-05)
+
+
+### Features
+
+* **Dialogs:** Add `componentsProps.dialogContent.className` support ([cfa17e5](https://github.com/cozy/cozy-ui/commit/cfa17e5))
+* **PermissionDialog:** Remove `inverted` theme ([43d3049](https://github.com/cozy/cozy-ui/commit/43d3049))
+
 ## [122.11.1](https://github.com/cozy/cozy-ui/compare/v122.11.0...v122.11.1) (2025-04-28)
 
 
