@@ -5,7 +5,6 @@ import React from 'react'
 import ConfirmDialog from './ConfirmDialog'
 import Icon from '../Icon'
 import Paper from '../Paper'
-import CozyTheme from '../providers/CozyTheme'
 import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
@@ -31,46 +30,39 @@ const PermissionDialog = ({
   const styles = useStyles()
 
   return (
-    <CozyTheme variant="inverted">
-      <ConfirmDialog
-        open={open}
-        size="small"
-        disableTitleAutoPadding
-        classes={{
-          // remove overflow in makeOverride and replace it by u-ov-visible when https://github.com/cozy/cozy-ui/issues/2284 is solved
-          paper: 'overflow'
-        }}
-        componentsProps={{
-          dialogTitle: {
-            className: 'u-ta-center u-pt-2 u-pb-half'
-          }
-        }}
-        title={
-          <>
-            <CozyTheme
-              variant="normal"
-              className="u-flex u-flex-justify-center"
-            >
-              <Paper
-                square
-                elevation={2}
-                className={cx(
-                  styles.floatingIcon,
-                  'u-pos-absolute u-bdrs-circle u-flex u-bg-white'
-                )}
-              >
-                <Icon className="u-m-auto" icon={icon} size={48} />
-              </Paper>
-            </CozyTheme>
-            {title}
-          </>
+    <ConfirmDialog
+      open={open}
+      size="small"
+      disableTitleAutoPadding
+      classes={{
+        // remove overflow in makeOverride and replace it by u-ov-visible when https://github.com/cozy/cozy-ui/issues/2284 is solved
+        paper: 'overflow'
+      }}
+      componentsProps={{
+        dialogTitle: {
+          className: 'u-flex u-flex-justify-center u-ta-center u-pt-2 u-pb-half'
         }
-        content={content}
-        actions={actions}
-        actionsLayout={actionsLayout}
-        onClose={onClose}
-      />
-    </CozyTheme>
+      }}
+      title={
+        <>
+          <Paper
+            square
+            elevation={2}
+            className={cx(
+              styles.floatingIcon,
+              'u-pos-absolute u-bdrs-circle u-flex u-bg-white'
+            )}
+          >
+            <Icon className="u-m-auto" icon={icon} size={48} />
+          </Paper>
+          {title}
+        </>
+      }
+      content={content}
+      actions={actions}
+      actionsLayout={actionsLayout}
+      onClose={onClose}
+    />
   )
 }
 
