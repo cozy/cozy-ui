@@ -33,7 +33,8 @@ export class AppLinker extends React.Component {
   }
 
   static getOnClickHref(props, context, imgRef) {
-    const { app, client } = props
+    const { app, client, onAppSwitch } = props
+
     let href = props.href
     let onClick = null
 
@@ -52,6 +53,8 @@ export class AppLinker extends React.Component {
         return {
           onClick: event => {
             event.preventDefault()
+
+            onAppSwitch?.()
 
             context
               ? context.call('openApp', href, app, imgPayload)
