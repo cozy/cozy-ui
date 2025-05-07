@@ -1,22 +1,27 @@
 import { makeTheme } from './makeTheme'
 
-export const lightNormalTheme = makeTheme('light', 'normal')
-export const lightInvertedTheme = makeTheme('light', 'inverted')
-export const darkNormalTheme = makeTheme('dark', 'normal')
-export const darkInvertedTheme = makeTheme('dark', 'inverted')
+const makeThemes = () => {
+  const lightNormalTheme = makeTheme('light', 'normal')
+  const lightInvertedTheme = makeTheme('light', 'inverted')
+  const darkNormalTheme = makeTheme('dark', 'normal')
+  const darkInvertedTheme = makeTheme('dark', 'inverted')
 
-const themes = {
-  light: {
-    normal: lightNormalTheme,
-    inverted: lightInvertedTheme
-  },
-  dark: {
-    normal: darkNormalTheme,
-    inverted: darkInvertedTheme
+  const themes = {
+    light: {
+      normal: lightNormalTheme,
+      inverted: lightInvertedTheme
+    },
+    dark: {
+      normal: darkNormalTheme,
+      inverted: darkInvertedTheme
+    }
   }
+
+  return themes
 }
 
 export const getTheme = (type, variant) => {
+  const themes = makeThemes()
   const theme = themes[type]?.[variant]
 
   if (!theme) {
