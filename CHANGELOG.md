@@ -1,3 +1,10 @@
+## [122.12.1](https://github.com/cozy/cozy-ui/compare/v122.12.0...v122.12.1) (2025-05-07)
+
+
+### Bug Fixes
+
+* **AppLinker:** Call onAppSwitch in flagship app ([eced0d4](https://github.com/cozy/cozy-ui/commit/eced0d4))
+
 # [122.12.0](https://github.com/cozy/cozy-ui/compare/v122.11.1...v122.12.0) (2025-05-05)
 
 
