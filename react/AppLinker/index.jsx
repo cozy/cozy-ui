@@ -73,16 +73,6 @@ export class AppLinker extends React.Component {
     }
   }
 
-  static onAppSwitch(onAppSwitchFn) {
-    if (typeof onAppSwitchFn === 'function') {
-      onAppSwitchFn()
-    }
-  }
-
-  static openWeb(props) {
-    AppLinker.onAppSwitch(props.onAppSwitch)
-  }
-
   render() {
     const { children } = this.props
 
