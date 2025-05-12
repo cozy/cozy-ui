@@ -1,7 +1,5 @@
-import flag from 'cozy-flags'
-
 /**
- * Relies on flag and local storage to determine if the Twake theme is enabled
+ * Forced to `true`, we don't want to use Cozy theme anymore
  * @returns {boolean}
  */
 export const isTwakeTheme = () => {
@@ -9,8 +7,5 @@ export const isTwakeTheme = () => {
     return false
   }
 
-  return (
-    flag('ui.theme-twake.enabled') ||
-    localStorage.getItem('ui-theme-name') === 'Twake'
-  )
+  return true
 }
