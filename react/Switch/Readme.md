@@ -21,7 +21,7 @@ const StateSwitch = ({ id, color }) => {
   return <Switch
     color={color}
     checked={checked}
-    {...(isTwakeTheme() && { icon: CheckIcon })}
+    icon={CheckIcon}
     onChange={handleClick}
   />
 }
@@ -48,7 +48,7 @@ const StateSwitch = ({ id, color }) => {
     control={
       <Switch
         color="primary"
-        {...(isTwakeTheme() && { icon: CheckIcon })}
+        icon={CheckIcon}
         disabled
       />
     }
@@ -58,7 +58,7 @@ const StateSwitch = ({ id, color }) => {
     control={
       <Switch
         color="primary"
-        {...(isTwakeTheme() && { icon: CheckIcon })}
+        icon={CheckIcon}
         checked
         disabled
       />

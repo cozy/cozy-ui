@@ -2,19 +2,16 @@ import React from 'react'
 
 import { uploadStatus } from './index'
 import Icon from '../Icon'
-import CheckIcon from '../Icons/Check'
 import CheckCircleIcon from '../Icons/CheckCircle'
-import CrossIcon from '../Icons/Cross'
 import CrossCircleIcon from '../Icons/CrossCircle'
 import WarningIcon from '../Icons/Warning'
 import Spinner from '../Spinner'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 
 export const useStatusIcon = (statusToUse, progress) => {
   const { CANCEL, LOADING, DONE_STATUSES, ERROR_STATUSES, PENDING } =
     uploadStatus
-  const SuccessIcon = isTwakeTheme() ? CheckCircleIcon : CheckIcon
-  const ErrorIcon = isTwakeTheme() ? CrossCircleIcon : CrossIcon
+  const SuccessIcon = CheckCircleIcon
+  const ErrorIcon = CrossCircleIcon
 
   let statusIcon
 

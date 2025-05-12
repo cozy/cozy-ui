@@ -2,7 +2,6 @@ import MuiSwitch from '@material-ui/core/Switch'
 import React from 'react'
 
 import Icon from '../Icon'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 
 /**
  * @type JSX.Element<HTMLDivElement, import('@material-ui/core/Switch').SwitchProps>
@@ -14,12 +13,7 @@ const Switch = ({ icon, ...props }) => {
     </span>
   )
 
-  return (
-    <MuiSwitch
-      {...props}
-      {...(isTwakeTheme() && { icon: _icon, checkedIcon: _icon })}
-    />
-  )
+  return <MuiSwitch {...props} icon={_icon} checkedIcon={_icon} />
 }
 
 export default Switch

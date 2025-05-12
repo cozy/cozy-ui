@@ -45,10 +45,10 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
       <SquareAppIcon name="Shortcut" variant="shortcut" hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
-      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
+      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={32} />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
     </Grid>
     <Grid item>
-      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} name="Loading" variant={isError ? 'error' : 'loading'} />
+      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size={32} />} name="Loading" variant={isError ? 'error' : 'loading'} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Shortcut" variant="shortcut" IconContent={<img
@@ -64,7 +64,7 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
             />} hideShortcutBadge={isShortcutBadgeHide} />
     </Grid>
     <Grid item>
-      <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size={isTwakeTheme() ? 32 : 48} />} />
+      <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size={32} />} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Icon Grid" IconContent={(
