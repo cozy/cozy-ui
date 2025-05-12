@@ -5,8 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 
-import stylesCozy from './styles.styl'
-import stylesTwake from './styles_twake.styl'
+import styles from './styles.styl'
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
 import Icon from '../Icon'
@@ -18,12 +17,9 @@ import iconWarning from '../Icons/WarningCircle'
 import InfosBadge from '../InfosBadge'
 import Spinner from '../Spinner'
 import Typography from '../Typography'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { nameToColor } from '../legacy/Avatar/helpers'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { alpha, makeStyles } from '../styles'
-
-const styles = isTwakeTheme() ? stylesTwake : stylesCozy
 
 const makeTwakeColor = theme =>
   theme.variant === 'inverted' || theme.type === 'dark'
@@ -32,16 +28,13 @@ const makeTwakeColor = theme =>
 
 const useStyles = makeStyles(theme => ({
   name: {
-    color: isTwakeTheme() ? makeTwakeColor(theme) : 'var(--primaryTextColor)',
-    textShadow: isTwakeTheme()
-      ? theme.variant === 'inverted' || theme.type === 'dark'
+    color: makeTwakeColor(theme),
+    textShadow:
+      theme.variant === 'inverted' || theme.type === 'dark'
         ? '0px 0px 10px rgba(0, 0, 0, 0.10), 0px 0px 2px rgba(0, 0, 0, 0.20), 0.5px 0.5px 1px rgba(0, 0, 0, 0.50)'
-        : undefined
-      : undefined,
+        : undefined,
     width: '5.5rem',
     textAlign: 'center',
-    fontSize: isTwakeTheme() ? undefined : '0.875rem',
-    lineHeight: isTwakeTheme() ? undefined : '1.188rem',
     margin: '0.5rem 0.25rem 0 0.25rem',
     lineClamp: '2',
     boxOrient: 'vertical',
@@ -49,8 +42,6 @@ const useStyles = makeStyles(theme => ({
     height: '2.375rem',
     [theme.breakpoints.down('sm')]: {
       width: '3.75rem',
-      fontSize: isTwakeTheme() ? undefined : '0.6875rem',
-      lineHeight: isTwakeTheme() ? undefined : '1rem',
       margin: '0.25rem 0.25rem 0 0.25rem',
       height: '2rem'
     }
@@ -71,9 +62,6 @@ const useStyles = makeStyles(theme => ({
   letter: {
     color: 'white',
     margin: 'auto'
-  },
-  shadow: {
-    boxShadow: isTwakeTheme() ? undefined : theme.shadows[1]
   },
   errorIcon: {
     fill: 'var(--errorColor)',
@@ -140,7 +128,7 @@ export const SquareAppIcon = ({
     prevVariant.current = variant
   }, [variant])
 
-  const exceptionVariant = [isTwakeTheme() ? 'ghost' : 'add', 'ghost']
+  const exceptionVariant = ['ghost']
 
   const squareTheme = exceptionVariant.includes(variant)
     ? themeVariant
@@ -197,8 +185,7 @@ export const SquareAppIcon = ({
             style={
               variant === 'shortcut' && !IconContent
                 ? {
-                    [isTwakeTheme() ? 'background' : 'backgroundColor']:
-                      nameToColor(name)
+                    ['background']: nameToColor(name)
                   }
                 : null
             }
@@ -242,12 +229,10 @@ export const SquareAppIcon = ({
                   <Icon icon={iconPlus} color="var(--primaryColor)" />
                 ) : IconContent ? (
                   IconContent
-                ) : isTwakeTheme() ? (
+                ) : (
                   <div className="u-w-2 u-h-2">
                     <AppIcon {...appIconProps} />
                   </div>
-                ) : (
-                  <AppIcon {...appIconProps} />
                 )}
               </div>
             )}

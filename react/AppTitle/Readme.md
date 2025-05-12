@@ -12,7 +12,7 @@ const slugs = ["chat", "contacts", "drive", "mail", "notes", "pass", "store", "p
 
 <div class="u-flex u-flex-column">
   {
-    isTwakeTheme() && slugs.map(slug => <AppTitle slug={slug} />)
+    slugs.map(slug => <AppTitle slug={slug} />)
   }
   <AppTitle slug="coachco2" />
   <AppTitle slug="coachco2">CoachCO2</AppTitle>

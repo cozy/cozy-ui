@@ -17,7 +17,6 @@ import CrossCircleIcon from '../Icons/CrossCircle'
 import DotsIcon from '../Icons/Dots'
 import Toolbar from '../Toolbar'
 import Typography from '../Typography'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import useBreakpoints from '../providers/Breakpoints'
 import CozyTheme from '../providers/CozyTheme'
 import { useI18n } from '../providers/I18n'
@@ -25,17 +24,13 @@ import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   appBar: ({ isMobile }) => ({
-    width: isTwakeTheme() && !isMobile ? 'calc(100% - 44px)' : '100%',
-    right: isTwakeTheme() && !isMobile ? '22px' : '0',
+    width: !isMobile ? 'calc(100% - 44px)' : '100%',
+    right: !isMobile ? '22px' : '0',
     height: isMobile ? '4rem' : '3rem',
     top: isMobile ? 'auto' : 0,
     bottom: isMobile ? 0 : undefined,
     zIndex: 'var(--zIndex-selection)',
-    borderRadius: isTwakeTheme()
-      ? isMobile
-        ? '16px 16px 0 0'
-        : '0 0 16px 16px'
-      : 'initial',
+    borderRadius: isMobile ? '16px 16px 0 0' : '0 0 16px 16px',
     boxShadow: isMobile ? 'var(--shadow8)' : 'var(--shadow1)'
   }),
   toolbar: {
@@ -69,62 +64,42 @@ const useStyles = makeStyles({
     display: 'flex',
     height: '100%',
     flexGrow: 1,
-    paddingRight: isTwakeTheme() && !isMobile ? 48 : 0,
+    paddingRight: !isMobile ? 48 : 0,
     alignItems: 'center',
-    justifyContent: isTwakeTheme() && !isMobile ? 'end' : 'center'
+    justifyContent: !isMobile ? 'end' : 'center'
   })
 })
 
-const SelectedCount = ({ styles, docs, onClose }) => {
+const SelectedCount = ({ docs, onClose }) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
 
-  const showMobileCloseButton = !!onClose && isMobile
-
-  if (isTwakeTheme()) {
-    if (isMobile)
-      return (
-        <Box
-          className="u-flex u-flex-items-center u-h-100 u-pr-1"
-          borderRadius="15px 0 0 0"
-          bgcolor="primary.main"
-          color="primary.contrastText"
-        >
-          <IconButton color="inherit" onClick={onClose}>
-            <Icon icon={CrossCircleIcon} />
-          </IconButton>
-          {docs.length}
-        </Box>
-      )
-
+  if (isMobile)
     return (
-      <div className="u-flex u-flex-items-center u-h-100 u-ph-1">
-        <Icon
-          className="u-mr-1"
-          icon={CheckCircleIcon}
-          color="var(--iconTextColor)"
-        />
-        <Typography variant="body1" component="span">
-          {t('selected_light', docs.length)}
-        </Typography>
-      </div>
-    )
-  }
-
-  return (
-    <Box
-      className={styles.selectedCount}
-      padding={showMobileCloseButton ? '0 1rem 0 0' : '0 1rem'}
-      color="primary.contrastText"
-      bgcolor="primary.main"
-    >
-      {showMobileCloseButton && (
+      <Box
+        className="u-flex u-flex-items-center u-h-100 u-pr-1"
+        borderRadius="15px 0 0 0"
+        bgcolor="primary.main"
+        color="primary.contrastText"
+      >
         <IconButton color="inherit" onClick={onClose}>
           <Icon icon={CrossCircleIcon} />
         </IconButton>
-      )}
-      <div>{isMobile ? docs.length : t('selected', docs.length)}</div>
-    </Box>
+        {docs.length}
+      </Box>
+    )
+
+  return (
+    <div className="u-flex u-flex-items-center u-h-100 u-ph-1">
+      <Icon
+        className="u-mr-1"
+        icon={CheckCircleIcon}
+        color="var(--iconTextColor)"
+      />
+      <Typography variant="body1" component="span">
+        {t('selected_light', docs.length)}
+      </Typography>
+    </div>
   )
 }
 
@@ -162,7 +137,7 @@ const ActionsBar = ({
   }
 
   return (
-    <CozyTheme variant={isTwakeTheme() ? 'inverted' : 'normal'}>
+    <CozyTheme variant="inverted">
       <AppBar className={styles.appBar} position="fixed" color="inherit">
         <Toolbar
           className={styles.toolbar}
@@ -174,7 +149,7 @@ const ActionsBar = ({
               <Icon icon={CrossIcon} />
             </IconButton>
           )}
-          <SelectedCount styles={styles} docs={docs} onClose={onClose} />
+          <SelectedCount docs={docs} onClose={onClose} />
           <div className={styles.actionsContainer}>
             {/* actions displayed in the bar itself */}
             <ActionsItems
