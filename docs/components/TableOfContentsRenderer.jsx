@@ -9,16 +9,11 @@ import PhoneIcon from 'cozy-ui/transpiled/react/Icons/Phone'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import Switch from 'cozy-ui/transpiled/react/Switch'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import { isTwakeTheme } from 'cozy-ui/transpiled/react/helpers/isTwakeTheme'
 import {
   addFlagshipElements,
   removeFlagshipElements
 } from 'cozy-ui/transpiled/react/hooks/useSetFlagshipUi/helpers'
 import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
-
-if (isTwakeTheme()) {
-  document.documentElement.style.setProperty('--primaryFont', 'Inter')
-}
 
 const TableOfContents = props => {
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')

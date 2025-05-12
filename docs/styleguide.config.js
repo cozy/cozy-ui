@@ -172,10 +172,6 @@ module.exports = {
       links: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Lato:400,700,300'
-        },
-        {
-          rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css?family=Inter:400,500,600'
         }
       ]
