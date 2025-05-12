@@ -191,7 +191,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      base: 'Lato, sans-serif'
+      base: 'sans-serif'
     }
   },
   webpackConfig: webpackMerge(require('./webpack.config.js'), {
