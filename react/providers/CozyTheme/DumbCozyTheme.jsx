@@ -4,7 +4,6 @@ import React from 'react'
 
 import { CozyThemeContext } from './index'
 import MuiCozyTheme from '../../MuiCozyTheme'
-import { isTwakeTheme } from '../../helpers/isTwakeTheme'
 import useMediaQuery from '../../hooks/useMediaQuery'
 
 const DumbCozyTheme = ({
@@ -16,7 +15,6 @@ const DumbCozyTheme = ({
 }) => {
   const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
   const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
-  const uiThemeName = isTwakeTheme() ? 'Twake' : 'Cozy'
 
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
     ? 'dark'
@@ -36,14 +34,13 @@ const DumbCozyTheme = ({
       value={{
         type: selfThemeType,
         variant: selfThemeVariant,
-        name: uiThemeName,
         isLight: selfThemeType === 'light'
       }}
     >
       <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
         <div
           className={cx(className, {
-            [`${uiThemeName}Theme--${selfThemeType}-${selfThemeVariant}`]:
+            [`TwakeTheme--${selfThemeType}-${selfThemeVariant}`]:
               Boolean(selfThemeVariant),
             'u-dc': ignoreItself
           })}

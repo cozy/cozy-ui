@@ -1,10 +1,5 @@
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
-const getThemeNodeClassName = (type, variant) => {
-  const uiTypeName = isTwakeTheme() ? 'Twake' : 'Cozy'
-
-  return `${uiTypeName}Theme--${type}-${variant}`
-}
+const getThemeNodeClassName = (type, variant) =>
+  `TwakeTheme--${type}-${variant}`
 
 const getNodeWithThemeCssVars = (type, variant) => {
   const className = getThemeNodeClassName(type, variant)

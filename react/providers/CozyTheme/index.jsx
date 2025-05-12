@@ -24,8 +24,7 @@ export const useCozyTheme = () => {
     return {
       type: 'light',
       variant: 'normal',
-      isLight: true,
-      name: 'Cozy'
+      isLight: true
     }
   }
 
