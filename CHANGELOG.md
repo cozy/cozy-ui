@@ -1,3 +1,10 @@
+# [122.13.0](https://github.com/cozy/cozy-ui/compare/v122.12.1...v122.13.0) (2025-05-12)
+
+
+### Features
+
+* Update isTwakeTheme condition to force it to `true` ([a1db759](https://github.com/cozy/cozy-ui/commit/a1db759))
+
 ## [122.12.1](https://github.com/cozy/cozy-ui/compare/v122.12.0...v122.12.1) (2025-05-07)
 
 
