@@ -57,6 +57,7 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import Grid from 'cozy-ui/transpiled/react/Grid/index.js'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
@@ -188,7 +189,7 @@ import Gear from 'cozy-ui/transpiled/react/Icons/Gear'
 import Globe from 'cozy-ui/transpiled/react/Icons/Globe'
 import Gouv from 'cozy-ui/transpiled/react/Icons/Gouv'
 import GraphCircle from 'cozy-ui/transpiled/react/Icons/GraphCircle'
-import Grid from 'cozy-ui/transpiled/react/Icons/Grid'
+import GridIcon from 'cozy-ui/transpiled/react/Icons/Grid'
 import GroupList from 'cozy-ui/transpiled/react/Icons/GroupList'
 import Groups from 'cozy-ui/transpiled/react/Icons/Groups'
 import Growth from 'cozy-ui/transpiled/react/Icons/Growth'
@@ -463,7 +464,7 @@ const icons = [
   Globe,
   Gouv,
   GraphCircle,
-  Grid,
+  GridIcon,
   GroupList,
   Groups,
   Growth,
@@ -613,13 +614,7 @@ const icons = [
   Work
 ]
 const locale = {}
-const wrapperStyle = {
-  fontSize: '2rem',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)'
-}
-
-initialState = { size: 16 };
+initialState = { size: 16 }
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
@@ -647,34 +642,34 @@ const InfoModal = ({ icon }) => {
   />
 }
 
-const Example = () => {
-  return (
-    <DemoProvider>
-      <Typography component='p' variant='body1' className='u-mb-1'>
-        Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-      </Typography>
-      <div style={wrapperStyle}>
-        {
-        icons.map(icon => <div
-            key={icon}
-            className="u-c-pointer u-ta-center u-mb-1"
-            onClick={() => setState({ selected: icon })}
-          >
-            <Icon icon={ icon } size={state.size} />
-            <Typography variant='body1' className='u-mt-half'>
-              { getNameFromIcon(icon) }
-            </Typography>
-          </div>
-        )}
-      { state.selected ? <InfoModal icon={state.selected} /> : null }
-      </div>
-    </DemoProvider>
-  )
-}
-
 ;
 
-<Example />
+<DemoProvider>
+  <Typography component='p' variant='body1' className='u-mb-1'>
+    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+  </Typography>
+
+  <Grid container spacing={2}>
+    {icons.map(icon =>
+      <Grid
+        key={icon}
+        item
+        className="u-c-pointer u-ta-center u-mb-1"
+        xs={6}
+        md={3}
+        xl={2}
+        onClick={() => setState({ selected: icon })}
+      >
+        <Icon icon={icon} size={state.size} />
+        <Typography variant='body1' className='u-mt-half'>
+          { getNameFromIcon(icon) }
+        </Typography>
+      </Grid>
+    )}
+    {state.selected ? <InfoModal icon={state.selected} /> : null}
+  </Grid>
+</DemoProvider>
+
 ```
 
 ### SVGr illustrations
@@ -682,6 +677,10 @@ const Example = () => {
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Grid from 'cozy-ui/transpiled/react/Grid/index.js'
+import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import cx from 'classnames'
 
 import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
@@ -785,33 +784,61 @@ const icons = [
   ...(isTwakeTheme() ? [TwakeWorkplace] : []),
 ]
 
-const wrapperStyle = {
-  fontSize: '2rem',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)'
-}
-
 initialState = { size: 16 }
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
 }
 
+const getNameFromIcon = icon => {
+  return icon.name.replace(/^Svg/, '')
+}
+
+const InfoModal = ({ icon }) => {
+  const iconName = getNameFromIcon(icon)
+  return <Dialog
+    size='large'
+    open={true}
+    title={<div className='u-ta-center'>{ iconName }</div>}
+    onClose={() => setState({ selected: null })}
+    content={
+      <>
+        <Typography variant='body1'>To import {iconName}, copy/paste the following line:</Typography>
+        <pre>
+          import {iconName}Icon from 'cozy-ui/transpiled/react/Icons/{iconName}'
+        </pre>
+      </>
+    }
+  />
+}
+
 ;
 
-<div>
+<DemoProvider>
   <Typography component='p' variant='body1' className='u-mb-1'>
     Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
   </Typography>
-  <div style={wrapperStyle}>
-    {
-    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
-        <Icon icon={ icon } size={state.size} />
-        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
-      </div>
+
+  <Grid container spacing={2}>
+    {icons.map(icon =>
+      <Grid
+        key={icon}
+        item
+        className="u-c-pointer u-ta-center u-mb-1"
+        xs={6}
+        md={3}
+        xl={2}
+        onClick={() => setState({ selected: icon })}
+      >
+        <Icon icon={icon} size={state.size} />
+        <Typography variant='body1' className='u-mt-half'>
+          { getNameFromIcon(icon) }
+        </Typography>
+      </Grid>
     )}
-  </div>
-</div>
+    {state.selected ? <InfoModal icon={state.selected} /> : null}
+  </Grid>
+</DemoProvider>
 ```
 
 ### SVGr permissions icons
@@ -819,6 +846,7 @@ const handleInputRangeChange = ev => {
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
@@ -872,13 +900,8 @@ import Versioning from 'cozy-ui/transpiled/react/Icons/Versioning'
 
 const icons = [Accounts, Apps, BankAccounts, BankGroups, BankOperations, BankRecurrence, BillPermissions, BugReport, CalendarPermissions, Category, CertifiedPermissions, ConnectedClients, Consumption, ContactsAccounts, ContactsGroups, Contacts, Contract, Ecolyo, Energy, Energybreakdown, Fallback, Family, FilesPen, FilesVersions, Files, HomePermissions, Identities, KonnectorsResult, Konnectors, LocationPermissions, Notifications, Opinions, Passwords, Permissions, PhotosAlbum, PhotosSettings, Profile, SafePermissions, Settings, Sharings, Sinister, Tags,TaskToEffectuate, Triggers, Versioning]
 const locale = {}
-const wrapperStyle = {
-  fontSize: '2rem',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)'
-}
 
-initialState = { size: 16 };
+initialState = { size: 16 }
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
@@ -906,34 +929,33 @@ const InfoModal = ({ icon }) => {
   />
 }
 
-const Example = () => {
-  return (
-    <DemoProvider>
-      <Typography component='p' variant='body1' className='u-mb-1'>
-        Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-      </Typography>
-      <div style={wrapperStyle}>
-        {
-        icons.map(icon => <div
-            key={icon}
-            className="u-c-pointer u-ta-center u-mb-1"
-            onClick={() => setState({ selected: icon })}
-          >
-            <Icon icon={ icon } size={state.size} />
-            <Typography variant='body1' className='u-mt-half'>
-              { getNameFromIcon(icon) }
-            </Typography>
-          </div>
-        )}
-      { state.selected ? <InfoModal icon={state.selected} /> : null }
-      </div>
-    </DemoProvider>
-  )
-}
-
 ;
 
-<Example />
+<DemoProvider>
+  <Typography component='p' variant='body1' className='u-mb-1'>
+    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+  </Typography>
+
+  <Grid container spacing={2}>
+    {icons.map(icon =>
+      <Grid
+        key={icon}
+        item
+        className="u-c-pointer u-ta-center u-mb-1"
+        xs={6}
+        md={3}
+        xl={2}
+        onClick={() => setState({ selected: icon })}
+      >
+        <Icon icon={icon} size={state.size} />
+        <Typography variant='body1' className='u-mt-half'>
+          { getNameFromIcon(icon) }
+        </Typography>
+      </Grid>
+    )}
+    {state.selected ? <InfoModal icon={state.selected} /> : null}
+  </Grid>
+</DemoProvider>
 ```
 
 ### Available icons from Sprite
@@ -945,6 +967,7 @@ include via `Sprite`.
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 // Sprite is necessary in order to add in the html rendering
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -953,14 +976,26 @@ const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
 const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud-rainbow','cloud-plus-outlined','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','desktop-download','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder-open','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','mosaic','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','number','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','person-add','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','server','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','stop', 'subway', 'support', 'swap', 'sync-cozy','sync','tab','tag','target','task','team','telecom','telephone','text','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
 ;
-<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+
+<Grid container spacing={2}>
   <Sprite />
-  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
-      <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
-      <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
-    </div>
+  {availableIcons.map(icon =>
+    <Grid
+      key={icon}
+      item
+      className="u-c-pointer u-ta-center u-mb-1"
+      xs={6}
+      md={3}
+      xl={2}
+      onClick={() => setState({ selected: icon })}
+    >
+      <Icon icon={icon} color={colors[i++ % colors.length]} />
+      <Typography variant='body1' className='u-mt-half'>
+        {icon}
+      </Typography>
+    </Grid>
   )}
-</div>
+</Grid>
 ```
 
 ### Available illustrations from Sprite
@@ -968,18 +1003,30 @@ const availableIcons = ['album-add','album-remove','album','answer','apple','arc
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
 const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
 
 ;
 
-<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+<Grid container spacing={2}>
   <Sprite />
-  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
-      <Icon icon={ icon }/>
-      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
-    </div>
+  {availableIcons.map(icon =>
+    <Grid
+      key={icon}
+      item
+      className="u-c-pointer u-ta-center u-mb-1"
+      xs={6}
+      md={3}
+      xl={2}
+      onClick={() => setState({ selected: icon })}
+    >
+      <Icon icon={icon} />
+      <Typography variant='body1' className='u-mt-half'>
+        {icon}
+      </Typography>
+    </Grid>
   )}
-</div>
+</Grid>
 ```
