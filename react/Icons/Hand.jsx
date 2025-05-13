@@ -1,14 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/hand.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/hand.svg` to regenerate;
 import React from 'react'
 
-import SvgHandTwake from './Hand_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgHand(props) {
-  if (isTwakeTheme()) return SvgHandTwake(props)
   return (
-    <svg viewBox="0 0 15 16" {...props}>
-      <path d="M14.992 8V5a1.001 1.001 0 00-2 0v3h-1V2a1.001 1.001 0 00-2 0v5h-1V1a1.001 1.001 0 00-2 0v6h-1V2c0-.551-.45-1-1-1-.551 0-1 .449-1 1v6.5a.5.5 0 01-.88.325L1.1 6.125c-.222-.182-.64-.166-.897.091a.7.7 0 00-.075.898c.064.117 1.542 4.144 3.227 6.798A4.486 4.486 0 007.156 16h3.336c2.48 0 4.5-2.019 4.5-4.5V8z" />
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M12.413 4.667a1.667 1.667 0 00-2-1.634v-.366A1.667 1.667 0 008.3 1.06 1.673 1.673 0 006.746 0c-.82 0-1.5.593-1.64 1.373A1.667 1.667 0 003.08 3v3.927a1.935 1.935 0 00-.813-.44l-.513-.14a1.315 1.315 0 00-1.46.553c-.253.38-.267.873-.1 1.3L1.9 12.487A5.57 5.57 0 007.08 16a5.332 5.332 0 005.333-5.333v-6zm-1.333 6c0 2.206-1.794 4-4 4-1.74 0-3.3-1.06-3.94-2.674l-1.734-4.36.354.094c.306.08.553.306.666.6L3.08 10h1.333V3a.33.33 0 01.333-.333A.33.33 0 015.08 3v5h1.333V1.667a.33.33 0 01.333-.334.33.33 0 01.334.334V8h1.333V2.667a.33.33 0 01.333-.334.33.33 0 01.334.334V8h1.333V4.667a.33.33 0 01.333-.334.33.33 0 01.334.334v6z" />
     </svg>
   )
 }

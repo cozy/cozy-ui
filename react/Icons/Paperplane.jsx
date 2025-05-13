@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paperplane.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paperplane.svg` to regenerate;
 import React from 'react'
 
-import SvgPaperplaneTwake from './Paperplane_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPaperplane(props) {
-  if (isTwakeTheme()) return SvgPaperplaneTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        d="M16 0l-6 15-2.5-2.5L4 15l-1-4 10-8.5-10 6L0 6z"
-        fillRule="evenodd"
-      />
+    <svg viewBox="0 0 17 14" {...props}>
+      <path d="M2.031 2.452l5.722 2.453-5.73-.762.008-1.691zm5.715 6.643L2.024 11.55V9.857l5.722-.762zM.508.143L.5 5.476 11.929 7 .5 8.524l.008 5.333L16.5 7 .508.143z" />
     </svg>
   )
 }

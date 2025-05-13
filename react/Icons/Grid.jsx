@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/grid.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/grid.svg` to regenerate;
 import React from 'react'
 
-import SvgGridTwake from './Grid_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgGrid(props) {
-  if (isTwakeTheme()) return SvgGridTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zm6-12h4v4h-4V0zm0 6h4v4h-4V6zm0 6h4v4h-4v-4z"
-      />
+      <path d="M0 7.111V0h7.111v7.111H0zM0 16V8.889h7.111V16H0zm8.889-8.889V0H16v7.111H8.889zm0 8.889V8.889H16V16H8.889zM1.778 5.333h3.555V1.778H1.778v3.555zm8.889 0h3.555V1.778h-3.555v3.555zm0 8.89h3.555v-3.556h-3.555v3.555zm-8.89 0h3.556v-3.556H1.778v3.555z" />
     </svg>
   )
 }

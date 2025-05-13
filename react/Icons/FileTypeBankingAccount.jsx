@@ -1,26 +1,23 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-banking-account.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-banking-account.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeBankingAccountTwake from './FileTypeBankingAccount_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeBankingAccount(props) {
-  if (isTwakeTheme()) return SvgFileTypeBankingAccountTwake(props)
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
+    <svg viewBox="0 0 15 17" fill="none" {...props}>
       <path
-        d="M30 5.2c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874C28.48 2 27.92 2 26.8 2H5.2c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874C2 3.52 2 4.08 2 5.2v14.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874C3.52 23 4.08 23 5.2 23h21.6c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874C30 21.48 30 20.92 30 19.8V5.2z"
-        fill="#10C016"
+        d="M3.52 1.3h5.792l4.908 4.907V13.6a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V4a2.7 2.7 0 012.7-2.7z"
+        fill="#F2F7FF"
+        stroke="#1D7AFF"
       />
       <path
-        d="M2 4a2 2 0 001.999 2H28.8c1.12 0 1.68 0 2.108.218a2 2 0 01.874.874C32 7.52 32 8.08 32 9.2v17.6c0 1.12 0 1.68-.218 2.108a2 2 0 01-.874.874C30.48 30 29.92 30 28.8 30H3.2c-1.12 0-1.68 0-2.108-.218a2 2 0 01-.874-.874C0 28.48 0 27.92 0 26.8V5.2c0-1.12 0-1.68.218-2.108a2 2 0 01.874-.874C1.52 2 2.08 2 3.2 2H4a2 2 0 00-2 2z"
-        fill="#9FE6A2"
+        d="M14.72 6.2L9.32.8v2.793c0 1.44 1.128 2.607 2.52 2.607h2.88z"
+        fill="#1D7AFF"
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M32 11a2 2 0 01-2 2h-9a5 5 0 000 10h8.793A2.207 2.207 0 0032 20.793V11zm-11 9a2 2 0 100-4 2 2 0 000 4z"
-        fill="#10C016"
+        d="M7.31 6.519L3.82 8.735v.86h6.982v-.86L7.31 6.52zm1.75 5.715h.876v-2.188H9.06v2.188zm-2.187 0h.875v-2.188h-.875v2.188zm-2.187 0h.875v-2.188h-.875v2.188zm-.866 1.312h6.982v-.875H3.82v.875z"
+        fill="#1D7AFF"
       />
     </svg>
   )

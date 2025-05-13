@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/compare.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/compare.svg` to regenerate;
 import React from 'react'
 
-import SvgCompareTwake from './Compare_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCompare(props) {
-  if (isTwakeTheme()) return SvgCompareTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        clipRule="evenodd"
-        d="M1 6h4.586L4.293 7.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L5.586 4H1a1 1 0 000 2zm14 4h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 12H15a1 1 0 100-2z"
-      />
+    <svg viewBox="0 0 20 14" {...props}>
+      <path d="M7.01 9H0v2h7.01v3L11 10 7.01 6v3zm5.98-1V5H20V3h-7.01V0L9 4l3.99 4z" />
     </svg>
   )
 }

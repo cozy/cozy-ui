@@ -1,16 +1,18 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wrench-circle.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wrench-circle.svg` to regenerate;
 import React from 'react'
 
-import SvgWrenchCircleTwake from './WrenchCircle_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgWrenchCircle(props) {
-  if (isTwakeTheme()) return SvgWrenchCircleTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
         fillRule="evenodd"
-        d="M8 0a8 8 0 110 16A8 8 0 018 0zm1.91 4.182a4.052 4.052 0 00-4.636-.773l2.262 2.262.072.086a.62.62 0 01-.072.793l-.99.99-.078.068a.61.61 0 01-.801-.067L3.404 5.279l-.09.199a4.05 4.05 0 00.87 4.43 4.055 4.055 0 004.293.923l2.422 2.423a6.029 6.029 0 002.326-2.302l-2.41-2.414.072-.2a4.054 4.054 0 00-.976-4.156z"
+        clipRule="evenodd"
+        d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm0 14.4A6.408 6.408 0 011.6 8c0-3.528 2.872-6.4 6.4-6.4 3.528 0 6.4 2.872 6.4 6.4 0 3.528-2.872 6.4-6.4 6.4z"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9.192 7.504a2.783 2.783 0 00-.648-2.896 2.775 2.775 0 00-3.28-.472l1.88 1.88-1.128 1.128-1.88-1.88a2.773 2.773 0 00.472 3.28c.784.784 1.92.992 2.896.648l2.728 2.728c.16.16.408.16.568 0l1.12-1.12a.396.396 0 000-.568L9.192 7.504z"
       />
     </svg>
   )

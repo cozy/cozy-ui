@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/list-min.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/list-min.svg` to regenerate;
 import React from 'react'
 
-import SvgListMinTwake from './ListMin_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgListMin(props) {
-  if (isTwakeTheme()) return SvgListMinTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M3 11a1 1 0 110 2 1 1 0 010-2zm10 0a1 1 0 110 2H7a1 1 0 110-2h6zM3 7a1 1 0 110 2 1 1 0 010-2zm10 0a1 1 0 110 2H7a1 1 0 010-2h6zM3 3a1 1 0 110 2 1 1 0 010-2zm10 0a1 1 0 110 2H7a1 1 0 010-2h6z"
-      />
+    <svg viewBox="0 0 16 10" {...props}>
+      <path d="M0 5.889h1.778V4.111H0V5.89zm0 3.556h1.778V7.667H0v1.778zm0-7.112h1.778V.556H0v1.777zM3.556 5.89H16V4.111H3.556V5.89zm0 3.556H16V7.667H3.556v1.778zm0-8.89v1.778H16V.556H3.556zM0 5.89h1.778V4.111H0V5.89zm0 3.556h1.778V7.667H0v1.778zm0-7.112h1.778V.556H0v1.777zM3.556 5.89H16V4.111H3.556V5.89zm0 3.556H16V7.667H3.556v1.778zm0-8.89v1.778H16V.556H3.556z" />
     </svg>
   )
 }

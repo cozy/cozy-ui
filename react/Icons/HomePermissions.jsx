@@ -1,20 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/home.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/home-permissions.svg` to regenerate;
 import React from 'react'
 
-import SvgHomePermissionsTwake from './HomePermissions_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgHomePermissions(props) {
-  if (isTwakeTheme()) return SvgHomePermissionsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#5d6165"
-          d="M6.001 21v26h36V21l4.292 4.293a1 1 0 001.414 0l.086-.086a1 1 0 000-1.414L38 14V4a1 1 0 00-1-1h-5a1 1 0 00-1 1v3L24.707.707a1 1 0 00-1.414 0L.207 23.793a1 1 0 000 1.414l.087.086a1 1 0 001.414 0L6 21z"
-        />
-        <path fill="#d6d8da" d="M14 33h8v14h-8z" />
-      </g>
+    <svg viewBox="0 0 16 15" {...props}>
+      <path d="M13.6 5.74V1.5h-2.4v2.08L8 .7 0 7.9h2.4v6.4h4.8V9.5h1.6v4.8h4.8V7.9H16l-2.4-2.16zM12 12.7h-1.6V7.9H5.6v4.8H4V6.452l4-3.6 4 3.6V12.7z" />
+      <path d="M6.4 6.3h3.2c0-.88-.72-1.6-1.6-1.6-.88 0-1.6.72-1.6 1.6z" />
     </svg>
   )
 }

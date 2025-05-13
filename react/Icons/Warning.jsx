@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/warning.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/warning.svg` to regenerate;
 import React from 'react'
 
-import SvgWarningTwake from './Warning_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgWarning(props) {
-  if (isTwakeTheme()) return SvgWarningTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        d="M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z"
-        fillRule="evenodd"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M0 13.818h16L8 0 0 13.818zm8.727-2.182H7.273v-1.454h1.454v1.454zm0-2.909H7.273V5.818h1.454v2.91z" />
     </svg>
   )
 }

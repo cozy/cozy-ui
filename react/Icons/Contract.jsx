@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/contract.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/contract.svg` to regenerate;
 import React from 'react'
 
-import SvgContractTwake from './Contract_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgContract(props) {
-  if (isTwakeTheme()) return SvgContractTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M12.5 4h-3a.5.5 0 010-1h3a.5.5 0 010 1zm0 3h-3a.5.5 0 010-1h3a.5.5 0 010 1zm0 3h-9a.5.5 0 010-1h9a.5.5 0 010 1zm0 3h-9a.5.5 0 010-1h9a.5.5 0 010 1zM3 5V2h4v6L5 6 3 8V5zm11-5H2c-.55 0-1 .45-1 1v14c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"
-      />
+      <path d="M.889 3.556H15.11v1.777H.89V3.556zm0 5.333H15.11V7.11H.89v1.78zm0 3.555H7.11v-1.777H.89v1.777zm0 3.556H7.11v-1.778H.89V16zm10.142-2.516l-1.253-1.262-1.254 1.254L11.031 16l4.08-4.071-1.262-1.262-2.818 2.817zM.89 0v1.778h14.22V0H.89z" />
     </svg>
   )
 }

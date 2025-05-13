@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/credit-card.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/credit-card.svg` to regenerate;
 import React from 'react'
 
-import SvgCreditCardTwake from './CreditCard_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCreditCard(props) {
-  if (isTwakeTheme()) return SvgCreditCardTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M2 8v5h12V4H2v1h12v3H2zm0-6h12a2 2 0 012 2v9a2 2 0 01-2 2H2a2 2 0 01-2-2V4a2 2 0 012-2z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M14.4.6H1.6C.712.6.008 1.312.008 2.2L0 11.8c0 .888.712 1.6 1.6 1.6h12.8c.888 0 1.6-.712 1.6-1.6V2.2c0-.888-.712-1.6-1.6-1.6zm0 11.2H1.6V7h12.8v4.8zm0-8H1.6V2.2h12.8v1.6z" />
     </svg>
   )
 }

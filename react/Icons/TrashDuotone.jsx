@@ -1,23 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/trash-duotone.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/trash-duotone.svg` to regenerate;
 import React from 'react'
 
-import SvgTrashDuotoneTwake from './TrashDuotone_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTrashDuotone(props) {
-  if (isTwakeTheme()) return SvgTrashDuotoneTwake(props)
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8.586 3L10.707.879A3 3 0 0112.828 0h6.344a3 3 0 012.121.879L23.414 3H29a2 2 0 110 4H3a2 2 0 110-4h5.586zm3.535-.707A1 1 0 0112.828 2h6.344a1 1 0 01.707.293l.707.707h-9.172l.707-.707z"
-        fill="#95999D"
-      />
-      <path
-        d="M4 8a1 1 0 011-1h22a1 1 0 011 1v22a2 2 0 01-2 2H6a2 2 0 01-2-2V8z"
-        fill="#D6D8DA"
-      />
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M1.111 14.222c0 .978.8 1.778 1.778 1.778h7.11c.979 0 1.779-.8 1.779-1.778V3.556H1.11v10.666zM2.89 5.333H10v8.89H2.89v-8.89zM9.556.89L8.665 0H4.223l-.889.889H.223v1.778h12.444V.889H9.556z" />
     </svg>
   )
 }

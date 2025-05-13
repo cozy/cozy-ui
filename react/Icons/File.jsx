@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTwake from './File_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFile(props) {
-  if (isTwakeTheme()) return SvgFileTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <defs>
-        <path
-          id="file_svg__a"
-          d="M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z"
-        />
-      </defs>
-      <use xlinkHref="#file_svg__a" fillRule="evenodd" />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M8.6 0H2.2C1.32 0 .608.72.608 1.6L.6 14.4c0 .88.712 1.6 1.592 1.6H11.8c.88 0 1.6-.72 1.6-1.6V4.8L8.6 0zM2.2 14.4V1.6h5.6v4h4v8.8H2.2z" />
     </svg>
   )
 }

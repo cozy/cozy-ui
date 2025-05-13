@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/check-list.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/check-list.svg` to regenerate;
 import React from 'react'
 
-import SvgCheckListTwake from './CheckList_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCheckList(props) {
-  if (isTwakeTheme()) return SvgCheckListTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M7 1h9v2H7V1zm0 6h9v2H7V7zm0 6h9v2H7v-2zM1.825 3.716L.66 2.72a.918.918 0 01-.017-1.407 1.23 1.23 0 011.587-.014l.372.307L4.085.292a1.223 1.223 0 011.586 0 .915.915 0 010 1.405l-2.269 2.01A1.19 1.19 0 012.61 4a1.2 1.2 0 01-.785-.284zM1 12h4v4H1v-4zm1 1v2h2v-2H2zM1 6h4v4H1V6zm1 1v2h2V7H2z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M16 2.963H8.8v1.6H16v-1.6zm0 6.4H8.8v1.6H16v-1.6zm-13.168-3.2L0 3.331l1.128-1.128L2.824 3.9 6.216.507l1.128 1.128-4.512 4.528zm0 6.4L0 9.731l1.128-1.128L2.824 10.3l3.392-3.392 1.128 1.128-4.512 4.528z" />
     </svg>
   )
 }

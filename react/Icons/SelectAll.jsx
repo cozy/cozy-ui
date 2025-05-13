@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/select-all.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/select-all.svg` to regenerate;
 import React from 'react'
 
-import SvgSelectAllTwake from './SelectAll_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSelectAll(props) {
-  if (isTwakeTheme()) return SvgSelectAllTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M14.7 8.713a1 1 0 10-1.4-1.427l-4.391 4.312L7.7 10.411a.999.999 0 10-1.4 1.427l1.909 1.875a.997.997 0 001.4 0l5.092-5zM15 4c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1h10zm-3-2H5C3.346 2 2 3.346 2 5v7H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v1z"
-      />
+      <path d="M14.4 1.6v9.6H4.8V1.6h9.6zm0-1.6H4.8c-.88 0-1.6.72-1.6 1.6v9.6c0 .88.72 1.6 1.6 1.6h9.6c.88 0 1.6-.72 1.6-1.6V1.6c0-.88-.72-1.6-1.6-1.6zM8.376 9.6L5.6 6.8l1.12-1.128 1.656 1.664L12.48 3.2l1.12 1.128L8.376 9.6zM1.6 3.2H0v11.2c0 .88.72 1.6 1.6 1.6h11.2v-1.6H1.6V3.2z" />
     </svg>
   )
 }

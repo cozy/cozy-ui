@@ -1,14 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/check.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/check.svg` to regenerate;
 import React from 'react'
 
-import SvgCheckTwake from './Check_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCheck(props) {
-  if (isTwakeTheme()) return SvgCheckTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path d="M1.707 10.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l11-11a1 1 0 00-1.414-1.414L4 12.586l-2.293-2.293z" />
+    <svg viewBox="0 0 17 13" {...props}>
+      <path d="M5.88 10.23L2.087 6.437.795 7.719l5.085 5.085L16.795 1.889 15.512.606 5.88 10.23z" />
     </svg>
   )
 }

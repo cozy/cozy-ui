@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/new.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/new.svg` to regenerate;
 import React from 'react'
 
-import SvgNewTwake from './New_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgNew(props) {
-  if (isTwakeTheme()) return SvgNewTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M15.785 9.637a.413.413 0 010 .726L12.28 12.28l-1.917 3.505a.414.414 0 01-.726 0L7.72 12.28l-3.505-1.917a.413.413 0 010-.726L7.72 7.72l1.917-3.505a.414.414 0 01.726 0L12.28 7.72l3.505 1.917zm-8.91-6.349a.241.241 0 010 .424L4.83 4.83 3.712 6.874a.241.241 0 01-.424 0L2.17 4.83.126 3.712a.241.241 0 010-.424L2.17 2.17 3.288.126a.242.242 0 01.424 0L4.83 2.17l2.044 1.118z"
-      />
+      <path d="M13.09 5.818l.91-2 2-.909L14 2l-.91-2-.908 2-2 .91 2 .908.909 2zm0 4.364l-.908 2-2 .909 2 .909.909 2L14 14l2-.91-2-.908-.91-2zm-5.454-4l-1.818-4-1.818 4L0 8l4 1.818 1.818 4 1.818-4 4-1.818-4-1.818zM6.538 8.72l-.72 1.585-.72-1.585L3.513 8l1.585-.72.72-1.585.72 1.585L8.124 8l-1.586.72z" />
     </svg>
   )
 }

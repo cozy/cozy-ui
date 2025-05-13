@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lightning.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lightning.svg` to regenerate;
 import React from 'react'
 
-import SvgLightningTwake from './Lightning_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLightning(props) {
-  if (isTwakeTheme()) return SvgLightningTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8.284.121L2.26 8.404a.982.982 0 00.794 1.56H8l-.814 5.7a.295.295 0 00.53.215l6.024-8.283a.982.982 0 00-.795-1.56H8l.814-5.7a.295.295 0 00-.53-.215z"
-      />
+    <svg viewBox="0 0 9 16" {...props}>
+      <path d="M3.554 16h-.89l.89-6.222H.443c-.783 0-.294-.667-.276-.694C1.314 7.058 3.038 4.036 5.34 0h.89l-.89 6.222h3.12c.356 0 .552.17.356.587C5.305 12.933 3.554 16 3.554 16z" />
     </svg>
   )
 }

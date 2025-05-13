@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/camera.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/camera.svg` to regenerate;
 import React from 'react'
 
-import SvgCameraTwake from './Camera_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCamera(props) {
-  if (isTwakeTheme()) return SvgCameraTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M5.5 1h5l2 2H14c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h1.5l2-2zM8 13c2.208 0 4-1.792 4-4s-1.792-4-4-4-4 1.792-4 4 1.792 4 4 4zm0-2a2 2 0 110-4 2 2 0 010 4z"
-      />
+    <svg viewBox="0 0 16 15" {...props}>
+      <path d="M9.696 1.6l1.464 1.6h3.24v9.6H1.6V3.2h3.24l1.464-1.6h3.392zM10.4 0H5.6L4.136 1.6H1.6C.72 1.6 0 2.32 0 3.2v9.6c0 .88.72 1.6 1.6 1.6h12.8c.88 0 1.6-.72 1.6-1.6V3.2c0-.88-.72-1.6-1.6-1.6h-2.536L10.4 0zM8 5.6c1.32 0 2.4 1.08 2.4 2.4 0 1.32-1.08 2.4-2.4 2.4-1.32 0-2.4-1.08-2.4-2.4 0-1.32 1.08-2.4 2.4-2.4zM8 4C5.792 4 4 5.792 4 8s1.792 4 4 4 4-1.792 4-4-1.792-4-4-4z" />
     </svg>
   )
 }

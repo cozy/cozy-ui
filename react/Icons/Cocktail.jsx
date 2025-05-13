@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cocktail.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cocktail.svg` to regenerate;
 import React from 'react'
 
-import SvgCocktailTwake from './Cocktail_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCocktail(props) {
-  if (isTwakeTheme()) return SvgCocktailTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M7 10L.3 1.625A1 1 0 011.081 0H14.92a1 1 0 01.78 1.625L9 10v4h3a1 1 0 010 2H4a1 1 0 110-2h3v-4zm4.24-6H4.761l-1.6-2h9.677l-1.6 2z"
-      />
+    <svg viewBox="0 0 18 18" {...props}>
+      <path d="M11.77 6L9 9.11 6.23 6h5.54zM18 0H0v2l8 9v5H3v2h12v-2h-5v-5l8-9V0zM4.43 4L2.66 2h12.69l-1.78 2H4.43z" />
     </svg>
   )
 }

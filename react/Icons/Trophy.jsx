@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/trophy.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/trophy.svg` to regenerate;
 import React from 'react'
 
-import SvgTrophyTwake from './Trophy_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTrophy(props) {
-  if (isTwakeTheme()) return SvgTrophyTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M3 2V1c0-.552.456-1 .995-1h8.01c.55 0 .995.444.995 1v1h2.001a1 1 0 01.999.99v3.012c0 1.104-.852 2.282-1.9 2.631L13 9l-4 3v2h.508c.548 0 1.26.358 1.593.802L12 16H4l.899-1.198C5.23 14.359 5.942 14 6.492 14H7v-2L3 9l-1.1-.367C.85 8.283 0 7.102 0 6.003V2.99C0 2.444.443 2 .999 2H3zm0 2H2v2.505c0 .273.232.495.5.495H3V4zm10 0v3h.5c.268 0 .5-.222.5-.495V4h-1z"
-      />
+      <path d="M14.222 1.778h-1.778V0H3.556v1.778H1.778C.8 1.778 0 2.578 0 3.556v.888C0 6.711 1.707 8.56 3.902 8.836a4.453 4.453 0 003.21 2.63v2.756H3.555V16h8.888v-1.778H8.89v-2.755a4.453 4.453 0 003.209-2.631C14.293 8.56 16 6.71 16 4.444v-.888c0-.978-.8-1.778-1.778-1.778zM1.778 4.444v-.888h1.778V6.95a2.672 2.672 0 01-1.778-2.506zM8 9.778A2.675 2.675 0 015.333 7.11V1.778h5.334V7.11c0 1.467-1.2 2.667-2.667 2.667zm6.222-5.334a2.675 2.675 0 01-1.778 2.507V3.556h1.778v.888z" />
     </svg>
   )
 }

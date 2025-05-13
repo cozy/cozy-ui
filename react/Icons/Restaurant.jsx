@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/restaurant.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/restaurant.svg` to regenerate;
 import React from 'react'
 
-import SvgRestaurantTwake from './Restaurant_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgRestaurant(props) {
-  if (isTwakeTheme()) return SvgRestaurantTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M11 0a4 4 0 013.995 3.8L15 4v5a1 1 0 01-.883.993L14 10h-1.5v4.75a1.25 1.25 0 11-2.5 0V1a1 1 0 01.883-.993L11 0zM7 0a1 1 0 01.993.883L8 1v4a3 3 0 01-2.75 2.99v6.76a1.25 1.25 0 11-2.5 0V7.99A3 3 0 01.005 5.176L0 5V1A1 1 0 011.993.883L2 1v4h1V1A1 1 0 014.993.883L5 1v4h1V1a1 1 0 011-1z"
-      />
+    <svg viewBox="0 0 15 16" {...props}>
+      <path d="M10.4 3.2v6.4h2.4V16h1.6V0c-2.208 0-4 1.792-4 3.2zm-4 2.4H4.8V0H3.2v5.6H1.6V0H0v5.6a3.2 3.2 0 003.2 3.2V16h1.6V8.8A3.2 3.2 0 008 5.6V0H6.4v5.6z" />
     </svg>
   )
 }

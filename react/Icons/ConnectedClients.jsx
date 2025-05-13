@@ -1,30 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/connected-clients.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/connected-clients.svg` to regenerate;
 import React from 'react'
 
-import SvgConnectedClientsTwake from './ConnectedClients_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgConnectedClients(props) {
-  if (isTwakeTheme()) return SvgConnectedClientsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          d="M35 48H13c-2.21 0-4-1.87-4-4.174V4.174C9 1.87 10.79 0 13 0h22c2.208 0 4 1.87 4 4.174v39.652C39 46.13 37.208 48 35 48z"
-          fill="#d6d8da"
-        />
-        <path
-          d="M21 3h6"
-          stroke="#5d6165"
-          strokeWidth={2}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M26 44a2 2 0 11-4.001-.001A2 2 0 0126 44zM12 6h24v34H12z"
-          fill="#5d6165"
-        />
-      </g>
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M13.887 4.873l-.727.727c1.31 1.31 1.31 3.345 0 4.727l.727.728c1.819-1.673 1.819-4.437 0-6.182zM12.36 6.4l-.727.727c.364.51.364 1.164 0 1.673l.727.727c.873-.872.873-2.182 0-3.127zM9.451 0H2.178C1.378 0 .724.655.724 1.455v13.09c0 .8.654 1.455 1.454 1.455h7.273c.8 0 1.455-.655 1.455-1.454V1.455C10.906.655 10.25 0 9.45 0zm0 13.818H2.178V2.182h7.273v11.636z" />
     </svg>
   )
 }

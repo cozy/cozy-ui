@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/magnifier.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/magnifier.svg` to regenerate;
 import React from 'react'
 
-import SvgMagnifierTwake from './Magnifier_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMagnifier(props) {
-  if (isTwakeTheme()) return SvgMagnifierTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M10.472 10H11.5l3.294 3.294a.996.996 0 010 1.412l-.088.088a1 1 0 01-1.412 0L10 11.5v-1.028a6 6 0 11.472-.472zM6 10a4 4 0 100-8 4 4 0 000 8z"
-      />
+    <svg viewBox="0 0 17 17" {...props}>
+      <path d="M12.18 10.808h-.723l-.256-.247a5.92 5.92 0 001.436-3.87 5.946 5.946 0 10-5.946 5.947 5.92 5.92 0 003.87-1.437l.247.256v.723l4.574 4.565 1.363-1.363-4.565-4.574zm-5.489 0a4.111 4.111 0 01-4.116-4.117A4.111 4.111 0 016.69 2.575a4.111 4.111 0 014.117 4.116 4.111 4.111 0 01-4.117 4.117z" />
     </svg>
   )
 }

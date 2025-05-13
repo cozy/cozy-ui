@@ -1,17 +1,13 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-circle-outline.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-circle-outline.svg` to regenerate;
 import React from 'react'
 
-import SvgCrossCircleOutlineTwake from './CrossCircleOutline_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCrossCircleOutline(props) {
-  if (isTwakeTheme()) return SvgCrossCircleOutlineTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path d="M4.793 4.793a1 1 0 011.414 0L8 6.586l1.793-1.793a1 1 0 011.414 1.414L9.414 8l1.793 1.793a1 1 0 01-1.414 1.414L8 9.414l-1.793 1.793a1 1 0 01-1.414-1.414L6.586 8 4.793 6.207a1 1 0 010-1.414z" />
       <path
         fillRule="evenodd"
-        d="M16 8c0-4.416-3.584-8-8-8S0 3.584 0 8s3.584 8 8 8 8-3.584 8-8zm-2 0c0-3.311-2.689-6-6-6S2 4.689 2 8s2.689 6 6 6 6-2.689 6-6z"
+        clipRule="evenodd"
+        d="M8 0C3.576 0 0 3.576 0 8c0 4.424 3.576 8 8 8 4.424 0 8-3.576 8-8 0-4.424-3.576-8-8-8zm0 14.4A6.408 6.408 0 011.6 8c0-3.528 2.872-6.4 6.4-6.4 3.528 0 6.4 2.872 6.4 6.4 0 3.528-2.872 6.4-6.4 6.4zm0-7.528L10.872 4 12 5.128 9.128 8 12 10.872 10.872 12 8 9.128 5.128 12 4 10.872 6.872 8 4 5.128 5.128 4 8 6.872z"
       />
     </svg>
   )

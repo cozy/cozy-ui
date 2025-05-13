@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/heart.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/heart.svg` to regenerate;
 import React from 'react'
 
-import SvgHeartTwake from './Heart_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgHeart(props) {
-  if (isTwakeTheme()) return SvgHeartTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M1.467 8.096a4.023 4.023 0 01-.699-.738L.724 7.31l.007-.006a4 4 0 117.21-2.994 6.685 6.685 0 01.118 0 4.001 4.001 0 117.21 2.995l.005.005-.036.038a4.023 4.023 0 01-.713.753L8 15 1.467 8.096z"
-      />
+      <path d="M8 15.515l-1.16-1.056C2.72 10.723 0 8.259 0 5.235c0-2.464 1.936-4.4 4.4-4.4A4.79 4.79 0 018 2.507 4.79 4.79 0 0111.6.835c2.464 0 4.4 1.936 4.4 4.4 0 3.024-2.72 5.488-6.84 9.232L8 15.515z" />
     </svg>
   )
 }

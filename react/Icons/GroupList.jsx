@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/group-list.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/group-list.svg` to regenerate;
 import React from 'react'
 
-import SvgGroupListTwake from './GroupList_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgGroupList(props) {
-  if (isTwakeTheme()) return SvgGroupListTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 1h10v2H6V1zm0 6h10v2H6V7zm0 6h10v2H6v-2zM2 4L.195 1.854a.901.901 0 010-1.121.594.594 0 01.943 0L2 1.758 2.862.733c.26-.31.682-.31.943 0 .26.31.26.81 0 1.12L2 4zm0 6L.195 7.854a.901.901 0 010-1.121.594.594 0 01.943 0L2 7.758l.862-1.025c.26-.31.682-.31.943 0 .26.31.26.81 0 1.12L2 10zm0 6L.195 13.854a.901.901 0 010-1.121.594.594 0 01.943 0L2 13.758l.862-1.025c.26-.31.682-.31.943 0 .26.31.26.81 0 1.12L2 16z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M16 2.456H8.8v1.6H16v-1.6zm0 6.4H8.8v1.6H16v-1.6zm-13.168-3.2L0 2.824l1.128-1.128 1.696 1.696L6.216 0l1.128 1.128-4.512 4.528zm0 6.4L0 9.224l1.128-1.128 1.696 1.696L6.216 6.4l1.128 1.128-4.512 4.528z" />
     </svg>
   )
 }

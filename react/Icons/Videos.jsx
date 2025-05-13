@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/videos.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/videos.svg` to regenerate;
 import React from 'react'
 
-import SvgVideosTwake from './Videos_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgVideos(props) {
-  if (isTwakeTheme()) return SvgVideosTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M1 1h14a1 1 0 011 1v12a1 1 0 01-1 1H1a1 1 0 01-1-1V2a1 1 0 011-1zm.5 1a.5.5 0 000 1h1a.5.5 0 000-1h-1zm0 11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm3-11a.5.5 0 000 1h1a.5.5 0 000-1h-1zm0 11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm3-11a.5.5 0 000 1h1a.5.5 0 000-1h-1zm0 11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm3-11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm0 11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm3-11a.5.5 0 100 1h1a.5.5 0 100-1h-1zm0 11a.5.5 0 100 1h1a.5.5 0 100-1h-1zM6 11.066a.5.5 0 00.777.416l4.599-3.064a.5.5 0 000-.832L6.777 4.52A.5.5 0 006 4.935v6.131z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M5.818 3.364v5.818l5.091-2.91-5.09-2.908zm8.728-2.91H1.455C.655.455 0 1.11 0 1.91v8.727c0 .8.655 1.455 1.455 1.455H5.09v1.455h5.818V12.09h3.636c.8 0 1.455-.655 1.455-1.455V1.91c0-.8-.655-1.454-1.454-1.454zm0 10.182H1.455V1.91h13.09v8.727z" />
     </svg>
   )
 }

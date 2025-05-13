@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pen.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pen.svg` to regenerate;
 import React from 'react'
 
-import SvgPenTwake from './Pen_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPen(props) {
-  if (isTwakeTheme()) return SvgPenTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <defs>
-        <path
-          id="pen_svg__a"
-          d="M9.5 3.5l3 3L3.04 16H0v-2.97L9.5 3.5zM14.91.92l.18.17c.77.78.78 2.05 0 2.84L14.03 5 11 2 12.09.91a2 2 0 012.82 0z"
-        />
-      </defs>
-      <use fillRule="evenodd" xlinkHref="#pen_svg__a" />
+      <path d="M.889 16a.86.86 0 01-.633-.256.86.86 0 01-.256-.633v-2.155a1.755 1.755 0 01.511-1.245L11.733.511c.178-.163.374-.289.59-.378a1.836 1.836 0 011.366 0c.222.09.415.223.578.4l1.222 1.245c.178.163.307.355.389.578a1.925 1.925 0 010 1.344 1.666 1.666 0 01-.39.589l-11.2 11.2A1.755 1.755 0 013.045 16H.89zM12.978 4.267l1.244-1.245-1.244-1.244-1.245 1.244 1.245 1.245z" />
     </svg>
   )
 }

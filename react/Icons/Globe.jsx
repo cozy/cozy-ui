@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/globe.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/globe.svg` to regenerate;
 import React from 'react'
 
-import SvgGlobeTwake from './Globe_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgGlobe(props) {
-  if (isTwakeTheme()) return SvgGlobeTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M7.889 13.999L7 10 6 9 4 6l-.355-2.128A6 6 0 007.888 14zm.238-11.998L10 3.5V5L8 6.5l-1.5 1 .5 1 3 .5 1 1v1.5l-1.549 2.323A6 6 0 008.127 2.001zM8 16A8 8 0 118 0a8 8 0 010 16z"
-      />
+      <path d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zM1.6 8c0-.488.064-.968.168-1.424L5.592 10.4v.8c0 .88.72 1.6 1.6 1.6v1.544C4.048 13.944 1.6 11.256 1.6 8zm11.112 4.32a1.594 1.594 0 00-1.52-1.12h-.8V8.8c0-.44-.36-.8-.8-.8h-4.8V6.4h1.6c.44 0 .8-.36.8-.8V4h1.6c.88 0 1.6-.72 1.6-1.6v-.328A6.403 6.403 0 0114.4 8a6.393 6.393 0 01-1.688 4.32z" />
     </svg>
   )
 }

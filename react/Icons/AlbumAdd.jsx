@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/album-add.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/album-add.svg` to regenerate;
 import React from 'react'
 
-import SvgAlbumAddTwake from './AlbumAdd_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgAlbumAdd(props) {
-  if (isTwakeTheme()) return SvgAlbumAddTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M1 3.01A3.005 3.005 0 014.003 0h9.99C14.55 0 15 .444 15 1c0 .552-.456 1-1.002 1H4.002a.999.999 0 100 2h9.996C14.55 4 15 4.456 15 5.002v9.996C15 15.55 14.55 16 13.993 16h-9.99A3 3 0 011 12.99V3.01zM8 6h2v3h3v2h-3v3H8v-3H5V9h3V6z"
-      />
+      <path d="M1.6 3.2H0v11.2c0 .88.72 1.6 1.6 1.6h11.2v-1.6H1.6V3.2zM14.4 0H4.8c-.88 0-1.6.72-1.6 1.6v9.6c0 .88.72 1.6 1.6 1.6h9.6c.88 0 1.6-.72 1.6-1.6V1.6c0-.88-.72-1.6-1.6-1.6zm0 11.2H4.8V1.6h9.6v9.6zM8.8 9.6h1.6V7.2h2.4V5.6h-2.4V3.2H8.8v2.4H6.4v1.6h2.4v2.4z" />
     </svg>
   )
 }

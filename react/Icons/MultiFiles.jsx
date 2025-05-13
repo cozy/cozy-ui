@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/multi-files.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/multi-files.svg` to regenerate;
 import React from 'react'
 
-import SvgMultiFilesTwake from './MultiFiles_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMultiFiles(props) {
-  if (isTwakeTheme()) return SvgMultiFilesTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M5.007 14A2.006 2.006 0 013 11.999V3H1.998A.999.999 0 001 4.001v10.998A1 1 0 002.007 16h8.986A1 1 0 0012 15.004V14H5.007zM4 1.001A.999.999 0 014.998 0H10v5h5v7.005a1 1 0 01-1.007.995H5.007A1.001 1.001 0 014 11.999V1.001zM11 4V0l4 4h-4z"
-      />
+    <svg viewBox="0 0 16 15" {...props}>
+      <path d="M1.455 12.954h12.363v1.455H1.455A1.46 1.46 0 010 12.954V3.5h1.455v9.454zM16 3.5v6.545c0 .8-.655 1.455-1.454 1.455H4.364a1.46 1.46 0 01-1.455-1.455l.007-8c0-.8.648-1.454 1.448-1.454H8l1.455 1.454h5.09c.8 0 1.455.655 1.455 1.455zM4.364 10.045h10.181V3.5H8.852L7.396 2.045H4.364v8z" />
     </svg>
   )
 }

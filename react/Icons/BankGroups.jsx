@@ -1,28 +1,14 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/bank-groups.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/bank-groups.svg` to regenerate;
 import React from 'react'
 
-import SvgBankGroupsTwake from './BankGroups_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgBankGroups(props) {
-  if (isTwakeTheme()) return SvgBankGroupsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path fill="#d6d8da" d="M0 0h38v32H0z" />
-        <path
-          fill="#5d6165"
-          d="M31 12h7a2 2 0 012 2v6a2 2 0 01-2 2h-7a5 5 0 010-10zm0 7a2 2 0 100-4 2 2 0 000 4z"
-        />
-        <g transform="translate(24 24)">
-          <circle cx={12} cy={12} r={12} fill="#5d6165" />
-          <path
-            fill="#FFF"
-            fillRule="nonzero"
-            d="M20.29 13.71a1.01 1.01 0 000-1.42l-6.58-6.58c-.392-.392-1.163-.71-1.707-.71H5.997C5.447 5 5 5.453 5 5.997v6.006c0 .55.324 1.32.71 1.707l6.58 6.58a1.01 1.01 0 001.42 0l6.58-6.58zM9.002 11a2 2 0 110-4 2 2 0 010 4z"
-          />
-        </g>
-      </g>
+    <svg viewBox="0 0 17 17" {...props}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8.01 1L.529 5.75v1.842H15.49V5.75L8.01 1zm3.75 8.912h1.875V8.56H11.76v1.352zm-4.688 1.411h1.875V8.56H7.072v2.763zm-4.687 1.924H4.26V8.56H2.385v4.687zM.529 16.06h7.5v-1.875H.53v1.875zm10.137-4.857l-1.494 1.866a.916.916 0 00-.201.58.92.92 0 00.201.58l1.494 1.866a.977.977 0 00.33.26.93.93 0 00.407.09h3.592a.9.9 0 00.663-.273.902.902 0 00.273-.662v-3.722a.9.9 0 00-.273-.662.902.902 0 00-.662-.273h-3.593a.94.94 0 00-.737.35zm.333 3.03a.676.676 0 100-1.352.676.676 0 000 1.353z"
+      />
     </svg>
   )
 }

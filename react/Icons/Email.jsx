@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/email.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/email.svg` to regenerate;
 import React from 'react'
 
-import SvgEmailTwake from './Email_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgEmail(props) {
-  if (isTwakeTheme()) return SvgEmailTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M0 2.999A.998.998 0 011 2h14c.552 0 1 .443 1 .999V5L8 8 0 5V2.999zM0 7l8 3 8-3v7.003c0 .55-.445.997-1 .997H1c-.552 0-1-.453-1-.997V7z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M16 1.6c0-.88-.72-1.6-1.6-1.6H1.6C.72 0 0 .72 0 1.6v9.6c0 .88.72 1.6 1.6 1.6h12.8c.88 0 1.6-.72 1.6-1.6V1.6zm-1.6 0L8 5.6l-6.4-4h12.8zm0 9.6H1.6v-8l6.4 4 6.4-4v8z" />
     </svg>
   )
 }

@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/crop.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/crop.svg` to regenerate;
 import React from 'react'
 
-import SvgCropTwake from './Crop_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCrop(props) {
-  if (isTwakeTheme()) return SvgCropTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M4 15v1H0v-4h1V4H0V0h4v1h8V0h4v4h-1v8h1v4h-4v-1H4zm0-2h8v-1h1V4h-1V3H4v1H3v8h1v1zM1 1v2h2V1H1zm12 0v2h2V1h-2zm0 12v2h2v-2h-2zM1 13v2h2v-2H1z"
-      />
+      <path d="M11.636 10.182h1.455V4.364c0-.8-.655-1.455-1.455-1.455H5.818v1.455h5.818v5.818zm-7.272 1.454V0H2.909v2.91H0v1.454h2.91v7.272c0 .8.654 1.455 1.454 1.455h7.272V16h1.455v-2.91H16v-1.454H4.364z" />
     </svg>
   )
 }

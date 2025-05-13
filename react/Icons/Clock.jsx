@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/clock.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/clock.svg` to regenerate;
 import React from 'react'
 
-import SvgClockTwake from './Clock_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgClock(props) {
-  if (isTwakeTheme()) return SvgClockTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M8 16A8 8 0 108 0a8 8 0 000 16zM7 8a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L9 7.6V4a1 1 0 10-2 0v4z"
-      />
+      <path d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8zm2.64 11.768L7.2 8.328V4h1.6v3.672l2.968 2.968-1.136 1.128z" />
     </svg>
   )
 }

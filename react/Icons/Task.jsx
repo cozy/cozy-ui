@@ -1,19 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/task.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/task.svg` to regenerate;
 import React from 'react'
 
-import SvgTaskTwake from './Task_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTask(props) {
-  if (isTwakeTheme()) return SvgTaskTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path d="M5 4a1 1 0 000 2h6a1 1 0 100-2H5zM4 8a1 1 0 011-1h6a1 1 0 110 2H5a1 1 0 01-1-1zm1 2a1 1 0 100 2h6a1 1 0 100-2H5z" />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M0 2a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V2zm2 0h12v12H2V2z"
-      />
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M8 0H1.6C.72 0 .008.72.008 1.6L0 14.4c0 .88.712 1.6 1.592 1.6H11.2c.88 0 1.6-.72 1.6-1.6V4.8L8 0zm3.2 14.4H1.6V1.6h5.6v4h4v8.8zM3.856 8.84L2.72 9.968 5.552 12.8l4.528-4.528-1.128-1.128-3.392 3.392L3.856 8.84z" />
     </svg>
   )
 }
