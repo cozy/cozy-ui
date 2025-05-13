@@ -1,3 +1,10 @@
+# [122.14.0](https://github.com/cozy/cozy-ui/compare/v122.13.0...v122.14.0) (2025-05-13)
+
+
+### Features
+
+* **SquareAppIcon:** Change icon size and text size on mobile ([a8bb47f](https://github.com/cozy/cozy-ui/commit/a8bb47f))
+
 # [122.13.0](https://github.com/cozy/cozy-ui/compare/v122.12.1...v122.13.0) (2025-05-12)
 
 
