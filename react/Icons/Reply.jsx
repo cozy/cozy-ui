@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/reply.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/reply.svg` to regenerate;
 import React from 'react'
 
-import SvgReplyTwake from './Reply_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgReply(props) {
-  if (isTwakeTheme()) return SvgReplyTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        d="M10.054 4.266c-5.39.75-8.705 4.012-10.021 7.685-.184.513.45.912.851.542 2.155-2 5.465-2.93 9.17-2.93v2.496a.5.5 0 00.849.358l4.752-4.634a1.15 1.15 0 00.021-1.626l-4.773-4.655a.5.5 0 00-.849.358v2.406z"
-        fillRule="evenodd"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M6.222 3.556V0L0 6.222l6.222 6.222V8.8c4.445 0 7.556 1.422 9.778 4.533-.889-4.444-3.556-8.889-9.778-9.777z" />
     </svg>
   )
 }

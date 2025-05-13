@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/movement-out.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/movement-out.svg` to regenerate;
 import React from 'react'
 
-import SvgMovementOutTwake from './MovementOut_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMovementOut(props) {
-  if (isTwakeTheme()) return SvgMovementOutTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <g fillRule="evenodd">
-        <path d="M3.414 10H11a1 1 0 010 2H3.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 1.414L3.414 10z" />
-        <path
-          d="M12.586 4l-1.293-1.293a1 1 0 011.414-1.414l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L12.586 6H5a1 1 0 110-2h7.586z"
-          opacity={0.316}
-        />
-      </g>
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M3.547 5.333L0 8.89l3.547 3.555V9.778h6.23V8h-6.23V5.333zM16 3.556L12.453 0v2.667h-6.23v1.777h6.23v2.667L16 3.556z" />
     </svg>
   )
 }

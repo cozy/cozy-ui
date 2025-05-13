@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/sync.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/sync.svg` to regenerate;
 import React from 'react'
 
-import SvgSyncTwake from './Sync_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSync(props) {
-  if (isTwakeTheme()) return SvgSyncTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M16 7.2V3c0-.6-.4-1-1-1-.5 0-.8.3-.9.7A8.09 8.09 0 008 0C4.9 0 2 1.8.7 4.6c-.2.5 0 1.1.5 1.3.5.2 1.1 0 1.3-.5C3.5 3.4 5.6 2 8 2c1.5 0 3 .6 4 1.5-.3 0-.6.1-.8.3-.4.4-.3 1.1.1 1.4l3 2.5h.1c.1.1.2.1.3.1h.4c.1 0 .2-.1.3-.1h.1c.1-.1.2-.1.2-.2.2 0 .2-.1.3-.3 0 .1 0 0 0 0m-1.2 2.9c-.5-.2-1.1 0-1.3.5A6 6 0 018 14c-1.5 0-2.9-.6-4-1.5.3 0 .5-.1.7-.4.4-.4.3-1.1-.1-1.4l-3-2.5h-.1L1.3 8h-.1c-.2 0-.5 0-.7.1H.4c-.1.1-.1.2-.2.3-.1.1-.1.2-.2.3V13c0 .6.4 1 1 1 .5 0 .9-.3 1-.8C3.5 14.9 5.6 16 8 16c3.1 0 5.9-1.8 7.3-4.5.2-.5 0-1.1-.5-1.4"
-      />
+    <svg viewBox="0 0 12 16" {...props}>
+      <path d="M6 2.182V0L3.09 2.91 6 5.817V3.636A4.367 4.367 0 0110.364 8a4.27 4.27 0 01-.51 2.036l1.062 1.062A5.769 5.769 0 0011.818 8 5.817 5.817 0 006 2.182zm0 10.182A4.367 4.367 0 011.636 8c0-.735.182-1.433.51-2.036L1.083 4.902A5.768 5.768 0 00.182 8 5.817 5.817 0 006 13.818V16l2.91-2.91L6 10.183v2.182z" />
     </svg>
   )
 }

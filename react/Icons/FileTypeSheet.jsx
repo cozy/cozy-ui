@@ -1,23 +1,24 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-sheet.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-sheet.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeSheetTwake from './FileTypeSheet_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeSheet(props) {
-  if (isTwakeTheme()) return SvgFileTypeSheetTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#9FE6A2"
-          d="M3 2.002C3 .896 3.89 0 4.997 0H22l7 7v22.996A2 2 0 0127.003 32H4.997A1.995 1.995 0 013 29.998V2.002z"
-        />
-        <path
-          fill="#0FC016"
-          d="M21.5 0c-.276 0-.5.23-.5.5V8h7.5c.276 0 .5-.232.5-.5V7l-7-7h-.5zM8 9h4v2H8V9zm0-4h4v2H8V5zm0 8h4v2H8v-2zm0 4h4v2H8v-2zm0 4h4v2H8v-2zm0 4h4v2H8v-2zm6-16h4v2h-4V9zm0-4h4v2h-4V5zm0 8h4v2h-4v-2zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2zm6-12h4v2h-4v-2zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2z"
-        />
-      </g>
+    <svg viewBox="0 0 15 17" fill="none" {...props}>
+      <path
+        d="M3.52 1.3h5.792l4.908 4.907V13.6a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V4a2.7 2.7 0 012.7-2.7z"
+        fill="#F5FDF7"
+        stroke="#248A3D"
+      />
+      <path
+        d="M14.72 6.2L9.32.8v2.793c0 1.44 1.128 2.607 2.52 2.607h2.88z"
+        fill="#248A3D"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5.356 9.2h1.32l.806 1.239.824-1.234h1.302l-1.54 2.085 1.608 2.306H8.477l-1.009-1.444-.577.86h.585v.588h-2.2l1.6-2.296L5.356 9.2z"
+        fill="#34C759"
+      />
     </svg>
   )
 }

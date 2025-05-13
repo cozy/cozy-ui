@@ -1,16 +1,12 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-circle.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-circle.svg` to regenerate;
 import React from 'react'
 
-import SvgCrossCircleTwake from './CrossCircle_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCrossCircle(props) {
-  if (isTwakeTheme()) return SvgCrossCircleTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
-        fillRule="evenodd"
-        d="M8 0a8 8 0 110 16A8 8 0 018 0zM5.707 4.293l-.094-.083a1 1 0 00-1.226 0l-.094.083-.083.094-.07.102a1 1 0 00.062 1.114l.09.104L6.586 8l-2.292 2.293a1 1 0 001.32 1.497l.094-.083L8 9.415l2.293 2.292.094.083a1 1 0 001.226 0l.094-.083.083-.094a1 1 0 000-1.226l-.083-.094L9.415 8l2.292-2.293a1 1 0 00-1.32-1.497l-.094.083L8 6.585 5.707 4.293l-.094-.083.094.083z"
+        d="M5.12 12L8 9.12 10.88 12 12 10.88 9.12 8 12 5.12 10.88 4 8 6.88 5.12 4 4 5.12 6.88 8 4 10.88 5.12 12zM8 16a7.79 7.79 0 01-3.12-.63 8.079 8.079 0 01-2.54-1.71 8.08 8.08 0 01-1.71-2.54A7.79 7.79 0 010 8c0-1.107.21-2.147.63-3.12.42-.973.99-1.82 1.71-2.54A8.079 8.079 0 014.88.63 7.79 7.79 0 018 0a7.79 7.79 0 013.12.63c.973.42 1.82.99 2.54 1.71s1.29 1.567 1.71 2.54c.42.973.63 2.013.63 3.12a7.79 7.79 0 01-.63 3.12 8.08 8.08 0 01-1.71 2.54 8.08 8.08 0 01-2.54 1.71A7.79 7.79 0 018 16z"
+        fill="#5F6368"
       />
     </svg>
   )

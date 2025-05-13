@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/upload.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/upload.svg` to regenerate;
 import React from 'react'
 
-import SvgUploadTwake from './Upload_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgUpload(props) {
-  if (isTwakeTheme()) return SvgUploadTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M7 6.414L5.707 7.707a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L9 6.414V14a1 1 0 11-2 0V6.414zM1 2h14a1 1 0 100-2H1a1 1 0 100 2z"
-      />
+      <path d="M14 11v3H2v-3H0v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM3 5l1.41 1.41L7 3.83V12h2V3.83l2.59 2.58L13 5 8 0 3 5z" />
     </svg>
   )
 }

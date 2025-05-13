@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/wallet-new.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wallet-new.svg` to regenerate;
 import React from 'react'
 
 function SvgWalletNew(props) {

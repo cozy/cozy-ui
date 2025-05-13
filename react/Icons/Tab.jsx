@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tab.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tab.svg` to regenerate;
 import React from 'react'
 
-import SvgTabTwake from './Tab_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTab(props) {
-  if (isTwakeTheme()) return SvgTabTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M13 12v1a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2h1V3a2 2 0 012-2h9a2 2 0 012 2v7a2 2 0 01-2 2h-1zm1-9H5v1h6a2 2 0 012 2v4h1V3zM2 6h9v7H2V6z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M14.546.454H1.455C.655.454 0 1.108 0 1.908V12.09c0 .8.655 1.454 1.455 1.454h13.09c.8 0 1.455-.654 1.455-1.454V1.908c0-.8-.655-1.454-1.454-1.454zm0 11.636H1.455V1.908h7.272v2.91h5.819v7.272z" />
     </svg>
   )
 }

@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/illus/photos-text.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/photos-text.svg` to regenerate;
 import React from 'react'
 
 function SvgPhotosText(props) {

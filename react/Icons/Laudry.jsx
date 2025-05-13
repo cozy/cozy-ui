@@ -1,19 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laudry.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laudry.svg` to regenerate;
 import React from 'react'
 
-import SvgLaudryTwake from './Laudry_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLaudry(props) {
-  if (isTwakeTheme()) return SvgLaudryTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path d="M10.425 11.475A3.5 3.5 0 015.5 11.5l4.95-4.95a3.5 3.5 0 01-.025 4.925z" />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M1 2a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V2zm3.25 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm2.25.75a.75.75 0 100-1.5.75.75 0 000 1.5zm5.036 2.714a5 5 0 11-7.071 7.071 5 5 0 017.07-7.07z"
-      />
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M11.2.008L1.6 0C.712 0 0 .712 0 1.6v12.8c0 .888.712 1.6 1.6 1.6h9.6c.888 0 1.6-.712 1.6-1.6V1.6c0-.888-.712-1.592-1.6-1.592zm0 14.392H1.6L1.592 1.6H11.2v12.8z" />
+      <path d="M3.2 4a.8.8 0 100-1.6.8.8 0 000 1.6zm2.4 0a.8.8 0 100-1.6.8.8 0 000 1.6zm.8 9.6c2.208 0 4-1.792 4-4s-1.792-4-4-4-4 1.792-4 4 1.792 4 4 4zm1.888-5.888a2.675 2.675 0 010 3.776 2.675 2.675 0 01-3.776 0l3.776-3.776z" />
     </svg>
   )
 }

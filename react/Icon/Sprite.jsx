@@ -1,20 +1,14 @@
 import React from 'react'
 
-import IconSpriteContent from './icons-sprite'
-import IconSpriteContentTwake from './icons-sprite-twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
+import IconSprintContent from './icons-sprite'
 
 const displayNone = { display: 'none' }
 
 const Sprite = () => {
-  const SpriteContent = isTwakeTheme()
-    ? IconSpriteContentTwake
-    : IconSpriteContent
-
   return (
     <div
       style={displayNone}
-      dangerouslySetInnerHTML={{ __html: SpriteContent }}
+      dangerouslySetInnerHTML={{ __html: IconSprintContent }}
     />
   )
 }

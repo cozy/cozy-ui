@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text.svg` to regenerate;
 import React from 'react'
 
-import SvgTextTwake from './Text_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgText(props) {
-  if (isTwakeTheme()) return SvgTextTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 13a1 1 0 110 2H1a1 1 0 110-2h8zm6-4a1 1 0 110 2H1a1 1 0 110-2h14zm0-4a1 1 0 110 2H1a1 1 0 010-2h14zm0-4a1 1 0 110 2H1a1 1 0 010-2h14z"
-      />
+    <svg viewBox="0 0 16 6" {...props}>
+      <path d="M0 0h16v2H0V0zm0 4h10v2H0V4z" />
     </svg>
   )
 }

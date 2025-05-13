@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pin.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/pin.svg` to regenerate;
 import React from 'react'
 
-import SvgPinTwake from './Pin_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPin(props) {
-  if (isTwakeTheme()) return SvgPinTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M4 1c0-.552.453-1 .997-1h6.006c.55 0 .997.444.997 1 0 .552-.453 1-.997 1H11v4l2 2v2H9v4l-2 2v-6H3V8l2-2V2c-.552 0-1-.444-1-1z"
-      />
+    <svg viewBox="0 0 12 16" {...props}>
+      <path d="M7.2 1.6v4c0 .896.296 1.728.8 2.4H3.2c.52-.688.8-1.52.8-2.4v-4h3.2zM9.6 0h-8C1.16 0 .8.36.8.8c0 .44.36.8.8.8h.8v4C2.4 6.928 1.328 8 0 8v1.6h4.776v5.6l.8.8.8-.8V9.6H11.2V8a2.397 2.397 0 01-2.4-2.4v-4h.8c.44 0 .8-.36.8-.8 0-.44-.36-.8-.8-.8z" />
     </svg>
   )
 }

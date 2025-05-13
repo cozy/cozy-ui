@@ -1,17 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/printer.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/printer.svg` to regenerate;
 import React from 'react'
 
-import SvgPrinterTwake from './Printer_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPrinter(props) {
-  if (isTwakeTheme()) return SvgPrinterTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M13 12v3c0 .552-.456 1-.995 1h-8.01A.995.995 0 013 15v-3H1c-.552 0-1-.438-1-1.003V6.003A1 1 0 011 5h14c.552 0 1 .438 1 1.003v4.994A1 1 0 0115 12h-2zM3 1.01C3 .451 3.456 0 3.995 0h8.01c.55 0 .995.443.995 1.01V4H3V1.01zM5 10v4h6v-4H5zm9-2a1 1 0 100-2 1 1 0 000 2z"
-      />
+    <svg viewBox="0 0 16 15" {...props}>
+      <path d="M13.6 4h-.8V0H3.2v4h-.8A2.397 2.397 0 000 6.4v4.8h3.2v3.2h9.6v-3.2H16V6.4C16 5.072 14.928 4 13.6 4zM4.8 1.6h6.4V4H4.8V1.6zm6.4 11.2H4.8V9.6h6.4v3.2zm1.6-3.2V8H3.2v1.6H1.6V6.4c0-.44.36-.8.8-.8h11.2c.44 0 .8.36.8.8v3.2h-1.6z" />
+      <path d="M12.8 7.6a.8.8 0 100-1.6.8.8 0 000 1.6z" />
     </svg>
   )
 }

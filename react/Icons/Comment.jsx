@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/comment.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/comment.svg` to regenerate;
 import React from 'react'
 
-import SvgCommentTwake from './Comment_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgComment(props) {
-  if (isTwakeTheme()) return SvgCommentTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M0 .999A.997.997 0 011 0h14a1 1 0 011 .999V12c0 .552-.453.999-.997.999H8l-6 3v-3H1A1 1 0 010 12V1zM4 5c0 .556.446 1 .997 1h6.006c.544 0 .997-.448.997-1 0-.556-.446-1-.997-1H4.997C4.453 4 4 4.448 4 5zm0 3c0 .556.444 1 .99 1h4.02A1 1 0 0010 8c0-.556-.444-1-.99-1H4.99A1 1 0 004 8z"
-      />
+    <svg viewBox="0 0 20 20" {...props}>
+      <path d="M2 2h16v12H3.17L2 15.17V2zm0-2C.9 0 .01.9.01 2L0 20l4-4h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2H2zm2 10h8v2H4v-2zm0-3h12v2H4V7zm0-3h12v2H4V4z" />
     </svg>
   )
 }

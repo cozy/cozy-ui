@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder-moveto.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/folder-moveto.svg` to regenerate;
 import React from 'react'
 
-import SvgFolderMovetoTwake from './FolderMoveto_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFolderMoveto(props) {
-  if (isTwakeTheme()) return SvgFolderMovetoTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        clipRule="evenodd"
-        d="M5.509 1c.271 0 .648.157.84.348l1.303 1.304c.192.192.579.348.848.348h6.503c.55 0 .997.456.997 1.002v8.99A2.003 2.003 0 0114.006 15H1.994A2 2 0 010 12.994V2.007C0 1.45.451 1 .99 1h4.52zM11.5 6a1 1 0 00-1.497 1.32l.083.094.5.586H6a1 1 0 00-.117 1.993L6 10h4.586l-.5.586a1 1 0 001.32 1.497L11.5 12l2.207-2.293a1 1 0 00.083-1.32l-.083-.094L11.5 6z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M14.4 2.2H8L6.4.6H1.6C.72.6 0 1.32 0 2.2v9.6c0 .88.72 1.6 1.6 1.6h12.8c.88 0 1.6-.72 1.6-1.6v-8c0-.88-.72-1.6-1.6-1.6zm0 9.6H1.6V2.2h4.136l1.6 1.6H14.4v8zM8.128 7H4.8v1.6h3.328L6.856 9.872 7.992 11 11.2 7.808 7.992 4.6 6.864 5.728 8.128 7z" />
     </svg>
   )
 }

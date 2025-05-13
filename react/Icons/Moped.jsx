@@ -1,18 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/moped.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/moped.svg` to regenerate;
 import React from 'react'
 
-import SvgMopedTwake from './Moped_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMoped(props) {
-  if (isTwakeTheme()) return SvgMopedTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M10 0a1 1 0 100 2h2.246l1.604 5.613L12 9H8V5a1 1 0 00-1-1H2a1 1 0 100 2h2a4 4 0 00-4 4v1.986A1 1 0 001 13a3 3 0 006 0h2a3 3 0 104.48-2.61L15.6 8.8a1 1 0 00.362-1.075l-2-7A1 1 0 0013 0h-3zM4.922 12.613a1 1 0 11-1.903.19l1.903-.19zM12 14a1 1 0 100-2 1 1 0 000 2z"
-      />
+    <svg viewBox="0 0 16 12" {...props}>
+      <path d="M13.6 1.6C13.6.72 12.88 0 12 0H9.6v1.6H12v2.12L9.216 7.2H6.4v-4H3.2A3.2 3.2 0 000 6.4v2.4h1.6c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4h3.584L13.6 4.28V1.6zm-12 5.6v-.8c0-.88.72-1.6 1.6-1.6h1.6v2.4H1.6zM4 9.6c-.44 0-.8-.36-.8-.8h1.6c0 .44-.36.8-.8.8z" />
+      <path d="M6.4.8h-4v1.6h4V.8zm7.2 5.6a2.397 2.397 0 00-2.4 2.4c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4 0-1.328-1.072-2.4-2.4-2.4zm0 3.2c-.44 0-.8-.36-.8-.8 0-.44.36-.8.8-.8.44 0 .8.36.8.8 0 .44-.36.8-.8.8z" />
     </svg>
   )
 }

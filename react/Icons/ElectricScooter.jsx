@@ -1,24 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-scooter.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-scooter.svg` to regenerate;
 import React from 'react'
 
-import SvgElectricScooterTwake from './ElectricScooter_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgElectricScooter(props) {
-  if (isTwakeTheme()) return SvgElectricScooterTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path d="M4.736.17c.018-.053-.012-.11-.075-.143-.088-.046-.212-.032-.276.03L.115 4.15A.345.345 0 000 4.398c0 .232.265.42.593.42h1.592l-.658 3.021c-.011.053.021.106.084.137.09.043.213.027.274-.037l4.011-4.142A.34.34 0 006 3.561c0-.231-.265-.419-.593-.419H3.765L4.736.171z" />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8 1a1 1 0 011-1h2.22a2 2 0 011.94 1.515l1.81 7.242A1 1 0 0114 10h-.5a3.5 3.5 0 00-3.465 4H4.95a2.5 2.5 0 11-.45-2h3.707a5.506 5.506 0 014.525-3.947L11.22 2H9a1 1 0 01-1-1zM3 13.5a.5.5 0 11-1 0 .5.5 0 011 0z"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 13.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-2 0a.5.5 0 11-1 0 .5.5 0 011 0z"
-      />
+      <path d="M13.6 1.6C13.6.72 12.88 0 12 0H9.6v1.6H12v2.12L9.216 7.2H6.4v-4H3.2A3.2 3.2 0 000 6.4v2.4h1.6c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4h3.584L13.6 4.28V1.6zm-12 5.6v-.8c0-.88.72-1.6 1.6-1.6h1.6v2.4H1.6zM4 9.6c-.44 0-.8-.36-.8-.8h1.6c0 .44-.36.8-.8.8z" />
+      <path d="M6.4.8h-4v1.6h4V.8zm7.2 5.6a2.397 2.397 0 00-2.4 2.4c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4 0-1.328-1.072-2.4-2.4-2.4zm0 3.2c-.44 0-.8-.36-.8-.8 0-.44.36-.8.8-.8.44 0 .8.36.8.8 0 .44-.36.8-.8.8zm-9.6 4h3.2V12l4.8 2.4H8.8V16L4 13.6z" />
     </svg>
   )
 }

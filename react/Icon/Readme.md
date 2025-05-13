@@ -777,7 +777,7 @@ const icons = [
   PapersIcon,
   PassIcon,
   ShareGrey08Icon,
-  .StoreIcon,
+  StoreIcon,
   PhotosIcon,
   TopSelectIcon,
   TrashDuotoneIcon,

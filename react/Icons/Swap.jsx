@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/swap.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/swap.svg` to regenerate;
 import React from 'react'
 
-import SvgSwapTwake from './Swap_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSwap(props) {
-  if (isTwakeTheme()) return SvgSwapTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M11 0a2 2 0 012 2h1a2 2 0 012 2v8a2 2 0 01-2 2h-1a2 2 0 01-2 2H5a2 2 0 01-2-2H2a2 2 0 01-2-2V4a2 2 0 012-2h1a2 2 0 012-2h6zm2 12h1V4h-1v8zM3 4v8H2V4h1zm2-2v12h6V2H5z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M10.556 12.453v-6.23H8.777v6.23H6.11L9.667 16l3.555-3.547h-2.666zM4.333 0L.778 3.547h2.666v6.23h1.778v-6.23H7.89L4.333 0zm6.223 12.453v-6.23H8.777v6.23H6.11L9.667 16l3.555-3.547h-2.666zM4.333 0L.778 3.547h2.666v6.23h1.778v-6.23H7.89L4.333 0z" />
     </svg>
   )
 }

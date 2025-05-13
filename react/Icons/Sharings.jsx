@@ -1,25 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/sharings.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/sharings.svg` to regenerate;
 import React from 'react'
 
-import SvgSharingsTwake from './Sharings_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSharings(props) {
-  if (isTwakeTheme()) return SvgSharingsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" fill="none" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0"
-        fill="#D6D8DA"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M17.26 20.491l8.027-4.014a4.875 4.875 0 111.454 2.907l-8.028 4.014a4.928 4.928 0 010 1.204l8.028 4.014a4.875 4.875 0 11-1.454 2.907l-8.028-4.014a4.875 4.875 0 110-7.018z"
-        fill="#5D6165"
-      />
+    <svg viewBox="0 0 15 16" {...props}>
+      <path d="M12.048 11.31a2.34 2.34 0 00-1.574.618L4.747 8.594c.04-.184.072-.37.072-.562a2.63 2.63 0 00-.072-.562l5.663-3.301a2.4 2.4 0 001.638.65 2.406 2.406 0 002.41-2.41A2.406 2.406 0 0012.048 0a2.406 2.406 0 00-2.41 2.41c0 .192.033.377.073.562L4.048 6.273a2.4 2.4 0 00-1.638-.65A2.406 2.406 0 000 8.032a2.406 2.406 0 002.41 2.409 2.4 2.4 0 001.638-.65l5.72 3.34c-.041.17-.065.346-.065.523A2.348 2.348 0 0012.048 16a2.348 2.348 0 002.346-2.345 2.348 2.348 0 00-2.346-2.346zm0-9.704c.442 0 .803.362.803.804a.806.806 0 01-.803.803.806.806 0 01-.803-.803c0-.442.361-.804.803-.804zM2.41 8.836a.806.806 0 01-.804-.804c0-.442.362-.803.804-.803.441 0 .803.361.803.803a.806.806 0 01-.803.803zm9.638 5.638a.806.806 0 01-.803-.803c0-.442.361-.803.803-.803.442 0 .803.36.803.803a.806.806 0 01-.803.803z" />
     </svg>
   )
 }

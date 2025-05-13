@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text-info.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/text-info.svg` to regenerate;
 import React from 'react'
 
-import SvgTextInfoTwake from './TextInfo_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTextInfo(props) {
-  if (isTwakeTheme()) return SvgTextInfoTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 3h7.172l2-2H2a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2V6.828l-2 2V14H2V3zm3 7v2h2l7.146-7.146-2-2L5 10zm10.5-6.5l-.646.646-2-2L13.5 1.5a1.414 1.414 0 112 2z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M0 3.53h9.706v1.764H0V3.53zm0-1.765h9.706V0H0v1.765zm0 7.059h6.177V7.059H0v1.765zm13.245-2.762l.626-.626a.879.879 0 011.244 0l.627.626c.344.344.344.9 0 1.244l-.627.627-1.87-1.871zm-.627.627l-4.676 4.676v1.87h1.87L14.49 8.56l-1.87-1.87z" />
     </svg>
   )
 }

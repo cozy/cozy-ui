@@ -1,24 +1,61 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/forbidden-sign.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/forbidden-sign.svg` to regenerate;
 import React from 'react'
 
-import SvgForbiddenSignTwake from './ForbiddenSign_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgForbiddenSign(props) {
-  if (isTwakeTheme()) return SvgForbiddenSignTwake(props)
   return (
-    <svg viewBox="0 0 96 96" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#FFDEC1"
-          d="M24.6 3.51L3.51 24.61A12 12 0 000 33.08V62.9a12 12 0 003.52 8.49l21.08 21.1A12 12 0 0033.1 96h29.8a12 12 0 008.49-3.51l21.09-21.1A12 12 0 0096 62.92V33.1a12 12 0 00-3.51-8.49l-21.1-21.1A12 12 0 0062.92 0H33.1a12 12 0 00-8.49 3.51z"
-        />
-        <path
-          fill="#FF9433"
-          fillRule="nonzero"
-          d="M55.35 81H43.77c-3.97 0-7.79-1.5-10.7-4.2L13.3 58.43a4.06 4.06 0 01-.62-5.22 3.61 3.61 0 014.87-1.09l10.97 6.64V23.5l.02-.45a3.83 3.83 0 017.62 0l.03.45v18.02c0 .54.37 1 .88 1.12l.26.03h1.54c.63 0 1.15-.52 1.15-1.15V15.83l.02-.44a3.83 3.83 0 017.62 0l.03.44v25.69c0 .54.37 1 .88 1.12l.26.03h1.54c.63 0 1.15-.52 1.15-1.15V19.67l.02-.45a3.83 3.83 0 017.62 0l.03.45v21.85c0 .54.37 1 .88 1.12l.26.03h1.54c.63 0 1.15-.52 1.15-1.15V27.33l.02-.44a3.83 3.83 0 017.62 0l.03.44v38.34c0 8.47-6.87 15.33-15.34 15.33z"
-        />
+    <svg viewBox="0 0 16 16" fill="none" {...props}>
+      <g clipPath="url(#forbidden-sign_svg__clip0_11291_1429)">
+        <mask
+          id="forbidden-sign_svg__a"
+          style={{
+            maskType: 'luminance'
+          }}
+          maskUnits="userSpaceOnUse"
+          x={0}
+          y={0}
+          width={16}
+          height={16}
+        >
+          <path d="M16 0H0v16h16V0z" fill="#fff" />
+        </mask>
+        <g mask="url(#forbidden-sign_svg__a)">
+          <mask
+            id="forbidden-sign_svg__b"
+            style={{
+              maskType: 'luminance'
+            }}
+            maskUnits="userSpaceOnUse"
+            x={0}
+            y={0}
+            width={16}
+            height={16}
+          >
+            <path d="M16 0H0v16h16V0z" fill="#fff" />
+          </mask>
+          <g mask="url(#forbidden-sign_svg__b)">
+            <path
+              d="M10.722 0H5.287A5.287 5.287 0 000 5.287v5.435a5.287 5.287 0 005.287 5.287h5.435a5.287 5.287 0 005.287-5.287V5.287A5.287 5.287 0 0010.722 0z"
+              fill="#fff"
+            />
+            <path
+              d="M10.722 0H5.287A5.287 5.287 0 000 5.287v5.435a5.287 5.287 0 005.287 5.287h5.435a5.287 5.287 0 005.287-5.287V5.287A5.287 5.287 0 0010.722 0z"
+              fill="#FF8F00"
+              fillOpacity={0.12}
+            />
+          </g>
+        </g>
       </g>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5.555 6.262a3 3 0 004.184 4.184L5.554 6.261zm.707-.707l4.183 4.183a3 3 0 00-4.184-4.184zM8 12a4 4 0 110-8 4 4 0 010 8z"
+        fill="#FF6F00"
+      />
+      <defs>
+        <clipPath id="forbidden-sign_svg__clip0_11291_1429">
+          <path fill="#fff" d="M0 0h16v16H0z" />
+        </clipPath>
+      </defs>
     </svg>
   )
 }

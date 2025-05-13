@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/previous.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/previous.svg` to regenerate;
 import React from 'react'
 
-import SvgPreviousTwake from './Previous_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPrevious(props) {
-  if (isTwakeTheme()) return SvgPreviousTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        d="M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z"
-        fillRule="evenodd"
-      />
+      <path d="M16 7H3.83l5.59-5.59L8 0 0 8l8 8 1.41-1.41L3.83 9H16V7z" />
     </svg>
   )
 }

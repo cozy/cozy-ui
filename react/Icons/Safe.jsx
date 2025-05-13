@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/safe.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/safe.svg` to regenerate;
 import React from 'react'
 
-import SvgSafeTwake from './Safe_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSafe(props) {
-  if (isTwakeTheme()) return SvgSafeTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M14 0a2 2 0 012 2v11a2 2 0 01-2 2h-1v1h-3v-1H6v1H3v-1H2a2 2 0 01-2-2V2C0 .9.9 0 2 0h12zm0 1H3a1 1 0 00-1 .88V3H1v3h1v3H1v3h1v1a1 1 0 00.88 1H14a1 1 0 001-.88V2a1 1 0 00-.88-1H14zm0 1v11H3v-2H2v-1h1V5H2V4h1V2h11zM8.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm0 1a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm0 2a.5.5 0 100 1 .5.5 0 000-1z"
-      />
+    <svg viewBox="0 0 14 17" {...props}>
+      <path d="M2.429 16.5c-.42 0-.778-.15-1.077-.448a1.467 1.467 0 01-.447-1.076V7.357c0-.419.149-.778.447-1.076a1.467 1.467 0 011.077-.448h.761V4.31c0-1.054.372-1.953 1.115-2.696C5.048.871 5.946.5 7 .5c1.054 0 1.952.371 2.695 1.114.743.743 1.114 1.642 1.114 2.696v1.523h.762c.42 0 .778.15 1.077.448.298.298.447.657.447 1.076v7.62c0 .418-.149.777-.447 1.075a1.467 1.467 0 01-1.077.448H2.43zM7 12.69c.419 0 .778-.149 1.076-.447.299-.299.448-.657.448-1.076 0-.42-.15-.778-.448-1.076A1.467 1.467 0 007 9.643c-.42 0-.778.15-1.076.447a1.467 1.467 0 00-.448 1.077c0 .419.15.777.448 1.076.298.298.657.447 1.076.447zM4.714 5.833h4.572V4.31a2.21 2.21 0 00-.667-1.62A2.204 2.204 0 007 2.024c-.635 0-1.175.222-1.619.666a2.204 2.204 0 00-.667 1.62v1.523z" />
     </svg>
   )
 }

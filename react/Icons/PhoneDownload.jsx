@@ -1,14 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/phone-download.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/phone-download.svg` to regenerate;
 import React from 'react'
 
-import SvgPhoneDownloadTwake from './PhoneDownload_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPhoneDownload(props) {
-  if (isTwakeTheme()) return SvgPhoneDownloadTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path d="M7 8.586V4a1 1 0 112 0v4.586l.293-.293a1 1 0 011.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L7 8.586zM2 1C2 .448 2.456 0 3.002 0h9.996A1 1 0 0114 1v14c0 .552-.456 1-1.002 1H3.002A1 1 0 012 15V1zM4 2v11h8V2H4z" />
+    <svg viewBox="0 0 14 17" {...props}>
+      <path d="M9.182 12.586H1.909V3.859H7V2.404H1.91v-.727H7V.229L1.91.222C1.11.222.454.877.454 1.677v13.09c0 .8.654 1.455 1.454 1.455h7.273c.8 0 1.454-.654 1.454-1.454V11.13H9.182v1.455zm0 2.182H1.909v-.728h7.273v.728z" />
+      <path d="M9.91 9.677l3.636-3.637-1.026-1.025-1.884 1.876V1.677H9.182V6.89L7.298 5.015 6.273 6.04l3.636 3.637z" />
     </svg>
   )
 }

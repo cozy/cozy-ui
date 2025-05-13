@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/cozy-upgrade-2.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/cozy-upgrade.svg` to regenerate;
 import React from 'react'
 
 function SvgCozyUpgrade(props) {

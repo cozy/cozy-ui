@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/bell.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/bell.svg` to regenerate;
 import React from 'react'
 
-import SvgBellTwake from './Bell_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgBell(props) {
-  if (isTwakeTheme()) return SvgBellTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M13.993 13H2.007A1.001 1.001 0 112 11V9c0-2.45 1.333-5.566 4-6.627v-.379C6 .893 6.888 0 8 0c1.105 0 2 .895 2 1.994v.38C12.667 3.433 14 6.55 14 9v2c.552 0 1 .444 1 1 0 .552-.45 1-1.007 1zM6 14h4v.006A1.992 1.992 0 018 16c-1.105 0-2-.895-2-1.994V14z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M1.4 13.6a.774.774 0 01-.57-.23.774.774 0 01-.23-.57c0-.227.077-.417.23-.57A.774.774 0 011.4 12h.8V6.4c0-1.107.333-2.09 1-2.95a4.614 4.614 0 012.6-1.69V1.2c0-.333.117-.617.35-.85C6.383.117 6.667 0 7 0c.333 0 .617.117.85.35.233.233.35.517.35.85v.56a4.614 4.614 0 012.6 1.69c.667.86 1 1.843 1 2.95V12h.8c.227 0 .417.077.57.23.153.153.23.343.23.57a.774.774 0 01-.23.57.774.774 0 01-.57.23H1.4zM7 16a1.54 1.54 0 01-1.13-.47 1.54 1.54 0 01-.47-1.13h3.2c0 .44-.157.817-.47 1.13A1.54 1.54 0 017 16zm-3.2-4h6.4V6.4a3.08 3.08 0 00-.94-2.26A3.081 3.081 0 007 3.2a3.08 3.08 0 00-2.26.94A3.081 3.081 0 003.8 6.4V12z" />
     </svg>
   )
 }

@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lightbulb.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/lightbulb.svg` to regenerate;
 import React from 'react'
 
-import SvgLightbulbTwake from './Lightbulb_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLightbulb(props) {
-  if (isTwakeTheme()) return SvgLightbulbTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M4.977 12.513s.103-1.083-.956-2.022a6 6 0 117.99-.028c-.674.605-.907 2.05-.907 2.05a.635.635 0 01-.595.487H5.491a.524.524 0 01-.514-.487zM11 14l-1.652 1.652a1.355 1.355 0 01-.853.348h-.99c-.279 0-.662-.157-.853-.348L5 14h6zm1-8a4 4 0 00-4-4 1 1 0 100 2 2 2 0 012 2 1 1 0 002 0z"
-      />
+    <svg viewBox="0 0 12 16" {...props}>
+      <path d="M3.6 15.2c0 .44.36.8.8.8h3.2c.44 0 .8-.36.8-.8v-.8H3.6v.8zM6 0A5.606 5.606 0 00.4 5.6c0 1.904.952 3.576 2.4 4.592V12c0 .44.36.8.8.8h4.8c.44 0 .8-.36.8-.8v-1.808A5.597 5.597 0 0011.6 5.6C11.6 2.512 9.088 0 6 0zm2.28 8.88l-.68.48v1.84H4.4V9.36l-.68-.48A3.997 3.997 0 012 5.6c0-2.208 1.792-4 4-4s4 1.792 4 4c0 1.304-.64 2.528-1.72 3.28z" />
     </svg>
   )
 }

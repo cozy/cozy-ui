@@ -1,14 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-small.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/cross-small.svg` to regenerate;
 import React from 'react'
 
-import SvgCrossSmallTwake from './CrossSmall_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCrossSmall(props) {
-  if (isTwakeTheme()) return SvgCrossSmallTwake(props)
   return (
-    <svg viewBox="0 0 12 12" {...props}>
-      <path d="M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z" />
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M8 6.59L11.59 3 13 4.41 9.41 8 13 11.59 11.59 13 8 9.41 4.41 13 3 11.59 6.59 8 3 4.41 4.41 3 8 6.59z" />
     </svg>
   )
 }

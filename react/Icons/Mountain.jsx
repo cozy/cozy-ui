@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/mountain.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/mountain.svg` to regenerate;
 import React from 'react'
 
-import SvgMountainTwake from './Mountain_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMountain(props) {
-  if (isTwakeTheme()) return SvgMountainTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M6.065 7.66l-.003.005-1.19-2.116a1 1 0 00-1.744 0l-2.79 4.96A1 1 0 001.21 12h13.538a1 1 0 00.86-1.509l-4.747-8.034a1 1 0 00-1.722 0l-2.192 3.71 1.527 2.715a.75.75 0 11-1.308.736L6.065 7.66z"
-      />
+    <svg viewBox="0 0 16 10" {...props}>
+      <path d="M9.455.636l-3.07 4.095.91 1.214 2.16-2.887L13.09 7.91H6.938L4.022 4.004 0 9.364h16L9.455.636zM2.909 7.91l1.106-1.476L5.12 7.909H2.91z" />
     </svg>
   )
 }

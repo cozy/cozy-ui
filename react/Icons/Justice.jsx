@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/justice.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/justice.svg` to regenerate;
 import React from 'react'
 
-import SvgJusticeTwake from './Justice_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgJustice(props) {
-  if (isTwakeTheme()) return SvgJusticeTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8 0c1.306 0 2.418.835 2.83 2H14a1 1 0 01.139 1.99l1.825 3.824a.499.499 0 01.036.198V8.5a2.5 2.5 0 01-5 0v-.49a.5.5 0 01.036-.196L12.857 4H10.83A3.008 3.008 0 019 5.83V13h6a1 1 0 110 2H1a1 1 0 110-2h6V5.83A3.008 3.008 0 015.17 4H3.144l1.821 3.814A.498.498 0 015 8.012V8.5a2.5 2.5 0 01-5 0v-.49a.498.498 0 01.036-.196l1.826-3.823A1 1 0 012 2h3.17A3.001 3.001 0 018 0zm5.5 5.346L14.935 8h-2.87L13.5 5.346zM1.065 8h2.87L2.5 5.346 1.065 8zM8 4a1 1 0 100-2 1 1 0 000 2z"
-      />
+      <path d="M8.8 4.664A2.413 2.413 0 0010.264 3.2H12.8l-2.4 5.6c0 1.328 1.256 2.4 2.8 2.4 1.544 0 2.8-1.072 2.8-2.4l-2.4-5.6h1.6V1.6h-4.936A2.392 2.392 0 008 0a2.392 2.392 0 00-2.264 1.6H.8v1.6h1.6L0 8.8c0 1.328 1.256 2.4 2.8 2.4 1.544 0 2.8-1.072 2.8-2.4L3.2 3.2h2.536c.24.68.784 1.224 1.464 1.464V13.6H0v1.6h16v-1.6H8.8V4.664zM14.696 8.8h-2.992L13.2 5.312 14.696 8.8zm-10.4 0H1.304L2.8 5.312 4.296 8.8zM8 3.2c-.44 0-.8-.36-.8-.8 0-.44.36-.8.8-.8.44 0 .8.36.8.8 0 .44-.36.8-.8.8z" />
     </svg>
   )
 }

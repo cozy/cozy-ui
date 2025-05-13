@@ -1,23 +1,19 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/files-versions.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/files-versions.svg` to regenerate;
 import React from 'react'
 
-import SvgFilesVersionsTwake from './FilesVersions_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFilesVersions(props) {
-  if (isTwakeTheme()) return SvgFilesVersionsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#D6D8DA"
-          d="M42 0H6a6 6 0 00-6 6v36a6 6 0 006 6h36a6 6 0 006-6V6a6 6 0 00-6-6"
-        />
-        <path
-          fill="#5D6165"
-          d="M24 6A18 18 0 117.52 31.24l-.2-.45a2 2 0 013.64-1.65l.1.23a14 14 0 102.04-14.15 2 2 0 012.33.38l.1.12a2 2 0 01-.13 2.7l-.12.12-6 5a2 2 0 01-3.27-1.39L6 22v-8a2 2 0 013.74-.99A17.98 17.98 0 0124 6zm0 8a2 2 0 012 2v7.17l3.41 3.42a2 2 0 11-2.82 2.82l-4-4A2.05 2.05 0 0122 24v-8c0-1.1.9-2 2-2z"
-        />
-      </g>
+    <svg viewBox="0 0 15 16" {...props}>
+      <path
+        d="M3.2.4h5.834L14 5.366V12.8a2.8 2.8 0 01-2.8 2.8h-8a2.8 2.8 0 01-2.8-2.8V3.2A2.8 2.8 0 013.2.4z"
+        fill="#E8EDF3"
+        stroke="#4F5B69"
+        strokeWidth={0.8}
+      />
+      <path
+        d="M14.4 5.4L9 0v2.793C9 4.233 10.128 5.4 11.52 5.4h2.88zM6.556 8.222v2.222l1.888 1.12.343-.568-1.565-.93V8.223h-.666zm4.444.89V6L9.827 7.173A3.972 3.972 0 007 6a4 4 0 104 4h-.889A3.114 3.114 0 017 13.111 3.114 3.114 0 013.889 10 3.115 3.115 0 017 6.889c.858 0 1.636.351 2.2.911L7.889 9.111H11z"
+        fill="#4F5B69"
+      />
     </svg>
   )
 }

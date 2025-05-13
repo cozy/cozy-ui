@@ -1,23 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/opinions.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/opinions.svg` to regenerate;
 import React from 'react'
 
-import SvgOpinionsTwake from './Opinions_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgOpinions(props) {
-  if (isTwakeTheme()) return SvgOpinionsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" fill="none" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 36L9.893 43.416l2.694-15.708L1.175 16.584l15.772-2.292L24 0l7.053 14.292 15.772 2.292-11.412 11.124 2.694 15.708L24 36z"
-        fill="#D1D5DB"
-      />
-      <path
-        d="M12.587 27.708L9.893 43.416 24 36V0l-7.053 14.292-15.772 2.292 11.412 11.124z"
-        fill="#5D6165"
-      />
+    <svg viewBox="0 0 16 17" {...props}>
+      <path d="M8 13.116l4.944 2.984-1.312-5.624L16 6.692l-5.752-.488L8 .9 5.752 6.204 0 6.692l4.368 3.784L3.056 16.1 8 13.116z" />
     </svg>
   )
 }

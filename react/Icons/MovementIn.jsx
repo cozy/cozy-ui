@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/movement-in.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/movement-in.svg` to regenerate;
 import React from 'react'
 
-import SvgMovementInTwake from './MovementIn_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMovementIn(props) {
-  if (isTwakeTheme()) return SvgMovementInTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <g fillRule="evenodd">
-        <path
-          d="M3.414 10H11a1 1 0 010 2H3.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 111.414 1.414L3.414 10z"
-          opacity={0.322}
-        />
-        <path d="M12.586 4l-1.293-1.293a1 1 0 111.414-1.414l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L12.586 6H5a1 1 0 110-2h7.586z" />
-      </g>
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M3.547 6.111L0 9.667l3.547 3.555v-2.666h6.23V8.778h-6.23V6.11zM16 4.333L12.453.778v2.667h-6.23v1.777h6.23V7.89L16 4.333z" />
     </svg>
   )
 }

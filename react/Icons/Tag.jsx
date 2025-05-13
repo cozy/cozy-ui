@@ -1,18 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tag.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/tag.svg` to regenerate;
 import React from 'react'
 
-import SvgTagTwake from './Tag_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTag(props) {
-  if (isTwakeTheme()) return SvgTagTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path d="M5 6a1 1 0 100-2 1 1 0 000 2z" />
-      <path
-        clipRule="evenodd"
-        d="M2 0a2 2 0 00-2 2v5.89a2 2 0 00.586 1.415l5.98 5.973a2.462 2.462 0 003.481 0l5.236-5.237.002-.002a2.461 2.461 0 000-3.47L9.303.587A2 2 0 007.888 0H2zm0 2h5.888l5.978 5.98a.461.461 0 010 .649l-5.234 5.236a.46.46 0 01-.652 0L2 7.89V2z"
-      />
+      <path d="M15.527 7.527L8.464.464A1.598 1.598 0 007.337 0H1.602c-.88 0-1.6.72-1.6 1.6v5.735c0 .424.168.831.472 1.127l7.062 7.063c.624.624 1.64.624 2.264 0l5.735-5.735a1.596 1.596 0 00-.008-2.263zm-6.863 6.87L1.602 7.335V1.6h5.735l7.062 7.062-5.735 5.735z" />
+      <path d="M3.601 4.8a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z" />
     </svg>
   )
 }

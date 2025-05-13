@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/ecolyo.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/ecolyo.svg` to regenerate;
 import React from 'react'
 
 function SvgEcolyo(props) {

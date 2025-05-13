@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/people.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/people.svg` to regenerate;
 import React from 'react'
 
-import SvgPeopleTwake from './People_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPeople(props) {
-  if (isTwakeTheme()) return SvgPeopleTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z"
-      />
+      <path d="M8 1.9a2.1 2.1 0 110 4.2 2.1 2.1 0 010-4.2zm0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H1.9V13c0-.64 3.13-2.1 6.1-2.1zM8 0C5.79 0 4 1.79 4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
     </svg>
   )
 }

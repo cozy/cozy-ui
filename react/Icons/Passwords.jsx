@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/passwords.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/passwords.svg` to regenerate;
 import React from 'react'
 
-import SvgPasswordsTwake from './Passwords_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPasswords(props) {
-  if (isTwakeTheme()) return SvgPasswordsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path fill="#5d6165" d="M19 24h10v16H19z" />
-        <path
-          fill="#d6d8da"
-          d="M24 28c1.102 0 2 .896 2 2 0 .736-.406 1.374-1 1.72V37c0 .55-.45 1-1 1-.552 0-1-.45-1-1v-5.28c-.596-.346-1-.984-1-1.72a2 2 0 012-2zM6 21v24a3 3 0 003 3h30a3 3 0 003-3V21a3 3 0 00-3-3h-3v-6c0-6.618-5.384-12-12-12-6.618 0-12 5.382-12 12h2c0-5.514 4.484-10 10-10 5.514 0 10 4.486 10 10v6H9a3 3 0 00-3 3z"
-        />
-      </g>
+    <svg viewBox="0 0 13 16" {...props}>
+      <path d="M1.524 16c-.42 0-.778-.15-1.076-.448A1.467 1.467 0 010 14.476V6.857c0-.419.15-.778.448-1.076a1.467 1.467 0 011.076-.448h.762V3.81c0-1.054.371-1.953 1.114-2.696C4.143.371 5.041 0 6.095 0 7.15 0 8.048.371 8.79 1.114A3.674 3.674 0 019.905 3.81v1.523h.762c.419 0 .777.15 1.076.448.298.298.447.657.447 1.076v7.62c0 .418-.149.777-.447 1.075a1.468 1.468 0 01-1.076.448H1.524zm4.571-3.81c.42 0 .778-.149 1.076-.447.299-.299.448-.657.448-1.076 0-.42-.15-.778-.448-1.077a1.467 1.467 0 00-1.076-.447c-.419 0-.778.15-1.076.447a1.467 1.467 0 00-.448 1.077c0 .419.15.777.448 1.076.298.298.657.447 1.076.447zM3.81 5.333h4.57V3.81c0-.635-.221-1.175-.666-1.62a2.204 2.204 0 00-1.619-.666c-.635 0-1.174.222-1.619.666a2.204 2.204 0 00-.666 1.62v1.523z" />
     </svg>
   )
 }

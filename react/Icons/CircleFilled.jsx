@@ -1,14 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/circle-filled.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/circle-filled.svg` to regenerate;
 import React from 'react'
 
-import SvgCircleFilledTwake from './CircleFilled_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCircleFilled(props) {
-  if (isTwakeTheme()) return SvgCircleFilledTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <circle cx={8} cy={8} r={8} fillRule="evenodd" />
+      <path d="M8 0C3.576 0 0 3.576 0 8c0 4.424 3.576 8 8 8 4.424 0 8-3.576 8-8 0-4.424-3.576-8-8-8z" />
     </svg>
   )
 }
