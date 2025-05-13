@@ -2,17 +2,17 @@
 
 exports[`SquareAppIcon component should render an app correctly with the app name 1`] = `
 <div
-  class="makeStyles-tileWrapper-39"
+  class="makeStyles-tileWrapper-37"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-42"
+      class="MuiBadge-root-40"
     >
       <span
-        class="MuiBadge-root-42 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-37"
+        class="MuiBadge-root-40 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -20,29 +20,33 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-43 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-49"
+          class="MuiBadge-badge-41 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-47"
         />
       </span>
       <span
-        class="MuiBadge-badge-43 makeStyles-qualifier-41 MuiBadge-anchorOriginBottomRightRectangular-51 MuiBadge-invisible-64"
+        class="MuiBadge-badge-41 makeStyles-qualifier-39 MuiBadge-anchorOriginBottomRightRectangular-49 MuiBadge-invisible-62"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-33 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-32 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -51,17 +55,17 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
 
 exports[`SquareAppIcon component should render an app correctly with the given name 1`] = `
 <div
-  class="makeStyles-tileWrapper-7"
+  class="makeStyles-tileWrapper-6"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-10"
+      class="MuiBadge-root-9"
     >
       <span
-        class="MuiBadge-root-10 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-5"
+        class="MuiBadge-root-9 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -69,24 +73,28 @@ exports[`SquareAppIcon component should render an app correctly with the given n
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-11 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-17"
+          class="MuiBadge-badge-10 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-16"
         />
       </span>
       <span
-        class="MuiBadge-badge-11 makeStyles-qualifier-9 MuiBadge-anchorOriginBottomRightRectangular-19 MuiBadge-invisible-32"
+        class="MuiBadge-badge-10 makeStyles-qualifier-8 MuiBadge-anchorOriginBottomRightRectangular-18 MuiBadge-invisible-31"
       />
     </span>
   </div>
@@ -100,17 +108,17 @@ exports[`SquareAppIcon component should render an app correctly with the given n
 
 exports[`SquareAppIcon component should render an app with the app slug if no name prop and app is a string 1`] = `
 <div
-  class="makeStyles-tileWrapper-71"
+  class="makeStyles-tileWrapper-68"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-74"
+      class="MuiBadge-root-71"
     >
       <span
-        class="MuiBadge-root-74 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-69"
+        class="MuiBadge-root-71 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -118,29 +126,33 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-75 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-81"
+          class="MuiBadge-badge-72 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-78"
         />
       </span>
       <span
-        class="MuiBadge-badge-75 makeStyles-qualifier-73 MuiBadge-anchorOriginBottomRightRectangular-83 MuiBadge-invisible-96"
+        class="MuiBadge-badge-72 makeStyles-qualifier-70 MuiBadge-anchorOriginBottomRightRectangular-80 MuiBadge-invisible-93"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-65 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-63 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     testslug
   </h6>
@@ -149,17 +161,17 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
 
 exports[`SquareAppIcon component should render correctly an app in add state 1`] = `
 <div
-  class="makeStyles-tileWrapper-199"
+  class="makeStyles-tileWrapper-192"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-202"
+      class="MuiBadge-root-195"
     >
       <span
-        class="MuiBadge-root-202 styles__SquareAppIcon-wrapper___2SEuM makeStyles-squareAppIconGhost-195"
+        class="MuiBadge-root-195 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -171,49 +183,42 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
             class="styles__icon___23x3R"
             height="16"
             style="fill: var(--primaryColor);"
-            viewBox="0 0 16 16"
+            viewBox="0 0 14 14"
             width="16"
           >
-            <defs>
-              <path
-                d="M7 0h2v7h7v2H9v7H7V9H0V7h7z"
-                id="plus_svg__a"
-              />
-            </defs>
-            <use
-              fill-rule="evenodd"
-              xlink:href="#plus_svg__a"
+            <path
+              d="M6 8H1a.968.968 0 01-.713-.287A.968.968 0 010 7c0-.283.096-.52.287-.713A.968.968 0 011 6h5V1c0-.283.096-.52.287-.713A.968.968 0 017 0c.283 0 .52.096.713.287A.975.975 0 018 1v5h5c.283 0 .52.096.713.287.191.192.287.43.287.713s-.096.52-.287.713A.968.968 0 0113 8H8v5c0 .283-.096.52-.287.713A.967.967 0 017 14a.967.967 0 01-.713-.287A.968.968 0 016 13V8z"
             />
           </svg>
         </div>
         <span
-          class="MuiBadge-badge-203 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-209"
+          class="MuiBadge-badge-196 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-202"
         />
       </span>
       <span
-        class="MuiBadge-badge-203 makeStyles-qualifier-201 MuiBadge-anchorOriginBottomRightRectangular-211 MuiBadge-invisible-224"
+        class="MuiBadge-badge-196 makeStyles-qualifier-194 MuiBadge-anchorOriginBottomRightRectangular-204 MuiBadge-invisible-217"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-193 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-187 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   />
 </div>
 `;
 
 exports[`SquareAppIcon component should render correctly an app in error state 1`] = `
 <div
-  class="makeStyles-tileWrapper-167"
+  class="makeStyles-tileWrapper-161"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-170"
+      class="MuiBadge-root-164"
     >
       <span
-        class="MuiBadge-root-170 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-165"
+        class="MuiBadge-root-164 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -221,41 +226,44 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-171 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-177 MuiBadge-colorError-174"
+          class="MuiBadge-badge-165 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-171 MuiBadge-colorError-168"
         >
           <svg
-            class="makeStyles-errorIcon-166 styles__icon___23x3R"
+            class="makeStyles-errorIcon-160 styles__icon___23x3R"
             height="16"
             viewBox="0 0 16 16"
             width="16"
           >
             <path
-              d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM8 4a1 1 0 00-.993.883L7 5v3a1 1 0 001.993.117L9 8V5a1 1 0 00-1-1z"
-              fill-rule="evenodd"
+              d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm.8 12H7.2v-1.6h1.6V12zm0-3.2H7.2V4h1.6v4.8z"
             />
           </svg>
         </span>
       </span>
       <span
-        class="MuiBadge-badge-171 makeStyles-qualifier-169 MuiBadge-anchorOriginBottomRightRectangular-179 MuiBadge-invisible-192"
+        class="MuiBadge-badge-165 makeStyles-qualifier-163 MuiBadge-anchorOriginBottomRightRectangular-173 MuiBadge-invisible-186"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-161 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-156 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -264,17 +272,17 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
 
 exports[`SquareAppIcon component should render correctly an app in ghost state 1`] = `
 <div
-  class="makeStyles-tileWrapper-135"
+  class="makeStyles-tileWrapper-130"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-138"
+      class="MuiBadge-root-133"
     >
       <span
-        class="MuiBadge-root-138 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ makeStyles-squareAppIconGhost-131"
+        class="MuiBadge-root-133 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper--light___2iR5Y makeStyles-squareAppIconGhost-127"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -282,29 +290,33 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-139 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-145"
+          class="MuiBadge-badge-134 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-140"
         />
       </span>
       <span
-        class="MuiBadge-badge-139 makeStyles-qualifier-137 MuiBadge-anchorOriginBottomRightRectangular-147 MuiBadge-invisible-160"
+        class="MuiBadge-badge-134 makeStyles-qualifier-132 MuiBadge-anchorOriginBottomRightRectangular-142 MuiBadge-invisible-155"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-129 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-125 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -313,17 +325,17 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
 
 exports[`SquareAppIcon component should render correctly an app in maintenance state 1`] = `
 <div
-  class="makeStyles-tileWrapper-103"
+  class="makeStyles-tileWrapper-99"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-106"
+      class="MuiBadge-root-102"
     >
       <span
-        class="MuiBadge-root-106 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n makeStyles-shadow-101"
+        class="MuiBadge-root-102 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -331,29 +343,33 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
           <div
             class="styles__onEnd___1O6Q7"
           />
-          <svg
-            class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-            height="100%"
-            style="fill: var(--coolGrey);"
-            viewBox="0 0 16 16"
-            width="100%"
+          <div
+            class="u-w-2 u-h-2"
           >
-            <path
-              d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-            />
-          </svg>
+            <svg
+              class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+              height="100%"
+              style="fill: var(--coolGrey);"
+              viewBox="0 0 15 16"
+              width="100%"
+            >
+              <path
+                d="M14.4 4L7.2 0 0 4v8l7.2 4 7.2-4V4zM7.2 1.832l4.728 2.624L9.52 5.792a3.213 3.213 0 00-4.64 0L2.472 4.456 7.2 1.832zm-.8 11.896l-4.8-2.664V5.808L4.104 7.2A3.193 3.193 0 006.4 11.096v2.632zM5.6 8c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6-.88 0-1.6-.72-1.6-1.6zM8 13.728v-2.624a3.193 3.193 0 002.4-3.096c0-.28-.032-.552-.104-.808L12.8 5.808v5.256L8 13.728z"
+              />
+            </svg>
+          </div>
         </div>
         <span
-          class="MuiBadge-badge-107 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-113"
+          class="MuiBadge-badge-103 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-109"
         />
       </span>
       <span
-        class="MuiBadge-badge-107 makeStyles-qualifier-105 MuiBadge-anchorOriginBottomRightRectangular-115 MuiBadge-invisible-128"
+        class="MuiBadge-badge-103 makeStyles-qualifier-101 MuiBadge-anchorOriginBottomRightRectangular-111 MuiBadge-invisible-124"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-97 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-94 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -362,30 +378,29 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
 
 exports[`SquareAppIcon component should render correctly an app in shortcut state 1`] = `
 <div
-  class="makeStyles-tileWrapper-231"
+  class="makeStyles-tileWrapper-223"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-234"
+      class="MuiBadge-root-226"
     >
       <span
-        class="MuiBadge-root-234 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-229"
-        style="background-color: rgb(61, 166, 126);"
+        class="MuiBadge-root-226 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <h2
-          class="MuiTypography-root-257 makeStyles-letter-228 MuiTypography-h2-263 MuiTypography-colorTextPrimary-282 MuiTypography-alignCenter-273"
+          class="MuiTypography-root-249 makeStyles-letter-221 MuiTypography-h2-255 MuiTypography-colorTextPrimary-274 MuiTypography-alignCenter-265"
         >
           S
         </h2>
         <span
-          class="MuiBadge-badge-235 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-241"
+          class="MuiBadge-badge-227 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-233"
         />
       </span>
       <span
-        class="MuiBadge-badge-235 makeStyles-qualifier-233 MuiBadge-anchorOriginBottomRightRectangular-243"
+        class="MuiBadge-badge-227 makeStyles-qualifier-225 MuiBadge-anchorOriginBottomRightRectangular-235"
       >
         <svg
           class="styles__icon___23x3R"
@@ -394,15 +409,14 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
           width="10"
         >
           <path
-            d="M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z"
-            fill-rule="evenodd"
+            d="M14.222 14.222H1.778V1.778H8V0H1.778C.79 0 0 .8 0 1.778v12.444C0 15.2.791 16 1.778 16h12.444C15.2 16 16 15.2 16 14.222V8h-1.778v6.222zM9.778 0v1.778h3.19l-8.737 8.738 1.253 1.253 8.738-8.738v3.191H16V0H9.778z"
           />
         </svg>
       </span>
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-225 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-218 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     shortcut
   </h6>
@@ -411,17 +425,17 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
 
 exports[`SquareAppIcon component should render correctly an app with custom content 1`] = `
 <div
-  class="makeStyles-tileWrapper-325"
+  class="makeStyles-tileWrapper-315"
   data-testid="square-app-icon"
 >
   <div
-    class="CozyTheme--light-normal u-dc"
+    class="TwakeTheme--light-normal u-dc"
   >
     <span
-      class="MuiBadge-root-328"
+      class="MuiBadge-root-318"
     >
       <span
-        class="MuiBadge-root-328 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-323"
+        class="MuiBadge-root-318 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
           class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
@@ -443,16 +457,16 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
           </svg>
         </div>
         <span
-          class="MuiBadge-badge-329 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-335"
+          class="MuiBadge-badge-319 badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular-325"
         />
       </span>
       <span
-        class="MuiBadge-badge-329 makeStyles-qualifier-327 MuiBadge-anchorOriginBottomRightRectangular-337 MuiBadge-invisible-350"
+        class="MuiBadge-badge-319 makeStyles-qualifier-317 MuiBadge-anchorOriginBottomRightRectangular-327 MuiBadge-invisible-340"
       />
     </span>
   </div>
   <h6
-    class="MuiTypography-root makeStyles-name-319 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-310 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     custom icon
   </h6>
