@@ -20,7 +20,6 @@ import Spinner from '../Spinner'
 import Typography from '../Typography'
 import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { nameToColor } from '../legacy/Avatar/helpers'
-import { useBreakpoints } from '../providers/Breakpoints'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { alpha, makeStyles } from '../styles'
 
@@ -119,7 +118,6 @@ export const SquareAppIcon = ({
   ...appIconProps
 }) => {
   const { variant: themeVariant, type } = useCozyTheme()
-  const { isMobile } = useBreakpoints()
   const classes = useStyles()
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
@@ -245,7 +243,7 @@ export const SquareAppIcon = ({
                 ) : IconContent ? (
                   IconContent
                 ) : isTwakeTheme() ? (
-                  <div className="u-w-1-half-s u-h-1-half-s u-w-2 u-h-2">
+                  <div className="u-w-2 u-h-2">
                     <AppIcon {...appIconProps} />
                   </div>
                 ) : (
@@ -265,7 +263,7 @@ export const SquareAppIcon = ({
             { [classes.nameInverted]: themeVariant === 'inverted' },
             'u-spacellipsis'
           )}
-          variant={isTwakeTheme() ? (isMobile ? 'overline' : 'h6') : 'h6'}
+          variant="h6"
           align="center"
         >
           {appName}
