@@ -8,9 +8,7 @@ import {
   getFlagshipCssVar
 } from '../helpers'
 
-const SWITCH_BAR_WIDTH = 25
-
-export const makeLightNormalCozyOverrides = theme => ({
+export const makeLightNormalOverrides = theme => ({
   MuiSelect: {
     iconOutlined: {
       top: 'auto',
@@ -159,9 +157,10 @@ export const makeLightNormalCozyOverrides = theme => ({
   },
   MuiButton: {
     root: {
-      borderRadius: 2,
+      borderRadius: 100,
+
       lineHeight: 'normal',
-      padding: '0 1rem',
+      padding: '10px 24px',
       '&.customSize': {
         '&-default': {
           height: '2.5rem'
@@ -171,28 +170,30 @@ export const makeLightNormalCozyOverrides = theme => ({
         }
       },
       '&.ghost': {
-        borderStyle: 'dashed !important', // important needed to override disable state
+        border: 0,
+        // borderStyle: 'dashed !important', // important needed to override disable state
         '&:hover': {
-          borderStyle: 'dashed !important' // important needed to override disable state
+          border: 0
+          // borderStyle: 'dashed !important' // important needed to override disable state
         }
       }
     },
     sizeSmall: {
-      padding: '0 0.75rem',
+      padding: '10px 16px',
       '&.customSize': {
         '&-default': {
-          height: '2rem'
+          height: '2.25rem'
         },
         '&-auto': {
-          minHeight: '2rem'
+          minHeight: '2.25rem'
         }
       },
       '&$text': {
-        padding: '8px 6px'
+        padding: '8px 16px'
       }
     },
     sizeLarge: {
-      padding: '0 1.25rem',
+      padding: '14px 32px',
       '&.customSize': {
         '&-default': {
           height: '3rem'
@@ -207,7 +208,7 @@ export const makeLightNormalCozyOverrides = theme => ({
     },
     text: {
       minWidth: 'auto',
-      padding: '11px 8px',
+      padding: '10px 8px',
       '&:not($disabled)': {
         '&.customColor': {
           '&-success': makeTextButtonStyle(theme, 'success'),
@@ -220,39 +221,30 @@ export const makeLightNormalCozyOverrides = theme => ({
     outlined: {
       '&:not($disabled)': {
         '&.ghost': {
-          backgroundColor: alpha(
-            theme.palette.primary.main,
-            theme.palette.action.ghostOpacity
-          ),
+          backgroundColor: theme.palette.background.default,
           '&:hover': {
-            backgroundColor: alpha(
-              theme.palette.primary.main,
-              theme.palette.action.hoverGhostOpacity
-            ),
+            backgroundColor: darken(theme.palette.background.default, 0.05),
             '@media (hover: none)': {
-              backgroundColor: alpha(
-                theme.palette.primary.main,
-                theme.palette.action.ghostOpacity
-              )
+              backgroundColor: darken(theme.palette.background.default, 0.05)
             }
           }
         },
         '&.customColor': {
           '&-primary': {
-            color: theme.palette.text.primary,
-            borderColor: theme.palette.border.main,
+            color: theme.palette.primary.main,
+            borderColor: theme.palette.primary.main,
             '&:hover': {
-              backgroundColor: theme.palette.action.hover,
+              backgroundColor: alpha(
+                theme.palette.primary.main,
+                theme.palette.action.hoverOpacity
+              ),
               '@media (hover: none)': {
                 backgroundColor: 'transparent'
               }
             },
             '&.ghost': {
-              color: theme.palette.primary.main,
-              borderColor: alpha(
-                theme.palette.primary.main,
-                theme.palette.border.ghostOpacity
-              )
+              color: theme.palette.text.primary,
+              borderColor: theme.palette.background.default
             }
           },
           '&-success': makeSecondaryButtonStyle(theme, 'success'),
@@ -717,6 +709,11 @@ export const makeLightNormalCozyOverrides = theme => ({
     }
   },
   MuiAvatarGroup: {
+    root: {
+      '& > div:last-child': {
+        boxShadow: `inset 0px 0px 0px 1px ${theme.palette.border.main}`
+      }
+    },
     avatar: {
       border: `2px solid ${theme.palette.background.paper}`
     }
@@ -730,17 +727,17 @@ export const makeLightNormalCozyOverrides = theme => ({
           height: 16,
           fontSize: 8,
           '& svg': {
-            width: 8,
-            height: 8
+            width: 10,
+            height: 10
           }
         },
         '&-s': {
           width: 24,
           height: 24,
-          fontSize: 12,
+          fontSize: 11,
           '& svg': {
-            width: 12,
-            height: 12
+            width: 16,
+            height: 16
           }
         },
         '&-m': {
@@ -748,8 +745,8 @@ export const makeLightNormalCozyOverrides = theme => ({
           height: 32,
           fontSize: 16,
           '& svg': {
-            width: 16,
-            height: 16
+            width: 20,
+            height: 20
           }
         },
         '&-l': {
@@ -757,8 +754,8 @@ export const makeLightNormalCozyOverrides = theme => ({
           height: 48,
           fontSize: 24,
           '& svg': {
-            width: 24,
-            height: 24
+            width: 28,
+            height: 28
           }
         },
         '&-xl': {
@@ -766,8 +763,8 @@ export const makeLightNormalCozyOverrides = theme => ({
           height: 64,
           fontSize: 32,
           '& svg': {
-            width: 32,
-            height: 32
+            width: 36,
+            height: 36
           }
         }
       },
@@ -785,9 +782,16 @@ export const makeLightNormalCozyOverrides = theme => ({
       '&.innerBorder': {
         boxShadow: `inset 0px 0px 0px 1px ${theme.palette.border.main}`
       }
+    },
+    colorDefault: {
+      backgroundColor: theme.palette.background.paper,
+      color: theme.palette.text.secondary
     }
   },
   MuiCheckbox: {
+    root: {
+      padding: 8
+    },
     colorSecondary: {
       '&$checked': {
         color: theme.palette.error.main
@@ -795,30 +799,59 @@ export const makeLightNormalCozyOverrides = theme => ({
     }
   },
   MuiSwitch: {
+    root: {
+      width: 50,
+      height: 40,
+      padding: '6px 1px'
+    },
     checked: {
       '& + $track$track': {
         opacity: 1
       }
     },
     switchBase: {
-      top: 1,
+      padding: 5,
+      top: 5,
+      color: theme.palette.text.icon,
+      '& .cozySwitchThumb': {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 20,
+        height: 20,
+        borderRadius: '50%',
+        boxShadow: theme.shadows[1],
+        backgroundColor: theme.palette.common.white
+      },
       '&$checked': {
         transform: 'translateX(15px)'
       }
     },
     thumb: {
-      width: 16,
-      height: 16,
+      width: 20,
+      height: 20,
       backgroundColor: theme.palette.common.white
     },
     track: {
-      width: SWITCH_BAR_WIDTH,
-      height: 12,
+      width: 44,
+      height: '100%',
+      borderRadius: 100,
       opacity: 1,
       backgroundColor: theme.palette.text.disabled
     },
+    colorPrimary: {
+      '&$disabled + $track': {
+        opacity: 1,
+        backgroundColor: theme.palette.action.disabledBackground
+      }
+    },
     colorSecondary: {
       '&$checked': {
+        color: theme.palette.success.main,
+        '&$disabled + $track': {
+          opacity: 1,
+          backgroundColor: theme.palette.action.disabledBackground
+        },
         '& + $track': {
           backgroundColor: theme.palette.success.main
         }
@@ -826,32 +859,47 @@ export const makeLightNormalCozyOverrides = theme => ({
     },
     disabled: {
       '&$checked + $track': {
-        backgroundColor: `${theme.palette.grey[200]} !important`
+        backgroundColor: theme.palette.action.disabledBackground
+      },
+      '& .cozySwitchThumb': {
+        backgroundColor: theme.palette.background.default
       },
       '& $thumb': {
         backgroundColor: theme.palette.common.white
       }
     }
   },
+  MuiLinearProgress: {
+    root: {
+      height: 3
+    },
+    colorPrimary: {
+      backgroundColor: theme.palette.divider
+    }
+  },
   MuiTooltip: {
     tooltip: {
-      borderRadius: '8px',
+      backgroundColor: alpha(theme.palette.grey[800], 0.9),
       fontSize: '1rem',
       lineHeight: '1.3',
-      padding: '16px'
+      borderRadius: '4px',
+      padding: '8px 12px'
     }
   },
   MuiIconButton: {
     root: {
       color: theme.palette.text.secondary,
       '&.small': {
-        padding: 3
+        padding: 8
       },
       '&.medium': {
         padding: 12
       },
       '&.large': {
         padding: 16
+      },
+      '&.xlarge': {
+        padding: 20
       },
       '&.dialogIconButton': {
         backgroundColor: theme.palette.background.paper,
@@ -1038,6 +1086,9 @@ export const makeLightNormalCozyOverrides = theme => ({
   },
   MuiFab: {
     root: {
+      borderRadius: 28,
+      width: 96,
+      height: 96,
       color: theme.palette.text.primary,
       backgroundColor: theme.palette.background.paper,
       '&:hover': {
@@ -1047,23 +1098,41 @@ export const makeLightNormalCozyOverrides = theme => ({
         backgroundColor: theme.palette.background.paper
       }
     },
+    primary: {
+      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.light,
+      '&:hover': {
+        backgroundColor: darken(theme.palette.primary.light, 0.05),
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.primary.light
+        }
+      }
+    },
     extended: {
-      borderRadius: 56 / 2,
+      borderRadius: 16,
       height: 56,
       minWidth: 56,
       padding: '0 20px',
       '&$sizeSmall': {
-        borderRadius: 40 / 2,
-        height: 40,
-        minWidth: 40,
+        borderRadius: 16,
+        height: 42,
+        minWidth: 42,
         padding: '0 12px'
       },
       '&$sizeMedium': {
-        borderRadius: 48 / 2,
+        borderRadius: 16,
         height: 48,
         minWidth: 48,
         padding: '0 16px'
       }
+    },
+    sizeSmall: {
+      borderRadius: 12
+    },
+    sizeMedium: {
+      borderRadius: 16,
+      width: 56,
+      height: 56
     }
   },
   MuiMobileStepper: {
