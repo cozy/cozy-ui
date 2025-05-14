@@ -1,3 +1,10 @@
+## [123.1.1](https://github.com/cozy/cozy-ui/compare/v123.1.0...v123.1.1) (2025-05-14)
+
+
+### Bug Fixes
+
+* Missed some props on SVG Icons (Cube and Spinner) ([c877409](https://github.com/cozy/cozy-ui/commit/c877409))
+
 # [123.1.0](https://github.com/cozy/cozy-ui/compare/v123.0.0...v123.1.0) (2025-05-14)
 
 
