@@ -1,3 +1,10 @@
+## [122.14.1](https://github.com/cozy/cozy-ui/compare/v122.14.0...v122.14.1) (2025-05-14)
+
+
+### Bug Fixes
+
+* Allow cozy-device-helper >= 2.0.0 ([958b2e0](https://github.com/cozy/cozy-ui/commit/958b2e0))
+
 # [122.14.0](https://github.com/cozy/cozy-ui/compare/v122.13.0...v122.14.0) (2025-05-13)
 
 
