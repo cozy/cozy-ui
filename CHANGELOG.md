@@ -1,3 +1,10 @@
+# [123.1.0](https://github.com/cozy/cozy-ui/compare/v123.0.0...v123.1.0) (2025-05-14)
+
+
+### Features
+
+* Merge Old cozy Theme and new Twake theme overrides ([f784646](https://github.com/cozy/cozy-ui/commit/f784646))
+
 # [123.0.0](https://github.com/cozy/cozy-ui/compare/v122.14.1...v123.0.0) (2025-05-14)
 
 
