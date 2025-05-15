@@ -1,3 +1,10 @@
+# [123.2.0](https://github.com/cozy/cozy-ui/compare/v123.1.1...v123.2.0) (2025-05-15)
+
+
+### Features
+
+* update new UI illustration ([420fd31](https://github.com/cozy/cozy-ui/commit/420fd31))
+
 ## [123.1.1](https://github.com/cozy/cozy-ui/compare/v123.1.0...v123.1.1) (2025-05-14)
 
 
