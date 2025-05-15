@@ -1,23 +1,18 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/fallback.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/fallback.svg` to regenerate;
 import React from 'react'
 
-import SvgFallbackTwake from './Fallback_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFallback(props) {
-  if (isTwakeTheme()) return SvgFallbackTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#d6d8da"
-          d="M8 0h25.086a1 1 0 01.707.293l9.914 9.914a1 1 0 01.293.707V45a3 3 0 01-3 3H8a3 3 0 01-3-3V3a3 3 0 013-3z"
-        />
-        <path
-          fill="#5d6165"
-          d="M32 0v12h12v-1.086a1 1 0 00-.293-.707L33.793.293A1 1 0 0033.086 0H32z"
-        />
-      </g>
+    <svg viewBox="0 0 15 16" {...props}>
+      <path
+        d="M3.2.5h5.792L13.9 5.407V12.8a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V3.2A2.7 2.7 0 013.2.5z"
+        fill="#E8EDF3"
+        stroke="#4F5B69"
+      />
+      <path
+        d="M14.4 5.4L9 0v2.793C9 4.233 10.128 5.4 11.52 5.4h2.88z"
+        fill="#4F5B69"
+      />
     </svg>
   )
 }

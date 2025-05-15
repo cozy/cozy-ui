@@ -127,7 +127,7 @@ const iconPositions = ['startIcon', 'endIcon']
             <Button
               className="u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
-              size={isTwakeTheme() ? "small" : "medium"}
+              size="small"
               label={<Icon icon={StopIcon} size={12} />}
               variant={variant}
             />
@@ -135,7 +135,7 @@ const iconPositions = ['startIcon', 'endIcon']
               className="u-ml-1 u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
               label={<Icon icon={StopIcon} size={12} />}
-              size={isTwakeTheme() ? "small" : "medium"}
+              size="small"
               variant={variant}
               disabled
             />

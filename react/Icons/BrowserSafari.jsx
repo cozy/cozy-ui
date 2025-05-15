@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/browser-safari.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/browser-safari.svg` to regenerate;
 import React from 'react'
 
 function SvgBrowserSafari(props) {

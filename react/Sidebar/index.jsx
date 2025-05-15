@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { useCozyTheme } from '../providers/CozyTheme'
 
@@ -28,8 +27,7 @@ const Sidebar = ({ children, className, ...restProps }) => {
       id="sidebar"
       className={cx(
         styles['o-sidebar'],
-        { [styles['o-sidebar--border']]: !isTwakeTheme() },
-        { [styles['o-sidebar--large']]: isTwakeTheme() },
+        [styles['o-sidebar--large']],
         className
       )}
       {...restProps}

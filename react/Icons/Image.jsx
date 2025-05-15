@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/image.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/image.svg` to regenerate;
 import React from 'react'
 
-import SvgImageTwake from './Image_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgImage(props) {
-  if (isTwakeTheme()) return SvgImageTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M1 1c-.552 0-1 .45-1 1.007v11.986C0 14.55.445 15 1 15h14c.552 0 1-.45 1-1.007V2.007C16 1.45 15.555 1 15 1H1zm4 7l2 2 4-4 3 3v2.99A1.01 1.01 0 0112.998 13H3.002A.999.999 0 012 12v-1l3-3zm.5-2a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-      />
+      <path d="M14.222 1.778v12.444H1.778V1.778h12.444zm0-1.778H1.778C.8 0 0 .8 0 1.778v12.444C0 15.2.8 16 1.778 16h12.444C15.2 16 16 15.2 16 14.222V1.778C16 .8 15.2 0 14.222 0zm-4.32 7.876l-2.666 3.44-1.903-2.303-2.666 3.431h10.666l-3.43-4.568z" />
     </svg>
   )
 }

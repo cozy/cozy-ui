@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/left.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/left.svg` to regenerate;
 import React from 'react'
 
-import SvgLeftTwake from './Left_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLeft(props) {
-  if (isTwakeTheme()) return SvgLeftTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z"
-      />
+      <path d="M6.8 8l3.9 3.9a.948.948 0 01.275.7.948.948 0 01-.275.7.948.948 0 01-.7.275.948.948 0 01-.7-.275L4.7 8.7a.877.877 0 01-.213-.325A1.107 1.107 0 014.425 8c0-.134.02-.259.062-.375A.877.877 0 014.7 7.3l4.6-4.6a.948.948 0 01.7-.275c.283 0 .517.091.7.275a.948.948 0 01.275.7.948.948 0 01-.275.7L6.8 8z" />
     </svg>
   )
 }

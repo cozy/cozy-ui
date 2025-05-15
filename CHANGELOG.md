@@ -1,3 +1,41 @@
+## [123.1.1](https://github.com/cozy/cozy-ui/compare/v123.1.0...v123.1.1) (2025-05-14)
+
+
+### Bug Fixes
+
+* Missed some props on SVG Icons (Cube and Spinner) ([c877409](https://github.com/cozy/cozy-ui/commit/c877409))
+
+# [123.1.0](https://github.com/cozy/cozy-ui/compare/v123.0.0...v123.1.0) (2025-05-14)
+
+
+### Features
+
+* Merge Old cozy Theme and new Twake theme overrides ([f784646](https://github.com/cozy/cozy-ui/commit/f784646))
+
+# [123.0.0](https://github.com/cozy/cozy-ui/compare/v122.14.1...v123.0.0) (2025-05-14)
+
+
+### Features
+
+* Change default font from Lato to Inter ([a6bf542](https://github.com/cozy/cozy-ui/commit/a6bf542))
+* Remove `isTwakeTheme` function ([1f69c9b](https://github.com/cozy/cozy-ui/commit/1f69c9b))
+* Remove `isTwakeTheme` in components ([da7fa69](https://github.com/cozy/cozy-ui/commit/da7fa69))
+* Replace icons and sprite functions ([7d763bb](https://github.com/cozy/cozy-ui/commit/7d763bb))
+* **Theme:** Remove old Cozy theme ([4b0a8c0](https://github.com/cozy/cozy-ui/commit/4b0a8c0))
+
+
+### BREAKING CHANGES
+
+* `isTwakeTheme` has been removed. You no longer need to import it. You can safely remove it and keep the truthy result. Besides, you probably have to update your test snapshot, and maybe test itselves too.
+* **Theme:** `useCozyTheme` doesn't return `name` anymore
+
+## [122.14.1](https://github.com/cozy/cozy-ui/compare/v122.14.0...v122.14.1) (2025-05-14)
+
+
+### Bug Fixes
+
+* Allow cozy-device-helper >= 2.0.0 ([958b2e0](https://github.com/cozy/cozy-ui/commit/958b2e0))
+
 # [122.14.0](https://github.com/cozy/cozy-ui/compare/v122.13.0...v122.14.0) (2025-05-13)
 
 

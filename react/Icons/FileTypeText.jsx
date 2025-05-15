@@ -1,23 +1,18 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-text.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-text.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeTextTwake from './FileTypeText_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeText(props) {
-  if (isTwakeTheme()) return SvgFileTypeTextTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#B2D3FF"
-          d="M3 2.002C3 .896 3.89 0 4.997 0H22l7 7v22.996A2 2 0 0127.003 32H4.997A1.995 1.995 0 013 29.998V2.002z"
-        />
-        <path
-          fill="#197BFF"
-          d="M21.5 0c-.276 0-.5.23-.5.5V8h7.5c.276 0 .5-.232.5-.5V7l-7-7h-.5zM9 11h14v2H9v-2zm0 4h12v2H9v-2zm0 4h14v2H9v-2zm0 4h10v2H9v-2z"
-        />
-      </g>
+    <svg viewBox="0 0 15 16" fill="none" {...props}>
+      <path
+        d="M3.2.5h5.792L13.9 5.407V12.8a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V3.2A2.7 2.7 0 013.2.5z"
+        fill="#F2F8FF"
+        stroke="#006BD8"
+      />
+      <path
+        d="M14.4 5.4L9 0v2.793C9 4.233 10.128 5.4 11.52 5.4h2.88zm-8.868 3H4.6l.974 4.4h.955l.632-2.562.608 2.562h.898L9.8 8.4H8.226v.733h.536l-.544 2.104L7.656 8.4h-.9l-.699 2.877L5.532 8.4z"
+        fill="#006BD8"
+      />
     </svg>
   )
 }

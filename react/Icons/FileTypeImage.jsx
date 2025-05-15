@@ -1,27 +1,23 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-image.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-image.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeImageTwake from './FileTypeImage_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeImage(props) {
-  if (isTwakeTheme()) return SvgFileTypeImageTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
-      <g fill="none" fillRule="evenodd" transform="translate(0 3)">
-        <rect width={32} height={26} fill="#8EE39B" rx={2} />
-        <path
-          fill="#1EC737"
-          d="M0 20l6.29-6.29a.999.999 0 011.416-.004L11 17l8.294-8.294a1.003 1.003 0 011.412 0L32 20v4.002C32 25.106 31.11 26 29.998 26H2.002A2.002 2.002 0 010 24.002V20z"
-        />
-        <circle cx={8} cy={7} r={3} fill="#FFF" />
-        <path
-          stroke="#8EE39B"
-          d="M11 16l-5.5 5.5L11 16z"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
+    <svg viewBox="0 0 15 17" fill="none" {...props}>
+      <path
+        d="M3.52 1.3h5.792l4.908 4.907V13.6a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V4a2.7 2.7 0 012.7-2.7z"
+        fill="#FBFDF5"
+        stroke="#A8D306"
+      />
+      <path
+        d="M14.72 6.2L9.32.8v2.793c0 1.44 1.128 2.607 2.52 2.607h2.88z"
+        fill="#A8D306"
+      />
+      <circle cx={10.632} cy={7.818} r={0.938} fill="#A8D306" />
+      <path
+        d="M3.11 13.385a.23.23 0 00.18.37h8.435a.23.23 0 00.18-.37l-2.64-3.38-2.343 3-1.758-2.25-2.054 2.63z"
+        fill="#A8D306"
+      />
     </svg>
   )
 }

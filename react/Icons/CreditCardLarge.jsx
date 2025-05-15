@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/credit-card-large.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/credit-card-large.svg` to regenerate;
 import React from 'react'
 
-import SvgCreditCardLargeTwake from './CreditCardLarge_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCreditCardLarge(props) {
-  if (isTwakeTheme()) return SvgCreditCardLargeTwake(props)
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 5h28a2 2 0 012 2v18.23a2 2 0 01-2 2H2a2 2 0 01-2-2V7a2 2 0 012-2z"
-        fill="#B2D3FF"
-      />
-      <path fill="#197BFF" d="M0 9.042h32v6.063H0z" />
+    <svg viewBox="0 0 17 14" {...props}>
+      <path d="M14.92.816H2.12c-.888 0-1.592.712-1.592 1.6l-.008 9.6c0 .888.712 1.6 1.6 1.6h12.8c.888 0 1.6-.712 1.6-1.6v-9.6c0-.888-.712-1.6-1.6-1.6zm0 11.2H2.12v-4.8h12.8v4.8zm0-8H2.12v-1.6h12.8v1.6z" />
     </svg>
   )
 }

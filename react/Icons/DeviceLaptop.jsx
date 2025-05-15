@@ -1,24 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/device-laptop.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/device-laptop.svg` to regenerate;
 import React from 'react'
 
-import SvgDeviceLaptopTwake from './DeviceLaptop_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgDeviceLaptop(props) {
-  if (isTwakeTheme()) return SvgDeviceLaptopTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#32363F"
-          d="M2 25V5.995C2 4.893 2.9 4 3.991 4H28.01C29.109 4 30 4.902 30 5.995V25H2z"
-        />
-        <path fill="#5D6165" d="M4 6h24v16H4z" />
-        <path
-          fill="#95999D"
-          d="M19 24.5c0 .276-.233.5-.503.5h-5.994a.507.507 0 01-.503-.5c0-.276-.229-.5-.5-.5H.5c-.276 0-.5.215-.5.49V26c0 1.105.89 2 2.002 2h27.996A1.996 1.996 0 0032 26v-1.51c0-.27-.226-.49-.494-.49H19.494a.502.502 0 00-.494.5z"
-        />
-      </g>
+    <svg viewBox="0 0 17 12" {...props}>
+      <path d="M13.853 9.68c.734 0 1.334-.6 1.334-1.333V1.68c0-.733-.6-1.333-1.334-1.333H3.187c-.734 0-1.334.6-1.334 1.333v6.667c0 .733.6 1.333 1.334 1.333H.52v1.333h16V9.68h-2.667zm-10.666-8h10.666v6.667H3.187V1.68z" />
     </svg>
   )
 }

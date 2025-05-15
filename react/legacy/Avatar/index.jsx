@@ -8,14 +8,9 @@ import styles from './styles.styl'
 import { createSizeStyle } from '../../Circle'
 import Icon, { iconPropType } from '../../Icon'
 import PeopleIcon from '../../Icons/People'
-import { isTwakeTheme } from '../../helpers/isTwakeTheme'
 
 const createBgColorStyle = ({ text, textId }) =>
-  text
-    ? isTwakeTheme()
-      ? { background: `${nameToColor(textId || text)}` }
-      : { backgroundColor: `${nameToColor(textId || text)}` }
-    : {}
+  text ? { background: `${nameToColor(textId || text)}` } : {}
 
 export const Avatar = ({
   text,

@@ -1,17 +1,11 @@
 import { makeShadows } from './helpers'
 import { makePalette } from './makePalette'
-import { makeTwakeTypography } from './makeTwakeTypography'
 import { makeTypography } from './makeTypography'
 import { makeDarkInvertedOverrides } from './overrides/makeDarkInvertedOverrides'
 import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
 import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
 import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
-import { makeDarkInvertedTwakeOverrides } from './overrides/twake/makeDarkInvertedOverrides'
-import { makeDarkNormalTwakeOverrides } from './overrides/twake/makeDarkNormalOverrides'
-import { makeLightInvertedTwakeOverrides } from './overrides/twake/makeLightInvertedOverrides'
-import { makeLightNormalTwakeOverrides } from './overrides/twake/makeLightNormalOverrides'
 import isTesting from '../helpers/isTesting'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
 import { createTheme } from '../styles'
 import { createNodeWithThemeCssVars } from '../utils/color'
 
@@ -23,17 +17,6 @@ const makeOverridesByTheme = theme => ({
   dark: {
     normal: makeDarkNormalOverrides(theme),
     inverted: makeDarkInvertedOverrides(theme)
-  }
-})
-
-const makeTwakeOverridesByTheme = theme => ({
-  light: {
-    normal: makeLightNormalTwakeOverrides(theme),
-    inverted: makeLightInvertedTwakeOverrides(theme)
-  },
-  dark: {
-    normal: makeDarkNormalTwakeOverrides(theme),
-    inverted: makeDarkInvertedTwakeOverrides(theme)
   }
 })
 
@@ -61,25 +44,20 @@ const themesCommonConfig = {
 }
 
 export const makeTheme = (type, variant) => {
-  const uiThemeName = isTwakeTheme() ? 'Twake' : 'Cozy'
   // to hold the values of css variables, recoverable by getCssVariableValue()
   createNodeWithThemeCssVars(type, variant)
 
   const palette = makePalette(type, variant)
   const theme = createTheme({
     ...themesCommonConfig,
-    typography:
-      uiThemeName === 'Cozy' ? makeTypography(palette) : makeTwakeTypography(),
+    typography: makeTypography(),
     shadows: makeShadows(type, variant),
     type,
     variant,
     palette
   })
 
-  const overrides =
-    uiThemeName === 'Cozy'
-      ? makeOverridesByTheme(theme)[type][variant]
-      : makeTwakeOverridesByTheme(theme)[type][variant]
+  const overrides = makeOverridesByTheme(theme)[type][variant]
 
   return {
     ...theme,

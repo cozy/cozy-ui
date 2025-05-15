@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/illus/assistant.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/assistant.svg` to regenerate;
 import React from 'react'
 
 function SvgAssistant(props) {

@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/location.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/location-permissions.svg` to regenerate;
 import React from 'react'
 
-import SvgLocationPermissionsTwake from './LocationPermissions_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLocationPermissions(props) {
-  if (isTwakeTheme()) return SvgLocationPermissionsTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        d="M8 0c3.99 0 7 2.866 7 6.667 0 4.782-6.508 9.089-6.784 9.27a.398.398 0 01-.432 0C7.507 15.756 1 11.45 1 6.667 1 2.866 4.01 0 8 0zm0 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
-        fill="#5d6165"
-        fillRule="evenodd"
-      />
+      <path d="M1.93 16c-.524 0-.977-.19-1.358-.572A1.855 1.855 0 010 14.07V1.93C0 1.395.19.94.572.564A1.868 1.868 0 011.93 0h12.14c.535 0 .99.188 1.366.564.376.376.564.831.564 1.366v12.14c0 .524-.188.976-.564 1.358A1.847 1.847 0 0114.07 16H1.93zm0-1.93h12.14V1.93H1.93v12.14zM8.01 2.925c-1.073 0-2.02.376-2.842 1.13-.822.753-1.233 1.76-1.233 3.02 0 .96.376 1.924 1.127 2.893.75.97 1.53 1.818 2.335 2.546a.71.71 0 00.273.18c.1.034.21.051.329.051.12 0 .229-.016.327-.049a.704.704 0 00.275-.176 19.504 19.504 0 002.335-2.55c.751-.97 1.127-1.936 1.127-2.894 0-1.26-.408-2.268-1.222-3.021-.814-.754-1.758-1.13-2.83-1.13zM8.003 8.22c-.32 0-.585-.11-.796-.33a1.121 1.121 0 01-.316-.806 1.084 1.084 0 011.114-1.11 1.1 1.1 0 01.8.32c.218.214.328.478.328.791 0 .314-.109.582-.326.803a1.081 1.081 0 01-.804.332z" />
     </svg>
   )
 }

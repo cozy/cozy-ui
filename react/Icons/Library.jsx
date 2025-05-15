@@ -1,18 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/library.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/library.svg` to regenerate;
 import React from 'react'
 
-import SvgLibraryTwake from './Library_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLibrary(props) {
-  if (isTwakeTheme()) return SvgLibraryTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 1a1 1 0 012 0v10a1 1 0 11-2 0V1zM2 5a1 1 0 012 0v6a1 1 0 11-2 0V5zm7-5a1 1 0 00-1 1v10a1 1 0 102 0V1a1 1 0 00-1-1zm2.066 5.607a1 1 0 111.887-.664l1.992 5.66a1 1 0 01-1.886.664l-1.993-5.66zM1 13a1 1 0 100 2h14a1 1 0 100-2H1z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M14.546.682C13.738.427 12.85.318 12 .318c-1.418 0-2.945.291-4 1.091C6.945.61 5.418.32 4 .32c-1.418 0-2.945.29-4 1.09v10.655c0 .182.182.363.364.363.072 0 .109-.036.181-.036.982-.473 2.4-.8 3.455-.8 1.418 0 2.945.291 4 1.091.982-.618 2.764-1.09 4-1.09 1.2 0 2.436.217 3.454.763.073.036.11.036.182.036a.391.391 0 00.364-.364V1.41c-.436-.327-.91-.545-1.454-.727zm0 9.818c-.8-.254-1.673-.364-2.546-.364-1.236 0-3.018.473-4 1.091V2.864c.982-.618 2.764-1.091 4-1.091.873 0 1.745.109 2.546.364V10.5z" />
+      <path d="M12 4.682c.64 0 1.258.065 1.818.19V3.765A9.82 9.82 0 0012 3.59c-1.236 0-2.356.211-3.273.604v1.207c.822-.465 1.964-.72 3.273-.72zM8.727 6.13v1.207c.822-.466 1.964-.72 3.273-.72.64 0 1.258.065 1.818.189V5.7A9.82 9.82 0 0012 5.526c-1.236 0-2.356.218-3.273.603zM12 7.467c-1.236 0-2.356.211-3.273.604v1.207c.822-.465 1.964-.72 3.273-.72.64 0 1.258.066 1.818.19V7.641A9.235 9.235 0 0012 7.467z" />
     </svg>
   )
 }

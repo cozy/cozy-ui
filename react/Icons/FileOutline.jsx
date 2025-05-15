@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-outline.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-outline.svg` to regenerate;
 import React from 'react'
 
-import SvgFileOutlineTwake from './FileOutline_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileOutline(props) {
-  if (isTwakeTheme()) return SvgFileOutlineTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M8.6 0H2.2C1.32 0 .608.72.608 1.6L.6 14.4c0 .88.712 1.6 1.592 1.6H11.8c.88 0 1.6-.72 1.6-1.6V4.8L8.6 0zM2.2 14.4V1.6h5.6v4h4v8.8H2.2z" />
     </svg>
   )
 }

@@ -1,22 +1,17 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-note.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-note.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeNoteTwake from './FileTypeNote_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeNote(props) {
-  if (isTwakeTheme()) return SvgFileTypeNoteTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props}>
+    <svg viewBox="0 0 15 17" fill="none" {...props}>
       <path
-        d="M2 2a2 2 0 012-2h22a2 2 0 012 2v28a2 2 0 01-2 2H4a2 2 0 01-2-2z"
-        fill="#acf5f7"
-        fillRule="evenodd"
+        d="M3.52 1.3h5.792l4.908 4.907V13.6a2.7 2.7 0 01-2.7 2.7h-8a2.7 2.7 0 01-2.7-2.7V4a2.7 2.7 0 012.7-2.7z"
+        fill="#FDFAF5"
+        stroke="#FFB81E"
       />
       <path
-        d="M8 8h14v2H8zm0 4h8v2H8zm0 4h14v2H8zm0 4h10v2H8zM1.5 4h2A1.54 1.54 0 015 5.5 1.54 1.54 0 013.5 7h-2A1.54 1.54 0 010 5.5 1.54 1.54 0 011.5 4zm0 7h2A1.54 1.54 0 015 12.5 1.54 1.54 0 013.5 14h-2A1.54 1.54 0 010 12.5 1.54 1.54 0 011.5 11zm0 7h2A1.54 1.54 0 015 19.5 1.54 1.54 0 013.5 21h-2A1.54 1.54 0 010 19.5 1.54 1.54 0 011.5 18zm0 7h2A1.54 1.54 0 015 26.5 1.54 1.54 0 013.5 28h-2A1.54 1.54 0 010 26.5 1.54 1.54 0 011.5 25zm29.9-6.6l-2.8-2.8a2 2 0 012.8 2.8zm-.7.7L20.8 29l-2.5.9a1 1 0 01-1.3-.6.85.85 0 010-.7l.9-2.5 9.9-9.9z"
-        fill="#0dcbcf"
-        fillRule="evenodd"
+        d="M14.72 6.2L9.32.8v2.793c0 1.44 1.128 2.607 2.52 2.607h2.88zM4.127 14.183v-1.476L8.71 8.132a.78.78 0 01.23-.147.718.718 0 01.534 0 .61.61 0 01.226.156l.477.486c.07.064.12.14.152.226a.75.75 0 010 .525.65.65 0 01-.152.23l-4.574 4.575H4.127zm5.07-4.584l.485-.486-.486-.486-.486.486.486.486z"
+        fill="#FFB81E"
       />
     </svg>
   )

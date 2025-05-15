@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/refresh.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/refresh.svg` to regenerate;
 import React from 'react'
 
-import SvgRefreshTwake from './Refresh_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgRefresh(props) {
-  if (isTwakeTheme()) return SvgRefreshTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M8 0C3.589 0 0 3.589 0 8s3.589 8 8 8a8.039 8.039 0 007.229-4.571 1 1 0 10-1.806-.858A6.031 6.031 0 018 14c-3.309 0-6-2.691-6-6s2.691-6 6-6c1.482 0 2.866.571 3.938 1.507a.989.989 0 00-.706.353 1 1 0 00.128 1.408l3 2.5A1 1 0 0016 7V3a1 1 0 00-1-1 .987.987 0 00-.96.801C12.548 1.08 10.364 0 8 0z"
-      />
+      <path d="M13.64 2.35A7.958 7.958 0 007.99 0C3.57 0 0 3.58 0 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08a5.99 5.99 0 01-5.65 4c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L8.99 7h7V0l-2.35 2.35z" />
     </svg>
   )
 }

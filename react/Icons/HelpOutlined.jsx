@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/help-outlined.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/help-outlined.svg` to regenerate;
 import React from 'react'
 
-import SvgHelpOutlinedTwake from './HelpOutlined_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgHelpOutlined(props) {
-  if (isTwakeTheme()) return SvgHelpOutlinedTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M9 8.802C10.122 8.355 11 7.21 11 6c0-1.552-1.448-3-3-3S5 4.448 5 6h2c0-.448.552-1 1-1 .448 0 1 .552 1 1 0 .448-.552 1-1 1a1 1 0 00-1 1v2h2V8.802zM7 11v2h2v-2H7zM1 8a7 7 0 1014 0A7 7 0 001 8zM0 8a8 8 0 1016 0A8 8 0 000 8z"
-      />
+      <path d="M7.2 12.8h1.6v-1.6H7.2v1.6zM8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm0 14.4A6.408 6.408 0 011.6 8c0-3.528 2.872-6.4 6.4-6.4 3.528 0 6.4 2.872 6.4 6.4 0 3.528-2.872 6.4-6.4 6.4zM8 3.2a3.2 3.2 0 00-3.2 3.2h1.6c0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 1.6-2.4 1.4-2.4 4h1.6c0-1.8 2.4-2 2.4-4A3.2 3.2 0 008 3.2z" />
     </svg>
   )
 }

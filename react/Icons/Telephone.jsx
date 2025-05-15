@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/telephone.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/telephone.svg` to regenerate;
 import React from 'react'
 
-import SvgTelephoneTwake from './Telephone_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTelephone(props) {
-  if (isTwakeTheme()) return SvgTelephoneTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M5.88 4.655a1.68 1.68 0 00.001-2.377L4.097.492a1.685 1.685 0 00-2.38 0l-.98.979A2.521 2.521 0 00.42 4.646 39.038 39.038 0 0011.356 15.58c.999.662 2.328.53 3.175-.316l.979-.979a1.681 1.681 0 000-2.379l-1.785-1.784a1.679 1.679 0 00-2.379 0l-.594.593A40.017 40.017 0 015.285 5.25l.595-.595z"
-      />
+      <path d="M15.067 16c-1.852 0-3.682-.404-5.49-1.211-1.807-.807-3.451-1.952-4.933-3.433C3.163 9.874 2.02 8.23 1.211 6.422.404 4.615 0 2.785 0 .933 0 .667.089.444.267.267A.905.905 0 01.933 0h3.6c.208 0 .393.07.556.211.163.14.26.308.289.5l.578 3.111c.03.237.022.437-.023.6a.935.935 0 01-.244.422L3.533 7.022a10.75 10.75 0 001.056 1.59c.407.51.855 1.003 1.344 1.477.46.46.941.885 1.445 1.278.503.392 1.037.751 1.6 1.077l2.089-2.088c.133-.134.307-.234.522-.3a1.43 1.43 0 01.633-.056l3.067.622c.207.06.378.167.511.322.133.156.2.33.2.523v3.6a.904.904 0 01-.267.666.904.904 0 01-.666.267z" />
     </svg>
   )
 }

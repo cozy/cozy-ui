@@ -1,25 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/versioning.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/versioning.svg` to regenerate;
 import React from 'react'
 
-import SvgVersioningTwake from './Versioning_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgVersioning(props) {
-  if (isTwakeTheme()) return SvgVersioningTwake(props)
   return (
-    <svg viewBox="0 0 48 48" fill="none" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M42 0H6C2.692 0 0 2.692 0 6v36c0 3.308 2.692 6 6 6h36c3.308 0 6-2.692 6-6V6c0-3.308-2.692-6-6-6z"
-        fill="#D6D8DA"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 6c9.941 0 18 8.06 18 18 0 9.941-8.059 18-18 18A18.003 18.003 0 017.516 31.24l-.192-.452a2 2 0 013.64-1.652l.102.233A14.003 14.003 0 0024 38c7.732 0 14-6.268 14-14s-6.268-14-14-14c-4.317 0-8.288 1.97-10.904 5.217a1.999 1.999 0 012.33.38l.11.123a2 2 0 01-.134 2.706l-.122.11-6 5c-1.263 1.053-3.16.214-3.275-1.384L6 22v-8a2 2 0 013.74-.987A17.981 17.981 0 0124 6zm0 8a2 2 0 012 2v7.172l3.414 3.414A1.998 1.998 0 0128 30a1.995 1.995 0 01-1.414-.586l-4-3.998A2.05 2.05 0 0122 24v-8a2 2 0 012-2z"
-        fill="#5D6165"
-      />
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M7.111 4.444V8.89l3.778 2.24.684-1.138-3.129-1.858v-3.69H7.111zM16 6.222V0l-2.347 2.347A7.944 7.944 0 008 0a8 8 0 108 8h-1.778A6.229 6.229 0 018 14.222 6.229 6.229 0 011.778 8 6.23 6.23 0 018 1.778c1.716 0 3.271.702 4.4 1.822L9.778 6.222H16z" />
     </svg>
   )
 }

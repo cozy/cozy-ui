@@ -1,24 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/accounts.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/accounts.svg` to regenerate;
 import React from 'react'
 
-import SvgAccountsTwake from './Accounts_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgAccounts(props) {
-  if (isTwakeTheme()) return SvgAccountsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#d6d8da"
-          fillRule="nonzero"
-          d="M3 9c0 29.178 11.311 34.3 20.997 39C33.682 43.3 45 38.178 45 9L23.998 0 3 9z"
-        />
-        <path
-          fill="#5d6165"
-          d="M22.5 25.244V30.5a1 1 0 001 1h1a1 1 0 001-1v-5.256A4.502 4.502 0 0024 16.5a4.5 4.5 0 00-1.5 8.744zM24 37.5c-8.284 0-15-6.716-15-15 0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15z"
-        />
-      </g>
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M1.614 11.296v-.524c0-.275.129-.533.33-.654a8.786 8.786 0 014.51-1.243.16.16 0 01.065.009 5.564 5.564 0 01.476-1.598 5.924 5.924 0 00-.54-.024c-1.953 0-3.776.54-5.333 1.468C.412 9.15 0 9.94 0 10.772v2.138h7.472a5.754 5.754 0 01-.783-1.614H1.614zm4.841-4.841a3.227 3.227 0 100-6.455 3.227 3.227 0 100 6.455zm0-4.841c.887 0 1.614.726 1.614 1.613 0 .888-.727 1.614-1.614 1.614A1.618 1.618 0 014.84 3.227c0-.887.726-1.613 1.614-1.613zm8.674 8.068c0-.177-.025-.339-.049-.508l.92-.815-.807-1.396-1.17.396a2.943 2.943 0 00-.871-.509l-.242-1.202h-1.614l-.242 1.202a2.94 2.94 0 00-.871.509l-1.17-.396-.807 1.396.92.815c-.025.17-.049.33-.049.508s.024.34.049.509l-.92.814.807 1.396 1.17-.395c.258.218.548.387.871.508l.242 1.203h1.614l.242-1.203c.323-.12.613-.29.871-.508l1.17.395.807-1.396-.92-.814c.024-.17.049-.331.049-.509zm-3.026 1.614a1.618 1.618 0 01-1.614-1.614c0-.887.726-1.613 1.614-1.613.887 0 1.614.726 1.614 1.613 0 .888-.727 1.614-1.614 1.614z" />
     </svg>
   )
 }

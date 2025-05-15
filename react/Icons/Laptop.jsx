@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laptop.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/laptop.svg` to regenerate;
 import React from 'react'
 
-import SvgLaptopTwake from './Laptop_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLaptop(props) {
-  if (isTwakeTheme()) return SvgLaptopTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M3 4v5h10V4H3zm11.5 7h-13a.5.5 0 01-.5-.5V4c0-1.103.896-2 2-2h10c1.102 0 2 .897 2 2v6.5a.5.5 0 01-.5.5zm-4 1h5a.5.5 0 01.5.5c0 .827-.674 1.5-1.5 1.5h-13C.673 14 0 13.327 0 12.5a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v.5h4v-.5a.5.5 0 01.5-.5z"
-      />
+    <svg viewBox="0 0 16 12" {...props}>
+      <path d="M13.333 10c.734 0 1.334-.6 1.334-1.334V2c0-.734-.6-1.333-1.334-1.333H2.667c-.734 0-1.334.6-1.334 1.333v6.666c0 .734.6 1.334 1.334 1.334H0v1.333h16V10h-2.667zM2.667 2h10.666v6.666H2.667V2z" />
     </svg>
   )
 }

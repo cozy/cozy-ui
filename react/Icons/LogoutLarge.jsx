@@ -1,32 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/logout-large.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/logout-large.svg` to regenerate;
 import React from 'react'
 
-import SvgLogoutLargeTwake from './LogoutLarge_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLogoutLarge(props) {
-  if (isTwakeTheme()) return SvgLogoutLargeTwake(props)
   return (
-    <svg viewBox="0 0 44 44" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <rect
-          width={27.5}
-          height={32.5}
-          x={1.25}
-          y={1.25}
-          fill="#D9DDE1"
-          rx={2}
-        />
-        <path
-          fill="#95999D"
-          d="M4.74 1.45l13.75 5.91A2.5 2.5 0 0120 9.65v27.61a2.5 2.5 0 01-3.49 2.29L2.76 33.64a2.49 2.49 0 01-1.51-2.29V3.74a2.5 2.5 0 013.49-2.29z"
-        />
-        <path
-          fill="#95999D"
-          fillRule="nonzero"
-          d="M34.3 12.92l.15.13 5 5c.69.69.73 1.77.13 2.5l-.13.15-5 5-.14.13a1.88 1.88 0 01-2.64-2.64l.13-.14 1.8-1.8h-7.98a1.88 1.88 0 01-.18-3.74l.18-.01h7.98l-1.8-1.8a1.87 1.87 0 012.5-2.78z"
-        />
-      </g>
+    <svg viewBox="0 0 17 16" {...props}>
+      <path d="M2.6 16c-.489 0-.907-.174-1.256-.522a1.712 1.712 0 01-.522-1.256V1.778c0-.49.174-.908.522-1.256A1.712 1.712 0 012.6 0h5.333a.86.86 0 01.634.256.86.86 0 01.255.633.86.86 0 01-.255.633.86.86 0 01-.634.256H2.6v12.444h5.333a.86.86 0 01.634.256.86.86 0 01.255.633.86.86 0 01-.255.633.86.86 0 01-.634.256H2.6zm10.822-7.111H7.044a.86.86 0 01-.633-.256A.86.86 0 016.156 8a.86.86 0 01.255-.633.86.86 0 01.633-.256h6.378l-1.666-1.667a.816.816 0 01-.245-.6c0-.237.082-.444.245-.622a.843.843 0 01.622-.278.84.84 0 01.644.256L16.2 7.378a.853.853 0 01.267.622.853.853 0 01-.267.622L13.022 11.8a.827.827 0 01-.633.256.907.907 0 01-.633-.278.864.864 0 01-.234-.634.869.869 0 01.256-.61l1.644-1.645z" />
     </svg>
   )
 }

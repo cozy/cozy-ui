@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/merge.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/merge.svg` to regenerate;
 import React from 'react'
 
-import SvgMergeTwake from './Merge_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgMerge(props) {
-  if (isTwakeTheme()) return SvgMergeTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M8 0L4 3.997h3.064V9.18L2 14.59 3.32 16l5.616-5.999V3.997H12L8 0zm1.488 12.59L12.68 16 14 14.591l-3.191-3.411-1.32 1.41z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M2.031 16L.778 14.747l4.293-4.294a3.559 3.559 0 001.04-2.515V3.404L4.698 4.81 3.444 3.556 7 0l3.556 3.556-1.254 1.253L7.89 3.404v4.534c0 .942.373 1.849 1.04 2.515l4.293 4.294L11.97 16 7 11.031 2.031 16z" />
     </svg>
   )
 }

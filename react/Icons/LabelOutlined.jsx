@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/label-outlined.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/label-outlined.svg` to regenerate;
 import React from 'react'
 
-import SvgLabelOutlinedTwake from './LabelOutlined_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgLabelOutlined(props) {
-  if (isTwakeTheme()) return SvgLabelOutlinedTwake(props)
   return (
-    <svg viewBox="0 0 17 17" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M10.002 4.5H2v8h8.002l4-4-4-4zm0-2H2a2 2 0 00-2 2v8a2 2 0 002 2h8.002a2 2 0 001.414-.586l4-4a2 2 0 000-2.828l-4-4a2 2 0 00-1.414-.586z"
-      />
+    <svg viewBox="0 0 20 14" {...props}>
+      <path d="M15.13.84C14.77.33 14.17 0 13.5 0L2.5.01C1.4.01.5.9.5 2v10c0 1.1.9 1.99 2 1.99l11 .01c.67 0 1.27-.33 1.63-.84L19.5 7 15.13.84zM13.5 12h-11V2h11l3.55 5-3.55 5z" />
     </svg>
   )
 }

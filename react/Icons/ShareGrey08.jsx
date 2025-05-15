@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/illus/share-grey08.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/share-grey08.svg` to regenerate;
 import React from 'react'
 
 function SvgShareGrey08(props) {

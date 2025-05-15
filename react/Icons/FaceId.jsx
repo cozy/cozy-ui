@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/face-id.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/face-id.svg` to regenerate;
 import React from 'react'
 
-import SvgFaceIdTwake from './FaceId_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFaceId(props) {
-  if (isTwakeTheme()) return SvgFaceIdTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 3a1 1 0 011-1h2a1 1 0 000-2H3a3 3 0 00-3 3v2a1 1 0 002 0V3zm12 0a1 1 0 00-1-1h-2a1 1 0 110-2h2a3 3 0 013 3v2a1 1 0 11-2 0V3zM3 14a1 1 0 01-1-1v-2a1 1 0 10-2 0v2a3 3 0 003 3h2a1 1 0 100-2H3zm11-1a1 1 0 01-1 1h-2a1 1 0 100 2h2a3 3 0 003-3v-2a1 1 0 10-2 0v2zM6 6a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2zM7 6a1 1 0 012 0v2a1 1 0 01-2 0V6zm-1.386 4.21a1 1 0 10-1.228 1.58C5.364 12.55 6.63 13 8 13c1.369 0 2.636-.45 3.614-1.21a1 1 0 10-1.228-1.58C9.765 10.695 8.932 11 8 11c-.932 0-1.765-.306-2.386-.79z"
-      />
+      <path d="M13.6 1.6h-3.344A2.408 2.408 0 008 0C6.96 0 6.08.672 5.744 1.6H2.4c-.88 0-1.6.72-1.6 1.6v11.2c0 .88.72 1.6 1.6 1.6h11.2c.88 0 1.6-.72 1.6-1.6V3.2c0-.88-.72-1.6-1.6-1.6zM8 1.4a.6.6 0 01.44.2c.096.104.16.248.16.4 0 .328-.272.6-.6.6a.604.604 0 01-.6-.6c0-.152.064-.296.16-.4A.6.6 0 018 1.4zm5.6 13H2.4V3.2h11.2v11.2zM8 4C6.68 4 5.6 5.08 5.6 6.4c0 1.32 1.08 2.4 2.4 2.4 1.32 0 2.4-1.08 2.4-2.4C10.4 5.08 9.32 4 8 4zm0 3.2c-.44 0-.8-.36-.8-.8 0-.44.36-.8.8-.8.44 0 .8.36.8.8 0 .44-.36.8-.8.8zm-4.8 5.176V13.6h9.6v-1.224c0-2-3.176-2.864-4.8-2.864-1.624 0-4.8.856-4.8 2.864zM5.048 12c.552-.448 1.904-.896 2.952-.896s2.408.448 2.952.896H5.048z" />
     </svg>
   )
 }

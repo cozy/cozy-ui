@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/banking.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/banking.svg` to regenerate;
 import React from 'react'
 
-import SvgBankingTwake from './Banking_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgBanking(props) {
-  if (isTwakeTheme()) return SvgBankingTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M2 8v5h12V4H2v1h12v3H2zm0-6h12a2 2 0 012 2v9a2 2 0 01-2 2H2a2 2 0 01-2-2V4a2 2 0 012-2z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M14.4 0H1.6C.712 0 .008.712.008 1.6L0 11.2c0 .888.712 1.6 1.6 1.6h12.8c.888 0 1.6-.712 1.6-1.6V1.6c0-.888-.712-1.6-1.6-1.6zm0 11.2H1.6V6.4h12.8v4.8zm0-8H1.6V1.6h12.8v1.6z" />
     </svg>
   )
 }

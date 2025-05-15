@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/school.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/school.svg` to regenerate;
 import React from 'react'
 
-import SvgSchoolTwake from './School_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSchool(props) {
-  if (isTwakeTheme()) return SvgSchoolTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M13 9.102v2.843a.5.5 0 01-.255.435l-4.5 2.532a.5.5 0 01-.49 0l-4.5-2.532A.5.5 0 013 11.945V9.102l4.03 2.155a2.06 2.06 0 001.94 0L13 9.103zM8.16 1.023l.102.042 7.465 3.992a.522.522 0 01.204.194.492.492 0 01-.124.64l-.08.052-7.465 3.992a.56.56 0 01-.423.041l-.101-.041L2 6.867V11a1 1 0 11-2 0V5.5c0-.148.068-.292.192-.39l.08-.053 7.466-3.992a.558.558 0 01.338-.06l.085.019z"
-      />
+    <svg viewBox="0 0 16 14" {...props}>
+      <path d="M8 0L0 4.364l2.91 1.585v4.364L8 13.09l5.09-2.778V5.949l1.456-.793v5.026H16V4.364L8 0zm4.96 4.364L8 7.069 3.04 4.364 8 1.658l4.96 2.706zm-1.324 5.083L8 11.433 4.364 9.447V6.742L8 8.727l3.636-1.985v2.705z" />
     </svg>
   )
 }

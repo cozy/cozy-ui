@@ -1,23 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/scooter.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/scooter.svg` to regenerate;
 import React from 'react'
 
-import SvgScooterTwake from './Scooter_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgScooter(props) {
-  if (isTwakeTheme()) return SvgScooterTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a1 1 0 000 2h2.22l1.512 6.053A5.506 5.506 0 008.207 12H4.5a2.5 2.5 0 10.45 2h5.085a3.5 3.5 0 013.465-4h.5a.999.999 0 00.97-1.243l-1.81-7.242A2 2 0 0011.22 0H9zM2.5 14a.5.5 0 100-1 .5.5 0 000 1z"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M13.5 16a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm0-2a.5.5 0 100-1 .5.5 0 000 1z"
-      />
+    <svg viewBox="0 0 16 12" {...props}>
+      <path d="M13.6 2c0-.88-.72-1.6-1.6-1.6H9.6V2H12v2.12L9.216 7.6H6.4v-4H3.2A3.2 3.2 0 000 6.8v2.4h1.6c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4h3.584L13.6 4.68V2zm-12 5.6v-.8c0-.88.72-1.6 1.6-1.6h1.6v2.4H1.6zM4 10c-.44 0-.8-.36-.8-.8h1.6c0 .44-.36.8-.8.8z" />
+      <path d="M6.4 1.2h-4v1.6h4V1.2zm7.2 5.6a2.397 2.397 0 00-2.4 2.4c0 1.328 1.072 2.4 2.4 2.4 1.328 0 2.4-1.072 2.4-2.4 0-1.328-1.072-2.4-2.4-2.4zm0 3.2c-.44 0-.8-.36-.8-.8 0-.44.36-.8.8-.8.44 0 .8.36.8.8 0 .44-.36.8-.8.8z" />
     </svg>
   )
 }

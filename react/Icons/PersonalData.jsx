@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/personal-data.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/personal-data.svg` to regenerate;
 import React from 'react'
 
-import SvgPersonalDataTwake from './PersonalData_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPersonalData(props) {
-  if (isTwakeTheme()) return SvgPersonalDataTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M12.375 16C13 16 13 15.5 13 15s-1.25-2-2.5-2-.625.5-2.5.5-1.25-.5-2.5-.5S3 14.5 3 15s0 1 .625 1H2.007A1.002 1.002 0 011 15V1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996h-1.618zM8 12a3 3 0 100-6 3 3 0 000 6zm3-8V0l4 4h-4z"
-      />
+    <svg viewBox="0 0 14 17" {...props}>
+      <path d="M12.333.5H1.667C.82.5.143 1.186.143 2.024V12.69c0 .839.678 1.524 1.524 1.524h3.047L7 16.5l2.286-2.286h3.047c.838 0 1.524-.685 1.524-1.524V2.024c0-.838-.685-1.524-1.524-1.524zm0 12.19h-3.68L7 14.345 5.347 12.69h-3.68V2.024h10.666V12.69zM7 7.357a2.292 2.292 0 002.286-2.286A2.292 2.292 0 007 2.786 2.292 2.292 0 004.714 5.07 2.292 2.292 0 007 7.357zM7 4.31c.42 0 .762.342.762.761A.764.764 0 017 5.833a.764.764 0 01-.762-.762c0-.419.343-.761.762-.761zm4.572 6.537c0-1.905-3.025-2.728-4.572-2.728-1.547 0-4.571.823-4.571 2.728v1.082h9.143v-1.082zm-7.254-.442c.564-.389 1.7-.762 2.682-.762.983 0 2.118.373 2.682.762H4.318z" />
     </svg>
   )
 }

@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/download.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/download.svg` to regenerate;
 import React from 'react'
 
-import SvgDownloadTwake from './Download_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgDownload(props) {
-  if (isTwakeTheme()) return SvgDownloadTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z"
-      />
+      <path d="M14 11v3H2v-3H0v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zm-1-4l-1.41-1.41L9 8.17V0H7v8.17L4.41 5.59 3 7l5 5 5-5z" />
     </svg>
   )
 }

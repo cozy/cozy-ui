@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/archive.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/archive.svg` to regenerate;
 import React from 'react'
 
-import SvgArchiveTwake from './Archive_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgArchive(props) {
-  if (isTwakeTheme()) return SvgArchiveTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M1 4h14v10.004a1 1 0 01-1.007.996H2.007A1 1 0 011 14.004V4zM0 2c0-.552.445-1 1-1h14c.552 0 1 .444 1 1v1H0V2zm5 4v2h6V6H5z"
-      />
+      <path d="M15.591 1.982L14.356.49A1.29 1.29 0 0013.333 0H2.667a1.32 1.32 0 00-1.031.489L.409 1.982A1.74 1.74 0 000 3.112v11.11C0 15.2.8 16 1.778 16h12.444C15.2 16 16 15.2 16 14.222V3.112a1.74 1.74 0 00-.409-1.13zM2.88 1.778h10.24l.72.862H2.169l.711-.862zM1.778 14.222V4.444h12.444v9.778H1.778zm7.51-8H6.712V8.89H4.444L8 12.444l3.556-3.555H9.289V6.222z" />
     </svg>
   )
 }

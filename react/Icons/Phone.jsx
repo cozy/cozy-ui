@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/phone.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/phone.svg` to regenerate;
 import React from 'react'
 
-import SvgPhoneTwake from './Phone_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPhone(props) {
-  if (isTwakeTheme()) return SvgPhoneTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M2 1c0-.552.456-1 1.002-1h9.996A1 1 0 0114 1v14c0 .552-.456 1-1.002 1H3.002A1 1 0 012 15V1zm2 1v10h8V2H4zm4 13a1 1 0 100-2 1 1 0 000 2z"
-      />
+    <svg viewBox="0 0 12 16" {...props}>
+      <path d="M9.628.007L2.355 0C1.555 0 .908.655.908 1.455v13.09c0 .8.647 1.455 1.447 1.455h7.273c.8 0 1.454-.655 1.454-1.454V1.455c0-.8-.654-1.448-1.454-1.448zm0 13.084H2.355V2.909h7.273v10.182z" />
     </svg>
   )
 }

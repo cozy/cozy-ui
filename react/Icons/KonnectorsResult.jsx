@@ -1,26 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/konnectors-result.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/konnectors-result.svg` to regenerate;
 import React from 'react'
 
-import SvgKonnectorsResultTwake from './KonnectorsResult_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgKonnectorsResult(props) {
-  if (isTwakeTheme()) return SvgKonnectorsResultTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <circle cx={24} cy={24} r={24} fill="#d6d8da" />
-        <path
-          fill="#5d6165"
-          d="M24 14a6 6 0 110-12 6 6 0 010 12zm8.66 5a6 6 0 1110.393-6 6 6 0 01-10.393 6zm0 10a6 6 0 1110.393 6 6 6 0 01-10.393-6zM24 34a6 6 0 110 12 6 6 0 010-12zm-8.66-5a6 6 0 11-10.393 6 6 6 0 0110.393-6zm0-10a6 6 0 11-10.393-6 6 6 0 0110.393 6zM24 30a6 6 0 110-12 6 6 0 010 12z"
-        />
-        <circle cx={36} cy={36} r={12} fill="#5d6165" />
-        <path
-          fill="#FFF"
-          fillRule="nonzero"
-          d="M31.707 37.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l8-8a1 1 0 00-1.414-1.414L33 38.586l-1.293-1.293z"
-        />
-      </g>
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M16 2.544L6.872 11.68 3.48 8.288 4.608 7.16l2.264 2.264 8-8L16 2.544zm-1.768 4.032c.104.456.168.936.168 1.424 0 3.536-2.864 6.4-6.4 6.4A6.398 6.398 0 011.6 8c0-3.536 2.864-6.4 6.4-6.4 1.264 0 2.432.368 3.424 1l1.152-1.152A7.92 7.92 0 008 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8c0-.952-.176-1.864-.48-2.712l-1.288 1.288z" />
     </svg>
   )
 }

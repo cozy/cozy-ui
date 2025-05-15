@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/copy.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/copy.svg` to regenerate;
 import React from 'react'
 
-import SvgCopyTwake from './Copy_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCopy(props) {
-  if (isTwakeTheme()) return SvgCopyTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M14 0a2 2 0 012 2v8a2 2 0 01-2 2h-2v2a2 2 0 01-2 2H3a2 2 0 01-2-2V6a2 2 0 012-2h2V2a2 2 0 012-2h7zm-4 6H3v8h7V6zm4-4H7v2h3a2 2 0 012 2v4h2V2z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M10.182 0H1.455C.655 0 0 .655 0 1.455v10.181h1.455V1.455h8.727V0zm-.727 2.91H4.364c-.8 0-1.448.654-1.448 1.454L2.91 14.545c0 .8.647 1.455 1.447 1.455h8.008c.8 0 1.454-.655 1.454-1.454V7.273L9.455 2.909zM4.364 14.545V4.364h4.363V8h3.637v6.546h-8z" />
     </svg>
   )
 }

@@ -1,14 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/calendar.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/calendar.svg` to regenerate;
 import React from 'react'
 
-import SvgCalendarTwake from './Calendar_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgCalendar(props) {
-  if (isTwakeTheme()) return SvgCalendarTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <path d="M13 1h3v2H0V1h3V0h2v1h6V0h2v1zM0 4h16v10.998A1 1 0 0115 16H1c-.552 0-1-.456-1-1.002V4zm2 2v8h12V6H2zm6 3h5v4H8V9z" />
+      <path d="M13.818 1.455h-.727V0h-1.455v1.455H4.364V0H2.909v1.455h-.727c-.8 0-1.455.654-1.455 1.454v11.637c0 .8.655 1.454 1.455 1.454h11.636c.8 0 1.455-.655 1.455-1.454V2.909c0-.8-.655-1.454-1.455-1.454zm0 13.09H2.182v-8h11.636v8zm0-9.454H2.182V2.909h11.636v2.182z" />
     </svg>
   )
 }

@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/to-the-cloud.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/to-the-cloud.svg` to regenerate;
 import React from 'react'
 
-import SvgToTheCloudTwake from './ToTheCloud_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgToTheCloud(props) {
-  if (isTwakeTheme()) return SvgToTheCloudTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M12.112 5.665a4.132 4.132 0 00-1.239-2.475A4.227 4.227 0 007.918 2c-1.112 0-2.16.422-2.955 1.19-.237.229-.43.487-.603.756l2.847 2.847L9 5v5H4l1.793-1.793-2.452-2.451a4.21 4.21 0 00-2.136 1.148A4.124 4.124 0 000 9.824C0 12.127 1.895 14 4.225 14h7.507c2.33 0 4.227-1.873 4.227-4.176 0-2.176-1.694-3.968-3.847-4.159"
-      />
+    <svg viewBox="0 0 16 12" {...props}>
+      <path d="M12.9 4.693A4.993 4.993 0 003.567 3.36 3.996 3.996 0 000 7.333c0 2.207 1.793 4 4 4h8.667A3.335 3.335 0 0016 8a3.317 3.317 0 00-3.1-3.307zM12.667 10H4a2.666 2.666 0 01-2.667-2.667 2.649 2.649 0 012.374-2.647l.713-.073.333-.633A3.646 3.646 0 018 2a3.669 3.669 0 013.593 2.953l.2 1 1.02.074c1.04.066 1.854.94 1.854 1.973 0 1.1-.9 2-2 2zM5.333 6.667h1.7v2h1.934v-2h1.7L8 4 5.333 6.667z" />
     </svg>
   )
 }

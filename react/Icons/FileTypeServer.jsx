@@ -1,25 +1,49 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-server.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/file-type-server.svg` to regenerate;
 import React from 'react'
 
-import SvgFileTypeServerTwake from './FileTypeServer_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFileTypeServer(props) {
-  if (isTwakeTheme()) return SvgFileTypeServerTwake(props)
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
+    <svg viewBox="0 0 16 16" fill="none" {...props}>
       <path
-        d="M2.799 16.501A4 4 0 015.923 15h20.155a4 4 0 013.123 1.501l2.142 2.677A3 3 0 0132 21.052V24H0v-2.948a3 3 0 01.657-1.874L2.8 16.501zm0-14A4 4 0 015.923 1h20.155A4 4 0 0129.2 2.501l2.142 2.677A3 3 0 0132 7.052V10H0V7.052a3 3 0 01.657-1.874L2.8 2.501z"
-        fill="#197BFF"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M0 10.146a2 2 0 012-2h12a2 2 0 012 2v3a2 2 0 01-2 2H2a2 2 0 01-2-2v-3zm5 1.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+        fill="url(#file-type-server_svg__paint0_linear_11291_1488)"
       />
       <path
-        d="M0 21a2 2 0 012-2h28a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2v-8zM0 7a2 2 0 012-2h28a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V7z"
-        fill="#B2D3FF"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M0 2.854a2 2 0 012-2h12a2 2 0 012 2v3a2 2 0 01-2 2H2a2 2 0 01-2-2v-3zm5 1.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+        fill="url(#file-type-server_svg__paint1_linear_11291_1488)"
       />
-      <path
-        d="M8 25a2 2 0 11-4 0 2 2 0 014 0zm0-14a2 2 0 11-4 0 2 2 0 014 0z"
-        fill="#297EF2"
-      />
+      <defs>
+        <linearGradient
+          id="file-type-server_svg__paint0_linear_11291_1488"
+          x1={8}
+          y1={8.146}
+          x2={8}
+          y2={16.627}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0.044} stopColor="#1D7AFF" />
+          <stop offset={0.13} stopColor="#7CB2FF" />
+          <stop offset={0.617} stopColor="#76AFFF" />
+          <stop offset={1} stopColor="#4290FF" />
+        </linearGradient>
+        <linearGradient
+          id="file-type-server_svg__paint1_linear_11291_1488"
+          x1={8}
+          y1={0.854}
+          x2={8}
+          y2={9.335}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0.044} stopColor="#1D7AFF" />
+          <stop offset={0.13} stopColor="#7CB2FF" />
+          <stop offset={0.617} stopColor="#76AFFF" />
+          <stop offset={1} stopColor="#4290FF" />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }

@@ -1,23 +1,19 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/files-pen.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/files-pen.svg` to regenerate;
 import React from 'react'
 
-import SvgFilesPenTwake from './FilesPen_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFilesPen(props) {
-  if (isTwakeTheme()) return SvgFilesPenTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#d6d8da"
-          d="M3.002 43A2.001 2.001 0 011 41.003V2.997C1 1.894 1.89 1 2.991 1H23l10 10v32H3.002z"
-        />
-        <path
-          fill="#5d6165"
-          d="M23 1l10 10h-8c-1.113 0-2-.895-2-2V1zm3.931 45.452c-1.066.305-1.686-.306-1.38-1.38L27 40.005l13.59-13.592a2 2 0 012.831.007l2.162 2.162c.784.784.784 2.054.008 2.83L32 45.005l-5.069 1.448zM16 38h10v2H16v-2z"
-        />
-      </g>
+    <svg viewBox="0 0 15 16" {...props}>
+      <path
+        d="M3.2.4h5.834L14 5.366V12.8a2.8 2.8 0 01-2.8 2.8h-8a2.8 2.8 0 01-2.8-2.8V3.2A2.8 2.8 0 013.2.4z"
+        fill="#E8EDF3"
+        stroke="#4F5B69"
+        strokeWidth={0.8}
+      />
+      <path
+        d="M14.4 5.4L9 0v2.793C9 4.233 10.128 5.4 11.52 5.4h2.88zM4 13.25v-1.476L8.583 7.2a.78.78 0 01.23-.148.718.718 0 01.534 0 .61.61 0 01.226.156l.477.486c.07.064.12.14.152.226a.753.753 0 010 .525.652.652 0 01-.152.23L5.476 13.25H4zm5.07-4.583l.486-.486-.487-.487-.486.487.486.486z"
+        fill="#4F5B69"
+      />
     </svg>
   )
 }

@@ -1,18 +1,12 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paper.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/paper.svg` to regenerate;
 import React from 'react'
 
-import SvgPaperTwake from './Paper_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgPaper(props) {
-  if (isTwakeTheme()) return SvgPaperTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2zm5.5 8.25c0-.375-.75-1.5-1.5-1.5-.337 0-.447.076-.568.16-.148.101-.313.215-.932.215-.62 0-.784-.114-.932-.216-.121-.083-.23-.159-.568-.159-.75 0-1.5 1.125-1.5 1.5s0 .75.375.75h5.25c.309 0 .363-.254.373-.553l.002-.197zM6 6.687C6 5.756 5.328 5 4.5 5S3 5.756 3 6.688c0 .931.672 1.687 1.5 1.687S6 7.619 6 6.687zM14 8.5a.5.5 0 00-.5-.5h-4a.5.5 0 000 1h4a.5.5 0 00.5-.5zm0 2a.5.5 0 00-.5-.5h-4a.5.5 0 000 1h4a.5.5 0 00.5-.5zm0-4a.5.5 0 00-.5-.5h-4a.5.5 0 000 1h4a.5.5 0 00.5-.5z"
-      />
+    <svg viewBox="0 0 20 20" {...props}>
+      <path d="M16 10h-4v1.5h4V10zm0 3h-4v1.5h4V13z" />
+      <path d="M18 5h-5V2c0-1.1-.9-2-2-2H9C7.9 0 7 .9 7 2v3H2C.9 5 0 5.9 0 7v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zM9 2h2v5H9V2zm9 16H2V7h5c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2h5v11z" />
+      <path d="M7 13a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.08 1.18c-.64-.28-1.34-.43-2.08-.43s-1.44.15-2.08.43c-.56.24-.92.78-.92 1.39V16h6v-.43c0-.61-.36-1.15-.92-1.39z" />
     </svg>
   )
 }

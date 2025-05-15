@@ -1,18 +1,11 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-car.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/electric-car.svg` to regenerate;
 import React from 'react'
 
-import SvgElectricCarTwake from './ElectricCar_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgElectricCar(props) {
-  if (isTwakeTheme()) return SvgElectricCarTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M14.283.92c.08.059.118.16.095.257L13.15 6.5h2.078a.75.75 0 01.62 1.174l-5.078 7.42a.25.25 0 01-.453-.18L11.15 9.5H9.134a.75.75 0 01-.604-1.195L13.934.972a.25.25 0 01.35-.053zM11.43 1L9.955 3H3.677l-1.2 3h5.268L6.92 7.118a2.75 2.75 0 00-.536 1.631l.005.168a2.751 2.751 0 002.244 2.536l.188.028L8.587 13H3v.5c0 .83-.67 1.5-1.5 1.5-.781 0-1.42-.594-1.493-1.355L0 13.5V6.987a.99.99 0 01.032-.239l.04-.12 2-5a1 1 0 01.807-.62L3 1h8.43zM3.5 8C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11 5 10.33 5 9.5 4.33 8 3.5 8z"
-      />
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M12.033.735A1.087 1.087 0 0011 0H3c-.48 0-.88.305-1.033.735L.455 5.09v5.818c0 .4.327.727.727.727h.727a.73.73 0 00.727-.727v-.727h8.728v.727c0 .4.327.727.727.727h.727a.73.73 0 00.727-.727V5.091L12.033.735zm-8.778.72h7.483l.786 2.261H2.469l.786-2.261zm8.836 7.272H1.909V5.091h10.182v3.636z" />
+      <path d="M3.727 8a1.09 1.09 0 100-2.182 1.09 1.09 0 000 2.182zm6.546 0a1.09 1.09 0 100-2.182 1.09 1.09 0 000 2.182zm-6.909 5.818h2.909v-1.454l4.363 2.181H7.727V16l-4.363-2.182z" />
     </svg>
   )
 }

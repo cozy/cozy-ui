@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/debit.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/debit.svg` to regenerate;
 import React from 'react'
 
-import SvgDebitTwake from './Debit_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgDebit(props) {
-  if (isTwakeTheme()) return SvgDebitTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <g fillRule="evenodd">
-        <path d="M3.414 10H11a1 1 0 010 2H3.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 1.414L3.414 10z" />
-        <path
-          d="M12.586 4l-1.293-1.293a1 1 0 011.414-1.414l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L12.586 6H5a1 1 0 110-2h7.586z"
-          opacity={0.316}
-        />
-      </g>
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M4.328 7.528L3.2 6.4 0 9.6l3.2 3.2 1.128-1.128L3.064 10.4H15.2V8.8H3.064l1.264-1.272zm7.344-2.256L12.8 6.4 16 3.2 12.8 0l-1.128 1.128L12.936 2.4H.8V4h12.136l-1.264 1.272z" />
     </svg>
   )
 }

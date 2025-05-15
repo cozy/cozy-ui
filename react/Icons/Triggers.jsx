@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/triggers.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/triggers.svg` to regenerate;
 import React from 'react'
 
-import SvgTriggersTwake from './Triggers_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgTriggers(props) {
-  if (isTwakeTheme()) return SvgTriggersTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <ellipse cx={24} cy={24.5} fill="#5d6165" rx={18} ry={18.5} />
-        <path
-          fill="#d6d8da"
-          d="M42 0c3.308 0 6 2.692 6 6v36c0 3.308-2.692 6-6 6H6c-3.308 0-6-2.692-6-6V6c0-3.308 2.692-6 6-6h36zM24 40c8.822 0 16-7.178 16-16S32.822 8 24 8 8 15.178 8 24s7.178 16 16 16zm6-16a1 1 0 010 2h-8V14a1 1 0 012 0v10h6z"
-        />
-      </g>
+    <svg viewBox="0 0 16 16" {...props}>
+      <path d="M7.111 4.444V8.89l3.778 2.24.684-1.138-3.129-1.858v-3.69H7.111zM16 6.222V0l-2.347 2.347A7.944 7.944 0 008 0a8 8 0 108 8h-1.778A6.229 6.229 0 018 14.222 6.229 6.229 0 011.778 8 6.23 6.23 0 018 1.778c1.716 0 3.271.702 4.4 1.822L9.778 6.222H16z" />
     </svg>
   )
 }

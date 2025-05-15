@@ -1,17 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wallet.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wallet.svg` to regenerate;
 import React from 'react'
 
-import SvgWalletTwake from './Wallet_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgWallet(props) {
-  if (isTwakeTheme()) return SvgWalletTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M2 0h11a1 1 0 011 1v3h1a1 1 0 011 1v10a1 1 0 01-1 1H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 2a1 1 0 100 2h9V2H3zm8 9a1 1 0 100-2 1 1 0 000 2z"
-      />
+    <svg viewBox="0 0 16 13" {...props}>
+      <path d="M12.8 0H3.2A3.2 3.2 0 000 3.2v6.4a3.2 3.2 0 003.2 3.2h9.6A3.2 3.2 0 0016 9.6V3.2A3.2 3.2 0 0012.8 0zm-1.488 7.816c-.192.16-.456.224-.704.16L1.72 5.8c.24-.584.808-1 1.48-1h9.6c.536 0 1.008.272 1.304.672l-2.792 2.344zM3.2 1.6h9.6c.88 0 1.6.72 1.6 1.6v.44a3.198 3.198 0 00-1.6-.44H3.2c-.584 0-1.128.168-1.6.44V3.2c0-.88.72-1.6 1.6-1.6z" />
     </svg>
   )
 }

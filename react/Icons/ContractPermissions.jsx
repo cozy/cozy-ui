@@ -1,23 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/contract.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/permissions/contract-permissions.svg` to regenerate;
 import React from 'react'
 
-import SvgContractPermissionsTwake from './ContractPermissions_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgContractPermissions(props) {
-  if (isTwakeTheme()) return SvgContractPermissionsTwake(props)
   return (
-    <svg viewBox="0 0 48 48" {...props}>
-      <g fill="none" fillRule="evenodd">
-        <path
-          fill="#d6d8da"
-          d="M3.002 43A2.001 2.001 0 011 41.003V2.997C1 1.894 1.89 1 2.991 1H23l10 10v32H3.002z"
-        />
-        <path
-          fill="#5d6165"
-          d="M23 1l10 10h-8c-1.113 0-2-.895-2-2V1zm3.931 45.452c-1.066.305-1.686-.306-1.38-1.38L27 40.005l13.59-13.592a2 2 0 012.831.007l2.162 2.162c.784.784.784 2.054.008 2.83L32 45.005l-5.069 1.448zM16 38h10v2H16v-2z"
-        />
-      </g>
+    <svg viewBox="0 0 17 16" {...props}>
+      <path d="M8.9 15.2v-1.32a.827.827 0 01.24-.58l4.18-4.16c.12-.12.253-.207.4-.26a1.28 1.28 0 01.44-.08 1.203 1.203 0 01.86.36l.74.74c.107.12.19.253.25.4.06.147.09.293.09.44 0 .147-.027.297-.08.45-.053.153-.14.29-.26.41l-4.16 4.16a.8.8 0 01-.58.24H9.7a.774.774 0 01-.57-.23.774.774 0 01-.23-.57zm1.2-.4h.76l2.42-2.44-.36-.38-.38-.36-2.44 2.42v.76zM2.5 16a1.54 1.54 0 01-1.13-.47A1.54 1.54 0 01.9 14.4V1.6c0-.44.157-.817.47-1.13A1.54 1.54 0 012.5 0h5.74a1.58 1.58 0 011.12.46l3.88 3.88a1.58 1.58 0 01.46 1.12V7.2h-1.6V5.6H8.9a.774.774 0 01-.57-.23.774.774 0 01-.23-.57V1.6H2.5v12.8h4.8V16H2.5zm10.42-4.02l-.38-.36.74.74-.36-.38z" />
     </svg>
   )
 }

@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/spinner.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/spinner.svg` to regenerate;
 import React from 'react'
 
-import SvgSpinnerTwake from './Spinner_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgSpinner(props) {
-  if (isTwakeTheme()) return SvgSpinnerTwake(props)
   return (
-    <svg viewBox="0 0 32 32" {...props} role="progressbar" aria-busy="true">
-      <path
-        opacity={0.25}
-        d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-      />
-      <path d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z" />
+    <svg viewBox="0 0 16 16" {...props} role="progressbar" aria-busy="true">
+      <path d="M8 16a7.74 7.74 0 01-3.1-.63 8.114 8.114 0 01-2.55-1.72A8.115 8.115 0 01.63 11.1 7.74 7.74 0 010 8c0-1.107.21-2.143.63-3.11a8.146 8.146 0 011.72-2.54A8.114 8.114 0 014.9.63 7.74 7.74 0 018 0c.227 0 .417.077.57.23.153.153.23.343.23.57a.774.774 0 01-.23.57.774.774 0 01-.57.23c-1.773 0-3.283.623-4.53 1.87C2.223 4.717 1.6 6.227 1.6 8c0 1.773.623 3.283 1.87 4.53C4.717 13.777 6.227 14.4 8 14.4c1.773 0 3.283-.623 4.53-1.87C13.777 11.283 14.4 9.773 14.4 8c0-.227.077-.417.23-.57a.774.774 0 01.57-.23c.227 0 .417.077.57.23.153.153.23.343.23.57a7.74 7.74 0 01-.63 3.1 8.115 8.115 0 01-1.72 2.55 8.146 8.146 0 01-2.54 1.72A7.72 7.72 0 018 16z" />
     </svg>
   )
 }

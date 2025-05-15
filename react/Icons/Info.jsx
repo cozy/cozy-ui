@@ -1,20 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/info.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/info.svg` to regenerate;
 import React from 'react'
 
-import SvgInfoTwake from './Info_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgInfo(props) {
-  if (isTwakeTheme()) return SvgInfoTwake(props)
   return (
     <svg viewBox="0 0 16 16" {...props}>
-      <defs>
-        <path
-          id="info_svg__a"
-          d="M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z"
-        />
-      </defs>
-      <use fillRule="evenodd" xlinkHref="#info_svg__a" />
+      <path d="M8 12a.774.774 0 00.57-.23.774.774 0 00.23-.57V8a.774.774 0 00-.23-.57A.774.774 0 008 7.2a.774.774 0 00-.57.23.774.774 0 00-.23.57v3.2c0 .227.077.417.23.57.153.153.343.23.57.23zm0-6.4a.774.774 0 00.57-.23.774.774 0 00.23-.57.774.774 0 00-.23-.57A.774.774 0 008 4a.774.774 0 00-.57.23.774.774 0 00-.23.57c0 .227.077.417.23.57.153.153.343.23.57.23zM8 16a7.79 7.79 0 01-3.12-.63 8.079 8.079 0 01-2.54-1.71 8.08 8.08 0 01-1.71-2.54A7.79 7.79 0 010 8c0-1.107.21-2.147.63-3.12.42-.973.99-1.82 1.71-2.54A8.079 8.079 0 014.88.63 7.79 7.79 0 018 0a7.79 7.79 0 013.12.63c.973.42 1.82.99 2.54 1.71s1.29 1.567 1.71 2.54c.42.973.63 2.013.63 3.12a7.79 7.79 0 01-.63 3.12 8.08 8.08 0 01-1.71 2.54 8.08 8.08 0 01-2.54 1.71A7.79 7.79 0 018 16z" />
     </svg>
   )
 }

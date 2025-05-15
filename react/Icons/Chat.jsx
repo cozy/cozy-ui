@@ -1,4 +1,4 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/twake/illus/chat.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/chat.svg` to regenerate;
 import React from 'react'
 
 function SvgChat(props) {

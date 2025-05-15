@@ -1,16 +1,13 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/filter.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/filter.svg` to regenerate;
 import React from 'react'
 
-import SvgFilterTwake from './Filter_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgFilter(props) {
-  if (isTwakeTheme()) return SvgFilterTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
+    <svg viewBox="0 0 17 14" {...props}>
       <path
         fillRule="evenodd"
-        d="M2 0h12a1 1 0 011 1v.581a1 1 0 01-.299.713L10 6.92V16l-4-3.09v-6L1.3 2.294A1 1 0 011 1.58V1a1 1 0 011-1z"
+        clipRule="evenodd"
+        d="M3.725 4.113a2.608 2.608 0 004.957 0h7.409a.809.809 0 100-1.617H8.682a2.608 2.608 0 00-4.958 0H1.71a.809.809 0 100 1.617h2.016zm2.478-1.797a.989.989 0 100 1.977.989.989 0 000-1.977zM.9 10.495c0-.446.362-.808.809-.808h7.409a2.608 2.608 0 014.957 0h2.016a.809.809 0 110 1.618h-2.016a2.608 2.608 0 01-4.957 0H1.709a.809.809 0 01-.809-.81zm9.708 0a.989.989 0 111.977 0 .989.989 0 01-1.977 0z"
       />
     </svg>
   )

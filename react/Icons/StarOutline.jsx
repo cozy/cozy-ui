@@ -1,18 +1,10 @@
-// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/star-outline.svg` to regenerate
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/star-outline.svg` to regenerate;
 import React from 'react'
 
-import SvgStarOutlineTwake from './StarOutline_twake'
-import { isTwakeTheme } from '../helpers/isTwakeTheme'
-
 function SvgStarOutline(props) {
-  if (isTwakeTheme()) return SvgStarOutlineTwake(props)
   return (
-    <svg viewBox="0 0 16 16" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8 10.305l2.71 1.425-.517-3.018 2.192-2.137-3.03-.44L8 3.389 6.645 6.135l-3.03.44 2.193 2.137-.518 3.018L8 10.305zm-4.702 4.167l.898-5.236L.392 5.528l5.257-.764L8 0l2.351 4.764 5.257.764-3.804 3.708.898 5.236L8 12l-4.702 2.472z"
-      />
+    <svg viewBox="0 0 16 17" {...props}>
+      <path d="M16 6.692l-5.752-.496L8 .9 5.752 6.204 0 6.692l4.368 3.784L3.056 16.1 8 13.116l4.944 2.984-1.304-5.624L16 6.692zM8 11.62l-3.008 1.816.8-3.424-2.656-2.304 3.504-.304L8 4.18l1.368 3.232 3.504.304-2.656 2.304.8 3.424L8 11.62z" />
     </svg>
   )
 }
