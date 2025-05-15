@@ -38,4 +38,4 @@ const Cell = ({ row, columns, column, children }) => {
   )
 }
 
-export default Cell
+export default React.memo(Cell)
