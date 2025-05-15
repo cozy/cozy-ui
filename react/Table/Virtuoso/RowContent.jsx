@@ -32,4 +32,4 @@ const RowContent = ({
   )
 }
 
-export default RowContent
+export default React.memo(RowContent)

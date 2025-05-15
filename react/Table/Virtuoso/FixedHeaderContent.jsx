@@ -55,4 +55,4 @@ const FixedHeaderContent = ({
   )
 }
 
-export default FixedHeaderContent
+export default React.memo(FixedHeaderContent)

@@ -42,4 +42,4 @@ const TableHeadCell = ({ className, column, orderBy, order, onClick }) => {
   )
 }
 
-export default TableHeadCell
+export default React.memo(TableHeadCell)
