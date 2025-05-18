@@ -8,6 +8,12 @@ import { useActionMenuEffects } from '../deprecated/ActionMenu/ActionMenuEffects
 import isTesting from '../helpers/isTesting'
 import useBreakpoints from '../providers/Breakpoints'
 
+const ActionsMenuFlagshipUI = ({ children }) => {
+  useActionMenuEffects()
+
+  return children
+}
+
 const ActionsMenuWrapper = ({
   children,
   autoClose,
@@ -17,8 +23,6 @@ const ActionsMenuWrapper = ({
 }) => {
   const { isMobile } = useBreakpoints()
 
-  useActionMenuEffects()
-
   const overrideClick = props => ev => {
     props.onClick?.(ev) // this is ActionsItems onClick prop
     autoClose && onClose?.()
@@ -26,19 +30,21 @@ const ActionsMenuWrapper = ({
 
   if (isMobile && open) {
     return (
-      <BottomSheet skipAnimation={isTesting()} backdrop onClose={onClose}>
-        <Paper square>
-          {React.Children.map(children, child =>
-            React.isValidElement(child)
-              ? React.cloneElement(child, {
-                  isListItem: true,
-                  size: 'small',
-                  onClick: overrideClick(child.props)
-                })
-              : null
-          )}
-        </Paper>
-      </BottomSheet>
+      <ActionsMenuFlagshipUI>
+        <BottomSheet skipAnimation={isTesting()} backdrop onClose={onClose}>
+          <Paper square>
+            {React.Children.map(children, child =>
+              React.isValidElement(child)
+                ? React.cloneElement(child, {
+                    isListItem: true,
+                    size: 'small',
+                    onClick: overrideClick(child.props)
+                  })
+                : null
+            )}
+          </Paper>
+        </BottomSheet>
+      </ActionsMenuFlagshipUI>
     )
   }
 
