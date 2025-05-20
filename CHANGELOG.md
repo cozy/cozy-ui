@@ -1,3 +1,10 @@
+## [123.2.1](https://github.com/cozy/cozy-ui/compare/v123.2.0...v123.2.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* Don't register Flagship UI on ActionsMenu until opened ([87def0d](https://github.com/cozy/cozy-ui/commit/87def0d))
+
 # [123.2.0](https://github.com/cozy/cozy-ui/compare/v123.1.1...v123.2.0) (2025-05-15)
 
 
