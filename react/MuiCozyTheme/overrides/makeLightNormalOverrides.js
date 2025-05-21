@@ -511,6 +511,15 @@ export const makeLightNormalOverrides = theme => ({
       backgroundColor: theme.palette.background.paper
     }
   },
+  MuiTableRow: {
+    root: {
+      '&.disabled': {
+        cursor: 'pointer',
+        pointerEvents: 'none',
+        opacity: 0.5
+      }
+    }
+  },
   MuiTableCell: {
     root: {
       padding: '8px 4px'
