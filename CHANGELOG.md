@@ -1,3 +1,32 @@
+# [124.0.0](https://github.com/cozy/cozy-ui/compare/v123.2.1...v124.0.0) (2025-05-22)
+
+
+### Features
+
+* Add dragndrop on virtualized table ([519e610](https://github.com/cozy/cozy-ui/commit/519e610))
+* Add react-dnd ([4f2805e](https://github.com/cozy/cozy-ui/commit/4f2805e))
+* Add react-virtuoso ([e121afe](https://github.com/cozy/cozy-ui/commit/e121afe))
+* Add Virtual table example and adjust style ([9cc9506](https://github.com/cozy/cozy-ui/commit/9cc9506))
+* **Filename:** Add `path` and rework `icon` ([35a8459](https://github.com/cozy/cozy-ui/commit/35a8459))
+* Memo rows and cells ([bae4212](https://github.com/cozy/cozy-ui/commit/bae4212))
+* **TableRow:** Add disabled style ([2a0d626](https://github.com/cozy/cozy-ui/commit/2a0d626))
+* Upgrade react ([fe320be](https://github.com/cozy/cozy-ui/commit/fe320be))
+* **VirtualizedTable:** Add selection props ([f819531](https://github.com/cozy/cozy-ui/commit/f819531))
+
+
+### BREAKING CHANGES
+
+* You have to add `react-dnd ^16.0.1` and `react-dnd-html5-backend ^16.0.1` to use dragndrop on virtualized table. Typically if you use `dragProps: {{ enabled: true }}` on `react/Table/Virtualized` component.
+You also need to wrap your table into the DnD Provider like so:
+```
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+
+<DndProvider backend={HTML5Backend}>...</DndProvider>
+```
+* **Filename:** You must use `<Icon />` component to use `icon` prop. So replace `<Filename icon={something} />` by `<Filename icon={<Icon icon={something} />} />`
+* You must have `react ^16.14.0` and `react-dom ^16.14.0`.
+
 ## [123.2.1](https://github.com/cozy/cozy-ui/compare/v123.2.0...v123.2.1) (2025-05-20)
 
 
