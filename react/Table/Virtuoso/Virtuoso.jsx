@@ -1,6 +1,7 @@
 import React, { useState, forwardRef } from 'react'
 import { TableVirtuoso } from 'react-virtuoso'
 
+import CustomDragLayer from './Dnd/CustomDrag/CustomDragLayer'
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
@@ -18,12 +19,14 @@ const VirtualizedTable = forwardRef(
       onSelectAll = () => {},
       isSelectedItem = () => {},
       componentsProps,
+      dragProps,
       ...props
     },
     ref
   ) => {
     const [order, setOrder] = useState('asc')
     const [orderBy, setOrderBy] = useState(defaultOrder)
+    const [itemsInDropProcess, setItemsInDropProcess] = useState([]) // array of Ids, for dragndrop feature
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
@@ -35,7 +38,7 @@ const VirtualizedTable = forwardRef(
     }
 
     const handleSelectAll = event => {
-      if (event.target.checked) {
+      if (event?.target?.checked) {
         onSelectAll(rows)
         return
       }
@@ -47,7 +50,13 @@ const VirtualizedTable = forwardRef(
         {...props}
         ref={ref}
         data={data}
-        context={{ isSelectedItem }}
+        context={{
+          isSelectedItem,
+          selectedItems,
+          dragProps,
+          itemsInDropProcess,
+          setItemsInDropProcess
+        }}
         components={virtuosoComponents}
         fixedHeaderContent={() => (
           <FixedHeaderContent
@@ -72,11 +81,24 @@ const VirtualizedTable = forwardRef(
           </RowContent>
         )}
         rowSpan={2}
-        // overscan={{ main: 500, reverse: 500 }}
-        // increaseViewportBy={500}
       />
     )
   }
 )
 
-export default React.memo(VirtualizedTable)
+VirtualizedTable.displayName = 'VirtualizedTable'
+
+const VirtuosoTableWrapper = props => {
+  if (!props.dragProps?.enabled) {
+    return <VirtualizedTable {...props} />
+  }
+
+  return (
+    <>
+      <CustomDragLayer dragId={props.dragProps.dragId} />
+      <VirtualizedTable {...props} />
+    </>
+  )
+}
+
+export default VirtuosoTableWrapper
