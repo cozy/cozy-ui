@@ -1,3 +1,10 @@
+# [124.1.0](https://github.com/cozy/cozy-ui/compare/v124.0.0...v124.1.0) (2025-05-26)
+
+
+### Features
+
+* **Icons:** Add cloud2, discuss, email-open, key2, peoples, secutiry ([76b2dff](https://github.com/cozy/cozy-ui/commit/76b2dff))
+
 # [124.0.0](https://github.com/cozy/cozy-ui/compare/v123.2.1...v124.0.0) (2025-05-22)
 
 
