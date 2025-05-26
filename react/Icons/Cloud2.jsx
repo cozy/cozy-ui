@@ -5,7 +5,7 @@ function SvgCloud2(props) {
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <g clipPath="url(#cloud2_svg__clip0_1426_12806)">
-        <mask id="cloud2_svg__a">
+        <mask id="cloud2_svg__a" fill="#fff">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
