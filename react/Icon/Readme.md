@@ -112,6 +112,7 @@ import CircleFilled from 'cozy-ui/transpiled/react/Icons/CircleFilled'
 import Clock from 'cozy-ui/transpiled/react/Icons/Clock'
 import ClockOutline from 'cozy-ui/transpiled/react/Icons/ClockOutline'
 import Cloud from 'cozy-ui/transpiled/react/Icons/Cloud'
+import Cloud2 from 'cozy-ui/transpiled/react/Icons/Cloud2'
 import CloudHappy from 'cozy-ui/transpiled/react/Icons/CloudHappy'
 import CloudRainbow from 'cozy-ui/transpiled/react/Icons/CloudRainbow'
 import CloudPlusOutlined from 'cozy-ui/transpiled/react/Icons/CloudPlusOutlined'
@@ -147,6 +148,7 @@ import DataControl from 'cozy-ui/transpiled/react/Icons/DataControl'
 import Debit from 'cozy-ui/transpiled/react/Icons/Debit'
 import DesktopDownload from 'cozy-ui/transpiled/react/Icons/DesktopDownload'
 import Devices from 'cozy-ui/transpiled/react/Icons/Devices'
+import Discuss from 'cozy-ui/transpiled/react/Icons/Discuss'
 import Dots from 'cozy-ui/transpiled/react/Icons/Dots'
 import Down from 'cozy-ui/transpiled/react/Icons/Down'
 import Download from 'cozy-ui/transpiled/react/Icons/Download'
@@ -160,6 +162,7 @@ import ElectricCar from 'cozy-ui/transpiled/react/Icons/ElectricCar'
 import ElectricScooter from 'cozy-ui/transpiled/react/Icons/ElectricScooter'
 import Email from 'cozy-ui/transpiled/react/Icons/Email'
 import EmailNotification from 'cozy-ui/transpiled/react/Icons/EmailNotification'
+import EmailOpen from 'cozy-ui/transpiled/react/Icons/EmailOpen'
 import Eu from 'cozy-ui/transpiled/react/Icons/Eu'
 import Euro from 'cozy-ui/transpiled/react/Icons/Euro'
 import Exchange from 'cozy-ui/transpiled/react/Icons/Exchange'
@@ -205,6 +208,7 @@ import Info from 'cozy-ui/transpiled/react/Icons/Info'
 import InfoOutlined from 'cozy-ui/transpiled/react/Icons/InfoOutlined'
 import Justice from 'cozy-ui/transpiled/react/Icons/Justice'
 import Key from 'cozy-ui/transpiled/react/Icons/Key'
+import Key2 from 'cozy-ui/transpiled/react/Icons/Key2'
 import LabelOutlined from 'cozy-ui/transpiled/react/Icons/LabelOutlined'
 import Laudry from 'cozy-ui/transpiled/react/Icons/Laudry'
 import Laptop from 'cozy-ui/transpiled/react/Icons/Laptop'
@@ -250,6 +254,7 @@ import Paperplane from 'cozy-ui/transpiled/react/Icons/Paperplane'
 import Password from 'cozy-ui/transpiled/react/Icons/Password'
 import Pen from 'cozy-ui/transpiled/react/Icons/Pen'
 import People from 'cozy-ui/transpiled/react/Icons/People'
+import Peoples from 'cozy-ui/transpiled/react/Icons/Peoples'
 import Percent from 'cozy-ui/transpiled/react/Icons/Percent'
 import PercentCircle from 'cozy-ui/transpiled/react/Icons/PercentCircle'
 import PersonAdd from 'cozy-ui/transpiled/react/Icons/PersonAdd'
@@ -285,6 +290,7 @@ import SadCozy from 'cozy-ui/transpiled/react/Icons/SadCozy'
 import Safe from 'cozy-ui/transpiled/react/Icons/Safe'
 import School from 'cozy-ui/transpiled/react/Icons/School'
 import Scooter from 'cozy-ui/transpiled/react/Icons/Scooter'
+import Security from 'cozy-ui/transpiled/react/Icons/Security'
 import SelectAll from 'cozy-ui/transpiled/react/Icons/SelectAll'
 import Server from 'cozy-ui/transpiled/react/Icons/Server'
 import Setting from 'cozy-ui/transpiled/react/Icons/Setting'
@@ -387,6 +393,7 @@ const icons = [
   Clock,
   ClockOutline,
   Cloud,
+  Cloud2,
   CloudHappy,
   CloudRainbow,
   CloudPlusOutlined,
@@ -422,6 +429,7 @@ const icons = [
   Debit,
   DesktopDownload,
   Devices,
+  Discuss,
   Dots,
   Down,
   Download,
@@ -434,6 +442,7 @@ const icons = [
   ElectricCar,
   ElectricScooter,
   EmailNotification,
+  EmailOpen,
   Email,
   Eu,
   Euro,
@@ -480,6 +489,7 @@ const icons = [
   Info,
   Justice,
   Key,
+  Key2,
   LabelOutlined,
   Laudry,
   Laptop,
@@ -525,6 +535,7 @@ const icons = [
   Password,
   Pen,
   People,
+  Peoples,
   Percent,
   PercentCircle,
   PersonAdd,
@@ -560,6 +571,7 @@ const icons = [
   Safe,
   School,
   Scooter,
+  Security,
   SelectAll,
   Server,
   Setting,
@@ -974,7 +986,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud-rainbow','cloud-plus-outlined','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','desktop-download','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder-open','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','mosaic','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','number','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','person-add','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','server','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','stop', 'subway', 'support', 'swap', 'sync-cozy','sync','tab','tag','target','task','team','telecom','telephone','text','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud-rainbow','cloud-plus-outlined','cloud','cloud2','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','desktop-download','devices','discuss','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email-open','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder-open','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','key2','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','mosaic','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','number','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','peoples','percent-circle','percent','person-add','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','secutiry','select-all','server','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','stop', 'subway', 'support', 'swap', 'sync-cozy','sync','tab','tag','target','task','team','telecom','telephone','text','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
 ;
 
 <Grid container spacing={2}>
