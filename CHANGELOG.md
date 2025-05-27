@@ -1,3 +1,10 @@
+## [124.1.1](https://github.com/cozy/cozy-ui/compare/v124.1.0...v124.1.1) (2025-05-27)
+
+
+### Bug Fixes
+
+* **Icons:** cloud2 wasn't correct ([f846901](https://github.com/cozy/cozy-ui/commit/f846901))
+
 # [124.1.0](https://github.com/cozy/cozy-ui/compare/v124.0.0...v124.1.0) (2025-05-26)
 
 
