@@ -73,7 +73,7 @@ export default ({ children }) => {
           {children}
         </Paper>
       </CozyTheme>
-      {isUsingDevStyleguidist() && (
+      {/* {isUsingDevStyleguidist() && (
         <>
           <Divider />
           <CozyTheme variant={otherVariant}>
@@ -85,7 +85,7 @@ export default ({ children }) => {
             </Paper>
           </CozyTheme>
         </>
-      )}
+      )} */}
     </CozyTheme>
   )
 }
