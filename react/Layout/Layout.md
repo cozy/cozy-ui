@@ -34,6 +34,7 @@ import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
+import Variants from 'cozy-ui/docs/components/Variants'
 
 /**
  * In a normal app, ExampleRouterNavLink is from react-router
@@ -50,13 +51,6 @@ const ExampleRouterNavLink = ({ children, className, active, activeClassName, on
 const NavLink = genNavLink(ExampleRouterNavLink)
 
 // Not necessary in a normal app
-const styles = {
-  layout: {
-    position: 'relative',
-    transform: 'translateZ(0)'
-  }
-}
-
 const useStyles = makeStyles({
   layout: {
     position: 'relative',
@@ -67,12 +61,13 @@ const useStyles = makeStyles({
   }
 })
 
+const initialVariants = [{ monoColumn: false, withTopBar: true }]
+const [active, setActive] = useState(['Section 1', 'Subsection 1'])
+const styles = useStyles()
+
 ;
 
-const Example = () => {
-  const [active, setActive] = useState(['Section 1', 'Subsection 1'])
-  const styles = useStyles()
-
+const SideBar = ({ variant }) => {
   // makeProps is not necessary in a normal app since react-router sets active
   // and onClick by itself
   const makeProps = route => {
@@ -80,7 +75,7 @@ const Example = () => {
     return { onClick: () => setActive(route), active: routeIsMatching }
   }
 
-  return <Layout className={styles.layout}>
+  return (
     <Sidebar>
       <Nav>
         <NavItem>
@@ -114,53 +109,27 @@ const Example = () => {
         </NavItem>
       </Nav>
     </Sidebar>
-    <Main>
-      <Content className='u-p-1'>
-        <h2 className='u-mt-0'>{ active.join(' / ') }</h2>
-        { content.ada.short }
-      </Content>
-    </Main>
-  </Layout>
-}
-
-<DemoProvider>
-  <Example />
-</DemoProvider>
-```
-
-`monoColumn` option (without sidebar)
-
-```jsx
-import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout'
-import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
-import { makeStyles } from 'cozy-ui/transpiled/react/styles'
-
-// Not necessary in a normal app
-const useStyles = makeStyles({
-  layout: {
-    '& > main': {
-      minHeight: 'unset'
-    }
-  }
-})
-
-const Example = () => {
-  const styles = useStyles()
-
-  return (
-    <Layout className={styles.layout} monoColumn>
-        <Main>
-          <Content className='u-p-1'>
-            { content.ada.short }
-          </Content>
-        </Main>
-    </Layout>
   )
 }
 
-;
-
-<DemoProvider>
-  <Example />
-</DemoProvider>
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
+    <DemoProvider>
+      <Layout
+        className={styles.layout}
+        withTopBar={variant.withTopBar}
+        monoColumn={variant.monoColumn}
+      >
+        {!variant.monoColumn && <SideBar variant={variant} />}
+        {variant.withTopBar && <div className="u-flex-m u-dn u-flex-items-center u-pos-absolute u-top-0 u-w-100" style={{ height: '48px', backgroundColor: 'var(--defaultBackgroundColor)' }}>Fake TopBar</div>}
+        <Main>
+          <Content className='u-p-1'>
+            <h2 className='u-mt-0'>{ active.join(' / ') }</h2>
+            { content.ada.short }
+          </Content>
+        </Main>
+      </Layout>
+    </DemoProvider>
+  )}
+</Variants>
 ```
