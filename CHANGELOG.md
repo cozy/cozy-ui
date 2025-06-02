@@ -1,3 +1,10 @@
+# [124.2.0](https://github.com/cozy/cozy-ui/compare/v124.1.1...v124.2.0) (2025-06-02)
+
+
+### Features
+
+* **Layout:** Spaces and responsive behavior wasn't correct ([3ad1a51](https://github.com/cozy/cozy-ui/commit/3ad1a51))
+
 ## [124.1.1](https://github.com/cozy/cozy-ui/compare/v124.1.0...v124.1.1) (2025-05-27)
 
 
