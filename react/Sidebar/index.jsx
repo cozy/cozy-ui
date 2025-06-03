@@ -25,11 +25,7 @@ const Sidebar = ({ children, className, ...restProps }) => {
   return (
     <aside
       id="sidebar"
-      className={cx(
-        styles['o-sidebar'],
-        [styles['o-sidebar--large']],
-        className
-      )}
+      className={cx(styles['o-sidebar'], className)}
       {...restProps}
     >
       {children}
