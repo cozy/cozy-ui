@@ -29,11 +29,13 @@ const NavLink = genNavLink(
     <a className={cx(className, active ? activeClassName : null)}>{children}</a>
   )
 )
+
+const demoStyle = { position: "initial" }
 // -->
 
 ;
 
-<Sidebar id='sidebar'>
+<Sidebar id='sidebar' style={demoStyle}>
   <Nav>
     <NavItem id='nav-item'>
       <NavLink to="/warn" active>

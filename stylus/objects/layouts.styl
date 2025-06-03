@@ -50,8 +50,7 @@ $elastic-content
 $elastic-bar
     flex 0 0 auto
 
-// One column layout
-$app
+$app-layout
     box-sizing border-box
     display flex
     max-width 100%
@@ -60,102 +59,107 @@ $app
     background-color var(--paperBackgroundColor)
     color var(--primaryTextColor)
 
-    main
-        display flex
-        flex-direction column
-        flex 0 0 auto
-
-    main,
-    main > [role=contentinfo], // Deprecated
-    main > [role=main]
-        position relative
-        display flex
-        flex-direction column
-        flex 1 1 auto
-        box-sizing border-box
-        height 100%
-        overflow-x hidden
-        overflow-y auto
-
     +medium-screen() // mobile + tablet
         display block
 
+    // One column layout
+    &-monocolumn
+        &--topbar
+            +medium-screen() // mobile + tablet
+                // this pseudo-element is "ghost" element replacing bar
+                &:before
+                    content ''
+                    display block
+                    height barHeight
+
+    // When you want a sidebar
+    &-2panes
+        flex 0 0 100%
+        align-items stretch
+
+        +medium-screen() // mobile + tablet
+            // this pseudo-element is "ghost" element replacing nav
+            &:after
+                content ''
+                display block
+                height navHeight
+
+        &--topbar
+            +medium-screen() // mobile + tablet
+                // this pseudo-element is "ghost" element replacing bar
+                &:before
+                    content ''
+                    display block
+                    height barHeight
+
+$app-main
+    display flex
+    flex-direction column
+    position relative
+    flex 1 1 auto
+    box-sizing border-box
+    overflow-x hidden
+    overflow-y auto
+
+    +medium-screen() // mobile + tablet
+        display block
+        overflow visible
         // iPhone X environment tweak
-        main
-            padding-left env(safe-area-inset-left)
-            padding-right env(safe-area-inset-right)
-            padding-bottom env(safe-area-inset-bottom)
+        padding-left env(safe-area-inset-left)
+        padding-right env(safe-area-inset-right)
+        padding-bottom env(safe-area-inset-bottom)
+
+    &-monocolumn
+        height 100%
+
+        +medium-screen() // mobile + tablet
             min-height 100vh
 
-        main,
-        main > [role=contentinfo], // Deprecated
-        main > [role=main]
-            display block
-            overflow visible
+        &--topbar
+            +medium-screen() // mobile + tablet
+                min-height 'calc(100vh - %s)' % barHeight
 
-$app--withTopBar
-    +medium-screen() // mobile + tablet
-        main
-            min-height 'calc(100vh - %s)' % barHeight
-
-        // this pseudo-element is "ghost" element replacing bar
-        &:before
-            content ''
-            display block
-            height barHeight
-
-// STICKY layout
-// When you want a sidebar and you want it to act like a sticky footer on mobile
-$app-2panes-sticky
-    @extend $app
-    flex 0 0 100%
-    align-items stretch
-
-    & > aside
-        display flex
-        flex-direction column
-        flex 0 0 auto
-
-    main,
-    main > [role=contentinfo], // Deprecated
-    main > [role=main]
+    &-2panes
         height auto
 
-    // rounded effect
-    +medium-screen('min') // desktop only
-        main
+        // rounded effect
+        +medium-screen('min') // desktop only
             background-color var(--defaultBackgroundColor)
 
-            & > [role=main]
-                margin 1rem 1rem 1rem 0
-                border-radius 1rem
-                background-color var(--paperBackgroundColor)
-
-    +medium-screen() // mobile + tablet
-        main
+        +medium-screen() // mobile + tablet
             min-height calc(100vh - var(--sidebarHeight))
 
-        // this pseudo-element is "ghost" element replacing nav
-        &:after
-            content ''
-            display block
-            height navHeight
+        &--topbar
+            +medium-screen() // mobile + tablet
+                min-height 'calc(100vh - var(--sidebarHeight) - %s)' % barHeight
 
-        > aside
-            position fixed
-            bottom 0
-            left 0
-            display block
-            z-index var(--zIndex-nav)
-            width 100%
+$app-content
+    position relative
+    display flex
+    flex-direction column
+    flex 1 1 auto
+    box-sizing border-box
+    overflow-x hidden
+    overflow-y auto
 
-$app-2panes--withTopBar
     +medium-screen() // mobile + tablet
-        main
-            min-height 'calc(100vh - var(--sidebarHeight) - %s)' % barHeight
+        display block
+        overflow visible
 
-        // this pseudo-element is "ghost" element replacing bar
-        &:before
-            content ''
-            display block
-            height barHeight
+    &-monocolumn
+        height 100%
+
+        &--topbar
+            //
+
+    &-2panes
+        height auto
+
+        // rounded effect
+        +medium-screen('min') // desktop only
+            margin 1rem 1rem 1rem 0
+            border-radius 1rem
+            background-color var(--paperBackgroundColor)
+
+        &--topbar
+            //
