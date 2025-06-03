@@ -48,7 +48,7 @@ export const Layout = ({
           styles['o-layout'],
           styles[`o-layout-${variant}`],
           {
-            [styles[`o-layout-${variant}--topbar`]]: withTopBar
+            [styles[`o-layout-topbar`]]: withTopBar
           }
         )}
         {...props}
@@ -81,7 +81,7 @@ export const Main = ({ className, children, ...props }) => {
 }
 
 export const Content = ({ className, children, ...props }) => {
-  const { monoColumn, withTopBar } = useLayout()
+  const { monoColumn } = useLayout()
   const variant = monoColumn ? 'monocolumn' : '2panes'
 
   return (
@@ -90,10 +90,7 @@ export const Content = ({ className, children, ...props }) => {
       className={cx(
         className,
         styles['o-layout-content'],
-        styles[`o-layout-content-${variant}`],
-        {
-          [styles[`o-layout-content-${variant}--topbar`]]: withTopBar
-        }
+        styles[`o-layout-content-${variant}`]
       )}
       {...props}
     >

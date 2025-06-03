@@ -62,15 +62,13 @@ $app-layout
     +medium-screen() // mobile + tablet
         display block
 
-    // One column layout
-    &-monocolumn
-        &--topbar
-            +medium-screen() // mobile + tablet
-                // this pseudo-element is "ghost" element replacing bar
-                &:before
-                    content ''
-                    display block
-                    height barHeight
+    &-topbar
+        +medium-screen() // mobile + tablet
+            // this pseudo-element is "ghost" element replacing bar
+            &:before
+                content ''
+                display block
+                height barHeight
 
     // When you want a sidebar
     &-2panes
@@ -83,14 +81,6 @@ $app-layout
                 content ''
                 display block
                 height navHeight
-
-        &--topbar
-            +medium-screen() // mobile + tablet
-                // this pseudo-element is "ghost" element replacing bar
-                &:before
-                    content ''
-                    display block
-                    height barHeight
 
 $app-main
     display flex
@@ -149,9 +139,6 @@ $app-content
     &-monocolumn
         height 100%
 
-        &--topbar
-            //
-
     &-2panes
         height auto
 
@@ -160,6 +147,3 @@ $app-content
             margin 1rem 1rem 1rem 0
             border-radius 1rem
             background-color var(--paperBackgroundColor)
-
-        &--topbar
-            //
