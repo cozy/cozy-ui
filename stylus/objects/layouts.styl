@@ -111,13 +111,11 @@ $app-main
 
     &-2panes
         height auto
-
-        // rounded effect
-        +medium-screen('min') // desktop only
-            background-color var(--defaultBackgroundColor)
+        background-color var(--defaultBackgroundColor)
 
         +medium-screen() // mobile + tablet
             min-height calc(100vh - var(--sidebarHeight))
+            background-color transparent
 
         &--topbar
             +medium-screen() // mobile + tablet
@@ -141,9 +139,11 @@ $app-content
 
     &-2panes
         height auto
+        margin 1rem 1rem 1rem 0
+        border-radius 1rem
+        background-color var(--paperBackgroundColor)
 
-        // rounded effect
-        +medium-screen('min') // desktop only
-            margin 1rem 1rem 1rem 0
-            border-radius 1rem
-            background-color var(--paperBackgroundColor)
+        +medium-screen() // mobile + tablet
+            margin 0
+            border-radius 0
+            background-color transparent
