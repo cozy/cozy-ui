@@ -1,13 +1,10 @@
 @require '../../stylus/objects/layouts'
 
 .o-layout
-    @extend $app
+    @extend $app-layout
 
-.o-layout--withTopBar
-    @extend $app--withTopBar
+.o-layout-main
+    @extend $app-main
 
-.o-layout-2panes
-    @extend $app-2panes-sticky
-
-.o-layout-2panes--withTopBar
-    @extend $app-2panes--withTopBar
+.o-layout-content
+    @extend $app-content
