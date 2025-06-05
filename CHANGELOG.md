@@ -1,3 +1,18 @@
+# [125.0.0](https://github.com/cozy/cozy-ui/compare/v124.2.0...v125.0.0) (2025-06-05)
+
+
+### Features
+
+* **Dialogs:** Add 50ms delay before showing backdrop ([868c2b7](https://github.com/cozy/cozy-ui/commit/868c2b7))
+* **Layout:** Add refs on. Layout, Main and Content ([98ab20e](https://github.com/cozy/cozy-ui/commit/98ab20e))
+* **Layout:** Always use background-color for Content ([f510fd0](https://github.com/cozy/cozy-ui/commit/f510fd0))
+* **Layout:** Move style into sidebar and isolate layout styles ([f9045e9](https://github.com/cozy/cozy-ui/commit/f9045e9))
+
+
+### BREAKING CHANGES
+
+* **Layout:** Layout doesn't apply style on Main and Content anymore, they have their own styles now. So if you didn't use these components but, for example, `<main>` instead of `<Main>` and `<div role="main">` instead of `<Content>`, you could have a style problem. So prefer `Main` and `Content` components.
+
 # [124.2.0](https://github.com/cozy/cozy-ui/compare/v124.1.1...v124.2.0) (2025-06-02)
 
 
