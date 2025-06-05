@@ -56,6 +56,13 @@ const useCozyDialog = props => {
       }`,
       scrollPaper: scrollPaperClassName
     },
+    BackdropProps: {
+      style: {
+        transitionDelay: 50,
+        ...otherProps?.BackdropProps?.style
+      },
+      ...otherProps.BackdropProps
+    },
     TransitionProps: {
       fullScreen,
       ...otherProps.TransitionProps
