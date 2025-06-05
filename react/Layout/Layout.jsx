@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import React, { createContext, useContext, useMemo } from 'react'
+import React, { createContext, forwardRef, useContext, useMemo } from 'react'
 
 import styles from './styles.styl'
 
@@ -31,40 +31,40 @@ const LayoutProvider = React.memo(({ monoColumn, withTopBar, children }) => {
 
 LayoutProvider.displayName = 'LayoutProvider'
 
-export const Layout = ({
-  children,
-  className,
-  monoColumn,
-  withTopBar,
-  ...props
-}) => {
-  const variant = monoColumn ? 'monocolumn' : '2panes'
+export const Layout = forwardRef(
+  ({ children, className, monoColumn, withTopBar, ...props }, ref) => {
+    const variant = monoColumn ? 'monocolumn' : '2panes'
 
-  return (
-    <LayoutProvider monoColumn={monoColumn} withTopBar={withTopBar}>
-      <div
-        className={cx(
-          className,
-          styles['o-layout'],
-          styles[`o-layout-${variant}`],
-          {
-            [styles[`o-layout-topbar`]]: withTopBar
-          }
-        )}
-        {...props}
-      >
-        {children}
-      </div>
-    </LayoutProvider>
-  )
-}
+    return (
+      <LayoutProvider monoColumn={monoColumn} withTopBar={withTopBar}>
+        <div
+          ref={ref}
+          className={cx(
+            className,
+            styles['o-layout'],
+            styles[`o-layout-${variant}`],
+            {
+              [styles[`o-layout-topbar`]]: withTopBar
+            }
+          )}
+          {...props}
+        >
+          {children}
+        </div>
+      </LayoutProvider>
+    )
+  }
+)
 
-export const Main = ({ className, children, ...props }) => {
+Layout.displayName = 'Layout'
+
+export const Main = forwardRef(({ className, children, ...props }, ref) => {
   const { monoColumn, withTopBar } = useLayout()
   const variant = monoColumn ? 'monocolumn' : '2panes'
 
   return (
     <main
+      ref={ref}
       className={cx(
         className,
         styles['o-layout-main'],
@@ -78,15 +78,18 @@ export const Main = ({ className, children, ...props }) => {
       {children}
     </main>
   )
-}
+})
 
-export const Content = ({ className, children, ...props }) => {
+Main.displayName = 'Main'
+
+export const Content = forwardRef(({ className, children, ...props }, ref) => {
   const { monoColumn } = useLayout()
   const variant = monoColumn ? 'monocolumn' : '2panes'
 
   return (
     <div
       role="main"
+      ref={ref}
       className={cx(
         className,
         styles['o-layout-content'],
@@ -97,7 +100,9 @@ export const Content = ({ className, children, ...props }) => {
       {children}
     </div>
   )
-}
+})
+
+Content.displayName = 'Content'
 
 Layout.propTypes = {
   children: PropTypes.node,
