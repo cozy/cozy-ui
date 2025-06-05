@@ -6,7 +6,7 @@ import { getBoundT } from 'cozy-client/dist/models/document/locales'
 
 import Icon from '../Icon'
 import FileTypeNoteIcon from '../Icons/FileTypeNote'
-import QualificationIconStack from '../QualificationIconStack'
+import QualificationIcon from '../QualificationIcon'
 
 export const makeOptions = lang => {
   const qualifT = getBoundT(lang)
@@ -16,12 +16,12 @@ export const makeOptions = lang => {
       {
         id: 'none',
         title: qualifT('Scan.themes.none'),
-        icon: <QualificationIconStack />
+        icon: <QualificationIcon />
       },
       ...themesList.map(theme => ({
         id: theme.id,
         title: qualifT(`Scan.themes.${theme.label}`),
-        icon: <QualificationIconStack theme={theme.label} />,
+        icon: <QualificationIcon theme={theme.label} />,
         children: theme.items.map(item => ({
           id: item.label,
           item,
@@ -29,7 +29,7 @@ export const makeOptions = lang => {
           icon: isQualificationNote(item) ? (
             <Icon icon={FileTypeNoteIcon} size={64} />
           ) : (
-            <QualificationIconStack qualification={item.label} />
+            <QualificationIcon qualification={item.label} />
           )
         }))
       }))
