@@ -1,20 +1,25 @@
 import throttle from 'lodash/throttle'
+import PropTypes from 'prop-types'
 import React, { createContext, useContext, useState, useEffect } from 'react'
 
-import breakpointDefs, {
-  getBreakpointsStatus as _getBreakpointsStatus
-} from '../../helpers/breakpoints'
-
-const getBreakpointsStatus = () => _getBreakpointsStatus(breakpointDefs)
+import { useIframeConnection } from './useIframeConnection'
+import { useIframeToSendWidth } from './useIframeToSendWidth'
+import { useParentBreakpoints } from './useParentBreakpoints'
+import breakpointDefs, { getBreakpointsStatus } from '../../helpers/breakpoints'
 
 const BreakpointsCtx = createContext(null)
 
-export const BreakpointsProvider = ({ children }) => {
-  const [breakpoints, setBreakpoints] = useState(getBreakpointsStatus())
+export const BreakpointsProvider = ({ parentBasedIframe, children }) => {
+  const [breakpoints, setBreakpoints] = useState(
+    getBreakpointsStatus(breakpointDefs)
+  )
+  const { hasIframe } = useIframeConnection({ parentBasedIframe })
+  useIframeToSendWidth({ hasIframe })
+  const { parentBreakpoints } = useParentBreakpoints({ parentBasedIframe })
 
   useEffect(() => {
     const handleResize = throttle(() => {
-      setBreakpoints(getBreakpointsStatus())
+      setBreakpoints(getBreakpointsStatus(breakpointDefs))
     }, 100)
 
     window.addEventListener('resize', handleResize)
@@ -25,10 +30,19 @@ export const BreakpointsProvider = ({ children }) => {
   }, [])
 
   return (
-    <BreakpointsCtx.Provider value={breakpoints}>
+    <BreakpointsCtx.Provider value={parentBreakpoints || breakpoints}>
       {children}
     </BreakpointsCtx.Provider>
   )
+}
+
+BreakpointsProvider.defaultProps = {
+  parentBasedIframe: false
+}
+
+BreakpointsProvider.propTypes = {
+  /** Iframes breakpoints are based on parent window inner width instead of iframe inner width  */
+  parentBasedIframe: PropTypes.bool
 }
 
 export const useBreakpoints = () => {

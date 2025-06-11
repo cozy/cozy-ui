@@ -16,12 +16,20 @@ const breakpoints = {
   isMobile: [0, small]
 }
 
-export const getBreakpointsStatus = breakpoints => {
-  const width = window.innerWidth
+export const getBreakpointsStatus = (breakpoints, innerWidth) => {
+  const width = innerWidth || window.innerWidth
   return mapValues(
     breakpoints,
     ([min, max]) => width >= min && (max === undefined || width <= max)
   )
+}
+
+export const isInsideIframe = () => {
+  try {
+    return window.self !== window.top
+  } catch (e) {
+    return true
+  }
 }
 
 export default breakpoints
