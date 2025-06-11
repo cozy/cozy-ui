@@ -586,8 +586,8 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiDialog: {
     paper: {
+      width: '100%',
       '&.small': {
-        width: '480px',
         maxWidth: '480px',
         [theme.breakpoints.down('md')]: {
           margin: '16px',
@@ -602,19 +602,12 @@ export const makeLightNormalOverrides = theme => ({
         }
       },
       '&.medium': {
-        [theme.breakpoints.up('md')]: {
-          width: '544px',
-          maxWidth: '544px'
-        }
+        maxWidth: '544px'
       },
       '&.large': {
-        [theme.breakpoints.up('md')]: {
-          width: '800px',
-          maxWidth: '800px'
-        }
+        maxWidth: '800px'
       },
       '&.full': {
-        width: '100%',
         maxWidth: '100%'
       }
     },
@@ -624,6 +617,15 @@ export const makeLightNormalOverrides = theme => ({
       }
     },
     paperFullScreen: {
+      '&.small': {
+        maxWidth: '100%'
+      },
+      '&.medium': {
+        maxWidth: '100%'
+      },
+      '&.large': {
+        maxWidth: '100%'
+      },
       '& .cozyDialogActions': {
         paddingBottom: `calc(env(safe-area-inset-bottom) + ${getFlagshipCssVar(
           'bottom'
