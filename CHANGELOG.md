@@ -1,3 +1,15 @@
+# [125.1.0](https://github.com/cozy/cozy-ui/compare/v125.0.0...v125.1.0) (2025-06-11)
+
+
+### Bug Fixes
+
+* **Dialog:** Width wasn't correct for small screens ([0951f70](https://github.com/cozy/cozy-ui/commit/0951f70))
+
+
+### Features
+
+* **BreakpointsProvider:** Add `parentBasedIframe` prop ([4a49946](https://github.com/cozy/cozy-ui/commit/4a49946))
+
 # [125.0.0](https://github.com/cozy/cozy-ui/compare/v124.2.0...v125.0.0) (2025-06-05)
 
 
