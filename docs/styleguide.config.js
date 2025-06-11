@@ -100,7 +100,6 @@ module.exports = {
         '../react/Table',
         '../react/QualificationGrid',
         '../react/QualificationIcon',
-        '../react/QualificationIconStack',
         '../react/QualificationItem',
         '../react/QualificationModal',
         '../react/UploadQueue'
