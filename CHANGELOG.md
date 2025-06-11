@@ -1,3 +1,16 @@
+# [126.0.0](https://github.com/cozy/cozy-ui/compare/v125.1.0...v126.0.0) (2025-06-11)
+
+
+### Features
+
+* Add new QualificationIcon and use it in QualificationModal ([65cadc4](https://github.com/cozy/cozy-ui/commit/65cadc4))
+* Remove QualificationIconStack component ([d520f80](https://github.com/cozy/cozy-ui/commit/d520f80))
+
+
+### BREAKING CHANGES
+
+* You must replace `QualificationIconStack` by `QualificationIcon`
+
 # [125.1.0](https://github.com/cozy/cozy-ui/compare/v125.0.0...v125.1.0) (2025-06-11)
 
 
