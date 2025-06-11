@@ -15,6 +15,8 @@ completely change the content, the layout, or prune away complete
 subtrees (useful on mobile where space is at a premium). Here for
 example, the square contents changes on desktop or mobile.
 
+By default, using `useBreakpoints` inside an iframe will refere to the iframe inner width. If you use `parentBasedIframe=true` on the provider wrapping the iframe, the breakpoints returned inside the iframe will refere to the parent window inner width instead.
+
 ```jsx
 import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
