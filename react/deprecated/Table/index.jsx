@@ -4,66 +4,58 @@ import React from 'react'
 
 import styles from './styles.styl'
 
-export const Table = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
-  return <div className={cx(styles.Table, className)} {...rest} ref={ref} />
+export const Table = React.forwardRef(({ className, ...props }, ref) => {
+  return <div className={cx(styles.Table, className)} {...props} ref={ref} />
 })
 
-export const TableHead = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
-  return <div className={cx(styles.TableHead, className)} {...rest} ref={ref} />
-})
-
-export const TableBody = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
-  return <div className={cx(styles.TableBody, className)} {...rest} ref={ref} />
-})
-
-export const TableRow = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
-  return <div className={cx(styles.TableRow, className)} {...rest} ref={ref} />
-})
-
-export const TableCell = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
-  return <div className={cx(styles.TableCell, className)} {...rest} ref={ref} />
-})
-
-export const TableHeader = React.forwardRef((props, ref) => {
-  const { className, ...rest } = props
-
+export const TableHead = React.forwardRef(({ className, ...props }, ref) => {
   return (
-    <div className={cx(styles.TableHeader, className)} {...rest} ref={ref} />
+    <div className={cx(styles.TableHead, className)} {...props} ref={ref} />
+  )
+})
+
+export const TableBody = React.forwardRef(({ className, ...props }, ref) => {
+  return (
+    <div className={cx(styles.TableBody, className)} {...props} ref={ref} />
+  )
+})
+
+export const TableRow = React.forwardRef(({ className, ...props }, ref) => {
+  return <div className={cx(styles.TableRow, className)} {...props} ref={ref} />
+})
+
+export const TableCell = React.forwardRef(({ className, ...props }, ref) => {
+  return (
+    <div className={cx(styles.TableCell, className)} {...props} ref={ref} />
+  )
+})
+
+export const TableHeader = React.forwardRef(({ className, ...props }, ref) => {
+  return (
+    <div className={cx(styles.TableHeader, className)} {...props} ref={ref} />
   )
 })
 
 Table.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
+
 TableHead.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
+
 TableBody.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
 
 TableRow.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
+
 TableCell.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
+
 TableHeader.propTypes = {
-  className: PropTypes.string,
-  ref: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  className: PropTypes.string
 }
