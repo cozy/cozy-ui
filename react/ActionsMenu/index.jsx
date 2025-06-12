@@ -29,7 +29,7 @@ const ActionsMenu = forwardRef(
     return (
       <ActionsMenuWrapper
         {...props}
-        anchorEl={ref.current}
+        anchorEl={ref?.current}
         getContentAnchorEl={null}
         anchorOrigin={anchorOrigin}
         transformOrigin={transformOrigin}
