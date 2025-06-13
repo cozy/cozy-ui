@@ -1,3 +1,10 @@
+# [126.1.0](https://github.com/cozy/cozy-ui/compare/v126.0.0...v126.1.0) (2025-06-13)
+
+
+### Features
+
+* Add OnlyOffice icon ([fd8d3c0](https://github.com/cozy/cozy-ui/commit/fd8d3c0))
+
 # [126.0.0](https://github.com/cozy/cozy-ui/compare/v125.1.0...v126.0.0) (2025-06-11)
 
 
