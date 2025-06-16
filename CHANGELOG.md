@@ -1,3 +1,15 @@
+# [126.2.0](https://github.com/cozy/cozy-ui/compare/v126.1.0...v126.2.0) (2025-06-16)
+
+
+### Bug Fixes
+
+* **Table:** Remove warning when using `ref` ([d81f9cb](https://github.com/cozy/cozy-ui/commit/d81f9cb))
+
+
+### Features
+
+* **ActionMenu:** Using `ref` is now optional ([e9f951f](https://github.com/cozy/cozy-ui/commit/e9f951f))
+
 # [126.1.0](https://github.com/cozy/cozy-ui/compare/v126.0.0...v126.1.0) (2025-06-13)
 
 
