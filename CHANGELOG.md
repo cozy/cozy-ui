@@ -1,3 +1,10 @@
+# [126.3.0](https://github.com/cozy/cozy-ui/compare/v126.2.0...v126.3.0) (2025-06-17)
+
+
+### Features
+
+* **ExtendableFab:** Forward ref in ExtendableFab component ([86e0b93](https://github.com/cozy/cozy-ui/commit/86e0b93))
+
 # [126.2.0](https://github.com/cozy/cozy-ui/compare/v126.1.0...v126.2.0) (2025-06-16)
 
 
