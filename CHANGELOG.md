@@ -1,3 +1,10 @@
+# [126.4.0](https://github.com/cozy/cozy-ui/compare/v126.3.0...v126.4.0) (2025-06-17)
+
+
+### Features
+
+* **VirtualizedTable:** Lazy load dragndrop components ([620846e](https://github.com/cozy/cozy-ui/commit/620846e))
+
 # [126.3.0](https://github.com/cozy/cozy-ui/compare/v126.2.0...v126.3.0) (2025-06-17)
 
 
