@@ -1,14 +1,11 @@
 import React, { useState, forwardRef } from 'react'
 import { TableVirtuoso } from 'react-virtuoso'
 
+import CustomDragLayer from './Dnd/CustomDrag/CustomDragLayer'
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
 import virtuosoComponents from './virtuosoComponents'
-
-const CustomDragLayer = React.lazy(() =>
-  import('./Dnd/CustomDrag/CustomDragLayer')
-)
 
 const VirtualizedTable = forwardRef(
   (
@@ -96,10 +93,10 @@ const VirtuosoTableWrapper = props => {
     return <VirtualizedTable {...props} />
   } else {
     return (
-      <React.Suspense>
+      <>
         <CustomDragLayer dragId={props.dragProps.dragId} />
         <VirtualizedTable {...props} />
-      </React.Suspense>
+      </>
     )
   }
 }

@@ -1,5 +1,7 @@
 import React, { forwardRef } from 'react'
 
+import DnDConfigWrapper from './Dnd/DnDConfigWrapper'
+import TableRowDnD from './Dnd/TableRow'
 import Table from '..'
 import Paper from '../../Paper'
 import TableBody from '../../TableBody'
@@ -7,9 +9,6 @@ import TableContainer from '../../TableContainer'
 import TableFooter from '../../TableFooter'
 import TableHead from '../../TableHead'
 import TableRow from '../../TableRow'
-
-const DnDConfigWrapper = React.lazy(() => import('./Dnd/DnDConfigWrapper'))
-const TableRowDnD = React.lazy(() => import('./Dnd/TableRow'))
 
 const _TableContainer = forwardRef((props, ref) => (
   <TableContainer
@@ -28,11 +27,9 @@ const virtuosoComponents = {
       return <_TableContainer {...props} ref={ref} />
     } else {
       return (
-        <React.Suspense>
-          <DnDConfigWrapper ref={ref}>
-            <_TableContainer {...props} ref={ref} />
-          </DnDConfigWrapper>
-        </React.Suspense>
+        <DnDConfigWrapper ref={ref}>
+          <_TableContainer {...props} ref={ref} />
+        </DnDConfigWrapper>
       )
     }
   }),
@@ -48,16 +45,14 @@ const virtuosoComponents = {
       return <TableRow {...props} ref={ref} selected={isSelected} hover />
     } else {
       return (
-        <React.Suspense>
-          <TableRowDnD
-            {...props}
-            item={item}
-            context={context}
-            selected={isSelected}
-            disabled={isDisabled}
-            hover
-          />
-        </React.Suspense>
+        <TableRowDnD
+          {...props}
+          item={item}
+          context={context}
+          selected={isSelected}
+          disabled={isDisabled}
+          hover
+        />
       )
     }
   })
