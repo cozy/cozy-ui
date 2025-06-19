@@ -14,10 +14,10 @@ const VirtualizedTable = forwardRef(
       columns,
       defaultOrder,
       secondarySort,
-      selectedItems = [],
-      onSelect = () => {},
-      onSelectAll = () => {},
-      isSelectedItem = () => {},
+      selectedItems,
+      onSelect,
+      onSelectAll,
+      isSelectedItem,
       componentsProps,
       dragProps,
       context,
@@ -92,6 +92,13 @@ const VirtualizedTable = forwardRef(
 )
 
 VirtualizedTable.displayName = 'VirtualizedTable'
+
+VirtualizedTable.defaultProps = {
+  selectedItems: [],
+  isSelectedItem: () => {},
+  onSelect: () => {},
+  onSelectAll: () => {}
+}
 
 const VirtuosoTableWrapper = props => {
   if (!props.dragProps?.enabled) {
