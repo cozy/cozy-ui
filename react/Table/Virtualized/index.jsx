@@ -20,6 +20,8 @@ const VirtualizedTable = forwardRef(
       isSelectedItem = () => {},
       componentsProps,
       dragProps,
+      context,
+      components,
       ...props
     },
     ref
@@ -51,15 +53,17 @@ const VirtualizedTable = forwardRef(
         ref={ref}
         data={data}
         context={{
+          ...context,
           isSelectedItem,
           selectedItems,
           dragProps,
           itemsInDropProcess,
           setItemsInDropProcess
         }}
-        components={virtuosoComponents}
+        components={components || virtuosoComponents}
         fixedHeaderContent={() => (
           <FixedHeaderContent
+            {...componentsProps?.FixedHeaderContent}
             columns={columns}
             rowCount={rows.length}
             selectedCount={selectedItems.length}
@@ -71,6 +75,7 @@ const VirtualizedTable = forwardRef(
         )}
         itemContent={(_index, row) => (
           <RowContent
+            {...componentsProps?.RowContent}
             index={_index}
             row={row}
             columns={columns}
