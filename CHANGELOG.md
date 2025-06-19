@@ -1,3 +1,15 @@
+# [126.5.0](https://github.com/cozy/cozy-ui/compare/v126.4.0...v126.5.0) (2025-06-19)
+
+
+### Bug Fixes
+
+* **VirtualizedTable:** Remove using react suspense ([a1f8030](https://github.com/cozy/cozy-ui/commit/a1f8030))
+
+
+### Features
+
+* **VirtualizedTable:** Add some prop spread to better give controls ([4b080e6](https://github.com/cozy/cozy-ui/commit/4b080e6))
+
 # [126.4.0](https://github.com/cozy/cozy-ui/compare/v126.3.0...v126.4.0) (2025-06-17)
 
 
