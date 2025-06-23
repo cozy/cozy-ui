@@ -10,7 +10,8 @@ const RowContent = ({
   columns,
   isSelectedItem,
   children,
-  onSelectClick
+  onSelectClick,
+  onClick
 }) => {
   return (
     <>
@@ -24,7 +25,13 @@ const RowContent = ({
         />
       </TableCell>
       {columns.map(column => (
-        <Cell key={column.id} row={row} columns={columns} column={column}>
+        <Cell
+          key={column.id}
+          row={row}
+          columns={columns}
+          column={column}
+          onClick={onClick}
+        >
           {children}
         </Cell>
       ))}
