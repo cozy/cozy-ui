@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 const Cell = ({ row, columns, column, children }) => {
   const classes = useStyles({ column })
-  const cellContent = get(row, column.id)
+  const cellContent = get(row, column.id, '—')
 
   return (
     <TableCell
