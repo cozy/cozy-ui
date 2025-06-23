@@ -221,11 +221,14 @@ export const makeLightNormalOverrides = theme => ({
     outlined: {
       '&:not($disabled)': {
         '&.ghost': {
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: alpha(theme.palette.primary.main, 0.25),
           '&:hover': {
-            backgroundColor: darken(theme.palette.background.default, 0.05),
+            backgroundColor: darken(
+              alpha(theme.palette.primary.main, 0.25),
+              0.1
+            ),
             '@media (hover: none)': {
-              backgroundColor: darken(theme.palette.background.default, 0.05)
+              backgroundColor: alpha(theme.palette.primary.main, 0.25)
             }
           }
         },
