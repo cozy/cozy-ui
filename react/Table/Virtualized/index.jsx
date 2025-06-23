@@ -62,7 +62,7 @@ const VirtualizedTable = forwardRef(
         components={components || virtuosoComponents}
         fixedHeaderContent={() => (
           <FixedHeaderContent
-            {...componentsProps?.FixedHeaderContent}
+            {...componentsProps?.fixedHeaderContent}
             columns={columns}
             rowCount={rows.length}
             selectedCount={selectedItems.length}
@@ -74,7 +74,7 @@ const VirtualizedTable = forwardRef(
         )}
         itemContent={(_index, row) => (
           <RowContent
-            {...componentsProps?.RowContent}
+            {...componentsProps?.rowContent}
             index={_index}
             row={row}
             columns={columns}
