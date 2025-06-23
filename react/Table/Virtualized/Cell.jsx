@@ -1,4 +1,5 @@
 import cx from 'classnames'
+import get from 'lodash/get'
 import React from 'react'
 
 import TableCell from '../../TableCell'
@@ -13,6 +14,7 @@ const useStyles = makeStyles({
 
 const Cell = ({ row, columns, column, children }) => {
   const classes = useStyles({ column })
+  const cellContent = get(row, column.id)
 
   return (
     <TableCell
@@ -29,11 +31,11 @@ const Cell = ({ row, columns, column, children }) => {
                   row,
                   columns,
                   column,
-                  cell: row[column.id]
+                  cell: cellContent
                 })
               : null
           )
-        : row[column.id]}
+        : cellContent}
     </TableCell>
   )
 }

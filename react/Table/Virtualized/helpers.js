@@ -1,6 +1,8 @@
+import get from 'lodash/get'
+
 const descendingComparator = ({ a, b, order, orderBy, lang }) => {
-  const aValue = a[orderBy]
-  const bValue = b[orderBy]
+  const aValue = get(a, orderBy, '')
+  const bValue = get(b, orderBy, '')
 
   if (typeof aValue === 'string') {
     const isDate = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}/.test(aValue)
