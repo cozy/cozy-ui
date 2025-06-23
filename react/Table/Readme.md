@@ -75,6 +75,11 @@ const columns = [
     rows={rows}
     columns={columns}
     defaultOrder={columns[0].id}
+    componentsProps={{
+      rowContent: {
+        onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) }
+      }
+    }}
   />
 </div>
 ```

@@ -80,6 +80,7 @@ const VirtualizedTable = forwardRef(
             columns={columns}
             isSelectedItem={isSelectedItem}
             onSelectClick={onSelect}
+            onClick={componentsProps?.rowContent?.onClick}
           >
             {componentsProps?.rowContent?.children}
           </RowContent>

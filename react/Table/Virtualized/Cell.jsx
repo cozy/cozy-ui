@@ -7,13 +7,14 @@ import { makeStyles } from '../../styles'
 
 const useStyles = makeStyles({
   root: {
+    cursor: ({ isClickable }) => (isClickable ? 'pointer' : undefined),
     width: ({ column }) => column.width,
     maxWidth: ({ column }) => column.maxWidth
   }
 })
 
-const Cell = ({ row, columns, column, children }) => {
-  const classes = useStyles({ column })
+const Cell = ({ row, columns, column, onClick, children }) => {
+  const classes = useStyles({ column, isClickable: !!onClick })
   const cellContent = get(row, column.id, '—')
 
   return (
@@ -23,6 +24,7 @@ const Cell = ({ row, columns, column, children }) => {
       className={cx({ sortable: column.sortable !== false })}
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
+      onClick={() => onClick?.(row, column)}
     >
       {children
         ? React.Children.map(children, child =>
