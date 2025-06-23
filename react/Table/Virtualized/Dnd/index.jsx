@@ -7,9 +7,14 @@ import TableContainer from '../../../TableContainer'
 import VirtualizedTable from '../index'
 import virtuosoComponents from '../virtuosoComponents'
 
+/**
+ Be aware that context is spread to every components but should not be spread to Table components
+ so we desctrure it from props, but don't spread to child to avoid its presence in DOM
+*/
 const componentsDnd = {
   ...virtuosoComponents,
-  Scroller: forwardRef((props, ref) => (
+  // eslint-disable-next-line no-unused-vars
+  Scroller: forwardRef(({ context, ...props }, ref) => (
     <DnDConfigWrapper ref={ref}>
       <TableContainer {...props} ref={ref} />
     </DnDConfigWrapper>
