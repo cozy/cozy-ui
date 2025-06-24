@@ -15,9 +15,7 @@ const ContactName = ({ contact }) => {
     <Typography
       data-testid="ContactName" // used by a test in cozy-contacts
       className="u-ml-1"
-      variant="body1"
       noWrap
-      gutterBottom
       display="inline"
     >
       {namesToDisplay?.map((name, key) => (
