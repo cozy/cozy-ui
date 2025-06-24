@@ -838,6 +838,9 @@ export const makeLightNormalOverrides = theme => ({
           opacity: 0.5
         }
       },
+      '&.displayInline': {
+        display: 'inline-flex'
+      },
       '&.border': {
         border: `2px solid ${theme.palette.background.paper}`
       },

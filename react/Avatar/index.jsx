@@ -5,6 +5,7 @@ import React from 'react'
 
 import { colorMapping, supportedColors, nameToColor } from './helpers'
 import { makeStyles } from '../styles'
+import { capitalize } from '../utils/index'
 
 const useStyles = makeStyles(theme => ({
   colorDefault: {
@@ -20,6 +21,7 @@ const Avatar = ({
   border,
   innerBorder,
   disabled,
+  display,
   ...props
 }) => {
   const defaultColor =
@@ -39,6 +41,7 @@ const Avatar = ({
       className={cx(className, `size-${size}`, {
         disabled: !!disabled,
         border: !!border,
+        [`display${capitalize(display)}`]: display !== 'initial',
         innerBorder: !!innerBorder
       })}
       {...props}
@@ -53,10 +56,13 @@ Avatar.propTypes = {
     PropTypes.number
   ]),
   color: PropTypes.oneOf([...supportedColors, 'none']),
+  /** Controls the display type */
+  display: PropTypes.oneOf(['initial', 'inline']),
   disabled: PropTypes.bool
 }
 
 Avatar.defaultProps = {
+  display: 'initial',
   size: 'm'
 }
 
