@@ -21,16 +21,13 @@ const ContactIdentity = ({ contact }) => {
   const isMyself = !!contact.me
 
   return (
-    <TableCell
-      data-testid="ContactIdentity" // used by a test in cozy-contacts
-      className={`${styles['contact-identity']} u-flex u-flex-items-center u-ellipsis u-p-0`}
-    >
+    <>
       <Avatar display="inline" size="s">
         {getInitials(contact)}
       </Avatar>
       <ContactName contact={contact} />
       {isMyself && <MyselfMarker />}
-    </TableCell>
+    </>
   )
 }
 
@@ -38,4 +35,23 @@ ContactIdentity.propTypes = {
   contact: PropTypes.object.isRequired
 }
 
-export default ContactIdentity
+const ContactIdentityWrapper = ({ noWrapper, ...props }) => {
+  if (noWrapper) {
+    return <ContactIdentity {...props} />
+  }
+
+  return (
+    <TableCell
+      data-testid="ContactIdentity" // used by a test in cozy-contacts
+      className={`${styles['contact-identity']} u-flex u-flex-items-center u-ellipsis u-p-0`}
+    >
+      <ContactIdentity {...props} />
+    </TableCell>
+  )
+}
+
+ContactIdentityWrapper.defaultProps = {
+  noWrapper: false
+}
+
+export default ContactIdentityWrapper
