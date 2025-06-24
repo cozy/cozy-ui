@@ -18,15 +18,21 @@ const ContactName = ({ contact }) => {
       noWrap
       display="inline"
     >
-      {namesToDisplay?.map((name, key) => (
-        <span
-          key={`display-${key}`}
-          className={cx({ 'u-fw-bold': name === familyName })}
-        >
-          {name}
-          &nbsp;
-        </span>
-      ))}
+      {namesToDisplay?.map((name, index) => {
+        const isLastItem = index === namesToDisplay.length - 1
+
+        return (
+          <span
+            key={`display-${index}`}
+            className={cx({
+              'u-fw-bold': name === familyName
+            })}
+          >
+            {name}
+            {!isLastItem && <>&nbsp;</>}
+          </span>
+        )
+      })}
     </Typography>
   )
 }
