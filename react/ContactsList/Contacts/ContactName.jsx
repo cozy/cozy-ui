@@ -2,10 +2,14 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { getDisplayName } from 'cozy-client/dist/models/contact'
+
 import Typography from '../../Typography'
 
-const ContactName = ({ displayName, familyName }) => {
-  const namesToDisplay = (displayName && displayName.split(' ')) || []
+const ContactName = ({ contact }) => {
+  const familyName = contact.name?.familyName
+  const displayName = getDisplayName(contact)
+  const namesToDisplay = displayName?.split(' ')
 
   return (
     <Typography
@@ -16,7 +20,7 @@ const ContactName = ({ displayName, familyName }) => {
       gutterBottom
       display="inline"
     >
-      {namesToDisplay.map((name, key) => (
+      {namesToDisplay?.map((name, key) => (
         <span
           key={`display-${key}`}
           className={cx({ 'u-fw-bold': name === familyName })}
@@ -30,11 +34,7 @@ const ContactName = ({ displayName, familyName }) => {
 }
 
 ContactName.propTypes = {
-  displayName: PropTypes.string,
-  familyName: PropTypes.string
-}
-ContactName.defaultProps = {
-  displayName: ''
+  contact: PropTypes.object.isRequired
 }
 
 export default ContactName
