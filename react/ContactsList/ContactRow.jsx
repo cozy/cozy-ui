@@ -26,7 +26,7 @@ const ContactRow = ({ className, contact, onClick, divider, ...rest }) => {
       className={cx({ 'u-c-pointer': onClick }, className)}
       divider={divider}
       gutters={isDesktop ? 'double' : 'default'}
-      onClick={() => onClick(contact)}
+      onClick={() => onClick?.(contact)}
       {...rest}
     >
       <ContactIdentity contact={contact} />
