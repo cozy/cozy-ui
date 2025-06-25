@@ -68,6 +68,35 @@ const columns = [
   }
 ]
 
+initialState = { selectedItemsId: [] }
+
+const isSelectedItem = row => state.selectedItemsId.some(selectedItem => selectedItem === row.id)
+const addSelected = row => setState(prev => {
+    const arr = prev.selectedItemsId
+    arr.push(row.id)
+    return { selectedItemsId: arr }
+})
+const removeSelected = (row) => setState(prev => {
+    const arr = prev.selectedItemsId
+    arr.splice(arr.indexOf(row.id), 1)
+    return { selectedItemsId: arr }
+})
+const onSelect = row => {
+  if (isSelectedItem(row)) {
+    removeSelected(row)
+  } else {
+    addSelected(row)
+  }
+}
+const onSelectAll = rows => {
+  const ids = rows.map(row => row.id)
+  if (state.selectedItemsId.length === ids.length) {
+    setState({ selectedItemsId: [] })
+  } else {
+    setState({ selectedItemsId: ids })
+  }
+}
+
 ;
 
 <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
@@ -75,6 +104,10 @@ const columns = [
     rows={rows}
     columns={columns}
     defaultOrder={columns[0].id}
+    selectedItems={state.selectedItemsId}
+    isSelectedItem={row => isSelectedItem(row)}
+    onSelect={onSelect}
+    onSelectAll={onSelectAll}
     componentsProps={{
       rowContent: {
         onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) }
