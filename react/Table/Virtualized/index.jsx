@@ -18,7 +18,6 @@ const VirtualizedTable = forwardRef(
       onSelectAll,
       isSelectedItem,
       componentsProps,
-      dragProps,
       context,
       components,
       ...props
@@ -27,7 +26,6 @@ const VirtualizedTable = forwardRef(
   ) => {
     const [order, setOrder] = useState('asc')
     const [orderBy, setOrderBy] = useState(defaultOrder)
-    const [itemsInDropProcess, setItemsInDropProcess] = useState([]) // array of Ids, for dragndrop feature
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
@@ -54,10 +52,7 @@ const VirtualizedTable = forwardRef(
         context={{
           ...context,
           isSelectedItem,
-          selectedItems,
-          dragProps,
-          itemsInDropProcess,
-          setItemsInDropProcess
+          selectedItems
         }}
         components={components || virtuosoComponents}
         fixedHeaderContent={() => (

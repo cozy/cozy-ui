@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo } from 'react'
+import React, { useState, forwardRef, useMemo } from 'react'
 
 import CustomDragLayer from './CustomDrag/CustomDragLayer'
 import DnDConfigWrapper from './DnDConfigWrapper'
@@ -37,16 +37,31 @@ const componentsDnd = {
   })
 }
 
-const VirtuosoTableDnd = ({ components, ...props }) => {
+const VirtuosoTableDnd = ({ dragProps, context, components, ...props }) => {
+  const [itemsInDropProcess, setItemsInDropProcess] = useState([]) // array of Ids, for dragndrop feature
+
   const _components = useMemo(
     () => ({ ...components, ...componentsDnd }),
     [components]
   )
+  const _context = useMemo(
+    () => ({
+      ...context,
+      dragProps,
+      itemsInDropProcess,
+      setItemsInDropProcess
+    }),
+    [context, dragProps, itemsInDropProcess]
+  )
 
   return (
     <>
-      <CustomDragLayer dragId={props.dragProps.dragId} />
-      <VirtualizedTable components={_components} {...props} />
+      <CustomDragLayer dragId={dragProps.dragId} />
+      <VirtualizedTable
+        components={_components}
+        context={_context}
+        {...props}
+      />
     </>
   )
 }
