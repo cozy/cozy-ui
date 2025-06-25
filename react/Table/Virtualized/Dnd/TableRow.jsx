@@ -84,7 +84,7 @@ const TableRow = ({ item, context, ...props }) => {
       {...props}
       ref={node => dragRef(dropRef(node))}
       selected={isSelected || dropCollect.isOver}
-      className={dragCollect.isDragging ? 'u-o-50' : ''}
+      className={dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized'}
       disabled={isDisabled}
       hover
     />

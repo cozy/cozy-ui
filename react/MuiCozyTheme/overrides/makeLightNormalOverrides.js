@@ -508,7 +508,25 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiTableHead: {
     root: {
-      backgroundColor: theme.palette.background.paper
+      backgroundColor: theme.palette.background.paper,
+      '&.virtualized': {
+        '& .virtualizedCheckbox': {
+          opacity: 0.5,
+          visibility: 'hidden',
+          '&.checked': {
+            opacity: 1,
+            visibility: 'visible'
+          },
+          '&:hover': {
+            opacity: 1
+          }
+        },
+        '&:hover': {
+          '& .virtualizedCheckbox': {
+            visibility: 'visible'
+          }
+        }
+      }
     }
   },
   MuiTableRow: {
@@ -517,6 +535,26 @@ export const makeLightNormalOverrides = theme => ({
         cursor: 'pointer',
         pointerEvents: 'none',
         opacity: 0.5
+      },
+      '&.virtualized': {
+        '& .virtualizedCheckbox': {
+          opacity: 0.5,
+          visibility: 'hidden',
+          '&.checked': {
+            opacity: 1
+          },
+          '&.visible': {
+            visibility: 'visible'
+          },
+          '&:hover': {
+            opacity: 1
+          }
+        },
+        '&:hover': {
+          '& .virtualizedCheckbox': {
+            visibility: 'visible'
+          }
+        }
       }
     }
   },
@@ -547,6 +585,10 @@ export const makeLightNormalOverrides = theme => ({
           paddingRight: '16px'
         }
       }
+    },
+    paddingCheckbox: {
+      width: 40,
+      padding: 0
     },
     stickyHeader: {
       backgroundColor: theme.palette.background.paper

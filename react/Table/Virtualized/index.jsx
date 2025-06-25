@@ -73,6 +73,7 @@ const VirtualizedTable = forwardRef(
             index={_index}
             row={row}
             columns={columns}
+            selectedCount={selectedItems.length}
             isSelectedItem={isSelectedItem}
             onSelectClick={onSelect}
             onClick={componentsProps?.rowContent?.onClick}
