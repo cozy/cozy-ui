@@ -26,11 +26,12 @@ const FixedHeaderContent = ({
   order,
   orderBy,
   rowCount,
-  selectedCount,
+  context,
   onClick,
   onSelectAllClick
 }) => {
   const classes = useStyles()
+  const selectedCount = context.selectedItems.length
 
   return (
     <TableRow>

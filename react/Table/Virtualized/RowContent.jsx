@@ -9,21 +9,22 @@ const RowContent = ({
   index,
   row,
   columns,
-  isSelectedItem,
-  selectedCount,
+  context,
   children,
   onSelectClick,
   onClick
 }) => {
+  const selectedCount = context.selectedItems.length
+
   return (
     <>
       <TableCell align="center" padding="checkbox">
         <Checkbox
           className={cx('virtualizedCheckbox', {
             visible: selectedCount > 0,
-            checked: isSelectedItem(row)
+            checked: context.isSelectedItem(row)
           })}
-          checked={isSelectedItem(row)}
+          checked={context.isSelectedItem(row)}
           inputProps={{
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
