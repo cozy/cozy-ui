@@ -29,6 +29,11 @@ const VirtualizedTable = forwardRef(
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
+    const _context = {
+      ...context,
+      isSelectedItem,
+      selectedItems
+    }
 
     const handleSort = property => {
       const isAsc = orderBy === property && order === 'asc'
@@ -49,32 +54,27 @@ const VirtualizedTable = forwardRef(
         {...props}
         ref={ref}
         data={data}
-        context={{
-          ...context,
-          isSelectedItem,
-          selectedItems
-        }}
+        context={_context}
         components={components || virtuosoComponents}
         fixedHeaderContent={() => (
           <FixedHeaderContent
             {...componentsProps?.fixedHeaderContent}
             columns={columns}
             rowCount={rows.length}
-            selectedCount={selectedItems.length}
+            context={_context}
             order={order}
             orderBy={orderBy}
             onClick={handleSort}
             onSelectAllClick={handleSelectAll}
           />
         )}
-        itemContent={(_index, row) => (
+        itemContent={(_index, row, context) => (
           <RowContent
             {...componentsProps?.rowContent}
             index={_index}
             row={row}
             columns={columns}
-            selectedCount={selectedItems.length}
-            isSelectedItem={isSelectedItem}
+            context={context}
             onSelectClick={onSelect}
             onClick={componentsProps?.rowContent?.onClick}
           >
