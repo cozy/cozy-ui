@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { forwardRef } from 'react'
 
+import TableRow from './TableRow'
 import Table from '..'
 import TableBody from '../../TableBody'
 import TableContainer from '../../TableContainer'
 import TableFooter from '../../TableFooter'
 import TableHead from '../../TableHead'
-import TableRow from '../../TableRow'
 
 /**
  Be aware that context is spread to every components but should not be spread to Table components
@@ -28,11 +28,7 @@ const virtuosoComponents = {
   TableFooter: forwardRef(({ context, ...props }, ref) => (
     <TableFooter {...props} ref={ref} />
   )),
-  TableRow: forwardRef(({ item, context, ...props }, ref) => {
-    const isSelected = context?.isSelectedItem(item)
-
-    return <TableRow {...props} ref={ref} selected={isSelected} hover />
-  })
+  TableRow: forwardRef((props, ref) => <TableRow {...props} ref={ref} />)
 }
 
 export default virtuosoComponents
