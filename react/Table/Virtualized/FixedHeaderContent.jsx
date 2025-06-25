@@ -1,3 +1,4 @@
+import cx from 'classnames'
 import React from 'react'
 
 import TableHeadCell from './HeadCell'
@@ -35,6 +36,9 @@ const FixedHeaderContent = ({
     <TableRow>
       <TableCell align="center" padding="checkbox">
         <Checkbox
+          className={cx('virtualizedCheckbox', {
+            checked: selectedCount > 0
+          })}
           indeterminate={selectedCount > 0 && selectedCount < rowCount}
           checked={rowCount > 0 && selectedCount === rowCount}
           inputProps={{ 'aria-label': 'select all' }}

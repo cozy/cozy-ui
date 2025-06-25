@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import cx from 'classnames'
 import React, { forwardRef } from 'react'
 
 import TableRow from './TableRow'
@@ -19,8 +20,8 @@ const virtuosoComponents = {
   Table: forwardRef(({ context, ...props }, ref) => (
     <Table {...props} ref={ref} />
   )),
-  TableHead: forwardRef(({ context, ...props }, ref) => (
-    <TableHead {...props} ref={ref} />
+  TableHead: forwardRef(({ context, className, ...props }, ref) => (
+    <TableHead {...props} className={cx(className, 'virtualized')} ref={ref} />
   )),
   TableBody: forwardRef(({ context, ...props }, ref) => (
     <TableBody {...props} ref={ref} />
