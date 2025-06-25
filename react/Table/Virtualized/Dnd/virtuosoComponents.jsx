@@ -17,21 +17,8 @@ const virtuosoComponentsDnd = {
       <TableContainer {...props} ref={ref} />
     </DnDConfigWrapper>
   )),
-  TableRow: forwardRef(({ item, context, ...props }, ref) => {
-    const isSelected = context?.isSelectedItem(item)
-    const isDisabled = context?.itemsInDropProcess.includes(item._id)
-
-    return (
-      <TableRowDnD
-        {...props}
-        ref={ref}
-        item={item}
-        context={context}
-        selected={isSelected}
-        disabled={isDisabled}
-        hover
-      />
-    )
+  TableRow: forwardRef((props, ref) => {
+    return <TableRowDnD {...props} ref={ref} />
   })
 }
 
