@@ -1,3 +1,42 @@
+# [127.0.0](https://github.com/cozy/cozy-ui/compare/v126.6.0...v127.0.0) (2025-06-26)
+
+
+### Bug Fixes
+
+* **Checkbox:** Small size wasn't handle correctly ([38d8923](https://github.com/cozy/cozy-ui/commit/38d8923))
+* **ContactIdentity:** Now show `me` correctly ([f009f34](https://github.com/cozy/cozy-ui/commit/f009f34))
+* **ContactName:** Remove `&nbsp;` if not needed ([88834d9](https://github.com/cozy/cozy-ui/commit/88834d9))
+* **ContactName:** Remove bottom gutter ([f37aed8](https://github.com/cozy/cozy-ui/commit/f37aed8))
+* **ContactRow:** Remove required on `onClick` fn ([663816d](https://github.com/cozy/cozy-ui/commit/663816d))
+* **VirtualizedTable:** Avoid spreading context object to DOM ([5a0637b](https://github.com/cozy/cozy-ui/commit/5a0637b))
+* **VirtualizedTable:** Rename props spread to FixedHeaderContent and RowContent ([d6f7f4a](https://github.com/cozy/cozy-ui/commit/d6f7f4a))
+
+
+### Features
+
+* **Avatar:** Add `display` prop to control display type ([9d5c1c6](https://github.com/cozy/cozy-ui/commit/9d5c1c6))
+* **Checkbox:** Adjust small size style and add `disableEffect` prop ([8578d3d](https://github.com/cozy/cozy-ui/commit/8578d3d))
+* **ContactIdentity:** Add `noWrapper` to avoid using embedded TableCell ([787bd91](https://github.com/cozy/cozy-ui/commit/787bd91))
+* **ContactIdentity:** Now use `contact` as prop ([ea76949](https://github.com/cozy/cozy-ui/commit/ea76949))
+* **ContactIdentity:** Replace legacy avatar by actual one ([cd2c855](https://github.com/cozy/cozy-ui/commit/cd2c855))
+* Expose all Mui utililties helpers ([b82fd81](https://github.com/cozy/cozy-ui/commit/b82fd81))
+* **Table:** Add min-height on body cells (2rem) ([c4aed50](https://github.com/cozy/cozy-ui/commit/c4aed50))
+* **TableContainer:** Force elevation, using Paper and set z-index ([b5bf6d2](https://github.com/cozy/cozy-ui/commit/b5bf6d2))
+* **VirtualizedTable:** Add possibility to spread onClick fn on cells ([4e2d7bf](https://github.com/cozy/cozy-ui/commit/4e2d7bf))
+* **VirtualizedTable:** Can now sort on deep object attribute ([ade4c3d](https://github.com/cozy/cozy-ui/commit/ade4c3d))
+* **VirtualizedTable:** Extact dragndrop feature into separate component ([e78ec95](https://github.com/cozy/cozy-ui/commit/e78ec95))
+* **VirtualizedTable:** Extract Dnd props to isolate dnd feature ([1f2e3b1](https://github.com/cozy/cozy-ui/commit/1f2e3b1))
+* **VirtualizedTable:** Fill empty cell with simple dash ([501a815](https://github.com/cozy/cozy-ui/commit/501a815))
+* **VirtualizedTable:** Hide checkbox by default (shown on hover only) ([480f7d2](https://github.com/cozy/cozy-ui/commit/480f7d2))
+* **VirtualizedTable:** Use small checkbox and remove header hover effect ([7f71bd9](https://github.com/cozy/cozy-ui/commit/7f71bd9))
+
+
+### BREAKING CHANGES
+
+* **ContactIdentity:** When using `cozy-ui/transpiled/react/ContactsList/Contacts/ContactName` you have to pass a `contact` as prop and no longer `displayName` and `familyName`
+* **VirtualizedTable:** When using `cozy-ui/transpiled/react/table/virtualized` you must replace `componentsProps.FixedHeaderContent` by `componentsProps.fixedHeaderContent` and `componentsProps.RowContent` by `componentsProps.rowContent`
+* **VirtualizedTable:** If you used dragndrop in virtualized table, you now need to import table from elsewhere. Replace `cozy-ui/transpiled/react/Table/Virtualized` by `cozy-ui/transpiled/react/Table/Virtualized/Dnd`
+
 # [126.6.0](https://github.com/cozy/cozy-ui/compare/v126.5.0...v126.6.0) (2025-06-26)
 
 
