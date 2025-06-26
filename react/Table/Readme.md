@@ -22,7 +22,7 @@ const rows = [
   createData(11, 'Nougat', 360, 19.0, 9, 37.0),
   createData(12, 'Oreo', 437, 18.0, 63, 4.0),
   createData(
-    6,
+    13,
     'Ice cream with a very long list of ingredient to see how the table can handle this kind of item, and this is the end',
     237,
     9.0,
