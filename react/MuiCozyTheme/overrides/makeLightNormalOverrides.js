@@ -565,7 +565,8 @@ export const makeLightNormalOverrides = theme => ({
       lineHeight: 1.292
     },
     body: {
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      height: '2rem'
     },
     paddingCheckbox: {
       width: 32,
