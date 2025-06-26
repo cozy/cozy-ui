@@ -1,3 +1,10 @@
+# [126.6.0](https://github.com/cozy/cozy-ui/compare/v126.5.0...v126.6.0) (2025-06-26)
+
+
+### Features
+
+* **ActionsMenu:** Add autoclose on context menu event ([fb883f0](https://github.com/cozy/cozy-ui/commit/fb883f0))
+
 # [126.5.0](https://github.com/cozy/cozy-ui/compare/v126.4.0...v126.5.0) (2025-06-19)
 
 
