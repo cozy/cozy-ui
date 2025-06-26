@@ -1,4 +1,3 @@
-import cx from 'classnames'
 import get from 'lodash/get'
 import React from 'react'
 
@@ -21,7 +20,6 @@ const Cell = ({ row, columns, column, onClick, children }) => {
     <TableCell
       key={column.id}
       classes={classes}
-      className={cx({ sortable: column.sortable !== false })}
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
       onClick={() => onClick?.(row, column)}

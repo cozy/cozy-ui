@@ -568,26 +568,10 @@ export const makeLightNormalOverrides = theme => ({
       lineHeight: 1.292
     },
     body: {
-      color: theme.palette.text.secondary,
-      '&.sortable': {
-        '&$paddingNone': {
-          '&$alignLeft': {
-            paddingLeft: '12px'
-          },
-          '&$alignRight': {
-            paddingRight: '12px'
-          }
-        },
-        '&$alignLeft': {
-          paddingLeft: '16px'
-        },
-        '&$alignRight': {
-          paddingRight: '16px'
-        }
-      }
+      color: theme.palette.text.secondary
     },
     paddingCheckbox: {
-      width: 40,
+      width: 32,
       padding: 0
     },
     stickyHeader: {
@@ -596,13 +580,8 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiTableSortLabel: {
     root: {
-      padding: '8px 12px',
-      color: theme.palette.text.secondary,
-      '&:hover': {
-        color: theme.palette.text.primary,
-        borderRadius: 999,
-        backgroundColor: theme.palette.action.hover
-      }
+      padding: '8px 0',
+      color: theme.palette.text.secondary
     },
     icon: {
       fontSize: 14
