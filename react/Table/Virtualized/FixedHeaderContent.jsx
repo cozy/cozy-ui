@@ -43,6 +43,7 @@ const FixedHeaderContent = ({
           indeterminate={selectedCount > 0 && selectedCount < rowCount}
           checked={rowCount > 0 && selectedCount === rowCount}
           inputProps={{ 'aria-label': 'select all' }}
+          size="small"
           onChange={onSelectAllClick}
         />
       </TableCell>

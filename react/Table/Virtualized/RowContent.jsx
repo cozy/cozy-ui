@@ -28,6 +28,7 @@ const RowContent = ({
           inputProps={{
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
+          size="small"
           onChange={() => onSelectClick(row)}
         />
       </TableCell>
