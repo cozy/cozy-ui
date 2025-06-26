@@ -897,7 +897,10 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiCheckbox: {
     root: {
-      padding: 8
+      padding: 8,
+      '&.small': {
+        padding: 6
+      }
     },
     colorSecondary: {
       '&$checked': {
