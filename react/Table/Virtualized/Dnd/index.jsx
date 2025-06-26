@@ -3,14 +3,13 @@ import React, { useState, useMemo } from 'react'
 import CustomDragLayer from './CustomDrag/CustomDragLayer'
 import virtuosoComponentsDnd from './virtuosoComponents'
 import VirtualizedTable from '../index'
+import virtuosoComponents from '../virtuosoComponents'
+
+const _components = { ...virtuosoComponents, ...virtuosoComponentsDnd }
 
 const VirtuosoTableDnd = ({ dragProps, context, components, ...props }) => {
   const [itemsInDropProcess, setItemsInDropProcess] = useState([]) // array of Ids, for dragndrop feature
 
-  const _components = useMemo(
-    () => ({ ...components, ...virtuosoComponentsDnd }),
-    [components]
-  )
   const _context = useMemo(
     () => ({
       ...context,
@@ -25,7 +24,7 @@ const VirtuosoTableDnd = ({ dragProps, context, components, ...props }) => {
     <>
       <CustomDragLayer dragId={dragProps.dragId} />
       <VirtualizedTable
-        components={_components}
+        components={components || _components}
         context={_context}
         {...props}
       />
