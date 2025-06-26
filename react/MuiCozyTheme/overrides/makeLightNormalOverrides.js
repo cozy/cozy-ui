@@ -511,11 +511,9 @@ export const makeLightNormalOverrides = theme => ({
       backgroundColor: theme.palette.background.paper,
       '&.virtualized': {
         '& .virtualizedCheckbox': {
-          opacity: 0.5,
-          visibility: 'hidden',
+          opacity: 0,
           '&.checked': {
-            opacity: 1,
-            visibility: 'visible'
+            opacity: 1
           },
           '&:hover': {
             opacity: 1
@@ -523,7 +521,7 @@ export const makeLightNormalOverrides = theme => ({
         },
         '&:hover': {
           '& .virtualizedCheckbox': {
-            visibility: 'visible'
+            opacity: 0.5
           }
         }
       }
@@ -538,13 +536,12 @@ export const makeLightNormalOverrides = theme => ({
       },
       '&.virtualized': {
         '& .virtualizedCheckbox': {
-          opacity: 0.5,
-          visibility: 'hidden',
+          opacity: 0,
+          '&.visible': {
+            opacity: 0.5
+          },
           '&.checked': {
             opacity: 1
-          },
-          '&.visible': {
-            visibility: 'visible'
           },
           '&:hover': {
             opacity: 1
@@ -552,7 +549,7 @@ export const makeLightNormalOverrides = theme => ({
         },
         '&:hover': {
           '& .virtualizedCheckbox': {
-            visibility: 'visible'
+            opacity: 0.5
           }
         }
       }
