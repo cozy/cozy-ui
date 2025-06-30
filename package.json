@@ -51,6 +51,7 @@
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
     "postbuild": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
+    "start:css:utils": "yarn build:css:utils --watch",
     "start:css": "yarn build:css --watch",
     "prestart:doc": "yarn sprite",
     "start:doc": "NODE_OPTIONS=--openssl-legacy-provider env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
