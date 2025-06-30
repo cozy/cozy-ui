@@ -35,21 +35,11 @@ body
     textarea
         @extend $font-labor
 
-html
-body
-    +medium-screen()
-        display block
-        height auto
-
 [role=application]
     display     flex
     height      inherit
     flex        1 1 100%
-    overflow-x  hidden
-    overflow-y  auto
-
-    +medium-screen()
-        overflow visible
+    overflow  hidden auto
 
 // FORMS
 @require '../components/forms'

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { createContext, forwardRef, useContext, useMemo } from 'react'
 
 import styles from './styles.styl'
+import { useBreakpoints } from '../providers/Breakpoints'
 
 export const LayoutContext = createContext()
 
@@ -33,20 +34,13 @@ LayoutProvider.displayName = 'LayoutProvider'
 
 export const Layout = forwardRef(
   ({ children, className, monoColumn, withTopBar, ...props }, ref) => {
-    const variant = monoColumn ? 'monocolumn' : '2panes'
-
     return (
       <LayoutProvider monoColumn={monoColumn} withTopBar={withTopBar}>
         <div
           ref={ref}
-          className={cx(
-            className,
-            styles['o-layout'],
-            styles[`o-layout-${variant}`],
-            {
-              [styles[`o-layout-topbar`]]: withTopBar
-            }
-          )}
+          className={cx(className, styles['o-layout'], {
+            [styles['o-layout-main-2panes']]: !monoColumn
+          })}
           {...props}
         >
           {children}
@@ -59,20 +53,16 @@ export const Layout = forwardRef(
 Layout.displayName = 'Layout'
 
 export const Main = forwardRef(({ className, children, ...props }, ref) => {
+  const { isDesktop } = useBreakpoints()
   const { monoColumn, withTopBar } = useLayout()
-  const variant = monoColumn ? 'monocolumn' : '2panes'
 
   return (
     <main
       ref={ref}
-      className={cx(
-        className,
-        styles['o-layout-main'],
-        styles[`o-layout-main-${variant}`],
-        {
-          [styles[`o-layout-main-${variant}--topbar`]]: withTopBar
-        }
-      )}
+      className={cx(className, styles['o-layout-main'], {
+        [styles['o-layout-main-2panes']]: !monoColumn,
+        [styles[`o-layout-main-topbar`]]: withTopBar && !isDesktop
+      })}
       {...props}
     >
       {children}
