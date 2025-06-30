@@ -11,6 +11,7 @@ const TableContainer = forwardRef((props, ref) => {
       component={Paper}
       style={{ zIndex: 'var(--zIndex-app)', ...props.style }}
       elevation={0}
+      square
     />
   )
 })
