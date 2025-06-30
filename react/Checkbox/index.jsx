@@ -10,9 +10,22 @@ import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 const logDepecratedCheckbox = createDepreciationLogger()
 
-const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
+const DefaultCheckbox = ({
+  className,
+  label,
+  error,
+  mixed,
+  disabled,
+  size,
+  disableEffect,
+  ...props
+}) => {
   return (
     <MUICheckbox
+      className={cx(className, {
+        ['u-p-0']: disableEffect,
+        small: size === 'small'
+      })}
       inputProps={{
         'aria-label': label,
         'aria-checked': mixed ? 'mixed' : '',
@@ -21,12 +34,17 @@ const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
       color={error ? 'secondary' : 'primary'}
       indeterminate={mixed}
       disabled={disabled}
+      size={size}
+      disableRipple={disableEffect}
       checkedIcon={
         <div
           className="u-flex u-flex-items-center u-flex-justify-center"
-          style={{ width: 24, height: 24 }}
+          style={{
+            width: size === 'small' ? 20 : 24,
+            height: size === 'small' ? 20 : 24
+          }}
         >
-          <Icon icon={CheckSquareIcon} size={18} />
+          <Icon icon={CheckSquareIcon} size={size === 'small' ? 16 : 18} />
         </div>
       }
       {...props}
@@ -73,6 +91,8 @@ Checkbox.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   mixed: PropTypes.bool,
+  disableEffect: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium']),
   label: PropTypes.string
 }
 
@@ -81,6 +101,8 @@ Checkbox.defaultProps = {
   value: '',
   error: false,
   mixed: false,
+  disableEffect: false,
+  size: 'medium',
   label: ''
 }
 

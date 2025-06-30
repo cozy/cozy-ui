@@ -1,7 +1,6 @@
 import React, { useState, forwardRef } from 'react'
 import { TableVirtuoso } from 'react-virtuoso'
 
-import CustomDragLayer from './Dnd/CustomDrag/CustomDragLayer'
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
@@ -19,7 +18,6 @@ const VirtualizedTable = forwardRef(
       onSelectAll,
       isSelectedItem,
       componentsProps,
-      dragProps,
       context,
       components,
       ...props
@@ -28,10 +26,14 @@ const VirtualizedTable = forwardRef(
   ) => {
     const [order, setOrder] = useState('asc')
     const [orderBy, setOrderBy] = useState(defaultOrder)
-    const [itemsInDropProcess, setItemsInDropProcess] = useState([]) // array of Ids, for dragndrop feature
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
+    const _context = {
+      ...context,
+      isSelectedItem,
+      selectedItems
+    }
 
     const handleSort = property => {
       const isAsc = orderBy === property && order === 'asc'
@@ -52,35 +54,29 @@ const VirtualizedTable = forwardRef(
         {...props}
         ref={ref}
         data={data}
-        context={{
-          ...context,
-          isSelectedItem,
-          selectedItems,
-          dragProps,
-          itemsInDropProcess,
-          setItemsInDropProcess
-        }}
+        context={_context}
         components={components || virtuosoComponents}
         fixedHeaderContent={() => (
           <FixedHeaderContent
-            {...componentsProps?.FixedHeaderContent}
+            {...componentsProps?.fixedHeaderContent}
             columns={columns}
             rowCount={rows.length}
-            selectedCount={selectedItems.length}
+            context={_context}
             order={order}
             orderBy={orderBy}
             onClick={handleSort}
             onSelectAllClick={handleSelectAll}
           />
         )}
-        itemContent={(_index, row) => (
+        itemContent={(_index, row, context) => (
           <RowContent
-            {...componentsProps?.RowContent}
+            {...componentsProps?.rowContent}
             index={_index}
             row={row}
             columns={columns}
-            isSelectedItem={isSelectedItem}
+            context={context}
             onSelectClick={onSelect}
+            onClick={componentsProps?.rowContent?.onClick}
           >
             {componentsProps?.rowContent?.children}
           </RowContent>
@@ -100,17 +96,4 @@ VirtualizedTable.defaultProps = {
   onSelectAll: () => {}
 }
 
-const VirtuosoTableWrapper = props => {
-  if (!props.dragProps?.enabled) {
-    return <VirtualizedTable {...props} />
-  } else {
-    return (
-      <>
-        <CustomDragLayer dragId={props.dragProps.dragId} />
-        <VirtualizedTable {...props} />
-      </>
-    )
-  }
-}
-
-export default VirtuosoTableWrapper
+export default VirtualizedTable

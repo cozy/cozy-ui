@@ -20,6 +20,7 @@ const ActionsMenu = forwardRef(
       children,
       componentsProps,
       onClose,
+      autoCloseOnContextMenu,
       ...props
     },
     ref
@@ -34,6 +35,12 @@ const ActionsMenu = forwardRef(
         anchorOrigin={anchorOrigin}
         transformOrigin={transformOrigin}
         keepMounted
+        {...(autoCloseOnContextMenu && {
+          onContextMenu: ev => {
+            ev.preventDefault()
+            onClose()
+          }
+        })}
         onClose={onClose}
       >
         {children}
@@ -53,6 +60,7 @@ ActionsMenu.defaultProps = {
     horizontal: 'left'
   },
   autoClose: true,
+  autoCloseOnContextMenu: true,
   componentsProps: {}
 }
 
@@ -70,6 +78,8 @@ ActionsMenu.propTypes = {
   }),
   /** Whether the menu should automatically close itself when an item is clicked */
   autoClose: PropTypes.bool,
+  /** Whether the menu should automatically close itself when right-click is triggered */
+  autoCloseOnContextMenu: PropTypes.bool,
   /* Props passed to components with the same name */
   componentsProps: PropTypes.shape({
     /** Props spread to ActionsItems component */

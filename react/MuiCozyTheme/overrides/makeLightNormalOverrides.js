@@ -511,7 +511,23 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiTableHead: {
     root: {
-      backgroundColor: theme.palette.background.paper
+      backgroundColor: theme.palette.background.paper,
+      '&.virtualized': {
+        '& .virtualizedCheckbox': {
+          opacity: 0,
+          '&.checked': {
+            opacity: 1
+          },
+          '&:hover': {
+            opacity: 1
+          }
+        },
+        '&:hover': {
+          '& .virtualizedCheckbox': {
+            opacity: 0.5
+          }
+        }
+      }
     }
   },
   MuiTableRow: {
@@ -520,6 +536,25 @@ export const makeLightNormalOverrides = theme => ({
         cursor: 'pointer',
         pointerEvents: 'none',
         opacity: 0.5
+      },
+      '&.virtualized': {
+        '& .virtualizedCheckbox': {
+          opacity: 0,
+          '&.visible': {
+            opacity: 0.5
+          },
+          '&.checked': {
+            opacity: 1
+          },
+          '&:hover': {
+            opacity: 1
+          }
+        },
+        '&:hover': {
+          '& .virtualizedCheckbox': {
+            opacity: 0.5
+          }
+        }
       }
     }
   },
@@ -534,22 +569,11 @@ export const makeLightNormalOverrides = theme => ({
     },
     body: {
       color: theme.palette.text.secondary,
-      '&.sortable': {
-        '&$paddingNone': {
-          '&$alignLeft': {
-            paddingLeft: '12px'
-          },
-          '&$alignRight': {
-            paddingRight: '12px'
-          }
-        },
-        '&$alignLeft': {
-          paddingLeft: '16px'
-        },
-        '&$alignRight': {
-          paddingRight: '16px'
-        }
-      }
+      height: '2rem'
+    },
+    paddingCheckbox: {
+      width: 32,
+      padding: 0
     },
     stickyHeader: {
       backgroundColor: theme.palette.background.paper
@@ -557,13 +581,8 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiTableSortLabel: {
     root: {
-      padding: '8px 12px',
-      color: theme.palette.text.secondary,
-      '&:hover': {
-        color: theme.palette.text.primary,
-        borderRadius: 999,
-        backgroundColor: theme.palette.action.hover
-      }
+      padding: '8px 0',
+      color: theme.palette.text.secondary
     },
     icon: {
       fontSize: 14
@@ -841,6 +860,9 @@ export const makeLightNormalOverrides = theme => ({
           opacity: 0.5
         }
       },
+      '&.displayInline': {
+        display: 'inline-flex'
+      },
       '&.border': {
         border: `2px solid ${theme.palette.background.paper}`
       },
@@ -855,7 +877,10 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiCheckbox: {
     root: {
-      padding: 8
+      padding: 8,
+      '&.small': {
+        padding: 6
+      }
     },
     colorSecondary: {
       '&$checked': {

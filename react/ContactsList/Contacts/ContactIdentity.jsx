@@ -1,33 +1,33 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { models } from 'cozy-client'
+import { getInitials } from 'cozy-client/dist/models/contact'
 
 import ContactName from './ContactName'
+import Avatar from '../../Avatar'
 import { TableCell } from '../../deprecated/Table'
-import { Avatar } from '../../legacy/Avatar'
+import { useI18n, useExtendI18n } from '../../providers/I18n'
+import { locales } from '../locales/withContactsListLocales'
 import styles from '../styles.styl'
 
-const { getDisplayName, getInitials } = models.contact
+const MyselfMarker = () => {
+  useExtendI18n(locales)
+  const { t } = useI18n()
 
-const MyselfMarker = (props, { t }) => (
-  <span className={`${styles['contact-myself']}`}>({t('me')})</span>
-)
+  return <span className={`${styles['contact-myself']}`}>({t('me')})</span>
+}
 
 const ContactIdentity = ({ contact }) => {
-  const name = contact.name || {}
-  const displayName = getDisplayName(contact) || undefined
-  const isMyself = contact.metadata ? !!contact.metadata.me : false
+  const isMyself = !!contact.me
 
   return (
-    <TableCell
-      data-testid="ContactIdentity" // used by a test in cozy-contacts
-      className={`${styles['contact-identity']} u-flex u-flex-items-center u-ellipsis u-p-0`}
-    >
-      <Avatar text={getInitials(contact)} size="small" />
-      <ContactName displayName={displayName} familyName={name.familyName} />
+    <>
+      <Avatar display="inline" size="s">
+        {getInitials(contact)}
+      </Avatar>
+      <ContactName contact={contact} />
       {isMyself && <MyselfMarker />}
-    </TableCell>
+    </>
   )
 }
 
@@ -35,4 +35,23 @@ ContactIdentity.propTypes = {
   contact: PropTypes.object.isRequired
 }
 
-export default ContactIdentity
+const ContactIdentityWrapper = ({ noWrapper, ...props }) => {
+  if (noWrapper) {
+    return <ContactIdentity {...props} />
+  }
+
+  return (
+    <TableCell
+      data-testid="ContactIdentity" // used by a test in cozy-contacts
+      className={`${styles['contact-identity']} u-flex u-flex-items-center u-ellipsis u-p-0`}
+    >
+      <ContactIdentity {...props} />
+    </TableCell>
+  )
+}
+
+ContactIdentityWrapper.defaultProps = {
+  noWrapper: false
+}
+
+export default ContactIdentityWrapper

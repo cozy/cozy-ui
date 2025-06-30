@@ -4,14 +4,21 @@ import { getEmptyImage } from 'react-dnd-html5-backend'
 
 import TableRowClassic from '../../../TableRow'
 
-const TableRow = ({ item, context, selected, disabled, ...props }) => {
-  const { selectedItems, setItemsInDropProcess, dragProps } = context
+const TableRow = ({ item, context, ...props }) => {
+  const {
+    selectedItems,
+    itemsInDropProcess,
+    setItemsInDropProcess,
+    dragProps
+  } = context
   const {
     onDrop,
     canDrop: canDropProps,
     canDrag: canDragProps,
     dragId
   } = dragProps
+  const isSelected = context?.isSelectedItem(item)
+  const isDisabled = itemsInDropProcess.includes(item._id)
 
   const [dragCollect, dragRef, dragRefPreview] = useDrag(
     () => ({
@@ -33,7 +40,7 @@ const TableRow = ({ item, context, selected, disabled, ...props }) => {
         const defaultCanDrag = canDragProps?.(item) || true
         // if selectedItems is not empty, only the selected items can be dragged
         if (selectedItems.length > 0) {
-          return defaultCanDrag && selected
+          return defaultCanDrag && isSelected
         }
         return defaultCanDrag
       },
@@ -76,9 +83,10 @@ const TableRow = ({ item, context, selected, disabled, ...props }) => {
     <TableRowClassic
       {...props}
       ref={node => dragRef(dropRef(node))}
-      selected={selected || dropCollect.isOver}
-      className={dragCollect.isDragging ? 'u-o-50' : ''}
-      disabled={disabled}
+      selected={isSelected || dropCollect.isOver}
+      className={dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized'}
+      disabled={isDisabled}
+      hover
     />
   )
 }

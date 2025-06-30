@@ -1,3 +1,4 @@
+import cx from 'classnames'
 import React from 'react'
 
 import Cell from './Cell'
@@ -8,23 +9,37 @@ const RowContent = ({
   index,
   row,
   columns,
-  isSelectedItem,
+  context,
   children,
-  onSelectClick
+  onSelectClick,
+  onClick
 }) => {
+  const selectedCount = context.selectedItems.length
+
   return (
     <>
       <TableCell align="center" padding="checkbox">
         <Checkbox
-          checked={isSelectedItem(row)}
+          className={cx('virtualizedCheckbox', {
+            visible: selectedCount > 0,
+            checked: context.isSelectedItem(row)
+          })}
+          checked={context.isSelectedItem(row)}
           inputProps={{
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
+          size="small"
           onChange={() => onSelectClick(row)}
         />
       </TableCell>
       {columns.map(column => (
-        <Cell key={column.id} row={row} columns={columns} column={column}>
+        <Cell
+          key={column.id}
+          row={row}
+          columns={columns}
+          column={column}
+          onClick={onClick}
+        >
           {children}
         </Cell>
       ))}

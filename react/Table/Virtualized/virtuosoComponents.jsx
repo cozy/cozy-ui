@@ -1,61 +1,35 @@
+/* eslint-disable no-unused-vars */
+import cx from 'classnames'
 import React, { forwardRef } from 'react'
 
-import DnDConfigWrapper from './Dnd/DnDConfigWrapper'
-import TableRowDnD from './Dnd/TableRow'
+import TableRow from './TableRow'
 import Table from '..'
-import Paper from '../../Paper'
 import TableBody from '../../TableBody'
 import TableContainer from '../../TableContainer'
 import TableFooter from '../../TableFooter'
 import TableHead from '../../TableHead'
-import TableRow from '../../TableRow'
 
-const _TableContainer = forwardRef((props, ref) => (
-  <TableContainer
-    {...props}
-    ref={ref}
-    component={Paper}
-    style={{ zIndex: 'var(--zIndex-app)', ...props.style }}
-    elevation={0}
-  />
-))
-_TableContainer.displayName = '_TableContainer'
-
+/**
+ Be aware that context is spread to every components but should not be spread to Table components
+ so we desctrure it from props, but don't spread to child to avoid its presence in DOM
+*/
 const virtuosoComponents = {
-  Scroller: forwardRef(({ context, ...props }, ref) => {
-    if (!context.dragProps?.enabled) {
-      return <_TableContainer {...props} ref={ref} />
-    } else {
-      return (
-        <DnDConfigWrapper ref={ref}>
-          <_TableContainer {...props} ref={ref} />
-        </DnDConfigWrapper>
-      )
-    }
-  }),
-  Table: forwardRef((props, ref) => <Table {...props} ref={ref} />),
-  TableHead: forwardRef((props, ref) => <TableHead {...props} ref={ref} />),
-  TableBody: forwardRef((props, ref) => <TableBody {...props} ref={ref} />),
-  TableFooter: forwardRef((props, ref) => <TableFooter {...props} ref={ref} />),
-  TableRow: forwardRef(({ item, context, ...props }, ref) => {
-    const isSelected = context?.isSelectedItem(item)
-    const isDisabled = context?.itemsInDropProcess.includes(item._id)
-
-    if (!context.dragProps?.enabled) {
-      return <TableRow {...props} ref={ref} selected={isSelected} hover />
-    } else {
-      return (
-        <TableRowDnD
-          {...props}
-          item={item}
-          context={context}
-          selected={isSelected}
-          disabled={isDisabled}
-          hover
-        />
-      )
-    }
-  })
+  Scroller: forwardRef(({ context, ...props }, ref) => (
+    <TableContainer {...props} ref={ref} />
+  )),
+  Table: forwardRef(({ context, ...props }, ref) => (
+    <Table {...props} ref={ref} />
+  )),
+  TableHead: forwardRef(({ context, className, ...props }, ref) => (
+    <TableHead {...props} className={cx(className, 'virtualized')} ref={ref} />
+  )),
+  TableBody: forwardRef(({ context, ...props }, ref) => (
+    <TableBody {...props} ref={ref} />
+  )),
+  TableFooter: forwardRef(({ context, ...props }, ref) => (
+    <TableFooter {...props} ref={ref} />
+  )),
+  TableRow: forwardRef((props, ref) => <TableRow {...props} ref={ref} />)
 }
 
 export default virtuosoComponents
