@@ -1,3 +1,10 @@
+## [127.0.1](https://github.com/cozy/cozy-ui/compare/v127.0.0...v127.0.1) (2025-06-30)
+
+
+### Bug Fixes
+
+* **Button:** Use primary light background for ghost variant ([bbe5c2e](https://github.com/cozy/cozy-ui/commit/bbe5c2e)), closes [#D2E9](https://github.com/cozy/cozy-ui/issues/D2E9)
+
 # [127.0.0](https://github.com/cozy/cozy-ui/compare/v126.6.0...v127.0.0) (2025-06-26)
 
 
