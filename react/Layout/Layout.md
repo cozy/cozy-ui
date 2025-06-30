@@ -29,8 +29,13 @@ import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter } from 'cozy-ui/transpiled/react/Nav'
 import cx from 'classnames'
 import isEqual from 'lodash/isEqual'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
 import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import CrossMediumIcon from 'cozy-ui/transpiled/react/Icons/CrossMedium'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
@@ -51,18 +56,36 @@ const ExampleRouterNavLink = ({ children, className, active, activeClassName, on
 const NavLink = genNavLink(ExampleRouterNavLink)
 
 // Not necessary in a normal app
-const useStyles = makeStyles({
-  layout: {
-    position: 'relative',
-    transform: 'translateZ(0)',
-    '& > main': {
-      minHeight: 'unset'
+const useStyles = makeStyles(theme => ({
+  topBar: { // same style than the cozy-bar
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0 1rem',
+    minHeight: '3rem',
+    width: '100%',
+    boxSizing: 'border-box',
+    zIndex: 'var(--zIndex-bar)',
+    backgroundColor: theme.palette.background.default,
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    [theme.breakpoints.up('lg')]: {
+      position: 'relative',
     }
+  },
+  closeButton: {
+    position: 'absolute',
+    top: '1.15rem',
+    right: '1.15rem',
+    zIndex: 'var(--zIndex-modal-toolbar)',
+    backgroundColor: theme.palette.background.paper
   }
-})
+}))
 
-const initialVariants = [{ monoColumn: false, withTopBar: true }]
+const initialVariants = [{ monoColumn: false, withTopBar: true, longContent: true }]
 const [active, setActive] = useState(['Section 1', 'Subsection 1'])
+const [showDialog, setShowDialog] = useState(isTesting() ? true : false)
 const styles = useStyles()
 
 ;
@@ -112,23 +135,50 @@ const SideBar = ({ variant }) => {
   )
 }
 
-<Variants initialVariants={initialVariants} screenshotAllVariants>
+<Variants initialVariants={initialVariants}>
   {variant => (
     <DemoProvider>
-      <Layout
-        className={styles.layout}
-        withTopBar={variant.withTopBar}
-        monoColumn={variant.monoColumn}
-      >
-        {!variant.monoColumn && <SideBar variant={variant} />}
-        {variant.withTopBar && <div className="u-flex-m u-dn u-flex-items-center u-pos-absolute u-top-0 u-w-100" style={{ height: '48px', backgroundColor: 'var(--defaultBackgroundColor)' }}>Fake TopBar</div>}
-        <Main>
-          <Content className='u-p-1'>
-            <h2 className='u-mt-0'>{ active.join(' / ') }</h2>
-            { content.ada.short }
-          </Content>
-        </Main>
-      </Layout>
+      <Button className="u-mb-1" label="Open layout in modal" onClick={() => setShowDialog(true)} />
+      {showDialog && (
+        <Dialog
+          className="cozy-ui-body"
+          open
+          fullScreen
+          fullWidth
+        >
+          <IconButton
+            className={styles.closeButton}
+            onClick={() => setShowDialog(false)}
+          >
+            <Icon icon={CrossMediumIcon} />
+          </IconButton>
+          {variant.withTopBar &&
+            <div
+              id="coz-bar"
+              role="banner"
+              className={styles.topBar}
+            >
+              Fake TopBar
+            </div>
+          }
+          <div role="application">
+            <Layout
+              withTopBar={variant.withTopBar}
+              monoColumn={variant.monoColumn}
+            >
+              {!variant.monoColumn && <SideBar variant={variant} />}
+              <Main>
+                <Content className='u-p-1'>
+                  <h2 className='u-mt-0'>{ active.join(' / ') }</h2>
+                  <p>---Start---</p>
+                  {variant.longContent ? content.ada.long : content.ada.short}
+                  <p>---END---</p>
+                </Content>
+              </Main>
+            </Layout>
+          </div>
+        </Dialog>
+      )}
     </DemoProvider>
   )}
 </Variants>

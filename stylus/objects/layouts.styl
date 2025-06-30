@@ -59,28 +59,10 @@ $app-layout
     background-color var(--paperBackgroundColor)
     color var(--primaryTextColor)
 
-    +medium-screen() // mobile + tablet
-        display block
-
-    &-topbar
-        +medium-screen() // mobile + tablet
-            // this pseudo-element is "ghost" element replacing bar
-            &:before
-                content ''
-                display block
-                height barHeight
-
     // When you want a sidebar
     &-2panes
         flex 0 0 100%
         align-items stretch
-
-        +medium-screen() // mobile + tablet
-            // this pseudo-element is "ghost" element replacing nav
-            &:after
-                content ''
-                display block
-                height navHeight
 
 $app-main
     display flex
@@ -88,38 +70,30 @@ $app-main
     position relative
     flex 1 1 auto
     box-sizing border-box
-    overflow-x hidden
-    overflow-y auto
+    overflow hidden
+    height 100%
 
     +medium-screen() // mobile + tablet
-        display block
-        overflow visible
         // iPhone X environment tweak
         padding-left env(safe-area-inset-left)
         padding-right env(safe-area-inset-right)
         padding-bottom env(safe-area-inset-bottom)
 
-    &-monocolumn
-        height 100%
-
-        +medium-screen() // mobile + tablet
-            min-height 100vh
-
-        &--topbar
-            +medium-screen() // mobile + tablet
-                min-height 'calc(100vh - %s)' % barHeight
+    &-topbar
+        // this pseudo-element is "ghost" element replacing bar
+        &:before
+            content ''
+            display block
+            height barHeight
+            width 100%
+            background-color var(--paperBackgroundColor)
 
     &-2panes
-        height auto
         background-color var(--defaultBackgroundColor)
 
         +medium-screen() // mobile + tablet
-            min-height calc(100vh - var(--sidebarHeight))
+            height calc(100vh - var(--sidebarHeight))
             background-color transparent
-
-        &--topbar
-            +medium-screen() // mobile + tablet
-                min-height 'calc(100vh - var(--sidebarHeight) - %s)' % barHeight
 
 $app-content
     position relative
@@ -127,19 +101,11 @@ $app-content
     flex-direction column
     flex 1 1 auto
     box-sizing border-box
-    overflow-x hidden
-    overflow-y auto
+    overflow hidden auto
     background-color var(--paperBackgroundColor)
-
-    +medium-screen() // mobile + tablet
-        display block
-        overflow visible
-
-    &-monocolumn
-        height 100%
+    height 100%
 
     &-2panes
-        height auto
         margin 1rem 1rem 1rem 0
         border-radius 1rem
 
