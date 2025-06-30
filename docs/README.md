@@ -83,6 +83,15 @@ yarn build:css:all # Build CSS files needed by the documentation
 yarn start:doc # Run the styleguide in watch mode
 ```
 
+You may need to start css as well:
+
+```bash
+yarn start:css # Create cozy-ui css
+yarn start:css:utils # Create cozy-ui utility css
+```
+
+tips: If you are starting `js` and `css` to have full control, and you want to link results in an application, in addition to all your start process you need to launch `yarn build:js` each time you want to see your modification from cozy-ui inside your application.
+
 ### Add a component
 
 If you want to add a new component, you must follow these steps:
