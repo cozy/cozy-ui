@@ -1,3 +1,10 @@
+# [127.1.0](https://github.com/cozy/cozy-ui/compare/v127.0.1...v127.1.0) (2025-07-01)
+
+
+### Features
+
+* **TableContainer:** Add `square` prop to remove radius ([2e7c6c1](https://github.com/cozy/cozy-ui/commit/2e7c6c1))
+
 ## [127.0.1](https://github.com/cozy/cozy-ui/compare/v127.0.0...v127.0.1) (2025-06-30)
 
 
