@@ -27,7 +27,7 @@ Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide/) to see all the 
 
 Add Cozy UI to a dependency to your project.
 
-```
+```bash
 yarn add cozy-ui
 ```
 
@@ -190,14 +190,37 @@ Components in `cozy-ui` are showcased with [React Styleguidist][]. To prevent UI
 for each PR, each component is screenshotted and compared to the master version to find any
 regression (thanks [Argos][] !).
 
-If your app uses [React Styleguidist][], `cozy-ui` provides `rsg-screenshots`, a CLI tool to take
-screenshots of your components (uses Puppeteer under the hood).
+Before launching commands, you may need to change `executablePath` in `scripts/screenshots/prepares.js` to `/Applications/Chrome.app/Contents/MacOS/Chrome` or `/Applications/Chromium.app/Contents/MacOS/Chromium` depends on your system.
+
+Then you have to install dependencies:
 
 ```bash
-yarn add cozy-ui # The rsg-screenshots binary is now installed
-yarn makeSpriteAndPalette
-yarn build:doc:react # Build our styleguide, the output directory is docs/react
-rsg-screenshots --screenshot-dir screenshots/ --styleguide-dir docs/react # Each component in the styleguide will be screenshotted and saved inside the screenshots/ directory
+yarn add puppeteer@"22.15.0" --dev --exact
+yarn build:all
+```
+
+Now you are ready to launch screnshots:
+
+```bash
+mkdir -p ./screenshots
+yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+```
+
+You can also specify a component to screenshot by adding `--component NameOfTheComponent` and change viewport to mobile size:
+
+```bash
+yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactDesktop --component Sidebar
+```
+
+It may be interesting to create pristine screenshots, and then create screenshots of your modified component and compare them locally:
+
+```bash
+mkdir -p ./pristine_screenshots
+yarn screenshots --mode react --viewport desktop --screenshot-dir ./pristine_screenshots/reactDesktop --component Sidebar
+# make modifications on Sidebar component
+# screenshot it as described before
+mkdir -p ./diffs
+yarn screenshots:server
 ```
 
 See our [travis configuration](https://github.com/cozy/cozy-ui/blob/master/.travis.yml) for more information.
