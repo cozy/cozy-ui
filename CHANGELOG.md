@@ -1,3 +1,10 @@
+# [127.2.0](https://github.com/cozy/cozy-ui/compare/v127.1.0...v127.2.0) (2025-07-01)
+
+
+### Features
+
+* **InstallFlagshipAppDialog:** Replace wording and QRCode ([b1bc4c9](https://github.com/cozy/cozy-ui/commit/b1bc4c9))
+
 # [127.1.0](https://github.com/cozy/cozy-ui/compare/v127.0.1...v127.1.0) (2025-07-01)
 
 
