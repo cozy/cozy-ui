@@ -3,19 +3,19 @@
   "allow": "Autoriser",
   "allow-location-dialog": {
     "title": "Autoriser l'accès à votre position",
-    "description": "Votre Cozy a besoin d'être toujours autorisé à accéder à la position de votre téléphone pour mémoriser, et vous aider à analyser vos déplacements, même lorsque l'app n'est pas utilisée ou affichée.\n\nElle ne sera JAMAIS transmise à qui que ce soit sans votre demande.\n\nVous pourrez désactiver cette fonctionnalité depuis les paramètres de l'app Coach CO2."
+    "description": "Votre Twake a besoin d'être toujours autorisé à accéder à la position de votre téléphone pour mémoriser, et vous aider à analyser vos déplacements, même lorsque l'app n'est pas utilisée ou affichée.\n\nElle ne sera JAMAIS transmise à qui que ce soit sans votre demande.\n\nVous pourrez désactiver cette fonctionnalité depuis les paramètres de l'app Coach CO2."
   },
   "install-flagship-app-dialog": {
     "title": "Scannez le QR Code",
-    "text": "ou rendez vous directement sur <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>l’App Store</a><br>ou sur le <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> pour installer l’app Cloud Personnel Cozy",
-    "a11n": "Aller sur la page de téléchargement de l'application Cloud Personnel Cozy"
+    "text": "ou rendez vous directement sur <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>l’App Store</a><br>ou sur le <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> pour installer l’app Twake Workplace",
+    "a11n": "Aller sur la page de téléchargement de l'application Twake Workplace"
   },
   "authentification-dialog": {
     "title": "Authentification",
-    "title-oidc": "Cozy Pass",
+    "title-oidc": "Twake Pass",
     "subtitle": "Par sécurité, merci de confirmer votre identité",
-    "label": "Mot de passe Cozy",
-    "label-oidc": "Mot de passe Cozy Pass",
+    "label": "Mot de passe Twake",
+    "label-oidc": "Mot de passe Twake Pass",
     "abort": "Quitter",
     "unlock": "Déverrouiller",
     "forgotten-password": "J'ai oublié mon mot de passe",
