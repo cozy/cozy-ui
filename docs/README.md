@@ -205,10 +205,15 @@ Then you have to install dependencies:
 
 ```bash
 yarn add puppeteer@"22.15.0" --dev --exact
+```
+
+Before creating any screenshots, make sure you have built everything:
+
+```bash
 yarn build:all
 ```
 
-Now you are ready to launch screnshots:
+Now you are ready to create screenshots:
 
 ```bash
 mkdir -p ./screenshots
@@ -227,7 +232,8 @@ It may be interesting to create pristine screenshots, and then create screenshot
 mkdir -p ./pristine_screenshots
 yarn screenshots --mode react --viewport desktop --screenshot-dir ./pristine_screenshots/reactDesktop --component Sidebar
 # make modifications on Sidebar component
-# screenshot it as described before
+# build everything again
+# screenshot it as described before, then
 mkdir -p ./diffs
 yarn screenshots:server
 ```
