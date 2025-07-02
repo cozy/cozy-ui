@@ -1,4 +1,5 @@
 const path = require('path')
+
 const { sleep } = require('./helpers')
 
 const rootDirectory = path.join(__dirname, '../')
@@ -22,17 +23,12 @@ const getDefaultScreenshotName = ({
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const {
-    component,
-    screenshotDir,
-    viewport,
-    type,
-    variant,
-    componentConfig
-  } = options
+  const { component, screenshotDir, viewport, type, variant, componentConfig } =
+    options
   const { link, name } = component
 
   await page.goto(link)
+  await page.addStyleTag({ content: 'body {height: auto;}' }) // to resize viewport according to its content
   await sleep(200) // to be sure the page is entirely loaded
 
   const getScreenshotName =
