@@ -1,3 +1,10 @@
+# [127.4.0](https://github.com/cozy/cozy-ui/compare/v127.3.0...v127.4.0) (2025-07-21)
+
+
+### Features
+
+* implement virtualized grid list drag and drop :sparkles: ([c4f93a1](https://github.com/cozy/cozy-ui/commit/c4f93a1))
+
 # [127.3.0](https://github.com/cozy/cozy-ui/compare/v127.2.0...v127.3.0) (2025-07-21)
 
 
