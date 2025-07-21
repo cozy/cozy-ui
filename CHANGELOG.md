@@ -1,3 +1,10 @@
+# [127.3.0](https://github.com/cozy/cozy-ui/compare/v127.2.0...v127.3.0) (2025-07-21)
+
+
+### Features
+
+* implement virtualized grid :sparkles: ([9a6a475](https://github.com/cozy/cozy-ui/commit/9a6a475))
+
 # [127.2.0](https://github.com/cozy/cozy-ui/compare/v127.1.0...v127.2.0) (2025-07-01)
 
 
