@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 
-import CustomDragLayer from './CustomDrag/CustomDragLayer'
 import virtuosoComponentsDnd from './virtuosoComponents'
+import CustomDragLayer from '../../../utils/Dnd/CustomDrag/CustomDragLayer'
 import VirtualizedTable from '../index'
 import virtuosoComponents from '../virtuosoComponents'
 

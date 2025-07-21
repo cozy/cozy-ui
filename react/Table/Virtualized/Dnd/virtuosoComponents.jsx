@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react'
 
-import DnDConfigWrapper from './DnDConfigWrapper'
 import TableRowDnD from './TableRow'
 import TableContainer from '../../../TableContainer'
+import DnDConfigWrapper from '../../../utils/Dnd/DnDConfigWrapper'
 import virtuosoComponents from '../virtuosoComponents'
 
 /**
