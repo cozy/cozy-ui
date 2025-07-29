@@ -183,7 +183,7 @@
     "react-select": "^4.3.0",
     "react-swipeable-views": "^0.13.3",
     "react-virtuoso": "4.12.7",
-    "rooks": "^5.11.2"
+    "rooks": "7.14.1"
   },
   "peerDependencies": {
     "cozy-client": ">=52.1.0",
