@@ -1,3 +1,16 @@
+# [127.6.0](https://github.com/cozy/cozy-ui/compare/v127.5.0...v127.6.0) (2025-07-29)
+
+
+### Bug Fixes
+
+* **VirtualizedTable:** Remove ref on TableRow ([919f742](https://github.com/cozy/cozy-ui/commit/919f742))
+
+
+### Features
+
+* Upgrade rooks ([51de4e7](https://github.com/cozy/cozy-ui/commit/51de4e7))
+* **VirtualizedTable:** Add `onLongPress` prop on Cell ([7e08d77](https://github.com/cozy/cozy-ui/commit/7e08d77))
+
 # [127.5.0](https://github.com/cozy/cozy-ui/compare/v127.4.0...v127.5.0) (2025-07-29)
 
 
