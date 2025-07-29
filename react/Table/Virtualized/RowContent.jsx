@@ -12,6 +12,7 @@ const RowContent = ({
   context,
   children,
   onSelectClick,
+  onLongPress,
   onClick
 }) => {
   const selectedCount = context.selectedItems.length
@@ -39,6 +40,7 @@ const RowContent = ({
           columns={columns}
           column={column}
           onClick={onClick}
+          onLongPress={onLongPress}
         >
           {children}
         </Cell>

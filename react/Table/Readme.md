@@ -110,8 +110,9 @@ const onSelectAll = rows => {
     onSelectAll={onSelectAll}
     componentsProps={{
       rowContent: {
-        onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) }
-      }
+        onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
+        onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
+      },
     }}
   />
 </div>
