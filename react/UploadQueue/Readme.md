@@ -44,7 +44,7 @@ const data = {
       loaded: 100,
       total: 400,
       speed: 135000,
-      remainingTime: 90
+      remainingTime: 120
     },
     status: 'loading'
   }, {
