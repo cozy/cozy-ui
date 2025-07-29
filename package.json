@@ -182,7 +182,7 @@
     "react-remove-scroll": "^2.4.0",
     "react-select": "^4.3.0",
     "react-swipeable-views": "^0.13.3",
-    "react-virtuoso": "4.12.7",
+    "react-virtuoso": "^4.13.0",
     "rooks": "7.14.1"
   },
   "peerDependencies": {
