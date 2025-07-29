@@ -1,3 +1,10 @@
+# [127.7.0](https://github.com/cozy/cozy-ui/compare/v127.6.0...v127.7.0) (2025-07-29)
+
+
+### Features
+
+* Upgrade react-virtuoso ([63e064a](https://github.com/cozy/cozy-ui/commit/63e064a))
+
 # [127.6.0](https://github.com/cozy/cozy-ui/compare/v127.5.0...v127.6.0) (2025-07-29)
 
 
