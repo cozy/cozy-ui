@@ -1,3 +1,10 @@
+# [127.5.0](https://github.com/cozy/cozy-ui/compare/v127.4.0...v127.5.0) (2025-07-29)
+
+
+### Features
+
+* **Layout:** Simplify the approach and make it compliant with v-tables ([0936323](https://github.com/cozy/cozy-ui/commit/0936323))
+
 # [127.4.0](https://github.com/cozy/cozy-ui/compare/v127.3.0...v127.4.0) (2025-07-21)
 
 
