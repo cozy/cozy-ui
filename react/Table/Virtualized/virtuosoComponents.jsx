@@ -29,7 +29,7 @@ const virtuosoComponents = {
   TableFooter: forwardRef(({ context, ...props }, ref) => (
     <TableFooter {...props} ref={ref} />
   )),
-  TableRow: forwardRef((props, ref) => <TableRow {...props} ref={ref} />)
+  TableRow: props => <TableRow {...props} />
 }
 
 export default virtuosoComponents
