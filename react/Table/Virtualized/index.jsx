@@ -76,7 +76,6 @@ const VirtualizedTable = forwardRef(
             columns={columns}
             context={context}
             onSelectClick={onSelect}
-            onClick={componentsProps?.rowContent?.onClick}
           >
             {componentsProps?.rowContent?.children}
           </RowContent>
