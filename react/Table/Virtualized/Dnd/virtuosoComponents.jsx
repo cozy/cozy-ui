@@ -17,9 +17,9 @@ const virtuosoComponentsDnd = {
       <TableContainer {...props} ref={ref} />
     </DnDConfigWrapper>
   )),
-  TableRow: forwardRef((props, ref) => {
-    return <TableRowDnD {...props} ref={ref} />
-  })
+  TableRow: props => {
+    return <TableRowDnD {...props} />
+  }
 }
 
 export default virtuosoComponentsDnd
