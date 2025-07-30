@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     alignItems: 'center',
     height: ({ size }) => sizeToPixel[size],
-    flex: 1,
+    flex: 'auto',
     borderRadius: ({ size }) => radiusBySize[size],
     borderStyle: 'solid',
     borderWidth: 1,
