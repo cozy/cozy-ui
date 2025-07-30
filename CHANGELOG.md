@@ -1,3 +1,16 @@
+# [127.8.0](https://github.com/cozy/cozy-ui/compare/v127.7.0...v127.8.0) (2025-07-30)
+
+
+### Bug Fixes
+
+* **SearchBar:** Adjust flex behavior ([34f78b2](https://github.com/cozy/cozy-ui/commit/34f78b2))
+
+
+### Features
+
+* **TableCell:** Set css for `sizeSmall` ([17ff031](https://github.com/cozy/cozy-ui/commit/17ff031))
+* **VirtualizedTable:** Add `groups` props to be able to group data ([dac73e0](https://github.com/cozy/cozy-ui/commit/dac73e0))
+
 # [127.7.0](https://github.com/cozy/cozy-ui/compare/v127.6.0...v127.7.0) (2025-07-29)
 
 
