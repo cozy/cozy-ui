@@ -2,6 +2,7 @@
 
 ```jsx
 import VirtualizedTable from 'cozy-ui/transpiled/react/Table/Virtualized'
+import Variants from 'cozy-ui/docs/components/Variants'
 
 const createData = (id, name, calories, fat, carbs, protein) => {
   return { id, name, calories, fat, carbs, protein }
@@ -97,23 +98,32 @@ const onSelectAll = rows => {
   }
 }
 
+const initialVariants = [{ grouped: false }]
+
+const makeGroups = () => ({ groupLabels: ['C', 'D', 'Others'], groupCounts: [1,1,12] })
+
 ;
 
-<div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-  <VirtualizedTable
-    rows={rows}
-    columns={columns}
-    defaultOrder={columns[0].id}
-    selectedItems={state.selectedItemsId}
-    isSelectedItem={row => isSelectedItem(row)}
-    onSelect={onSelect}
-    onSelectAll={onSelectAll}
-    componentsProps={{
-      rowContent: {
-        onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
-        onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
-      },
-    }}
-  />
-</div>
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
+    <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+      <VirtualizedTable
+        rows={rows}
+        columns={columns}
+        groups={variant.grouped ? makeGroups : undefined}
+        defaultOrder={columns[0].id}
+        selectedItems={state.selectedItemsId}
+        isSelectedItem={row => isSelectedItem(row)}
+        onSelect={onSelect}
+        onSelectAll={onSelectAll}
+        componentsProps={{
+          rowContent: {
+            onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
+            onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
+          },
+        }}
+      />
+    </div>
+  )}
+</Variants>
 ```
