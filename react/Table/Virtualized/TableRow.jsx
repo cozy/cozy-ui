@@ -4,7 +4,8 @@ import React from 'react'
 import TableRowClassic from '../../TableRow'
 
 const TableRow = ({ item, context, className, ...props }) => {
-  const isSelected = context?.isSelectedItem(item)
+  const _item = item || context.data[props['data-item-index']]
+  const isSelected = context.isSelectedItem(_item)
 
   return (
     <TableRowClassic

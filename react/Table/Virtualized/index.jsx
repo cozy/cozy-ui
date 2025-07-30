@@ -1,16 +1,19 @@
+import PropTypes from 'prop-types'
 import React, { useState, forwardRef } from 'react'
-import { TableVirtuoso } from 'react-virtuoso'
+import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
 import virtuosoComponents from './virtuosoComponents'
+import TableCell from '../../TableCell'
 
 const VirtualizedTable = forwardRef(
   (
     {
       rows,
       columns,
+      groups,
       defaultOrder,
       secondarySort,
       selectedItems,
@@ -29,8 +32,11 @@ const VirtualizedTable = forwardRef(
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
+    const { groupLabels, groupCounts } = groups?.(data) || {}
+    const isGroupedTable = !!groupCounts
     const _context = {
       ...context,
+      ...(isGroupedTable && { data }), // we use directly `data` prop if no groupCounts
       isSelectedItem,
       selectedItems
     }
@@ -49,11 +55,14 @@ const VirtualizedTable = forwardRef(
       onSelectAll([])
     }
 
+    const Component = isGroupedTable ? GroupedTableVirtuoso : TableVirtuoso
+
     return (
-      <TableVirtuoso
+      <Component
         {...props}
         ref={ref}
-        data={data}
+        data={!isGroupedTable ? data : undefined}
+        groupCounts={isGroupedTable ? groupCounts : []}
         context={_context}
         components={components || virtuosoComponents}
         fixedHeaderContent={() => (
@@ -68,13 +77,20 @@ const VirtualizedTable = forwardRef(
             onSelectAllClick={handleSelectAll}
           />
         )}
-        itemContent={(_index, row, context) => (
+        {...(isGroupedTable && {
+          groupContent: index => (
+            <TableCell colSpan={columns.length + 1} size="small">
+              {groupLabels[index]}
+            </TableCell>
+          )
+        })}
+        itemContent={index => (
           <RowContent
             {...componentsProps?.rowContent}
-            index={_index}
-            row={row}
+            index={index}
+            row={data[index]}
             columns={columns}
-            context={context}
+            context={_context}
             onSelectClick={onSelect}
           >
             {componentsProps?.rowContent?.children}
@@ -93,6 +109,13 @@ VirtualizedTable.defaultProps = {
   isSelectedItem: () => {},
   onSelect: () => {},
   onSelectAll: () => {}
+}
+
+VirtualizedTable.propTypes = {
+  /**
+     Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array })
+  */
+  groups: PropTypes.func
 }
 
 export default VirtualizedTable
