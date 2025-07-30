@@ -571,6 +571,14 @@ export const makeLightNormalOverrides = theme => ({
       color: theme.palette.text.secondary,
       height: '2rem'
     },
+    sizeSmall: {
+      ...theme.typography.subtitle2,
+      paddingBottom: 0,
+      paddingTop: 0,
+      outline: `1px solid ${theme.palette.background.default}`,
+      borderBottom: 'none',
+      backgroundColor: theme.palette.background.default
+    },
     paddingCheckbox: {
       width: 32,
       padding: 0
