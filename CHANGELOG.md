@@ -1,3 +1,10 @@
+# [127.10.0](https://github.com/cozy/cozy-ui/compare/v127.9.0...v127.10.0) (2025-07-31)
+
+
+### Features
+
+* **Actions:** Add `makeAction` to simplify action creation ([941e9b7](https://github.com/cozy/cozy-ui/commit/941e9b7))
+
 # [127.9.0](https://github.com/cozy/cozy-ui/compare/v127.8.0...v127.9.0) (2025-07-31)
 
 
