@@ -1,3 +1,10 @@
+# [127.9.0](https://github.com/cozy/cozy-ui/compare/v127.8.0...v127.9.0) (2025-07-31)
+
+
+### Features
+
+* **VirtualizedTable:** Add `disableClick` prop on column config ([6c68c01](https://github.com/cozy/cozy-ui/commit/6c68c01))
+
 # [127.8.0](https://github.com/cozy/cozy-ui/compare/v127.7.0...v127.8.0) (2025-07-30)
 
 
