@@ -65,7 +65,8 @@ const columns = [
     disablePadding: false,
     width: 115,
     label: 'Protein (g)',
-    textAlign: 'right'
+    textAlign: 'right',
+    disableClick: true
   }
 ]
 
