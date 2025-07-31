@@ -20,11 +20,19 @@ const Cell = ({ row, columns, column, onClick, onLongPress, children }) => {
   const cellContent = get(row, column.id, '—')
 
   const longPressRef = useOnLongPress(() => {
+    if (column.disableClick) {
+      return
+    }
+
     setIsLongPress(true)
     onLongPress?.(row, column)
   })
 
   const handleClick = () => {
+    if (column.disableClick) {
+      return
+    }
+
     if (!isLongPress) {
       onClick?.(row, column)
     } else {
