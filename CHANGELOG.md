@@ -1,3 +1,12 @@
+# [127.11.0](https://github.com/cozy/cozy-ui/compare/v127.10.1...v127.11.0) (2025-08-18)
+
+
+### Features
+
+* **ContactsList:** Add ContactCell component to show a contact in table ([234bfe2](https://github.com/cozy/cozy-ui/commit/234bfe2))
+* **ContactsList:** Add makeGroupLabelsAndCounts function ([b628571](https://github.com/cozy/cozy-ui/commit/b628571))
+* **Providers:** Add Selection provider ([b9854b6](https://github.com/cozy/cozy-ui/commit/b9854b6))
+
 ## [127.10.1](https://github.com/cozy/cozy-ui/compare/v127.10.0...v127.10.1) (2025-08-18)
 
 
