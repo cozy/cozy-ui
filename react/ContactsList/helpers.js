@@ -1,3 +1,5 @@
+import get from 'lodash/get'
+
 export function buildLastNameFirst(contact) {
   const givenName =
     contact.name && contact.name.givenName
@@ -37,14 +39,38 @@ const makeHeader = (contact, t) => {
 }
 
 /**
+ * Build header for a contact (first letter of indexes.byFamilyNameGivenNameEmailCozyUrl)
+ * @param {object} contact
+ * @param {function} t translation function
+ * @returns {string} header
+ */
+const makeHeaderForIndexedContacts = (contact, t) => {
+  if (contact.me) return t('me')
+  if (contact.cozyMetadata?.favorite) return t('favorite')
+
+  const index = get(contact, 'indexes.byFamilyNameGivenNameEmailCozyUrl', '')
+  const hasIndex = index !== null && index.length > 0
+
+  if (hasIndex) {
+    const firstLetterWithoutAccent = index[0]
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+    return firstLetterWithoutAccent
+  }
+
+  return t('empty')
+}
+
+/**
  * @typedef {Object.<string, Object>} CategorizedContactsResult
  */
 
 /**
  * Categorize contacts by first letter of last name
+ * Expl.: all contacts with A as first letter will be in A category
  * @param {object[]} contacts io.cozy.contacts documents
  * @param {function} t translation function
- * @returns {CategorizedContactsResult}
+ * @returns {CategorizedContactsResult} Categorized contacts
  */
 export const categorizeContacts = (contacts, t) =>
   contacts.reduce((acc, contact) => {
@@ -80,4 +106,27 @@ export const sortHeaders = (categorized, t) => {
   }
 
   return headersSorted.concat(notEmptyAndMyselfSorted)
+}
+
+/**
+ * Counts how many contacts are categorized by first letter and store it in `groupCounts`
+ * Expl.: if there is 3 contacts in A and 2 in B, it will return [3,2]
+ * Also store first letters and store them in `groupLabels`
+ * @param {array} contacts - Array of io.cozy.contact documents
+ * @returns {object}
+ */
+export const makeGroupLabelsAndCounts = (contacts, t) => {
+  return contacts.reduce(
+    (acc, contact) => {
+      const header = makeHeaderForIndexedContacts(contact, t)
+      if (!acc.groupLabels.includes(header)) {
+        acc.groupLabels.push(header)
+      }
+      const idx = acc.groupLabels.indexOf(header)
+      const val = acc.groupCounts[idx] || 0
+      acc.groupCounts[idx] = val + 1
+      return acc
+    },
+    { groupLabels: [], groupCounts: [] }
+  )
 }
