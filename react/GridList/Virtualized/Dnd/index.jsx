@@ -41,13 +41,13 @@ const VirtualizedGridListDnd = ({
               <div {...scrollerProps} ref={ref} />
             </DnDConfigWrapper>
           )),
-          Item: ({ context, children, ...props }) => {
+          Item: ({ context, ...props }) => {
             const item = context?.items?.[props['data-index']]
             return (
               <GridItem
                 item={item}
                 context={context}
-                renderItem={() => <>{children}</>}
+                renderItem={itemRenderer}
                 {...componentProps.Item}
               />
             )
@@ -55,7 +55,6 @@ const VirtualizedGridListDnd = ({
           ...components
         }}
         context={_context}
-        itemRenderer={itemRenderer}
         {...props}
       >
         {children}
