@@ -142,7 +142,7 @@ export class FileImageLoader extends Component {
         throw new Error('No pdf files fallback')
       }
       const src = await client
-        .collection('io.cozy.files')
+        .collection('io.cozy.files', { driveId: file.driveId })
         .getDownloadLinkById(this.getFileId(file), file.name)
       await checkImageSource(src)
       if (this._mounted) {
