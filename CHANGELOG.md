@@ -1,3 +1,10 @@
+## [127.10.1](https://github.com/cozy/cozy-ui/compare/v127.10.0...v127.10.1) (2025-08-18)
+
+
+### Bug Fixes
+
+* Reorganize virtualized grid list to render item content :bug: ([62cf105](https://github.com/cozy/cozy-ui/commit/62cf105))
+
 # [127.10.0](https://github.com/cozy/cozy-ui/compare/v127.9.0...v127.10.0) (2025-07-31)
 
 
