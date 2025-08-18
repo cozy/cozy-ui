@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import { VirtuosoGrid } from 'react-virtuoso'
 
 const VirtualizedGridList = forwardRef(
-  ({ items = [], itemRenderer, components, context, ...props }, ref) => {
+  ({ items = [], components, context, ...props }, ref) => {
     return (
       <VirtuosoGrid
         ref={ref}
@@ -10,7 +10,6 @@ const VirtualizedGridList = forwardRef(
         context={context}
         style={{ height: '100%' }}
         totalCount={items.length}
-        itemContent={index => itemRenderer(items[index])}
         {...props}
       />
     )
