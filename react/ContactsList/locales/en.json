@@ -1,4 +1,6 @@
 {
   "empty": "EMPTY",
-  "me": "ME"
+  "me": "me",
+  "favorite": "favorites",
+  "menu": "Menu"
 }
