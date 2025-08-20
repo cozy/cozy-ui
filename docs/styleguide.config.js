@@ -73,15 +73,21 @@ module.exports = {
       ]
     },
     {
+      name: 'Contacts',
+      components: () => [
+        '../react/ContactsList',
+        '../react/ContactsListModal',
+        '../react/ContactPicker',
+        '../react/Contacts/Header'
+      ]
+    },
+    {
       name: 'Extra',
       components: () => [
         '../react/ActionsBar',
         '../react/ActionsMenu',
         '../react/AppSections',
         '../react/BottomSheet',
-        '../react/ContactsList',
-        '../react/ContactsListModal',
-        '../react/ContactPicker',
         '../react/CozyDialogs',
         '../react/CozyDialogs/SpecificDialogs',
         '../react/DatePicker',
