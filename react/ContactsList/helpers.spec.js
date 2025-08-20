@@ -103,7 +103,7 @@ describe('sortHeaders', () => {
 
     const sortedHeaders = sortHeaders(contacts, t)
 
-    expect(sortedHeaders).toEqual(['me', 'empty', 'B', 'F', 'H'])
+    expect(sortedHeaders).toEqual(['B', 'F', 'H', 'empty', 'me'])
   })
 })
 
@@ -143,7 +143,16 @@ describe('makeGroupLabelsAndCounts', () => {
     const res = makeGroupLabelsAndCounts(contacts, t)
 
     expect(res).toStrictEqual({
-      groupLabels: ['A', 'C', 'B', 'X', 'Z', 'empty', 'me', 'E'],
+      groupLabels: [
+        'A',
+        'C',
+        'B',
+        'X',
+        'Z',
+        'ContactsList.empty',
+        'ContactsList.me',
+        'E'
+      ],
       groupCounts: [3, 5, 2, 1, 1, 4, 1, 1]
     })
   })

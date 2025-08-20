@@ -32,10 +32,10 @@ export const sortContacts = contacts => contacts.sort(sortLastNameFirst)
  * @returns {string} header
  */
 const makeHeader = (contact, t) => {
-  if (contact.me) return t('me')
+  if (contact.me) return t('ContactsList.me')
 
   const name = buildLastNameFirst(contact)
-  return name[0] || t('empty')
+  return name[0] || t('ContactsList.empty')
 }
 
 /**
@@ -45,8 +45,8 @@ const makeHeader = (contact, t) => {
  * @returns {string} header
  */
 const makeHeaderForIndexedContacts = (contact, t) => {
-  if (contact.me) return t('me')
-  if (contact.cozyMetadata?.favorite) return t('favorite')
+  if (contact.me) return t('ContactsList.me')
+  if (contact.cozyMetadata?.favorite) return t('ContactsList.favorite')
 
   const index = get(contact, 'indexes.byFamilyNameGivenNameEmailCozyUrl', '')
   const hasIndex = index !== null && index.length > 0
@@ -58,7 +58,7 @@ const makeHeaderForIndexedContacts = (contact, t) => {
     return firstLetterWithoutAccent
   }
 
-  return t('empty')
+  return t('ContactsList.empty')
 }
 
 /**
@@ -89,7 +89,8 @@ export const categorizeContacts = (contacts, t) =>
 export const sortHeaders = (categorized, t) => {
   const headers = Object.keys(categorized)
   const notEmptyAndMyselfHeaders = headers.filter(
-    header => header !== t('empty') && header !== t('me')
+    header =>
+      header !== t('ContactsList.empty') && header !== t('ContactsList.me')
   )
   const notEmptyAndMyselfSorted = notEmptyAndMyselfHeaders.slice().sort()
 
@@ -98,11 +99,11 @@ export const sortHeaders = (categorized, t) => {
   }
 
   const headersSorted = []
-  if (headers.includes(t('me'))) {
-    headersSorted.push(t('me'))
+  if (headers.includes(t('ContactsList.me'))) {
+    headersSorted.push(t('ContactsList.me'))
   }
-  if (headers.includes(t('empty'))) {
-    headersSorted.push(t('empty'))
+  if (headers.includes(t('ContactsList.empty'))) {
+    headersSorted.push(t('ContactsList.empty'))
   }
 
   return headersSorted.concat(notEmptyAndMyselfSorted)
