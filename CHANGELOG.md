@@ -1,3 +1,10 @@
+# [127.12.0](https://github.com/cozy/cozy-ui/compare/v127.11.0...v127.12.0) (2025-08-20)
+
+
+### Features
+
+* Add `Contacts/Header` and `Contacts/GroupsSelect` components ([41892e8](https://github.com/cozy/cozy-ui/commit/41892e8))
+
 # [127.11.0](https://github.com/cozy/cozy-ui/compare/v127.10.1...v127.11.0) (2025-08-18)
 
 
