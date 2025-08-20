@@ -1,6 +1,8 @@
 {
-  "empty": "EMPTY",
-  "me": "me",
-  "favorite": "favorites",
-  "menu": "Menu"
+  "ContactsList": {
+    "empty": "EMPTY",
+    "me": "me",
+    "favorite": "favorites",
+    "menu": "Menu"
+  }
 }

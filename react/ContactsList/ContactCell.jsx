@@ -29,7 +29,7 @@ const Cell = ({ row, column, cell, actions }) => {
         <ListItemIcon>
           <IconButton
             ref={actionsRef}
-            arial-label={t('menu')}
+            arial-label={t('ContactsList.menu')}
             onClick={() => setShowActions(true)}
           >
             <Icon icon={DotsIcon} />
