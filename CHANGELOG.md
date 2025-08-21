@@ -1,3 +1,10 @@
+# [127.14.0](https://github.com/cozy/cozy-ui/compare/v127.13.1...v127.14.0) (2025-08-21)
+
+
+### Features
+
+* **Icons:** Add `AssignAdmin` and `AssignModerator` ([a66dedf](https://github.com/cozy/cozy-ui/commit/a66dedf))
+
 ## [127.13.1](https://github.com/cozy/cozy-ui/compare/v127.13.0...v127.13.1) (2025-08-21)
 
 
