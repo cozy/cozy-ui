@@ -4,15 +4,13 @@ import React from 'react'
 import ContactRow from './ContactRow'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import withContactsListLocales from './locales/withContactsListLocales'
-import { locales } from './locales/withContactsListLocales'
 import List from '../List'
 import ListSubheader from '../ListSubheader'
 import { Table } from '../deprecated/Table'
 import useBreakpoints from '../providers/Breakpoints'
-import { useI18n, useExtendI18n } from '../providers/I18n'
+import { useI18n } from '../providers/I18n'
 
 const ContactsList = ({ contacts, onItemClick, ...rest }) => {
-  useExtendI18n(locales)
   const { t } = useI18n()
   const sortedContacts = sortContacts(contacts)
   const categorizedContacts = categorizeContacts(sortedContacts, t)

@@ -14,11 +14,7 @@ const MyselfMarker = () => {
   useExtendI18n(locales)
   const { t } = useI18n()
 
-  return (
-    <span className={`${styles['contact-myself']}`}>
-      ({t('ContactsList.me')})
-    </span>
-  )
+  return <span className={`${styles['contact-myself']}`}>({t('me')})</span>
 }
 
 const ContactIdentity = ({ contact }) => {
