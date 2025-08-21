@@ -1,3 +1,11 @@
+## [127.13.1](https://github.com/cozy/cozy-ui/compare/v127.13.0...v127.13.1) (2025-08-21)
+
+
+### Bug Fixes
+
+* **ContactsList:** Revert moving locales inside `ContactsList` attribute ([eba17b6](https://github.com/cozy/cozy-ui/commit/eba17b6))
+* **GroupsSelect:** Styles wasn't build correctly ([dc9d3ce](https://github.com/cozy/cozy-ui/commit/dc9d3ce))
+
 # [127.13.0](https://github.com/cozy/cozy-ui/compare/v127.12.0...v127.13.0) (2025-08-21)
 
 
