@@ -1,3 +1,10 @@
+# [127.13.0](https://github.com/cozy/cozy-ui/compare/v127.12.0...v127.13.0) (2025-08-21)
+
+
+### Features
+
+* **ContactsList:** Move locales inside `ContactsList` attribute ([068d23e](https://github.com/cozy/cozy-ui/commit/068d23e))
+
 # [127.12.0](https://github.com/cozy/cozy-ui/compare/v127.11.0...v127.12.0) (2025-08-20)
 
 
