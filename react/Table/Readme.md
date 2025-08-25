@@ -103,7 +103,31 @@ const initialVariants = [{ grouped: false }]
 
 const makeGroups = () => ({ groupLabels: ['C', 'D', 'Others'], groupCounts: [1,1,12] })
 
-;
+/**
+ * @param direction: ArrowUp / ArrowRight: -1, ArrowDown / ArrowLeft: 1
+ * @param items: Array (optional)
+ */
+const handleShiftArrow = (direction, items = []) => {
+  const allItems = items.length === 0 ? itemsListRef.current : items
+
+  let newFocusedIndex = focusedIndex
+
+  if (direction === -1) {
+    newFocusedIndex = Math.max(0, focusedIndex - 1)
+  } else if (direction === 1) {
+    newFocusedIndex = Math.min(allItems.length - 1, focusedIndex + 1)
+  }
+
+  setFocusedIndex(newFocusedIndex)
+  setIsKeyboardNavigating(true)
+
+  const anchorIndex =
+    lastSelectedIndex !== null ? lastSelectedIndex : focusedIndex
+  if (lastSelectedIndex === null) {
+    setLastSelectedIndex(focusedIndex)
+  }
+  selectExactRange(allItems, anchorIndex, newFocusedIndex)
+}
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
@@ -123,6 +147,7 @@ const makeGroups = () => ({ groupLabels: ['C', 'D', 'Others'], groupCounts: [1,1
             onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
           },
         }}
+        handleShiftArrow={handleShiftArrow}
       />
     </div>
   )}

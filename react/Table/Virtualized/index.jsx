@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { useState, forwardRef } from 'react'
+import React, { useEffect, useState, useRef, forwardRef } from 'react'
 import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
@@ -23,6 +23,7 @@ const VirtualizedTable = forwardRef(
       componentsProps,
       context,
       components,
+      handleShiftArrow,
       ...props
     },
     ref
@@ -41,6 +42,33 @@ const VirtualizedTable = forwardRef(
       selectedItems
     }
 
+    const dataRef = useRef(data)
+    const containerRef = useRef(null)
+
+    useEffect(() => {
+      dataRef.current = data
+    }, [data])
+
+    useEffect(() => {
+      if (!containerRef?.current) return
+      const table = containerRef.current
+      containerRef.current.focus?.()
+
+      const handleKeyDown = event => {
+        if (
+          event.shiftKey &&
+          (event.key === 'ArrowUp' || event.key === 'ArrowDown')
+        ) {
+          event.preventDefault()
+          const direction = event.key === 'ArrowUp' ? -1 : 1
+          handleShiftArrow(direction, dataRef.current)
+        }
+      }
+
+      table.addEventListener?.('keydown', handleKeyDown)
+      return () => table.removeEventListener?.('keydown', handleKeyDown)
+    }, [handleShiftArrow, containerRef])
+
     const handleSort = property => {
       const isAsc = orderBy === property && order === 'asc'
       setOrder(isAsc ? 'desc' : 'asc')
@@ -58,46 +86,54 @@ const VirtualizedTable = forwardRef(
     const Component = isGroupedTable ? GroupedTableVirtuoso : TableVirtuoso
 
     return (
-      <Component
-        {...props}
-        ref={ref}
-        data={!isGroupedTable ? data : undefined}
-        groupCounts={isGroupedTable ? groupCounts : []}
-        context={_context}
-        components={components || virtuosoComponents}
-        fixedHeaderContent={() => (
-          <FixedHeaderContent
-            {...componentsProps?.fixedHeaderContent}
-            columns={columns}
-            rowCount={rows.length}
-            context={_context}
-            order={order}
-            orderBy={orderBy}
-            onClick={handleSort}
-            onSelectAllClick={handleSelectAll}
-          />
-        )}
-        {...(isGroupedTable && {
-          groupContent: index => (
-            <TableCell colSpan={columns.length + 1} size="small">
-              {groupLabels[index]}
-            </TableCell>
-          )
-        })}
-        itemContent={index => (
-          <RowContent
-            {...componentsProps?.rowContent}
-            index={index}
-            row={data[index]}
-            columns={columns}
-            context={_context}
-            onSelectClick={onSelect}
-          >
-            {componentsProps?.rowContent?.children}
-          </RowContent>
-        )}
-        rowSpan={2}
-      />
+      <div
+        className="u-h-100"
+        ref={containerRef}
+        tabIndex={0}
+        style={{ outline: 'none' }}
+      >
+        <Component
+          {...props}
+          ref={ref}
+          tabIndex={0}
+          data={!isGroupedTable ? data : undefined}
+          groupCounts={isGroupedTable ? groupCounts : []}
+          context={_context}
+          components={components || virtuosoComponents}
+          fixedHeaderContent={() => (
+            <FixedHeaderContent
+              {...componentsProps?.fixedHeaderContent}
+              columns={columns}
+              rowCount={rows.length}
+              context={_context}
+              order={order}
+              orderBy={orderBy}
+              onClick={handleSort}
+              onSelectAllClick={handleSelectAll}
+            />
+          )}
+          {...(isGroupedTable && {
+            groupContent: index => (
+              <TableCell colSpan={columns.length + 1} size="small">
+                {groupLabels[index]}
+              </TableCell>
+            )
+          })}
+          itemContent={index => (
+            <RowContent
+              {...componentsProps?.rowContent}
+              index={index}
+              row={data[index]}
+              columns={columns}
+              context={_context}
+              onSelectClick={onSelect}
+            >
+              {componentsProps?.rowContent?.children}
+            </RowContent>
+          )}
+          rowSpan={2}
+        />
+      </div>
     )
   }
 )
