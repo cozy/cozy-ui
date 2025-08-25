@@ -1,3 +1,10 @@
+# [127.15.0](https://github.com/cozy/cozy-ui/compare/v127.14.0...v127.15.0) (2025-08-25)
+
+
+### Features
+
+* **ActionsMenuButton:** Add component ([cd65a6c](https://github.com/cozy/cozy-ui/commit/cd65a6c))
+
 # [127.14.0](https://github.com/cozy/cozy-ui/compare/v127.13.1...v127.14.0) (2025-08-21)
 
 
