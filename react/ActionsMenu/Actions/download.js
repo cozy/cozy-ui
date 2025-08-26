@@ -36,7 +36,13 @@ export const download = ({ encryptedUrl }) => {
     icon,
     label,
     Component: makeComponent(label, icon),
-    action: (docs, { client, webviewIntent }) =>
-      downloadFile({ client, file: docs[0], url: encryptedUrl, webviewIntent })
+    action: (docs, { client, webviewIntent, driveId }) =>
+      downloadFile({
+        client,
+        file: docs[0],
+        url: encryptedUrl,
+        webviewIntent,
+        driveId
+      })
   }
 }
