@@ -1,3 +1,10 @@
+# [127.16.0](https://github.com/cozy/cozy-ui/compare/v127.15.0...v127.16.0) (2025-08-26)
+
+
+### Features
+
+* Update FileImageLoader to be used in shared drive :sparkles: ([cb4db8f](https://github.com/cozy/cozy-ui/commit/cb4db8f))
+
 # [127.15.0](https://github.com/cozy/cozy-ui/compare/v127.14.0...v127.15.0) (2025-08-25)
 
 
