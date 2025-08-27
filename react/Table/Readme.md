@@ -103,7 +103,13 @@ const initialVariants = [{ grouped: false }]
 
 const makeGroups = () => ({ groupLabels: ['C', 'D', 'Others'], groupCounts: [1,1,12] })
 
-;
+/**
+ * @param order
+ * @param orderBy
+ */
+const onSortChange = ({ order, orderBy }) => {
+  setState({ order, orderBy })
+}
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
@@ -117,6 +123,7 @@ const makeGroups = () => ({ groupLabels: ['C', 'D', 'Others'], groupCounts: [1,1
         isSelectedItem={row => isSelectedItem(row)}
         onSelect={onSelect}
         onSelectAll={onSelectAll}
+        onSortChange={onSortChange}
         componentsProps={{
           rowContent: {
             onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
