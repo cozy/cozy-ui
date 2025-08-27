@@ -1638,6 +1638,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fastify/deepmerge@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-2.0.2.tgz#5dcbda2acb266e309b8a1ca92fa48b2125e65fc0"
+  integrity sha512-3wuLdX5iiiYeZWP6bQrjqhrcvBIf0NHbQH1Ur1WbHvoiuTYUEItgygea3zs8aHpiitn0lOB8gX20u1qO+FDm7Q==
+
 "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
@@ -6027,17 +6032,19 @@ cosmiconfig@^8.3.6:
     parse-json "^5.2.0"
     path-type "^4.0.0"
 
-cozy-client@^52.1.0:
-  version "52.1.0"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-52.1.0.tgz#fd878978393a4bee57567e1602471eb1271f2738"
-  integrity sha512-QgKpaECkV0hsaOCSGT6TCLl2eWs186+YmGVFKaYJurL03O8O58rfv8xthNCEanE+ntK/KpX2DegsmvfO0HqZdg==
+cozy-client@^60.3.0:
+  version "60.3.0"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-60.3.0.tgz#26adf6a7fa49ed97d2e272821e9649f36013e679"
+  integrity sha512-XdDErPfLA/Ajooc7ri0jd405hRdAi/2oePe0MX6D9IGEmvlw4+ZR+pUyy9wqniELrtpy75AM75PlYFxoWu8NUA==
   dependencies:
     "@cozy/minilog" "1.0.0"
+    "@fastify/deepmerge" "^2.0.2"
     "@types/jest" "^26.0.20"
     "@types/lodash" "^4.14.170"
     btoa "^1.2.1"
-    cozy-stack-client "^52.0.0"
+    cozy-stack-client "^60.1.0"
     date-fns "2.29.3"
+    fast-deep-equal "^3.1.3"
     json-stable-stringify "^1.0.1"
     lodash "^4.17.13"
     microee "^0.0.6"
@@ -6094,10 +6101,10 @@ cozy-minilog@^3.9.1:
   dependencies:
     microee "0.0.6"
 
-cozy-stack-client@^52.0.0:
-  version "52.0.0"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-52.0.0.tgz#b146997637facc8de55033a84fd7e4b30ea4533d"
-  integrity sha512-rJOUp7jcnIBEaL48+HVRF24IzYgNJYh2KLpkKFKfaNhO6oz/+dwW1VfETAKWldtNk1hMcFapbQIN58CqhGkIzA==
+cozy-stack-client@^60.1.0:
+  version "60.1.0"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-60.1.0.tgz#73efcfc578d012d68ffcf63de76378bba6ca4c90"
+  integrity sha512-LBhbEnEdvn+MgbFHuYgIDzdZm5jUgAQsvdNkFWUlS15xTe1zMY/+/GHPk3+b4sswrveu0JKTF1ptjV8FNzbnGQ==
   dependencies:
     detect-node "^2.0.4"
     mime "^2.4.0"
