@@ -23,6 +23,7 @@ const VirtualizedTable = forwardRef(
       componentsProps,
       context,
       components,
+      onSortChange,
       ...props
     },
     ref
@@ -43,8 +44,10 @@ const VirtualizedTable = forwardRef(
 
     const handleSort = property => {
       const isAsc = orderBy === property && order === 'asc'
-      setOrder(isAsc ? 'desc' : 'asc')
+      const newOrder = isAsc ? 'desc' : 'asc'
+      setOrder(newOrder)
       setOrderBy(property)
+      onSortChange({ order: newOrder, orderBy: property })
     }
 
     const handleSelectAll = event => {
