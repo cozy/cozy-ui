@@ -1,3 +1,10 @@
+# [127.17.0](https://github.com/cozy/cozy-ui/compare/v127.16.0...v127.17.0) (2025-08-28)
+
+
+### Features
+
+* Implement range selection in list view and grid view :sparkles: ([a9274f2](https://github.com/cozy/cozy-ui/commit/a9274f2))
+
 # [127.16.0](https://github.com/cozy/cozy-ui/compare/v127.15.0...v127.16.0) (2025-08-26)
 
 
