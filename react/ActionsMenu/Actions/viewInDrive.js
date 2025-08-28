@@ -38,12 +38,13 @@ export const viewInDrive = () => {
     Component: makeComponent(label, icon),
     action: (docs, { client }) => {
       const dirId = docs[0].dir_id
+      const driveId = docs[0].driveId
       const webLink = generateWebLink({
         slug: 'drive',
         cozyUrl: client.getStackClient().uri,
         subDomainType: client.getInstanceOptions().subdomain,
         pathname: '/',
-        hash: `folder/${dirId}`
+        hash: driveId ? `shareddrive/${driveId}/${dirId}` : `folder/${dirId}`
       })
 
       window.open(webLink, '_blank')
