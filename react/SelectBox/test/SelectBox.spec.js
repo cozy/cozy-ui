@@ -1,17 +1,5 @@
 'use strict'
-/* eslint-env jest */
-import { render, screen } from '@testing-library/react'
-import React from 'react'
-
-import { isIOSApp } from 'cozy-device-helper'
-
 import { computedMenuListHeightStyles } from '../SelectBox'
-import { SelectBox } from '../SelectBox'
-
-jest.mock('cozy-device-helper', () => ({
-  ...jest.requireActual('cozy-device-helper'),
-  isIOSApp: jest.fn()
-}))
 
 describe('SelectBox', () => {
   describe('computedMenuListHeightStyles', () => {
@@ -74,27 +62,6 @@ describe('SelectBox', () => {
       expect(styleClosures.menuList({})).toEqual({
         maxHeight: 'calc(135px - 1rem - 2rem)'
       })
-    })
-  })
-  describe('needsclick', () => {
-    beforeEach(() => {
-      jest.resetModules()
-      isIOSApp.mockReturnValue(false)
-    })
-    it('should not add needclicks if not on iOS', () => {
-      render(<SelectBox breakpoints={{}} />)
-
-      const select = screen.getByText('Select...')
-
-      expect(select.className).not.toContain('needsclick')
-    })
-    it('shoudl add needclick if iOS', () => {
-      isIOSApp.mockReturnValue(true)
-      render(<SelectBox breakpoints={{}} />)
-
-      const select = screen.getByText('Select...')
-
-      expect(select.className).toContain('needsclick')
     })
   })
 })

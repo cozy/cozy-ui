@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import { PureComponent } from 'react'
 
-import { isMobileApp } from 'cozy-device-helper'
-
 /**
  * Customized function to get dimensions and position for a centered
  * popup window
@@ -43,7 +41,6 @@ export class Popup extends PureComponent {
 
     this.handleClose = this.handleClose.bind(this)
     this.handleMessage = this.handleMessage.bind(this)
-    this.handleLoadStart = this.handleLoadStart.bind(this)
   }
 
   componentDidMount() {
@@ -57,11 +54,6 @@ export class Popup extends PureComponent {
   addListeners() {
     // Listen here for message FROM popup
     window.addEventListener('message', this.handleMessage)
-
-    if (isMobileApp()) {
-      this.popup.addEventListener('loadstart', this.handleLoadStart)
-      this.popup.addEventListener('exit', this.handleClose)
-    }
   }
 
   removeListeners() {
@@ -69,11 +61,6 @@ export class Popup extends PureComponent {
 
     // rest of instructions only if popup is still opened
     if (this.popup.closed) return
-
-    if (isMobileApp()) {
-      this.popup.removeEventListener('loadstart', this.handleLoadStart)
-      this.popup.removeEventListener('exit', this.handleClose)
-    }
   }
 
   handleMessage(messageEvent) {
@@ -137,12 +124,6 @@ export class Popup extends PureComponent {
     clearInterval(this.checkClosedInterval)
   }
 
-  handleLoadStart(event) {
-    const { url } = event
-    const { onMobileUrlChange } = this.props
-    if (typeof onMobileUrlChange === 'function') onMobileUrlChange(new URL(url))
-  }
-
   render() {
     return null
   }
@@ -163,12 +144,7 @@ Popup.propTypes = {
    * Handler called when a message is received from `postMessage` interface.
    * @param {MessageEvent} messageEvent Received MessageEvent object.
    */
-  onMessage: PropTypes.func,
-  /**
-   * Handler used on mobile device to detect url changes
-   * @param {URL} url URL object.
-   */
-  onMobileUrlChange: PropTypes.func
+  onMessage: PropTypes.func
 }
 
 Popup.defaultProps = {
