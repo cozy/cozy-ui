@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import ReactSelect, { components } from 'react-select'
 
-import { isIOSApp } from 'cozy-device-helper'
-
 import ControlDefault from './ControlDefault'
 import styles from './styles.styl'
 import Icon from '../Icon'
@@ -332,15 +330,7 @@ class SelectBox extends Component {
         // react-select temporarily adds className to its innerComponents
         // but this behavior will soon be removed. For the moment, we
         // cancel it by setting it to empty string
-        // needsclick is added only on iOS App since fastclik tries to handle
-        // the click and catch the event.
-        classNamePrefix={
-          isIOSApp()
-            ? `needsclick ${classNamePrefix ? classNamePrefix : ''}`
-            : classNamePrefix
-            ? classNamePrefix
-            : ''
-        }
+        classNamePrefix={classNamePrefix ? classNamePrefix : ''}
         selectProps={{ name }}
       />
     )
