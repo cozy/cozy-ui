@@ -78,6 +78,7 @@ module.exports = {
         '../react/ContactsList',
         '../react/ContactsListModal',
         '../react/ContactPicker',
+        '../react/Contacts/AddModal',
         '../react/Contacts/Header'
       ]
     },

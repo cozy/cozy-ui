@@ -1,0 +1,15 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "CustomLabelDialog": {
+        "label": {
+          "custom": "Libellé personnalisé",
+          "home": "Perso",
+          "work": "Pro"
+        },
+        "cancel": "Annuler",
+        "ok": "Ok"
+      }
+    }
+  }
+}
