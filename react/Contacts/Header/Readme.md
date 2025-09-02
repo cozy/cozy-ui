@@ -1,5 +1,3 @@
-<!-- For styleguidist, a .md file is needed in directories -->
-
 Must be used within `SelectedGroupProvider` and `AlertProvider`.
 
 ```jsx
