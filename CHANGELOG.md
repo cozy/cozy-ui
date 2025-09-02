@@ -1,3 +1,15 @@
+# [128.0.0](https://github.com/cozy/cozy-ui/compare/v127.17.0...v128.0.0) (2025-09-02)
+
+
+### Features
+
+* upgrade cozy-client ([6dc714d](https://github.com/cozy/cozy-ui/commit/6dc714d))
+
+
+### BREAKING CHANGES
+
+* You must have `cozy-client >=60.5.0`
+
 # [127.17.0](https://github.com/cozy/cozy-ui/compare/v127.16.0...v127.17.0) (2025-08-28)
 
 
