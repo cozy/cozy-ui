@@ -1,3 +1,10 @@
+# [128.1.0](https://github.com/cozy/cozy-ui/compare/v128.0.0...v128.1.0) (2025-09-02)
+
+
+### Features
+
+* Remove useless Cordova behavior ([ff7490f](https://github.com/cozy/cozy-ui/commit/ff7490f))
+
 # [128.0.0](https://github.com/cozy/cozy-ui/compare/v127.17.0...v128.0.0) (2025-09-02)
 
 
