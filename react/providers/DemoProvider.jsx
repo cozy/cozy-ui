@@ -22,13 +22,14 @@ const defaultClient = {
   })
 }
 
-const DemoProvider = ({ client, variant, children }) => {
+const DemoProvider = ({ client, variant, dictRequire, children }) => {
   const lang = localStorage.getItem('lang') || 'en'
+  const _dictRequire = dictRequire ? dictRequire : () => ({})
 
   return (
     <CozyProvider client={client || defaultClient}>
       <BreakpointsProvider>
-        <I18n lang={lang} dictRequire={() => ({})}>
+        <I18n lang={lang} dictRequire={_dictRequire}>
           <CozyTheme variant={variant}>{children}</CozyTheme>
         </I18n>
       </BreakpointsProvider>
