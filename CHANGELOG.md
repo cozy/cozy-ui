@@ -1,3 +1,10 @@
+## [128.3.3](https://github.com/cozy/cozy-ui/compare/v128.3.2...v128.3.3) (2025-09-03)
+
+
+### Bug Fixes
+
+* **packages:** Don't apply patch-package if no package to patch ([8c9cc6c](https://github.com/cozy/cozy-ui/commit/8c9cc6c))
+
 ## [128.3.2](https://github.com/cozy/cozy-ui/compare/v128.3.1...v128.3.2) (2025-09-03)
 
 
