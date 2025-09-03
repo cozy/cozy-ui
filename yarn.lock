@@ -1643,7 +1643,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fastify/deepmerge@^2.0.2":
+"@fastify/deepmerge@2.0.2", "@fastify/deepmerge@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-2.0.2.tgz#5dcbda2acb266e309b8a1ca92fa48b2125e65fc0"
   integrity sha512-3wuLdX5iiiYeZWP6bQrjqhrcvBIf0NHbQH1Ur1WbHvoiuTYUEItgygea3zs8aHpiitn0lOB8gX20u1qO+FDm7Q==
