@@ -1,3 +1,10 @@
+# [128.2.0](https://github.com/cozy/cozy-ui/compare/v128.1.0...v128.2.0) (2025-09-03)
+
+
+### Features
+
+* Adjust view in drive to adapt shared drive :sparkles: ([dcf0204](https://github.com/cozy/cozy-ui/commit/dcf0204))
+
 # [128.1.0](https://github.com/cozy/cozy-ui/compare/v128.0.0...v128.1.0) (2025-09-02)
 
 
