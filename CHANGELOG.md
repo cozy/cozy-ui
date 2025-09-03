@@ -1,3 +1,11 @@
+# [128.3.0](https://github.com/cozy/cozy-ui/compare/v128.2.0...v128.3.0) (2025-09-03)
+
+
+### Features
+
+* Add ContactsAddModal component ([5e21445](https://github.com/cozy/cozy-ui/commit/5e21445))
+* **DemoProvider:** Add ability to pass locales ([f6815a3](https://github.com/cozy/cozy-ui/commit/f6815a3))
+
 # [128.2.0](https://github.com/cozy/cozy-ui/compare/v128.1.0...v128.2.0) (2025-09-03)
 
 
