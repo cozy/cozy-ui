@@ -1,3 +1,10 @@
+## [128.3.2](https://github.com/cozy/cozy-ui/compare/v128.3.1...v128.3.2) (2025-09-03)
+
+
+### Bug Fixes
+
+* Add `@fastify/deepmerge` as dep to apply patch correctly on apps ([20fdbc5](https://github.com/cozy/cozy-ui/commit/20fdbc5))
+
 ## [128.3.1](https://github.com/cozy/cozy-ui/compare/v128.3.0...v128.3.1) (2025-09-03)
 
 
