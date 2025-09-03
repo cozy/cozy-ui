@@ -8870,6 +8870,10 @@ body {
 @media (max-width: 48rem) {
 }
 
+.contact-form-field__wrapper--39a5x {
+  width: calc(100% - 3rem);
+}
+
 .menu--120ui {
   min-width: fit-content;
 }
