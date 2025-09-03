@@ -1,3 +1,10 @@
+## [128.3.1](https://github.com/cozy/cozy-ui/compare/v128.3.0...v128.3.1) (2025-09-03)
+
+
+### Bug Fixes
+
+* `patch-package` wasn't a direct dep ([8085fd8](https://github.com/cozy/cozy-ui/commit/8085fd8))
+
 # [128.3.0](https://github.com/cozy/cozy-ui/compare/v128.2.0...v128.3.0) (2025-09-03)
 
 
