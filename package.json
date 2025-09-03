@@ -50,7 +50,7 @@
     "test": "jest",
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
     "postbuild": "postcss transpiled/react/stylesheet.css --replace",
-    "postinstall": "patch-package",
+    "postinstall": "if [ -d 'node_modules/@fastify/deepmerge' ]; then patch-package; fi",
     "travis-deploy-once": "travis-deploy-once",
     "start:css:utils": "yarn build:css:utils --watch",
     "start:css": "yarn build:css --watch",
@@ -161,7 +161,6 @@
   "dependencies": {
     "@babel/runtime": "^7.3.4",
     "@date-io/date-fns": "1",
-    "@fastify/deepmerge": "2.0.2",
     "@material-ui/core": "4.12.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@material-ui/pickers": "3.3.11",
