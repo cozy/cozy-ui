@@ -117,6 +117,7 @@ module.exports = {
       components: () => [
         '../react/providers/Alert',
         '../react/providers/Breakpoints',
+        '../react/providers/ConfirmDialog',
         '../react/providers/CozyTheme',
         '../react/providers/Selection'
       ]
