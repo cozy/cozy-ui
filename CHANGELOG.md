@@ -1,3 +1,10 @@
+## [128.3.4](https://github.com/cozy/cozy-ui/compare/v128.3.3...v128.3.4) (2025-09-04)
+
+
+### Bug Fixes
+
+* Resolve issue item in table could not select :bug: ([dbab92d](https://github.com/cozy/cozy-ui/commit/dbab92d))
+
 ## [128.3.3](https://github.com/cozy/cozy-ui/compare/v128.3.2...v128.3.3) (2025-09-03)
 
 
