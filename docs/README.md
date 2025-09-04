@@ -240,6 +240,44 @@ yarn screenshots:server
 
 See our [travis configuration](https://github.com/cozy/cozy-ui/blob/master/.travis.yml) for more information.
 
+
+### Packages and depedencies
+
+Cozy-ui relies on many packages to work, but we tend to want it to be more agnostic. So this is the package list and usage:
+
+#### Dependecies
+
+- @date-io/date-fns => DatePicker
+- chart.js => PieChart
+- cozy-interapp => IntentIframe
+- date-fns => DateMonthPicker, DatePicker, I18n
+- filesize => FilePickerBodyItem
+- final-form, final-form-array => react-final-form, react-final-form-array => Contacts/AddModal
+- react-markdown => Markdown
+- react-select => Contacts/GroupsSelect, SelectBox
+- react-virtuoso => Table/Virtualized, GridList/Virtualized
+- rooks => BottomSheet, Table/Virtualized, UploadQueue
+
+- #### Dependecies for deprecated components
+
+- @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
+- react-remove-scroll => BottomDrawer, Overlay
+- react-swipeable-views => InfosCarroussel, ViewStack
+
+#### PeerDependencies
+
+- cozy-client => lot of components
+- cozy-device-helper => AppLinker, Dialog, Paywall
+- cozy-flags => AppSections, Paywall, QualificationGrid
+- cozy-intent => ActionsMenu, AppLinker, Dialog, Paywall, SelectionBar
+- react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
+- react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
+
+#### PeerDependencies for deprecated components
+
+- cozy-device-helper => ActionMenu, Modal
+
+
 ## License
 
 Cozy UI is developed by Cozy Cloud and distributed under the MIT license.
