@@ -50,7 +50,7 @@
     "test": "jest",
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
     "postbuild": "postcss transpiled/react/stylesheet.css --replace",
-    "postinstall": "if [ -d 'node_modules/@fastify/deepmerge' ]; then patch-package; fi",
+    "postinstall": "/bin/bash -c 'if [ -d node_modules/@fastify/deepmerge ]; then patch-package; fi'",
     "travis-deploy-once": "travis-deploy-once",
     "start:css:utils": "yarn build:css:utils --watch",
     "start:css": "yarn build:css --watch",
