@@ -30,7 +30,7 @@ const RowContent = ({
             'aria-labelledby': `enhanced-table-checkbox-${index}`
           }}
           size="small"
-          onClick={event => onSelectClick(event, row, index)}
+          onClick={event => onSelectClick(row, event, index)}
         />
       </TableCell>
       {columns.map(column => (
