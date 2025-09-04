@@ -46,7 +46,7 @@ const variants = [
       Color primary
       {variants.map((variant, index) => (
         <div key={index} className='u-mb-1'>
-          <DropdownText variant={variant} color="primary">
+          <DropdownText variant={variant} color="secondary">
             {variant}
           </DropdownText>
         </div>
