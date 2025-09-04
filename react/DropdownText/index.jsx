@@ -16,14 +16,14 @@ const useStyles = makeStyles(theme => ({
   },
   typography: {
     color: ({ disabled }) =>
-      theme.palette.text[disabled ? 'disabled' : 'primary']
+      disabled ? theme.palette.text.disabled : undefined
   },
   endIcon: {
     display: 'flex',
     marginLeft: '5px',
     marginTop: ({ variant }) => (variant === 'body1' ? '3px' : undefined),
     color: ({ disabled }) =>
-      theme.palette.text[disabled ? 'disabled' : 'primary']
+      disabled ? theme.palette.text.disabled : undefined
   }
 }))
 
@@ -48,7 +48,7 @@ const DropdownText = forwardRef(
       variant = 'body1',
       disabled = false,
       noWrap = false,
-      color = 'primary',
+      color = 'initial',
       children,
       innerTextProps,
       innerIconContainerProps,
@@ -57,11 +57,12 @@ const DropdownText = forwardRef(
     },
     ref
   ) => {
-    const styles = useStyles({ spaceBetween, disabled, color, variant })
+    const styles = useStyles({ spaceBetween, disabled, variant })
 
     return (
       <div ref={ref} className={styles.container} {...props}>
         <Typography
+          color={color}
           classes={{ root: styles.typography }}
           variant={variant}
           noWrap={noWrap}
@@ -70,6 +71,7 @@ const DropdownText = forwardRef(
           {children}
         </Typography>
         <Typography
+          color={color}
           classes={{ root: styles.endIcon }}
           {...innerIconContainerProps}
         >
@@ -85,6 +87,8 @@ const DropdownText = forwardRef(
 )
 
 DropdownText.propTypes = {
+  /** Color used by Typography component */
+  color: PropTypes.string,
   /** Whether there is a space between the label and the icon */
   spaceBetween: PropTypes.bool,
   /** Variant used by Typography component */

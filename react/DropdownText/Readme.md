@@ -22,7 +22,7 @@ const variants = [
 
 <>
   <Grid container>
-    <Grid item xs={6}>
+    <Grid item xs={6} sm={3} sd={2}>
       Default
       {variants.map((variant, index) => (
         <div key={index} className='u-mb-1'>
@@ -32,7 +32,7 @@ const variants = [
         </div>
       ))}
     </Grid>
-    <Grid item xs={6}>
+    <Grid item xs={6} sm={3} sd={2}>
       Disabled
       {variants.map((variant, index) => (
         <div key={index} className='u-mb-1'>
@@ -42,7 +42,29 @@ const variants = [
         </div>
       ))}
     </Grid>
+    <Grid item xs={6} sm={3} sd={2}>
+      Color primary
+      {variants.map((variant, index) => (
+        <div key={index} className='u-mb-1'>
+          <DropdownText variant={variant} color="primary">
+            {variant}
+          </DropdownText>
+        </div>
+      ))}
+    </Grid>
+    <Grid item xs={6} sm={3} sd={2}>
+      Color error 
+      {variants.map((variant, index) => (
+        <div key={index} className='u-mb-1'>
+          <DropdownText variant={variant} color="error">
+            {variant}
+          </DropdownText>
+        </div>
+      ))}
+    </Grid>
   </Grid>
+
+  <p>
   <div style={{ border: '1px dashed var(--borderMainColor)', marginBottom: '1rem' }}>
     <DropdownText>
       This is a long text without ellipsis without restrictive container
@@ -68,5 +90,6 @@ const variants = [
       Space between text and icon
     </DropdownText>
   </div>
+  </p>
 </>
 ```
