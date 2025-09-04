@@ -1,3 +1,10 @@
+# [128.4.0](https://github.com/cozy/cozy-ui/compare/v128.3.5...v128.4.0) (2025-09-04)
+
+
+### Features
+
+* **Providers:** Add ConfirmDialog providers ([464286c](https://github.com/cozy/cozy-ui/commit/464286c))
+
 ## [128.3.5](https://github.com/cozy/cozy-ui/compare/v128.3.4...v128.3.5) (2025-09-04)
 
 
