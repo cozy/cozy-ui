@@ -258,7 +258,7 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 - react-virtuoso => Table/Virtualized, GridList/Virtualized
 - rooks => BottomSheet, Table/Virtualized, UploadQueue
 
-- #### Dependecies for deprecated components
+#### Dependecies for deprecated components
 
 - @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
 - react-remove-scroll => BottomDrawer, Overlay
