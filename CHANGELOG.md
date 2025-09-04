@@ -1,3 +1,10 @@
+## [128.3.5](https://github.com/cozy/cozy-ui/compare/v128.3.4...v128.3.5) (2025-09-04)
+
+
+### Bug Fixes
+
+* Postinstall hook not working using Yarn 4 ([ce9711f](https://github.com/cozy/cozy-ui/commit/ce9711f))
+
 ## [128.3.4](https://github.com/cozy/cozy-ui/compare/v128.3.3...v128.3.4) (2025-09-04)
 
 
