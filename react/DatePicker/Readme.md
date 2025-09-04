@@ -1,4 +1,6 @@
-`Breakpoints` & `I18n` Providers are needed for this component
+Use `@date-io/date-fns` under the hood.
+
+⚠️ `Breakpoints` & `I18n` Providers are needed for this component
 
 ### Usage
 
