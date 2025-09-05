@@ -3,9 +3,11 @@ import React, { Children, isValidElement, useState, forwardRef } from 'react'
 
 import withNavLocales from './locales/withNavLocales'
 import styles from './styles.styl'
+import DropdownText from '../DropdownText'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import TopIcon from '../Icons/Top'
+import ListItem from '../ListItem'
 import useBreakpoints from '../providers/Breakpoints'
 import { useI18n } from '../providers/I18n'
 
@@ -115,6 +117,47 @@ const _NavDesktopLimiter = ({ children, max = 5 }) => {
 }
 
 export const NavDesktopLimiter = withNavLocales(_NavDesktopLimiter)
+
+export const NavDesktopDropdown = ({
+  label,
+  children,
+  defaultOpen = true,
+  limit = 5
+}) => {
+  const { isDesktop } = useBreakpoints()
+  const [open, setOpen] = useState(defaultOpen)
+  const isActivated =
+    Children.toArray(children).filter(isValidElement).length > limit
+
+  const innerIconProps = {
+    rotate: open ? 0 : -90,
+    ...(!isActivated && { className: 'u-dn' })
+  }
+
+  if (!isDesktop) return null
+
+  return (
+    <>
+      <ListItem size="small" className={isActivated ? 'u-c-pointer' : ''}>
+        <DropdownText
+          variant="subtitle2"
+          color="textSecondary"
+          innerIconProps={innerIconProps}
+          onClick={() => {
+            if (!isActivated) {
+              return
+            }
+            setOpen(!open)
+          }}
+        >
+          {label}
+        </DropdownText>
+      </ListItem>
+
+      {open && <>{children}</>}
+    </>
+  )
+}
 
 export default Nav
 Nav.NavItem = NavItem

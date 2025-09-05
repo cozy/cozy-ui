@@ -4,6 +4,7 @@ The Layout component brings a strong context for apps with any screen resolution
 * `<Content />` is the main content or your app.
 * ⚠️ Secondary `<NavItem />` are not visible on mobile and tablets
 * `<NavDesktopLimiter />` is a component that allows you to limit the number of visible items in a list and toggle between showing a limited view and displaying all items.
+* `<NavDesktopDropdown />` is a component that allows you to show / hide the items in a list when the number of items exceeds a defined limit
 
 ### NavDesktopLimiter
 
@@ -16,17 +17,24 @@ It can be used to wrap any list of React elements, automatically providing funct
 * **children**: React.ReactNode (required) - The list items or elements that **NavDesktopLimiter** will manage.
 * **max**: number (optional) - The maximum number of items to display initially. Default is **5**.
 
-**Features**:
+### NavDesktopDropdown
 
-* **Toggle Visibility**: Allows users to toggle between seeing the limited view and the full list of items.
-* **Customizable Limit**: Users can specify how many items should be shown in the limited view.
-* **Ease of Use**: Seamlessly integrates with existing list components from cozy-ui or standard JSX elements.
+The **NavDesktopDropdown** component is designed to manage the display of nav items efficiently, allowing users to toggle between showing a collapsed view and displaying all items. This component enhances the UI/UX by providing a clean and intuitive way to handle dropdowns with many items.
+
+It can be used to wrap any list of React elements, automatically providing functionality to limit the number of displayed elements based on the `limit` prop (defaulting to **5**). Users can toggle the dropdown to show or hide the items as needed.
+
+**Props**:
+
+* **label**: string (required) - The label for the dropdown.
+* **children**: React.ReactNode (required) - The list items or elements that **NavDesktopDropdown** will manage.
+* **defaultOpen**: boolean (optional) - Determines whether the dropdown is open by default. Default is **true**.
+* **limit**: number (optional) - The maximum number of items to display before enabling collapsing. Default is **5**.
 
 ```jsx
 import { useState } from 'react'
 import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout'
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
-import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter } from 'cozy-ui/transpiled/react/Nav'
+import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter, NavDesktopDropdown } from 'cozy-ui/transpiled/react/Nav'
 import cx from 'classnames'
 import isEqual from 'lodash/isEqual'
 import Icon from 'cozy-ui/transpiled/react/Icon'
@@ -83,7 +91,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const initialVariants = [{ monoColumn: false, withTopBar: true, longContent: true }]
+const initialVariants = [{ monoColumn: false, withTopBar: true, longContent: true, moreThanMax: true }]
 const [active, setActive] = useState(['Section 1', 'Subsection 1'])
 const [showDialog, setShowDialog] = useState(isTesting() ? true : false)
 const styles = useStyles()
@@ -130,6 +138,17 @@ const SideBar = ({ variant }) => {
             <NavText>Section 3</NavText>
           </NavLink>
         </NavItem>
+        <NavDesktopDropdown label="Section 4" max={5}>
+        {
+          Array.from(Array(variant.moreThanMax ? 6 : 3).keys()).map(i => (
+            <NavItem secondary key={i}>
+              <NavLink>
+                <NavText>Subsection {i}</NavText>
+              </NavLink>
+            </NavItem>
+          ))
+        }
+        </NavDesktopDropdown>
       </Nav>
     </Sidebar>
   )
