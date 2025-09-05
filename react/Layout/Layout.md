@@ -183,3 +183,69 @@ const SideBar = ({ variant }) => {
   )}
 </Variants>
 ```
+
+### NavDesktopDropdown
+
+The **NavDesktopDropdown** component is designed to manage the display of nav items efficiently, allowing users to toggle between showing a collapsed view and displaying all items. This component enhances the UI/UX by providing a clean and intuitive way to handle dropdowns with many items.
+
+It can be used to wrap any list of React elements, automatically providing functionality to limit the number of displayed elements based on the `limit` prop (defaulting to **5**). Users can toggle the dropdown to show or hide the items as needed.
+
+**Props**:
+
+* **title**: string (required) - The title or label for the dropdown.
+* **children**: React.ReactNode (required) - The list items or elements that **NavDesktopDropdown** will manage.
+* **defaultOpen**: boolean (optional) - Determines whether the dropdown is open by default. Default is **true**.
+* **limit**: number (optional) - The maximum number of items to display before enabling collapsing. Default is **5**.
+* **dropdownProps**: object (optional) - Add custom properties to the DropDownText element
+
+**Features**:
+
+* **Toggle Visibility**: Allows users to toggle between seeing the collapsed view and the full list of items.
+* **Customizable Limit**: Users can specify how many items should trigger the dropdown behavior.
+* **Ease of Use**: Seamlessly integrates with existing dropdown components from cozy-ui or standard JSX elements.
+
+```jsx
+import { useState } from 'react'
+import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
+import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopDropdown } from 'cozy-ui/transpiled/react/Nav'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import cx from 'classnames'
+import Variants from 'cozy-ui/docs/components/Variants'
+
+const ExampleRouterNavLink = ({ children, className, active, activeClassName, onClick }) => (
+  <a onClick={onClick} className={cx(className, active ? activeClassName : null)}>
+    { children }
+  </a>
+)
+
+const NavLink = genNavLink(ExampleRouterNavLink)
+const initialVariants = [{ moreThanMax: true }]
+
+;
+
+
+<Variants initialVariants={initialVariants}>
+  {variant => (
+<DemoProvider>
+  <Sidebar>
+      <Nav>
+          <NavDesktopDropdown title="Section 1" max={5}>
+          {
+            Array.from(Array(variant.moreThanMax ? 6 : 3).keys()).map(i => (
+              <NavItem secondary key={i}>
+                <NavLink>
+                  <NavText>Subsection {i}</NavText>
+                </NavLink>
+              </NavItem>
+            ))
+          }
+          </NavDesktopDropdown>
+      </Nav>
+  </Sidebar>
+</DemoProvider>
+  )}
+</Variants>
+```

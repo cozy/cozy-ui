@@ -3,6 +3,7 @@ import React, { Children, isValidElement, useState, forwardRef } from 'react'
 
 import withNavLocales from './locales/withNavLocales'
 import styles from './styles.styl'
+import DropdownText from '../DropdownText'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import TopIcon from '../Icons/Top'
@@ -115,6 +116,41 @@ const _NavDesktopLimiter = ({ children, max = 5 }) => {
 }
 
 export const NavDesktopLimiter = withNavLocales(_NavDesktopLimiter)
+
+export const NavDesktopDropdown = ({
+  title,
+  children,
+  defaultOpen = true,
+  dropdownProps = {},
+  limit = 5
+}) => {
+  const [open, setOpen] = useState(defaultOpen)
+  const isActivated =
+    Children.toArray(children).filter(isValidElement).length > limit
+
+  const innerIconProps = {
+    rotate: open ? 0 : -90,
+    ...(!isActivated && { style: { display: 'none' } })
+  }
+  return (
+    <>
+      <NavItem>
+        <NavText>
+          <DropdownText
+            className={styles['c-nav-link']}
+            innerIconProps={innerIconProps}
+            onClick={() => isActivated && setOpen(!open)}
+            {...dropdownProps}
+          >
+            {title}
+          </DropdownText>
+        </NavText>
+      </NavItem>
+
+      {open && <>{children}</>}
+    </>
+  )
+}
 
 export default Nav
 Nav.NavItem = NavItem
