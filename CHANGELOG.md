@@ -1,3 +1,10 @@
+# [128.6.0](https://github.com/cozy/cozy-ui/compare/v128.5.0...v128.6.0) (2025-09-08)
+
+
+### Features
+
+* **DropdownText:** add color prop for Typography and update README example ([f5006b0](https://github.com/cozy/cozy-ui/commit/f5006b0))
+
 # [128.5.0](https://github.com/cozy/cozy-ui/compare/v128.4.0...v128.5.0) (2025-09-08)
 
 
