@@ -34,9 +34,10 @@ const ConfirmDialogProvider = ({ children }) => {
     () => ({
       showConfirmDialog: args => {
         setState({ open: true, ...args })
-      }
+      },
+      closeConfirmDialog: handleClose(state, setState)
     }),
-    []
+    [state]
   )
 
   return (
