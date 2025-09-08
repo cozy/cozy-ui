@@ -4,7 +4,7 @@ import ConfirmDialogProvider, { useConfirmDialog } from 'cozy-ui/transpiled/reac
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
 const Component = () => {
-  const { showConfirmDialog } = useConfirmDialog()
+  const { showConfirmDialog, closeConfirmDialog } = useConfirmDialog()
 
   return (
     <Button
@@ -13,7 +13,12 @@ const Component = () => {
         showConfirmDialog({
           title: "Title of the ConfirmDialog",
           content: "Content of the ConfirmDialog",
-          actions: <Button label="Ok" />
+          actions: (
+            <>
+              <Button label="Cancel" variant="secondary" onClick={closeConfirmDialog} />
+              <Button label="Ok" />
+            </>
+          )
         })
       }
     />
