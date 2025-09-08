@@ -267,7 +267,7 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 #### PeerDependencies
 
 - cozy-client => lot of components
-- cozy-device-helper => AppLinker, Dialog, Paywall
+- cozy-device-helper => AppLinker, Dialog, Paywall, Storage
 - cozy-flags => AppSections, Paywall, QualificationGrid
 - cozy-intent => ActionsMenu, AppLinker, Dialog, Paywall, SelectionBar
 - react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
