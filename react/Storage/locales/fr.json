@@ -1,0 +1,7 @@
+{
+  "Storage": {
+    "title": "Stockage",
+    "availability": "%{smart_count} Go disponible",
+    "increase": "Augmenter l'espace"
+  }
+}
