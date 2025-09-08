@@ -1,3 +1,10 @@
+# [128.5.0](https://github.com/cozy/cozy-ui/compare/v128.4.0...v128.5.0) (2025-09-08)
+
+
+### Features
+
+* **ConfirmDialogProviders:** Expose method to close the dialog ([7d3d841](https://github.com/cozy/cozy-ui/commit/7d3d841))
+
 # [128.4.0](https://github.com/cozy/cozy-ui/compare/v128.3.5...v128.4.0) (2025-09-04)
 
 
