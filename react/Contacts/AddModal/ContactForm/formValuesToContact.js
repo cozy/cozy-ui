@@ -18,6 +18,7 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
     phone,
     email,
     address,
+    matrix,
     cozy,
     company,
     jobTitle,
@@ -62,6 +63,7 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
             primary: index === 0
           }))
       : [],
+    matrix: matrix || '',
     address: createAddress({ address, oldContact: oldContactCleaned, t }),
     phone: phone
       ? phone

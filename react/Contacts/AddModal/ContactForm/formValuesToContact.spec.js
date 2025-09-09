@@ -83,6 +83,7 @@ describe('formValuesToContact', () => {
           label: undefined
         }
       ],
+      matrix: '123-matrixID-456',
       fullname: 'John J. Doe',
       indexes: {
         byFamilyNameGivenNameEmailCozyUrl:
@@ -160,6 +161,7 @@ describe('formValuesToContact', () => {
           emailLabel: undefined
         }
       ],
+      matrix: '123-matrixID-456',
       familyName: 'Doe',
       givenName: 'Jane',
       note: undefined,
@@ -182,6 +184,7 @@ describe('formValuesToContact', () => {
       cozy: [],
       displayName: 'Jane Doe',
       email: [],
+      matrix: '123-matrixID-456',
       fullname: 'Jane Doe',
       indexes: { byFamilyNameGivenNameEmailCozyUrl: 'doejane' },
       jobTitle: '',
@@ -294,6 +297,7 @@ describe('formValuesToContact', () => {
       birthplace: undefined,
       note: undefined,
       address: [undefined],
+      matrix: undefined,
       email: [undefined],
       phone: [undefined],
       cozy: undefined,
@@ -307,6 +311,7 @@ describe('formValuesToContact', () => {
       jobTitle: '',
       address: [],
       email: [],
+      matrix: '',
       cozy: [],
       phone: [],
       birthday: '',
@@ -335,6 +340,7 @@ describe('formValuesToContact', () => {
       birthplace: '',
       note: '',
       address: [{}],
+      matrix: '',
       email: [{}],
       phone: [{}],
       cozy: '',
@@ -348,6 +354,7 @@ describe('formValuesToContact', () => {
       jobTitle: '',
       address: [],
       email: [],
+      matrix: '',
       cozy: [],
       phone: [],
       birthday: '',
