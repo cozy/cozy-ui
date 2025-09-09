@@ -1,3 +1,10 @@
+# [128.7.0](https://github.com/cozy/cozy-ui/compare/v128.6.0...v128.7.0) (2025-09-09)
+
+
+### Features
+
+* Add Storage component ([76c74ed](https://github.com/cozy/cozy-ui/commit/76c74ed))
+
 # [128.6.0](https://github.com/cozy/cozy-ui/compare/v128.5.0...v128.6.0) (2025-09-08)
 
 
