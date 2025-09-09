@@ -15,6 +15,7 @@
           "familyName": "Lastname",
           "phone": "Phone",
           "email": "Email",
+          "matrix": "Matrix ID",
           "address": "Address",
           "cozy": "Twake URL",
           "company": "Company",

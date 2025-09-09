@@ -5,6 +5,7 @@ import {
   removeRelatedContactRelationships,
   createAddress,
   getRelatedContactRelationships,
+  makeImppValues,
   makeTypeAndLabel
 } from './helpers'
 
@@ -18,6 +19,7 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
     phone,
     email,
     address,
+    matrix,
     cozy,
     company,
     jobTitle,
@@ -62,6 +64,7 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
             primary: index === 0
           }))
       : [],
+    impp: makeImppValues(oldContactCleaned, matrix),
     address: createAddress({ address, oldContact: oldContactCleaned, t }),
     phone: phone
       ? phone

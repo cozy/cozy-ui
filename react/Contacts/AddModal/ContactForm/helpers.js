@@ -283,6 +283,47 @@ export const makeCustomLabel = (value, t) => {
 
 /**
  *
+ * @param {import('cozy-client/types/types').IOCozyContact} oldContact - Contact to be modified
+ * @param {string?} value - New URI value to add to the Contact
+ * @returns {{ uri: string, protocol: string, label: string, primary?: boolean }[]}
+ */
+export const makeImppValues = (oldContact, value) => {
+  const _value = value?.trim() || ''
+  const oldImppValues = oldContact?.impp
+
+  if (_value) {
+    if (!oldImppValues || oldImppValues.length === 0) {
+      return [
+        {
+          uri: _value,
+          protocol: 'matrix',
+          label: 'work',
+          primary: true
+        }
+      ]
+    }
+
+    return oldImppValues.map(el => {
+      if (el.protocol === 'matrix' && el.label === 'work') {
+        return { ...el, uri: _value }
+      }
+      return el
+    })
+  }
+
+  return (
+    oldImppValues
+      ?.map(el => {
+        if (el.protocol !== 'matrix' || el.label !== 'work') {
+          return el
+        }
+      })
+      .filter(Boolean) || []
+  )
+}
+
+/**
+ *
  * @param {string} name
  * @param {string} value
  * @returns {string}

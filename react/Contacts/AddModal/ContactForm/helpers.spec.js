@@ -2,6 +2,7 @@ import {
   moveToHead,
   makeItemLabel,
   makeTypeAndLabel,
+  makeImppValues,
   makeInitialCustomValue
 } from './helpers'
 
@@ -70,6 +71,143 @@ describe('makeTypeAndLabel', () => {
     const res = makeTypeAndLabel('{"type":"cell"}')
 
     expect(res).toStrictEqual({ type: 'cell', label: undefined })
+  })
+})
+
+describe('makeImppValues', () => {
+  it('should replace only uri for {label: "work", protocol: "matrix"}', () => {
+    const res = makeImppValues(
+      {
+        impp: [
+          {
+            uri: 'john.doe@xmpp.net',
+            protocol: 'xmpp',
+            label: 'home',
+            primary: false
+          },
+          {
+            uri: 'john.doe@xmpp.net',
+            protocol: 'xmpp',
+            label: 'work',
+            primary: false
+          },
+          {
+            uri: 'john@doe.matrix.net',
+            protocol: 'matrix',
+            label: 'work',
+            primary: true
+          },
+          {
+            uri: 'john@doe.matrix.home',
+            protocol: 'matrix',
+            label: 'home'
+          }
+        ]
+      },
+      'newMatrixURI'
+    )
+
+    expect(res).toStrictEqual([
+      {
+        uri: 'john.doe@xmpp.net',
+        protocol: 'xmpp',
+        label: 'home',
+        primary: false
+      },
+      {
+        uri: 'john.doe@xmpp.net',
+        protocol: 'xmpp',
+        label: 'work',
+        primary: false
+      },
+      {
+        uri: 'newMatrixURI',
+        protocol: 'matrix',
+        label: 'work',
+        primary: true
+      },
+      {
+        uri: 'john@doe.matrix.home',
+        protocol: 'matrix',
+        label: 'home'
+      }
+    ])
+  })
+
+  it('should remove correctly', () => {
+    const res = makeImppValues(
+      {
+        impp: [
+          {
+            uri: 'john.doe@xmpp.net',
+            protocol: 'xmpp',
+            label: 'home',
+            primary: false
+          },
+          {
+            uri: 'john.doe@xmpp.net',
+            protocol: 'xmpp',
+            label: 'work',
+            primary: false
+          },
+          {
+            uri: 'john@doe.matrix.net',
+            protocol: 'matrix',
+            label: 'work',
+            primary: true
+          },
+          {
+            uri: 'john@doe.matrix.home',
+            protocol: 'matrix',
+            label: 'home'
+          }
+        ]
+      },
+      ''
+    )
+
+    expect(res).toStrictEqual([
+      {
+        uri: 'john.doe@xmpp.net',
+        protocol: 'xmpp',
+        label: 'home',
+        primary: false
+      },
+      {
+        uri: 'john.doe@xmpp.net',
+        protocol: 'xmpp',
+        label: 'work',
+        primary: false
+      },
+      {
+        uri: 'john@doe.matrix.home',
+        protocol: 'matrix',
+        label: 'home'
+      }
+    ])
+  })
+
+  it('should add the matrix impp values for the first time if no impp attribute', () => {
+    const expected = [
+      {
+        uri: 'newMatrixURI',
+        protocol: 'matrix',
+        label: 'work',
+        primary: true
+      }
+    ]
+
+    expect(makeImppValues({ impp: undefined }, 'newMatrixURI')).toStrictEqual(
+      expected
+    )
+
+    expect(makeImppValues({ impp: [] }, 'newMatrixURI')).toStrictEqual(expected)
+  })
+
+  it('should not add empty object if value is empty', () => {
+    expect(makeImppValues({ impp: undefined }, '')).toStrictEqual([])
+
+    expect(makeImppValues({ impp: [] }, '')).toStrictEqual([])
   })
 })
 

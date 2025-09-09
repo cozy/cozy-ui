@@ -16,6 +16,7 @@
           "phone": "Téléphone",
           "email": "Email",
           "address": "Adresse",
+          "matrix": "ID Matrix",
           "cozy": "URL du Twake",
           "company": "Entreprise",
           "jobTitle": "Fonction",

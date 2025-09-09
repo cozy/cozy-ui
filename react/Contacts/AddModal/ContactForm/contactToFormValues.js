@@ -25,6 +25,7 @@ const contactToFormValues = (contact, t) => {
       jobTitle,
       cozy,
       email,
+      impp,
       name,
       note,
       phone
@@ -62,6 +63,11 @@ const contactToFormValues = (contact, t) => {
             emailLabel: makeItemLabel(item)
           }))
         : [undefined]
+    const matrixValue =
+      impp && impp.length > 0
+        ? impp.find(item => item.label === 'work' && item.protocol === 'matrix')
+            ?.uri || undefined
+        : undefined
     const phoneValue =
       phone && phone.length > 0
         ? movePrimaryToHead(phone).map(item => ({
@@ -81,6 +87,7 @@ const contactToFormValues = (contact, t) => {
       familyName: name?.familyName,
       phone: phoneValue,
       email: emailValue,
+      matrix: matrixValue,
       address: addressValue,
       cozy: cozyValue,
       cozyLabel: cozyLabel,

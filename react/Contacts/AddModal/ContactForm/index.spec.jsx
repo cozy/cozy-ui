@@ -21,6 +21,7 @@ const labels = [
   'Phone',
   'Email',
   'Address',
+  'Matrix ID',
   'Twake URL',
   'Company',
   'Job title',
@@ -54,6 +55,7 @@ describe('ContactForm', () => {
     expect(screen.queryByDisplayValue(contact.name.familyName)).not.toBeNull()
     expect(screen.queryByDisplayValue(contact.phone[0].number)).not.toBeNull()
     expect(screen.queryByDisplayValue(contact.email[0].address)).not.toBeNull()
+    expect(screen.queryByDisplayValue(contact.impp[2].uri)).not.toBeNull()
     expect(
       screen.queryByDisplayValue(contact.address[0].formattedAddress)
     ).not.toBeNull()
@@ -76,6 +78,14 @@ describe('ContactForm', () => {
           primary: true,
           street: '18 rue des fleurs, Pecado',
           type: undefined
+        }
+      ],
+      impp: [
+        {
+          uri: '123-matrixID-456',
+          protocol: 'matrix',
+          label: 'work',
+          primary: true
         }
       ],
       birthday: '2015-12-31',
@@ -124,6 +134,7 @@ describe('ContactForm', () => {
       additionalName: '',
       'phone[0].phone': '+33678987654',
       'email[0].email': 'jcvc@cozy.cloud',
+      matrix: '123-matrixID-456',
       cozy: 'https://jcvd.cozy.cloud',
       company: 'Cozy CLoud',
       jobTitle: 'Dreamer',
@@ -171,6 +182,7 @@ describe('ContactForm', () => {
       Lastname: 'Van Cozy',
       Phone: '+33678987654',
       Email: 'jcvc@cozy.cloud',
+      Matrix: '123-matrixID-456',
       Address: '18 rue des fleurs, Pecado',
       'Twake URL': 'https://jcvd.cozy.cloud',
       Company: 'Cozy CLoud',

@@ -8,6 +8,7 @@ import CommentIcon from '../../../Icons/Comment'
 import CompanyIcon from '../../../Icons/Company'
 import EmailIcon from '../../../Icons/Email'
 import LocationIcon from '../../../Icons/Location'
+import MatrixIcon from '../../../Icons/Matrix'
 import PeopleIcon from '../../../Icons/People'
 import RelationshipIcon from '../../../Icons/Relationship'
 import TelephoneIcon from '../../../Icons/Telephone'
@@ -139,6 +140,11 @@ export const fields = [
         }
       ]
     }
+  },
+  {
+    name: 'matrix',
+    icon: MatrixIcon,
+    type: 'text'
   },
   {
     name: 'address',

@@ -8,7 +8,7 @@ import ContactsAddModal from 'cozy-ui/transpiled/react/Contacts/AddModal'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import AlertProvider from 'cozy-ui/transpiled/react/providers/Alert'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import { johnDoeContact, johnDoeFormValues } from 'cozy-ui/transpiled/react/Contacts/AddModal/mocks'
+import { johnDoeContact } from 'cozy-ui/transpiled/react/Contacts/AddModal/mocks'
 import contacts from 'cozy-ui/transpiled/react/ContactsList/_mockContacts.json'
 import Variants from 'cozy-ui/docs/components/Variants'
 
