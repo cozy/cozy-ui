@@ -1,3 +1,10 @@
+# [128.8.0](https://github.com/cozy/cozy-ui/compare/v128.7.0...v128.8.0) (2025-09-09)
+
+
+### Features
+
+* **NavDesktopDropdown:** introduce NavDesktopDropdown component for enhanced navigation item management ([3cb8a44](https://github.com/cozy/cozy-ui/commit/3cb8a44))
+
 # [128.7.0](https://github.com/cozy/cozy-ui/compare/v128.6.0...v128.7.0) (2025-09-09)
 
 
