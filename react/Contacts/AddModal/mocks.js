@@ -30,6 +30,31 @@ export const johnDoeContact = {
       primary: true
     }
   ],
+  impp: [
+    {
+      uri: 'john.doe@xmpp.net',
+      protocol: 'xmpp',
+      label: 'home',
+      primary: false
+    },
+    {
+      uri: 'john.doe@xmpp.net',
+      protocol: 'xmpp',
+      label: 'work',
+      primary: false
+    },
+    {
+      uri: 'john@doe.matrix.net',
+      protocol: 'matrix',
+      label: 'work',
+      primary: true
+    },
+    {
+      uri: 'john@doe.matrix.home',
+      protocol: 'matrix',
+      label: 'home'
+    }
+  ],
   birthday: '1999-5-1',
   birthplace: 'somewhere',
   gender: 'male',
@@ -71,6 +96,7 @@ export const johnDoeFormValues = {
   gender: 'male',
   cozy: 'https://johndoe.mycozy.cloud',
   cozyLabel: '{"type":"MyCozy"}',
+  matrix: 'john@doe.matrix.net',
   address: [
     {
       fieldId: 'fieldId_1',
@@ -167,6 +193,20 @@ export const johnDoeContactWithRelated = {
       type: 'Work'
     }
   ],
+  impp: [
+    {
+      uri: 'john.doe@xmpp.net',
+      protocol: 'xmpp',
+      label: 'home',
+      primary: false
+    },
+    {
+      uri: 'john@doe.matrix.net',
+      protocol: 'matrix',
+      label: 'work',
+      primary: true
+    }
+  ],
   email: [
     {
       address: 'john.doe@posteo.net',
@@ -211,7 +251,6 @@ export const johnDoeContactWithRelated = {
       primary: false
     }
   ],
-
   relationships: {
     accounts: { data: [] },
     groups: { data: [] },

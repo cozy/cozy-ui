@@ -16,6 +16,7 @@ describe('contactToFormValues function', () => {
       cozy: undefined,
       cozyLabel: undefined,
       email: [undefined],
+      matrix: undefined,
       familyName: undefined,
       givenName: undefined,
       note: undefined,
@@ -59,6 +60,7 @@ describe('contactToFormValues function', () => {
       jobTitle: undefined,
       cozy: undefined,
       email: undefined,
+      impp: undefined,
       name: {
         givenName: 'Jane',
         familyName: 'Doe'
@@ -76,6 +78,7 @@ describe('contactToFormValues function', () => {
       cozy: undefined,
       cozyLabel: undefined,
       email: [undefined],
+      matrix: undefined,
       givenName: 'Jane',
       familyName: 'Doe',
       note: undefined,
@@ -101,6 +104,7 @@ describe('contactToFormValues function', () => {
       jobTitle: undefined,
       cozy: undefined,
       email: undefined,
+      impp: undefined,
       name: undefined,
       note: 'Eligendi velit eos ab libero molestiae consequatur autem sed.',
       phone: []
@@ -115,6 +119,7 @@ describe('contactToFormValues function', () => {
       cozy: undefined,
       cozyLabel: undefined,
       email: [undefined],
+      matrix: undefined,
       givenName: undefined,
       familyName: undefined,
       note: 'Eligendi velit eos ab libero molestiae consequatur autem sed.',

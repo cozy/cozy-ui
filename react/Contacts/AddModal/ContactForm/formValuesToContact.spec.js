@@ -83,6 +83,14 @@ describe('formValuesToContact', () => {
           label: undefined
         }
       ],
+      impp: [
+        {
+          uri: 'john@doe.matrix.net',
+          protocol: 'matrix',
+          label: 'work',
+          primary: true
+        }
+      ],
       fullname: 'John J. Doe',
       indexes: {
         byFamilyNameGivenNameEmailCozyUrl:
@@ -160,6 +168,7 @@ describe('formValuesToContact', () => {
           emailLabel: undefined
         }
       ],
+      matrix: 'john@doe.matrix.net',
       familyName: 'Doe',
       givenName: 'Jane',
       note: undefined,
@@ -182,6 +191,14 @@ describe('formValuesToContact', () => {
       cozy: [],
       displayName: 'Jane Doe',
       email: [],
+      impp: [
+        {
+          uri: 'john@doe.matrix.net',
+          protocol: 'matrix',
+          label: 'work',
+          primary: true
+        }
+      ],
       fullname: 'Jane Doe',
       indexes: { byFamilyNameGivenNameEmailCozyUrl: 'doejane' },
       jobTitle: '',
@@ -294,6 +311,7 @@ describe('formValuesToContact', () => {
       birthplace: undefined,
       note: undefined,
       address: [undefined],
+      matrix: undefined,
       email: [undefined],
       phone: [undefined],
       cozy: undefined,
@@ -307,6 +325,25 @@ describe('formValuesToContact', () => {
       jobTitle: '',
       address: [],
       email: [],
+      impp: [
+        {
+          uri: 'john.doe@xmpp.net',
+          protocol: 'xmpp',
+          label: 'home',
+          primary: false
+        },
+        {
+          uri: 'john.doe@xmpp.net',
+          protocol: 'xmpp',
+          label: 'work',
+          primary: false
+        },
+        {
+          uri: 'john@doe.matrix.home',
+          protocol: 'matrix',
+          label: 'home'
+        }
+      ],
       cozy: [],
       phone: [],
       birthday: '',
@@ -335,6 +372,7 @@ describe('formValuesToContact', () => {
       birthplace: '',
       note: '',
       address: [{}],
+      matrix: '',
       email: [{}],
       phone: [{}],
       cozy: '',
@@ -348,6 +386,25 @@ describe('formValuesToContact', () => {
       jobTitle: '',
       address: [],
       email: [],
+      impp: [
+        {
+          uri: 'john.doe@xmpp.net',
+          protocol: 'xmpp',
+          label: 'home',
+          primary: false
+        },
+        {
+          uri: 'john.doe@xmpp.net',
+          protocol: 'xmpp',
+          label: 'work',
+          primary: false
+        },
+        {
+          uri: 'john@doe.matrix.home',
+          protocol: 'matrix',
+          label: 'home'
+        }
+      ],
       cozy: [],
       phone: [],
       birthday: '',
