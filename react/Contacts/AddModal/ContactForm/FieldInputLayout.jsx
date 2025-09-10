@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import FieldInput from './FieldInput'
+import FieldInputAccordion from './FieldInputAccordion'
 import FieldInputArray from './FieldInputArray'
 import { fieldsRequired } from './helpers'
 import { locales } from './locales'
@@ -24,8 +25,8 @@ const FieldInputLayout = ({
   return (
     <div
       className={cx('u-flex u-mt-1', {
-        'u-flex-items-center': layout !== 'array',
-        'u-flex-items-baseline': layout === 'array'
+        'u-flex-items-center': !layout,
+        'u-flex-items-baseline': !!layout
       })}
     >
       <div className="u-w-2-half">
@@ -37,6 +38,13 @@ const FieldInputLayout = ({
             attributes={attributes}
             contacts={contacts}
             formProps={formProps}
+          />
+        ) : layout === 'accordion' ? (
+          <FieldInputAccordion
+            attributes={attributes}
+            contacts={contacts}
+            error={isError}
+            helperText={isError ? errors[name] : null}
           />
         ) : (
           <FieldInput
