@@ -61,6 +61,7 @@
         "addLabel": {
           "address": "Add an address",
           "email": "Add an email",
+          "matrix": "Add a Matrix ID",
           "phone": "Add a phone",
           "relatedContact": "Add a related contact"
         }

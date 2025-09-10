@@ -138,7 +138,30 @@ export const fields = [
   {
     name: 'matrix',
     icon: MatrixIcon,
-    type: 'text'
+    type: 'text',
+    isArray: true,
+    label: {
+      name: 'matrixLabel',
+      select: true,
+      customLabelOptions: {
+        defaultType: '',
+        defaultLabel: 'home'
+      },
+      options: [
+        {
+          value: '',
+          label: 'Contacts.AddModal.ContactForm.label.none'
+        },
+        {
+          value: '{"label":"home"}',
+          label: 'Contacts.AddModal.ContactForm.label.home'
+        },
+        {
+          value: '{"label":"work"}',
+          label: 'Contacts.AddModal.ContactForm.label.work'
+        }
+      ]
+    }
   },
   {
     name: 'address',
