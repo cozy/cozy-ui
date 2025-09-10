@@ -8,6 +8,7 @@ import CommentIcon from '../../../Icons/Comment'
 import CompanyIcon from '../../../Icons/Company'
 import EmailIcon from '../../../Icons/Email'
 import LocationIcon from '../../../Icons/Location'
+import MatrixIcon from '../../../Icons/Matrix'
 import PeopleIcon from '../../../Icons/People'
 import RelationshipIcon from '../../../Icons/Relationship'
 import TelephoneIcon from '../../../Icons/Telephone'
@@ -133,6 +134,34 @@ export const fields = [
       ]
     },
     isArray: true
+  },
+  {
+    name: 'matrix',
+    icon: MatrixIcon,
+    type: 'text',
+    isArray: true,
+    label: {
+      name: 'matrixLabel',
+      select: true,
+      customLabelOptions: {
+        defaultType: '',
+        defaultLabel: 'home'
+      },
+      options: [
+        {
+          value: '',
+          label: 'Contacts.AddModal.ContactForm.label.none'
+        },
+        {
+          value: '{"label":"home"}',
+          label: 'Contacts.AddModal.ContactForm.label.home'
+        },
+        {
+          value: '{"label":"work"}',
+          label: 'Contacts.AddModal.ContactForm.label.work'
+        }
+      ]
+    }
   },
   {
     name: 'address',

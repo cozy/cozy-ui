@@ -14,6 +14,7 @@
           "familyName": "Lastname",
           "phone": "Phone",
           "email": "Email",
+          "matrix": "Matrix ID",
           "address": "Address",
           "cozy": "Twake URL",
           "company": "Company",
@@ -60,6 +61,7 @@
         "addLabel": {
           "address": "Add an address",
           "email": "Add an email",
+          "matrix": "Add a Matrix ID",
           "phone": "Add a phone",
           "relatedContact": "Add a related contact"
         }

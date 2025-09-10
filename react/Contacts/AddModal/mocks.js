@@ -30,6 +30,7 @@ export const johnDoeContact = {
       primary: true
     }
   ],
+  matrix: '123-matrixID-456',
   birthday: '1999-5-1',
   birthplace: 'somewhere',
   gender: 'male',
@@ -71,6 +72,7 @@ export const johnDoeFormValues = {
   gender: 'male',
   cozy: 'https://johndoe.mycozy.cloud',
   cozyLabel: '{"type":"MyCozy"}',
+  matrix: '123-matrixID-456',
   address: [
     {
       fieldId: 'fieldId_1',

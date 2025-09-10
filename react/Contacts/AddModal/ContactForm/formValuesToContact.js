@@ -18,6 +18,7 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
     phone,
     email,
     address,
+    matrix,
     cozy,
     company,
     jobTitle,
@@ -59,6 +60,15 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
           .map(({ email, emailLabel }, index) => ({
             address: email,
             ...makeTypeAndLabel(emailLabel),
+            primary: index === 0
+          }))
+      : [],
+    matrix: matrix
+      ? matrix
+          .filter(val => val && val.email)
+          .map(({ email, matrixLabel }, index) => ({
+            address: email,
+            ...makeTypeAndLabel(matrixLabel),
             primary: index === 0
           }))
       : [],

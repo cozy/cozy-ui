@@ -25,6 +25,7 @@ const contactToFormValues = (contact, t) => {
       jobTitle,
       cozy,
       email,
+      matrix,
       name,
       note,
       phone
@@ -81,6 +82,7 @@ const contactToFormValues = (contact, t) => {
       familyName: name?.familyName,
       phone: phoneValue,
       email: emailValue,
+      matrix,
       address: addressValue,
       cozy: cozyValue,
       cozyLabel: cozyLabel,
