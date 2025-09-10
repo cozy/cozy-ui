@@ -36,7 +36,7 @@ const FieldInputArray = ({
               return (
                 <div
                   key={key}
-                  className={cx('u-flex u-flex-items-center', {
+                  className={cx('u-flex u-flex-items-baseline', {
                     'u-mt-1': index !== 0
                   })}
                 >
