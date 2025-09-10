@@ -22,7 +22,7 @@ export const fieldInputAttributesTypes = PropTypes.shape({
   icon: iconPropType,
   type: PropTypes.string,
   label: labelPropTypes,
-  isArray: PropTypes.bool,
+  layout: PropTypes.string,
   subFields: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
