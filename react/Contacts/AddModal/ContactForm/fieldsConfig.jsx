@@ -35,12 +35,20 @@ export const fields = [
   {
     name: 'givenName',
     icon: null,
-    type: 'text'
-  },
-  {
-    name: 'additionalName',
-    icon: null,
-    type: 'text'
+    type: 'text',
+    layout: 'accordion',
+    subFields: [
+      {
+        name: 'additionalName',
+        icon: null,
+        type: 'text'
+      },
+      {
+        name: 'surname',
+        icon: null,
+        type: 'text'
+      }
+    ]
   },
   {
     name: 'familyName',
@@ -48,19 +56,17 @@ export const fields = [
     type: 'text'
   },
   {
-    name: 'surname',
-    icon: null,
-    type: 'text'
-  },
-  {
     name: 'company',
     icon: CompanyIcon,
-    type: 'text'
-  },
-  {
-    name: 'jobTitle',
-    icon: null,
-    type: 'text'
+    type: 'text',
+    layout: 'accordion',
+    subFields: [
+      {
+        name: 'jobTitle',
+        icon: null,
+        type: 'text'
+      }
+    ]
   },
   {
     name: 'phone',
