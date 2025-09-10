@@ -16,6 +16,7 @@ import { fieldInputAttributesTypes, labelPropTypes } from '../types'
 const FieldInput = ({
   name,
   labelProps,
+  className,
   attributes: { subFields, ...restAttributes },
   contacts,
   error,
@@ -48,6 +49,7 @@ const FieldInput = ({
   return (
     <div
       className={cx(
+        className,
         styles['contact-form-field__wrapper'],
         'u-flex',
         'u-flex-column-s'
@@ -98,6 +100,7 @@ const FieldInput = ({
 
 FieldInput.propTypes = {
   name: PropTypes.string.isRequired,
+  className: PropTypes.string,
   labelProps: labelPropTypes,
   attributes: fieldInputAttributesTypes,
   contacts: PropTypes.shape({
