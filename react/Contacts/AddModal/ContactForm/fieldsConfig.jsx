@@ -66,6 +66,7 @@ export const fields = [
     name: 'phone',
     icon: TelephoneIcon,
     type: 'tel',
+    layout: 'array',
     label: {
       name: 'phoneLabel',
       select: true,
@@ -103,13 +104,13 @@ export const fields = [
           label: 'Contacts.AddModal.ContactForm.label.phone.fax-work'
         }
       ]
-    },
-    isArray: true
+    }
   },
   {
     name: 'email',
     icon: EmailIcon,
     type: 'email',
+    layout: 'array',
     label: {
       name: 'emailLabel',
       select: true,
@@ -131,13 +132,13 @@ export const fields = [
           label: 'Contacts.AddModal.ContactForm.label.work'
         }
       ]
-    },
-    isArray: true
+    }
   },
   {
     name: 'address',
     icon: LocationIcon,
     type: 'text',
+    layout: 'array',
     InputProps: {
       readOnly: true
     },
@@ -224,8 +225,7 @@ export const fields = [
           label: 'Contacts.AddModal.ContactForm.label.address.work'
         }
       ]
-    },
-    isArray: true
+    }
   },
   {
     name: 'cozy',
@@ -268,6 +268,7 @@ export const fields = [
   {
     name: 'relatedContact',
     icon: RelationshipIcon,
+    layout: 'array',
     InputProps: {
       readOnly: true,
       endAdornment: (
@@ -329,8 +330,7 @@ export const fields = [
           label: 'Contacts.AddModal.ContactForm.label.relationship.recipient'
         }
       ]
-    },
-    isArray: true
+    }
   },
   {
     name: 'note',

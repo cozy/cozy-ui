@@ -10,7 +10,7 @@ import Icon from '../../../Icon'
 import { useI18n, useExtendI18n } from '../../../providers/I18n'
 
 const FieldInputLayout = ({
-  attributes: { isArray, icon, ...attributes }, // ⚠️ isArray and icon here are removed from attributes to avoid DOM propagration
+  attributes: { layout, icon, ...attributes }, // ⚠️ layout and icon here are removed from attributes to avoid DOM propagration
   contacts,
   formProps
 }) => {
@@ -24,15 +24,15 @@ const FieldInputLayout = ({
   return (
     <div
       className={cx('u-flex u-mt-1', {
-        'u-flex-items-center': !isArray,
-        'u-flex-items-baseline': isArray
+        'u-flex-items-center': layout !== 'array',
+        'u-flex-items-baseline': layout === 'array'
       })}
     >
       <div className="u-w-2-half">
         {icon && <Icon icon={icon} color="var(--iconTextColor)" />}
       </div>
       <div className="u-w-100">
-        {isArray ? (
+        {layout === 'array' ? (
           <FieldInputArray
             attributes={attributes}
             contacts={contacts}
