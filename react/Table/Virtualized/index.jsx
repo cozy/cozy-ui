@@ -15,6 +15,7 @@ const VirtualizedTable = forwardRef(
       columns,
       groups,
       defaultOrder,
+      defaultOrderDirection = 'asc',
       secondarySort,
       selectedItems,
       onSelect,
@@ -28,7 +29,7 @@ const VirtualizedTable = forwardRef(
     },
     ref
   ) => {
-    const [order, setOrder] = useState('asc')
+    const [order, setOrder] = useState(defaultOrderDirection)
     const [orderBy, setOrderBy] = useState(defaultOrder)
 
     const sortedData = stableSort(rows, getComparator(order, orderBy))
