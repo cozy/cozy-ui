@@ -28,8 +28,10 @@ const VirtualizedTable = forwardRef(
     },
     ref
   ) => {
-    const [orderDirection, setOrderDirection] = useState('asc')
-    const [orderBy, setOrderBy] = useState(defaultOrder)
+    const [orderDirection, setOrderDirection] = useState(
+      defaultOrder?.direction ?? 'asc'
+    )
+    const [orderBy, setOrderBy] = useState(defaultOrder?.by ?? undefined)
 
     const sortedData = orderBy
       ? stableSort(rows, getComparator(orderDirection, orderBy))
@@ -117,10 +119,27 @@ VirtualizedTable.defaultProps = {
 }
 
 VirtualizedTable.propTypes = {
-  /** Column ID to be used for initiating the sort */
-  defaultOrder: PropTypes.string,
+  /** Rows to display in the table */
+  rows: PropTypes.array,
+  /** Column configuration */
+  columns: PropTypes.array,
   /** Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array }) */
   groups: PropTypes.func,
+  /** Default sorting configuration */
+  defaultOrder: PropTypes.shape({
+    direction: PropTypes.oneOf(['asc', 'desc']),
+    by: PropTypes.string
+  }),
+  /** Sort files by type to put directory and trash before files */
+  secondarySort: PropTypes.func,
+  /** Array of selected items */
+  selectedItems: PropTypes.array,
+  /** Callback function when a row is selected */
+  onSelect: PropTypes.func,
+  /** Callback function when all rows are selected/deselected */
+  onSelectAll: PropTypes.func,
+  /** Function to determine if a row is selected */
+  isSelectedItem: PropTypes.func,
   /** Callback called after the sort */
   onSortChange: PropTypes.func
 }

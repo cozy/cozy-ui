@@ -121,7 +121,7 @@ const ExampleTable = ({ variant, ...props }) => {
       <Typography className="u-mt-1" variant="h4">Sorted table</Typography>
       <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
         <SelectionProvider>
-          <ExampleTable variant={variant} defaultOrder={columns[0].id} />
+          <ExampleTable variant={variant} defaultOrder={{by: columns[0].id, direction: 'asc'}} />
         </SelectionProvider>
       </div>
     </>
