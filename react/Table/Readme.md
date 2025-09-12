@@ -44,7 +44,7 @@ const columns = [
     width: 80,
     label: 'Calories',
     textAlign: 'left',
-    sortable: false
+    direction: 'desc'
   },
   {
     id: 'fat',
@@ -66,7 +66,14 @@ const columns = [
     width: 115,
     label: 'Protein (g)',
     textAlign: 'right',
-    disableClick: true
+    disableClick: true,
+  },
+  { 
+    id: 'last_update',
+    width: 115, 
+    label: 'Last Update',
+    textAlign: 'right',
+    sortable: false
   }
 ]
 
@@ -118,7 +125,8 @@ const onSortChange = ({ order, orderBy }) => {
         rows={rows}
         columns={columns}
         groups={variant.grouped ? makeGroups : undefined}
-        defaultOrder={columns[0].id}
+        defaultOrder={columns[1].id}
+        defaultOrderDirection={columns[1].direction}
         selectedItems={state.selectedItemsId}
         isSelectedItem={row => isSelectedItem(row)}
         onSelect={onSelect}
