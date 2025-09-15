@@ -1,5 +1,5 @@
 import arrayMutators from 'final-form-arrays'
-import React from 'react'
+import React, { useState } from 'react'
 import { Form } from 'react-final-form'
 
 import { getHasManyItems } from 'cozy-client/dist/associations/HasMany'
@@ -10,6 +10,7 @@ import { fields } from './fieldsConfig'
 import formValuesToContact from './formValuesToContact'
 import { validateFields } from './helpers'
 import { locales } from './locales'
+import Button from '../../../Buttons'
 import { useI18n, useExtendI18n } from '../../../providers/I18n'
 // import { fullContactPropTypes } from '../../ContactPropTypes' // !!
 
@@ -36,6 +37,7 @@ export function getSubmitContactForm() {
  * @returns
  */
 const ContactForm = ({ contact, onSubmit, contacts }) => {
+  const [showSecondaryFields, setShowSecondaryFields] = useState(false)
   useExtendI18n(locales)
   const { t } = useI18n()
 
@@ -60,6 +62,7 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
                 key={index}
                 attributes={attributes}
                 contacts={contacts}
+                showSecondaryFields={showSecondaryFields}
                 formProps={{
                   valid,
                   submitFailed,
@@ -67,6 +70,16 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
                 }}
               />
             ))}
+            {!showSecondaryFields && (
+              <div>
+                <Button
+                  className="u-db u-ml-2 u-mt-1"
+                  variant="text"
+                  label={t('Contacts.AddModal.ContactForm.other-fields')}
+                  onClick={() => setShowSecondaryFields(true)}
+                />
+              </div>
+            )}
           </form>
         )
       }}
