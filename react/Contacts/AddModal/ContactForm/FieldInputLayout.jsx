@@ -11,8 +11,9 @@ import Icon from '../../../Icon'
 import { useI18n, useExtendI18n } from '../../../providers/I18n'
 
 const FieldInputLayout = ({
-  attributes: { layout, icon, ...attributes }, // ⚠️ layout and icon here are removed from attributes to avoid DOM propagration
+  attributes: { layout, icon, isSecondary, ...attributes }, // ⚠️ `layout` `icon` `isSecondary` here are removed from attributes to avoid DOM propagration
   contacts,
+  showSecondaryFields,
   formProps
 }) => {
   useExtendI18n(locales)
@@ -26,7 +27,8 @@ const FieldInputLayout = ({
     <div
       className={cx('u-flex u-mt-1', {
         'u-flex-items-center': !layout,
-        'u-flex-items-baseline': !!layout
+        'u-flex-items-baseline': !!layout,
+        'u-dn': isSecondary && !showSecondaryFields
       })}
     >
       <div className="u-w-2-half">

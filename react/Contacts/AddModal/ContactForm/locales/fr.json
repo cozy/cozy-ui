@@ -6,6 +6,7 @@
           "man": "Homme",
           "woman": "Femme"
         },
+        "other-fields": "Autres champs",
         "fields": {
           "gender": "Civilité",
           "givenName": "Prénom",

@@ -234,9 +234,16 @@ export const fields = [
     }
   },
   {
+    name: 'note',
+    icon: CommentIcon,
+    type: 'text',
+    multiline: true
+  },
+  {
     name: 'cozy',
     icon: CloudIcon,
     type: 'url',
+    isSecondary: true,
     label: {
       name: 'cozyLabel',
       select: true,
@@ -264,17 +271,20 @@ export const fields = [
     name: 'birthday',
     icon: CalendarIcon,
     type: 'date',
+    isSecondary: true,
     InputLabelProps: { shrink: true }
   },
   {
     name: 'birthplace',
     icon: null,
-    type: 'text'
+    type: 'text',
+    isSecondary: true
   },
   {
     name: 'relatedContact',
     icon: RelationshipIcon,
     layout: 'array',
+    isSecondary: true,
     InputProps: {
       readOnly: true,
       endAdornment: (
@@ -337,11 +347,5 @@ export const fields = [
         }
       ]
     }
-  },
-  {
-    name: 'note',
-    icon: CommentIcon,
-    type: 'text',
-    multiline: true
   }
 ]
