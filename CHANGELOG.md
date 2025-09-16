@@ -1,3 +1,10 @@
+## [128.10.1](https://github.com/cozy/cozy-ui/compare/v128.10.0...v128.10.1) (2025-09-16)
+
+
+### Bug Fixes
+
+* **AddModal/ContactForm:** Secondary input wasn't hide correctly ([b1fd6b0](https://github.com/cozy/cozy-ui/commit/b1fd6b0))
+
 # [128.10.0](https://github.com/cozy/cozy-ui/compare/v128.9.0...v128.10.0) (2025-09-16)
 
 
