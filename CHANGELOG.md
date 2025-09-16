@@ -1,3 +1,11 @@
+# [128.10.0](https://github.com/cozy/cozy-ui/compare/v128.9.0...v128.10.0) (2025-09-16)
+
+
+### Features
+
+* **Contacts/AddModal:** Add matrix ID input ([db8f522](https://github.com/cozy/cozy-ui/commit/db8f522))
+* **Icons:** Add matrix ([4838a1f](https://github.com/cozy/cozy-ui/commit/4838a1f))
+
 # [128.9.0](https://github.com/cozy/cozy-ui/compare/v128.8.0...v128.9.0) (2025-09-16)
 
 
