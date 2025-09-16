@@ -22,6 +22,7 @@ const FieldInput = ({
   error,
   helperText,
   label,
+  isInvisible,
   required
 }) => {
   const [id] = useState(uniqueId('field_')) // state only use to generate id once and not at each render
@@ -51,8 +52,8 @@ const FieldInput = ({
       className={cx(
         className,
         styles['contact-form-field__wrapper'],
-        'u-flex',
-        'u-flex-column-s'
+        'u-flex-column-s',
+        { 'u-flex': !isInvisible, 'u-dn': isInvisible }
       )}
     >
       <Field
@@ -103,6 +104,8 @@ FieldInput.propTypes = {
   className: PropTypes.string,
   labelProps: labelPropTypes,
   attributes: fieldInputAttributesTypes,
+  /** Whether the field is visible by the user or not (still in the DOM anyway) */
+  isInvisible: PropTypes.bool,
   contacts: PropTypes.shape({
     data: PropTypes.arrayOf(PropTypes.object)
   }),

@@ -1,4 +1,3 @@
-import cx from 'classnames'
 import React, { useState } from 'react'
 
 import FieldInput from './FieldInput'
@@ -43,9 +42,10 @@ const FieldInputAccordion = ({
         return (
           <FieldInput
             key={index}
-            className={cx('u-mt-1', { 'u-dn': !showExtended })}
+            className="u-mt-1"
             attributes={attributes}
             name={name}
+            isInvisible={!showExtended}
             label={t(`Contacts.AddModal.ContactForm.fields.${name}`)}
           />
         )

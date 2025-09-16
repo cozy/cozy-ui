@@ -25,9 +25,10 @@ const FieldInputLayout = ({
 
   return (
     <div
-      className={cx('u-flex u-mt-1', {
+      className={cx('u-mt-1', {
         'u-flex-items-center': !layout,
         'u-flex-items-baseline': !!layout,
+        'u-flex': !isSecondary || showSecondaryFields,
         'u-dn': isSecondary && !showSecondaryFields
       })}
     >
