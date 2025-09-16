@@ -1,3 +1,17 @@
+# [128.9.0](https://github.com/cozy/cozy-ui/compare/v128.8.0...v128.9.0) (2025-09-16)
+
+
+### Bug Fixes
+
+* **ContactForm:** Remove button position wasn't correct on mobile ([d96647f](https://github.com/cozy/cozy-ui/commit/d96647f))
+
+
+### Features
+
+* **ContactForm/FieldInput:** Add className prop ([38d48f5](https://github.com/cozy/cozy-ui/commit/38d48f5))
+* **ContactForm:** Add `isSecondary` attribute ([ff1bf5f](https://github.com/cozy/cozy-ui/commit/ff1bf5f))
+* **ContactForm:** Add FieldInputAccordion component ([f285990](https://github.com/cozy/cozy-ui/commit/f285990))
+
 # [128.8.0](https://github.com/cozy/cozy-ui/compare/v128.7.0...v128.8.0) (2025-09-09)
 
 
