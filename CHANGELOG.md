@@ -1,3 +1,17 @@
+# [129.0.0](https://github.com/cozy/cozy-ui/compare/v128.10.1...v129.0.0) (2025-09-17)
+
+
+### Bug Fixes
+
+* **SelectionProvider:** Replace `item`by `itemId` and don't rely on `._id` anymore ([f6086d3](https://github.com/cozy/cozy-ui/commit/f6086d3))
+* **VirtualizedTable:** Now don't sort anything if no `defaultOrder` set ([707d62d](https://github.com/cozy/cozy-ui/commit/707d62d))
+* **VirtualizedTable:** Prop `onSortChange` is now longer required ([31188a6](https://github.com/cozy/cozy-ui/commit/31188a6))
+
+
+### BREAKING CHANGES
+
+* **SelectionProvider:** If you use `cozy-ui/transpiled/react/providers/Selection` you have to replace prop object by its `id` value. For example replace `isSelectedItem(item)` by `isSelectedItem(item.id)` or `toggleSelectAllItems(items)` by `toggleSelectAllItems(items.map(item => item.id))`
+
 ## [128.10.1](https://github.com/cozy/cozy-ui/compare/v128.10.0...v128.10.1) (2025-09-16)
 
 
