@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 const FixedHeaderContent = ({
   columns,
-  order,
+  orderDirection,
   orderBy,
   rowCount,
   context,
@@ -52,7 +52,7 @@ const FixedHeaderContent = ({
           key={column.id}
           className={classes.visuallyHidden}
           column={column}
-          order={order}
+          orderDirection={orderDirection}
           orderBy={orderBy}
           onClick={() => onClick(column.id)}
         />

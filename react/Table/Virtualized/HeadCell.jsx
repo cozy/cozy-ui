@@ -11,7 +11,13 @@ const useStyles = makeStyles({
   }
 })
 
-const TableHeadCell = ({ className, column, orderBy, order, onClick }) => {
+const TableHeadCell = ({
+  className,
+  column,
+  orderBy,
+  orderDirection,
+  onClick
+}) => {
   const classes = useStyles({ column })
 
   return (
@@ -20,18 +26,20 @@ const TableHeadCell = ({ className, column, orderBy, order, onClick }) => {
       classes={classes}
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
-      sortDirection={orderBy === column.id ? order : false}
+      sortDirection={orderBy === column.id ? orderDirection : false}
     >
       {column.sortable !== false ? (
         <TableSortLabel
           active={orderBy === column.id}
-          direction={orderBy === column.id ? order : 'asc'}
+          direction={orderBy === column.id ? orderDirection : 'asc'}
           onClick={onClick}
         >
           {column.label}
           {orderBy === column.id && (
             <span className={className}>
-              {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+              {orderDirection === 'desc'
+                ? 'sorted descending'
+                : 'sorted ascending'}
             </span>
           )}
         </TableSortLabel>

@@ -28,10 +28,10 @@ const VirtualizedTable = forwardRef(
     },
     ref
   ) => {
-    const [order, setOrder] = useState('asc')
+    const [orderDirection, setOrderDirection] = useState('asc')
     const [orderBy, setOrderBy] = useState(defaultOrder)
 
-    const sortedData = stableSort(rows, getComparator(order, orderBy))
+    const sortedData = stableSort(rows, getComparator(orderDirection, orderBy))
     const data = secondarySort ? secondarySort(sortedData) : sortedData
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
@@ -43,9 +43,9 @@ const VirtualizedTable = forwardRef(
     }
 
     const handleSort = property => {
-      const isAsc = orderBy === property && order === 'asc'
+      const isAsc = orderBy === property && orderDirection === 'asc'
       const newOrder = isAsc ? 'desc' : 'asc'
-      setOrder(newOrder)
+      setOrderDirection(newOrder)
       setOrderBy(property)
       onSortChange({ order: newOrder, orderBy: property })
     }
@@ -74,7 +74,7 @@ const VirtualizedTable = forwardRef(
             columns={columns}
             rowCount={rows.length}
             context={_context}
-            order={order}
+            orderDirection={orderDirection}
             orderBy={orderBy}
             onClick={handleSort}
             onSelectAllClick={handleSelectAll}
