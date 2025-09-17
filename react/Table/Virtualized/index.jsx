@@ -31,7 +31,9 @@ const VirtualizedTable = forwardRef(
     const [orderDirection, setOrderDirection] = useState('asc')
     const [orderBy, setOrderBy] = useState(defaultOrder)
 
-    const sortedData = stableSort(rows, getComparator(orderDirection, orderBy))
+    const sortedData = orderBy
+      ? stableSort(rows, getComparator(orderDirection, orderBy))
+      : rows
     const data = secondarySort ? secondarySort(sortedData) : sortedData
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
@@ -115,9 +117,9 @@ VirtualizedTable.defaultProps = {
 }
 
 VirtualizedTable.propTypes = {
-  /**
-     Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array })
-  */
+  /** Column ID to be used for initiating the sort */
+  defaultOrder: PropTypes.string,
+  /** Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array }) */
   groups: PropTypes.func,
   /** Callback called after the sort */
   onSortChange: PropTypes.func
