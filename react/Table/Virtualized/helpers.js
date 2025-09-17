@@ -1,6 +1,6 @@
 import get from 'lodash/get'
 
-const descendingComparator = ({ a, b, order, orderBy, lang }) => {
+const descendingComparator = ({ a, b, orderDirection, orderBy, lang }) => {
   const aValue = get(a, orderBy, '')
   const bValue = get(b, orderBy, '')
 
@@ -17,7 +17,7 @@ const descendingComparator = ({ a, b, order, orderBy, lang }) => {
     }
 
     const { compare } = Intl.Collator(lang || 'en', {
-      caseFirst: order === 'asc' ? 'upper' : 'lower'
+      caseFirst: orderDirection === 'asc' ? 'upper' : 'lower'
     })
 
     return compare(bValue, aValue)
@@ -26,10 +26,10 @@ const descendingComparator = ({ a, b, order, orderBy, lang }) => {
   return bValue - aValue
 }
 
-export const getComparator = (order, orderBy, lang) => {
-  return order === 'desc'
-    ? (a, b) => descendingComparator({ a, b, order, orderBy, lang })
-    : (a, b) => -descendingComparator({ a, b, order, orderBy, lang })
+export const getComparator = (orderDirection, orderBy, lang) => {
+  return orderDirection === 'desc'
+    ? (a, b) => descendingComparator({ a, b, orderDirection, orderBy, lang })
+    : (a, b) => -descendingComparator({ a, b, orderDirection, orderBy, lang })
 }
 
 export const stableSort = (array, comparator) => {
