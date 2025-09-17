@@ -47,7 +47,7 @@ const VirtualizedTable = forwardRef(
       const newOrder = isAsc ? 'desc' : 'asc'
       setOrderDirection(newOrder)
       setOrderBy(property)
-      onSortChange({ order: newOrder, orderBy: property })
+      onSortChange?.({ order: newOrder, orderBy: property })
     }
 
     const handleSelectAll = event => {
@@ -118,7 +118,9 @@ VirtualizedTable.propTypes = {
   /**
      Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array })
   */
-  groups: PropTypes.func
+  groups: PropTypes.func,
+  /** Callback called after the sort */
+  onSortChange: PropTypes.func
 }
 
 export default VirtualizedTable
