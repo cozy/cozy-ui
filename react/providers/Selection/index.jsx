@@ -18,48 +18,47 @@ export const useSelection = () => {
 const SelectionProvider = ({ children }) => {
   const [selectedItemsId, setSelectedItemsId] = useState([])
 
-  const isSelectedItem = item => {
-    return selectedItemsId.some(selectedItemId => selectedItemId === item._id)
+  const isSelectedItem = itemId => {
+    return selectedItemsId.some(selectedItemId => selectedItemId === itemId)
   }
 
   const isSelectionEnabled = selectedItemsId.length > 0
 
-  const addSelectedItem = item => {
-    setSelectedItemsId(prev => [...prev, item._id])
+  const addSelectedItem = itemId => {
+    setSelectedItemsId(prev => [...prev, itemId])
   }
 
-  const removeSelectedItem = item => {
-    setSelectedItemsId(prev => prev.filter(el => el !== item._id))
+  const removeSelectedItem = itemId => {
+    setSelectedItemsId(prev => prev.filter(el => el !== itemId))
   }
 
-  const toggleSelectedItem = item => {
-    if (isSelectedItem(item)) {
-      removeSelectedItem(item)
+  const toggleSelectedItem = itemId => {
+    if (isSelectedItem(itemId)) {
+      removeSelectedItem(itemId)
     } else {
-      addSelectedItem(item)
+      addSelectedItem(itemId)
     }
   }
 
-  const selectAll = items => {
-    const ids = items.map(item => item._id)
-    setSelectedItemsId(ids)
+  const selectAll = itemsId => {
+    setSelectedItemsId(itemsId)
   }
 
   const unselectAll = () => {
     setSelectedItemsId([])
   }
 
-  const isSelectedAllItems = items => {
+  const isSelectedAllItems = itemsId => {
     const a = selectedItemsId.sort()
-    const b = items.map(item => item._id).sort()
+    const b = itemsId.sort()
     return isEqual(a, b)
   }
 
-  const toggleSelectAllItems = items => {
-    if (isSelectedAllItems(items)) {
+  const toggleSelectAllItems = itemsId => {
+    if (isSelectedAllItems(itemsId)) {
       unselectAll()
     } else {
-      selectAll(items)
+      selectAll(itemsId)
     }
   }
 
