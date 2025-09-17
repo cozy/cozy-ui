@@ -12,8 +12,8 @@ const Component = () => {
   return (
     <>
       <Typography>selectedItemsId : {JSON.stringify(selectedItemsId)}</Typography>
-      <Button label="Add Item" onClick={() => addSelectedItem({ _id: '01' })} />
-      <Button label="Remove Item" onClick={() => removeSelectedItem({ _id: '01' })} />
+      <Button label="Add Item" onClick={() => addSelectedItem('01')} />
+      <Button label="Remove Item" onClick={() => removeSelectedItem('01')} />
   </>
   )
 }
