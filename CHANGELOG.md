@@ -1,3 +1,15 @@
+# [130.0.0](https://github.com/cozy/cozy-ui/compare/v129.0.0...v130.0.0) (2025-09-18)
+
+
+### Features
+
+* **VirtualizedTable:** defaultOrder become an object to change the sorted direction ([11edbe7](https://github.com/cozy/cozy-ui/commit/11edbe7))
+
+
+### BREAKING CHANGES
+
+* **VirtualizedTable:** - VirtualizedTable: When using `cozy-ui/transpiled/react/table/virtualized`, you need to pass `defaultOrder` as an object `{by: 'columnName', direction: 'asc'}` and not a string anymore `defaultOrder='columnName'`
+
 # [129.0.0](https://github.com/cozy/cozy-ui/compare/v128.10.1...v129.0.0) (2025-09-17)
 
 
