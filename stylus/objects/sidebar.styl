@@ -11,11 +11,14 @@
 $sidebar
     width rem(236)
     background-color var(--defaultBackgroundColor)
-    overflow-y auto
+    overflow-y hidden
     overflow-x hidden
     display flex
     flex-direction column
     flex 0 0 auto
+
+    &:hover
+        overflow-y auto
 
     &--border
         border-right rem(1) solid var(--dividerColor)
