@@ -9351,11 +9351,14 @@ body {
 .o-sidebar--1295j {
   width: 14.75rem;
   background-color: var(--defaultBackgroundColor);
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
+}
+.o-sidebar--1295j:hover {
+  overflow-y: auto;
 }
 .o-sidebar--border--32tfw {
   border-right: 0.063rem solid var(--dividerColor);
