@@ -27,7 +27,6 @@ import {
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import { createFakeClient } from 'cozy-client'
 
 const initialVariants = [
   {
@@ -76,45 +75,36 @@ const togglePaywall = paywall => {
   })
 }
 
-const makeClient = premiumLink =>
-  createFakeClient({
-    queries: {
-      'io.cozy.settings/io.cozy.settings.instance': {
-        doctype: 'io.cozy.settings',
-        definition: {
-          doctype: 'io.cozy.settings',
-          id: 'io.cozy.settings/io.cozy.settings.instance'
-        },
-        data: [
-          {
-            id: 'io.cozy.settings/io.cozy.settings.instance',
-            attributes: {
-              uuid: '1223'
-            }
-          }
-        ]
-      },
-      'io.cozy.settings/io.cozy.settings.context': {
-        doctype: 'io.cozy.settings',
-        definition: {
-          doctype: 'io.cozy.settings',
-          id: 'io.cozy.settings/io.cozy.settings.context'
-        },
-        data: [
-          {
-            id: 'io.cozy.settings/io.cozy.settings.context',
-            attributes: {
-              enable_premium_links: premiumLink,
-              manager_url: 'http://mycozy.cloud',
-              reply_to: 'support@cozy.io'
-            }
-          }
-        ]
+const makeClient = premiumLink => ({
+  store: {
+    getState: () => {},
+    subscribe: () => {},
+    unsubscribe: () => {}
+  },
+  getInstanceOptions: () => {},
+  query: () => {},
+  getQueryFromState: queryName => {
+    if (queryName === 'io.cozy.settings/io.cozy.settings.instance') {
+      return {
+        data: {
+          uuid: '1223'
+        }
+      }
+    } else if (queryName === 'io.cozy.settings/io.cozy.settings.context') {
+      return {
+        data: {
+          enable_premium_links: premiumLink,
+          manager_url: 'http://mycozy.cloud',
+          reply_to: 'support@cozy.io'
+        }
       }
     }
-  })
+  }
+})
 
-;<Variants initialVariants={initialVariants}>
+;
+
+<Variants initialVariants={initialVariants}>
   {variant => (
     <DemoProvider client={makeClient(variant.premiumLink)}>
       <div>
