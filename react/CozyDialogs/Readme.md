@@ -78,7 +78,14 @@ import FormControl from 'cozy-ui/transpiled/react/FormControl'
 import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 import BottomSheet, { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
 import Stack from 'cozy-ui/transpiled/react/Stack'
+import Menu from 'cozy-ui/transpiled/react/Menu'
+import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
+import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 
+import PenIcon from 'cozy-ui/transpiled/react/Icons/Pen'
+import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import AttachmentIcon from 'cozy-ui/transpiled/react/Icons/Attachment'
 import ToTheCloudIcon from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 import BackgroundImg from './background.png'
@@ -90,12 +97,16 @@ const handleBack = () => {
 }
 const hideBottomSheet = () => setState({ bottomSheetOpened: false })
 const showBottomSheet = () => setState({ bottomSheetOpened: true })
+const hideMenu = () => setState({ menuOpened: false })
+const showMenu = () => setState({ menuOpened: true })
 const hideSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: false })
 const showSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: true })
 const hideSecondDialog = () => setState({ secondDialogOpened: false })
 const showSecondDialog = () => setState({ secondDialogOpened: true })
 const hideBSConfirmDialog = () => setState({ BSConfirmDialogOpened: false })
 const showBSConfirmDialog = () => setState({ BSConfirmDialogOpened: true })
+
+const menuRef = React.useRef()
 
 const DialogComponent = state.modal
 
@@ -189,6 +200,7 @@ const toggleDialog = dialog => {
 initialState = {
   modalOpened: isTesting(),
   bottomSheetOpened: false,
+  menuOpened: false,
   secondConfirmDialogOpened: false,
   secondDialogOpened: false,
   BSConfirmDialogOpened: false,
@@ -329,6 +341,9 @@ const initialVariants = [{
                     <div>
                       <Button label="Show inner dialog" onClick={showSecondDialog}/>
                     </div>
+                    <div>
+                      <Button ref={menuRef} label="Show menu" onClick={showMenu}/>
+                    </div>
                   </Stack>
                 </Typography>
 
@@ -344,6 +359,43 @@ const initialVariants = [{
                     title="This is a simple title"
                     content="This is a simple content"
                   />
+                )}
+
+                {state.menuOpened && (
+                  <Menu
+                      open
+                      anchorEl={menuRef.current}
+                      getContentAnchorEl={null}
+                      anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left'
+                      }}
+                      transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'left'
+                      }}
+                      keepMounted
+                      onClose={hideMenu}
+                    >
+                    <MenuItem onClick={hideMenu}>
+                      <ListItemIcon>
+                        <Icon icon={PenIcon} />
+                      </ListItemIcon>
+                      <ListItemText primary="Modify" />
+                    </MenuItem>
+                    <MenuItem onClick={hideMenu}>
+                      <ListItemIcon>
+                        <Icon icon={PeopleIcon} />
+                      </ListItemIcon>
+                      <ListItemText primary="People" />
+                    </MenuItem>
+                    <MenuItem onClick={hideMenu}>
+                      <ListItemIcon>
+                        <Icon icon={AttachmentIcon} />
+                      </ListItemIcon>
+                      <ListItemText primary="Attachment" />
+                    </MenuItem>
+                  </Menu>
                 )}
 
                 {state.bottomSheetOpened && (
