@@ -1,3 +1,10 @@
+# [130.1.0](https://github.com/cozy/cozy-ui/compare/v130.0.0...v130.1.0) (2025-09-23)
+
+
+### Features
+
+* **Sidebar:** Show scrollbar only on hover, not by default ([a0dd077](https://github.com/cozy/cozy-ui/commit/a0dd077))
+
 # [130.0.0](https://github.com/cozy/cozy-ui/compare/v129.0.0...v130.0.0) (2025-09-18)
 
 
