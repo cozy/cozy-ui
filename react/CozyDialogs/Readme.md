@@ -55,6 +55,7 @@ Additionally, all the CozyDialogs support [MUI Dialog's props](https://v4.mui.co
 ### Exemples
 
 ```jsx
+import { useRef, useEffect, useState } from 'react'
 import {
   Dialog,
   ConfirmDialog,
@@ -105,8 +106,6 @@ const hideSecondDialog = () => setState({ secondDialogOpened: false })
 const showSecondDialog = () => setState({ secondDialogOpened: true })
 const hideBSConfirmDialog = () => setState({ BSConfirmDialogOpened: false })
 const showBSConfirmDialog = () => setState({ BSConfirmDialogOpened: true })
-
-const menuRef = React.useRef()
 
 const DialogComponent = state.modal
 
@@ -223,6 +222,60 @@ const initialVariants = [{
   fullScreen: false,
   withBackground: false
 }]
+
+const ButtonMenu = () => {
+  const [forceRender, setForceRender] = useState(0)
+  const menuRef = useRef()
+
+  useEffect(() => {
+    if (menuRef.current) {
+      setForceRender(1)
+    }
+  }, [menuRef])
+
+  return (
+    <div ref={menuRef}>
+      <Button label="Show menu" onClick={showMenu}/>
+
+      {state.menuOpened && menuRef.current && (
+        <Menu
+            open
+            anchorEl={menuRef.current}
+            getContentAnchorEl={null}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left'
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left'
+            }}
+            keepMounted
+            onClose={hideMenu}
+          >
+          <MenuItem onClick={hideMenu}>
+            <ListItemIcon>
+              <Icon icon={PenIcon} />
+            </ListItemIcon>
+            <ListItemText primary="Modify" />
+          </MenuItem>
+          <MenuItem onClick={hideMenu}>
+            <ListItemIcon>
+              <Icon icon={PeopleIcon} />
+            </ListItemIcon>
+            <ListItemText primary="People" />
+          </MenuItem>
+          <MenuItem onClick={hideMenu}>
+            <ListItemIcon>
+              <Icon icon={AttachmentIcon} />
+            </ListItemIcon>
+            <ListItemText primary="Attachment" />
+          </MenuItem>
+        </Menu>
+      )}
+    </div>
+  )
+}
 
 ;
 
@@ -341,9 +394,7 @@ const initialVariants = [{
                     <div>
                       <Button label="Show inner dialog" onClick={showSecondDialog}/>
                     </div>
-                    <div>
-                      <Button ref={menuRef} label="Show menu" onClick={showMenu}/>
-                    </div>
+                    <ButtonMenu />
                   </Stack>
                 </Typography>
 
@@ -359,43 +410,6 @@ const initialVariants = [{
                     title="This is a simple title"
                     content="This is a simple content"
                   />
-                )}
-
-                {state.menuOpened && (
-                  <Menu
-                      open
-                      anchorEl={menuRef.current}
-                      getContentAnchorEl={null}
-                      anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left'
-                      }}
-                      transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'left'
-                      }}
-                      keepMounted
-                      onClose={hideMenu}
-                    >
-                    <MenuItem onClick={hideMenu}>
-                      <ListItemIcon>
-                        <Icon icon={PenIcon} />
-                      </ListItemIcon>
-                      <ListItemText primary="Modify" />
-                    </MenuItem>
-                    <MenuItem onClick={hideMenu}>
-                      <ListItemIcon>
-                        <Icon icon={PeopleIcon} />
-                      </ListItemIcon>
-                      <ListItemText primary="People" />
-                    </MenuItem>
-                    <MenuItem onClick={hideMenu}>
-                      <ListItemIcon>
-                        <Icon icon={AttachmentIcon} />
-                      </ListItemIcon>
-                      <ListItemText primary="Attachment" />
-                    </MenuItem>
-                  </Menu>
                 )}
 
                 {state.bottomSheetOpened && (
