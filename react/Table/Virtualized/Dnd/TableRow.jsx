@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import cx from 'classnames'
+
 import { useDrag, useDrop } from 'react-dnd'
 import { getEmptyImage } from 'react-dnd-html5-backend'
 
@@ -20,6 +22,7 @@ const TableRow = ({ item, context, componentsProps, ...props }) => {
   const isSelected = context?.isSelectedItem(item)
   const isDisabled =
     itemsInDropProcess.includes(item._id) || componentsProps?.tableRow?.disabled
+  const isNew = context?.isNewItem?.(item)
 
   const [dragCollect, dragRef, dragRefPreview] = useDrag(
     () => ({
@@ -85,7 +88,10 @@ const TableRow = ({ item, context, componentsProps, ...props }) => {
       {...props}
       ref={node => dragRef(dropRef(node))}
       selected={isSelected || dropCollect.isOver}
-      className={dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized'}
+      className={cx(
+        dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized',
+        isNew ? 'u-bg-primaryColorLight' : ''
+      )}
       disabled={isDisabled}
       hover
     />
