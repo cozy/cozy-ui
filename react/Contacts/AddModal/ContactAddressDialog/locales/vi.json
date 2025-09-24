@@ -1,0 +1,25 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactAddressDialog": {
+        "fields": {
+          "address": "Địa chỉ",
+          "number": "Số nhà",
+          "street": "Địa chỉ bưu điện",
+          "code": "Mã bưu điện",
+          "city": "Thành phố",
+          "country": "Quốc gia",
+          "locality": "Địa phương",
+          "building": "Tòa nhà",
+          "stairs": "Cầu thang",
+          "floor": "Tầng",
+          "apartment": "Căn hộ",
+          "region": "Vùng",
+          "entrycode": "Mã ra vào"
+        },
+        "cancel": "Hủy",
+        "ok": "Ok"
+      }
+    }
+  }
+}

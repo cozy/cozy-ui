@@ -6,6 +6,8 @@ import Item from './Item'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
+import localeRu from './locales/ru.json'
+import localeVi from './locales/vi.json'
 import styles from './styles.styl'
 import List from '../List'
 import Typography from '../Typography'
@@ -17,7 +19,9 @@ import { withStyles } from '../styles'
 const locales = {
   en: localeEn,
   es: localeEs,
-  fr: localeFr
+  fr: localeFr,
+  ru: localeRu,
+  vi: localeVi
 }
 
 const CANCEL = 'cancel'

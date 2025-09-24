@@ -3,6 +3,8 @@ import React, { useCallback, useRef, useState } from 'react'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import ru from './locales/ru.json'
+import vi from './locales/vi.json'
 import { ConfirmDialog } from '../../CozyDialogs'
 import Button from '../../deprecated/Button'
 import withLocales from '../../providers/I18n/withLocales'
@@ -57,7 +59,7 @@ ConfirmModal.propTypes = {
   confirmLabel: PropTypes.string
 }
 
-const dictRequire = { en, fr }
+const dictRequire = { en, fr, ru, vi }
 const LocalizedConfirmModal = withLocales(dictRequire)(ConfirmModal)
 
 /**

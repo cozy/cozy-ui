@@ -1,0 +1,10 @@
+{
+  "header": "Đang tải lên %{smart_count} ảnh vào %{app} |||| Đang tải lên %{smart_count} ảnh vào %{app}",
+  "header_mobile": "Đã tải lên %{done} trong số %{smart_count}",
+  "header_done": "Đã tải lên thành công %{done} trong số %{smart_count}",
+  "close": "đóng",
+  "item": {
+    "pending": "Đang chờ",
+    "remainingTime": "Còn lại %{time}"
+  }
+}

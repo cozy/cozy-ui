@@ -1,0 +1,13 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "error": {
+        "save": "Có lỗi xảy ra khi lưu liên hệ, vui lòng thử lại"
+      },
+      "edit-contact": "Chỉnh sửa liên hệ",
+      "create_contact": "Tạo liên hệ",
+      "cancel": "Hủy",
+      "save": "Lưu"
+    }
+  }
+}

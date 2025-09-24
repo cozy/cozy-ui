@@ -1,0 +1,75 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactForm": {
+        "gender": {
+          "man": "Мужчина",
+          "woman": "Женщина"
+        },
+        "other-fields": "Другие поля",
+        "fields": {
+          "gender": "Пол",
+          "givenName": "Имя",
+          "additionalName": "Второе имя",
+          "surname": "Используемое имя",
+          "familyName": "Фамилия",
+          "phone": "Телефон",
+          "email": "Email",
+          "matrix": "Matrix ID",
+          "address": "Адрес",
+          "cozy": "Twake URL",
+          "company": "Компания",
+          "jobTitle": "Должность",
+          "birthday": "День рождения",
+          "birthplace": "Место рождения",
+          "relatedContact": "Связанный контакт",
+          "relationship": "Отношение",
+          "note": "Заметки",
+          "label": "Метка",
+          "required": "Одно из этих полей должно быть заполнено"
+        },
+        "label": {
+          "none": "Нет",
+          "home": "Личное",
+          "work": "Рабочее",
+          "custom": "Пользовательское",
+          "phone": {
+            "cell-home": "Мобильный (личный)",
+            "cell-work": "Мобильный (рабочий)",
+            "voice-home": "Голосовой (личный)",
+            "voice-work": "Голосовой (рабочий)",
+            "fax-home": "Факс (личный)",
+            "fax-work": "Факс (рабочий)"
+          },
+          "address": {
+            "home": "Домашний (личный)",
+            "work": "Рабочий (рабочий)"
+          },
+          "relationship": {
+            "parent": "Родитель",
+            "child": "Ребенок",
+            "sibling": "Брат/сестра",
+            "spouse": "Супруг(а)",
+            "coResident": "Сожитель",
+            "friend": "Друг",
+            "colleague": "Коллега",
+            "coWorker": "Сотрудник",
+            "acquaintance": "Знакомый",
+            "helper": "Помощник",
+            "recipient": "Получатель"
+          }
+        },
+        "addLabel": {
+          "address": "Добавить адрес",
+          "email": "Добавить email",
+          "phone": "Добавить телефон",
+          "relatedContact": "Добавить связанный контакт"
+        }
+      }
+    }
+  },
+  "formatted": {
+    "date": "yyyy-LL-dd",
+    "address": "%{number} %{street}, %{code} %{city}, %{country}"
+  }
+}

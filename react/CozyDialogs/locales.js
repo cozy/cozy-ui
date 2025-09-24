@@ -10,5 +10,13 @@ export default {
   es: {
     closeButton: 'Cerrar',
     backButton: 'Atrás'
+  },
+  ru: {
+    closeButton: 'Закрыть',
+    backButton: 'Назад'
+  },
+  vi: {
+    closeButton: 'Đóng',
+    backButton: 'Quay lại'
   }
 }

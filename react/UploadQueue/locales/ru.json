@@ -1,0 +1,10 @@
+{
+  "header": "Загрузка %{smart_count} фото в %{app} |||| Загрузка %{smart_count} фото в %{app}",
+  "header_mobile": "Загружено %{done} из %{smart_count}",
+  "header_done": "Успешно загружено %{done} из %{smart_count}",
+  "close": "закрыть",
+  "item": {
+    "pending": "В ожидании",
+    "remainingTime": "Осталось %{time}"
+  }
+}

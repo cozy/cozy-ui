@@ -1,0 +1,27 @@
+{
+  "cancel": "Hủy",
+  "allow": "Cho phép",
+  "allow-location-dialog": {
+    "title": "Cho phép truy cập vào vị trí của bạn",
+    "description": "Twake của bạn cần phải luôn được ủy quyền để truy cập vị trí điện thoại của bạn để ghi nhớ và giúp bạn phân tích các chuyển động của mình, ngay cả khi ứng dụng không được sử dụng.\n\nNó sẽ KHÔNG BAO GIỜ được chuyển cho bất kỳ ai mà không có yêu cầu của bạn.\n\nBạn có thể hủy kích hoạt tính năng này từ cài đặt ứng dụng Coach CO2."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Quét mã QR",
+    "text": "hoặc trực tiếp đến <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>hoặc <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> để cài đặt ứng dụng Twake Workplace",
+    "a11n": "Đến trang tải xuống ứng dụng Twake Workplace"
+  },
+  "authentification-dialog": {
+    "title": "Đăng nhập",
+    "title-oidc": "Twake Pass",
+    "subtitle": "Để bảo mật, vui lòng xác nhận danh tính của bạn",
+    "label": "Mật khẩu Twake",
+    "label-oidc": "Mật khẩu Twake Pass",
+    "abort": "Rời khỏi",
+    "unlock": "Mở khóa",
+    "forgotten-password": "Tôi quên mật khẩu",
+    "errors": {
+      "invalid_password": "Mật khẩu không chính xác, hãy thử lại.",
+      "server_error": "Có lỗi xảy ra với máy chủ. Vui lòng tải lại trang."
+    }
+  }
+}

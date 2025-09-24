@@ -13,6 +13,8 @@ import { generateI18nConfig } from './generateI18nConfig'
 import { isShortcutFile } from './helpers'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import ru from './locales/ru.json'
+import vi from './locales/vi.json'
 import * as searchUtils from './search'
 import Typography from '../Typography'
 import { useBreakpoints } from '../providers/Breakpoints'
@@ -21,7 +23,9 @@ import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
 const locales = {
   en,
-  fr
+  fr,
+  ru,
+  vi
 }
 
 const SectionTitle = ({ children }) => (
