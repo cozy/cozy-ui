@@ -1,3 +1,10 @@
+## [130.3.1](https://github.com/cozy/cozy-ui/compare/v130.3.0...v130.3.1) (2025-09-24)
+
+
+### Bug Fixes
+
+* **Sidebar:** Show scrollbar every time, not only on hover ([9e480df](https://github.com/cozy/cozy-ui/commit/9e480df))
+
 # [130.3.0](https://github.com/cozy/cozy-ui/compare/v130.2.0...v130.3.0) (2025-09-24)
 
 
