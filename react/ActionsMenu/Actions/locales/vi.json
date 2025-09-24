@@ -1,0 +1,29 @@
+{
+  "menu": "Menu",
+  "viewInContacts": "Xem trong Cozy Contacts",
+  "viewInDrive": "Mở",
+  "modify": "Chỉnh sửa",
+  "emailTo": "Gửi email",
+  "smsTo": "Gửi tin nhắn",
+  "print": "In",
+  "download": "Tải xuống",
+  "favorites": {
+    "add": {
+      "label": "Thêm vào yêu thích",
+      "success": "%{filename} đã được thêm vào yêu thích |||| Các mục này đã được thêm vào yêu thích"
+    },
+    "remove": {
+      "label": "Xóa khỏi yêu thích",
+      "success": "%{filename} đã được xóa khỏi yêu thích |||| Các mục này đã được xóa khỏi yêu thích"
+    },
+    "error": "Có lỗi xảy ra, vui lòng thử lại."
+  },
+  "others": "Khác",
+  "editAttribute": "Chỉnh sửa thuộc tính",
+  "copyToClipboard": {
+    "copy": "Sao chép",
+    "success": "Đã sao chép vào clipboard",
+    "error": "Không thể sao chép vào clipboard"
+  },
+  "call": "Gọi"
+}

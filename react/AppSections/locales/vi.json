@@ -1,0 +1,37 @@
+{
+  "app_categories": {
+    "all": "Tất cả danh mục",
+    "banking": "Ngân hàng",
+    "clouds": "Đám mây và kho lưu trữ",
+    "cozy": "Thiết yếu",
+    "education": "Giáo dục",
+    "energy": "Năng lượng",
+    "finance": "Việc làm và tài chính",
+    "health": "Sức khỏe",
+    "host_provider": "Máy chủ",
+    "insurance": "Bảo hiểm",
+    "isp": "Di động và Internet",
+    "konnectors": "Dịch vụ",
+    "list_separator": ", ",
+    "mes_infos": "Thí nghiệm MesInfos",
+    "online_services": "Dịch vụ trực tuyến",
+    "others": "Khác",
+    "partners": "Đối tác",
+    "press": "Báo chí",
+    "productivity": "Năng suất",
+    "ptnb": "Thí nghiệm PTNB",
+    "public_service": "Dịch vụ công",
+    "shopping": "Mua sắm",
+    "social": "Mạng xã hội",
+    "tech": "Công nghệ",
+    "telecom": "Viễn thông",
+    "transport": "Giao thông",
+    "pro": "Công việc",
+    "shortcuts": "Ứng dụng bổ sung"
+  },
+  "sections": {
+    "applications": "Ứng dụng",
+    "konnectors": "Dịch vụ",
+    "shortcuts": "Ứng dụng bổ sung"
+  }
+}

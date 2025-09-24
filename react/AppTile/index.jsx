@@ -5,6 +5,8 @@ import React from 'react'
 import { APP_STATUS, getCurrentStatusLabel } from './helpers'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import ru from './locales/ru.json'
+import vi from './locales/vi.json'
 import styles from './styles.styl'
 import AppIcon from '../AppIcon'
 import { isShortcutFile } from '../AppSections/helpers.js'
@@ -22,7 +24,7 @@ import palette from '../palette'
 import { AppDoctype } from '../proptypes'
 import { createUseI18n } from '../providers/I18n'
 
-const locales = { en, fr }
+const locales = { en, fr, ru, vi }
 
 let dataset
 const getDataset = () => {

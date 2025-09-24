@@ -1,0 +1,15 @@
+{
+  "themes": {
+    "activity": "Деятельность",
+    "family": "Семья",
+    "finance": "Финансы",
+    "health": "Здоровье",
+    "home": "Дом",
+    "identity": "Личность",
+    "invoice": "Счет",
+    "others": "Прочее",
+    "transport": "Транспорт",
+    "undefined": "Не определено",
+    "work_study": "Работа"
+  }
+}

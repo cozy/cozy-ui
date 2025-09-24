@@ -1,0 +1,4 @@
+{
+  "selected": "%{smart_count} элемент выбран |||| %{smart_count} элементов выбрано",
+  "selected_light": "%{smart_count} элемент |||| %{smart_count} элементов"
+}

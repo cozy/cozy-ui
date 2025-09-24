@@ -1,0 +1,37 @@
+{
+  "app_categories": {
+    "all": "Все категории",
+    "banking": "Банковское дело",
+    "clouds": "Облака и хранилища",
+    "cozy": "Основное",
+    "education": "Образование",
+    "energy": "Энергетика",
+    "finance": "Занятость и финансы",
+    "health": "Здоровье",
+    "host_provider": "Хостинг",
+    "insurance": "Страхование",
+    "isp": "Мобильная связь и Интернет",
+    "konnectors": "Сервисы",
+    "list_separator": ", ",
+    "mes_infos": "Эксперимент MesInfos",
+    "online_services": "Онлайн-сервисы",
+    "others": "Прочее",
+    "partners": "Партнеры",
+    "press": "Пресса",
+    "productivity": "Продуктивность",
+    "ptnb": "Эксперимент PTNB",
+    "public_service": "Государственные услуги",
+    "shopping": "Покупки",
+    "social": "Социальные сети",
+    "tech": "Технологии",
+    "telecom": "Телекоммуникации",
+    "transport": "Транспорт",
+    "pro": "Работа",
+    "shortcuts": "Дополнительные приложения"
+  },
+  "sections": {
+    "applications": "Приложения",
+    "konnectors": "Сервисы",
+    "shortcuts": "Дополнительные приложения"
+  }
+}

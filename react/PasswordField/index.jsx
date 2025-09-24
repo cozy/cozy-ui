@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import ru from './locales/ru.json'
+import vi from './locales/vi.json'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import EyeIcon from '../Icons/Eye'
@@ -13,7 +15,9 @@ import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
 export const locales = {
   en,
-  fr
+  fr,
+  ru,
+  vi
 }
 
 /**

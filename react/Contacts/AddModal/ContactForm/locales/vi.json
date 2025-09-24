@@ -1,0 +1,75 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactForm": {
+        "gender": {
+          "man": "Nam",
+          "woman": "Nữ"
+        },
+        "other-fields": "Trường khác",
+        "fields": {
+          "gender": "Giới tính",
+          "givenName": "Tên",
+          "additionalName": "Tên lót thứ 2",
+          "surname": "Tên đang sử dụng",
+          "familyName": "Họ",
+          "phone": "Điện thoại",
+          "email": "Email",
+          "matrix": "Matrix ID",
+          "address": "Địa chỉ",
+          "cozy": "Twake URL",
+          "company": "Công ty",
+          "jobTitle": "Chức vụ",
+          "birthday": "Sinh nhật",
+          "birthplace": "Nơi sinh",
+          "relatedContact": "Liên hệ liên quan",
+          "relationship": "Mối quan hệ",
+          "note": "Ghi chú",
+          "label": "Nhãn",
+          "required": "Một trong những trường này phải được điền"
+        },
+        "label": {
+          "none": "Không có",
+          "home": "Cá nhân",
+          "work": "Công việc",
+          "custom": "Tùy chỉnh",
+          "phone": {
+            "cell-home": "Di động (cá nhân)",
+            "cell-work": "Di động (công việc)",
+            "voice-home": "Thoại (cá nhân)",
+            "voice-work": "Thoại (công việc)",
+            "fax-home": "Fax (cá nhân)",
+            "fax-work": "Fax (công việc)"
+          },
+          "address": {
+            "home": "Nhà (cá nhân)",
+            "work": "Văn phòng (công việc)"
+          },
+          "relationship": {
+            "parent": "Cha mẹ",
+            "child": "Con",
+            "sibling": "Anh chị em",
+            "spouse": "Vợ/chồng",
+            "coResident": "Cư dân chung",
+            "friend": "Bạn",
+            "colleague": "Đồng nghiệp",
+            "coWorker": "Đồng nghiệp",
+            "acquaintance": "Người quen",
+            "helper": "Người giúp đỡ",
+            "recipient": "Người nhận"
+          }
+        },
+        "addLabel": {
+          "address": "Thêm địa chỉ",
+          "email": "Thêm email",
+          "phone": "Thêm điện thoại",
+          "relatedContact": "Thêm liên hệ liên quan"
+        }
+      }
+    }
+  },
+  "formatted": {
+    "date": "yyyy-LL-dd",
+    "address": "%{number} %{street}, %{code} %{city}, %{country}"
+  }
+}
