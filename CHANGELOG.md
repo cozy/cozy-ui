@@ -1,3 +1,10 @@
+# [130.2.0](https://github.com/cozy/cozy-ui/compare/v130.1.0...v130.2.0) (2025-09-24)
+
+
+### Features
+
+* **Icon:** Replace cozy-upgrade illustration (for Paywall) ([fa86b5e](https://github.com/cozy/cozy-ui/commit/fa86b5e))
+
 # [130.1.0](https://github.com/cozy/cozy-ui/compare/v130.0.0...v130.1.0) (2025-09-23)
 
 
