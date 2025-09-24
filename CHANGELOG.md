@@ -1,3 +1,10 @@
+# [130.3.0](https://github.com/cozy/cozy-ui/compare/v130.2.0...v130.3.0) (2025-09-24)
+
+
+### Features
+
+* Add ru and vi locales ([43ff09b](https://github.com/cozy/cozy-ui/commit/43ff09b))
+
 # [130.2.0](https://github.com/cozy/cozy-ui/compare/v130.1.0...v130.2.0) (2025-09-24)
 
 
