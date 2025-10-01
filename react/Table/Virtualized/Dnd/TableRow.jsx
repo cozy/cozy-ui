@@ -4,7 +4,7 @@ import { getEmptyImage } from 'react-dnd-html5-backend'
 
 import TableRowClassic from '../../../TableRow'
 
-const TableRow = ({ item, context, ...props }) => {
+const TableRow = ({ item, context, componentsProps, ...props }) => {
   const {
     selectedItems,
     itemsInDropProcess,
@@ -18,7 +18,8 @@ const TableRow = ({ item, context, ...props }) => {
     dragId
   } = dragProps
   const isSelected = context?.isSelectedItem(item)
-  const isDisabled = itemsInDropProcess.includes(item._id)
+  const isDisabled =
+    itemsInDropProcess.includes(item._id) || componentsProps?.tableRow?.disabled
 
   const [dragCollect, dragRef, dragRefPreview] = useDrag(
     () => ({
