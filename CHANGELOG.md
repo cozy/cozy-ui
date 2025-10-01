@@ -1,3 +1,10 @@
+# [130.4.0](https://github.com/cozy/cozy-ui/compare/v130.3.1...v130.4.0) (2025-10-01)
+
+
+### Features
+
+* Disable table row on cut :sparkles: ([41f8c1d](https://github.com/cozy/cozy-ui/commit/41f8c1d))
+
 ## [130.3.1](https://github.com/cozy/cozy-ui/compare/v130.3.0...v130.3.1) (2025-09-24)
 
 
