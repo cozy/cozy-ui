@@ -1,3 +1,10 @@
+# [130.5.0](https://github.com/cozy/cozy-ui/compare/v130.4.0...v130.5.0) (2025-10-01)
+
+
+### Features
+
+* **TableRow, VirtualizedTable:** add isNewItem prop to track new items and highlight them ([d60d485](https://github.com/cozy/cozy-ui/commit/d60d485))
+
 # [130.4.0](https://github.com/cozy/cozy-ui/compare/v130.3.1...v130.4.0) (2025-10-01)
 
 
