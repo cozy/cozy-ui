@@ -15,6 +15,8 @@ const initialVariants = [{
   square: false,
   standard: false,
   outlined: false,
+  noClickAway: false,
+  noTimeOut: false,
   close: true
 }]
 
@@ -23,7 +25,7 @@ const Component = ({ variant }) => {
 
   return (
     <Button
-      label="show alert"
+      label="Show alert"
       onClick={() =>
         showAlert({
           title: variant.title ? 'Alert title' : undefined,
@@ -42,6 +44,8 @@ const Component = ({ variant }) => {
             : variant.largeIcon
             ? <Icon icon={DeviceLaptopIcon} size={32} />
             : undefined,
+          noClickAway: variant.noClickAway,
+          noTimeOut: variant.noTimeOut,
           onClose: variant.close ? () => {} : undefined
         })
       }
