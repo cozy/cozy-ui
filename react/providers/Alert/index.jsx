@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useMemo } from 'react'
 
+import { handleClose } from './helpers'
 import Alert from '../../Alert'
 import AlertTitle from '../../AlertTitle'
 import Snackbar from '../../Snackbar'
@@ -32,13 +33,19 @@ const defaultState = {
   duration: null,
   open: false
 }
-const handleClose = (state, setState) => () => {
-  return setState({ ...state, open: false })
-}
 
 const AlertProvider = ({ children }) => {
   const [state, setState] = useState(defaultState)
-  const { open, message, title, duration, ...alertProps } = state
+  // noTimeOut and noClickAway are destructured to not being passed to the DOM through ...alertProps
+  const {
+    open,
+    message,
+    title,
+    duration,
+    noTimeOut, // eslint-disable-line no-unused-vars
+    noClickAway, // eslint-disable-line no-unused-vars
+    ...alertProps
+  } = state
 
   const value = useMemo(
     () => ({
@@ -63,7 +70,7 @@ const AlertProvider = ({ children }) => {
         <Alert
           variant="filled"
           elevation={6}
-          onClose={handleClose(state, setState)}
+          onClose={ev => handleClose(state, setState)(ev, 'click')}
           {...alertProps}
         >
           {title && <AlertTitle>{title}</AlertTitle>}
