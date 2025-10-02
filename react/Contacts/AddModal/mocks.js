@@ -86,6 +86,12 @@ export const johnDoeContact = {
     {
       number: '+33 6 77 11 22 33',
       primary: false
+    },
+    {
+      label: 'Mobile', // could be this when importing from other sources i.e. google
+      number: '0876467998',
+      primary: false,
+      type: 'mobile'
     }
   ]
 }
@@ -156,6 +162,11 @@ export const johnDoeFormValues = {
       fieldId: 'fieldId_6',
       phone: '+33 6 77 11 22 33',
       phoneLabel: undefined
+    },
+    {
+      fieldId: 'fieldId_7',
+      phone: '0876467998',
+      phoneLabel: '{"type":"mobile","label":"Mobile"}'
     }
   ],
   givenName: 'John',
