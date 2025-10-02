@@ -117,6 +117,12 @@ describe('formValuesToContact', () => {
           primary: false,
           type: undefined,
           label: undefined
+        },
+        {
+          label: 'Mobile',
+          number: '0876467998',
+          primary: false,
+          type: 'mobile'
         }
       ],
       relationships: {
