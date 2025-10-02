@@ -1,3 +1,10 @@
+# [130.6.0](https://github.com/cozy/cozy-ui/compare/v130.5.0...v130.6.0) (2025-10-02)
+
+
+### Features
+
+* **AlertProvider:** Add `noClickAway` and `noTimeOut` prop ([eee29d0](https://github.com/cozy/cozy-ui/commit/eee29d0))
+
 # [130.5.0](https://github.com/cozy/cozy-ui/compare/v130.4.0...v130.5.0) (2025-10-01)
 
 
