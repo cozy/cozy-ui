@@ -1,3 +1,10 @@
+## [130.6.1](https://github.com/cozy/cozy-ui/compare/v130.6.0...v130.6.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* **AddModal/ContactForm:** Custom label now display correctly unsupported label ([8f81a8a](https://github.com/cozy/cozy-ui/commit/8f81a8a))
+
 # [130.6.0](https://github.com/cozy/cozy-ui/compare/v130.5.0...v130.6.0) (2025-10-02)
 
 
