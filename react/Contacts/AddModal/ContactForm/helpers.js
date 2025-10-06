@@ -271,12 +271,17 @@ export const removeField = (fields, index) => {
 export const makeCustomLabel = (value, t) => {
   const { type, label } = JSON.parse(value)
 
+  const isSupportedLabel = ['home', 'work'].includes(label)
+
   const firstString = type || ''
-  const secondString = label
-    ? type
-      ? ` (${t(`Contacts.AddModal.ContactForm.label.${label}`)})`.toLowerCase()
-      : `label.${label}`
-    : ''
+  const secondString =
+    label && isSupportedLabel
+      ? type
+        ? ` (${t(
+            `Contacts.AddModal.ContactForm.label.${label}`
+          )})`.toLowerCase()
+        : `label.${label}`
+      : ''
 
   return firstString + secondString || null
 }
