@@ -1,10 +1,45 @@
+import get from 'lodash/get'
+
 import {
   moveToHead,
   makeItemLabel,
   makeTypeAndLabel,
   makeImppValues,
+  makeCustomLabel,
   makeInitialCustomValue
 } from './helpers'
+import { locales } from './locales'
+
+const t = x => get(locales.en, x)
+
+describe('makeCustomLabel', () => {
+  it('should return custom type and supported label', () => {
+    const resForWork = makeCustomLabel('{"type":"someType","label":"work"}', t)
+    expect(resForWork).toBe('someType (pro)')
+
+    const resForHome = makeCustomLabel('{"type":"someType","label":"home"}', t)
+    expect(resForHome).toBe('someType (personal)')
+  })
+
+  it('should return label if no type', () => {
+    const resForWork = makeCustomLabel('{"label":"work"}', t)
+    expect(resForWork).toBe('label.work')
+
+    const resForHome = makeCustomLabel('{"label":"home"}', t)
+    expect(resForHome).toBe('label.home')
+  })
+
+  it('should return only custom type if label is not supported or undefined', () => {
+    const resForNotSupported = makeCustomLabel(
+      '{"type":"someType","label":"someLabel"}',
+      t
+    )
+    expect(resForNotSupported).toBe('someType')
+
+    const resForUndefined = makeCustomLabel('{"type":"someType"}', t)
+    expect(resForUndefined).toBe('someType')
+  })
+})
 
 describe('moveToHead function', () => {
   it('should move an item to head of the array', () => {
