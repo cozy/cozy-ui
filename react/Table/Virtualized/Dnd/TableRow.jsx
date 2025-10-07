@@ -87,10 +87,9 @@ const TableRow = ({ item, context, componentsProps, ...props }) => {
     <TableRowClassic
       {...props}
       ref={node => dragRef(dropRef(node))}
-      selected={isSelected || dropCollect.isOver}
+      selected={isSelected || dropCollect.isOver || isNew}
       className={cx(
-        dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized',
-        isNew ? 'u-bg-primaryColorLight' : ''
+        dragCollect.isDragging ? 'virtualized u-o-50' : 'virtualized'
       )}
       disabled={isDisabled}
       hover
