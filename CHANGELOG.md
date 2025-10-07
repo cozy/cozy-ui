@@ -1,3 +1,10 @@
+# [130.7.0](https://github.com/cozy/cozy-ui/compare/v130.6.1...v130.7.0) (2025-10-07)
+
+
+### Features
+
+* Change highlighted item color :sparkles: ([14d2a3f](https://github.com/cozy/cozy-ui/commit/14d2a3f))
+
 ## [130.6.1](https://github.com/cozy/cozy-ui/compare/v130.6.0...v130.6.1) (2025-10-06)
 
 
