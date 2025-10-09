@@ -87,25 +87,23 @@ const ExampleTable = ({ variant, ...props }) => {
   }
 
   return (
-    <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-      <VirtualizedTable
-        {...props}
-        rows={rows}
-        columns={columns}
-        groups={variant.grouped ? makeGroups : undefined}
-        selectedItems={selectedItemsId}
-        isSelectedItem={row => isSelectedItem(row.id)}
-        onSelect={(row, event, index) => toggleSelectedItem(row.id)}
-        onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id))}
-        onSortChange={onSortChange}
-        componentsProps={{
-          rowContent: {
-            onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
-            onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
-          },
-        }}
-      />
-    </div>
+    <VirtualizedTable
+      {...props}
+      rows={rows}
+      columns={columns}
+      groups={variant.grouped ? makeGroups : undefined}
+      selectedItems={selectedItemsId}
+      isSelectedItem={row => isSelectedItem(row.id)}
+      onSelect={(row, event, index) => toggleSelectedItem(row.id)}
+      onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id))}
+      onSortChange={onSortChange}
+      componentsProps={{
+        rowContent: {
+          onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
+          onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
+        },
+      }}
+    />
   )
 }
 

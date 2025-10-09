@@ -5,8 +5,10 @@ Displays a Grid of items
 ### Default usage
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/Grid';
-import Card from 'cozy-ui/transpiled/react/Card';
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Card from 'cozy-ui/transpiled/react/Card'
+
+;
 
 <Grid container spacing={3}>
     <Grid item xs={12}>
@@ -36,8 +38,10 @@ import Card from 'cozy-ui/transpiled/react/Card';
 ### Responsive usage
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/Grid';
-import Card from 'cozy-ui/transpiled/react/Card';
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Card from 'cozy-ui/transpiled/react/Card'
+
+;
 
 <Grid container spacing={1}>
     <Grid item xs={12}>

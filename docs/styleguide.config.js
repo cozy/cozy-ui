@@ -94,6 +94,7 @@ module.exports = {
         '../react/DatePicker',
         '../react/FileImageLoader',
         '../react/FilePicker',
+        '../react/GridList',
         '../react/HistoryRow',
         '../react/IntentDialogOpener/IntentDialogOpener.jsx',
         '../react/IntentIframe/IntentIframe.jsx',
