@@ -1,23 +1,25 @@
-import React, { forwardRef, useState, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 
-import GridItem from './GridItem'
+import virtuosoComponents from './virtuosoComponents'
 import VirtualizedGridList from '../'
 import CustomDragLayer from '../../../utils/Dnd/CustomDrag/CustomDragLayer'
-import DnDConfigWrapper from '../../../utils/Dnd/DnDConfigWrapper'
 
 const VirtualizedGridListDnd = ({
+  items,
   dragProps,
   context,
   itemRenderer,
   children,
-  componentProps = {
-    List: {},
-    Item: {}
-  },
+  componentProps,
   components,
   ...props
 }) => {
   const [itemsInDropProcess, setItemsInDropProcess] = useState([])
+
+  const _components = useMemo(
+    () => ({ ...virtuosoComponents, ...components }),
+    [components]
+  )
 
   const _context = useMemo(
     () => ({
@@ -25,35 +27,26 @@ const VirtualizedGridListDnd = ({
       dragProps,
       itemRenderer,
       itemsInDropProcess,
+      componentProps,
       setItemsInDropProcess,
-      items: props.items
+      items
     }),
-    [context, dragProps, itemRenderer, itemsInDropProcess, props.items]
+    [
+      context,
+      dragProps,
+      itemRenderer,
+      itemsInDropProcess,
+      componentProps,
+      items
+    ]
   )
 
   return (
     <>
       <CustomDragLayer dragId={dragProps.dragId} />
       <VirtualizedGridList
-        components={{
-          Scroller: forwardRef(({ ...scrollerProps }, ref) => (
-            <DnDConfigWrapper ref={ref}>
-              <div {...scrollerProps} ref={ref} />
-            </DnDConfigWrapper>
-          )),
-          Item: ({ context, ...props }) => {
-            const item = context?.items?.[props['data-index']]
-            return (
-              <GridItem
-                item={item}
-                context={context}
-                renderItem={itemRenderer}
-                {...componentProps.Item}
-              />
-            )
-          },
-          ...components
-        }}
+        items={items}
+        components={_components}
         context={_context}
         {...props}
       >
