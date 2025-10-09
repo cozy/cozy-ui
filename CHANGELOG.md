@@ -1,3 +1,10 @@
+## [130.7.1](https://github.com/cozy/cozy-ui/compare/v130.7.0...v130.7.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* **GridListVirtualized:** Avoid useless redering ([6c75a3e](https://github.com/cozy/cozy-ui/commit/6c75a3e))
+
 # [130.7.0](https://github.com/cozy/cozy-ui/compare/v130.6.1...v130.7.0) (2025-10-07)
 
 
