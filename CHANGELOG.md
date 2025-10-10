@@ -1,3 +1,10 @@
+## [130.7.2](https://github.com/cozy/cozy-ui/compare/v130.7.1...v130.7.2) (2025-10-10)
+
+
+### Bug Fixes
+
+* replace cozy mention in uploadqueue component header by app variable 🐛 ([e07a3ba](https://github.com/cozy/cozy-ui/commit/e07a3ba))
+
 ## [130.7.1](https://github.com/cozy/cozy-ui/compare/v130.7.0...v130.7.1) (2025-10-09)
 
 
