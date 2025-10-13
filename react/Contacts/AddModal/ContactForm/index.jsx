@@ -41,6 +41,8 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
   useExtendI18n(locales)
   const { t } = useI18n()
 
+  const hasSecondaryFields = fields.some(el => el.isSecondary)
+
   return (
     <Form
       mutators={{ ...arrayMutators }}
@@ -70,7 +72,7 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
                 }}
               />
             ))}
-            {!showSecondaryFields && (
+            {hasSecondaryFields && !showSecondaryFields && (
               <div>
                 <Button
                   className="u-db u-ml-2 u-mt-1"
