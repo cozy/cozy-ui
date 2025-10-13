@@ -15,7 +15,7 @@ import TelephoneIcon from '../../../Icons/Telephone'
 import InputAdornment from '../../../InputAdornment'
 
 /**
- * @type {import('../../../types').Field[]}
+ * @type {import('../types').Field[]}
  */
 export const fields = [
   {

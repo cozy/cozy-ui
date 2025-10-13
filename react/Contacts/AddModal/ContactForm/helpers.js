@@ -138,7 +138,7 @@ export const createAddress = ({ address, oldContact, t }) => {
 }
 
 /**
- * @param {(import('../../../types').RelatedContact|undefined)[]} relatedContact - The related contacts array
+ * @param {(import('../types').RelatedContact|undefined)[]} relatedContact - The related contacts array
  * @returns {Record<string, { data: { _id: string, _type: string }[] }>} - The related contacts relationships
  */
 export const getRelatedContactRelationships = relatedContact => {
@@ -218,7 +218,7 @@ export const removeAsscociatedData = contact => {
 
 /**
  * @param {import('cozy-client/types/types').IOCozyContact} contact
- * @returns {import('../../../types').RelatedContact[]}
+ * @returns {import('../types').RelatedContact[]}
  */
 export const makeRelatedContact = contact => {
   if (
