@@ -5,6 +5,7 @@ Works with `final-form`, `final-form-arrays`, `react-final-form` and `react-fina
 ```jsx
 import { useState } from 'react'
 import StarIcon from 'cozy-ui/transpiled/react/Icons/Star'
+import TextField from 'cozy-ui/transpiled/react/TextField'
 import ContactsAddModal from 'cozy-ui/transpiled/react/Contacts/AddModal'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import AlertProvider from 'cozy-ui/transpiled/react/providers/Alert'
@@ -23,7 +24,7 @@ const handleSubmit = async formData => {
   console.info('formData :', formData)
 }
 
-const customFields = [{ name: 'customField', icon: StarIcon, type: 'text', position: 5 }]
+const customFields = [{ name: 'customField', icon: StarIcon, type: 'text', position: 5, component: TextField }]
 
 ;
 
