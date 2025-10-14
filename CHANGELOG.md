@@ -1,3 +1,17 @@
+# [130.8.0](https://github.com/cozy/cozy-ui/compare/v130.7.2...v130.8.0) (2025-10-14)
+
+
+### Bug Fixes
+
+* **AddModal/ContactForm:** Now hide "other fields" button if no secondary field ([bbba734](https://github.com/cozy/cozy-ui/commit/bbba734))
+
+
+### Features
+
+* **AddModal/ContactForm:** Add `customFieldsProps` prop ([b7d0e60](https://github.com/cozy/cozy-ui/commit/b7d0e60))
+* **AddModal/ContactForm:** Add makeFields func ([f1e453b](https://github.com/cozy/cozy-ui/commit/f1e453b))
+* **AddModal/ContactForm:** Add possiblity to customize fields component ([f600cdd](https://github.com/cozy/cozy-ui/commit/f600cdd))
+
 ## [130.7.2](https://github.com/cozy/cozy-ui/compare/v130.7.1...v130.7.2) (2025-10-10)
 
 
