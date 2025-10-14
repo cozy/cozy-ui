@@ -30,7 +30,7 @@ const customFields = [{ name: 'customField', icon: StarIcon, type: 'text', posit
 
 <DemoProvider dictRequire={() => ({ Contacts: {AddModal: {ContactForm: {fields: {customField: 'Custom field'}}}} })}>
   <AlertProvider>
-    <Variants initialVariants={initialVariants} screenshotAllVariants>
+    <Variants initialVariants={initialVariants}>
       {variant => (
         <>
           <Button onClick={open} label="Open Modal" />
