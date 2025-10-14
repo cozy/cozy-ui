@@ -9,20 +9,22 @@ import { FieldInputWrapperPropTypes } from '../types'
 // between Field from react-final-form and TextField from Mui
 const FieldInputWrapper = ({
   input,
-  attributes,
+  attributes: { component, ...restAttributes },
   variant,
   fullWidth,
   ...props
 }) => {
-  const Component = attributes.customLabelOptions
-    ? TextFieldCustomLabelSelect
-    : attributes?.select
-    ? TextFieldSelect
-    : TextField
+  const Component =
+    component ||
+    (restAttributes.customLabelOptions
+      ? TextFieldCustomLabelSelect
+      : restAttributes?.select
+      ? TextFieldSelect
+      : TextField)
 
   return (
     <Component
-      {...attributes}
+      {...restAttributes}
       {...input}
       {...props}
       variant={variant}
