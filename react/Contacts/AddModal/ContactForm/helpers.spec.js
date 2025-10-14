@@ -6,6 +6,7 @@ import {
   makeTypeAndLabel,
   makeImppValues,
   makeCustomLabel,
+  makeFields,
   makeInitialCustomValue
 } from './helpers'
 import { locales } from './locales'
@@ -321,5 +322,70 @@ describe('makeInitialCustomValue', () => {
 
       expect(res).toStrictEqual('{"type":"someType","label":"work"}')
     })
+  })
+})
+
+describe('makeFields', () => {
+  it('should return custom fields at custom position', () => {
+    const customFields = [
+      { name: 'middlename', position: 1 },
+      { name: 'birthday', position: 3 }
+    ]
+    const defaultFields = [{ name: 'firstname' }, { name: 'lastname' }]
+
+    const res = makeFields(customFields, defaultFields)
+
+    expect(res).toStrictEqual([
+      { name: 'firstname' },
+      { name: 'middlename', position: 1 },
+      { name: 'lastname' },
+      { name: 'birthday', position: 3 }
+    ])
+  })
+
+  it('should ignore custom fields without position value', () => {
+    const customFields = [
+      { name: 'middlename', position: 1 },
+      { name: 'field-with-no-position' }
+    ]
+    const defaultFields = [{ name: 'firstname' }, { name: 'lastname' }]
+
+    const res = makeFields(customFields, defaultFields)
+
+    expect(res).toStrictEqual([
+      { name: 'firstname' },
+      { name: 'middlename', position: 1 },
+      { name: 'lastname' }
+    ])
+  })
+
+  it('should not mutate the original arrays', () => {
+    const customFields = [
+      { name: 'middlename', position: 1 },
+      { name: 'field-with-no-position' },
+      { name: 'birthday', position: 3 }
+    ]
+    const defaultFields = [{ name: 'firstname' }, { name: 'lastname' }]
+
+    makeFields(customFields, defaultFields)
+
+    expect(defaultFields).toStrictEqual([
+      { name: 'firstname' },
+      { name: 'lastname' }
+    ])
+
+    expect(customFields).toStrictEqual([
+      { name: 'middlename', position: 1 },
+      { name: 'field-with-no-position' },
+      { name: 'birthday', position: 3 }
+    ])
+  })
+
+  it('should handle undefined custom fields', () => {
+    const defaultFields = [{ name: 'firstname' }, { name: 'lastname' }]
+
+    const res = makeFields(undefined, defaultFields)
+
+    expect(res).toStrictEqual(defaultFields)
   })
 })
