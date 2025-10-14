@@ -50,7 +50,7 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
       onSubmit={formValues =>
         onSubmit(formValuesToContact({ formValues, oldContact: contact, t }))
       }
-      initialValues={contactToFormValues(contact, t)}
+      initialValues={contactToFormValues({ contact, t })}
       render={({ handleSubmit, valid, submitFailed, errors }) => {
         setSubmitContactForm(handleSubmit)
         return (

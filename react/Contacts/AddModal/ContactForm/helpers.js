@@ -94,8 +94,10 @@ export const createAddress = ({ address, oldContact, t }) => {
         .filter(val => val && val.address)
         .map((addressField, index) => {
           const oldContactAddress = oldContact?.address?.[index]
-          const oldContactFormValues = contactToFormValues(oldContact, t)
-            ?.address?.[index]
+          const oldContactFormValues = contactToFormValues({
+            contact: oldContact,
+            t
+          })?.address?.[index]
 
           const addressHasBeenModified = !isEqual(
             addressField,
