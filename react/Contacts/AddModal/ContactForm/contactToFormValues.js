@@ -5,7 +5,7 @@ import { getFormattedAddress } from 'cozy-client/dist/models/contact'
 import { fields } from './fieldsConfig'
 import { makeItemLabel, makeRelatedContact, movePrimaryToHead } from './helpers'
 
-const contactToFormValues = (contact, t) => {
+const contactToFormValues = ({ contact, t }) => {
   // initialize the form values, required so that array fields start with at least one editable field
   const initialFieldValues = fields.reduce(
     (initialValues, { name, layout }) => {

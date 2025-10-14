@@ -24,7 +24,7 @@ describe('contactToFormValues function', () => {
       relatedContact: [undefined]
     }
 
-    const result = contactToFormValues(null, tSpy)
+    const result = contactToFormValues({ contact: null, t: tSpy })
     expect(result).toEqual(expected)
   })
 
@@ -34,7 +34,7 @@ describe('contactToFormValues function', () => {
       '426 Runolfsson Knolls 84573 Port Easter Cocos (Keeling) Islands'
     )
 
-    const result = contactToFormValues(johnDoeContact, tSpy)
+    const result = contactToFormValues({ contact: johnDoeContact, t: tSpy })
     expect(result).toEqual(expected)
     expect(tSpy).toHaveBeenCalledWith('formatted.address', {
       street: '426 Runolfsson Knolls',
@@ -86,7 +86,7 @@ describe('contactToFormValues function', () => {
       relatedContact: [undefined]
     }
 
-    const result = contactToFormValues(contact, tSpy)
+    const result = contactToFormValues({ contact, t: tSpy })
     expect(result).toEqual(expected)
   })
 
@@ -127,7 +127,7 @@ describe('contactToFormValues function', () => {
       relatedContact: [undefined]
     }
 
-    const result = contactToFormValues(contact, tSpy)
+    const result = contactToFormValues({ contact, t: tSpy })
     expect(result).toEqual(expected)
   })
 })
