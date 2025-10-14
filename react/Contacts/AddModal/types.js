@@ -37,6 +37,7 @@ import { iconPropType } from '../../Icon'
  * @property {Field[]} [subFields] - The subfields of the field
  * @property {InputLabelProps} [InputLabelProps] - The object passed to InputLabelProps props
  * @property {boolean} [multiline] - Whether the field is multiline
+ * @property {number} [position] - Position of a field in the form. 1 is first.
  */
 
 /**

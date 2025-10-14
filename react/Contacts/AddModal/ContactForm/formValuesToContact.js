@@ -9,7 +9,12 @@ import {
   makeTypeAndLabel
 } from './helpers'
 
-const formValuesToContact = ({ formValues, oldContact, t }) => {
+const formValuesToContact = ({
+  formValues,
+  oldContact,
+  makeCustomFieldsFormValues,
+  t
+}) => {
   const {
     gender,
     givenName,
@@ -45,8 +50,11 @@ const formValuesToContact = ({ formValues, oldContact, t }) => {
     }
   }
 
+  const customFieldsFormValues = makeCustomFieldsFormValues?.(formValues) || {}
+
   const contactWithFormValues = {
     ...oldContactCleaned,
+    ...customFieldsFormValues,
     gender: gender || '',
     name: {
       ...oldContactCleaned?.name,

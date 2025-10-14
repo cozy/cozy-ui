@@ -7,7 +7,13 @@ import { FixedDialog } from '../../CozyDialogs'
 import { useAlert } from '../../providers/Alert'
 import { useI18n, useExtendI18n } from '../../providers/I18n'
 
-const AddModal = ({ contacts, contact, onSubmit, onClose }) => {
+const AddModal = ({
+  contacts,
+  contact,
+  customFieldsProps,
+  onSubmit,
+  onClose
+}) => {
   useExtendI18n(locales)
   const { t } = useI18n()
   const { showAlert } = useAlert()
@@ -52,6 +58,7 @@ const AddModal = ({ contacts, contact, onSubmit, onClose }) => {
         <ContactForm
           contacts={contacts}
           contact={selfContact}
+          customFieldsProps={customFieldsProps}
           onSubmit={handleFormSubmit}
         />
       }

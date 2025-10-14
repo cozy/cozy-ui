@@ -6,9 +6,9 @@ import { getHasManyItems } from 'cozy-client/dist/associations/HasMany'
 
 import FieldInputLayout from './FieldInputLayout'
 import contactToFormValues from './contactToFormValues'
-import { fields } from './fieldsConfig'
+import { fields as defaultFields } from './fieldsConfig'
 import formValuesToContact from './formValuesToContact'
-import { validateFields } from './helpers'
+import { validateFields, makeFields } from './helpers'
 import { locales } from './locales'
 import Button from '../../../Buttons'
 import { useI18n, useExtendI18n } from '../../../providers/I18n'
@@ -31,26 +31,41 @@ export function getSubmitContactForm() {
 /**
  *
  * @param {object} params
- * @param {import('cozy-client/types/types').IOCozyContact} params.contact
- * @param {func} params.onSubmit
  * @param {{ data: Array<object> }} params.contacts
+ * @param {import('cozy-client/types/types').IOCozyContact} params.contact
+ * @param {Object} params.customFieldsProps
+ * @param {func} params.onSubmit
  * @returns
  */
-const ContactForm = ({ contact, onSubmit, contacts }) => {
+const ContactForm = ({ contacts, contact, customFieldsProps, onSubmit }) => {
   const [showSecondaryFields, setShowSecondaryFields] = useState(false)
   useExtendI18n(locales)
   const { t } = useI18n()
+  const { fields, makeCustomFieldsFormValues, makeCustomContactValues } =
+    customFieldsProps
 
-  const hasSecondaryFields = fields.some(el => el.isSecondary)
+  const _fields = makeFields(fields, defaultFields)
+  const hasSecondaryFields = _fields.some(el => el.isSecondary)
 
   return (
     <Form
       mutators={{ ...arrayMutators }}
+      initialValues={contactToFormValues({
+        contact,
+        makeCustomContactValues,
+        t
+      })}
       validate={values => validateFields(values, t)}
       onSubmit={formValues =>
-        onSubmit(formValuesToContact({ formValues, oldContact: contact, t }))
+        onSubmit(
+          formValuesToContact({
+            formValues,
+            oldContact: contact,
+            makeCustomFieldsFormValues,
+            t
+          })
+        )
       }
-      initialValues={contactToFormValues({ contact, t })}
       render={({ handleSubmit, valid, submitFailed, errors }) => {
         setSubmitContactForm(handleSubmit)
         return (
@@ -59,7 +74,7 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
             onSubmit={handleSubmit}
             className="u-flex u-flex-column"
           >
-            {fields.map((attributes, index) => (
+            {_fields.map((attributes, index) => (
               <FieldInputLayout
                 key={index}
                 attributes={attributes}
@@ -87,6 +102,10 @@ const ContactForm = ({ contact, onSubmit, contacts }) => {
       }}
     />
   )
+}
+
+ContactForm.defaultProps = {
+  customFieldsProps: {}
 }
 
 // Used to avoid unnecessary multiple rendering of ContactForm when creating a new contact in another way.
