@@ -370,3 +370,24 @@ export const makeInitialCustomValue = (name, value) => {
     return JSON.stringify({ type: valueObj.type, label: valueObj.label })
   }
 }
+
+/**
+ * @param {(import('../types').Field)[]|undefined} customFields
+ * @param {(import('../types').Field)[]} defaultFields
+ * @returns {(import('../types').Field)[]}
+ */
+export const makeFields = (customFields, defaultFields) => {
+  if (!customFields) {
+    return defaultFields
+  }
+
+  const fields = [...defaultFields]
+
+  customFields.map(customField => {
+    if (customField.position) {
+      fields.splice(customField.position, 0, customField)
+    }
+  })
+
+  return fields
+}
