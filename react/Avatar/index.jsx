@@ -8,6 +8,11 @@ import { makeStyles } from '../styles'
 import { capitalize } from '../utils/index'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    width: ({ size }) => size,
+    height: ({ size }) => size,
+    fontSize: ({ size }) => size / 2
+  },
   colorDefault: {
     color: ({ color }) => (color ? theme.palette.primary.contrastText : ''),
     background: ({ color }) => colorMapping[color]
@@ -24,9 +29,11 @@ const Avatar = ({
   display,
   ...props
 }) => {
+  const isCustomSize = typeof size === 'number'
   const defaultColor =
     typeof props.children === 'string' ? nameToColor(props.children) : undefined
   const classes = useStyles({
+    size: isCustomSize ? size : undefined,
     color:
       color === 'none'
         ? undefined
@@ -38,7 +45,8 @@ const Avatar = ({
   return (
     <AvatarMui
       classes={classes}
-      className={cx(className, `size-${size}`, {
+      className={cx(className, {
+        [`size-${size}`]: !isCustomSize,
         disabled: !!disabled,
         border: !!border,
         [`display${capitalize(display)}`]: display !== 'initial',
