@@ -67,6 +67,9 @@ const [isShortcutBadgeHide, setShortcutBadgeHide] = React.useState(false)
       <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size={32} />} />
     </Grid>
     <Grid item>
+      <SquareAppIcon name="Custom Badge" BadgeContent={<Icon icon={CozyIcon} />} />
+    </Grid>
+    <Grid item>
       <SquareAppIcon name="Icon Grid" IconContent={(
         <Grid container spacing={0}>
           <Grid item xs={6}>

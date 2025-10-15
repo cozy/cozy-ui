@@ -101,6 +101,7 @@ export const SquareAppIcon = ({
   name,
   variant,
   IconContent,
+  BadgeContent,
   description,
   hideShortcutBadge = false,
   ...appIconProps
@@ -174,6 +175,8 @@ export const SquareAppIcon = ({
                   className={cx(classes.errorIcon)}
                   icon={iconWarning}
                 />
+              ) : BadgeContent ? (
+                BadgeContent
               ) : (
                 ''
               )
@@ -278,7 +281,8 @@ SquareAppIcon.propTypes = {
     'add',
     'shortcut'
   ]),
-  IconContent: PropTypes.node
+  IconContent: PropTypes.node,
+  BadgeContent: PropTypes.node
 }
 
 SquareAppIcon.defaultProps = {
