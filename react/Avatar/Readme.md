@@ -85,6 +85,7 @@ const initialVariants = [{ disabled: false, border: false, innerBorder: false }]
         <Avatar disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}>AB</Avatar>
         <Avatar color="none" disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}>BC</Avatar>
         <Avatar color="sunrise" disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}>CD</Avatar>
+        <Avatar color="sunrise" size={94} disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}>DE</Avatar>
       </div>
     </>
   )}
