@@ -1,3 +1,10 @@
+## [130.8.1](https://github.com/cozy/cozy-ui/compare/v130.8.0...v130.8.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* **Avatar:** Now passing a `number` to `size` prop works correctly ([c8e79f2](https://github.com/cozy/cozy-ui/commit/c8e79f2))
+
 # [130.8.0](https://github.com/cozy/cozy-ui/compare/v130.7.2...v130.8.0) (2025-10-14)
 
 
