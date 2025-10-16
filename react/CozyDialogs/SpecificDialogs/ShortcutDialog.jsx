@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { useState, forwardRef } from 'react'
+import React, { useState } from 'react'
 
 import {
   checkAndSaveShortcut,
@@ -15,7 +15,7 @@ import { useI18n } from '../../providers/I18n'
 
 const ENTER_KEY = 13
 
-const ShortcutDialog = forwardRef(({ shortcut, onSave, onClose }, ref) => {
+const ShortcutDialog = ({ shortcut, onSave, onClose }) => {
   const { t } = useI18n()
   const { showAlert } = useAlert()
 
@@ -46,7 +46,6 @@ const ShortcutDialog = forwardRef(({ shortcut, onSave, onClose }, ref) => {
 
   return (
     <ConfirmDialog
-      ref={ref}
       open={true}
       title={
         isEditing
@@ -105,7 +104,7 @@ const ShortcutDialog = forwardRef(({ shortcut, onSave, onClose }, ref) => {
       }
     />
   )
-})
+}
 
 ShortcutDialog.propTypes = {
   /** An io.cozy.files.shortcut object if we want to prefill fields */
