@@ -3,13 +3,8 @@ import React from 'react'
 import Avatar from '../Avatar'
 import Spinner from '../Spinner'
 
-const AvatarWrapper = ({
-  avatarStatus,
-  setAvatarStatus,
-  avatarTimestamp,
-  src
-}) => {
-  if (avatarStatus === 'LOADING') {
+const AvatarWrapper = ({ status, setStatus, timestamp, src }) => {
+  if (status === 'LOADING') {
     return (
       <>
         <Avatar className="u-o-50" size={94} />
@@ -18,21 +13,21 @@ const AvatarWrapper = ({
     )
   }
 
-  if (avatarStatus === 'PRESENT') {
+  if (status === 'PRESENT') {
     return (
       <Avatar
-        key={avatarTimestamp}
+        key={timestamp}
         size={94}
         src={src}
         alt="Avatar"
         onError={() => {
-          setAvatarStatus('ABSENT')
+          setStatus('ABSENT')
         }}
       />
     )
   }
 
-  return <Avatar key={avatarTimestamp} size={94} alt="Avatar" />
+  return <Avatar key={timestamp} size={94} alt="Avatar" />
 }
 
 export default AvatarWrapper

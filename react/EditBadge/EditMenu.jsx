@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import { handleDeleteAvatar, handleUploadAvatar } from './helpers'
+import { handleDelete, handleUpload } from './helpers'
 import { locales } from './locales'
 import Icon from '../Icon'
 import CameraIcon from '../Icons/Camera'
@@ -14,11 +14,11 @@ import { useI18n, useExtendI18n } from '../providers/I18n'
 
 const EditMenu = ({
   anchorRef,
-  avatarStatus,
+  status,
   showMenu,
   setShowMenu,
-  setAvatarStatus,
-  setAvatarTimestamp,
+  setStatus,
+  setTimestamp,
   onUpload,
   onDelete
 }) => {
@@ -36,14 +36,14 @@ const EditMenu = ({
         ref={fileInputRef}
         accept="image/*"
         onChange={event =>
-          handleUploadAvatar({
+          handleUpload({
             event,
             t,
             fileInputRef,
-            avatarStatus,
+            status,
             onUpload,
-            setAvatarStatus,
-            setAvatarTimestamp,
+            setStatus,
+            setTimestamp,
             setShowMenu,
             showAlert
           })
@@ -77,13 +77,13 @@ const EditMenu = ({
           </MenuItem>
           <MenuItem
             onClick={() =>
-              handleDeleteAvatar({
+              handleDelete({
                 t,
-                avatarStatus,
+                status,
                 onDelete,
                 setShowMenu,
-                setAvatarStatus,
-                setAvatarTimestamp,
+                setStatus,
+                setTimestamp,
                 showAlert
               })
             }
