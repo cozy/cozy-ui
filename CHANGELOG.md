@@ -1,3 +1,12 @@
+# [130.10.0](https://github.com/cozy/cozy-ui/compare/v130.9.0...v130.10.0) (2025-10-16)
+
+
+### Features
+
+* Add EditBadge component ([47e98d2](https://github.com/cozy/cozy-ui/commit/47e98d2))
+* **EditBadge:** We can now pass props to the main Badge component ([98eb169](https://github.com/cozy/cozy-ui/commit/98eb169))
+* **Utils/React:** Add `AddPropsToChildren` function ([1724619](https://github.com/cozy/cozy-ui/commit/1724619))
+
 # [130.9.0](https://github.com/cozy/cozy-ui/compare/v130.8.1...v130.9.0) (2025-10-16)
 
 
