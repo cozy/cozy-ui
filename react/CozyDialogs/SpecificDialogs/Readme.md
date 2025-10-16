@@ -102,3 +102,29 @@ const onAuthentification = () => {
   )}
 </Variants>
 ```
+
+### ShortcutDialog dialog
+
+⚠️ Must be used within AlertProvider.
+
+```jsx
+import { useState } from 'react'
+
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import { ShortcutDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
+import Buttons from 'cozy-ui/transpiled/react/Buttons'
+
+const [open, setOpen] = useState(isTesting())
+
+;
+
+<DemoProvider>
+  { open && (
+    <ShortcutDialog
+      onClose={() => { setOpen(false)}}
+      onSave={(...args) => { console.log('onSave called with args', args) }}
+    />
+  )}
+  <Buttons onClick={() => { setOpen(true) }} label="Open ShortcutDialog" />
+</DemoProvider>
+```

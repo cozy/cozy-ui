@@ -12,5 +12,6 @@ export { default as TopAnchoredDialog } from './TopAnchoredDialog'
 export {
   AllowLocationDialog,
   InstallFlagshipAppDialog,
-  AuthentificationDialog
+  AuthentificationDialog,
+  ShortcutDialog
 } from './SpecificDialogs'

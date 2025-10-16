@@ -23,5 +23,19 @@
       "invalid_password": "Incorrect password, try again.",
       "server_error": "Something went wrong with the server. Please, reload the page."
     }
+  },
+  "shortcut-dialog": {
+    "create-title": "Create a shortcut",
+    "edit-title": "Modify a shortcut",
+    "filename": "Shortcut name",
+    "url": "URL",
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Edit",
+    "created": "The shortcut has been created",
+    "edited": "The shortcut has been modified",
+    "errored": "An error occurred",
+    "needs-info": "A shortcut needs a name and a URL",
+    "url-bad-format": "The entered URL is not in the correct format"
   }
 }
