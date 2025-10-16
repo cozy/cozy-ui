@@ -8,7 +8,14 @@ import Button from '../Buttons'
 import Icon from '../Icon'
 import PenIcon from '../Icons/Pen'
 
-const EditBadge = ({ src, onUpload, onDelete, children }) => {
+const EditBadge = ({
+  src,
+  onUpload,
+  onDelete,
+  anchorOrigin,
+  children,
+  ...props
+}) => {
   const [showMenu, setShowMenu] = useState(false)
   const [status, setStatus] = useState('PRESENT') // PRESENT || ABSENT || LOADING
   const [timestamp, setTimestamp] = useState(Date.now())
@@ -17,10 +24,8 @@ const EditBadge = ({ src, onUpload, onDelete, children }) => {
 
   return (
     <Badge
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'right'
-      }}
+      {...props}
+      anchorOrigin={anchorOrigin}
       badgeContent={
         <>
           <Button
@@ -58,6 +63,13 @@ const EditBadge = ({ src, onUpload, onDelete, children }) => {
       </StatusWrapper>
     </Badge>
   )
+}
+
+EditBadge.defaultProps = {
+  anchorOrigin: {
+    vertical: 'bottom',
+    horizontal: 'right'
+  }
 }
 
 EditBadge.propTypes = {
