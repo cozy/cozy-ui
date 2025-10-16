@@ -3,7 +3,7 @@ import React from 'react'
 
 import Spinner from '../Spinner'
 
-const AvatarWrapper = ({ src, status, setStatus, timestamp, children }) => {
+const StatusWrapper = ({ src, status, setStatus, timestamp, children }) => {
   if (status === 'LOADING') {
     return (
       <>
@@ -40,4 +40,4 @@ const AvatarWrapper = ({ src, status, setStatus, timestamp, children }) => {
   )
 }
 
-export default AvatarWrapper
+export default StatusWrapper

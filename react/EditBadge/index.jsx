@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { useState, useRef } from 'react'
 
-import AvatarWrapper from './AvatarWrapper'
 import EditMenu from './EditMenu'
+import StatusWrapper from './StatusWrapper'
 import Badge from '../Badge'
 import Button from '../Buttons'
 import Icon from '../Icon'
@@ -48,14 +48,14 @@ const EditBadge = ({ src, onUpload, onDelete, children }) => {
         </>
       }
     >
-      <AvatarWrapper
+      <StatusWrapper
         src={src(timestamp)}
         status={status}
         setStatus={setStatus}
         timestamp={timestamp}
       >
         {children}
-      </AvatarWrapper>
+      </StatusWrapper>
     </Badge>
   )
 }
