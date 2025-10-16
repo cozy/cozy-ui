@@ -1,4 +1,5 @@
 const MAX_FILE_SIZE = 5 * 1024 * 1024
+const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
 
 export const handleUpload = async ({
   event,
@@ -22,7 +23,6 @@ export const handleUpload = async ({
     return
   }
 
-  const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   if (!ALLOWED_TYPES.includes(file.type)) {
     showAlert({
       message: t('EditBadge.upload.file-type'),
