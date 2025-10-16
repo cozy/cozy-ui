@@ -1,13 +1,13 @@
 const MAX_FILE_SIZE = 5 * 1024 * 1024
 
-export const handleUploadAvatar = async ({
+export const handleUpload = async ({
   event,
   t,
   fileInputRef,
-  avatarStatus,
+  status,
   onUpload,
-  setAvatarStatus,
-  setAvatarTimestamp,
+  setStatus,
+  setTimestamp,
   setShowMenu,
   showAlert
 }) => {
@@ -34,23 +34,23 @@ export const handleUploadAvatar = async ({
   const controller = new AbortController()
   const timeoutId = setTimeout(() => controller.abort(), 30000)
 
-  const previousAvatarStatus = avatarStatus
-  setAvatarStatus('LOADING')
+  const previouStatus = status
+  setStatus('LOADING')
 
   try {
     await onUpload(file)
     clearTimeout(timeoutId)
 
     const newTimestamp = Date.now()
-    setAvatarStatus('PRESENT')
-    setAvatarTimestamp(newTimestamp)
+    setStatus('PRESENT')
+    setTimestamp(newTimestamp)
     showAlert({
       message: t('EditBadge.upload.success'),
       severity: 'success'
     })
   } catch (error) {
     clearTimeout(timeoutId)
-    setAvatarStatus(previousAvatarStatus)
+    setStatus(previouStatus)
     showAlert({
       message: t('EditBadge.upload.error'),
       severity: 'error'
@@ -63,21 +63,21 @@ export const handleUploadAvatar = async ({
   }
 }
 
-export const handleDeleteAvatar = async ({
+export const handleDelete = async ({
   t,
-  avatarStatus,
+  status,
   onDelete,
   setShowMenu,
-  setAvatarStatus,
-  setAvatarTimestamp,
+  setStatus,
+  setTimestamp,
   showAlert
 }) => {
   setShowMenu(false)
 
   const controller = new AbortController()
   const timeoutId = setTimeout(() => controller.abort(), 30000)
-  const previousAvatarStatus = avatarStatus
-  setAvatarStatus('LOADING')
+  const previousStatus = status
+  setStatus('LOADING')
 
   try {
     await onDelete()
@@ -85,15 +85,15 @@ export const handleDeleteAvatar = async ({
 
     const checkTimestamp = Date.now()
 
-    setAvatarStatus('ABSENT')
-    setAvatarTimestamp(checkTimestamp)
+    setStatus('ABSENT')
+    setTimestamp(checkTimestamp)
     showAlert({
       message: t('EditBadge.delete.success'),
       severity: 'success'
     })
   } catch (error) {
     clearTimeout(timeoutId)
-    setAvatarStatus(previousAvatarStatus)
+    setStatus(previousStatus)
     showAlert({
       message: t('EditBadge.delete.error'),
       severity: 'error'

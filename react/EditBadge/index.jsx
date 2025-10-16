@@ -10,8 +10,8 @@ import PenIcon from '../Icons/Pen'
 
 const EditBadge = ({ src, onUpload, onDelete }) => {
   const [showMenu, setShowMenu] = useState(false)
-  const [avatarStatus, setAvatarStatus] = useState('PRESENT') // PRESENT || ABSENT || LOADING
-  const [avatarTimestamp, setAvatarTimestamp] = useState(Date.now())
+  const [status, setStatus] = useState('PRESENT') // PRESENT || ABSENT || LOADING
+  const [timestamp, setTimestamp] = useState(Date.now())
 
   const menuAnchorRef = useRef(null)
 
@@ -37,11 +37,11 @@ const EditBadge = ({ src, onUpload, onDelete }) => {
           />
           <EditMenu
             anchorRef={menuAnchorRef.current}
-            avatarStatus={avatarStatus}
+            status={status}
             showMenu={showMenu}
             setShowMenu={setShowMenu}
-            setAvatarStatus={setAvatarStatus}
-            setAvatarTimestamp={setAvatarTimestamp}
+            setStatus={setStatus}
+            setTimestamp={setTimestamp}
             onUpload={onUpload}
             onDelete={onDelete}
           />
@@ -49,10 +49,10 @@ const EditBadge = ({ src, onUpload, onDelete }) => {
       }
     >
       <AvatarWrapper
-        src={src(avatarTimestamp)}
-        avatarStatus={avatarStatus}
-        setAvatarStatus={setAvatarStatus}
-        avatarTimestamp={avatarTimestamp}
+        src={src(timestamp)}
+        status={status}
+        setStatus={setStatus}
+        timestamp={timestamp}
       />
     </Badge>
   )
