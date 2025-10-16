@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { useState, forwardRef } from 'react'
 
+import {
+  checkAndSaveShortcut,
+  makeHumanReadableFileName
+} from './helpers/shortcuts'
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 import { ConfirmDialog } from '..'
 import Button from '../../Buttons'
@@ -11,75 +15,33 @@ import { useI18n } from '../../providers/I18n'
 
 const ENTER_KEY = 13
 
-const isURLValid = url => {
-  try {
-    new URL(url)
-    return true
-  } catch (e) {
-    return false
-  }
-}
-
-const makeURLValid = str => {
-  if (isURLValid(str)) return str
-  else if (isURLValid(`https://${str}`)) return `https://${str}`
-  return false
-}
-
-const makeFilenameValid = fileName =>
-  fileName.endsWith('.url') ? fileName : fileName + '.url'
-
-const makeFilenameHumanReadable = fileName =>
-  fileName.endsWith('.url') ? fileName.slice(0, -4) : fileName
-
 const ShortcutDialog = forwardRef(({ shortcut, onSave, onClose }, ref) => {
   const { t } = useI18n()
   const { showAlert } = useAlert()
 
-  const initialName = makeFilenameHumanReadable(shortcut?.name || '')
+  const initialName = makeHumanReadableFileName(shortcut?.name || '')
   const initialUrl = shortcut?.url || ''
   const isEditing = !!shortcut
 
   const [fileName, setFilename] = useState(initialName)
   const [url, setUrl] = useState(initialUrl)
 
-  const handleKeyDown = e => {
-    if (e.keyCode === ENTER_KEY) {
-      createShortcut()
-    }
+  const saveShortcut = () => {
+    checkAndSaveShortcut({
+      fileName,
+      url,
+      isEditing,
+      onSave,
+      onClose,
+      showAlert,
+      t
+    })
   }
 
-  const createShortcut = async () => {
-    if (!fileName || !url) {
-      showAlert({ message: t('shortcut-dialog.needs-info'), severity: 'error' })
-      return
+  const handleKeyDown = e => {
+    if (e.keyCode === ENTER_KEY) {
+      saveShortcut()
     }
-
-    const makedFileName = makeFilenameValid(fileName)
-
-    const makedURL = makeURLValid(url)
-
-    if (!makedURL) {
-      showAlert({
-        message: t('shortcut-dialog.url-bad-format'),
-        severity: 'error'
-      })
-      return
-    }
-    try {
-      onSave(makedFileName, makedURL)
-
-      showAlert({
-        message: isEditing
-          ? t('shortcut-dialog.edited')
-          : t('shortcut-dialog.created'),
-        severity: 'success'
-      })
-    } catch {
-      showAlert({ message: t('shortcut-dialog.errored'), severity: 'error' })
-    }
-
-    onClose()
   }
 
   return (
@@ -137,7 +99,7 @@ const ShortcutDialog = forwardRef(({ shortcut, onSave, onClose }, ref) => {
                 ? t('shortcut-dialog.edit')
                 : t('shortcut-dialog.create')
             }
-            onClick={createShortcut}
+            onClick={saveShortcut}
           />
         </>
       }
