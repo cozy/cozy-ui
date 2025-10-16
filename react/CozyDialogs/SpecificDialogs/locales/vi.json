@@ -23,5 +23,19 @@
       "invalid_password": "Mật khẩu không chính xác, hãy thử lại.",
       "server_error": "Có lỗi xảy ra với máy chủ. Vui lòng tải lại trang."
     }
+  },
+  "shortcut-dialog": {
+    "create-title": "Tạo lối tắt",
+    "edit-title": "Chỉnh sửa lối tắt",
+    "filename": "Tên lối tắt",
+    "url": "URL",
+    "cancel": "Hủy",
+    "create": "Tạo",
+    "edit": "Chỉnh sửa",
+    "created": "Lối tắt đã được tạo",
+    "edited": "Lối tắt đã được chỉnh sửa",
+    "errored": "Đã xảy ra lỗi",
+    "needs-info": "Lối tắt cần có tên và URL",
+    "url-bad-format": "URL đã nhập không đúng định dạng"
   }
 }

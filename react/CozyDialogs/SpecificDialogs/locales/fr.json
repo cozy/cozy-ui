@@ -23,5 +23,19 @@
       "invalid_password": "Mot de passe incorrect, essayer à nouveau.",
       "server_error": "Une erreur s'est produite. Merci de recharger la page."
     }
+  },
+  "shortcut-dialog": {
+    "create-title": "Créer un raccourci",
+    "edit-title": "Modifier un raccourci",
+    "filename": "Nom du raccourci",
+    "url": "URL",
+    "cancel": "Annuler",
+    "create": "Créer",
+    "edit": "Modifier",
+    "created": "Le raccourci a été créé",
+    "edited": "Le raccourci a été modifié",
+    "errored": "Une erreur s'est produite",
+    "needs-info": "Un raccourci a besoin d'un nom et d'une URL",
+    "url-bad-format": "L'URL saisie n'est pas dans le bon format"
   }
 }
