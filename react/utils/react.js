@@ -1,4 +1,4 @@
-import { Fragment, Children } from 'react'
+import { Fragment, Children, isValidElement, cloneElement } from 'react'
 
 /**
  * Get the name of the node
@@ -33,3 +33,16 @@ export const getLastChild = props => {
     ? getChildren(lastChild.props)[0]
     : lastChild
 }
+
+/**
+ * Clone a React child and add props on it
+ * @param {React.ReactElement} children
+ * @param {Function} propsCallback - get child props as arg, return new props as object
+ * @returns
+ */
+export const AddPropsToChildren = (children, propsCallback) =>
+  Children.map(children, child =>
+    isValidElement(child)
+      ? cloneElement(child, { ...propsCallback(child.props) })
+      : null
+  )
