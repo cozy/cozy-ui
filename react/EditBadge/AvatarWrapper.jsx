@@ -1,33 +1,43 @@
+import cx from 'classnames'
 import React from 'react'
 
-import Avatar from '../Avatar'
 import Spinner from '../Spinner'
 
-const AvatarWrapper = ({ status, setStatus, timestamp, src }) => {
+const AvatarWrapper = ({ src, status, setStatus, timestamp, children }) => {
   if (status === 'LOADING') {
     return (
       <>
-        <Avatar className="u-o-50" size={94} />
+        {React.Children.map(children, child =>
+          React.isValidElement(child)
+            ? React.cloneElement(child, {
+                className: cx(child.props.className, 'u-o-50')
+              })
+            : null
+        )}
         <Spinner className="u-m-0" middle size="large" />
       </>
     )
   }
 
   if (status === 'PRESENT') {
-    return (
-      <Avatar
-        key={timestamp}
-        size={94}
-        src={src}
-        alt="Avatar"
-        onError={() => {
-          setStatus('ABSENT')
-        }}
-      />
+    return React.Children.map(children, child =>
+      React.isValidElement(child)
+        ? React.cloneElement(child, {
+            key: timestamp,
+            src,
+            onError: () => setStatus('ABSENT')
+          })
+        : null
     )
   }
 
-  return <Avatar key={timestamp} size={94} alt="Avatar" />
+  return React.Children.map(children, child =>
+    React.isValidElement(child)
+      ? React.cloneElement(child, {
+          key: timestamp
+        })
+      : null
+  )
 }
 
 export default AvatarWrapper
