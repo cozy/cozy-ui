@@ -91,6 +91,7 @@ module.exports = {
         '../react/BottomSheet',
         '../react/CozyDialogs',
         '../react/CozyDialogs/SpecificDialogs',
+        '../react/EditBadge',
         '../react/DatePicker',
         '../react/FileImageLoader',
         '../react/FilePicker',

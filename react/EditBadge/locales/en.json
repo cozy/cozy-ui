@@ -1,0 +1,18 @@
+{
+  "EditBadge": {
+    "menu": {
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "upload": {
+      "file-size": "The file size limit is 5MB.",
+      "file-type": "The file type is not supported. Please try again.",
+      "success": "Avatar updated successfully",
+      "error": "The avatar upload has failed. Please try again."
+    },
+    "delete": {
+      "success": "Avatar deleted successfully",
+      "error": "The avatar deletion has failed. Please try again."
+    }
+  }
+}

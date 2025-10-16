@@ -1,0 +1,18 @@
+{
+  "EditBadge": {
+    "menu": {
+      "update": "Cập nhật",
+      "delete": "Xóa"
+    },
+    "upload": {
+      "file-size": "Giới hạn kích thước tệp là 5MB.",
+      "file-type": "Loại tệp không được hỗ trợ. Vui lòng thử lại.",
+      "success": "Cập nhật ảnh đại diện thành công",
+      "error": "Tải ảnh đại diện thất bại. Vui lòng thử lại."
+    },
+    "delete": {
+      "success": "Xóa ảnh đại diện thành công",
+      "error": "Xóa ảnh đại diện thất bại. Vui lòng thử lại."
+    }
+  }
+}
