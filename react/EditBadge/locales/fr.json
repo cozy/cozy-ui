@@ -1,0 +1,18 @@
+{
+  "EditBadge": {
+    "menu": {
+      "update": "Mettre à jour",
+      "delete": "Supprimer"
+    },
+    "upload": {
+      "file-size": "La taille du fichier est limitée à 5Mo.",
+      "file-type": "Le type de fichier n'est pas supporté. Merci de réessayer.",
+      "success": "Avatar mis à jour avec succès",
+      "error": "La mise à jour de l'avatar a échoué. Merci de réessayer."
+    },
+    "delete": {
+      "success": "Avatar supprimé avec succès",
+      "error": "La suppression de l'avatar a échoué. Merci de réessayer."
+    }
+  }
+}
