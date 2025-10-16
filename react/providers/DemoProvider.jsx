@@ -4,6 +4,7 @@ import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
+import AlertProvider from '../providers/Alert'
 import I18n from '../providers/I18n'
 
 const defaultClient = {
@@ -29,9 +30,11 @@ const DemoProvider = ({ client, variant, dictRequire, children }) => {
   return (
     <CozyProvider client={client || defaultClient}>
       <BreakpointsProvider>
-        <I18n lang={lang} dictRequire={_dictRequire}>
-          <CozyTheme variant={variant}>{children}</CozyTheme>
-        </I18n>
+        <AlertProvider>
+          <I18n lang={lang} dictRequire={_dictRequire}>
+            <CozyTheme variant={variant}>{children}</CozyTheme>
+          </I18n>
+        </AlertProvider>
       </BreakpointsProvider>
     </CozyProvider>
   )
