@@ -8,7 +8,7 @@ import Button from '../Buttons'
 import Icon from '../Icon'
 import PenIcon from '../Icons/Pen'
 
-const EditBadge = ({ src, onUpload, onDelete }) => {
+const EditBadge = ({ src, onUpload, onDelete, children }) => {
   const [showMenu, setShowMenu] = useState(false)
   const [status, setStatus] = useState('PRESENT') // PRESENT || ABSENT || LOADING
   const [timestamp, setTimestamp] = useState(Date.now())
@@ -53,7 +53,9 @@ const EditBadge = ({ src, onUpload, onDelete }) => {
         status={status}
         setStatus={setStatus}
         timestamp={timestamp}
-      />
+      >
+        {children}
+      </AvatarWrapper>
     </Badge>
   )
 }
