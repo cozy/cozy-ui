@@ -1,3 +1,12 @@
+# [130.9.0](https://github.com/cozy/cozy-ui/compare/v130.8.1...v130.9.0) (2025-10-16)
+
+
+### Features
+
+* Add AlertProvider to DemoProvider ([1fea901](https://github.com/cozy/cozy-ui/commit/1fea901))
+* Add ShortcutDialog ([8c501eb](https://github.com/cozy/cozy-ui/commit/8c501eb))
+* Remove useless forwardRef ([7b5cf9b](https://github.com/cozy/cozy-ui/commit/7b5cf9b))
+
 ## [130.8.1](https://github.com/cozy/cozy-ui/compare/v130.8.0...v130.8.1) (2025-10-15)
 
 
