@@ -102,7 +102,7 @@ Checkbox.propTypes = {
   disableEffect: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium']),
   labelPlacement: PropTypes.oneOf(['top', 'end', 'bottom', 'start']),
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 }
 
 Checkbox.defaultProps = {
