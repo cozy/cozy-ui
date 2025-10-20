@@ -898,9 +898,10 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiSwitch: {
     root: {
-      width: 50,
+      width: 56,
       height: 40,
-      padding: '6px 1px'
+      padding: '6px 1px',
+      justifyContent: 'center'
     },
     checked: {
       '& + $track$track': {
@@ -910,6 +911,7 @@ export const makeLightNormalOverrides = theme => ({
     switchBase: {
       padding: 5,
       top: 5,
+      left: 5,
       color: theme.palette.text.icon,
       '& .cozySwitchThumb': {
         display: 'flex',
