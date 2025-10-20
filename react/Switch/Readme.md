@@ -9,12 +9,10 @@ import Box from 'cozy-ui/transpiled/react/Box'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
 import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
+import Variants from 'cozy-ui/docs/components/Variants'
 
-initialState = {
-  switch0: true,
-  switch1: true,
-  switch2: false
-}
+initialState = { switch0: true, switch1: true, switch2: false }
+const initialVariants = [{ before: false }]
 
 const StateSwitch = ({ id, color }) => {
   const [checked, setChecked] = useState(initialState[`switch${id}`])
@@ -29,49 +27,55 @@ const StateSwitch = ({ id, color }) => {
 
 ;
 
-<Stack spacing='xs'>
-  {['primary', 'secondary', 'default'].map((color, i) => {
-    return (
-      <Box display='flex' alignItems='center' key={i}>
-        <Typography display="inline">{`${color}:`}</Typography>
-        <StateSwitch id={i} color={color} />
-      </Box>
-    )
-  })}
-  <Divider className="u-mv-1" />
-  <Typography variant="h4">With labels</Typography>
-  <FormControlLabel control={<Switch color="primary" />} label="With label" />
-  <FormControlLabel control={<Switch color="primary" checked />} label="With label - checked" />
-  <Typography className="u-mv-1" variant="h5">With disable</Typography>
-  <FormControlLabel control={<Switch color="primary" disabled />} label="Primary" />
-  <FormControlLabel control={<Switch color="primary" checked disabled />} label="Primary - checked" />
-  <br />
-  <FormControlLabel
-    label="Primary"
-    control={
-      <Switch
-        color="primary"
-        icon={CheckIcon}
-        disabled
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
+    <Stack spacing='xs'>
+      {['primary', 'secondary', 'default'].map((color, i) => {
+        return (
+          <Box display='flex' alignItems='center' key={i}>
+            <Typography display="inline">{`${color}:`}</Typography>
+            <StateSwitch id={i} color={color} />
+          </Box>
+        )
+      })}
+      <Divider className="u-mv-1" />
+      <Typography variant="h4">With labels</Typography>
+      <FormControlLabel control={<Switch color="primary" />} label="With label" labelPlacement={variant.before ? "start" : "end"} />
+      <FormControlLabel control={<Switch color="primary" checked />} label="With label - checked" labelPlacement={variant.before ? "start" : "end"} />
+      <Typography className="u-mv-1" variant="h5">With disable</Typography>
+      <FormControlLabel control={<Switch color="primary" disabled />} label="Primary" labelPlacement={variant.before ? "start" : "end"} />
+      <FormControlLabel control={<Switch color="primary" checked disabled />} label="Primary - checked" labelPlacement={variant.before ? "start" : "end"} />
+      <br />
+      <FormControlLabel
+        label="Primary"
+        labelPlacement={variant.before ? "start" : "end"}
+        control={
+          <Switch
+            color="primary"
+            icon={CheckIcon}
+            disabled
+          />
+        }
       />
-    }
-  />
-  <FormControlLabel
-    label="Primary - checked"
-    control={
-      <Switch
-        color="primary"
-        icon={CheckIcon}
-        checked
-        disabled
+      <FormControlLabel
+        label="Primary - checked"
+        labelPlacement={variant.before ? "start" : "end"}
+        control={
+          <Switch
+            color="primary"
+            icon={CheckIcon}
+            checked
+            disabled
+          />
+        }
       />
-    }
-  />
-  <br />
-  <FormControlLabel control={<Switch color="secondary" disabled />} label="Secondary" />
-  <FormControlLabel control={<Switch color="secondary" checked disabled />} label="Secondary - checked" />
-  <br />
-  <FormControlLabel control={<Switch disabled />} label="Default" />
-  <FormControlLabel control={<Switch checked disabled />} label="Default - checked" />
-</Stack>
+      <br />
+      <FormControlLabel control={<Switch color="secondary" disabled />} label="Secondary" labelPlacement={variant.before ? "start" : "end"} />
+      <FormControlLabel control={<Switch color="secondary" checked disabled />} label="Secondary - checked" labelPlacement={variant.before ? "start" : "end"} />
+      <br />
+      <FormControlLabel control={<Switch disabled />} label="Default" labelPlacement={variant.before ? "start" : "end"} />
+      <FormControlLabel control={<Switch checked disabled />} label="Default - checked" labelPlacement={variant.before ? "start" : "end"} />
+    </Stack>
+  )}
+</Variants>
 ```
