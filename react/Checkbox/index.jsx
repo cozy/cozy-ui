@@ -52,7 +52,14 @@ const DefaultCheckbox = ({
   )
 }
 
-const Checkbox = ({ className, label, onChange, children, ...props }) => {
+const Checkbox = ({
+  className,
+  label,
+  labelPlacement,
+  onChange,
+  children,
+  ...props
+}) => {
   if (children) {
     logDepecratedCheckbox(
       '<Checkbox> used with children is deprecated, please use <Checkbox label={something} /> instead of <Checkbox>something</Checkbox>'
@@ -69,6 +76,7 @@ const Checkbox = ({ className, label, onChange, children, ...props }) => {
           className
         )}
         label={label || children}
+        labelPlacement={labelPlacement}
         control={<DefaultCheckbox {...props} label={label} />}
         onChange={onChange}
       />
@@ -93,6 +101,7 @@ Checkbox.propTypes = {
   mixed: PropTypes.bool,
   disableEffect: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium']),
+  labelPlacement: PropTypes.oneOf(['top', 'end', 'bottom', 'start']),
   label: PropTypes.string
 }
 
@@ -103,6 +112,7 @@ Checkbox.defaultProps = {
   mixed: false,
   disableEffect: false,
   size: 'medium',
+  labelPlacement: 'end',
   label: ''
 }
 
