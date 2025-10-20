@@ -6,6 +6,7 @@ import Switch from 'cozy-ui/transpiled/react/Switch'
 import Typography from "cozy-ui/transpiled/react/Typography"
 import Stack from "cozy-ui/transpiled/react/Stack"
 import Box from 'cozy-ui/transpiled/react/Box'
+import Divider from 'cozy-ui/transpiled/react/Divider'
 import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
 import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
 
@@ -32,19 +33,21 @@ const StateSwitch = ({ id, color }) => {
   {['primary', 'secondary', 'default'].map((color, i) => {
     return (
       <Box display='flex' alignItems='center' key={i}>
-        <Typography variant='body1' display="inline">{ color }</Typography>
+        <Typography display="inline">{`${color}:`}</Typography>
         <StateSwitch id={i} color={color} />
       </Box>
     )
   })}
+  <Divider className="u-mv-1" />
+  <Typography variant="h4">With labels</Typography>
   <FormControlLabel control={<Switch color="primary" />} label="With label" />
-  <FormControlLabel control={<Switch color="primary" checked />} label="With label" />
-  <br />
-  <FormControlLabel control={<Switch color="primary" disabled />} label="Primary, disabled with label" />
-  <FormControlLabel control={<Switch color="primary" checked disabled />} label="Primary, checked - disabled with label" />
+  <FormControlLabel control={<Switch color="primary" checked />} label="With label - checked" />
+  <Typography className="u-mv-1" variant="h5">With disable</Typography>
+  <FormControlLabel control={<Switch color="primary" disabled />} label="Primary" />
+  <FormControlLabel control={<Switch color="primary" checked disabled />} label="Primary - checked" />
   <br />
   <FormControlLabel
-    label="Primary, disabled with label"
+    label="Primary"
     control={
       <Switch
         color="primary"
@@ -54,7 +57,7 @@ const StateSwitch = ({ id, color }) => {
     }
   />
   <FormControlLabel
-    label="Primary, checked - disabled with label"
+    label="Primary - checked"
     control={
       <Switch
         color="primary"
@@ -65,10 +68,10 @@ const StateSwitch = ({ id, color }) => {
     }
   />
   <br />
-  <FormControlLabel control={<Switch color="secondary" disabled />} label="Secondary, checked with label" />
-  <FormControlLabel control={<Switch color="secondary" checked disabled />} label="Secondary, checked - disabled with label" />
+  <FormControlLabel control={<Switch color="secondary" disabled />} label="Secondary" />
+  <FormControlLabel control={<Switch color="secondary" checked disabled />} label="Secondary - checked" />
   <br />
-  <FormControlLabel control={<Switch disabled />} label="Default, checked with label" />
-  <FormControlLabel control={<Switch checked disabled />} label="Default, checked - disabled with label" />
+  <FormControlLabel control={<Switch disabled />} label="Default" />
+  <FormControlLabel control={<Switch checked disabled />} label="Default - checked" />
 </Stack>
 ```
