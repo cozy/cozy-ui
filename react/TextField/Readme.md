@@ -2,14 +2,14 @@ Cozy themed MUI TextField. See [the official API](https://v4.mui.com/api/text-fi
 
 ```jsx
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
-import TextField, {StyledTextField} from 'cozy-ui/transpiled/react/TextField'
+import TextField from 'cozy-ui/transpiled/react/TextField'
 import Variants from 'cozy-ui/docs/components/Variants'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import InputAdornment from 'cozy-ui/transpiled/react/InputAdornment'
 import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
 
-initialState = { option: 'value2' }
+initialState = { option: 'value2', options: ['value2','value3'] }
 
 const initialVariants = [{
   required: false,
@@ -44,8 +44,13 @@ const options = [
     label: 'Item 3',
   },
 ]
+
 const handleChange = (event) => {
-  setState({ option: event.target.value })
+  setState(v => ({ ...v, option: event.target.value }))
+}
+
+const handleMultipleChange = event => {
+  setState(v => ({ ...v, options: event.target.value }))
 }
 
 ;
@@ -203,6 +208,48 @@ const handleChange = (event) => {
           label="Label"
           variant="outlined"
           onChange={handleChange}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+
+        <div className="u-mb-1 u-mt-2">Multiple Select</div>
+        <TextField
+          select
+          SelectProps={{ multiple: true }}
+          options={options}
+          value={state.options}
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          label="Label"
+          variant="outlined"
+          onChange={handleMultipleChange}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          className="u-ml-1"
+          select
+          SelectProps={{ multiple: true }}
+          options={options}
+          value={state.options}
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          label="Label"
+          variant="outlined"
+          onChange={handleMultipleChange}
         >
           {options.map((option) => (
             <MenuItem key={option.value} value={option.value}>

@@ -3,8 +3,10 @@ import merge from 'lodash/merge'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useEffect, useState } from 'react'
 
+import { getLabelByValue, toggleInArray } from './helpers'
 import ActionsMenuItem from '../ActionsMenu/ActionsMenuItem'
 import ActionsMenuWrapper from '../ActionsMenu/ActionsMenuWrapper'
+import Checkbox from '../Checkbox'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import InputAdornment from '../InputAdornment'
@@ -14,17 +16,32 @@ import Radio from '../Radios'
 
 const MobileSelect = forwardRef(
   (
-    { name, options, disabled, value, children, onClick, onChange, ...props },
+    {
+      id,
+      name,
+      options,
+      disabled,
+      value,
+      children,
+      onClick,
+      onChange,
+      ...props
+    },
     ref
   ) => {
+    const isMultiple = Array.isArray(value)
+
     // As they are controlled input, we have to set empty string as default
     // because values can't be undefined and then defined
-    const [state, setState] = useState({ label: '', value: '' })
+    const [state, setState] = useState({
+      label: '',
+      value: isMultiple ? [] : ''
+    })
     const [showDrawer, setShowDrawer] = useState(false)
 
-    const initialLabel = options.find(option => {
-      return option.value === value
-    })?.label
+    const initialLabel = isMultiple
+      ? value.map(v => getLabelByValue(options, v)).join(', ')
+      : getLabelByValue(options, value)
 
     const handleClick = () => {
       setShowDrawer(true)
@@ -34,9 +51,11 @@ const MobileSelect = forwardRef(
     const handleItemClick =
       ({ value, children, onClick }) =>
       ev => {
-        onClick?.(merge({}, ev, { target: { value } }))
-        setState({ label: children, value })
-        onChange?.({ target: { value } })
+        const _value = isMultiple ? toggleInArray(state.value, value) : value
+
+        onClick?.(merge({}, ev, { target: { value: _value } }))
+        setState({ label: children, value: _value })
+        onChange?.({ target: { value: _value } })
       }
 
     const handleClose = () => {
@@ -44,12 +63,16 @@ const MobileSelect = forwardRef(
     }
 
     useEffect(() => {
-      setState({ label: initialLabel || '', value: value || '' })
-    }, [initialLabel, value])
+      setState({
+        label: initialLabel || '',
+        value: value || (isMultiple ? [] : '')
+      })
+    }, [initialLabel, value, isMultiple])
 
     return (
       <>
         <MuiTextField
+          id={id}
           style={{ display: 'none' }}
           type="hidden"
           name={name}
@@ -70,6 +93,7 @@ const MobileSelect = forwardRef(
               <InputAdornment position="end">
                 <Icon
                   icon={BottomIcon}
+                  rotate={showDrawer ? 180 : 0}
                   color={
                     disabled
                       ? 'var(--disabledTextColor)'
@@ -83,21 +107,37 @@ const MobileSelect = forwardRef(
         />
 
         {showDrawer && (
-          <ActionsMenuWrapper open autoClose onClose={handleClose}>
+          <ActionsMenuWrapper
+            open
+            autoClose={!isMultiple}
+            onClose={handleClose}
+          >
             {React.Children.map(children, child => {
               return React.isValidElement(child) ? (
                 <ActionsMenuItem
                   {...child.props}
                   size="small"
-                  autoFocus={child.props.value === value}
+                  autoFocus={
+                    isMultiple
+                      ? child.props.value === value[0]
+                      : child.props.value === value
+                  }
                   onClick={handleItemClick(child.props)}
                 >
                   <ListItemIcon>
-                    <Radio
-                      aria-hidden="true"
-                      tabIndex="-1"
-                      checked={child.props.value === state.value}
-                    />
+                    {isMultiple ? (
+                      <Checkbox
+                        aria-hidden="true"
+                        tabIndex="-1"
+                        checked={state.value.includes(child.props.value)}
+                      />
+                    ) : (
+                      <Radio
+                        aria-hidden="true"
+                        tabIndex="-1"
+                        checked={child.props.value === state.value}
+                      />
+                    )}
                   </ListItemIcon>
                   <ListItemText primary={child.props.children} />
                 </ActionsMenuItem>
@@ -110,11 +150,13 @@ const MobileSelect = forwardRef(
   }
 )
 
+MobileSelect.displayName = 'MobileSelect'
+
 MobileSelect.propTypes = {
   name: PropTypes.string,
   options: PropTypes.array,
   disabled: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
