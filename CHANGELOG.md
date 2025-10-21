@@ -1,3 +1,16 @@
+# [130.11.0](https://github.com/cozy/cozy-ui/compare/v130.10.0...v130.11.0) (2025-10-21)
+
+
+### Bug Fixes
+
+* **Checkbox:** Now `label` type also accept `node` in addition to `string` ([caf3de5](https://github.com/cozy/cozy-ui/commit/caf3de5))
+* **Switch:** Adjust spacing to better deal with `start` label's position ([528834b](https://github.com/cozy/cozy-ui/commit/528834b))
+
+
+### Features
+
+* **Checkbox:** Add `labelPlacement` prop ([24c884d](https://github.com/cozy/cozy-ui/commit/24c884d))
+
 # [130.10.0](https://github.com/cozy/cozy-ui/compare/v130.9.0...v130.10.0) (2025-10-16)
 
 
