@@ -45,7 +45,9 @@ export const checkAndSaveShortcut = async ({
     return
   }
   try {
-    onSave(validFileName, validURL)
+    // Because we do not know if the onSave is async or sync and we want to mutualize error catching
+    // we need to always await onSave
+    await onSave(validFileName, validURL)
 
     showAlert({
       message: isEditing
