@@ -4,7 +4,7 @@ import React from 'react'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import CloudIcon from '../Icons/Cloud'
-import Input from '../Input'
+import Input from '../legacy/Input'
 import Typography from '../Typography'
 import Button from '../deprecated/Button'
 

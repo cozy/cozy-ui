@@ -154,7 +154,7 @@ module.exports = {
         '../react/FilePathLink',
         '../react/FileInput',
         '../react/Hero',
-        '../react/Input',
+        '../react/legacy/Input',
         '../react/InputGroup',
         '../react/Label',
         '../react/LoadMore',

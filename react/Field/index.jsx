@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 import styles from './styles.styl'
 import ContactPicker from '../ContactPicker'
-import Input from '../Input'
+import Input from '../legacy/Input'
 import Label from '../Label'
 import labelStyles from '../Label/styles.styl'
 import SelectBox from '../SelectBox'

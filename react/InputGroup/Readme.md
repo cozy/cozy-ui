@@ -2,7 +2,7 @@
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 <form>
   <div>
     <InputGroup append={<InputGroup.Unit>€</InputGroup.Unit>}>
@@ -16,7 +16,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
@@ -33,7 +33,7 @@ You will need to set a width to the side component, with a utility class for exa
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 <form>
   <div>
     <InputGroup append={<Input placeholder="@domain.tld" className="u-w-4"/>}>
@@ -49,7 +49,7 @@ You will need to set a width to the side component, with a utility class for exa
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'cozy.io', label: '.cozy.io' },
@@ -68,7 +68,7 @@ const options = [
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
@@ -83,7 +83,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
@@ -98,7 +98,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 ```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>

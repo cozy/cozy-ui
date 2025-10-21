@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import styles from './styles.styl'
 import Icon from '../../Icon'
 import PlusIcon from '../../Icons/Plus'
-import Input from '../../Input'
+import Input from '../../legacy/Input'
 import { translate } from '../../providers/I18n'
 
 const normalizeGroupData = name => {

@@ -2,7 +2,7 @@
 
 ```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 <form>
   <div>
     <Label htmlFor="idInput">This is a label</Label>
@@ -15,7 +15,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 <form>
   <div>
     <Label htmlFor="idInput2" block={false}>This is an inline label</Label>
@@ -28,7 +28,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
-import Input from 'cozy-ui/transpiled/react/Input';
+import Input from 'cozy-ui/transpiled/react/legacy/Input';
 <form>
   <div>
     <Label htmlFor="idInput2" error>This is an error label</Label>

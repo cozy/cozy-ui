@@ -6,7 +6,7 @@ import { splitFilename } from 'cozy-client/dist/models/file'
 
 import RenameDialog from './RenameDialog'
 import { renameFile } from './helpers'
-import Input from '../../../Input'
+import Input from '../../../legacy/Input'
 import InputGroup from '../../../InputGroup'
 import Spinner from '../../../Spinner'
 import { makeStyles } from '../../../styles'

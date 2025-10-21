@@ -44,7 +44,6 @@ export {
 export { default as ActionsMenu } from './ActionsMenu'
 export { default as Overlay } from './deprecated/Overlay'
 export { default as Label } from './Label'
-export { default as Input } from './Input'
 export { default as Checkbox } from './Checkbox'
 export { default as Radio } from './deprecated/Radio'
 export { default as Textarea } from './Textarea'

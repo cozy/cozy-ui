@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
 
-import Input from '../../../Input'
+import Input from '../../../legacy/Input'
 
 const EditGroupName = ({
   groupId,
