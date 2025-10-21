@@ -1,3 +1,10 @@
+## [130.11.1](https://github.com/cozy/cozy-ui/compare/v130.11.0...v130.11.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **ShortcutDialog:** Change "edit button" wording ([247ef1a](https://github.com/cozy/cozy-ui/commit/247ef1a))
+
 # [130.11.0](https://github.com/cozy/cozy-ui/compare/v130.10.0...v130.11.0) (2025-10-21)
 
 
