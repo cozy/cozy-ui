@@ -1,3 +1,10 @@
+# [131.1.0](https://github.com/cozy/cozy-ui/compare/v131.0.1...v131.1.0) (2025-10-22)
+
+
+### Features
+
+* **Typography:** Change font weight value for `h5` from 500 to 600 ([0fd15fb](https://github.com/cozy/cozy-ui/commit/0fd15fb))
+
 ## [131.0.1](https://github.com/cozy/cozy-ui/compare/v131.0.0...v131.0.1) (2025-10-22)
 
 
