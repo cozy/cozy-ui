@@ -1,3 +1,17 @@
+# [131.0.0](https://github.com/cozy/cozy-ui/compare/v130.11.1...v131.0.0) (2025-10-22)
+
+
+### Features
+
+* Add `Input` and `InputLabel` from Mui ([ee37ba9](https://github.com/cozy/cozy-ui/commit/ee37ba9))
+* **Input:** Move it in `legacy` folder ([2995365](https://github.com/cozy/cozy-ui/commit/2995365))
+* **TextField:** Add multiple select ([8629645](https://github.com/cozy/cozy-ui/commit/8629645))
+
+
+### BREAKING CHANGES
+
+* **Input:** Input component has been moved. You must replace `cozy-ui/transpiled/react/Input` by `cozy-ui/transpiled/react/legacy/Input`
+
 ## [130.11.1](https://github.com/cozy/cozy-ui/compare/v130.11.0...v130.11.1) (2025-10-21)
 
 
