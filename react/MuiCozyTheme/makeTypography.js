@@ -22,7 +22,7 @@ export const makeTypography = () => ({
   },
   h5: {
     fontSize: 16,
-    fontWeight: 500,
+    fontWeight: 600,
     lineHeight: 1.313,
     letterSpacing: '0.15px'
   },
