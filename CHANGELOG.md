@@ -1,3 +1,10 @@
+## [131.0.1](https://github.com/cozy/cozy-ui/compare/v131.0.0...v131.0.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **ShortcutDialog:** await save callback to display errors ([60d68c1](https://github.com/cozy/cozy-ui/commit/60d68c1))
+
 # [131.0.0](https://github.com/cozy/cozy-ui/compare/v130.11.1...v131.0.0) (2025-10-22)
 
 
