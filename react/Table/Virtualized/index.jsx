@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { useState, forwardRef } from 'react'
+import React, { useState, forwardRef, useMemo } from 'react'
 import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
@@ -29,13 +29,18 @@ const VirtualizedTable = forwardRef(
     },
     ref
   ) => {
-    const [orderDirection, setOrderDirection] = useState(
-      defaultOrder?.direction ?? 'asc'
-    )
-    const [orderBy, setOrderBy] = useState(defaultOrder?.by ?? undefined)
+    const [orderDirection, setOrderDirection] = useState()
+    const [orderBy, setOrderBy] = useState()
 
-    const sortedData = orderBy
-      ? stableSort(rows, getComparator(orderDirection, orderBy))
+    const [currentOrderDirection, currentOrderBy] = useMemo(() => {
+      return [
+        orderDirection ?? defaultOrder?.direction,
+        orderBy ?? defaultOrder?.by
+      ]
+    }, [orderDirection, orderBy, defaultOrder])
+
+    const sortedData = currentOrderBy
+      ? stableSort(rows, getComparator(currentOrderDirection, currentOrderBy))
       : rows
     const data = secondarySort ? secondarySort(sortedData) : sortedData
     const { groupLabels, groupCounts } = groups?.(data) || {}
@@ -49,7 +54,8 @@ const VirtualizedTable = forwardRef(
     }
 
     const handleSort = property => {
-      const isAsc = orderBy === property && orderDirection === 'asc'
+      const isAsc =
+        currentOrderBy === property && currentOrderDirection === 'asc'
       const newOrder = isAsc ? 'desc' : 'asc'
       setOrderDirection(newOrder)
       setOrderBy(property)
@@ -80,8 +86,8 @@ const VirtualizedTable = forwardRef(
             columns={columns}
             rowCount={rows.length}
             context={_context}
-            orderDirection={orderDirection}
-            orderBy={orderBy}
+            orderDirection={currentOrderDirection}
+            orderBy={currentOrderBy}
             onClick={handleSort}
             onSelectAllClick={handleSelectAll}
           />
