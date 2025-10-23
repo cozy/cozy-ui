@@ -1,0 +1,27 @@
+@require '../../stylus/components/forms'
+
+.c-input-checkbox
+    @extend $checkbox
+
+// Cancel the default behaviour for input checkbox
+.c-input-checkbox--svg span::after
+    display none
+
+.c-input-checkbox-icon
+    position absolute
+    left 0
+    top 50%
+    box-sizing border-box
+    width checkbox-size
+    height checkbox-size
+    padding rem(2)
+    transition-duration .2s
+    transition-property opacity, transform
+
+.c-input-checkbox input:not(:checked) + span .c-input-checkbox-icon
+    opacity 0
+    transform scale(0) translateY(-50%)
+
+.c-input-checkbox input:checked + span .c-input-checkbox-icon
+    opacity 1
+    transform scale(1) translateY(-50%)

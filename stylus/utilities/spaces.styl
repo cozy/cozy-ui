@@ -1,0 +1,121 @@
+/*------------------------------------*\
+  Space utilities
+\*------------------------------------*/
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+@require '../settings/spaces'
+
+// @stylint off
+types = {
+    p: padding,
+    m: margin
+}
+
+directions = {
+    '': all,
+    t: top,
+    b: bottom,
+    l: left,
+    r: right,
+    v: vertical,
+    h: horizontal
+}
+
+// Placeholders generation
+for kType, vType in types
+    for kSize, vSize in sizes
+        for kDir, vDir in directions
+            if vDir == all
+                ${kType}-{kSize}
+                    {vType}: vSize !important
+            else if vDir == vertical
+                ${kType}{kDir}-{kSize}
+                    {vType}-top: vSize !important
+                    {vType}-bottom: vSize !important
+            else if vDir == horizontal
+                ${kType}{kDir}-{kSize}
+                    {vType}-left: vSize !important
+                    {vType}-right: vSize !important
+            else
+                ${kType}{kDir}-{kSize}
+                    {vType}-{vDir}: vSize !important
+
+// Classes generation
+cssModulesSpacingUtils()
+    for kBp, vBp in breakpoints
+        for kType, vType in types
+            for kSize, vSize in sizes
+                for kDir, vDir in directions
+                    if vBp == ''
+                        if vDir == all
+                            :global(.u-{kType}-{kSize})
+                                {vType}: vSize !important
+                        else if vDir == vertical
+                            :global(.u-{kType}{kDir}-{kSize})
+                                {vType}-top: vSize !important
+                                {vType}-bottom: vSize !important
+                        else if vDir == horizontal
+                            :global(.u-{kType}{kDir}-{kSize})
+                                {vType}-left: vSize !important
+                                {vType}-right: vSize !important
+                        else
+                            :global(.u-{kType}{kDir}-{kSize})
+                                {vType}-{vDir}: vSize !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            if vDir == all
+                                :global(.u-{kType}-{kSize}-{vBp})
+                                    {vType}: vSize !important
+                            else if vDir == vertical
+                                :global(.u-{kType}{kDir}-{kSize}-{vBp})
+                                    {vType}-top: vSize !important
+                                    {vType}-bottom: vSize !important
+                            else if vDir == horizontal
+                                :global(.u-{kType}{kDir}-{kSize}-{vBp})
+                                    {vType}-left: vSize !important
+                                    {vType}-right: vSize !important
+                            else
+                                :global(.u-{kType}{kDir}-{kSize}-{vBp})
+                                    {vType}-{vDir}: vSize !important
+
+nativeSpacingUtils()
+    for kBp, vBp in breakpoints
+        for kType, vType in types
+            for kSize, vSize in sizes
+                for kDir, vDir in directions
+                    if vBp == ''
+                        if vDir == all
+                            .u-{kType}-{kSize}
+                                {vType}: vSize !important
+                        else if vDir == vertical
+                            .u-{kType}{kDir}-{kSize}
+                                {vType}-top: vSize !important
+                                {vType}-bottom: vSize !important
+                        else if vDir == horizontal
+                            .u-{kType}{kDir}-{kSize}
+                                {vType}-left: vSize !important
+                                {vType}-right: vSize !important
+                        else
+                            .u-{kType}{kDir}-{kSize}
+                                {vType}-{vDir}: vSize !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            if vDir == all
+                                .u-{kType}-{kSize}-{vBp}
+                                    {vType}: vSize !important
+                            else if vDir == vertical
+                                .u-{kType}{kDir}-{kSize}-{vBp}
+                                    {vType}-top: vSize !important
+                                    {vType}-bottom: vSize !important
+                            else if vDir == horizontal
+                                .u-{kType}{kDir}-{kSize}-{vBp}
+                                    {vType}-left: vSize !important
+                                    {vType}-right: vSize !important
+                            else
+                                .u-{kType}{kDir}-{kSize}-{vBp}
+                                    {vType}-{vDir}: vSize !important
+if cssmodules == true
+    cssModulesSpacingUtils()
+else
+    nativeSpacingUtils()
+// @stylint on

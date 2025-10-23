@@ -1,0 +1,75 @@
+{
+  "common": {
+    "day": "%{smart_count} ngày |||| %{smart_count} ngày"
+  },
+  "ListItem": {
+    "attributes": {
+      "birthday": "Sinh nhật",
+      "birthcity": "Thành phố sinh",
+      "address": "Địa chỉ",
+      "email": "Địa chỉ email",
+      "phone": "Số điện thoại",
+      "company": "Công ty",
+      "jobTitle": "Chức vụ",
+      "metadata": {
+        "datetime": "Được thêm vào",
+        "issueDate": "Được giao vào",
+        "expirationDate": "Ngày hết hạn",
+        "referencedDate": "Ngày tham chiếu",
+        "shootingDate": "Ngày chụp",
+        "obtentionDate": "Ngày có được",
+        "date": "Ngày tài liệu",
+        "country": "Quốc gia phát hành",
+        "refTaxIncome": "Thu nhập thuế tham chiếu",
+        "contractType": "Loại hợp đồng",
+        "noticePeriod": "Cảnh báo hết hạn",
+        "cafFileNumber": "Số hồ sơ CAF",
+        "vinNumber": "Số đăng ký xe (VIN)",
+        "cardNumber": "Số thẻ căn cước",
+        "ibanNumber": "Số IBAN",
+        "bicNumber": "Số BIC",
+        "passportNumber": "Số hộ chiếu",
+        "netSocialAmount": "Số tiền xã hội ròng",
+        "vehicle": {
+          "licenseNumber": "Số đăng ký xe",
+          "confidentialNumber": "Mã đăng ký xe bí mật"
+        },
+        "number": {
+          "pay_sheet": "Thù lao gốc",
+          "tax_return": "Số thuế tham chiếu",
+          "tax_notice": "Số thuế tham chiếu",
+          "real_estate_tax": "Số thuế tham chiếu",
+          "tax_timetable": "Số thuế tham chiếu",
+          "fine": "Số tiền phạt",
+          "fidelity_card": "Số thẻ",
+          "driver_license": "Số giấy phép",
+          "caf": "Số hồ sơ CAF",
+          "payment_proof_family_allowance": "Số hồ sơ CAF",
+          "vehicle_registration": "Số đăng ký xe (VIN)",
+          "national_id_card": "Số thẻ căn cước",
+          "bank_details": "Số IBAN",
+          "passport": "Số hộ chiếu",
+          "residence_permit": "Số giấy phép"
+        }
+      }
+    },
+    "file": {
+      "page": {
+        "back": "Mặt sau",
+        "front": "Mặt trước"
+      }
+    },
+    "snackbar": {
+      "copyToClipboard": {
+        "success": "Đã sao chép vào clipboard",
+        "error": "Không thể sao chép vào clipboard"
+      }
+    },
+    "renameModal": {
+      "title": "Đổi tên",
+      "content": "Bạn sắp thay đổi phần mở rộng tập tin. Bạn có muốn tiếp tục không?",
+      "cancel": "Hủy",
+      "submit": "Tiếp tục"
+    }
+  }
+}

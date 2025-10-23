@@ -1,0 +1,48 @@
+@require 'tools/mixins'
+@require 'settings/breakpoints.styl'
+
+.container
+    height rem(48)
+    display flex
+    align-items center
+    color var(--primaryTextColor)
+
+.contact-group-creation-divider
+    width 100%
+    border-top 1px solid var(--dividerColor)
+
+.contact-group-create-div-icon
+    display flex
+    align-items center
+    flex 1
+
+/*since we keep the existing style of
+react-select for the menu and we only
+want to override width & zindex... important
+is important. Right positionning is just set,
+it overrides nothing so there's no need for
+!important */
+:global(.react-select__menu) // @stylint ignore Naming imposed by react-select
+    width rem(384) !important
+    z-index 100000 !important
+    right 0
+
+    +small-screen()
+        top auto !important
+        width 100% !important
+
+:global(.react-select__container) // @stylint ignore Naming imposed by react-select
+    display inline-block
+    vertical-align middle
+
+:global(.react-select__menu-notice--no-options) // @stylint ignore Naming imposed by react-select
+    color var(--primaryTextColor)
+    margin-left .5rem !important
+    height rem(48)
+    display flex
+    align-items center
+
+:global(.react-select__menu-list) // @stylint ignore Naming imposed by react-select
+    text-align initial
+    +small-screen()
+        max-width inherit !important

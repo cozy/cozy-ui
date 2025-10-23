@@ -1,0 +1,95 @@
+{
+  "action": {
+    "loading": "Đang tải...",
+    "withoutIAP": "Tôi hiểu"
+  },
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn không cho phép **chỉnh sửa tài liệu trực tuyến**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "public": {
+      "title": "Thông tin",
+      "content": "Bạn không thể chỉnh sửa tập tin này trực tuyến. Vui lòng yêu cầu chủ sở hữu tài liệu cập nhật đăng ký Cozy của họ.",
+      "action": "Tôi hiểu"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "passwordSharingPaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn không cho phép **chia sẻ mật khẩu**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "maxAccountsByKonnectorPaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn cho phép bạn kết nối tối đa **%{smart_count} tài khoản %{konnectorName}** trong Cozy của bạn.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình. |||| Gói của bạn cho phép bạn kết nối tối đa **%{smart_count} tài khoản %{konnectorName}** trong Cozy của bạn.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "maxAccountsPaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn cho phép bạn kết nối tối đa **%{smart_count} tài khoản** trong Cozy của bạn.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình. |||| Gói của bạn cho phép bạn kết nối tối đa **%{smart_count} tài khoản** trong Cozy của bạn.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn cho phép bạn thêm thủ công tối đa **%{smart_count} giấy tờ**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể sửa đổi gói Cozy của mình. |||| Gói của bạn cho phép bạn thêm thủ công tối đa **%{smart_count} giấy tờ**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể sửa đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "quotaPaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Dung lượng đĩa của bạn đã đầy.\n\nVui lòng xóa các tập tin, làm trống thùng rác hoặc nâng cấp gói trước khi tải lên tập tin.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Dung lượng đĩa của bạn đã đầy.\n\nVui lòng xóa các tập tin, làm trống thùng rác trước khi tải lên tập tin.",
+      "action": "Tôi hiểu"
+    }
+  },
+  "maxDaysToCapturePaywall": {
+    "premium": {
+      "title": "Nâng cấp gói của bạn",
+      "content": "Gói của bạn cho phép bạn chỉ ghi lại **%{smart_count} ngày chuyến đi**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình. |||| Gói của bạn cho phép bạn chỉ ghi lại **%{smart_count} ngày chuyến đi**.\n\nĐể mở khóa tính năng này, hoặc đơn giản là hỗ trợ chúng tôi, bạn có thể thay đổi gói Cozy của mình.",
+      "action": "Xem các gói của chúng tôi"
+    },
+    "default": {
+      "title": "Thông tin",
+      "content": "Gói hiện tại của bạn không cho phép bạn tận dụng tính năng này.",
+      "action": "Tôi hiểu"
+    }
+  }
+}

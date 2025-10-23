@@ -1,0 +1,5 @@
+{
+  "babelrc": false,
+  "presets": ["env", "react"],
+  "plugins": ["react-hot-loader/babel", "transform-class-properties"]
+}

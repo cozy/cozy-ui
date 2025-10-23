@@ -1,0 +1,295 @@
+@require '../settings/breakpoints'
+@require '../objects/layouts'
+@require '../tools/mixins'
+
+/*------------------------------------*\
+  Modals
+  ======
+
+  This file contains all needs for modals
+\*------------------------------------*/
+
+// Modal sizes
+xsmall-width = rem(384)
+small-width = rem(544)
+medium-width = rem(576)
+large-width = rem(640)
+xlarge-width = rem(800)
+xxlarge-width = rem(960)
+
+// Modal margins
+xsmall-margin = rem(8)
+small-margin = rem(8)
+medium-margin = rem(24)
+large-margin = rem(48)
+xlarge-margin = rem(48)
+xxlarge-margin = rem(48)
+
+// Modal paddings
+tiny-padding = rem(16)
+small-padding = rem(24)
+medium-padding = rem(32)
+large-padding = rem(48)
+xlarge-padding = rem(48)
+xxlarge-padding = rem(48)
+
+
+$modals
+    position relative
+    z-index var(--zIndex-modal)
+
+$modal-wrapper
+    position fixed
+    top 0
+    left 0
+    display flex
+    flex-direction column
+    align-items center
+    box-sizing border-box
+    width 100vw
+    height 100%
+    overflow-y auto
+    padding large-margin
+
+    +small-screen()
+        justify-content center
+        padding medium-margin
+
+    +tiny-screen()
+        padding small-margin
+
+$modal
+    @extend $elastic
+    position relative
+    border-radius rem(8)
+    max-height 100%
+    max-width 100%
+    background-color var(--paperBackgroundColor)
+    color var(--primaryTextColor)
+
+for size in 'xsmall' 'small' 'medium' 'large' 'xlarge' 'xxlarge'
+    $modal--{size}
+        width lookup(size + '-width')
+
+        $max-width=lookup(size + '-width') + lookup(size + '-margin') * 2
+        @media (max-width: $max-width)
+            width 100%
+
+$modal-wrapper--fullscreen
+    +small-screen()
+        padding 0
+
+$modal--fullscreen
+    +small-screen()
+        height 100%
+        width 100%
+        border-radius 0
+        box-sizing border-box
+
+$modal-header
+    @extend $elastic-bar
+    margin 0 0 rem(16)
+    padding (medium-padding - rem(5)) rem(48) 0 medium-padding
+    overflow visible
+    min-height rem(40)
+
+    h2
+        margin 0
+        font-weight bold
+
+    +tiny-screen()
+        margin-bottom rem(8)
+        padding (small-padding - rem(5)) rem(32) 0 small-padding
+
+        h2
+            font-size rem(20)
+
+$modal-header--branded
+    @extend $modal-header
+    padding rem(16 48)
+
+    img
+        display block
+        max-height rem(56)
+        margin 0 auto
+
+$modal-header-icon
+    display flex
+    align-items center
+    justify-content center
+    margin 0 0 rem(16)
+    max-width 100%
+
+    > * // @stylint ignore
+        max-width inherit
+
+$modal-header-icon--ghost
+    @extend $modal-header-icon
+    position absolute
+    left 0
+    right 0
+    top rem(16)
+    margin rem(8) 0
+    opacity 0
+    max-height rem(32)
+    transition opacity 150ms ease-in, top 150ms 50ms ease-in
+
+    > * // @stylint ignore
+        max-height inherit
+
+$modal-header-icon--ghost-active
+    top 0
+    opacity 1
+    transition opacity 150ms 50ms ease-in, top 150ms ease-in
+
+$modal-header--small
+    padding (small-padding - rem(5)) rem(48) 0 small-padding
+
+    +tiny-screen()
+        padding (tiny-padding - rem(5)) rem(32) 0 tiny-padding
+
+$modal-header--large
+    padding (large-padding - rem(5)) rem(48) 0 large-padding
+
+    +small-screen()
+        padding (medium-padding - rem(5)) rem(32) 0 medium-padding
+
+$modal-header-app
+    display flex
+    align-items center
+    font-size rem(20)
+    color var(--primaryTextColor)
+
+$modal-header-app-editor
+    font-weight normal
+
+$modal-header-app-icon
+    height rem(18)
+    margin-right rem(8)
+
+$modal-content-fixed
+    border-bottom rem(1) solid var(--dividerColor)
+    flex 0 0 auto
+    padding 0 medium-padding
+
+$modal-content-fixed--small
+    padding 0 small-padding
+
+    +tiny-screen()
+        padding 0 tiny-padding
+
+$modal-content-fixed--large
+    padding 0 large-padding
+
+    +tiny-screen()
+        padding 0 medium-padding
+
+$modal-content
+    @extend $elastic-content
+    padding 0 medium-padding
+
+    &:last-child
+        padding-bottom medium-padding
+        border-bottom-right-radius rem(8)
+        border-bottom-left-radius rem(8)
+
+    +tiny-screen()
+        padding 0 small-padding
+
+        &:last-child
+            padding-bottom small-padding
+
+$modal-content--small
+    padding 0 small-padding
+
+    &:last-child
+        padding-bottom small-padding
+
+    +tiny-screen()
+        padding 0 tiny-padding
+
+        &:last-child
+            padding-bottom tiny-padding
+
+$modal-content--large
+    padding 0 large-padding
+
+    &:last-child
+        padding-bottom large-padding
+
+    +small-screen()
+        padding 0 medium-padding
+
+        &:last-child
+            padding-bottom medium-padding
+
+$modal-footer
+    @extend $elastic-bar
+    padding tiny-padding (small-padding - rem(4)) (small-padding - rem(4))
+
+$modal-footer--button
+    button
+        margin-bottom rem(4)
+
+        +small-screen()
+            min-width calc(50% - .5rem)
+
+$modal-section
+    border-top rem(1) solid var(--dividerColor)
+
+cross-size=rem(40)
+
+$modal-close
+    box-sizing border-box
+    position absolute
+    top rem(24)
+    right rem(24)
+    margin 0
+    padding rem(8)
+    background-color transparent
+    border 0
+    cursor pointer
+    display block
+    width cross-size
+    height cross-size
+    z-index 1
+
+    +tiny-screen()
+        top rem(13)
+        right rem(16)
+
+$modal-close--small
+    top rem(16)
+    right rem(16)
+
+    +tiny-screen()
+        top rem(5)
+        right rem(8)
+
+$modal-header--closable
+    padding-right cross-size + rem(32)
+
+
+$modal-close--large
+    top rem(40)
+    right rem(40)
+
+    +small-screen()
+        top rem(21)
+        right rem(24)
+
+$modal-close--notitle
+    top rem(6)
+    right rem(6)
+
+$modal--hidden
+    overflow hidden
+
+$modal-back-button
+    top rem(6)
+    left rem(6)
+    color var(--actionColorActive)
+
+    +small-screen()
+        top 0
+        left 0

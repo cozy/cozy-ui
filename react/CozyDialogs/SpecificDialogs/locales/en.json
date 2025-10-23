@@ -1,0 +1,41 @@
+{
+  "cancel": "Cancel",
+  "allow": "Allow",
+  "allow-location-dialog": {
+    "title": "Allow access to your location",
+    "description": "Your Twake needs to always be authorised to access your phone's location in order to memorise and help you analyse your movements, even when the app is not in use.\n\nIt will NEVER be passed on to anyone without your request.\n\nYou can deactivate this feature from the Coach CO2 app settings."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Scan the QR Code",
+    "text": "or go directly to the <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>or <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> to install the Twake Workplace app",
+    "a11n": "Go to the Twake Workplace application download page"
+  },
+  "authentification-dialog": {
+    "title": "Login",
+    "title-oidc": "Twake Pass",
+    "subtitle": "For security, please confirm your identity",
+    "label": "Twake password",
+    "label-oidc": "Twake Pass password",
+    "abort": "Leave",
+    "unlock": "Unlock",
+    "forgotten-password": "I forgot my password",
+    "errors": {
+      "invalid_password": "Incorrect password, try again.",
+      "server_error": "Something went wrong with the server. Please, reload the page."
+    }
+  },
+  "shortcut-dialog": {
+    "create-title": "Create a shortcut",
+    "edit-title": "Modify a shortcut",
+    "filename": "Shortcut name",
+    "url": "URL",
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Save",
+    "created": "The shortcut has been created",
+    "edited": "The shortcut has been modified",
+    "errored": "An error occurred",
+    "needs-info": "A shortcut needs a name and a URL",
+    "url-bad-format": "The entered URL is not in the correct format"
+  }
+}

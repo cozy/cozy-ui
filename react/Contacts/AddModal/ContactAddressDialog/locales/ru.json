@@ -1,0 +1,25 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactAddressDialog": {
+        "fields": {
+          "address": "Адрес",
+          "number": "Номер дома",
+          "street": "Почтовый адрес",
+          "code": "Почтовый индекс",
+          "city": "Город",
+          "country": "Страна",
+          "locality": "Район",
+          "building": "Здание",
+          "stairs": "Подъезд",
+          "floor": "Этаж",
+          "apartment": "Квартира",
+          "region": "Регион",
+          "entrycode": "Код подъезда"
+        },
+        "cancel": "Отменить",
+        "ok": "ОК"
+      }
+    }
+  }
+}

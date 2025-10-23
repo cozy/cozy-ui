@@ -1,0 +1,43 @@
+@require './popover.styl'
+@require '../tools/mixins'
+@require '../settings/spaces.styl'
+@require '../settings/breakpoints.styl'
+
+$smallScreenPaddingTop=.5rem
+
+$actionmenu
+    @extend $popover
+    color var(--primaryTextColor)
+    --iconColor: var(--iconTextColor)
+    padding-bottom rem(9)
+    padding-bottom env(safe-area-inset-bottom)
+
+    hr
+        margin-top 0
+
+    +small-screen()
+        border 0
+        border-radius 0
+
+$actionmenu--inline
+    width rem(256)
+
+$actionmenu-header
+    box-sizing border-box
+    border-bottom rem(1) solid var(--dividerColor)
+    padding rem(16)
+    min-height rem(64)
+    margin-top -($smallScreenPaddingTop)
+
+$actionmenu-item
+    padding spacing_values.s 0
+    cursor pointer
+
+    &:hover
+        background-color var(--actionColorHover)
+
+$actionmenu-radio
+    height 1rem
+    width 1rem
+    margin-top .125rem
+    margin-bottom 0

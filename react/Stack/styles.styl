@@ -1,0 +1,6 @@
+@require 'settings/spaces.styl'
+
+for k,v in spacing_values
+  modifier = "--" + k
+  .Stack{modifier} > * + *
+    margin-top: v[0]

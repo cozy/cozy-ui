@@ -1,0 +1,15 @@
+{
+  "Contacts": {
+    "Header": {
+      "create": "Create",
+      "filter": {
+        "no-group": "Create contact groups to facilitate filing and sharing!"
+      },
+      "import": {
+        "title": "Import",
+        "store": "From other sources",
+        "vcard": "From a vCard file"
+      }
+    }
+  }
+}

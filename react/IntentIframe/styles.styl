@@ -1,0 +1,21 @@
+iframe
+    width 100%
+    height 100%
+    border 0
+
+.intentContainer,
+.intentPlaceHolder
+    height 100%
+    width 100%
+    display flex
+    justify-content center
+    align-items center
+
+/* Don't mess with the spinner centering until the iframe is fully loaded. */
+.intentContainer[aria-busy=true] iframe
+    height 0
+    width 0
+
+.intentContainer__error
+    color var(--errorColor)
+    font-size 1.5em

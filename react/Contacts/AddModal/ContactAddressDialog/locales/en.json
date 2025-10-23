@@ -1,0 +1,25 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactAddressDialog": {
+        "fields": {
+          "address": "Address",
+          "number": "Lane number",
+          "street": "Postal address",
+          "code": "Postal code",
+          "city": "City",
+          "country": "Country",
+          "locality": "Locality",
+          "building": "Building",
+          "stairs": "Stairs",
+          "floor": "Floor",
+          "apartment": "Apartment",
+          "region": "Region",
+          "entrycode": "Entry code"
+        },
+        "cancel": "Cancel",
+        "ok": "Ok"
+      }
+    }
+  }
+}

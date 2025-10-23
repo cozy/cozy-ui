@@ -1,0 +1,21 @@
+{
+  "extends": ["cozy-app/react"],
+  "rules": {
+    "no-console": "off",
+    "no-param-reassign": "error",
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "error"
+  },
+  "globals": {
+    "mount": true,
+    "shallow": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.5.2"
+    }
+  },
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
+}

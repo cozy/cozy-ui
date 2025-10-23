@@ -1,0 +1,20 @@
+{
+  "baseDir": ".",
+  "files": [
+    {
+      "path": "dist/cozy-ui.min.css"
+    },
+    {
+      "path": "dist/cozy-ui.utils.min.css"
+    },
+    {
+      "path": "transpiled/react/stylesheet.css"
+    }
+  ],
+  "groups": [
+    {
+        "path": "transpiled/react/**"
+    }
+],
+  "reportOutput": ["github"]
+}

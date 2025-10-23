@@ -1,0 +1,7 @@
+{
+  "Storage": {
+    "title": "Хранилище",
+    "availability": "%{smart_count} ГБ доступно",
+    "increase": "Увеличить место"
+  }
+}

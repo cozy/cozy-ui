@@ -1,0 +1,15 @@
+{
+  "themes": {
+    "activity": "Loisirs",
+    "family": "Famille",
+    "finance": "Finances",
+    "health": "Santé",
+    "home": "Logement",
+    "identity": "Identité",
+    "invoice": "Factures",
+    "others": "Autres",
+    "transport": "Transport",
+    "undefined": "Indéfini",
+    "work_study": "Travail"
+  }
+}

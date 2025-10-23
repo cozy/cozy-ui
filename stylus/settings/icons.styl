@@ -1,0 +1,103 @@
+@require '../generic/animations'
+@require '../tools/mixins'
+@require 'generic/animations'
+
+/*------------------------------------*\
+  Icons
+  ================
+
+  This file contains icons coded in data:uri
+\*------------------------------------*/
+
+/*
+    Icons
+
+    Icons system management.
+
+    Use them by extending the placebolders like this `@extend $icon-16`
+
+    Styleguide Settings.icons
+*/
+$icon
+    content              ''
+    display              inline-block
+    vertical-align       middle
+    margin-left          rem(8)
+    background-position  center
+    background-repeat    no-repeat
+    background-size      cover
+
+
+/*------------------------------------*\
+  Icon's sizes
+\*------------------------------------*/
+
+/*
+    Icon sizes
+
+    There are several preset squared sizes available. Sizes are set using rem
+    unit and their equivalents in px matches if the default size of your page
+    is 16px (which is the default size in Cozy-UI)
+
+    $icon-8  - Equivalent to 8px
+    $icon-12 - Equivalent to 12px
+    $icon-16 - Equivalent to 16px
+    $icon-24 - Equivalent to 24px
+    $icon-36 - Equivalent to 36px
+    $icon-80 - Equivalent to 80px
+
+    Weight: 1
+
+    Styleguide Settings.icons.sizes
+*/
+$icon-8
+    width   rem(8)
+    height  rem(8)
+
+$icon-12
+    width   rem(12)
+    height  rem(12)
+
+$icon-16
+    width   rem(16)
+    height  rem(16)
+
+$icon-24
+    width   rem(24)
+    height  rem(24)
+
+$icon-36
+    width   rem(36)
+    height  rem(36)
+
+$icon-80
+    width   rem(80)
+    height  rem(80)
+
+
+/*------------------------------------*\
+  Icon's options
+\*------------------------------------*/
+
+/*
+    Icon options
+
+    Some available options for icon elements.
+
+    $icon-centered  - Element is vertically & horizontally centered
+    $spin-anim      - Element spins endlessly on itself
+
+    Weight: 2
+
+    Styleguide Settings.icons.options
+*/
+$icon-centered
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
+
+
+$icon-spin
+    @extend $spin-anim
+

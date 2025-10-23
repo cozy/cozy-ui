@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Hủy",
+    "leave": "Rời khỏi mà không lưu",
+    "title": "Bỏ các thay đổi của bạn?",
+    "message": "Một số thay đổi có thể chưa được lưu. Bạn có thực sự muốn rời khỏi và mất các thay đổi này không?"
+  }
+}

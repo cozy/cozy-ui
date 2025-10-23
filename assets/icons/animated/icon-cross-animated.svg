@@ -1,0 +1,41 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+@-webkit-keyframes checkmark 
+{
+0% {
+    stroke-dashoffset: 100px
+}
+100% {
+    stroke-dashoffset: 200px
+}
+}
+@-ms-keyframes checkmark 
+{
+0% {
+    stroke-dashoffset: 100px
+}
+100% {
+    stroke-dashoffset: 200px
+}
+}
+@keyframes checkmark 
+{
+0% {
+    stroke-dashoffset: 100px
+}
+100% {
+    stroke-dashoffset: 0px
+}
+}
+path.l1 {
+-webkit-animation: checkmark 0.5s ease-in-out backwards;
+animation: checkmark 0.5s ease-in-out backwards
+}
+path.l2 {
+-webkit-animation: checkmark 0.5s ease-in-out 0.16s backwards;
+animation: checkmark 0.5s ease-in-out 0.16s backwards
+}
+</style>
+<path class="l1" d="M2 2L14 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"/>
+<path class="l2" d="M14 2L2 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"/>
+</svg>

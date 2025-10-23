@@ -1,0 +1,113 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+/*------------------------------------*\
+  Display utilities
+\*------------------------------------*/
+
+/*
+    Visually hidden element but still readable by screen-readers
+    FR : http://www.ffoodd.fr/cache-cache-css/
+    EN : http://hugogiraudel.com/2016/10/13/css-hide-and-seek/
+*/
+
+hidden()
+    // @stylint off
+    position     absolute !important
+    border       0 !important
+    width        rem(1) !important
+    height       rem(1) !important
+    overflow     hidden !important
+    padding      0 !important
+    white-space  nowrap !important
+    clip         rect(rem(1), rem(1), rem(1), rem(1)) !important
+    clip-path    inset(50%) !important
+    // @stylint on
+
+$visuallyhidden
+    hidden()
+
+// Because Stylus doesn't allow me to @extend inside @media… yeah… that sucks
++medium-screen()
+    $visuallyhidden-mobile
+        hidden()
+
+$hide
+    hide()
+
+$hide--mob
+    +lt-desktop()
+        display none !important // @stylint ignore
+
+$hide--tablet
+    +gt-tablet()
+        display none !important // @stylint ignore
+
+$hide--desk
+    +gt-mobile()
+        display none !important // @stylint ignore
+
+// Global classes
+global('.u-visuallyhidden', $visuallyhidden)
+global('.u-hide', $hide)
+global('.u-hide--mob', $hide--mob)
+global('.u-hide--tablet', $hide--tablet)
+global('.u-hide--desk', $hide--desk)
+
+display-none()
+    display none
+
+display-inline()
+    display inline
+
+display-block()
+    display block
+
+display-contents()
+    display contents
+
+display-inline-block()
+    display inline-block
+
+display-inline-table()
+    display inline-table
+
+display-table()
+    display table
+
+display-table-cell()
+    display table-cell
+
+display-table-row()
+    display table-row
+
+display-table-row-group()
+    display table-row-group
+
+display-table-column()
+    display table-column
+
+display-table-column-group()
+    display table-column-group
+
+props = {
+    'display-none': 'dn',
+    'display-inline': 'di',
+    'display-block': 'db',
+    'display-contents': 'dc',
+    'display-inline-block': 'dib',
+    'display-inline-table': 'dit',
+    'display-table': 'dt',
+    'display-table-cell': 'dtc',
+    'display-table-row': 'dt-row',
+    'display-table-row-group': 'dt-row-group',
+    'display-table-column': 'dt-column',
+    'display-table-column-group': 'dt-column-group'
+}
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+else
+    nativeUtils(props, breakpoints)
+
+

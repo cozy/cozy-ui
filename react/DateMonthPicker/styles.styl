@@ -1,0 +1,72 @@
+@require 'settings/shadows'
+@require 'settings/radius'
+
+buttonHeight=3rem
+
+$buttonHover
+  background var(--defaultBackgroundColor)
+  color var(--primaryTextColor)
+
+$buttonActive
+  background-color var(--actionColorFocus)
+  font-weight bold
+  outline 0
+
+$button
+  background none
+  min-height buttonHeight
+  min-width 3rem
+  display inline-block
+  border-width 0
+  color var(--secondaryTextColor)
+  cursor pointer
+
+  &:hover
+    @extend $buttonHover
+
+  &:active, &:hover:active
+    @extend $buttonActive
+
+  &:focus
+      outline 0
+
+$select
+  justify-content center
+  display flex
+  align-items center
+  border-radius radius-8
+  border 1px solid var(--borderMainColor)
+  overflow hidden
+
+.DateMonthPicker__YearControls
+  @extend $select
+  @extend $elevation-1
+
+  margin-bottom 1rem
+  font-weight bold
+
+.DateMonthPicker__YearButton
+  @extend $button
+  flex-grow 0
+  cursor pointer
+
+.DateMonthPicker__Year
+  flex-grow 1
+  display inline-flex
+  justify-content center
+
+.DateMonthPicker__MonthGrid
+  display grid
+  grid-template-columns repeat(4, auto)
+  grid-template-rows repeat(3, 1fr)
+  overflow hidden
+  grid-gap 1rem
+
+
+.DateMonthPicker__MonthButton
+  @extend $button
+  border-radius buttonHeight
+
+  &.DateMonthPicker__MonthButton--selected
+    @extend $buttonHover
+    font-weight bold

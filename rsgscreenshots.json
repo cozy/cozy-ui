@@ -1,0 +1,32 @@
+{
+  "UploadQueue": {
+    "viewports": {
+      "desktop": "1200x700"
+    }
+  },
+  "BottomSheet": {
+    "viewports": {
+      "desktop": "1200x700",
+      "mobile": "390x840"
+    },
+    "fullPage": false
+  },
+  "ActionsMenu": {
+    "viewports": {
+      "mobile": "390x840"
+    },
+    "fullPage": false
+  },
+  "ActionMenu": {
+    "perExampleScreenshot": true
+  },
+  "Modal": {
+    "perExampleScreenshot": true
+  },
+  "Dialog": {
+    "perExampleScreenshot": true
+  },
+  "SelectBox": {
+    "perExampleScreenshot": true
+  }
+}

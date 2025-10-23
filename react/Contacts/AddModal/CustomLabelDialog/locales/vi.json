@@ -1,0 +1,15 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "CustomLabelDialog": {
+        "label": {
+          "custom": "Nhãn tùy chỉnh",
+          "home": "Cá nhân",
+          "work": "Công việc"
+        },
+        "cancel": "Hủy",
+        "ok": "Ok"
+      }
+    }
+  }
+}

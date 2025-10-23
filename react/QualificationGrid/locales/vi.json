@@ -1,0 +1,15 @@
+{
+  "themes": {
+    "activity": "Hoạt động",
+    "family": "Gia đình",
+    "finance": "Tài chính",
+    "health": "Sức khỏe",
+    "home": "Nhà",
+    "identity": "Danh tính",
+    "invoice": "Hóa đơn",
+    "others": "Khác",
+    "transport": "Giao thông",
+    "undefined": "Chưa xác định",
+    "work_study": "Công việc"
+  }
+}

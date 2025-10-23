@@ -1,0 +1,41 @@
+@require 'components/forms'
+@require 'settings/breakpoints'
+@require 'settings/spaces'
+
+.o-field
+    @extend $field
+
+.o-field--inline
+    @extend $field-inline
+    margin 0
+
+    label
+        flex-basis rem(128)
+        flex-shrink 0
+        flex-grow 0
+        padding spacing_values.m 0
+
+        +small-screen()
+            flex-basis auto
+
+    > *
+        flex-grow 1
+
+.o-field-input
+    position relative
+    max-width rem(512)
+
+.o-side
+    position absolute
+    top 0.5rem
+    right 0
+    cursor pointer
+    text-transform uppercase
+
+.o-side-fullwidth
+    max-width 100%
+
+.o-field-input-action
+    @extend .o-side
+    top -1.5rem
+    text-transform uppercase

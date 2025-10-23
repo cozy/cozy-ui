@@ -1,0 +1,98 @@
+@require '../../stylus/components/forms'
+@require '../../stylus/settings/breakpoints'
+@require '../../stylus/tools/mixins'
+
+.select-control__input
+    width 0
+    height 0
+    overflow hidden
+
+.select--autowidth
+    max-width 32rem
+
+.select--disabled
+    @extends $select--disabled
+
+.select--fullwidth
+    @extends $select--fullwidth
+    padding-right 0
+
+.select-option
+    display flex
+    flex-direction row
+    justify-content flex-start
+    align-items center
+    padding rem(8)
+    border-left rem(4) solid transparent
+    color var(--primaryTextColor)
+    background-color var(--paperBackgroundColor)
+    transition all .2s ease-out
+    white-space normal /* otherwise the tick can be wrongly placed in Firefox */
+
+    &:hover:not(.select-option--disabled)
+        background-color var(--actionColorSelected)
+        cursor pointer
+
+        .select-option__actions
+          opacity 1
+
+.select-option--focused:not(.select-option--disabled)
+    background-color var(--actionColorHover)
+
+.select-option--selected
+    background-color var(--actionColorSelected)
+    border-left-color var(--primaryColor)
+
+.select-option--disabled
+    color var(--disabledTextColor)
+    cursor not-allowed
+
+.select-option__checkbox
+    margin-right rem(8)
+    vertical-align top
+
+.select-option__label
+    flex-grow 1
+    display flex
+    justify-content space-between
+    align-items center
+    width 100%
+    overflow hidden
+
+.select-option__checkmark
+    width rem(32)
+
+.select-option__actions
+    opacity 0
+    white-space nowrap
+    transition opacity .2s ease-out
+
+    +medium-screen()
+      opacity 1
+
+.select__overlay
+    // Covers all the app so that clicking outside ends up
+    // not on an option (hence not selecting) but on the select
+    // so that anything under does not get clicked.
+    &::before
+        content '\00a0'
+        width 200vw
+        height 200vh
+        top -50vh
+        left -50vh
+        display block
+        position fixed
+
+.MenuList
+    display flex
+    flex-direction column
+
+.Group
+    overflow-y auto
+    padding-top 0.25rem !important
+    padding-bottom .25rem !important
+
+.FixedGroup
+    @extend .Group
+    flex-shrink 0
+    border-top 1px solid var(--borderMainColor)

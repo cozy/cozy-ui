@@ -1,0 +1,254 @@
+@require '../tools/mixins'
+
+/*------------------------------------*\
+  Breakpoints
+  =====
+\*------------------------------------*/
+
+// variables
+
+BP-teeny       =  375
+BP-tiny        =  480
+BP-small       =  768
+BP-medium      = 1023
+BP-large       = 1200
+BP-extra-large = 1439
+
+// Standard breakpoints collection for utilities
+breakpoints = {
+    'none': '',
+    'tiny': 't',
+    'small': 's',
+    'medium': 'm',
+}
+
+/*
+    Breakpoints
+
+    This is the collection of available breakpoint variables:<br><br>
+    - `BP-teeny`         -  375px
+    - `BP-tiny`          -  480px
+    - `BP-small`         -  768px
+    - `BP-medium`        -  1023px
+    - `BP-large`         -  1200px
+    - `BP-extra-large`   -  1439px
+
+    <br>Also we have a standard breakpoints collection meant to be used as suffixes for some utility classes<br>
+
+    If you want a utility class to trigger only at defined breakpoints you can use those:<br><br>
+    - `-t`  - refers to `tiny` breakpoint (max-width: 480px)
+    - `-s`  - refers to `small` breakpoint (max-width: 768px)
+    - `-m`  - refers to `medium` breakpoint (max-width: 1023px)
+
+    Styleguide Settings.breakpoints
+*/
+
+/*
+    Media Queries mixins
+
+    You can use these mixins with no arguments and they will output
+    the desired a `max-width` media-query. Use the direction argument
+    to set it to `min`.
+
+    Styleguide Settings.breakpoints.mixins
+*/
+
+// mixins
+// @stylint off
+size-helper(direction, size)
+    direction == 'min' ? size + 1 : size
+
+/*
+    teeny-screen()
+
+    teeny-screen() Refers to (max-width: 375px)
+    teeny-screen('min') Refers to (min-width: 376px)
+
+    Weight: -6
+
+    Styleguide Settings.breakpoints.mixins.teeny
+*/
+teeny-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-teeny)))
+        {block}
+
+/*
+    tiny-screen()
+
+    tiny-screen() Refers to (max-width: 480px)
+    tiny-screen('min') Refers to (min-width: 481px)
+
+    Weight: -5
+
+    Styleguide Settings.breakpoints.mixins.tiny
+*/
+tiny-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-tiny)))
+        {block}
+
+/*
+    small-screen()
+
+    small-screen() Refers to (max-width: 768px)
+    small-screen('min') Refers to (min-width: 769px)
+
+    Weight: -4
+
+    Styleguide Settings.breakpoints.mixins.small
+*/
+small-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-small)))
+        {block}
+
+/*
+    medium-screen()
+
+    medium-screen() Refers to (max-width: 1023px)
+    medium-screen('min') Refers to (min-width: 1024px)
+
+    Weight: -3
+
+    Styleguide Settings.breakpoints.mixins.medium
+*/
+medium-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-medium)))
+        {block}
+
+/*
+    large-screen()
+
+    large-screen() Refers to (max-width: 1200px)
+    large-screen('min') Refers to (min-width: 1201px)
+
+    Weight: -2
+
+    Styleguide Settings.breakpoints.mixins.large
+*/
+large-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-large)))
+        {block}
+
+/*
+    extra-large-screen()
+
+    extra-large-screen() Refers to (max-width: 1439px)
+    extra-large-screen('min') Refers to (min-width: 1440px)
+
+    Weight: -1
+
+    Styleguide Settings.breakpoints.mixins.extra-large
+*/
+extra-large-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-extra-large)))
+        {block}
+
+// mixins named
+
+/*
+    small-device()
+
+    Refers to (max-width: 543px), (max-height: 375px)
+    Triggers when the viewport has a width smaller than 543px OR a height smaller than 375px
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.mixins.small-device
+*/
+
+small-device()
+    @media (max-width: rem(size-helper('max', BP-tiny))), (max-height: rem(size-helper('max', BP-teeny)))
+        {block}
+
+/*
+    medium-device()
+
+    Refers to (min-width: 543px) and (min-height: 375px)
+    Triggers when the viewport has a width bigger than 543px AND a height bigger than 375px
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.mixins.medium-device
+*/
+
+medium-device()
+    @media (min-width: rem(size-helper('min', BP-tiny))) and (min-height: rem(size-helper('min', BP-teeny)))
+        {block}
+
+/*
+    desktop()
+
+    Refers to (min-width: 1024px)
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.mixins.desktop
+*/
+desktop()
+    @media (min-width: rem(size-helper('min', BP-medium)))
+        {block}
+
+/*
+    tablet()
+
+    Refers to (min-width: 769px) and (max-width: 1023px)
+
+    Weight: 1
+
+    Styleguide Settings.breakpoints.mixins.tablet
+*/
+tablet()
+    @media (min-width: rem(size-helper('min', BP-small))) and (max-width: rem(size-helper('max', BP-medium)))
+        {block}
+
+/*
+    mobile()
+
+    Refers to small-screen() which is (max-width: 768px)
+
+    Weight: 2
+
+    Styleguide Settings.breakpoints.mixins.mobile
+*/
+mobile()
+    +small-screen()
+        {block}
+
+/*
+    gt-mobile()
+
+    Refers to (min-width: 769px)
+
+    Weight: 3
+
+    Styleguide Settings.breakpoints.mixins.gt-mobile
+*/
+gt-mobile()
+    @media (min-width: rem(size-helper('min', BP-small)))
+        {block}
+
+/*
+    gt-tablet()
+
+    Refers to (min-width: 1024px)
+
+    Weight: 4
+
+    Styleguide Settings.breakpoints.mixins.gt-tablet
+*/
+gt-tablet()
+    @media (min-width: rem(size-helper('min', BP-medium)))
+        {block}
+
+/*
+    lt-desktop()
+
+    Refers to medium-screen() which is (max-width: 1023px)
+
+    Weight: 5
+
+    Styleguide Settings.breakpoints.mixins.lt-desktop
+*/
+lt-desktop()
+    +medium-screen()
+        {block}
+// @stylint on

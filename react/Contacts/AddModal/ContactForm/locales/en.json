@@ -1,0 +1,75 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactForm": {
+        "gender": {
+          "man": "Man",
+          "woman": "Woman"
+        },
+        "other-fields": "Other fields",
+        "fields": {
+          "gender": "Civility",
+          "givenName": "Firstname",
+          "additionalName": "2nd firstname",
+          "surname": "Name in use",
+          "familyName": "Lastname",
+          "phone": "Phone",
+          "email": "Email",
+          "matrix": "Matrix ID",
+          "address": "Address",
+          "cozy": "Twake URL",
+          "company": "Company",
+          "jobTitle": "Job title",
+          "birthday": "Birthday",
+          "birthplace": "Birthplace",
+          "relatedContact": "Related contact",
+          "relationship": "Relationship",
+          "note": "Notes",
+          "label": "Label",
+          "required": "One of these fields must be filled in"
+        },
+        "label": {
+          "none": "None",
+          "home": "Personal",
+          "work": "Pro",
+          "custom": "Customised",
+          "phone": {
+            "cell-home": "Cell (personal)",
+            "cell-work": "Cell (pro)",
+            "voice-home": "Voice (personal)",
+            "voice-work": "Voice (pro)",
+            "fax-home": "Fax (personal)",
+            "fax-work": "Fax (pro)"
+          },
+          "address": {
+            "home": "Home (personal)",
+            "work": "Work (pro)"
+          },
+          "relationship": {
+            "parent": "Parent",
+            "child": "Child",
+            "sibling": "Sibling",
+            "spouse": "Spouse",
+            "coResident": "Co-resident",
+            "friend": "Friend",
+            "colleague": "Colleague",
+            "coWorker": "Co-worker",
+            "acquaintance": "Acquaintance",
+            "helper": "Helper",
+            "recipient": "Recipient"
+          }
+        },
+        "addLabel": {
+          "address": "Add an address",
+          "email": "Add an email",
+          "phone": "Add a phone",
+          "relatedContact": "Add a related contact"
+        }
+      }
+    }
+  },
+  "formatted": {
+    "date": "yyyy-LL-dd",
+    "address": "%{number} %{street}, %{code} %{city}, %{country}"
+  }
+}

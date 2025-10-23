@@ -1,0 +1,117 @@
+name: Build and Deploy Cozy-ui
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+env:
+  ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_modules
+  prepareArgos:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_argos
+  build:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup_modules
+      - uses: ./.github/actions/build_cache
+      - name: Lint
+        run: yarn lint
+      - name: Generate Sprite and Palette
+        run: yarn makeSpriteAndPalette
+      - name: Build JS
+        run: yarn build
+      - name: Build CSS
+        run: yarn build:css:all
+      - name: Build docs
+        run: |
+          yarn build:doc:react
+          yarn build:doc:kss
+  test:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_modules
+      - uses: ./.github/actions/build_cache_read
+      - name: BundleMon
+        uses: lironer/bundlemon-action@v1
+        continue-on-error: true
+      - name: Tests
+        run: yarn test
+  argosDesktop:
+    needs: [prepareArgos, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_argos
+      - uses: ./.github/actions/build_cache_read
+      - uses: ./.github/actions/build_argos_desktop_cache
+      - name: Argos - Create desktop screenshots
+        run: |
+          mkdir -p ./screenshots
+          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+  argosMobile:
+    needs: [prepareArgos, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_argos
+      - uses: ./.github/actions/build_cache_read
+      - uses: ./.github/actions/build_argos_mobile_cache
+      - name: Argos - Create mobile screenshots
+        run: |
+          mkdir -p ./screenshots
+          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+  argosKss:
+    needs: [prepareArgos, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_argos
+      - uses: ./.github/actions/build_cache_read
+      - uses: ./.github/actions/build_argos_kss_cache
+      - name: Argos - Create kss screenshots
+        run: |
+          mkdir -p ./screenshots
+          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+  argosUpload:
+    needs: [argosDesktop, argosMobile, argosKss]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup_argos
+      - uses: ./.github/actions/build_argos_desktop_cache
+      - uses: ./.github/actions/build_argos_mobile_cache
+      - uses: ./.github/actions/build_argos_kss_cache
+      - name: Argos - Upload all screenshots
+        run: |
+          UUID=$(uuidgen)
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+  deploy:
+    needs: [argosUpload, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup_modules
+      - uses: ./.github/actions/build_cache_read
+      - name: Deploy
+        if: ${{ github.ref_name == 'master' }}
+        run: yarn deploy:doc --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release

@@ -1,0 +1,9 @@
+{
+  "app_item": {
+    "by": "Bởi",
+    "installed": "Đã cài đặt",
+    "maintenance": "Đang bảo trì",
+    "update": "Có cập nhật mới",
+    "favorite": "Đã thêm vào trang chủ"
+  }
+}

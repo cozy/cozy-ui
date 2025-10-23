@@ -1,0 +1,41 @@
+{
+  "cancel": "Отменить",
+  "allow": "Разрешить",
+  "allow-location-dialog": {
+    "title": "Разрешить доступ к вашему местоположению",
+    "description": "Ваше приложение Twake должно всегда быть авторизовано для доступа к местоположению вашего телефона, чтобы запоминать и помочь вам анализировать ваши перемещения, даже когда приложение не используется.\n\nОно НИКОГДА не будет передано кому-либо без вашего запроса.\n\nВы можете отключить эту функцию в настройках приложения Coach CO2."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Отсканируйте QR-код",
+    "text": "или перейдите напрямую в <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>или <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> чтобы установить приложение Twake Workplace",
+    "a11n": "Перейти на страницу загрузки приложения Twake Workplace"
+  },
+  "authentification-dialog": {
+    "title": "Вход",
+    "title-oidc": "Twake Pass",
+    "subtitle": "Для безопасности подтвердите вашу личность",
+    "label": "Пароль Twake",
+    "label-oidc": "Пароль Twake Pass",
+    "abort": "Выйти",
+    "unlock": "Разблокировать",
+    "forgotten-password": "Я забыл пароль",
+    "errors": {
+      "invalid_password": "Неверный пароль, попробуйте еще раз.",
+      "server_error": "Что-то пошло не так с сервером. Пожалуйста, перезагрузите страницу."
+    }
+  },
+  "shortcut-dialog": {
+    "create-title": "Создать ярлык",
+    "edit-title": "Изменить ярлык",
+    "filename": "Имя ярлыка",
+    "url": "URL",
+    "cancel": "Отменить",
+    "create": "Создать",
+    "edit": "Сохранить",
+    "created": "Ярлык был создан",
+    "edited": "Ярлык был изменен",
+    "errored": "Произошла ошибка",
+    "needs-info": "Для ярлыка нужны имя и URL",
+    "url-bad-format": "Введённый URL имеет неверный формат"
+  }
+}

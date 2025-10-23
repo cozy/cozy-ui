@@ -1,0 +1,15 @@
+{
+  "Contacts": {
+    "Header": {
+      "create": "Tạo",
+      "filter": {
+        "no-group": "Tạo nhóm liên hệ để dễ dàng phân loại và chia sẻ!"
+      },
+      "import": {
+        "title": "Nhập",
+        "store": "Từ nguồn khác",
+        "vcard": "Từ tập tin vCard"
+      }
+    }
+  }
+}

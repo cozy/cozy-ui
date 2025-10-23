@@ -1,0 +1,55 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+$empty
+    display flex
+    flex-direction column
+    justify-content center
+    flex 1 0 auto
+    align-self center
+    margin 0 auto
+    padding 2rem
+    text-align center
+    width calc(100% - 4rem)
+    max-width rem(512)
+
+$empty--centered
+    +medium-screen()
+        position fixed
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+$empty-img
+    display block
+    margin 0 auto rem(16)
+    height rem(128)
+
+    +medium-screen()
+        margin-bottom rem(8)
+        height rem(96)
+
+$empty-img--medium
+    height rem(160)
+
+    +medium-screen()
+        height rem(128)
+
+$empty-img--large
+    height rem(192)
+
+    +medium-screen()
+        height rem(160)
+
+$empty-title
+    margin 0 auto
+    max-width rem(1008)
+    line-height 1.3
+
+    +medium-screen()
+        margin 0 rem(24)
+
+$empty-text
+    max-width rem(1008)
+    color var(--secondaryTextColor)
+    line-height 1.5

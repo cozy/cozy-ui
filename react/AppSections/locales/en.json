@@ -1,0 +1,37 @@
+{
+  "app_categories": {
+    "all": "All categories",
+    "banking": "Banking",
+    "clouds": "Clouds and vaults",
+    "cozy": "The essentials",
+    "education": "Education",
+    "energy": "Energy",
+    "finance": "Employment and finance",
+    "health": "Health",
+    "host_provider": "Host",
+    "insurance": "Insurance",
+    "isp": "Mobile and Internet",
+    "konnectors": "Services",
+    "list_separator": ", ",
+    "mes_infos": "MesInfos experimentation",
+    "online_services": "Online services",
+    "others": "Others",
+    "partners": "Partners",
+    "press": "Press",
+    "productivity": "Productivity",
+    "ptnb": "PTNB experimentation",
+    "public_service": "Public services",
+    "shopping": "Shopping",
+    "social": "Social",
+    "tech": "Tech",
+    "telecom": "Telecom",
+    "transport": "Transportation",
+    "pro": "Work",
+    "shortcuts": "Additional apps"
+  },
+  "sections": {
+    "applications": "Applications",
+    "konnectors": "Services",
+    "shortcuts": "Additional apps"
+  }
+}

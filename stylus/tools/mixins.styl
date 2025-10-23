@@ -1,0 +1,168 @@
+/*------------------------------------*\
+  Mixins
+  =====
+
+  This file contains mixins:
+  - hide()
+  - reset()
+  - rem()
+  - visually-hide()
+  - global()
+  - cssModulesUtils()
+  - nativeUtils()
+\*------------------------------------*/
+/*
+    Tools
+
+    Weight: -9
+
+    Styleguide Tools
+*/
+/*
+    Mixins
+
+    Available mixins
+
+    Styleguide Tools.mixins
+*/
+
+// Default Font-size
+$basefont ?= 16px
+
+rem($value, $base = $basefont)
+    $max = length($value)
+
+    $remValues = ()
+    for $i in (0...$max)
+        push($remValues, _convert-to-rem($value[$i], $base))
+
+    return $remValues
+
+_convert-to-rem($px, $base)
+    if (typeof($px) == 'unit')
+        if ((unit($px) == '' || unit($px) == 'px') && ($px != 0))
+            return (round($px / $base, 3))rem
+        else
+            return 0
+
+/*
+    rem($value, $basefont)
+
+    rem() takes one or more numeric values in pixel and calculates the rem values from it.
+
+    NB: you don't have to explicitly write the `px` unit.
+
+    $value - The value in pixel you want to translate in rem. For multiple values you can use `rem(14 12)` for shorthand properties such as `margin`. ⚠ Multiples values should be separated by spaces.
+    $basefont - If you need to overwrite the default `$basefont` value of `16`
+
+    Weight: 1
+
+    Styleguide Tools.mixins.rem
+*/
+
+/*
+    hide()
+
+    hide() mixin definitely hides an element. This mixin doesn't take parameters.
+
+    Weight: 2
+
+    Styleguide Tools.mixins.hide
+*/
+hide()
+    display     none !important  // @stylint ignore
+    visibility  hidden !important  // @stylint ignore
+
+/*
+    visually-hide()
+
+    visually-hide() mixin visually hides an element. The element is still visible by screen readers.
+    This mixin doesn't take parameters.
+
+    Weight: 3
+
+    Styleguide Tools.mixins.visually-hide
+*/
+visually-hide()
+    border 0
+    clip rect(0 0 0 0)
+    clip-path polygon(0 0, 0 0, 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+    white-space nowrap
+
+/*
+    ellipsis()
+
+    ellipsis() mixin add an ellipsis on text.
+    This mixin doesn't take parameters.
+
+    Weight: 4
+
+    Styleguide Tools.mixins.ellipsis
+*/
+ellipsis()
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+/*
+    reset()
+
+    reset() mixin removes every padding, margin and border of an element.
+    This mixin doesn't take parameters.
+
+    Weight: 5
+
+    Styleguide Tools.mixins.reset
+*/
+reset()
+    margin  0
+    padding 0
+    border  0
+
+global(selector, placeholder, type = extend)
+    if type == extend
+        if cssmodules == true
+            :global({selector})
+                @extend {placeholder} // @stylint ignore
+        else
+            {selector}
+                @extend {placeholder} // @stylint ignore
+    else if type == mixin
+        if cssmodules == true
+            :global({selector})
+                {placeholder}() // @stylint ignore
+        else
+            {selector}
+                {placeholder}() // @stylint ignore
+
+cssModulesUtils(props, breakpoints)
+    for kBp, vBp in breakpoints
+        if vBp == ''
+            for kProp, vProp in props
+                :global(.u-{vProp})
+                    {kProp}()
+        else
+            @media (max-width: rem(lookup('BP-'+kBp)))
+                for kProp, vProp in props
+                    :global(.u-{vProp}-{vBp})  // @stylint ignore
+                        {kProp}()
+
+nativeUtils(props, breakpoints)
+    for kBp, vBp in breakpoints
+        if vBp == ''
+            for kProp, vProp in props
+                .u-{vProp}
+                    {kProp}()
+        else
+            @media (max-width: rem(lookup('BP-'+kBp)))
+                for kProp, vProp in props
+                    .u-{vProp}-{vBp}  // @stylint ignore
+                        {kProp}()
+
+// @stylint on

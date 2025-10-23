@@ -1,0 +1,57 @@
+@require '../tools/mixins'
+@require '../settings/breakpoints'
+
+$tabs-base
+    $borderBottomWidth=rem(2)
+    .coz-tab-list
+        border-bottom  rem(1) solid var(--dividerColor)
+        background var(--tabsBackgroundColor)
+        overflow-x auto
+        display flex
+
+    .coz-tab-list--inverted
+        --tabsActiveTextColor var(--primaryContrastTextColor)
+        --tabsInactiveTextColor var(--primaryContrastTextColor)
+        --tabsIndicatorColor var(--primaryContrastTextColor)
+        --tabsBackgroundColor var(--primaryColor)
+
+    .coz-tab
+        flex           0 0 auto
+        padding        rem(10 16)
+        text-transform uppercase
+        font-size      rem(12)
+        line-height    rem(12)
+        cursor         pointer
+        color          var(--tabsInactiveTextColor)
+        font-weight    bold
+        opacity        .64
+
+        // Create a transparent border even if the tab is not active
+        // otherwise (if the border is set only when tab is active)
+        // the text goes up the size of the border
+        border-bottom $borderBottomWidth solid transparent
+
+        &:hover
+            text-decoration none
+
+        +small-screen()
+            &
+                // 0 for flex-basis so that each tabs has the same width
+                flex           1 0 0
+
+                height 3rem
+                padding 0 1.5rem
+                box-sizing border-box
+
+                display flex
+                justify-content center
+                align-items center
+                white-space nowrap
+
+    .coz-tab--active
+        border-bottom-color var(--tabsIndicatorColor)
+        color         var(--tabsActiveTextColor)
+        opacity 1
+
+    .coz-tab-panel
+        padding-top rem(20)

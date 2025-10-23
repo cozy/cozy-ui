@@ -1,0 +1,75 @@
+{
+  "common": {
+    "day": "%{smart_count} день |||| %{smart_count} дней"
+  },
+  "ListItem": {
+    "attributes": {
+      "birthday": "День рождения",
+      "birthcity": "Город рождения",
+      "address": "Адрес",
+      "email": "Адрес электронной почты",
+      "phone": "Номер телефона",
+      "company": "Компания",
+      "jobTitle": "Должность",
+      "metadata": {
+        "datetime": "Добавлено",
+        "issueDate": "Выдано",
+        "expirationDate": "Срок истечения",
+        "referencedDate": "Дата ссылки",
+        "shootingDate": "Дата съемки",
+        "obtentionDate": "Дата получения",
+        "date": "Дата документа",
+        "country": "Страна выдачи",
+        "refTaxIncome": "Референсный налоговый доход",
+        "contractType": "Тип контракта",
+        "noticePeriod": "Предупреждение об истечении",
+        "cafFileNumber": "Номер файла CAF",
+        "vinNumber": "Регистрационный номер транспортного средства (VIN)",
+        "cardNumber": "Номер удостоверения личности",
+        "ibanNumber": "Номер IBAN",
+        "bicNumber": "Номер BIC",
+        "passportNumber": "Номер паспорта",
+        "netSocialAmount": "Чистая социальная сумма",
+        "vehicle": {
+          "licenseNumber": "Регистрационный номер транспортного средства",
+          "confidentialNumber": "Конфиденциальный код регистрации транспортного средства"
+        },
+        "number": {
+          "pay_sheet": "Валовое вознаграждение",
+          "tax_return": "Референсный налоговый номер",
+          "tax_notice": "Референсный налоговый номер",
+          "real_estate_tax": "Референсный налоговый номер",
+          "tax_timetable": "Референсный налоговый номер",
+          "fine": "Размер штрафа",
+          "fidelity_card": "Номер карты",
+          "driver_license": "Номер лицензии",
+          "caf": "Номер файла CAF",
+          "payment_proof_family_allowance": "Номер файла CAF",
+          "vehicle_registration": "Регистрационный номер транспортного средства (VIN)",
+          "national_id_card": "Номер удостоверения личности",
+          "bank_details": "Номер IBAN",
+          "passport": "Номер паспорта",
+          "residence_permit": "Номер лицензии"
+        }
+      }
+    },
+    "file": {
+      "page": {
+        "back": "Обратная сторона",
+        "front": "Лицевая сторона"
+      }
+    },
+    "snackbar": {
+      "copyToClipboard": {
+        "success": "Скопировано в буфер обмена",
+        "error": "Не удается скопировать в буфер обмена"
+      }
+    },
+    "renameModal": {
+      "title": "Переименовать",
+      "content": "Вы собираетесь изменить расширение файла. Хотите продолжить?",
+      "cancel": "Отменить",
+      "submit": "Продолжить"
+    }
+  }
+}

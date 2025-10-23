@@ -1,0 +1,47 @@
+@require 'settings/breakpoints'
+
+
+&.Figure-currency
+    color var(--secondaryTextColor)
+
+&.Figure-content--positive
+    color var(--successColor)
+
+    .Figure-currency
+        color var(--successColor)
+
+&.Figure-content--negative
+    color var(--errorColor)
+
+    .Figure-currency
+        color var(--errorColor)
+
+&.Figure-content--warning
+    color var(--warningColor)
+
+    .Figure-currency
+        color var(--warningColor)
+
+.Figure-total
+    font-weight    900
+
+.Figure__currency--withSpacing
+    margin-left .2em
+
+.Figure--big
+    font-size 2rem
+    line-height 2.625rem
+
++small-screen()
+    .Figure--big
+        font-size 1.5rem
+        line-height 1.75rem
+
+.Figure--clickable
+    cursor pointer
+
+.Figure_blur
+    filter blur(8px)
+
+.Figure--inline
+    display inline

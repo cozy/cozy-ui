@@ -1,0 +1,114 @@
+@require '../tools/mixins'
+@require '../settings/breakpoints'
+@require '../elements/defaults'
+
+/*------------------------------------*\
+  Layout vars
+\*------------------------------------*/
+barHeight = rem(48)
+navHeight = rem(48)
+
+/*------------------------------------*\
+  Layouts
+\*------------------------------------*/
+
+$centerized
+    position absolute
+    top 50%
+    left 50%
+    transform translateX(-50%) translateY(-50%)
+
+
+$content-center
+    display flex
+    align-items center
+    justify-content center
+
+
+$fullbleed
+    position fixed
+    bottom 0
+    top 0
+    left 0
+    right 0
+
+// Elastic Layout — Usually with fixed header and/or fixed footer and an extensible content zone with scrolling inside
+$elastic
+    display flex
+    flex-flow column nowrap
+    align-items stretch
+
+$elastic-content
+    background-repeat no-repeat
+    background-color var(--paperBackgroundColor)
+    background-size 100% rem(32), 100% rem(32), 100% rem(8), 100% rem(8)
+    background-attachment local, local, scroll, scroll
+    background-clip padding-box
+    overflow auto
+    -webkit-overflow-scrolling touch
+
+$elastic-bar
+    flex 0 0 auto
+
+$app-layout
+    box-sizing border-box
+    display flex
+    max-width 100%
+    width 100%
+    height 100%
+    background-color var(--paperBackgroundColor)
+    color var(--primaryTextColor)
+
+    // When you want a sidebar
+    &-2panes
+        flex 0 0 100%
+        align-items stretch
+
+$app-main
+    display flex
+    flex-direction column
+    position relative
+    flex 1 1 auto
+    box-sizing border-box
+    overflow hidden
+    height 100%
+
+    +medium-screen() // mobile + tablet
+        // iPhone X environment tweak
+        padding-left env(safe-area-inset-left)
+        padding-right env(safe-area-inset-right)
+        padding-bottom env(safe-area-inset-bottom)
+
+    &-topbar
+        // this pseudo-element is "ghost" element replacing bar
+        &:before
+            content ''
+            display block
+            height barHeight
+            width 100%
+            background-color var(--paperBackgroundColor)
+
+    &-2panes
+        background-color var(--defaultBackgroundColor)
+
+        +medium-screen() // mobile + tablet
+            height calc(100vh - var(--sidebarHeight))
+            background-color transparent
+
+$app-content
+    position relative
+    display flex
+    flex-direction column
+    flex 1 1 auto
+    box-sizing border-box
+    overflow hidden auto
+    background-color var(--paperBackgroundColor)
+    height 100%
+
+    &-2panes
+        margin 1rem 1rem 1rem 0
+        border-radius 1rem
+
+        +medium-screen() // mobile + tablet
+            margin 0
+            border-radius 0

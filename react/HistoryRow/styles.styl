@@ -1,0 +1,45 @@
+@require 'settings/spaces.styl'
+// If using this value in .HistoryRowCircle, its box-sizing
+//should be set to border-box so that the border width is accounted in the height
+CIRCLE_HEIGHT=1.125rem
+HISTORYROWMEDIA_PADDING=1rem
+
+.HistoryRowCircleWrapper
+    width 2.6rem
+    height 2.6rem
+    justify-content center
+    display flex
+    align-self start
+
+.HistoryRowCircle
+    border 1px var(--dividerColor) solid
+    background-color var(--paperBackgroundColor)
+
+.HistoryRowRevisionLoader
+    display flex
+    justify-content center
+
+.HistoryRowCaption
+    margin-bottom spacing_values.xl
+    padding-left spacing_values.xl
+    padding-right spacing_values.xl
+
+.HistoryRowMedia
+    position relative
+    padding HISTORYROWMEDIA_PADDING
+
+.HistoryRowMedia::before
+    content ''
+    border-left 1px var(--coolGrey) dashed
+    position absolute
+    margin-left 20px
+    top CIRCLE_HEIGHT + HISTORYROWMEDIA_PADDING
+    bottom -(HISTORYROWMEDIA_PADDING)
+
+.HistoryRowMedia:last-child::before
+    border 0
+
+//z-index is needed since we want the IMG to be displayed above the border
+.HistoryRowMediaImg
+    align-self: flex-start
+    z-index 1

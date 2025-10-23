@@ -1,0 +1,32 @@
+@require 'settings/breakpoints'
+@require 'tools/mixins'
+@require 'settings/spaces'
+
+.Infos
+    position relative
+    border-radius 8px
+    padding spacing_values.m spacing_values.l
+
+    +mobile()
+        padding spacing_values.s spacing_values.m
+
+    &.Infos--primary
+        color var(--primaryTextColor)
+        background-color var(--primaryBackground)
+
+    &.Infos--secondary
+        color var(--primaryTextColor)
+        background-color var(--secondaryBackground)
+
+    &.Infos--danger
+        color var(--primaryTextColor)
+        background-color var(--errorBackground)
+
+.Infos-description
+    max-width 32rem
+
+.Info-close
+    position absolute
+    top 0
+    right 0
+    padding spacing_values.s

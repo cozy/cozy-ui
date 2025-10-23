@@ -1,0 +1,54 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+@require './spaces.styl'
+/*------------------------------------*\
+  Position utilities
+\*------------------------------------*/
+
+position-absolute()
+    position absolute
+
+position-relative()
+    position relative
+
+position-fixed()
+    position fixed
+
+position-sticky()
+    position sticky
+
+position-static()
+    position static
+
+props = {
+    'position-absolute': 'pos-absolute',
+    'position-relative': 'pos-relative',
+    'position-fixed': 'pos-fixed',
+    'position-sticky': 'pos-sticky',
+    'position-static': 'pos-static',
+}
+
+directions = top bottom left right
+
+cssModulesDirectionsUtils()
+    for direction in directions
+        for kSpace, vSpace in spacing_values
+            :global(.u-{direction}-{kSpace})
+                {direction}: vSpace
+        :global(.u-{direction}-0)
+            {direction}: 0
+
+nativeDirectionsUtils()
+    for direction in directions
+        for kSpace, vSpace in spacing_values
+            .u-{direction}-{kSpace}
+                {direction}: vSpace
+        .u-{direction}-0
+            {direction}: 0
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+    cssModulesDirectionsUtils()
+else
+    nativeUtils(props, breakpoints)
+    nativeDirectionsUtils()

@@ -1,0 +1,95 @@
+{
+  "action": {
+    "loading": "Loading...",
+    "withoutIAP": "I understand"
+  },
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan doesn't allow you to **modify your documents online**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "public": {
+      "title": "Information",
+      "content": "You cannot edit this file online. Please ask the document owner to update their Cozy subscription.",
+      "action": "I understand"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "passwordSharingPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan doesn't allow you to **share your passwords**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxAccountsByKonnectorPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan allows you to connect up to **%{smart_count} account %{konnectorName}** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan. |||| Your plan allows you to connect up to **%{smart_count} accounts %{konnectorName}** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxAccountsPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan allows you to connect up to **%{smart_count} account** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan. |||| Your plan allows you to connect up to **%{smart_count} accounts** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan allows you to manually add up to **%{smart_count} paper**.\n\nTo unlock this feature, or simply support us, you can modify the plan of your Cozy. |||| Your plan allows you to manually add up to **%{smart_count} papers**.\n\nTo unlock this feature, or simply support us, you can modify the plan of your Cozy.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "quotaPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your disk storage is full.\n\nPlease remove files, empty your trash or upgrade your plan before uploading files.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your disk storage is full.\n\nPlease remove files, empty your trash before uploading files.",
+      "action": "I understand"
+    }
+  },
+  "maxDaysToCapturePaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan allows you to capture only **%{smart_count} day of trips**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan. |||| Your plan allows you to capture only **%{smart_count} days of trips**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@require '../settings/typography.styl'
+
+/*------------------------------------*\
+  Titles
+\*------------------------------------*/
+
+$title-default
+    font-weight bold
+    color var(--primaryTextColor)
+
+$title-h1
+    @extend $title-default
+    font-size $h1-font-size
+    letter-spacing rem(-.2)
+    +small-screen()
+        font-size rem(20)
+
+$title-h2
+    @extend $title-default
+    font-size $h2-font-size
+    +small-screen()
+        font-size rem(18)
+
+$title-h3
+    @extend $title-default
+    font-size $h3-font-size
+    +small-screen()
+        font-size rem(16)
+
+$title-h4
+    @extend $title-default
+    font-size $h4-font-size
+    +small-screen()
+        font-weight bold
+        color var(--primaryTextColor)
+
+/*------------------------------------*\
+  Text content
+\*------------------------------------*/
+
+$text
+    font-size $text-font-size
+    line-height 1.3
+    color var(--primaryTextColor)
+
+$caption
+    font-size $caption-font-size
+    line-height 1.2
+    color var(--coolGrey)
+
+$subtitle
+    font-size $subtitle-font-size
+    line-height 1.313
+
+$uppercase
+    text-transform uppercase
+
+$lowercase
+    text-transform lowercase
+
+$subtitle
+    font-size $subtitle-font-size
+    text-transform uppercase
+    font-weight bold
+
+global('.u-title-h1', $title-h1)
+global('.u-title-h2', $title-h2)
+global('.u-title-h3', $title-h3)
+global('.u-title-h4', $title-h4)
+global('.u-text', $text)
+global('.u-uppercase', $uppercase)
+global('.u-lowercase', $lowercase)
+global('.u-caption', $caption)
+global('.u-subtitle', $subtitle)

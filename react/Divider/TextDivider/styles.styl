@@ -1,0 +1,26 @@
+.divider
+  align-items center
+  display flex
+
+  &::after,
+  &::before {
+    content ''
+    height 1px
+    background-color var(--dividerColor)
+  }
+
+  &::before {
+    display none
+    margin-right 0.5rem
+  }
+
+  &::after {
+    flex 1
+    margin-left 0.5rem
+  }
+
+.center
+  &::before {
+    display block
+    flex 1
+  }

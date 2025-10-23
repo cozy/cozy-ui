@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HasValueCondition component should not render its children if value is falsy 1`] = `
+<form
+  onSubmit={[Function]}
+/>
+`;
+
+exports[`HasValueCondition component should not render its children if value is falsy and other condition is not fulfilled 1`] = `
+<form
+  onSubmit={[Function]}
+/>
+`;
+
+exports[`HasValueCondition component should render its children if value is falsy but other condition is fulfilled 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <span>
+    Foo should be here
+  </span>
+</form>
+`;
+
+exports[`HasValueCondition component should render its children if value is truthy 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <span>
+    Foo should be here
+  </span>
+</form>
+`;

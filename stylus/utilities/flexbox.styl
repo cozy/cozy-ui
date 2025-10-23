@@ -1,0 +1,162 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+flexbox()
+    display flex
+
+inline-flexbox()
+    display inline-flex
+
+flexbox-auto()
+    flex 1 1 auto
+
+flexbox-none()
+    flex none
+
+flexbox-column()
+    flex-direction column
+flexbox-row()
+    flex-direction row
+flexbox-wrap()
+    flex-wrap wrap
+flexbox-nowrap()
+    flex-wrap nowrap
+flexbox-wrap-reverse()
+    flex-wrap wrap-reverse
+flexbox-column-reverse()
+    flex-direction column-reverse
+flexbox-row-reverse()
+    flex-direction row-reverse
+
+flexbox-items-start()
+    align-items flex-start
+flexbox-items-end()
+    align-items flex-end
+flexbox-items-center()
+    align-items center
+flexbox-items-baseline()
+    align-items baseline
+flexbox-items-stretch()
+    align-items stretch
+
+flexbox-self-start()
+    align-self flex-start
+flexbox-self-end()
+    align-self flex-end
+flexbox-self-center()
+    align-self center
+flexbox-self-baseline()
+    align-self baseline
+flexbox-self-stretch()
+    align-self stretch
+
+flexbox-justify-start()
+    justify-content flex-start
+flexbox-justify-end()
+    justify-content flex-end
+flexbox-justify-center()
+    justify-content center
+flexbox-justify-between()
+    justify-content space-between
+flexbox-justify-around()
+    justify-content space-around
+
+flexbox-content-start()
+    align-content flex-start
+flexbox-content-end()
+    align-content flex-end
+flexbox-content-center()
+    align-content center
+flexbox-content-between()
+    align-content space-between
+flexbox-content-around()
+    align-content space-around
+flexbox-content-stretch()
+    align-content stretch
+
+flexbox-order-0()
+    order 0
+flexbox-order-1()
+    order 1
+flexbox-order-2()
+    order 2
+flexbox-order-3()
+    order 3
+flexbox-order-4()
+    order 4
+flexbox-order-5()
+    order 5
+flexbox-order-6()
+    order 6
+flexbox-order-7()
+    order 7
+flexbox-order-8()
+    order 8
+flexbox-order-last()
+    order 99999
+
+flexbox-grow-0()
+    flex-grow 0
+flexbox-grow-1()
+    flex-grow 1
+
+flexbox-shrink-0()
+    flex-shrink 0
+flexbox-shrink-1()
+    flex-shrink 1
+
+// Global classes generation
+
+props = {
+    'flexbox': 'flex',
+    'inline-flexbox': 'inline-flex',
+    'flexbox-none': 'flex-none',
+    'flexbox-column': 'flex-column',
+    'flexbox-row': 'flex-row',
+    'flexbox-wrap': 'flex-wrap',
+    'flexbox-nowrap': 'flex-nowrap',
+    'flexbox-wrap-reverse': 'flex-wrap-reverse',
+    'flexbox-column-reverse': 'flex-column-reverse',
+    'flexbox-row-reverse': 'flex-row-reverse',
+    'flexbox-auto': 'flex-auto',
+    'flexbox-items-start': 'flex-items-start',
+    'flexbox-items-end': 'flex-items-end',
+    'flexbox-items-center': 'flex-items-center',
+    'flexbox-items-baseline': 'flex-items-baseline',
+    'flexbox-items-stretch': 'flex-items-stretch',
+    'flexbox-self-start': 'flex-self-start',
+    'flexbox-self-end': 'flex-self-end',
+    'flexbox-self-center': 'flex-self-center',
+    'flexbox-self-baseline': 'flex-self-baseline',
+    'flexbox-self-stretch': 'flex-self-stretch',
+    'flexbox-justify-start': 'flex-justify-start',
+    'flexbox-justify-end': 'flex-justify-end',
+    'flexbox-justify-center': 'flex-justify-center',
+    'flexbox-justify-between': 'flex-justify-between',
+    'flexbox-justify-around': 'flex-justify-around',
+    'flexbox-content-start': 'flex-content-start',
+    'flexbox-content-end': 'flex-content-end',
+    'flexbox-content-center': 'flex-content-center',
+    'flexbox-content-between': 'flex-content-between',
+    'flexbox-content-around': 'flex-content-around',
+    'flexbox-content-stretch': 'flex-content-stretch',
+    'flexbox-order-0': 'flex-order-0',
+    'flexbox-order-1': 'flex-order-1',
+    'flexbox-order-2': 'flex-order-2',
+    'flexbox-order-3': 'flex-order-3',
+    'flexbox-order-4': 'flex-order-4',
+    'flexbox-order-5': 'flex-order-5',
+    'flexbox-order-6': 'flex-order-6',
+    'flexbox-order-7': 'flex-order-7',
+    'flexbox-order-8': 'flex-order-8',
+    'flexbox-order-last': 'flex-order-last',
+    'flexbox-grow-0': 'flex-grow-0',
+    'flexbox-grow-1': 'flex-grow-1',
+    'flexbox-shrink-0': 'flex-shrink-0',
+    'flexbox-shrink-1': 'flex-shrink-1'
+}
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+else
+    nativeUtils(props, breakpoints)

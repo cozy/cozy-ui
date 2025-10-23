@@ -1,0 +1,35 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+/*------------------------------------*\
+  Sidebar
+\*------------------------------------*/
+
+:root
+    --sidebarHeight: rem(52)
+
+$sidebar
+    width rem(236)
+    background-color var(--defaultBackgroundColor)
+    overflow-y auto
+    overflow-x hidden
+    display flex
+    flex-direction column
+    flex 0 0 auto
+
+    &--border
+        border-right rem(1) solid var(--dividerColor)
+
+    +medium-screen()
+        justify-content space-between
+        border 0
+        border-top rem(1) solid var(--dividerColor)
+        height var(--sidebarHeight)
+        width 100%
+        position fixed
+        bottom 0
+        left 0
+        display block
+        z-index var(--zIndex-nav)
+        // iPhone X environment tweak
+        padding-bottom env(safe-area-inset-bottom)

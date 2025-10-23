@@ -1,0 +1,23 @@
+@require 'settings/spaces'
+@require 'settings/typography'
+
+.Breadcrumb
+    display flex
+    align-items center
+    color var(--primaryTextColor)
+
+.Breadcrumb__previousButton.Breadcrumb__previousButton
+    // Tweak the margin-left to account for the IconButton wrapper
+    margin-left -(spacing_values.s)
+    margin-right (spacing_values.xs / 2)
+
+.Breadcrumb__items
+    flex-grow 1
+
+.Breadcrumb__previousItems
+    display flex
+
+.BreadcrumbSeparator
+    display inline-block
+    margin-left (spacing_values.xs / 4)
+    margin-right (spacing_values.xs / 4)

@@ -1,0 +1,75 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "ContactForm": {
+        "gender": {
+          "man": "Homme",
+          "woman": "Femme"
+        },
+        "other-fields": "Autres champs",
+        "fields": {
+          "gender": "Civilité",
+          "givenName": "Prénom",
+          "additionalName": "2e prénom",
+          "surname": "Nom d'usage",
+          "familyName": "Nom",
+          "phone": "Téléphone",
+          "email": "Email",
+          "address": "Adresse",
+          "matrix": "ID Matrix",
+          "cozy": "URL du Twake",
+          "company": "Entreprise",
+          "jobTitle": "Fonction",
+          "birthday": "Anniversaire",
+          "birthplace": "Lieu de naissance",
+          "relatedContact": "Contact lié",
+          "relationship": "Relation",
+          "note": "Notes",
+          "label": "Libellé",
+          "required": "Un de ces champs doit être renseigné"
+        },
+        "label": {
+          "none": "Aucun",
+          "home": "Perso",
+          "work": "Pro",
+          "custom": "Personnalisé",
+          "phone": {
+            "cell-home": "Mobile (perso)",
+            "cell-work": "Mobile (pro)",
+            "voice-home": "Fixe (perso)",
+            "voice-work": "Fixe (pro)",
+            "fax-home": "Fax (perso)",
+            "fax-work": "Fax (pro)"
+          },
+          "address": {
+            "home": "Domicile (perso)",
+            "work": "Travail (pro)"
+          },
+          "relationship": {
+            "parent": "Parent",
+            "child": "Enfant",
+            "sibling": "Frère/Soeur",
+            "spouse": "Conjoint",
+            "coResident": "Colocataire",
+            "friend": "Ami",
+            "colleague": "Collègue/Collaborateur",
+            "coWorker": "Associé/Partenaire",
+            "acquaintance": "Connaissance",
+            "helper": "Assistant/Aidant",
+            "recipient": "Bénéficiaire/Aidé"
+          }
+        },
+        "addLabel": {
+          "address": "Ajouter une adresse",
+          "email": "Ajouter un email",
+          "phone": "Ajouter un téléphone",
+          "relatedContact": "Ajouter un contact lié"
+        }
+      }
+    }
+  },
+  "formatted": {
+    "date": "dd/LL/yyyy",
+    "address": "%{number} %{street}, %{code} %{city}, %{country}"
+  }
+}

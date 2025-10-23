@@ -1,0 +1,37 @@
+@keyframes placeHolderShimmer {
+  0% { background-position: -20rem 0; }
+  80% { background-position: 20rem 0; }
+  80.1% { background-position: -20rem 0; }
+  100% { background-position: -20rem 0; }
+}
+
+.c-loading-placeholder {
+    animation-delay: 0.1s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background-position: -20rem 0;
+    background-image: linear-gradient(to right, silver 0%, #fcfcfc 50%, silver 100%);
+    background-size: 20rem 10rem;
+    background-repeat: no-repeat;
+    background-color: silver;
+    border-radius: 0.15rem;
+    max-width: 100%;
+    position: relative;
+    margin: .1rem 0;
+}
+
+.c-app-icon,
+.c-app-icon svg {
+    height 100%
+    width 100%
+    // Prevent flex-grow and flex-shrink
+    flex-grow 0
+    flex-shrink 0
+    object-fit contain
+}
+
+.c-app-icon-default {
+    color var(--silver)
+}

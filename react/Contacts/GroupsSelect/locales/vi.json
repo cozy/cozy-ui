@@ -1,0 +1,21 @@
+{
+  "Contacts": {
+    "GroupsSelect": {
+      "create": "Tạo nhóm",
+      "name": "Tên nhóm",
+      "already_exists": "Nhóm %{name} đã tồn tại.",
+      "manage": "Nhóm",
+      "filter": {
+        "all-groups": "Tất cả nhóm"
+      },
+      "created": {
+        "success": "Nhóm đã được tạo thành công.",
+        "error": "Nhóm chưa được tạo."
+      },
+      "renamed": {
+        "success": "Nhóm đã được đổi tên thành công.",
+        "error": "Nhóm chưa được đổi tên."
+      }
+    }
+  }
+}

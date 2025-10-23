@@ -1,0 +1,191 @@
+@require '../tools/mixins'
+@require './colors'
+
+/*------------------------------------*\
+  Text utilities
+\*------------------------------------*/
+
+json_colors=json('../settings/palette.json', { hash: true })
+
+for color in utility_colors
+    $color-{color}
+        color: json_colors[color] !important // @stylint ignore
+
+    global('.u-' + color, '$color-' + color)
+
+
+$breakword
+    word-break break-word
+
+$ellipsis
+    ellipsis()
+
+spacellipsis()
+    overflow hidden
+    text-overflow ellipsis
+    white-space break-spaces
+
+space-ellipsis = {
+    'spacellipsis': 'spacellipsis'
+}
+
+if cssmodules == true
+    cssModulesUtils(space-ellipsis, breakpoints)
+else
+    nativeUtils(space-ellipsis, breakpoints)
+
+$midellipsis
+    display flex
+    flex-wrap nowrap
+
+    > * // @stylint ignore
+        display inline-block
+        overflow hidden
+        white-space pre
+
+    > :first-child
+        text-overflow ellipsis
+
+    > :last-child
+        text-overflow clip
+        direction rtl
+
+    @supports(text-overflow: '[...]')
+        > :first-child
+            text-overflow '[...]'
+
+$link
+    &:link
+        color var(--primaryColor) !important // @stylint ignore
+        text-decoration none !important // @stylint ignore
+
+    &:visited
+    &:active
+    &:hover
+    &:focus
+        color var(--primaryColorDark) !important // @stylint ignore
+
+// @stylint off
+lh-tiny()
+    line-height 1!important
+
+lh-xsmall()
+    line-height 1.1!important
+
+lh-small()
+    line-height 1.2!important
+
+lh-medium()
+    line-height 1.3!important
+
+lh-large()
+    line-height 1.4!important
+
+lh-xlarge()
+    line-height 1.5!important
+
+global('.u-lh-tiny', lh-tiny, mixin)
+
+global('.u-lh-xsmall', lh-xsmall, mixin)
+
+global('.u-lh-small', lh-small, mixin)
+
+global('.u-lh-medium', lh-medium, mixin)
+
+global('.u-lh-large', lh-large, mixin)
+
+global('.u-lh-xlarge', lh-xlarge, mixin)
+
+fz-tiny()
+    font-size rem(12)!important
+    lh-medium()
+
+fz-xsmall()
+    font-size rem(13)!important
+    lh-large()
+
+fz-small()
+    font-size rem(14)!important
+    lh-large()
+
+fz-medium()
+    font-size rem(16)!important
+    lh-xlarge()
+
+fz-large()
+    font-size rem(18)!important
+    lh-xlarge()
+
+fontsize = {
+    'fz-tiny': 'fz-tiny',
+    'fz-xsmall': 'fz-xsmall',
+    'fz-small': 'fz-small',
+    'fz-medium': 'fz-medium',
+    'fz-large': 'fz-large'
+}
+
+if cssmodules == true
+    cssModulesUtils(fontsize, breakpoints)
+else
+    nativeUtils(fontsize, breakpoints)
+
+ta-left()
+    text-align left!important
+
+ta-right()
+    text-align right!important
+
+ta-center()
+    text-align center!important
+
+ta-justify()
+    text-align justify!important
+
+textalign = {
+    'ta-left': 'ta-left',
+    'ta-right': 'ta-right',
+    'ta-center': 'ta-center',
+    'ta-justify': 'ta-justify'
+}
+
+if cssmodules == true
+    cssModulesUtils(textalign, breakpoints)
+else
+    nativeUtils(textalign, breakpoints)
+
+fs-normal()
+    font-style normal!important
+
+fs-italic()
+    font-style italic!important
+
+fontstyle = {
+    'fs-normal': 'fs-normal',
+    'fs-italic': 'fs-italic'
+}
+if cssmodules == true
+    cssModulesUtils(fontstyle, breakpoints)
+else
+    nativeUtils(fontstyle, breakpoints)
+
+fw-normal()
+    font-weight normal
+
+fw-bold()
+    font-weight bold
+
+fontweight = {
+    'fw-normal': 'fw-normal',
+    'fw-bold': 'fw-bold'
+}
+if cssmodules == true
+    cssModulesUtils(fontweight, breakpoints)
+else
+    nativeUtils(fontweight, breakpoints)
+// @stylint on
+
+// Global classes
+global('.u-breakword', $breakword)
+global('.u-ellipsis', $ellipsis)
+global('.u-midellipsis', $midellipsis)
+global('.u-link', $link)

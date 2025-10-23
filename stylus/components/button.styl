@@ -1,0 +1,589 @@
+@require '../settings/icons'
+@require '../tools/mixins'
+
+palette=json('../settings/palette.json', { hash: true })
+
+/*------------------------------------*\
+  Variants
+\*------------------------------------*/
+regularTheme = {
+    primaryColor: var(--primaryColor),
+    secondaryColor: var(--primaryColor),
+    activeColor: var(--primaryColorDark),
+    contrastColor: var(--primaryContrastTextColor)
+}
+secondaryTheme = {
+    primaryColor: var(--white),
+    secondaryColor: var(--silver),
+    activeColor: var(--silver),
+    contrastColor: var(--black)
+}
+ghostTheme = {
+    primaryColor: var(--zircon), secondaryColor: palette['frenchPass'], activeColor: palette['frenchPass'], contrastColor: var(--primaryColor)
+}
+highlightTheme = {
+    primaryColor: palette['emerald'], secondaryColor: palette['emerald'], activeColor: palette['malachite'], contrastColor: var(--white)
+}
+dangerTheme = {
+    primaryColor: palette['pomegranate'], secondaryColor: palette['pomegranate'], activeColor: var(--monza), contrastColor: var(--white)
+}
+alphaTheme = {
+    primaryColor: transparent, secondaryColor: var(--white), activeColor: var(--scienceBlue), contrastColor: var(--white)
+}
+dangerOutlineTheme = {
+    primaryColor: var(--white), secondaryColor: palette['yourPink'], activeColor: palette['yourPink'], contrastColor: palette['pomegranate']
+}
+text = {
+    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--primaryColor)
+}
+
+// We turn stylint off since without semicolons, stylus fails to
+// parse the following code block.
+// @stylint off
+themedBtn(theme)
+    background-color: theme['primaryColor']
+    color: theme['contrastColor']
+    border-color: theme['secondaryColor']
+
+    &:visited
+        color: theme['contrastColor']
+
+    &:active
+    &:hover
+    &:focus
+        border-color:      theme['activeColor']
+        background-color:  theme['activeColor']
+
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            border-color:     theme['secondaryColor']
+            background-color: theme['primaryColor']
+
+/*------------------------------------*\
+  Button
+\*------------------------------------*/
+
+$button
+    position         relative
+    box-sizing       border-box
+    display          inline-flex
+    margin           0 rem(4)
+    border-width     rem(1)
+    border-style     solid
+    border-radius    rem(2)
+    min-height       rem(40)
+    min-width        rem(112)
+    padding          rem(3 16)
+    vertical-align   top
+    text-align       center
+    font-size        rem(14)
+    font-weight      bold
+    line-height      1
+    text-transform   uppercase
+    text-decoration  none
+    cursor           pointer
+    align-items      center
+
+    svg
+        fill         currentColor
+
+        & + span
+            margin-left rem(6)
+
+    input
+        cursor pointer
+
+    > span
+        display          flex
+        align-items      center
+        justify-content  center
+        width            100%
+
+    &[disabled]
+    &[aria-disabled=true]
+        opacity  .5
+        cursor   not-allowed
+
+        input
+            cursor not-allowed
+
+    &[aria-busy=true]
+        opacity .5
+        pointer-events none
+
+    themedBtn(regularTheme)
+
+$button--regular  // Deprecated
+    @extend $button
+
+$button--regularInverted
+    themedBtn(regularInvertedTheme)
+
+$button--ghost
+    themedBtn(ghostTheme)
+    border-style dashed
+
+$button--highlight
+    themedBtn(highlightTheme)
+
+$button--alpha
+    themedBtn(alphaTheme)
+
+$button--danger
+    themedBtn(dangerTheme)
+
+$button--secondary
+    themedBtn(secondaryTheme)
+
+$button--secondaryInverted
+    themedBtn(secondaryInvertedTheme)
+
+$button--danger-outline
+    themedBtn(dangerOutlineTheme)
+
+$button--text
+    themedBtn(text)
+
+// @stylint on
+
+$button--text
+    &:hover
+    &:focus
+        color var(--primaryColorDark)
+
+$button--action
+    @extend $button--alpha
+    border-color transparent
+    padding rem(8)
+    opacity     .5
+
+    &:active
+    &:hover
+    &:focus
+        background-color  transparent
+        border-color transparent
+
+$button--close
+    @extend $button--alpha
+    border-color transparent
+    padding rem(8)
+
+    &:active
+    &:hover
+    &:focus
+        background-color  transparent
+        border-color transparent
+
+$button-alert
+    border       0
+    height       auto
+    padding      rem(8 16)
+    background-color var(--white)
+    font-weight  bold
+    font-size rem(14)
+    text-decoration none
+
+$button-alert--error
+    @extend $button-alert
+    color: palette['pomegranate'] !important // @stylint ignore
+    background-color: var(--white) !important // @stylint ignore
+    border-color: var(--white) !important // @stylint ignore
+
+    &:visited
+        color: palette['pomegranate'] !important // @stylint ignore
+
+    &:active
+    &:hover
+    &:focus
+        color: var(--monza) !important // @stylint ignore
+        background-color: palette['yourPink'] !important // @stylint ignore
+        border-color: palette['yourPink'] !important // @stylint ignore
+
+
+$button-alert--info
+    @extend           $button-alert
+    color: var(--white) !important // @stylint ignore
+    background-color: var(--coolGrey) !important // @stylint ignore
+    border-color: var(--coolGrey) !important // @stylint ignore
+
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color: var(--coolGrey) !important // @stylint ignore // @stylint ignore
+
+    &:visited
+        color: var(--white) !important // @stylint ignore
+
+    &:active
+    &:hover
+    &:focus
+        background-color: var(--charcoalGrey) !important // @stylint ignore
+        border-color: var(--charcoalGrey) !important // @stylint ignore
+
+$button-alert--success
+    @extend $button-alert
+    color: palette['emerald'] !important // @stylint ignore
+    background-color: var(--white) !important // @stylint ignore
+    border-color: var(--white) !important // @stylint ignore
+
+    &:visited
+        color: palette['emerald'] !important  // @stylint ignore
+
+    &:active
+    &:hover
+    &:focus
+        color: palette['malachite'] !important // @stylint ignore
+        background-color: palette['grannyApple'] !important // @stylint ignore
+        border-color: palette['grannyApple'] !important // @stylint ignore
+
+$button-client
+    @extend $button
+    @extend $button--secondary
+    display           flex
+    justify-content   center
+    align-items       center
+    height            auto
+    min-height        rem(56)
+    margin            0
+    padding-left      rem(16)
+    padding-right     rem(16)
+    background-color  transparent
+    text-align        left
+    font-size         rem(13)
+    font-weight       bold
+    line-height       1.3
+    color             var(--slateGrey)
+
+    &:visited
+        color var(--slateGrey)
+
+    span
+        flex  0 1 auto
+
+    figure
+        flex 0 0 rem(32)
+        margin 0 rem(12) 0 0
+
+
+$button-client-mobile
+    @extend $button-client
+    display          flex
+    justify-content  flex-start
+    background-color var(--dodgerBlue)
+    border           0
+    border-radius    0
+    margin           0
+    padding          rem(8 48 8 16)
+    font-size        rem(16)
+    font-weight      normal
+    color            var(--white)
+    text-decoration  none
+    text-transform   none
+
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color var(--dodgerBlue)
+
+    &:visited
+        color var(--white)
+
+    &:active
+    &:hover
+    &:focus
+        background-color var(--dodgerBlue)
+
+    figure
+        flex                0 0 rem(44)
+        border-radius       rem(8)
+        border              rem(5) solid var(--white)
+        background-color    var(--white)
+
+        svg
+            display block
+
+/*------------------------------------*\
+  Text alignment
+\*------------------------------------*/
+button--left =
+    & > span
+        justify-content flex-start
+$button--left
+    {button--left}
+
+button--center =
+    & > span
+        justify-content center
+$button--center
+    {button--center}
+
+button--right =
+    & > span
+        justify-content flex-end
+$button--right
+    {button--right}
+
+/*------------------------------------*\
+  Sizes
+\*------------------------------------*/
+button--tiny =
+    min-height rem(24)
+    min-width rem(80)
+    padding rem(2 16)
+    font-size rem(12)
+    line-height 1.3
+$button--tiny
+    {button--tiny}
+
+button--small =
+    min-height rem(32)
+    min-width rem(96)
+    padding rem(3 8)
+    font-size rem(13)
+    line-height 1.4
+$button--small
+    {button--small}
+
+button--large =
+    min-height rem(48)
+    min-width rem(160)
+    padding rem(8 24)
+    font-size rem(16)
+    line-height 1.5
+$button--large
+    {button--large}
+
+/*------------------------------------*\
+  Extensions
+\*------------------------------------*/
+$button--full
+    width 100%
+    margin-left 0
+    margin-right 0
+
+$button--narrow
+    min-width auto
+
+/*------------------------------------*\
+  Round button
+\*------------------------------------*/
+$button--round
+    @extend $button--narrow
+    border-radius 100%
+    min-height auto
+    padding rem(4)
+
+    svg
+        width rem(10)
+        height rem(10)
+
+    // Expand clickable area for touch devices
+    @media (pointer: coarse)
+        &:after
+            content ''
+            position absolute
+            top rem(-14)
+            right rem(-14)
+            bottom rem(-14)
+            left rem(-14)
+
+/*------------------------------------*\
+  Action button
+\*------------------------------------*/
+$actionbtn
+    @extend $button
+    border-color var(--silver)
+    text-transform none
+    max-width rem(200)
+    min-height rem(32)
+    width 100%
+    padding-right rem(8)
+    text-align left
+    line-height 1.3
+    outline 0
+
+    > span
+        justify-content flex-start
+        flex-wrap nowrap
+
+    [data-action='icon']
+        border-left rem(1) solid var(--dividerColor)
+
+    &:not([disabled]):hover
+    &:not([disabled]):focus
+        [data-action='icon']
+            border-color currentColor
+
+$actionbtn--compact
+    @extend $button--narrow
+    position relative
+    border 0
+    background-color transparent
+    padding 0
+    margin 0
+    min-height rem(32)
+    width rem(40)
+
+    > span
+        justify-content center
+
+    [data-action='label']
+        hide()
+
+    [data-action='icon']
+        border-left none
+        margin-left 0
+        padding 0
+
+    &:hover
+    &:focus
+        background-color var(--paleGrey)
+        border 0
+
+actionbtnVariant(bgColor, txtColor, bdColor)
+    background-color bgColor
+    color txtColor
+    border-color bdColor
+
+    [data-action='icon']
+        border-color bdColor
+
+    &:hover
+    &:focus
+        background-color bdColor
+        border-color bdColor
+
+    &[disabled]:hover
+    &[aria-disabled=true]:hover
+        background-color bgColor
+
+$actionbtn--normal
+    actionbtnVariant(var(--paleGrey), var(--charcoalGrey), var(--silver))
+
+$actionbtn--error
+    actionbtnVariant(var(--chablis), palette['pomegranate'], palette['yourPink'])
+
+$actionbtn--new
+    actionbtnVariant(var(--zircon), var(--dodgerBlue), palette['frenchPass'])
+    border-width rem(1)
+    border-style dashed
+
+    &:hover:not([disabled])
+    &:focus:not([disabled])
+        border-style solid
+
+$actionbtn-label
+    ellipsis()
+    padding-right rem(8)
+
+$actionbtn-icon
+    display block
+    margin-left auto
+    padding-left rem(8)
+
+    svg
+        display block
+
+/*------------------------------------*\
+  Variants
+\*------------------------------------*/
+// We turn stylint off since without semicolons, stylus fails to
+// parse the following code block.
+// @stylint off
+themedBtnSubtle(theme)
+    color: theme['secondaryColor']
+
+    &:active
+    &:focus
+    &:hover
+        color: theme['activeColor']
+
+sizedBtnSubtle(size)
+    sizes = {
+        tiny: rem(9), small: rem(12), large: rem(16)
+    }
+
+    min-height 0
+    min-width 0
+    padding 0
+    font-size sizes[size]
+
+$button-subtle
+    themedBtnSubtle(regularTheme)
+    min-height auto
+    min-width auto
+    border 0
+    margin rem(16) 0
+    padding 0
+    vertical-align baseline
+    background transparent
+    cursor pointer
+    font-size rem(14)
+    font-weight bold
+    text-transform uppercase
+
+    > span
+        display          flex
+        align-items      center
+        justify-content  center
+        width            100%
+
+    &[disabled]
+    &[aria-disabled=true]
+        opacity  .5
+        cursor   not-allowed
+
+        &:hover
+            background transparent
+
+    &[aria-busy=true]
+        opacity .5
+        cursor not-allowed
+        pointer-events none
+
+        &:hover
+            background transparent
+
+    &:active
+    &:hover
+    &:focus
+    &:visited
+        color var(--primaryColorDark)
+        background transparent
+
+    * + &
+        margin-left rem(1)
+
+$button-subtle--tiny
+    sizedBtnSubtle('tiny')
+
+$button-subtle--small
+    sizedBtnSubtle('small')
+
+$button-subtle--large
+    sizedBtnSubtle('large')
+
+$button-subtle--danger
+    themedBtnSubtle(dangerTheme)
+
+$button-subtle--highlight
+    themedBtnSubtle(highlightTheme)
+
+$button-subtle--regular
+    themedBtnSubtle(regularTheme)
+
+$button-subtle--secondary
+    // Not using themedBtnSubtle(secondaryTheme) because
+    // silver color for a single text was too bright
+    color var(--slateGrey)
+
+    &:active
+    &:focus
+    &:hover
+        color var(--charcoalGrey)
+        svg
+             color var(--slateGrey)
+    svg
+        color var(--coolGrey)
+// @stylint on

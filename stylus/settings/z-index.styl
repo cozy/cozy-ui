@@ -1,0 +1,71 @@
+/*------------------------------------*\
+  Please, edit this file properly, with a 10 based incrementation,
+  and keep things in order so it remains easily readable.
+
+  How to use: just import this file in your component's style and call
+  the related variable
+  e.g.
+  .my-app
+      z-index  $app-index
+\*------------------------------------*/
+
+/*
+    Z-Index
+
+    List of every z-index related to components in order to keep a clean
+    & maintainable order of indexes.
+
+    Those indexes are 10 based so you can deal with extra layers using `$index + 1`
+
+    $below-index        - **index -1** Layer below the app, mostly for hiding purpose
+    $app-index          - **index 0** App index, the ground zero.
+    $low-index          - **index 1** Low level index, to make sure a positionned element goes over elements with z-index 0.
+    $alert-index-mobile - **index 10** Alert index like success, errors, infos *mobile only*
+    $nav-index          - **index 20** Nav index
+    $bar-index          - **index 21** Bar index equals Nav index + 1, not actually used, just as reference.
+    $selection-index    - **index 30** Selection bar index, with actions for selected items
+    $popover-index      - **index 40** Popover index used by dropdown menu for example
+    $overlay            - **index 50** Overlay index for modals background
+    $file-action-menu   - **index 60** File action menu index *mobile only*
+    $modal-index        - **index 70** Modal index
+    $modal-footer-index - **index 71** Modal footer index
+    $modal-toolbar-index - **index 72** Modal toolbar index
+    $alert-index        - **index 80** Alert index such as success, errors, infos
+
+    Styleguide Settings.z-index
+*/
+
+$below-index = -1
+$app-index = 0
+$low-index = 1
+$alert-index-mobile = 10
+$nav-index = 20
+$popover-index = 30
+$bar-index = $popover-index + 1
+$selection-index = 40
+$overlay-index = 50
+$file-action-menu = 60 // replaced by $drawer-index
+$drawer-index = 60
+$modal-index = 70
+$modal-footer-index = $modal-index + 1
+$modal-toolbar-index = $modal-footer-index + 1
+$alert-index = 80
+
+// @stylint off
+html
+    --zIndex-below $below-index
+    --zIndex-app $app-index
+    --zIndex-low $low-index
+    --zIndex-alertMobile $alert-index-mobile
+    --zIndex-nav $nav-index
+    --zIndex-bar $bar-index
+    --zIndex-selection $selection-index
+    --zIndex-popover $popover-index
+    --zIndex-overlay $overlay-index
+    --zIndex-fileActionMenu $file-action-menu
+    --zIndex-drawer $drawer-index
+    --zIndex-modal $modal-index
+    --zIndex-modal-footer $modal-footer-index
+    --zIndex-modal-toolbar $modal-toolbar-index
+    --zIndex-alert $alert-index
+// @stylint on

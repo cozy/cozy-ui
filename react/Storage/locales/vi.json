@@ -1,0 +1,7 @@
+{
+  "Storage": {
+    "title": "Lưu trữ",
+    "availability": "%{smart_count} GB có sẵn",
+    "increase": "Tăng dung lượng"
+  }
+}

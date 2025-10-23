@@ -1,0 +1,44 @@
+/*------------------------------------*\
+  Animations
+\*------------------------------------*/
+/*
+    Animations
+
+    Available animations:
+
+    spin - Animates an element by rotating it endlessly by 360 deg (used by the loading spinner)
+
+    Styleguide Generic.animation
+*/
+@keyframes spin
+    from
+        transform rotate(0deg)
+    to
+        transform rotate(359deg)
+
+@keyframes shake
+    10%, 90%
+        transform translate3d(-1px, 0, 0)
+
+    20%, 80%
+        transform translate3d(2px, 0, 0)
+
+    30%, 50%, 70%
+        transform translate3d(-4px, 0, 0)
+
+    40%, 60%
+        transform translate3d(4px, 0, 0)
+
+$transition-transform-ease-out
+    transition transform .1s ease-out
+
+$spin-anim
+    // arguments' order is important: the animation name must stay first
+    // so that scoping works
+    animation  spin 1s linear infinite
+
+@media (prefers-reduced-motion: reduce)
+    $transition-transform-ease-out
+        transition none
+    $spin-anim
+        animation none

@@ -1,0 +1,19 @@
+@require './spaces.styl'
+
+if cssmodules == true
+    for k, v in spacing_values
+        :global(.u-stack-{k} > * + *)
+            margin-top v[0]
+else
+    for k, v in spacing_values
+        .u-stack-{k} > * + *
+            margin-top v[0]
+
+if cssmodules == true
+    for k, v in spacing_values
+        :global(.u-row-{k} > * + *)
+            margin-left v[0]
+else
+    for k, v in spacing_values
+        .u-row-{k} > * + *
+            margin-left v[0]

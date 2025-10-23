@@ -1,0 +1,15 @@
+{
+  "Contacts": {
+    "AddModal": {
+      "CustomLabelDialog": {
+        "label": {
+          "custom": "Пользовательская метка",
+          "home": "Личное",
+          "work": "Рабочее"
+        },
+        "cancel": "Отменить",
+        "ok": "ОК"
+      }
+    }
+  }
+}

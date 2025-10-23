@@ -1,0 +1,553 @@
+/*------------------------------------*\
+    Forms
+    =====
+
+    This file contains all needs for forms, inputs, labels...
+\*------------------------------------*/
+
+@require '../tools/mixins'
+@require '../settings/breakpoints'
+
+checkbox-size = rem(16)
+
+$form
+    .coz-form
+        margin  rem(16 0 8)
+
+        a,
+        a:visited
+            color            var(--primaryColor)
+            text-decoration  none
+
+        a:hover,
+        a:active
+            text-decoration  underline
+
+    .coz-form
+    .coz-form-group
+        position        relative
+        // Managing input width with flex
+        display         flex
+        flex-direction  column
+
+    .coz-form-desc
+        margin-bottom  rem(8)
+        line-height    1.5
+
+    .coz-form-label // Deprecated
+        display         block
+        text-transform  uppercase
+        color           var(--secondaryTextColor)
+        font-size       rem(12)
+        padding         rem(9) 0
+        margin-top      rem(16)
+
+    .coz-form-label--error // Deprecated
+        display  none
+        color    var(--errorColor)
+
+    .coz-form-errors
+        color  var(--errorColor)
+
+$form-button
+    .coz-form-controls
+        display          flex
+        flex-direction   row
+        justify-content  flex-end
+        margin           rem(16 0 8)
+
+        a
+        button
+        input[type=submit]
+            flex    0 0 auto
+            margin  rem(0 0 8 8)
+
+    .coz-form-controls--full
+        a
+        button
+        input[type=submit]
+            flex           0 0 100%
+            margin-bottom  rem(8)
+
+    .coz-form-controls--dispatch
+        justify-content  space-between
+
+        a
+        button
+        input[type=submit]
+            flex  0 0 49%
+            margin 0 0 rem(8)
+
+            &:last-child
+                margin-left auto
+
+
+$form-text
+    input[type=text]
+    input[type=password]
+    input[type=email]
+    input[type=url]
+        display        inline-block
+        padding        rem(14) rem(12) rem(12) rem(14)
+        box-sizing     border-box
+        border-radius  rem(2)
+        background     var(--paperBackgroundColor)
+        border         rem(1) solid var(--borderMainColor)
+        color          var(--primaryTextColor)
+
+        &::placeholder
+            color      var(--secondaryTextColor)
+            font-size  rem(16)
+
+        &:focus
+            border      rem(1) solid var(--primaryColor)
+            outline     0
+
+        &:hover
+            border  rem(1) solid var(--hintTextColor)
+
+        &.error
+            border      rem(1) solid var(--errorColor)
+
+
+$form-textarea
+    textarea
+        display        inline-block
+        padding        rem(14 12 12 14)
+        box-sizing     border-box
+        border-radius  rem(2)
+        background     var(--paperBackgroundColor)
+        border         rem(1) solid var(--borderMainColor)
+        color          var(--primaryTextColor)
+
+        &::placeholder
+            color      var(--secondaryTextColor)
+            font-size  rem(16)
+
+        &:focus
+            border      rem(1) solid var(--primaryColor)
+            outline     0
+
+        &:hover
+            border  rem(1) solid var(--hintTextColor)
+
+        &.error
+            border      rem(1) solid var(--errorColor)
+
+
+$form-select
+    select
+        display              inline-block
+        padding              rem(12 12 14)
+        border-radius        rem(4)
+        box-sizing           border-box
+        background           var(--paperBackgroundColor)
+        border               rem(1) solid var(--borderMainColor)
+        color                var(--primaryTextColor)
+        appearance           none
+        background-image     embedurl('../../assets/icons/ui/dropdown.svg')
+        background-position  right rem(8) center
+        background-repeat    no-repeat
+
+        &::-ms-expand
+            display  none
+
+        &::placeholder
+            color      var(--secondaryTextColor)
+            font-size  rem(17)
+
+        &:focus
+            border      rem(1) solid var(--primaryColor)
+
+        &:hover
+            border  rem(1) solid var(--hintTextColor)
+
+        &.error
+            border      rem(1) solid var(--errorColor)
+            background  none
+
+
+$form-checkbox
+    // To make sure that checkbox's wrapper have the height of the checkbox
+    display flex
+
+    input[type=radio]
+    input[type=checkbox]
+        hide()
+
+    label
+        position     relative
+        display      inline-block
+        width        checkbox-size
+        height       checkbox-size
+        padding-left checkbox-size * 1.4
+        cursor       pointer
+
+        &::before
+        &::after
+            content     ''
+            position    absolute
+            left        0
+            top         0
+            box-sizing  border-box
+            width       checkbox-size
+            height      checkbox-size
+
+        &::before
+            transition  box-shadow 350ms cubic-bezier(0, .89, .44, 1)
+
+        &::after
+            transition-duration  .2s
+            transition-property  opacity, transform
+
+
+$form-progress
+    progress
+        margin         rem(8) 0
+        width          100%
+        height         rem(8)
+        color          var(--primaryColor)
+        background     var(--defaultBackgroundColor)
+        border         0
+        border-radius  rem(18)
+
+        // chrome and safari
+        &::-webkit-progress-bar
+            background     var(--defaultBackgroundColor)
+            border-radius  rem(18)
+
+        &::-webkit-progress-value
+            background     var(--dividerColor)
+            border-radius  rem(18)
+
+        // firefox
+        &::-moz-progress-bar
+            background     var(--dividerColor)
+            border-radius  rem(18)
+
+// New styles
+$label
+    text-transform uppercase
+    color var(--secondaryTextColor)
+    font-size rem(13)
+    font-weight bold
+    line-height rem(16)
+
+    &.is-error
+        color var(--errorColor)
+
+$label--block
+    display block
+    padding rem(8) 0
+
+$input--disabled
+    cursor not-allowed
+    background-color var(--actionColorDisabledBackground)
+    color var(--actionColorDisabled)
+
+    &:hover
+    &:focus
+        border rem(1) solid var(--borderMainColor)
+
+$input-text
+    display inline-block
+    width 100%
+    max-width rem(512)
+    padding rem(13 16)
+    box-sizing border-box
+    border-radius rem(3)
+    background var(--paperBackgroundColor)
+    border rem(1) solid var(--borderMainColor)
+    font-size rem(16)
+    line-height 1.25
+    color var(--primaryTextColor)
+    outline 0
+
+    &::placeholder
+        color var(--secondaryTextColor)
+        font-size rem(16)
+
+    &:hover
+        border rem(1) solid var(--hintTextColor)
+
+    &:focus
+        border rem(1) solid var(--primaryColor)
+        outline 0
+
+    &.is-error
+    &:not(:focus):invalid
+        border rem(1) solid var(--errorColor)
+
+    &[aria-disabled=true]
+    &[disabled]
+        @extend $input--disabled
+
+
+input-text--tiny =
+    border-radius rem(2)
+    padding rem(4 8 6)
+$input-text--tiny
+    {input-text--tiny}
+
+input-text--medium =
+    border-radius rem(2)
+    padding rem(8 16 10)
+$input-text--medium
+    {input-text--medium}
+
+input-text--large =
+    border-radius rem(3)
+    padding rem(13 16)
+$input-text--large
+    {input-text--large}
+
+input-text--fullwidth =
+    max-width 100%
+$input-text--fullwidth
+    {input-text--fullwidth}
+
+$checkbox
+    // To make sure that checkbox's wrapper have the height of the checkbox
+    display flex
+    align-items center
+    min-width checkbox-size
+    min-height checkbox-size
+
+    span
+        position relative
+        display inline-block
+        padding-left checkbox-size * 1.5
+        cursor pointer
+        line-height 1.5
+
+        &::before
+        &::after
+            content ''
+            position absolute
+            left 0
+            top 50%
+            box-sizing border-box
+            width checkbox-size
+            height checkbox-size
+            border-radius rem(2)
+
+        &::before
+            transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
+            background-color var(--paperBackgroundColor)
+            box-shadow inset 0 0 0 rem(2) var(--dividerColor)
+            transform translateY(-50%)
+
+        &:hover::before
+            box-shadow inset 0 0 0 rem(2) var(--primaryColor)
+
+        &::after
+            background-image embedurl('../../assets/icons/illus/check-white.svg')
+            background-size contain
+            transition-duration .2s
+            transition-property opacity, transform
+
+    &[aria-checked='mixed'] span::after
+            background-image embedurl('../../assets/icons/illus/dash-white.svg')
+            background-size contain
+
+    &[aria-disabled=true]
+        span
+            opacity .5
+            cursor not-allowed
+
+        :hover::before
+            box-shadow inset 0 0 0 rem(2) var(--dividerColor)
+
+        ::before
+            background-color var(--dividerColor)
+
+    input
+        visually-hide()
+
+        &:focus + span::before
+            box-shadow inset 0 0 0 rem(2) var(--primaryColor)
+
+        &:checked
+            & + span::before
+                box-shadow inset 0 0 0 checkbox-size var(--primaryColor)
+
+            & + span::after
+                opacity 1
+                transform translateY(-50%) scale(1)
+
+        &:not(:checked) + span::after
+            opacity 0
+            transform translateY(-50%) scale(0)
+
+    &.is-error span
+        color var(--errorColor)
+
+        &::before
+            box-shadow inset 0 0 0 rem(2) var(--errorColor)
+            background-color var(--errorColorLight)
+
+    &--noGutter span
+            padding-left 0
+
+
+$radio
+    @extend $checkbox
+    span
+        &::before
+        &::after
+            border-radius 50%
+
+        &::after
+            content ''
+            background var(--paperBackgroundColor)
+            border rem(5) solid var(--primaryColor)
+            box-sizing border-box
+            width rem(16)
+            height rem(16)
+
+$textarea
+    @extend $input-text
+    display block
+    width 100%
+    min-height rem(120)
+    resize vertical
+
+$textarea--tiny
+    @extend $input-text--tiny
+    min-height rem(48)
+
+$textarea--medium
+    @extend $input-text--medium
+    min-height rem(80)
+
+$textarea--fullwidth
+    @extend $input-text--fullwidth
+
+
+$select-arrow-padding
+    padding-right rem(38)
+
+$select
+    @extend $input-text
+    @extend $select-arrow-padding
+    appearance none
+    background embedurl('../../assets/icons/illus/bottom-select.svg') right rem(16) center no-repeat
+    background-size rem(14)
+    text-align left
+
+    &::-ms-expand
+        display  none
+
+$select--disabled
+    @extend $input--disabled
+
+    &:hover
+    &:focus
+        // Border is set to 0, otherwise SelectBox will
+        // get large borders on hover
+        border-width 0
+
+$select--tiny
+    @extend $input-text--tiny
+    @extend $select-arrow-padding
+
+$select--medium
+    @extend $input-text--medium
+    @extend $select-arrow-padding
+
+$select--fullwidth
+    @extend $input-text--fullwidth
+    @extend $select-arrow-padding
+
+$field
+    position relative
+    display flex
+    flex-direction column
+    margin rem(8 0 16)
+
+$field-inline
+    display flex
+    align-items flex-start
+    flex-direction row
+    margin rem(8 0 8 24)
+
+    +small-screen()
+        flex-direction column
+        margin-left 0
+
+$inputgroup
+    display inline-flex
+    flex-direction row
+    box-sizing border-box
+    align-items stretch
+    width 100%
+    max-width rem(512)
+    border rem(1) solid var(--dividerColor)
+    border-radius rem(2)
+    &:hover
+        border rem(1) solid var(--borderMainColor)
+
+$inputgroup--focus
+    &
+    &:hover
+        border-color var(--primaryColor)
+
+$inputgroup--error
+    border-color var(--errorColor)
+
+$inputgroup--fullwidth
+    max-width none
+
+$inputgroup-main
+    flex 1 1 auto
+
+$inputgroup-input
+    @extend $input-text
+    border 0
+    padding-right rem(8)
+    &:hover
+    &:focus
+        position relative
+        z-index 1
+        border 0
+        outline 0
+
+$inputgroup-side
+    display flex
+    flex-direction column
+    justify-content center
+    flex 0 1 auto
+    max-width rem(140)
+
+$double-field
+    width 100%
+
+$double-field--with-button
+    box-sizing border-box
+    position relative
+    padding-right 2.5rem
+
+$double-field-line
+    position relative
+
+$double-field-label
+    min-height rem(40)
+
+$double-field-button
+    position absolute
+    right rem(-40)
+    top rem(10)
+
+$double-field-wrapper
+    display inline-flex
+    width 100%
+    margin-bottom rem(8)
+
+    +small-screen()
+        flex-direction column
+
+$double-field-input
+    box-sizing border-box
+    flex 1 1 70%
+    & + &
+        flex 1 1 auto

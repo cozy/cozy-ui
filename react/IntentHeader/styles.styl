@@ -1,0 +1,25 @@
+@require 'tools/mixins'
+
+.intentHeader
+    display flex
+    align-items center
+    height rem(32)
+    padding rem(8 16)
+    background-color var(--contrastBackgroundColor)
+    margin 0
+    // Keep its height in a flex configuration
+    flex-basis auto
+    flex-shrink 0
+
+.intentHeader-title
+    display flex
+    align-items center
+    font-size rem(20)
+    color var(--primaryTextColor)
+
+    span
+        font-weight normal
+
+.intentHeader-icon
+    height rem(18)
+    margin-right rem(8)

@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Cancel",
+    "leave": "Leave without saving",
+    "title": "Abandon your changes?",
+    "message": "Some changes may not be saved yet. Do you really want to leave and lose these changes?"
+  }
+}

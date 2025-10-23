@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  Overflow utilities
+\*------------------------------------*/
+
+overflow-visible()
+    overflow visible !important // @stylint ignore
+
+overflow-hidden()
+    overflow hidden !important // @stylint ignore
+
+overflow-scroll()
+    overflow scroll !important // @stylint ignore
+
+overflow-auto()
+    overflow auto !important // @stylint ignore
+
+// Global classes
+global('.u-ov-visible', overflow-visible, mixin)
+
+global('.u-ov-hidden', overflow-hidden, mixin)
+
+global('.u-ov-scroll', overflow-scroll, mixin)
+
+global('.u-ov-auto', overflow-auto, mixin)
+

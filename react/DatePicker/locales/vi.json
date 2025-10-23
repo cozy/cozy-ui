@@ -1,0 +1,8 @@
+{
+  "cancel": "Hủy",
+  "clear": "Xóa",
+  "invalidDate": "Ngày không hợp lệ",
+  "ok": "Ok",
+  "today": "Hôm nay",
+  "minDateLabelError": "Ngày không được trước ngày tối thiểu (%{date})"
+}
