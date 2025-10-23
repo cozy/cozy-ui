@@ -1,0 +1,13 @@
+import _extends from "@babel/runtime/helpers/extends";
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/contract.svg` to regenerate;
+import React from 'react';
+
+function SvgContract(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 16 16"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M.889 3.556H15.11v1.777H.89V3.556zm0 5.333H15.11V7.11H.89v1.78zm0 3.555H7.11v-1.777H.89v1.777zm0 3.556H7.11v-1.778H.89V16zm10.142-2.516l-1.253-1.262-1.254 1.254L11.031 16l4.08-4.071-1.262-1.262-2.818 2.817zM.89 0v1.778h14.22V0H.89z"
+  }));
+}
+
+export default SvgContract;

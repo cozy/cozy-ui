@@ -1,0 +1,14 @@
+export const BODY_CLASS: "has-modal";
+export default EnhancedModal;
+declare const EnhancedModal: any;
+import ModalContent from "./ModalContent";
+import ModalSection from "./ModalSection";
+import ModalFooter from "./ModalFooter";
+import { ModalHeader } from "./ModalHeader";
+import AnimatedContentHeader from "./AnimatedContentHeader";
+export function ModalTitle(props: any): JSX.Element;
+import ModalButtons from "./ModalButtons";
+import { ModalBrandedHeader } from "./ModalHeader";
+export const ModalDescription: typeof ModalContent;
+import ModalBackButton from "./ModalBackButton";
+export { ModalContent, ModalSection, ModalFooter, ModalHeader, AnimatedContentHeader, ModalButtons, ModalBrandedHeader, ModalBackButton };

@@ -1,0 +1,1 @@
+export var UNIVERSAL_LINK_URL = 'https://links.mycozy.cloud';

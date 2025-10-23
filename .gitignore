@@ -1,8 +1,32 @@
-node_modules
-package-lock.json
+test
 build
-dist
+node_modules
+
+.editorconfig
+.eslintignore
+.eslintrc.json
+.stylintrc
+.travis.yml
+renovate.json
+yarn.lock
+
 .changelog
+examples
+docs
+coverage
+loaders
+.github/
+
+# Do not ship postcss.config.js in the npm package otherwise
+# parcel will try to use it if it is present.
+# Since parcel users will use the transpiled version of cozy-ui
+# that has already been processed by postcss, it is not necessary.
+postcss.config.js
+
+screenshots/
+
+package-lock.json
+
 yarn-error.log
 coverage
 
@@ -20,12 +44,11 @@ Thumbs.db
 desktop.ini
 
 .cache
-transpiled
 
 # Generated files
 react/Icon/icons-sprite.js
 react/Icon/icons-sprite-twake.js
-react/palette.js
+
 /screenshots
 /pristine_screenshots
 /diffs

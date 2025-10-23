@@ -1,0 +1,13 @@
+import _extends from "@babel/runtime/helpers/extends";
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/matrix.svg` to regenerate;
+import React from 'react';
+
+function SvgMatrix(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 16 10"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M3 1.111H1.333V8.89H3V10H0V0h3v1.111zM16 10h-3V8.889h1.667V1.11H13V0h3v10zM9.807 3.667c.587 0 1.043.167 1.368.503.328.332.492.79.492 1.374V9h-1.23V5.72c0-.688-.311-1.032-.931-1.032a.983.983 0 00-.531.162.945.945 0 00-.36.372V9h-1.23V5.53c0-.258-.08-.462-.241-.612-.161-.153-.387-.23-.68-.23-.153 0-.323.057-.507.171-.18.114-.312.24-.394.377V9h-1.23V3.765h.847l.25.459c.342-.372.784-.557 1.325-.557.699 0 1.226.188 1.58.566.154-.172.369-.309.644-.41.276-.104.552-.156.828-.156z"
+  }));
+}
+
+export default SvgMatrix;

@@ -1,0 +1,13 @@
+import _extends from "@babel/runtime/helpers/extends";
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/wallet.svg` to regenerate;
+import React from 'react';
+
+function SvgWallet(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 16 13"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M12.8 0H3.2A3.2 3.2 0 000 3.2v6.4a3.2 3.2 0 003.2 3.2h9.6A3.2 3.2 0 0016 9.6V3.2A3.2 3.2 0 0012.8 0zm-1.488 7.816c-.192.16-.456.224-.704.16L1.72 5.8c.24-.584.808-1 1.48-1h9.6c.536 0 1.008.272 1.304.672l-2.792 2.344zM3.2 1.6h9.6c.88 0 1.6.72 1.6 1.6v.44a3.198 3.198 0 00-1.6-.44H3.2c-.584 0-1.128.168-1.6.44V3.2c0-.88.72-1.6 1.6-1.6z"
+  }));
+}
+
+export default SvgWallet;

@@ -1,0 +1,13 @@
+import _extends from "@babel/runtime/helpers/extends";
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/illus/trash-duotone.svg` to regenerate;
+import React from 'react';
+
+function SvgTrashDuotone(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 13 16"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M1.111 14.222c0 .978.8 1.778 1.778 1.778h7.11c.979 0 1.779-.8 1.779-1.778V3.556H1.11v10.666zM2.89 5.333H10v8.89H2.89v-8.89zM9.556.89L8.665 0H4.223l-.889.889H.223v1.778h12.444V.889H9.556z"
+  }));
+}
+
+export default SvgTrashDuotone;

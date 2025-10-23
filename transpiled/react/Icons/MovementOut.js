@@ -1,0 +1,13 @@
+import _extends from "@babel/runtime/helpers/extends";
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/movement-out.svg` to regenerate;
+import React from 'react';
+
+function SvgMovementOut(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    viewBox: "0 0 16 13"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M3.547 5.333L0 8.89l3.547 3.555V9.778h6.23V8h-6.23V5.333zM16 3.556L12.453 0v2.667h-6.23v1.777h6.23v2.667L16 3.556z"
+  }));
+}
+
+export default SvgMovementOut;
