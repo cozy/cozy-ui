@@ -1,3 +1,21 @@
+# [132.0.0](https://github.com/cozy/cozy-ui/compare/v131.2.0...v132.0.0) (2025-10-27)
+
+
+### Features
+
+* **AppSections:** Replace cozy-flags by `config` prop ([6ecdad0](https://github.com/cozy/cozy-ui/commit/6ecdad0))
+* **Paywall:** Replace cozy-flags by `isIapEnabled` prop ([953f28a](https://github.com/cozy/cozy-ui/commit/953f28a))
+* **QualificationGrid:** Replace cozy-flags by `noHealth` prop ([68f14dc](https://github.com/cozy/cozy-ui/commit/68f14dc))
+* Remove cozy-flags from peerDeps ([5131237](https://github.com/cozy/cozy-ui/commit/5131237))
+
+
+### BREAKING CHANGES
+
+* **AppSections:** You must use `config={flag('store.alternative-source')}` prop
+* **QualificationGrid:** You must use `noHealth={flag('hide.healthTheme.enabled')}` prop
+* **Paywall:** You must use `isIapEnabled={flag('flagship.iap.enabled')}` prop
+* You no longer need to install `cozy-flags` package
+
 # [131.2.0](https://github.com/cozy/cozy-ui/compare/v131.1.0...v131.2.0) (2025-10-27)
 
 
