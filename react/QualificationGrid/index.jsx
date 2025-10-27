@@ -10,10 +10,10 @@ import CarIcon from '../Icons/Car'
 import ChessIcon from '../Icons/Chess'
 import DotsIcon from '../Icons/Dots'
 import HeartIcon from '../Icons/Heart'
+import HomeIcon from '../Icons/Home'
 import PeopleIcon from '../Icons/People'
 import TeamIcon from '../Icons/Team'
 import WorkIcon from '../Icons/Work'
-import HomeIcon from '../Icons/Home'
 import QualificationItem from '../QualificationItem'
 import { useI18n } from '../providers/I18n'
 
@@ -30,8 +30,8 @@ const IconByName = {
   dots: DotsIcon
 }
 
-const QualificationGrid = ({ noUndefined, noOthers, onClick }) => {
-  const themesList = getThemesList()
+const QualificationGrid = ({ noUndefined, noOthers, noHealth, onClick }) => {
+  const themesList = getThemesList(noHealth)
   const { t } = useI18n()
   const [selectedQualification, setSelectedQualification] = useState()
 
@@ -72,6 +72,7 @@ const QualificationGrid = ({ noUndefined, noOthers, onClick }) => {
 QualificationGrid.defaultProps = {
   noUndefined: false,
   noOthers: false,
+  noHealth: false,
   onClick: () => {}
 }
 
@@ -80,6 +81,8 @@ QualificationGrid.propTypes = {
   noUndefined: PropTypes.bool,
   /** Remove `others` theme */
   noOthers: PropTypes.bool,
+  /** Remove `health` theme */
+  noHealth: PropTypes.bool,
   /** Triggered when an item is clicked */
   onClick: PropTypes.func
 }
