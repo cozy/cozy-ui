@@ -31,6 +31,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 const initialVariants = [
   {
     isPublic: false,
+    isIapEnabled: false,
     premiumLink: false
   }
 ]
@@ -124,6 +125,7 @@ const makeClient = premiumLink => ({
         {state.modalOpened && (
           <PaywallComponent
             isPublic={variant.isPublic}
+            isIapEnabled={variant.isIapEnabled}
             max={4}
             days={30}
             konnectorName="EDF"

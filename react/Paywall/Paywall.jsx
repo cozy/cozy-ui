@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import { useInstanceInfo } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
 import { isFlagshipApp } from 'cozy-device-helper'
-import flag from 'cozy-flags'
 import { useWebviewIntent } from 'cozy-intent'
 
 import { makeType } from './helpers'
@@ -21,7 +20,13 @@ import { useI18n } from '../providers/I18n'
 /**
  * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case
  */
-const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
+const Paywall = ({
+  variant,
+  onClose,
+  isPublic,
+  isIapEnabled,
+  contentInterpolation
+}) => {
   const instanceInfo = useInstanceInfo()
   const { t } = useI18n()
 
@@ -54,9 +59,7 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
 
   const canOpenPremiumLink =
     !isFlagshipApp() ||
-    (isFlagshipApp() &&
-      !!flag('flagship.iap.enabled') &&
-      isFlagshipAppIapAvailable)
+    (isFlagshipApp() && isIapEnabled && isFlagshipAppIapAvailable)
 
   const link = buildPremiumLink(instanceInfo)
   const type = makeType(instanceInfo, isPublic, link)
@@ -112,12 +115,15 @@ Paywall.propTypes = {
   onClose: PropTypes.func.isRequired,
   /** Whether paywall is display in a public context */
   isPublic: PropTypes.bool,
+  /** Whether the IAP is enabled */
+  isIapEnabled: PropTypes.bool,
   /** Translation interpolation for the content of the paywall */
   contentInterpolation: PropTypes.object
 }
 
 Paywall.defaultProps = {
   isPublic: false,
+  isIapEnabled: false,
   contentInterpolation: {}
 }
 
