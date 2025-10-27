@@ -2,8 +2,6 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
-import flag from 'cozy-flags'
-
 import styles from './Sections.styl'
 import * as catUtils from './categories'
 import AppsSection from './components/AppsSection'
@@ -228,8 +226,7 @@ export class Sections extends Component {
   }
 }
 
-const SectionsWrapper = props => {
-  const config = flag('store.alternative-source')
+const SectionsWrapper = ({ config, ...props }) => {
   const i18nConfig = generateI18nConfig(config?.categories)
   useExtendI18n(i18nConfig)
 
@@ -246,6 +243,7 @@ Sections.propTypes = {
   apps: PropTypes.array.isRequired,
   error: PropTypes.object,
 
+  config: PropTypes.object,
   onAppClick: PropTypes.func.isRequired,
 
   /** Whether to display the category selector */
