@@ -3,7 +3,6 @@ import React from 'react'
 
 import { createMockClient, useInstanceInfo } from 'cozy-client'
 import { isFlagshipApp } from 'cozy-device-helper'
-import flag from 'cozy-flags'
 import { useWebviewIntent } from 'cozy-intent'
 
 import Paywall from './Paywall'
@@ -21,7 +20,6 @@ jest.mock('cozy-intent', () => ({
   ...jest.requireActual('cozy-intent'),
   useWebviewIntent: jest.fn()
 }))
-jest.mock('cozy-flags')
 
 describe('Paywall', () => {
   const onCloseSpy = jest.fn()
@@ -36,7 +34,7 @@ describe('Paywall', () => {
     enablePremiumLinks = false,
     hasUuid = false,
     isFlagshipApp: isFlagshipAppReturnValue = false,
-    isIapEnabled = null,
+    isIapEnabled = false,
     isIapAvailable = false
   } = {}) => {
     useInstanceInfo.mockReturnValue({
@@ -55,7 +53,6 @@ describe('Paywall', () => {
     })
 
     isFlagshipApp.mockReturnValue(isFlagshipAppReturnValue)
-    flag.mockReturnValue(isIapEnabled)
     const mockCall = jest.fn().mockResolvedValue(isIapAvailable)
     useWebviewIntent.mockReturnValue({
       call: mockCall
@@ -68,6 +65,7 @@ describe('Paywall', () => {
           variant="onlyOffice"
           onClose={onCloseSpy}
           isPublic={isPublic}
+          isIapEnabled={isIapEnabled}
         />
       </DemoProvider>
     )
