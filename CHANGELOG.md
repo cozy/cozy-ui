@@ -1,3 +1,10 @@
+# [131.2.0](https://github.com/cozy/cozy-ui/compare/v131.1.0...v131.2.0) (2025-10-27)
+
+
+### Features
+
+* Change peerDep config for `react` and `react-dom` ([a923bfc](https://github.com/cozy/cozy-ui/commit/a923bfc))
+
 # [131.1.0](https://github.com/cozy/cozy-ui/compare/v131.0.1...v131.1.0) (2025-10-22)
 
 
