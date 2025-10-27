@@ -3,7 +3,7 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import QualificationGrid from 'cozy-ui/transpiled/react/QualificationGrid'
 import Variants from 'cozy-ui/docs/components/Variants'
 
-const initialVariants = [{ noUndefined: false, noOthers: false }]
+const initialVariants = [{ noUndefined: false, noOthers: false, noHealth: false }]
 initialState = { selectedQualification: undefined }
 
 ;
@@ -16,6 +16,7 @@ initialState = { selectedQualification: undefined }
         <QualificationGrid
           noUndefined={variant.noUndefined}
           noOthers={variant.noOthers}
+          noHealth={variant.noHealth}
           onClick={qualification => setState({ selectedQualification: qualification })}
         />
       </>
