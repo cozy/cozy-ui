@@ -196,10 +196,10 @@
     "cozy-device-helper": ">=2.0.0",
     "cozy-flags": ">=2.10.1",
     "cozy-intent": ">=2.29.1",
-    "react": "^16.14.0",
+    "react": "^16 || ^17 || ^18",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16 || ^17 || ^18"
   },
   "eslintConfig": {
     "extends": [
