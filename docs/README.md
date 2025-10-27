@@ -268,7 +268,6 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 - cozy-client [(see peerDeps)](https://github.com/cozy/cozy-client/blob/master/packages/cozy-client/package.json) => lot of components
 - cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => AppLinker, Dialog, Paywall, Storage
-- cozy-flags [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-flags/package.json) => AppSections, Paywall, QualificationGrid
 - cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, AppLinker, Dialog, Paywall, SelectionBar
 - react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
 - react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
