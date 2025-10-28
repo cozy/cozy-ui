@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { splitFilename } from 'cozy-client/dist/models/file'
-
 import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import StarIcon from '../../Icons/Star'
@@ -26,7 +24,7 @@ const makeComponent = (label, icon) => {
   return Component
 }
 
-export const removeFromFavorites = ({ showAlert }) => {
+export const removeFromFavorites = ({ client, showAlert, splitFilename }) => {
   const { t } = getActionsI18n()
   const icon = StarIcon
   const label = t('favorites.remove.label')
@@ -38,7 +36,7 @@ export const removeFromFavorites = ({ showAlert }) => {
     displayCondition: docs =>
       docs.length > 0 && docs.every(doc => doc.cozyMetadata?.favorite),
     Component: makeComponent(label, icon),
-    action: async (docs, { client }) => {
+    action: async docs => {
       try {
         for (const doc of docs) {
           await client.save({
