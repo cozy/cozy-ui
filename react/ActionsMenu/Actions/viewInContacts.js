@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { generateWebLink } from 'cozy-client'
-
 import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import OpenappIcon from '../../Icons/Openapp'
@@ -9,7 +7,7 @@ import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
-export const viewInContacts = () => {
+export const viewInContacts = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
   const icon = OpenappIcon
   const label = t('viewInContacts')
@@ -18,7 +16,7 @@ export const viewInContacts = () => {
     name: 'viewInContacts',
     icon,
     label,
-    action: (docs, { client }) => {
+    action: docs => {
       const contactId = docs[0]._id
       const webLink = generateWebLink({
         slug: 'contacts',
