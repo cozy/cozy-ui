@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { downloadFile } from 'cozy-client/dist/models/file'
-
 import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import DownloadIcon from '../../Icons/Download'
@@ -26,7 +24,7 @@ const makeComponent = (label, icon) => {
   return Component
 }
 
-export const download = ({ encryptedUrl }) => {
+export const download = ({ client, encryptedUrl, downloadFile }) => {
   const { t } = getActionsI18n()
   const icon = DownloadIcon
   const label = t('download')
@@ -36,7 +34,7 @@ export const download = ({ encryptedUrl }) => {
     icon,
     label,
     Component: makeComponent(label, icon),
-    action: (docs, { client, webviewIntent, driveId }) =>
+    action: (docs, { webviewIntent, driveId }) =>
       downloadFile({
         client,
         file: docs[0],
