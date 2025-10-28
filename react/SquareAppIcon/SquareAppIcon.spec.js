@@ -3,8 +3,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 
-import CozyClient from 'cozy-client'
-
 import SquareAppIcon from '.'
 import Icon from '../Icon'
 import CozyIcon from '../Icons/Cozy'
@@ -15,10 +13,9 @@ const appMock = {
   name: 'Test'
 }
 
-const client = new CozyClient({})
 const Wrapper = props => {
   return (
-    <DemoProvider client={client}>
+    <DemoProvider>
       <SquareAppIcon {...props} />
     </DemoProvider>
   )
