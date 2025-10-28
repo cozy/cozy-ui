@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { generateWebLink } from 'cozy-client'
-
 import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import PenIcon from '../../Icons/Pen'
@@ -9,7 +7,7 @@ import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
-export const modify = () => {
+export const modify = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
   const icon = PenIcon
   const label = t('modify')
@@ -18,7 +16,7 @@ export const modify = () => {
     name: 'modify',
     icon,
     label,
-    action: (docs, { client }) => {
+    action: docs => {
       const contactId = docs[0]._id
 
       const webLink = generateWebLink({

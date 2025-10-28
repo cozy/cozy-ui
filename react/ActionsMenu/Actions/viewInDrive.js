@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { generateWebLink } from 'cozy-client'
-
 import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import FolderOpenIcon from '../../Icons/FolderOpen'
@@ -26,7 +24,7 @@ const makeComponent = (label, icon) => {
   return Component
 }
 
-export const viewInDrive = () => {
+export const viewInDrive = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
   const icon = FolderOpenIcon
   const label = t('viewInDrive')
@@ -36,7 +34,7 @@ export const viewInDrive = () => {
     icon,
     label,
     Component: makeComponent(label, icon),
-    action: (docs, { client }) => {
+    action: docs => {
       const dirId = docs[0].dir_id
       const driveId = docs[0].driveId
       const webLink = generateWebLink({
