@@ -1,7 +1,5 @@
 import { PDFDocument } from 'pdf-lib'
 
-import { fetchBlobFileById } from 'cozy-client/dist/models/file'
-
 // Should guarantee good resolution for different uses (printing, downloading, etc.)
 const MAX_RESIZE_IMAGE_SIZE = 3840
 const MAX_IMAGE_SIDE_SIZE = 1920
@@ -221,11 +219,11 @@ export const addFileToPdf = async (pdfDoc, file) => {
 
 /**
  * Fetches file from docs list and return a blob of pdf
- * @param {import('cozy-client/types/CozyClient').default} client - Instance of CozyClient
+ * @param {object} client - Instance of CozyClient
  * @param {array} docs - Docs from an io.cozy.xxx doctypes
  * @returns {Promise<object>} Blob of generated Pdf
  */
-export const makePdfBlob = async (client, docs) => {
+export const makePdfBlob = async ({ client, docs, fetchBlobFileById }) => {
   const pdfDoc = await PDFDocument.create()
 
   for (const doc of docs) {
