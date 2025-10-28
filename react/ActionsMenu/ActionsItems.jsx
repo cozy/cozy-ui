@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
 
-import { useClient } from 'cozy-client'
 import { useWebviewIntent } from 'cozy-intent'
 
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
@@ -19,7 +18,6 @@ const ActionsItems = forwardRef(
     },
     ref
   ) => {
-    const client = useClient()
     const webviewIntent = useWebviewIntent()
     const { t } = useI18n()
 
@@ -36,7 +34,6 @@ const ActionsItems = forwardRef(
 
       const handleClick = clickProps => {
         action?.(docs, {
-          client,
           t,
           webviewIntent,
           ...actionOptions,
