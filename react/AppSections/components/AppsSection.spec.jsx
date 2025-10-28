@@ -5,35 +5,27 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
 
-import { CozyProvider } from 'cozy-client'
-
 import { AppsSection } from './AppsSection'
 import { I18nContext } from '../../jestLib/I18n'
 import mockApps from '../../mocks/apps'
-import { BreakpointsProvider } from '../../providers/Breakpoints'
-import { I18n } from '../../providers/I18n'
+import DemoProvider from '../../providers/DemoProvider'
 import en from '../locales/en'
 
 const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t
 
 describe('AppsSection component', () => {
-  const client = {}
   const setup = ({ onAppClick }) => {
     render(
-      <CozyProvider client={client}>
-        <BreakpointsProvider>
-          <I18n lang="en" dictRequire={() => en}>
-            <AppsSection
-              t={tMock}
-              lang="en"
-              subtitle={<h3>Test Apps</h3>}
-              appsList={mockApps}
-              onAppClick={onAppClick}
-            />
-          </I18n>
-        </BreakpointsProvider>
-      </CozyProvider>
+      <DemoProvider>
+        <AppsSection
+          t={tMock}
+          lang="en"
+          subtitle={<h3>Test Apps</h3>}
+          appsList={mockApps}
+          onAppClick={onAppClick}
+        />
+      </DemoProvider>
     )
   }
 
