@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react'
 
-import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'
 import logger from 'cozy-logger'
 
 import { makeBase64FromFile, makePdfBlob } from './helpers'
@@ -11,7 +10,7 @@ import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
-export const print = () => {
+export const print = ({ client, fetchBlobFileById, isFile }) => {
   const { t } = getActionsI18n()
   const icon = PrinterIcon
   const label = t('print')
@@ -22,7 +21,7 @@ export const print = () => {
     label,
     disabled: docs => docs.length === 0,
     displayCondition: docs => docs.every(doc => isFile(doc)),
-    action: async (docs, { client, webviewIntent }) => {
+    action: async (docs, { webviewIntent }) => {
       const isSingleDoc = docs.length === 1
       const firstDoc = docs[0]
 
@@ -31,7 +30,7 @@ export const print = () => {
         if (webviewIntent) {
           const blob = isSingleDoc
             ? await fetchBlobFileById(client, firstDoc._id)
-            : await makePdfBlob(client, docs)
+            : await makePdfBlob({ client, docs, fetchBlobFileById })
           const base64 = await makeBase64FromFile(blob)
 
           return webviewIntent.call('print', base64)
@@ -44,7 +43,7 @@ export const print = () => {
             .collection('io.cozy.files')
             .getDownloadLinkById(firstDoc._id, firstDoc.name)
         } else {
-          const blob = await makePdfBlob(client, docs)
+          const blob = await makePdfBlob({ client, docs, fetchBlobFileById })
           docUrl = URL.createObjectURL(blob)
         }
 
