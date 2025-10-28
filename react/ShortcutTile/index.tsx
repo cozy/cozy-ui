@@ -1,15 +1,13 @@
 import React from 'react'
 
-import { IOCozyFile } from 'cozy-client/types/types'
-
 import styles from '../AppTile/styles.styl'
-import { nameToColor } from '../legacy/Avatar/helpers'
 import { TileIcon } from '../Tile'
 import Typography from '../Typography'
+import { nameToColor } from '../legacy/Avatar/helpers'
 import { makeStyles } from '../styles'
 
 interface ShortcutTileProps {
-  file: Partial<IOCozyFile> & {
+  file: Partial<object> & {
     name: string
     attributes?: { metadata?: { icon?: string; iconMimeType?: string } }
   }
