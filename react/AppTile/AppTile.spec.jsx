@@ -5,8 +5,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 
-import CozyClient from 'cozy-client'
-
 import AppTile from '.'
 import en from '../AppSections/locales/en.json'
 import DemoProvider from '../providers/DemoProvider'
@@ -39,10 +37,9 @@ const appMock2 = {
   onClick: jest.fn()
 }
 
-const client = new CozyClient({})
 const Wrapper = props => {
   return (
-    <DemoProvider client={client}>
+    <DemoProvider>
       <I18n dictRequire={() => en} lang="en">
         <AppTile {...props} />
       </I18n>
