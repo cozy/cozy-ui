@@ -3,7 +3,7 @@ import React from 'react'
 import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from './Breakpoints'
-import CozyTheme from './CozyTheme'
+import DumbCozyTheme from './CozyTheme/DumbCozyTheme'
 import AlertProvider from '../providers/Alert'
 import I18n from '../providers/I18n'
 
@@ -32,7 +32,7 @@ const DemoProvider = ({ client, variant, dictRequire, children }) => {
       <BreakpointsProvider>
         <AlertProvider>
           <I18n lang={lang} dictRequire={_dictRequire}>
-            <CozyTheme variant={variant}>{children}</CozyTheme>
+            <DumbCozyTheme variant={variant}>{children}</DumbCozyTheme>
           </I18n>
         </AlertProvider>
       </BreakpointsProvider>
