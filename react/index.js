@@ -21,8 +21,6 @@ export {
 } from './Nav'
 export { default as ListItemText } from './ListItemText'
 export { default as SelectionBar } from './SelectionBar'
-export { default as IntentIframe } from './IntentIframe'
-export { default as IntentDialogOpener } from './IntentDialogOpener'
 export { default as Spinner } from './Spinner'
 export { default as Accordion } from './Accordion'
 export { default as AccordionSummary } from './AccordionSummary'
@@ -47,7 +45,6 @@ export { default as Label } from './Label'
 export { default as Checkbox } from './Checkbox'
 export { default as Radio } from './deprecated/Radio'
 export { default as Textarea } from './Textarea'
-export { default as Field } from './Field'
 export { default as Avatar } from './Avatar'
 export { default as IntentHeader } from './IntentHeader'
 export { default as Panel } from './Panel'
@@ -59,7 +56,6 @@ export { default as Counter } from './Counter'
 export { default as Infos } from './deprecated/Infos'
 export { default as InfosCarrousel } from './deprecated/InfosCarrousel'
 export { default as InputGroup } from './InputGroup'
-export { default as AppIcon } from './AppIcon'
 export { default as AppTitle } from './AppTitle'
 export { default as Filename } from './Filename'
 export { default as FilePath } from './FilePath'
@@ -73,7 +69,6 @@ export { default as PercentageLine } from './deprecated/PercentageLine'
 export { default as Popup } from './Popup'
 export { default as IconStack } from './IconStack'
 export { default as QuotaAlert } from './deprecated/QuotaAlert'
-export { OnlyOfficePaywall, PasswordSharingPaywall } from './Paywall'
 export {
   default as ViewStack,
   ModalStack,
@@ -82,8 +77,6 @@ export {
 } from './deprecated/ViewStack'
 export { default as DateMonthPicker } from './DateMonthPicker'
 export { default as NestedSelect, NestedSelectModal } from './NestedSelect'
-export { default as ContactsList } from './ContactsList'
-export { default as ContactsListModal } from './ContactsListModal'
 export {
   default as ExperimentalDialog,
   ExperimentalDialogActions,
@@ -92,20 +85,16 @@ export {
 
 export { default as BarContextProvider } from './BarContextProvider'
 export { default as BarTitle } from './BarTitle'
-export { default as UploadQueue } from './UploadQueue'
 export { default as CozyTheme } from './providers/CozyTheme'
 export { default as Paper } from './Paper'
 export { default as ProgressionBanner } from './ProgressionBanner'
 export { default as Fab, ExtendableFab } from './Fab'
-export { default as SquareAppIcon } from './SquareAppIcon'
-export { default as FileImageLoader } from './FileImageLoader'
 export { default as Radios } from './Radios'
 export {
   default as BottomSheet,
   BottomSheetItem,
   BottomSheetHeader
 } from './BottomSheet'
-export { default as FilePicker } from './FilePicker'
 export { default as Chips } from './Chips'
 export { default as PieChart } from './PieChart'
 export { default as DropdownText } from './DropdownText'
@@ -122,10 +111,6 @@ export { default as InputBase } from './InputBase'
 export { default as SearchBar } from './SearchBar'
 export { default as Thumbnail } from './Thumbnail'
 export { default as ButtonBase } from './ButtonBase'
-export { default as QualificationGrid } from './QualificationGrid'
-export { default as QualificationItem } from './QualificationItem'
-export { default as QualificationIcon } from './QualificationIcon'
-export { default as QualificationModal } from './QualificationModal'
 export { default as Timeline } from './Timeline'
 export { default as TimelineConnector } from './TimelineConnector'
 export { default as TimelineContent } from './TimelineContent'

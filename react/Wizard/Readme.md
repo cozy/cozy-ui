@@ -11,10 +11,11 @@ import {
   WizardErrors
 } from 'cozy-ui/transpiled/react/Wizard'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Field from 'cozy-ui/transpiled/react/Field'
+import TextField from 'cozy-ui/transpiled/react/TextField'
 import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
 import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 const t = x => x
 const isTiny = false
@@ -39,8 +40,8 @@ const WizardExample = ({ onNext, onRegister }) => {
           </WizardTitle>
         </WizardHeader>
         <WizardMain>
-          <Field label='Login' type='text' placeholder='dalailama@cozycloud.cc' />
-          <Field label='Password' type='text' />
+          <TextField className="u-mt-1" variant="outlined" label='Login' type='text' placeholder='dalailama@cozycloud.cc' />
+          <TextField className="u-mt-1" variant="outlined" label='Password' type='text' />
           <WizardErrors tag='p'>
             There is an error
           </WizardErrors>
@@ -73,7 +74,7 @@ initialState = { showExample: isTesting() }
 
 ;
 
-<>
+<DemoProvider>
   <button onClick={() => setState({ showExample: true })}>Show wizard</button><br />
   { state.lastButton ? <>You clicked the "{state.lastButton}" button</> : null}
   { state.showExample &&
@@ -82,5 +83,5 @@ initialState = { showExample: isTesting() }
       onNext={() => setState({ showExample: false, lastButton: 'next' })}
     />
   }
-</>
+</DemoProvider>
 ```
