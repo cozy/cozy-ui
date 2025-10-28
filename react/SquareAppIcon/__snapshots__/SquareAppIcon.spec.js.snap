@@ -15,7 +15,7 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
         class="MuiBadge-root-40 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -68,7 +68,7 @@ exports[`SquareAppIcon component should render an app correctly with the given n
         class="MuiBadge-root-9 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -121,7 +121,7 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
         class="MuiBadge-root-71 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -174,7 +174,7 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
         class="MuiBadge-root-195 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -221,7 +221,7 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
         class="MuiBadge-root-164 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -285,7 +285,7 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
         class="MuiBadge-root-133 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper--light___2iR5Y makeStyles-squareAppIconGhost-127"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -338,7 +338,7 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
         class="MuiBadge-root-102 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
@@ -438,7 +438,7 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
         class="MuiBadge-root-318 styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper--light___2iR5Y undefined"
       >
         <div
-          class="styles__SquareAppIcon-icon-container___39MRl styles__SquareAppIcon-icon-container-normal___DCe9y"
+          class="styles__SquareAppIcon-icon-container___39MRl"
         >
           <div
             class="styles__onEnd___1O6Q7"
