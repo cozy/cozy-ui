@@ -100,7 +100,9 @@ const customAction = () => ({
   })
 })
 
-const actions = makeActions([ modify, viewInContacts, viewInDrive, divider, call, smsTo, emailTo, print, divider, customAction ])
+  const mockClient = { getStackClient: () => ({ uri: `https://` }), getInstanceOptions: () => ({ subdomain: '' }) }
+
+const actions = makeActions([ modify, viewInContacts, viewInDrive, divider, call, smsTo, emailTo, print, divider, customAction ], { client: mockClient, generateWebLink: () => {}, fetchBlobFileById: () => {}, isFile: () => {} })
 
 ;
 
