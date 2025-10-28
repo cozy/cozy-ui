@@ -253,14 +253,11 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 - @date-io/date-fns => DatePicker
 - chart.js => PieChart
-- cozy-interapp => IntentIframe
 - date-fns => DateMonthPicker, DatePicker, I18n
-- filesize => FilePickerBodyItem
-- final-form, final-form-array => react-final-form, react-final-form-array => Contacts/AddModal
 - react-markdown => Markdown
-- react-select => Contacts/GroupsSelect, SelectBox
+- react-select => SelectBox
 - react-virtuoso => Table/Virtualized, GridList/Virtualized
-- rooks => BottomSheet, Table/Virtualized, UploadQueue
+- rooks => BottomSheet, Table/Virtualized
 
 #### Dependecies for deprecated components
 
@@ -270,9 +267,8 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 #### PeerDependencies
 
-- cozy-client [(see peerDeps)](https://github.com/cozy/cozy-client/blob/master/packages/cozy-client/package.json) => lot of components
-- cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => AppLinker, Dialog, Paywall, Storage
-- cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, AppLinker, Dialog, Paywall, SelectionBar
+- cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => Dialog
+- cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, Dialog, SelectionBar
 - react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
 - react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
 

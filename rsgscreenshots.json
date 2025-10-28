@@ -1,9 +1,4 @@
 {
-  "UploadQueue": {
-    "viewports": {
-      "desktop": "1200x700"
-    }
-  },
   "BottomSheet": {
     "viewports": {
       "desktop": "1200x700",

@@ -1,7 +1,0 @@
-{
-  "Storage": {
-    "title": "Storage",
-    "availability": "%{smart_count} GB available",
-    "increase": "Increase the space"
-  }
-}
