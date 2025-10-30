@@ -1,3 +1,31 @@
+# [133.0.0](https://github.com/cozy/cozy-ui/compare/v132.1.0...v133.0.0) (2025-10-30)
+
+
+### Features
+
+* **ActionsMenu/ActionsItems:** No longer pass `client` in actions implicitly ([aeaa262](https://github.com/cozy/cozy-ui/commit/aeaa262))
+* **Actions:** Some actions doesn't import `downloadFile` anymore ([df7a36f](https://github.com/cozy/cozy-ui/commit/df7a36f))
+* **Actions:** Some actions doesn't import `fetchBlobFileById, isFile` anymore ([98cf97f](https://github.com/cozy/cozy-ui/commit/98cf97f))
+* **Actions:** Some actions doesn't import `generateWebLink` anymore ([809011e](https://github.com/cozy/cozy-ui/commit/809011e))
+* **Actions:** Some actions doesn't import `splitFilename` anymore ([c13841c](https://github.com/cozy/cozy-ui/commit/c13841c))
+* **BarContextProvider:** Removed ([c080cd2](https://github.com/cozy/cozy-ui/commit/c080cd2))
+* Remove all components related to cozy-client ([840168a](https://github.com/cozy/cozy-ui/commit/840168a))
+* Remove deprecated `modify` and `viewInContacts` actions ([17dc240](https://github.com/cozy/cozy-ui/commit/17dc240))
+
+
+### BREAKING CHANGES
+
+* If you use a component in that list, you must import it from `cozy-ui-plus` instead: `AppIcon, AppLinker, AppSections, AppTitle, CipherIcon, ContactPicker, Contacts/AddModal, Contacts/GroupsSelect, Contacts/Header, ContactsList, ContactsListModal, AuthenticationDialogs, Field, FileImageLoader, FilePicker, hooks/useClientErrors, IntentDialogOpener, IntentIframe, Labs/CollectionField, ListItem/ListItemByDoc, ListItem/ListItemBase, ListItem/ListItemContact, ListItem/ListItemFile, Paywall, providers/CozyTheme, providers/Intent, QualificationGrid, QualificationIcon, QualificationItem, QualificationModal, ShortcutTile, SquareAppIcon, Storage, UploadQueue, Wizard`.
+
+Please note that these components have been completely removed: `deprecated/IntentModal, deprecated/IntentOpener, deprecated/QuotaAlert`
+* If you used `deprecated/ActionMenu/Actions/modif` and `deprecated/ActionMenu/Actions/viewInContacts` please use those in `/ActionsMenu/Actions` instead
+* **BarContextProvider:** If you use `BarContextProvider` you must create it yourself. Take a look to the code to copy/paste
+* **Actions:** You must `import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'` and pass it as action's option `makeActions([], { fetchBlobFileById, isFile })` when using `print` action.
+* **Actions:** You must `import { downloadFile } from 'cozy-client/dist/models/file'` and pass it as action's option `makeActions([], { downloadFile })` when using `download` action.
+* **Actions:** You must `import { splitFilename } from 'cozy-client/dist/models/file'` and pass it as action's option `makeActions([], { splitFilename })` when using `addToFavorites`, `removeFromFavorites` actions.
+* **Actions:** You must `import { generateWebLink } from 'cozy-client'` and pass it as action's option `makeActions([], { generateWebLink })` when using `modify`, `viewInContacts`, `viewInDrive` actions.
+* **ActionsMenu/ActionsItems:** You have to pass `client` yourself as option when creating an action, for actions that used `client` as arg `action: (docs, { client }) => {}` . The simplest way to do that: `const actions = makeActions([ ...someActions ], { client })`
+
 # [132.1.0](https://github.com/cozy/cozy-ui/compare/v132.0.0...v132.1.0) (2025-10-30)
 
 
