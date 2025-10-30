@@ -730,6 +730,8 @@ import FileTypeServerIcon from 'cozy-ui/transpiled/react/Icons/FileTypeServer'
 import FileTypeImageIcon from 'cozy-ui/transpiled/react/Icons/FileTypeImage'
 import FileTypeNoteIcon from 'cozy-ui/transpiled/react/Icons/FileTypeNote'
 import FileTypePdfIcon from 'cozy-ui/transpiled/react/Icons/FileTypePdf'
+import FileTypeSharedDriveIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSharedDrive'
+import FileTypeSharedDriveGreyIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSharedDriveGrey'
 import FileTypeSheetIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSheet'
 import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
 import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
@@ -782,6 +784,8 @@ const icons = [
   FileTypeImageIcon,
   FileTypeNoteIcon,
   FileTypePdfIcon,
+  FileTypeSharedDriveIcon,
+  FileTypeSharedDriveGreyIcon,
   FileTypeSheetIcon,
   FileTypeSlideIcon,
   FileTypeTextIcon,
@@ -801,7 +805,7 @@ const icons = [
   PhotosIcon,
   TopSelectIcon,
   TrashDuotoneIcon,
-  TwakeWorkplace,
+  TwakeWorkplace
 ]
 
 initialState = { size: 16 }
@@ -1026,9 +1030,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'only-office', 'store', 'top-select', 'trash-duotone', 'cozy']
-
-;
+const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-shared-drive', 'file-type-shared-drive-grey', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'only-office', 'store', 'top-select', 'trash-duotone', 'cozy'];
 
 <Grid container spacing={2}>
   <Sprite />

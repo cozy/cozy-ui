@@ -1,0 +1,24 @@
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-type-shared-drive-grey.svg` to regenerate;
+import React from 'react'
+
+function SvgFileTypeSharedDriveGrey(props) {
+  return (
+    <svg viewBox="0 0 16 13" fill="none" {...props}>
+      <g clipPath="url(#file-type-shared-drive-grey_svg__clip0_13717_2258)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M14.4 1.62H8L6.4 0H1.6C.72 0 0 .73 0 1.62v9.75c0 .89.71 1.62 1.59 1.62h12.8c.88 0 1.6-.73 1.6-1.62V3.25c0-.89-.72-1.62-1.6-1.62l.01-.01zM11.09 8.9c0 .93-.77 1.7-1.7 1.7H6c-.93 0-1.7-.77-1.7-1.7V5.51c0-.93.77-1.7 1.7-1.7h.77c.19 0 .31.12.31.31s-.12.31-.31.31H6c-.59 0-1.08.49-1.08 1.08V8.9c0 .59.49 1.08 1.08 1.08h3.39c.59 0 1.08-.49 1.08-1.08v-.46c0-.19.12-.31.31-.31s.31.12.31.31v.46zm.52-2.71L9.76 8.04c-.09.09-.22.12-.34.06-.12-.03-.19-.15-.19-.28v-.93h-.62c-.83 0-1.54.52-1.79 1.33a.3.3 0 01-.28.22c-.13 0-.25-.09-.31-.22-.06-.22-.09-.46-.09-.71 0-1.36 1.11-2.47 2.47-2.47h.62v-.93c0-.12.06-.25.19-.28.12-.06.25-.03.34.06l1.85 1.85c.12.12.12.31 0 .43v.02z"
+          fill="#A6A6A6"
+        />
+      </g>
+      <defs>
+        <clipPath id="file-type-shared-drive-grey_svg__clip0_13717_2258">
+          <path fill="#fff" d="M0 0h16v13H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export default SvgFileTypeSharedDriveGrey
