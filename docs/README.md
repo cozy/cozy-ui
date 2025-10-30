@@ -60,6 +60,10 @@ The entire library is also available as a good ol’ CSS library. You can simply
 <link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
 ```
 
+### About tests in your application
+
+If you use `Jest` in your application, you may need add `transformIgnorePatterns: ['node_modules/(?!cozy-ui)']` in the jest config file to avoid parsing errors.
+
 ## Develop on Cozy UI
 
 If you want to develop inside cozy-ui, you need a local version cozy-ui.
