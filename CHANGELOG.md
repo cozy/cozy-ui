@@ -1,3 +1,10 @@
+# [132.1.0](https://github.com/cozy/cozy-ui/compare/v132.0.0...v132.1.0) (2025-10-30)
+
+
+### Features
+
+* Add shared drive icons :sparkles: ([2eaee77](https://github.com/cozy/cozy-ui/commit/2eaee77))
+
 # [132.0.0](https://github.com/cozy/cozy-ui/compare/v131.2.0...v132.0.0) (2025-10-27)
 
 
