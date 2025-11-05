@@ -68,7 +68,6 @@ export { default as Stack } from './Stack'
 export { default as PercentageLine } from './deprecated/PercentageLine'
 export { default as Popup } from './Popup'
 export { default as IconStack } from './IconStack'
-export { default as QuotaAlert } from './deprecated/QuotaAlert'
 export {
   default as ViewStack,
   ModalStack,
@@ -83,7 +82,6 @@ export {
   ExperimentalDialogTitle
 } from './Labs/ExperimentalDialog'
 
-export { default as BarContextProvider } from './BarContextProvider'
 export { default as BarTitle } from './BarTitle'
 export { default as CozyTheme } from './providers/CozyTheme'
 export { default as Paper } from './Paper'
