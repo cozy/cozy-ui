@@ -1,3 +1,10 @@
+## [133.0.1](https://github.com/cozy/cozy-ui/compare/v133.0.0...v133.0.1) (2025-11-05)
+
+
+### Bug Fixes
+
+* Some export of component that doesn't exist anymore ([0667bcc](https://github.com/cozy/cozy-ui/commit/0667bcc))
+
 # [133.0.0](https://github.com/cozy/cozy-ui/compare/v132.1.0...v133.0.0) (2025-10-30)
 
 
