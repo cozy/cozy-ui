@@ -24,7 +24,18 @@
 
 * If you use a component in that list, you must import it from `cozy-ui-plus` instead: `AppIcon, AppLinker, AppSections, AppTitle, CipherIcon, ContactPicker, Contacts/AddModal, Contacts/GroupsSelect, Contacts/Header, ContactsList, ContactsListModal, AuthenticationDialogs, Field, FileImageLoader, FilePicker, hooks/useClientErrors, IntentDialogOpener, IntentIframe, Labs/CollectionField, ListItem/ListItemByDoc, ListItem/ListItemBase, ListItem/ListItemContact, ListItem/ListItemFile, Paywall, providers/CozyTheme, providers/Intent, QualificationGrid, QualificationIcon, QualificationItem, QualificationModal, ShortcutTile, SquareAppIcon, Storage, UploadQueue, Wizard`.
 
-Please note that these components have been completely removed: `deprecated/IntentModal, deprecated/IntentOpener, deprecated/QuotaAlert`
+You can use this codemods to migrate:
+
+```
+yarn add cozy-ui-plus
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-bc-133.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
+You probably will need to fix linter issue after that with something like `yarn lint --fix`.
+
+* Please note that these components have been completely removed: `deprecated/IntentModal, deprecated/IntentOpener, deprecated/QuotaAlert`
 * If you used `deprecated/ActionMenu/Actions/modif` and `deprecated/ActionMenu/Actions/viewInContacts` please use those in `/ActionsMenu/Actions` instead
 * **BarContextProvider:** If you use `BarContextProvider` you must create it yourself. Take a look to the code to copy/paste
 * **Actions:** You must `import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'` and pass it as action's option `makeActions([], { fetchBlobFileById, isFile })` when using `print` action.
@@ -3052,7 +3063,7 @@ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/tra
 
 ### BREAKING CHANGES
 
-* **Viewer:** The `toolbarProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+* **Viewer:** The `toolbarProps` attribute from Viewer property has been moved into the `componentsProps` attribute.
 
 You can use this codemods to migrate. **Don't forget to run js linter after the codemods.**
 
@@ -3065,7 +3076,7 @@ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/tra
 ```
 
 You can do this manually by transferring the contents of `toolbarProps` to `componentsProps` under a `toolbarProps` property.
-* **Viewer:** The `onlyOfficeProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+* **Viewer:** The `onlyOfficeProps` attribute from Viewer property has been moved into the `componentsProps` attribute.
 
 You have to move the contents of `onlyOfficeProps ` to `componentsProps` under a `OnlyOfficeViewer` property.
 
@@ -3307,7 +3318,7 @@ set to `1`
 
 This is the list of impacted components: `MuiCozyTheme/Buttons`, `MuiCozyTheme/MuiBreadcrumbs`, `MuiCozyTheme/Dialog`, `MuiCozyTheme/Accordion`, `MuiCozyTheme/AccordionDetails`, `MuiCozyTheme/AccordionSummary`, `MuiCozyTheme/Divider`, `MuiCozyTheme/Grid`, `MuiCozyTheme/List`, `MuiCozyTheme/ListItem`, `MuiCozyTheme/ListItemIcon`, `MuiCozyTheme/ListItemSecondaryAction`, `MuiCozyTheme/ListSubheader`, `MuiCozyTheme/Menu`, `MuiCozyTheme/Switch`, `MuiCozyTheme/TextField`
 
-You can use this codemods to migrate: 
+You can use this codemods to migrate:
 
 ```
 $ yarn global add @cozy/codemods
@@ -3328,7 +3339,7 @@ $ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/t
 * This is the list of deprecated component
 `ActionMenu`, `Alerter`, `BottomDrawer`, `Button`, `ButtonAction`, `Chip`, `CompositeRow`, `GridItem`, `Infos`, `InfosCarrousel`, `InlineCard`, `IntentModal`, `IntentOpener`, `Media`, `Menus`, `Modal`, `NarrowContent`, `Overlay`, `PercentageBar`, `PercentageLine`, `PushClientButton`, `QuotaAlert`, `Radio`, `RaisedList`, `ViewStack`
 
-These components are now in a `deprecated` subfolder. Use this codemods to migrate: 
+These components are now in a `deprecated` subfolder. Use this codemods to migrate:
 
 ```
 $ yarn global add @cozy/codemods
