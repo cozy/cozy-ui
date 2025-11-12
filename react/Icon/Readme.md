@@ -323,6 +323,7 @@ import Telecom from 'cozy-ui/transpiled/react/Icons/Telecom'
 import Telephone from 'cozy-ui/transpiled/react/Icons/Telephone'
 import Text from 'cozy-ui/transpiled/react/Icons/Text'
 import TextInfo from 'cozy-ui/transpiled/react/Icons/TextInfo'
+import Tmail from 'cozy-ui/transpiled/react/Icons/Tmail'
 import Top from 'cozy-ui/transpiled/react/Icons/Top'
 import ToTheCloud from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
 import Train from 'cozy-ui/transpiled/react/Icons/Train'
@@ -609,6 +610,7 @@ const icons = [
   TextInfo,
   Top,
   ToTheCloud,
+  Tmail, 
   Train,
   Tram,
   Trash,
