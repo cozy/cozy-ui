@@ -10,7 +10,7 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 export const CozyThemeContext = createContext()
 
 /**
- * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean, name: 'Twake'|'Cozy' }}
+ * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean }}
  */
 export const useCozyTheme = () => {
   const context = useContext(CozyThemeContext)
