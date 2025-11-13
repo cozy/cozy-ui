@@ -31,23 +31,15 @@ export const useCozyTheme = () => {
   return context
 }
 
-const CozyTheme = ({
-  variant,
-  className,
-  ignoreItself,
-  settingsThemeType,
-  children
-}) => {
+const CozyTheme = ({ type, variant, className, ignoreItself, children }) => {
   const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
   const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
 
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
     ? 'dark'
     : 'light'
-  const filteredSettingsThemeType = ['light', 'dark'].includes(
-    settingsThemeType
-  )
-    ? settingsThemeType
+  const filteredSettingsThemeType = ['light', 'dark'].includes(type)
+    ? type
     : undefined
 
   const _type = uiThemeType || filteredSettingsThemeType || deviceThemeType
@@ -76,11 +68,10 @@ const CozyTheme = ({
 }
 
 CozyTheme.propTypes = {
+  type: PropTypes.oneOf(['light', 'dark', 'auto']),
   variant: PropTypes.oneOf(['normal', 'inverted']),
   /** Causes this element's children to appear as if they were direct children of the element's parent, ignoring the element itself. */
   ignoreItself: PropTypes.bool,
-  /** Theme type from io.cozy.settings.instance */
-  settingsThemeType: PropTypes.oneOf(['light', 'dark', 'auto']),
   className: PropTypes.string,
   children: PropTypes.node
 }

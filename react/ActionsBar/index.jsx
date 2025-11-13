@@ -138,7 +138,7 @@ const ActionsBar = ({
   }
 
   return (
-    <CozyTheme settingsThemeType={type} variant="inverted">
+    <CozyTheme type={type} variant="inverted">
       <AppBar className={styles.appBar} position="fixed" color="inherit">
         <Toolbar
           className={styles.toolbar}
