@@ -50,23 +50,21 @@ const CozyTheme = ({
     ? settingsThemeType
     : undefined
 
-  const selfThemeType =
-    uiThemeType || filteredSettingsThemeType || deviceThemeType
-  const selfThemeVariant = uiThemeVariant || variant
+  const _type = uiThemeType || filteredSettingsThemeType || deviceThemeType
+  const _variant = uiThemeVariant || variant
 
   return (
     <CozyThemeContext.Provider
       value={{
-        type: selfThemeType,
-        variant: selfThemeVariant,
-        isLight: selfThemeType === 'light'
+        type: _type,
+        variant: _variant,
+        isLight: _type === 'light'
       }}
     >
-      <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
+      <MuiCozyTheme type={_type} variant={_variant}>
         <div
           className={cx(className, {
-            [`TwakeTheme--${selfThemeType}-${selfThemeVariant}`]:
-              Boolean(selfThemeVariant),
+            [`TwakeTheme--${_type}-${_variant}`]: Boolean(_variant),
             'u-dc': ignoreItself
           })}
         >
