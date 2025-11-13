@@ -440,7 +440,7 @@ const BottomSheetPortal = forwardRef(({ portalProps, ...props }, ref) => {
   const CozyThemeWrapper = portalProps?.disablePortal ? Fragment : CozyTheme
   const wrapperProps = portalProps?.disablePortal
     ? undefined
-    : { variant, settingsThemeType: type }
+    : { type, variant }
 
   return (
     <Portal {...portalProps}>
