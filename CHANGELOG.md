@@ -1,3 +1,21 @@
+# [134.0.0](https://github.com/cozy/cozy-ui/compare/v133.0.1...v134.0.0) (2025-11-13)
+
+
+### Bug Fixes
+
+* **ActionsBar:** Theme type wasn't set correctly ([89f4cc7](https://github.com/cozy/cozy-ui/commit/89f4cc7))
+* **BottomSheet:** Theme type wasn't set correctly ([3f5e3e3](https://github.com/cozy/cozy-ui/commit/3f5e3e3))
+
+
+### Features
+
+* **CozyTheme:** Rename prop `settingsThemeType` in `type` ([f397f65](https://github.com/cozy/cozy-ui/commit/f397f65))
+
+
+### BREAKING CHANGES
+
+* **CozyTheme:** If you use `import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'` you must replace `settingsThemeType` prop by `type`. Expl: `<CozyTheme settingsThemeType={}>` becomes `<CozyTheme type={}>`
+
 ## [133.0.1](https://github.com/cozy/cozy-ui/compare/v133.0.0...v133.0.1) (2025-11-05)
 
 
