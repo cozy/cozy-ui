@@ -18,7 +18,7 @@ import DotsIcon from '../Icons/Dots'
 import Toolbar from '../Toolbar'
 import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
-import CozyTheme from '../providers/CozyTheme'
+import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { useI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
@@ -111,6 +111,7 @@ const ActionsBar = ({
   onClose
 }) => {
   const { isMobile } = useBreakpoints()
+  const { type } = useCozyTheme()
   const anchorRef = useRef()
   const [showMenu, setShowMenu] = useState(false)
   const styles = useStyles({ isMobile })
@@ -137,7 +138,7 @@ const ActionsBar = ({
   }
 
   return (
-    <CozyTheme variant="inverted">
+    <CozyTheme settingsThemeType={type} variant="inverted">
       <AppBar className={styles.appBar} position="fixed" color="inherit">
         <Toolbar
           className={styles.toolbar}
