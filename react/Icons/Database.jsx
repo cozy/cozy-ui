@@ -1,0 +1,14 @@
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/database.svg` to regenerate;
+import React from 'react'
+
+function SvgDatabase(props) {
+  return (
+    <svg viewBox="0 0 14 16" {...props}>
+      <path d="M14 3.46c0 1.91-3.134 3.459-7 3.459S0 5.37 0 3.459C0 1.55 3.134 0 7 0s7 1.549 7 3.46zm0 10.43C12.691 15.142 10.049 16 7 16s-5.691-.857-7-2.11v-1.729c1.308 1.253 3.951 2.11 7 2.11s5.692-.858 7-2.11v1.73z" />
+      <path d="M14 10.863c-1.309 1.253-3.951 2.11-7 2.11s-5.691-.857-7-2.11V9.134c1.308 1.253 3.951 2.11 7 2.11s5.692-.858 7-2.11v1.73z" />
+      <path d="M14 7.836c-1.309 1.252-3.951 2.11-7 2.11s-5.691-.858-7-2.11V6.107c1.308 1.253 3.951 2.11 7 2.11s5.692-.858 7-2.11v1.73z" />
+    </svg>
+  )
+}
+
+export default SvgDatabase
