@@ -1,3 +1,28 @@
+# [135.0.0](https://github.com/cozy/cozy-ui/compare/v134.2.0...v135.0.0) (2025-12-04)
+
+
+### Features
+
+* Add twake-i18n package ([7b9ff5f](https://github.com/cozy/cozy-ui/commit/7b9ff5f))
+* Remove I18n ([df09711](https://github.com/cozy/cozy-ui/commit/df09711))
+* Replace I18n stuff by twake-i18n ([ab99763](https://github.com/cozy/cozy-ui/commit/ab99763))
+
+
+### BREAKING CHANGES
+
+* No longer expose I18n provider. You must import everything previously based on `providers/I18n` from `twake-i18n`.
+You can use this codemods to migrate:
+
+```
+yarn add twake-i18n
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-bc-135.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
+You probably will need to fix linter issue after that with something like `yarn lint --fix`.
+* you must have `twake-i18n >= 0.3.0`
+
 # [134.2.0](https://github.com/cozy/cozy-ui/compare/v134.1.0...v134.2.0) (2025-12-04)
 
 
