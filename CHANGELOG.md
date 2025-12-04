@@ -1,3 +1,10 @@
+# [134.2.0](https://github.com/cozy/cozy-ui/compare/v134.1.0...v134.2.0) (2025-12-04)
+
+
+### Features
+
+* **Icon:** Add database and expert ([1032391](https://github.com/cozy/cozy-ui/commit/1032391))
+
 # [134.1.0](https://github.com/cozy/cozy-ui/compare/v134.0.0...v134.1.0) (2025-12-04)
 
 
