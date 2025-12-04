@@ -7,8 +7,8 @@ import styles from './styles.styl'
 import Icon from '../../Icon'
 import EyeIcon from '../../Icons/Eye'
 import EyeClosedIcon from '../../Icons/EyeClosed'
-import Input from '../../legacy/Input'
 import InputGroup from '../../InputGroup'
+import Input from '../../legacy/Input'
 
 const HideShowButton = props => {
   const { hidden, className, ...rest } = props

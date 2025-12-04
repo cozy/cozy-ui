@@ -1,9 +1,9 @@
+import { withOnlyLocales, getI18n } from 'twake-i18n'
+
 import en from './en.json'
 import fr from './fr.json'
 import ru from './ru.json'
 import vi from './vi.json'
-import { getI18n } from '../../../providers/I18n/helpers'
-import withOnlyLocales from '../../../providers/I18n/withOnlyLocales'
 
 export const locales = {
   en,

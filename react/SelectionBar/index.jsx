@@ -1,6 +1,7 @@
 import { useTheme } from '@material-ui/core'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import { useWebviewIntent } from 'cozy-intent'
 
@@ -12,7 +13,6 @@ import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
 import useBreakpoints from '../providers/Breakpoints'
-import { useI18n } from '../providers/I18n'
 
 /*
 

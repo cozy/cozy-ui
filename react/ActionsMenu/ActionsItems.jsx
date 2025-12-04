@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import { useWebviewIntent } from 'cozy-intent'
 
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
-import { useI18n } from '../providers/I18n'
 
 const ActionsItems = forwardRef(
   (

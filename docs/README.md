@@ -245,11 +245,11 @@ yarn screenshots:server
 See our [travis configuration](https://github.com/cozy/cozy-ui/blob/master/.travis.yml) for more information.
 
 
-### Packages and depedencies
+### Packages and Dependencies
 
 Cozy-ui relies on many packages to work, but we tend to want it to be more agnostic. So this is the package list and usage:
 
-#### Dependecies
+#### Dependencies
 
 - @date-io/date-fns => DatePicker
 - chart.js => PieChart
@@ -259,7 +259,7 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 - react-virtuoso => Table/Virtualized, GridList/Virtualized
 - rooks => BottomSheet, Table/Virtualized
 
-#### Dependecies for deprecated components
+#### Dependencies for deprecated components
 
 - @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
 - react-remove-scroll => BottomDrawer, Overlay
@@ -271,6 +271,7 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 - cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, Dialog, SelectionBar
 - react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
 - react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
+- twake-i18n => lots of component
 
 #### PeerDependencies for deprecated components
 

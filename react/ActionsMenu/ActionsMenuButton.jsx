@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import ActionsMenu from '.'
 import { locales } from './Actions/locales/withActionsLocales'
@@ -6,7 +7,6 @@ import Icon from '../Icon'
 import IconButton from '../IconButton'
 import DotsIcon from '../Icons/Dots'
 import ListItemIcon from '../ListItemIcon'
-import { useI18n, useExtendI18n } from '../providers/I18n'
 
 const ActionsMenuButton = ({ docs, actions }) => {
   const [showActions, setShowActions] = useState(false)

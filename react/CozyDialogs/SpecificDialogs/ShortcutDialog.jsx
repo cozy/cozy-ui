@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import {
   checkAndSaveShortcut,
@@ -11,7 +12,6 @@ import Button from '../../Buttons'
 import Stack from '../../Stack'
 import TextField from '../../TextField'
 import { useAlert } from '../../providers/Alert'
-import { useI18n } from '../../providers/I18n'
 
 const ENTER_KEY = 13
 

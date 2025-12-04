@@ -16,11 +16,11 @@ import LocaleFR from 'date-fns/locale/fr'
 import subDays from 'date-fns/subDays'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useState } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import { makeFormat } from './helpers'
 import withOwnLocales from './locales/withOwnLocales'
 import useBreakpoints from '../providers/Breakpoints'
-import { useI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
 const localesFNS = {

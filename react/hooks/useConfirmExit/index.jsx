@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useCallback, useRef, useState } from 'react'
+import { withLocales } from 'twake-i18n'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
@@ -7,7 +8,6 @@ import ru from './locales/ru.json'
 import vi from './locales/vi.json'
 import { ConfirmDialog } from '../../CozyDialogs'
 import Button from '../../deprecated/Button'
-import withLocales from '../../providers/I18n/withLocales'
 import useEventListener from '../useEventListener'
 
 /**

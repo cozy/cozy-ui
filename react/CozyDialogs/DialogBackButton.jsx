@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { createUseI18n } from 'twake-i18n'
 
 import locales from './locales'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import PreviousIcon from '../Icons/Previous'
-import { createUseI18n } from '../providers/I18n'
 
 const useI18n = createUseI18n(locales)
 

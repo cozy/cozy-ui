@@ -3,12 +3,12 @@ import format from 'date-fns/format'
 import range from 'lodash/range'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
 import LeftIcon from '../Icons/Left'
 import RightIcon from '../Icons/Right'
-import { useI18n } from '../providers/I18n'
 
 const MonthButton = ({ monthNum, onClick, isSelected }) => {
   const { f } = useI18n()

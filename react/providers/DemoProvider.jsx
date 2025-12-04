@@ -1,9 +1,9 @@
 import React from 'react'
+import I18n from 'twake-i18n'
 
 import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
 import AlertProvider from '../providers/Alert'
-import I18n from '../providers/I18n'
 
 const DemoProvider = ({ variant, dictRequire, children }) => {
   const lang = localStorage.getItem('lang') || 'en'

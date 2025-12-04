@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import { handleDelete, handleUpload } from './helpers'
 import { locales } from './locales'
@@ -10,7 +11,6 @@ import ListItemText from '../ListItemText'
 import Menu from '../Menu'
 import MenuItem from '../MenuItem'
 import { useAlert } from '../providers/Alert'
-import { useI18n, useExtendI18n } from '../providers/I18n'
 
 const EditMenu = ({
   anchorRef,

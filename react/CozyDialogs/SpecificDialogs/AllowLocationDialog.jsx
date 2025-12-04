@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import CozyLocation from './icons/CozyLocation'
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
@@ -7,7 +8,6 @@ import { IllustrationDialog } from '..'
 import Button from '../../Buttons'
 import Icon from '../../Icon'
 import Typography from '../../Typography'
-import { useI18n } from '../../providers/I18n'
 
 const createStyles = () => ({
   typography: {
