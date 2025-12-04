@@ -1,3 +1,10 @@
+# [134.1.0](https://github.com/cozy/cozy-ui/compare/v134.0.0...v134.1.0) (2025-12-04)
+
+
+### Features
+
+* **Icon:** Add planet ([e3268b0](https://github.com/cozy/cozy-ui/commit/e3268b0))
+
 # [134.0.0](https://github.com/cozy/cozy-ui/compare/v133.0.1...v134.0.0) (2025-11-13)
 
 
