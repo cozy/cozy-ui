@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useI18n, withOnlyLocales } from 'twake-i18n'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
@@ -10,8 +11,6 @@ import EyeIcon from '../Icons/Eye'
 import EyeClosedIcon from '../Icons/EyeClosed'
 import InputAdornment from '../InputAdornment'
 import TextField from '../TextField'
-import { useI18n } from '../providers/I18n'
-import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
 export const locales = {
   en,

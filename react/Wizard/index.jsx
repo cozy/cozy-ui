@@ -4,9 +4,9 @@ import React from 'react'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import CloudIcon from '../Icons/Cloud'
-import Input from '../legacy/Input'
 import Typography from '../Typography'
 import Button from '../deprecated/Button'
+import Input from '../legacy/Input'
 
 export const Wizard = ({ children, tag, ...props }) => {
   const Component = tag || 'div'

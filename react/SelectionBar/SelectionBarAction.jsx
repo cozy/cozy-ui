@@ -1,13 +1,13 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { useI18n } from 'twake-i18n'
 
 import styles from './styles.styl'
 import Button from '../Button'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import useBreakpoints from '../providers/Breakpoints'
-import { useI18n } from '../providers/I18n'
 
 const SelectionBarAction = ({ selectedCount, selected, action }) => {
   const { isDesktop } = useBreakpoints()

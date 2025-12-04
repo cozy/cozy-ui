@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React, { useState, useRef } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import DotsIcon from '../Icons/Dots'
 import { ActionMenuWithClose, ActionMenuItem } from '../deprecated/ActionMenu'
-import { useI18n } from '../providers/I18n'
 
 const SelectionBarMore = ({ actions, selectedCount, selected }) => {
   const { t } = useI18n()

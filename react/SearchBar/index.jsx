@@ -2,6 +2,7 @@ import cx from 'classnames'
 import debounce from 'lodash/debounce'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useState, useMemo } from 'react'
+import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import { locales } from './locales/withOnlyLocales'
 import ButtonBase from '../ButtonBase'
@@ -13,7 +14,6 @@ import MagnifierIcon from '../Icons/Magnifier'
 import InputBase from '../InputBase'
 import Paper from '../Paper'
 import Typography from '../Typography'
-import { useI18n, useExtendI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
 const sizeToPixel = {

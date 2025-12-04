@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
+import I18n from 'twake-i18n'
 
 import DateMonthPicker from '.'
-import I18n from '../providers/I18n'
 
 describe('DateMonthPicker', () => {
   const setup = ({ initialValue }) => {

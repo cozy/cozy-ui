@@ -52,7 +52,7 @@ When you use `loadingType`, `<Spinner />` needs to be in an `<I18n />` wrapper a
 
 ```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner'
-import I18n from 'cozy-ui/transpiled/react/providers/I18n'
+import I18n from 'twake-i18n'
 
 ;
 

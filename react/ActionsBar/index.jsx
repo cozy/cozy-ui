@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useRef, useState, useMemo } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import ResponsiveAction from './ResponsiveAction'
 import withActionsLocales from './locales/withActionsLocales'
@@ -19,7 +20,6 @@ import Toolbar from '../Toolbar'
 import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
-import { useI18n } from '../providers/I18n'
 import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({

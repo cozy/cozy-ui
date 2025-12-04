@@ -1,5 +1,6 @@
 import cx from 'classnames'
 import React, { Children, isValidElement, useState, forwardRef } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import withNavLocales from './locales/withNavLocales'
 import styles from './styles.styl'
@@ -9,7 +10,6 @@ import BottomIcon from '../Icons/Bottom'
 import TopIcon from '../Icons/Top'
 import ListItem from '../ListItem'
 import useBreakpoints from '../providers/Breakpoints'
-import { useI18n } from '../providers/I18n'
 
 export const NavItem = ({ className, children, secondary, ...restProps }) => (
   <li

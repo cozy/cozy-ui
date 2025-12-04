@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import { getActionName, getOnlyNeededActions } from './helpers'
-import { useI18n } from '../../../providers/I18n'
 
 const ActionsItems = ({ doc, actions, isLast, setIsRenaming, onClose }) => {
   const { t } = useI18n()

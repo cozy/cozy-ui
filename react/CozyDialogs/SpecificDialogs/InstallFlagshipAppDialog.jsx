@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
+import { useI18n } from 'twake-i18n'
 
 import DefaultQRCode from './icons/QRCodeInstallFlagshipAppDialog.png'
 import appStoreIcon from './icons/appstore.png'
@@ -8,7 +9,6 @@ import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 import { IllustrationDialog } from '..'
 import Link from '../../Link'
 import Typography from '../../Typography'
-import { useI18n } from '../../providers/I18n'
 
 const InstallFlagshipAppDialog = forwardRef(
   ({ onClose, playStoreUrl, appStoreUrl, QRCode }, ref) => {
