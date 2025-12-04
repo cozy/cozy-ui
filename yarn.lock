@@ -13439,6 +13439,15 @@ node-notifier@^8.0.0:
     uuid "^8.3.0"
     which "^2.0.2"
 
+node-polyglot@^2.4.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-polyglot/-/node-polyglot-2.6.0.tgz#3d5889664253d90babc0fcd3c12ae0ac7b98289f"
+  integrity sha512-ZZFkaYzIfGfBvSM6QhA9dM8EEaUJOVewzGSRcXWbJELXDj0lajAtKaENCYxvF5yE+TgHg6NQb0CmgYMsMdcNJQ==
+  dependencies:
+    hasown "^2.0.2"
+    object.entries "^1.1.8"
+    warning "^4.0.3"
+
 node-polyglot@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/node-polyglot/-/node-polyglot-2.5.0.tgz#bd2703f5c5e784c3917abeaa4b5d4604a4722d7e"
@@ -13983,6 +13992,16 @@ object.entries@^1.1.6:
     call-bind "^1.0.7"
     define-properties "^1.2.1"
     es-object-atoms "^1.0.0"
+
+object.entries@^1.1.8:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.9.tgz#e4770a6a1444afb61bd39f984018b5bede25f8b3"
+  integrity sha512-8u/hfXFRBD1O0hPUjioLhoWFHRmt6tKA4/vZPyckBr18l1KE9uHrFaFaUi8MDRTpi4uak2goyPTSNJLXX2k2Hw==
+  dependencies:
+    call-bind "^1.0.8"
+    call-bound "^1.0.4"
+    define-properties "^1.2.1"
+    es-object-atoms "^1.1.1"
 
 object.fromentries@^2.0.0:
   version "2.0.2"
@@ -19408,6 +19427,15 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+twake-i18n@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/twake-i18n/-/twake-i18n-0.3.0.tgz#b88b5a43d1b12491ec43d268ed026429bdb843f8"
+  integrity sha512-hXzRbtJO1sJEXKZymnYbHBugkHWhV6MoEdxUwZJl/FyO5/FovgQAvlpONPrde4mEIky0LZtJf5YVWteYOrIbFg==
+  dependencies:
+    date-fns "2.30.0"
+    lodash "^4.17.21"
+    node-polyglot "^2.4.0"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
