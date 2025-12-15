@@ -1,3 +1,10 @@
+# [135.1.0](https://github.com/cozy/cozy-ui/compare/v135.0.0...v135.1.0) (2025-12-15)
+
+
+### Features
+
+* **Icon:** Add Send ([9dc2177](https://github.com/cozy/cozy-ui/commit/9dc2177))
+
 # [135.0.0](https://github.com/cozy/cozy-ui/compare/v134.2.0...v135.0.0) (2025-12-04)
 
 
