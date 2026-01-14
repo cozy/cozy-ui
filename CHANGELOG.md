@@ -1,3 +1,10 @@
+# [135.2.0](https://github.com/cozy/cozy-ui/compare/v135.1.0...v135.2.0) (2026-01-14)
+
+
+### Features
+
+* Add antivirus icons ([9a906d2](https://github.com/cozy/cozy-ui/commit/9a906d2))
+
 # [135.1.0](https://github.com/cozy/cozy-ui/compare/v135.0.0...v135.1.0) (2025-12-15)
 
 
