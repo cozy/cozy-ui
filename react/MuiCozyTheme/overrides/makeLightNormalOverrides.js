@@ -9,6 +9,12 @@ import {
 } from '../helpers'
 
 export const makeLightNormalOverrides = theme => ({
+  MuiAppBar: {
+    colorDefault: {
+      backgroundColor: theme.palette.grey.A400,
+      color: theme.palette.primary.contrastText
+    }
+  },
   MuiSelect: {
     iconOutlined: {
       top: 'auto',
