@@ -69,9 +69,12 @@ const useStyles = makeStyles({
   })
 })
 
-const SelectedCount = ({ docs, onClose }) => {
+const DefaultIcon = () => <Icon className="u-mr-1" icon={CheckCircleIcon} />
+
+const SelectedCount = ({ docs, onClose, IconComponent }) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
+  const SelectedIcon = IconComponent || DefaultIcon
 
   if (isMobile)
     return (
@@ -90,7 +93,7 @@ const SelectedCount = ({ docs, onClose }) => {
 
   return (
     <div className="u-flex u-flex-items-center u-h-100 u-ph-1">
-      <Icon className="u-mr-1" icon={CheckCircleIcon} />
+      <SelectedIcon />
       <Typography variant="body1" component="span" color="inherit">
         {t('selected_light', docs.length)}
       </Typography>
@@ -104,7 +107,8 @@ const ActionsBar = ({
   autoClose,
   maxDesktopActions,
   onClose,
-  color
+  color,
+  IconComponent
 }) => {
   const { isMobile } = useBreakpoints()
   const anchorRef = useRef()
@@ -140,11 +144,19 @@ const ActionsBar = ({
         disableGutters
       >
         {showDesktopCloseButton && (
-          <IconButton className={styles.desktopCloseButton} onClick={onClose} color="inherit">
+          <IconButton
+            className={styles.desktopCloseButton}
+            onClick={onClose}
+            color="inherit"
+          >
             <Icon icon={CrossIcon} />
           </IconButton>
         )}
-        <SelectedCount docs={docs} onClose={onClose} />
+        <SelectedCount
+          docs={docs}
+          onClose={onClose}
+          IconComponent={IconComponent}
+        />
         <div className={styles.actionsContainer}>
           {/* actions displayed in the bar itself */}
           <ActionsItems
@@ -215,7 +227,13 @@ ActionsBar.propTypes = {
     'warning',
     'info',
     'success'
-  ])
+  ]),
+  /**
+   * Custom React component to replace the default Icon with CheckCircleIcon
+   * displayed next to the selection count on desktop.
+   * The component will be rendered as-is, giving full control over the icon styling.
+   */
+  IconComponent: PropTypes.elementType
 }
 
 ActionsBar.defaultProps = {
