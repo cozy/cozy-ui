@@ -19,7 +19,6 @@ import DotsIcon from '../Icons/Dots'
 import Toolbar from '../Toolbar'
 import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
-import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
@@ -79,8 +78,8 @@ const SelectedCount = ({ docs, onClose }) => {
       <Box
         className="u-flex u-flex-items-center u-h-100 u-pr-1"
         borderRadius="15px 0 0 0"
-        bgcolor="primary.main"
-        color="primary.contrastText"
+        bgcolor="background.paper"
+        color="text.primary"
       >
         <IconButton color="inherit" onClick={onClose}>
           <Icon icon={CrossCircleIcon} />
@@ -91,12 +90,8 @@ const SelectedCount = ({ docs, onClose }) => {
 
   return (
     <div className="u-flex u-flex-items-center u-h-100 u-ph-1">
-      <Icon
-        className="u-mr-1"
-        icon={CheckCircleIcon}
-        color="var(--iconTextColor)"
-      />
-      <Typography variant="body1" component="span">
+      <Icon className="u-mr-1" icon={CheckCircleIcon} />
+      <Typography variant="body1" component="span" color="inherit">
         {t('selected_light', docs.length)}
       </Typography>
     </div>
@@ -108,10 +103,10 @@ const ActionsBar = ({
   docs,
   autoClose,
   maxDesktopActions,
-  onClose
+  onClose,
+  color
 }) => {
   const { isMobile } = useBreakpoints()
-  const { type } = useCozyTheme()
   const anchorRef = useRef()
   const [showMenu, setShowMenu] = useState(false)
   const styles = useStyles({ isMobile })
@@ -138,65 +133,67 @@ const ActionsBar = ({
   }
 
   return (
-    <CozyTheme type={type} variant="inverted">
-      <AppBar className={styles.appBar} position="fixed" color="inherit">
-        <Toolbar
-          className={styles.toolbar}
-          variant={isMobile ? 'regular' : 'dense'}
-          disableGutters
-        >
-          {showDesktopCloseButton && (
-            <IconButton className={styles.desktopCloseButton} onClick={onClose}>
-              <Icon icon={CrossIcon} />
-            </IconButton>
-          )}
-          <SelectedCount docs={docs} onClose={onClose} />
-          <div className={styles.actionsContainer}>
-            {/* actions displayed in the bar itself */}
-            <ActionsItems
-              docs={docs}
-              component={ResponsiveAction}
-              actions={barActions}
-              onClick={handleClick}
-            />
+    <AppBar className={styles.appBar} position="fixed" color={color}>
+      <Toolbar
+        className={styles.toolbar}
+        variant={isMobile ? 'regular' : 'dense'}
+        disableGutters
+      >
+        {showDesktopCloseButton && (
+          <IconButton className={styles.desktopCloseButton} onClick={onClose} color="inherit">
+            <Icon icon={CrossIcon} />
+          </IconButton>
+        )}
+        <SelectedCount docs={docs} onClose={onClose} />
+        <div className={styles.actionsContainer}>
+          {/* actions displayed in the bar itself */}
+          <ActionsItems
+            docs={docs}
+            component={ResponsiveAction}
+            actions={barActions}
+            onClick={handleClick}
+          />
 
-            {/* actions displayed in ActionsMenu */}
-            {menuActions.length > 0 && (
-              <>
-                {isMobile ? (
-                  <ActionsItems
-                    docs={docs}
-                    component={ResponsiveAction}
-                    actions={otherAction}
-                    onClick={() => setShowMenu(true)}
-                  />
-                ) : (
-                  <IconButton ref={anchorRef} onClick={() => setShowMenu(true)}>
-                    <Icon icon={DotsIcon} />
-                  </IconButton>
-                )}
-                <ActionsMenu
-                  ref={anchorRef}
-                  open={showMenu}
+          {/* actions displayed in ActionsMenu */}
+          {menuActions.length > 0 && (
+            <>
+              {isMobile ? (
+                <ActionsItems
                   docs={docs}
-                  actions={menuActions}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left'
-                  }}
-                  componentsProps={{
-                    actionsItems: {
-                      onClick: handleClick
-                    }
-                  }}
-                  onClose={() => setShowMenu(false)}
+                  component={ResponsiveAction}
+                  actions={otherAction}
+                  onClick={() => setShowMenu(true)}
                 />
-              </>
-            )}
-          </div>
-        </Toolbar>
-      </AppBar>
-    </CozyTheme>
+              ) : (
+                <IconButton
+                  color="inherit"
+                  ref={anchorRef}
+                  onClick={() => setShowMenu(true)}
+                >
+                  <Icon icon={DotsIcon} />
+                </IconButton>
+              )}
+              <ActionsMenu
+                ref={anchorRef}
+                open={showMenu}
+                docs={docs}
+                actions={menuActions}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left'
+                }}
+                componentsProps={{
+                  actionsItems: {
+                    onClick: handleClick
+                  }
+                }}
+                onClose={() => setShowMenu(false)}
+              />
+            </>
+          )}
+        </div>
+      </Toolbar>
+    </AppBar>
   )
 }
 
@@ -207,12 +204,24 @@ ActionsBar.propTypes = {
    * Only works on desktop since maximum number is forced in mobile
    */
   maxDesktopActions: PropTypes.number,
-  autoClose: PropTypes.bool
+  autoClose: PropTypes.bool,
+  color: PropTypes.oneOf([
+    'default',
+    'inherit',
+    'primary',
+    'secondary',
+    'transparent',
+    'error',
+    'warning',
+    'info',
+    'success'
+  ])
 }
 
 ActionsBar.defaultProps = {
   maxDesktopActions: 5,
-  autoClose: true
+  autoClose: true,
+  color: 'default'
 }
 
 export default withActionsLocales(ActionsBar)

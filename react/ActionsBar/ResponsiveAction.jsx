@@ -42,14 +42,12 @@ const ResponsiveAction = forwardRef(({ action, disabled, onClick }, ref) => {
     <Button
       ref={ref}
       classes={styles}
-      variant="secondary"
+      variant="text"
+      color="inherit"
       startIcon={<Icon icon={action.icon} />}
       label={
         isMobile ? (
-          <Typography
-            variant="caption"
-            color={disabled ? 'inherit' : 'textPrimary'}
-          >
+          <Typography variant="caption" color="inherit">
             {action.label}
           </Typography>
         ) : (
