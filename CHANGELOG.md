@@ -1,3 +1,16 @@
+# [135.3.0](https://github.com/cozy/cozy-ui/compare/v135.2.0...v135.3.0) (2026-01-16)
+
+
+### Bug Fixes
+
+* Remove fill attribute from cross-circle icon ([b949f88](https://github.com/cozy/cozy-ui/commit/b949f88))
+
+
+### Features
+
+* Allow to customize icon in ActionsBar ([20788b7](https://github.com/cozy/cozy-ui/commit/20788b7))
+* Allow to set color in ActionsBar and AppBar ([33721f0](https://github.com/cozy/cozy-ui/commit/33721f0))
+
 # [135.2.0](https://github.com/cozy/cozy-ui/compare/v135.1.0...v135.2.0) (2026-01-14)
 
 
