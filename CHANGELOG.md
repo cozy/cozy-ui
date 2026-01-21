@@ -1,3 +1,10 @@
+# [135.4.0](https://github.com/cozy/cozy-ui/compare/v135.3.0...v135.4.0) (2026-01-21)
+
+
+### Features
+
+* Add article icon :sparkles: ([9bd502a](https://github.com/cozy/cozy-ui/commit/9bd502a))
+
 # [135.3.0](https://github.com/cozy/cozy-ui/compare/v135.2.0...v135.3.0) (2026-01-16)
 
 
