@@ -1,3 +1,10 @@
+# [135.5.0](https://github.com/cozy/cozy-ui/compare/v135.4.0...v135.5.0) (2026-01-24)
+
+
+### Features
+
+* Add assistant icon :sparkles: ([19b4b67](https://github.com/cozy/cozy-ui/commit/19b4b67))
+
 # [135.4.0](https://github.com/cozy/cozy-ui/compare/v135.3.0...v135.4.0) (2026-01-21)
 
 
