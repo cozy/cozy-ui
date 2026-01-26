@@ -170,7 +170,9 @@ import EmailOpen from 'cozy-ui/transpiled/react/Icons/EmailOpen'
 import Eu from 'cozy-ui/transpiled/react/Icons/Eu'
 import Euro from 'cozy-ui/transpiled/react/Icons/Euro'
 import Exchange from 'cozy-ui/transpiled/react/Icons/Exchange'
+import Expand from 'cozy-ui/transpiled/react/Icons/Expand'
 import Expert from 'cozy-ui/transpiled/react/Icons/Expert'
+import Export from 'cozy-ui/transpiled/react/Icons/Export'
 import Eye from 'cozy-ui/transpiled/react/Icons/Eye'
 import EyeClosed from 'cozy-ui/transpiled/react/Icons/EyeClosed'
 import FaceId from 'cozy-ui/transpiled/react/Icons/FaceId'
@@ -245,6 +247,7 @@ import MovementOut from 'cozy-ui/transpiled/react/Icons/MovementOut'
 import Moveto from 'cozy-ui/transpiled/react/Icons/Moveto'
 import MultiFiles from 'cozy-ui/transpiled/react/Icons/MultiFiles'
 import Music from 'cozy-ui/transpiled/react/Icons/Music'
+import Narrow from 'cozy-ui/transpiled/react/Icons/Narrow'
 import New from 'cozy-ui/transpiled/react/Icons/New'
 import Next from 'cozy-ui/transpiled/react/Icons/Next'
 import Note from 'cozy-ui/transpiled/react/Icons/Note'
@@ -461,7 +464,9 @@ const icons = [
   Eu,
   Euro,
   Exchange,
+  Expand,
   Expert,
+  Export,
   Eye,
   EyeClosed,
   FaceId,
@@ -536,6 +541,7 @@ const icons = [
   Moveto,
   MultiFiles,
   Music,
+  Narrow,
   New,
   Next,
   Note,
@@ -1014,7 +1020,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp', 'article', 'assign-admin','assign-moderator','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud-rainbow','cloud-plus-outlined','cloud','cloud2','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','database','debit','desktop-download','devices','discuss','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email-open','email','eu','euro','exchange','expert','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder-open','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','key2','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','matrix','merge','moped','mosaic','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','number','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','peoples','percent-circle','percent','person-add','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','planet','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','secutiry','select-all','send','server','setting','share-circle','share','shield','shield-infected','shield-clean','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','stop', 'subway', 'support', 'swap', 'sync-cozy','sync','tab','tag','target','task','team','telecom','telephone','text','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp', 'article', 'assign-admin','assign-moderator','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud-rainbow','cloud-plus-outlined','cloud','cloud2','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','database','debit','desktop-download','devices','discuss','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email-open','email','eu','euro','exchange','expand','expert','export','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder-open','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','key2','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','matrix','merge','moped','mosaic','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','narrow','new','next','note','notification-email','number','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','peoples','percent-circle','percent','person-add','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','planet','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','secutiry','select-all','send','server','setting','share-circle','share','shield','shield-infected','shield-clean','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','stop', 'subway', 'support', 'swap', 'sync-cozy','sync','tab','tag','target','task','team','telecom','telephone','text','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
 ;
 
 <Grid container spacing={2}>

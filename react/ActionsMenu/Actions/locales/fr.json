@@ -25,5 +25,6 @@
     "success": "Copié dans le presse-papier",
     "error": "Impossible de copier dans le presse-papier"
   },
-  "call": "Appeler"
+  "call": "Appeler",
+  "exportToText": "Exporter en texte"
 }

@@ -25,5 +25,6 @@
     "success": "Đã sao chép vào clipboard",
     "error": "Không thể sao chép vào clipboard"
   },
-  "call": "Gọi"
+  "call": "Gọi",
+  "exportToText": "Xuất dưới dạng văn bản"
 }
