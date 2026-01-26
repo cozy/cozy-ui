@@ -25,5 +25,6 @@
     "success": "Copied to clipboard",
     "error": "Cannot copy to clipboard"
   },
-  "call": "Call"
+  "call": "Call",
+  "exportToText": "Export as text"
 }

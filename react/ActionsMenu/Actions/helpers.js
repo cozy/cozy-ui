@@ -238,3 +238,23 @@ export const makePdfBlob = async ({ client, docs, fetchBlobFileById }) => {
 
   return blob
 }
+
+/**
+ * Trigger a browser download for a given blob.
+ *
+ * @param {Blob} blob - File content
+ * @param {string} filename - Desired filename
+ * @returns {void}
+ */
+export const downloadBlob = (blob, filename) => {
+  if (!blob || !filename) return
+
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  a.style.display = 'none'
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+}
