@@ -1,3 +1,10 @@
+# [135.6.0](https://github.com/cozy/cozy-ui/compare/v135.5.0...v135.6.0) (2026-01-27)
+
+
+### Features
+
+* Implement new actions ExportToText and new icons :sparkles: ([6714f4a](https://github.com/cozy/cozy-ui/commit/6714f4a))
+
 # [135.5.0](https://github.com/cozy/cozy-ui/compare/v135.4.0...v135.5.0) (2026-01-24)
 
 
