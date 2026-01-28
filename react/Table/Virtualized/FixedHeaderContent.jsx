@@ -32,20 +32,23 @@ const FixedHeaderContent = ({
 }) => {
   const classes = useStyles()
   const selectedCount = context.selectedItems.length
+  const showCheckbox = context.showCheckbox ?? true
 
   return (
     <TableRow>
       <TableCell align="center" padding="checkbox">
-        <Checkbox
-          className={cx('virtualizedCheckbox', {
-            checked: selectedCount > 0
-          })}
-          indeterminate={selectedCount > 0 && selectedCount < rowCount}
-          checked={rowCount > 0 && selectedCount === rowCount}
-          inputProps={{ 'aria-label': 'select all' }}
-          size="small"
-          onChange={onSelectAllClick}
-        />
+        {showCheckbox && (
+          <Checkbox
+            className={cx('virtualizedCheckbox', {
+              checked: selectedCount > 0
+            })}
+            indeterminate={selectedCount > 0 && selectedCount < rowCount}
+            checked={rowCount > 0 && selectedCount === rowCount}
+            inputProps={{ 'aria-label': 'select all' }}
+            size="small"
+            onChange={onSelectAllClick}
+          />
+        )}
       </TableCell>
       {columns.map(column => (
         <TableHeadCell
