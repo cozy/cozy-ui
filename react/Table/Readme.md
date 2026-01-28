@@ -73,7 +73,7 @@ const columns = [
   }
 ]
 
-const initialVariants = [{ grouped: false }]
+const initialVariants = [{ grouped: false, withCheckbox: true }, { grouped: false, withCheckbox: false }]
 
 // Very basic usage only works when Dessert is sorted "asc"
 // Ideally you have to create a logic to create groups with sorted data
@@ -98,6 +98,7 @@ const ExampleTable = ({ variant, ...props }) => {
         onSelect={(row, event, index) => toggleSelectedItem(row.id)}
         onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id))}
         onSortChange={onSortChange}
+        withCheckbox={variant.withCheckbox}
         componentsProps={{
           rowContent: {
             onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },

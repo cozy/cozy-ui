@@ -6,6 +6,14 @@ import TableRowClassic from '../../TableRow'
 const TableRow = ({ item, context, className, ...props }) => {
   const _item = item || context.data[props['data-item-index']]
   const isSelected = context.isSelectedItem(_item)
+  const withCheckbox = context.withCheckbox ?? true
+
+  const handleClick = () => {
+    if (!withCheckbox && _item) {
+      const index = props['data-item-index']
+      context.onSelect?.(_item, null, index)
+    }
+  }
 
   return (
     <TableRowClassic
@@ -13,6 +21,7 @@ const TableRow = ({ item, context, className, ...props }) => {
       className={cx(className, 'virtualized')}
       selected={isSelected}
       hover
+      onClick={!withCheckbox ? handleClick : props.onClick}
     />
   )
 }
