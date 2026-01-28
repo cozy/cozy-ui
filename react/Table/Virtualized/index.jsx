@@ -25,6 +25,7 @@ const VirtualizedTable = forwardRef(
       components,
       onSortChange,
       isNewItem,
+      withCheckbox,
       ...props
     },
     ref
@@ -45,7 +46,9 @@ const VirtualizedTable = forwardRef(
       ...(isGroupedTable && { data }), // we use directly `data` prop if no groupCounts
       isSelectedItem,
       selectedItems,
-      isNewItem
+      isNewItem,
+      withCheckbox,
+      onSelect
     }
 
     const handleSort = property => {
@@ -117,7 +120,8 @@ VirtualizedTable.defaultProps = {
   selectedItems: [],
   isSelectedItem: () => {},
   onSelect: () => {},
-  onSelectAll: () => {}
+  onSelectAll: () => {},
+  withCheckbox: true
 }
 
 VirtualizedTable.propTypes = {
@@ -145,7 +149,9 @@ VirtualizedTable.propTypes = {
   /** Callback called after the sort */
   onSortChange: PropTypes.func,
   /** Function to determine if a row is new */
-  isNewItem: PropTypes.func
+  isNewItem: PropTypes.func,
+  /** Whether to show checkboxes. When false, rows become clickable for selection */
+  withCheckbox: PropTypes.bool
 }
 
 export default VirtualizedTable
