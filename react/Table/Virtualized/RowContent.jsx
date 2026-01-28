@@ -16,22 +16,25 @@ const RowContent = ({
   onClick
 }) => {
   const selectedCount = context.selectedItems.length
+  const showCheckbox = context.showCheckbox ?? true
 
   return (
     <>
       <TableCell align="center" padding="checkbox">
-        <Checkbox
-          className={cx('virtualizedCheckbox', {
-            visible: selectedCount > 0,
-            checked: context.isSelectedItem(row)
-          })}
-          checked={context.isSelectedItem(row)}
-          inputProps={{
-            'aria-labelledby': `enhanced-table-checkbox-${index}`
-          }}
-          size="small"
-          onClick={event => onSelectClick(row, event, index)}
-        />
+        {showCheckbox && (
+          <Checkbox
+            className={cx('virtualizedCheckbox', {
+              visible: selectedCount > 0,
+              checked: context.isSelectedItem(row)
+            })}
+            checked={context.isSelectedItem(row)}
+            inputProps={{
+              'aria-labelledby': `enhanced-table-checkbox-${index}`
+            }}
+            size="small"
+            onClick={event => onSelectClick(row, event, index)}
+          />
+        )}
       </TableCell>
       {columns.map(column => (
         <Cell
