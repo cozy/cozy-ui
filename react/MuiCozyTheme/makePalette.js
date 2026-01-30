@@ -7,7 +7,7 @@ const opacityByTheme = {
     normal: {
       action: {
         hoverOpacity: 0.04,
-        selectedOpacity: 0.08,
+        selectedOpacity: 0.18,
         disabledOpacity: 0.32,
         focusOpacity: 0.12,
         activatedOpacity: 0.12,
@@ -25,7 +25,7 @@ const opacityByTheme = {
     inverted: {
       action: {
         hoverOpacity: 0.08,
-        selectedOpacity: 0.16,
+        selectedOpacity: 0.18,
         disabledOpacity: 0.32,
         focusOpacity: 0.25,
         activatedOpacity: 0.24,
@@ -45,7 +45,7 @@ const opacityByTheme = {
     normal: {
       action: {
         hoverOpacity: 0.08,
-        selectedOpacity: 0.16,
+        selectedOpacity: 0.18,
         disabledOpacity: 0.32,
         focusOpacity: 0.24,
         activatedOpacity: 0.24,
@@ -63,7 +63,7 @@ const opacityByTheme = {
     inverted: {
       action: {
         hoverOpacity: 0.04,
-        selectedOpacity: 0.08,
+        selectedOpacity: 0.18,
         disabledOpacity: 0.32,
         focusOpacity: 0.12,
         activatedOpacity: 0.12,
