@@ -1,3 +1,10 @@
+# [135.7.0](https://github.com/cozy/cozy-ui/compare/v135.6.0...v135.7.0) (2026-02-02)
+
+
+### Features
+
+* Allow to hide checkboxes in VirtualizedTable ([fa375d7](https://github.com/cozy/cozy-ui/commit/fa375d7))
+
 # [135.6.0](https://github.com/cozy/cozy-ui/compare/v135.5.0...v135.6.0) (2026-01-27)
 
 
