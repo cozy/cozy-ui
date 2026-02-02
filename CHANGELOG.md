@@ -1,3 +1,10 @@
+# [135.8.0](https://github.com/cozy/cozy-ui/compare/v135.7.0...v135.8.0) (2026-02-02)
+
+
+### Features
+
+* Change selected items opacity ([e4cfe52](https://github.com/cozy/cozy-ui/commit/e4cfe52))
+
 # [135.7.0](https://github.com/cozy/cozy-ui/compare/v135.6.0...v135.7.0) (2026-02-02)
 
 
