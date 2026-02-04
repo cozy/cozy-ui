@@ -11,6 +11,7 @@ const RowContent = ({
   columns,
   context,
   children,
+  disableCheckbox,
   onSelectClick,
   onLongPress,
   onClick
@@ -26,6 +27,7 @@ const RowContent = ({
               visible: selectedCount > 0,
               checked: context.isSelectedItem(row)
             })}
+            disabled={disableCheckbox?.(row)}
             checked={context.isSelectedItem(row)}
             inputProps={{
               'aria-labelledby': `enhanced-table-checkbox-${index}`

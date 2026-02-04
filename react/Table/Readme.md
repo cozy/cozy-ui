@@ -96,11 +96,12 @@ const ExampleTable = ({ variant, ...props }) => {
         selectedItems={selectedItemsId}
         isSelectedItem={row => isSelectedItem(row.id)}
         onSelect={(row, event, index) => toggleSelectedItem(row.id)}
-        onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id))}
+        onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id !== 1 ? item.id : undefined))}
         onSortChange={onSortChange}
         withCheckbox={variant.withCheckbox}
         componentsProps={{
           rowContent: {
+            disableCheckbox: row => row.id === 1,
             onClick: (row, column) => {
               if (!variant.withCheckbox) {
                 return toggleSelectedItem(row.id)
