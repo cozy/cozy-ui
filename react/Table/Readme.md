@@ -101,7 +101,12 @@ const ExampleTable = ({ variant, ...props }) => {
         withCheckbox={variant.withCheckbox}
         componentsProps={{
           rowContent: {
-            onClick: (row, column) => { console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`) },
+            onClick: (row, column) => {
+              if (!variant.withCheckbox) {
+                return toggleSelectedItem(row.id)
+              }
+              console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`)
+            },
             onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
           },
         }}
