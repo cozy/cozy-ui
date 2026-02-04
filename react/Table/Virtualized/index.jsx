@@ -136,6 +136,12 @@ VirtualizedTable.propTypes = {
     direction: PropTypes.oneOf(['asc', 'desc']),
     by: PropTypes.string
   }),
+  /** Context object passed down to children and virtuoso */
+  context: PropTypes.object,
+  /** Props passed to child components */
+  componentsProps: PropTypes.object,
+  /** Custom components used by react-virtuoso */
+  components: PropTypes.object,
   /** Sort files by type to put directory and trash before files */
   secondarySort: PropTypes.func,
   /** Array of selected items */
