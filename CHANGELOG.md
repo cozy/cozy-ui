@@ -1,3 +1,20 @@
+# [136.0.0](https://github.com/cozy/cozy-ui/compare/v135.8.0...v136.0.0) (2026-02-04)
+
+
+### Bug Fixes
+
+* **Table:** Remove implicit selection on click when `withCheckbox` false ([f972ce8](https://github.com/cozy/cozy-ui/commit/f972ce8))
+
+
+### Features
+
+* **Table:** Add `disableCheckbox` prop ([726a235](https://github.com/cozy/cozy-ui/commit/726a235))
+
+
+### BREAKING CHANGES
+
+* **Table:** You must now use `componentsProps.rowContent.onClick` prop to use selection on click
+
 # [135.8.0](https://github.com/cozy/cozy-ui/compare/v135.7.0...v135.8.0) (2026-02-02)
 
 
