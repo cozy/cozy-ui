@@ -721,6 +721,7 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
 import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
+import AITextIcon from 'cozy-ui/transpiled/react/Icons/AiText'
 import AssistantColorIcon from 'cozy-ui/transpiled/react/Icons/AssistantColor'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
@@ -776,6 +777,7 @@ import TwakeWorkplace from 'cozy-ui/transpiled/react/Icons/TwakeWorkplace'
 
 const icons = [
   AccountIcon,
+  AITextIcon,
   AssistantColorIcon,
   BottomSelectIcon,
   ChatIcon,
@@ -1052,7 +1054,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['account', 'assistant-color', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-shared-drive', 'file-type-shared-drive-grey', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'only-office', 'store', 'top-select', 'trash-duotone', 'cozy'];
+const availableIcons = ['account', 'ai-text', 'assistant-color', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-server', 'file-type-shared-drive', 'file-type-shared-drive-grey', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'only-office', 'store', 'top-select', 'trash-duotone', 'cozy'];
 
 <Grid container spacing={2}>
   <Sprite />
