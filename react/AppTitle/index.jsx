@@ -4,6 +4,7 @@ import React from 'react'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
+import AITextIcon from '../Icons/AiText'
 import ChatIcon from '../Icons/Chat'
 import ChatTextIcon from '../Icons/ChatText'
 import ContactsIcon from '../Icons/Contacts'
@@ -62,6 +63,10 @@ const SLUG_TO_ICONS = {
   home: {
     icon: TwakeWorkplaceIcon,
     text: WorkplaceTextIcon
+  },
+  assistant: {
+    icon: null,
+    text: AITextIcon
   }
 }
 
