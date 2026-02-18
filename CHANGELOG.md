@@ -1,3 +1,11 @@
+# [136.1.0](https://github.com/cozy/cozy-ui/compare/v136.0.0...v136.1.0) (2026-02-18)
+
+
+### Features
+
+* Add CalendarApp and CalendarText icons ([c4fb339](https://github.com/cozy/cozy-ui/commit/c4fb339))
+* Support Calendar in AppTitle component ([b57c6d7](https://github.com/cozy/cozy-ui/commit/b57c6d7))
+
 # [136.0.0](https://github.com/cozy/cozy-ui/compare/v135.8.0...v136.0.0) (2026-02-04)
 
 
