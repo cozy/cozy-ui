@@ -725,6 +725,7 @@ import AssistantColorIcon from 'cozy-ui/transpiled/react/Icons/AssistantColor'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
 import ChatIcon from 'cozy-ui/transpiled/react/Icons/Chat'
+import CalendarAppIcon from 'cozy-ui/transpiled/react/Icons/CalendarApp'
 import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
 import CloudSync2 from 'cozy-ui/transpiled/react/Icons/CloudSync2'
@@ -779,6 +780,7 @@ const icons = [
   AssistantColorIcon,
   BottomSelectIcon,
   ChatIcon,
+  CalendarAppIcon,
   CheckWhiteIcon,
   CloudBrokenIcon,
   CloudSync2,
