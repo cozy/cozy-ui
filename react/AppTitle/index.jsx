@@ -4,6 +4,8 @@ import React from 'react'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
+import CalendarAppIcon from '../Icons/CalendarApp'
+import CalendarTextIcon from '../Icons/CalendarText'
 import ChatIcon from '../Icons/Chat'
 import ChatTextIcon from '../Icons/ChatText'
 import ContactsIcon from '../Icons/Contacts'
@@ -27,6 +29,10 @@ import Typography from '../Typography'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const SLUG_TO_ICONS = {
+  calendar: {
+    icon: CalendarAppIcon,
+    text: CalendarTextIcon
+  },
   chat: {
     icon: ChatIcon,
     text: ChatTextIcon
