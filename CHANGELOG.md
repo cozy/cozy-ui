@@ -1,3 +1,10 @@
+# [136.2.0](https://github.com/cozy/cozy-ui/compare/v136.1.0...v136.2.0) (2026-03-02)
+
+
+### Features
+
+* Add upgrade-plan icon ([89939ff](https://github.com/cozy/cozy-ui/commit/89939ff))
+
 # [136.1.0](https://github.com/cozy/cozy-ui/compare/v136.0.0...v136.1.0) (2026-02-18)
 
 
