@@ -1,3 +1,10 @@
+## [136.2.1](https://github.com/cozy/cozy-ui/compare/v136.2.0...v136.2.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* Remove old sidebar tweak that break Android ([d8f948c](https://github.com/cozy/cozy-ui/commit/d8f948c))
+
 # [136.2.0](https://github.com/cozy/cozy-ui/compare/v136.1.0...v136.2.0) (2026-03-02)
 
 
