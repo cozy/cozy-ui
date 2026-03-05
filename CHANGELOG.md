@@ -1,3 +1,10 @@
+## [136.2.2](https://github.com/cozy/cozy-ui/compare/v136.2.1...v136.2.2) (2026-03-05)
+
+
+### Bug Fixes
+
+* Remove old layout tweak that break Android ([784c833](https://github.com/cozy/cozy-ui/commit/784c833))
+
 ## [136.2.1](https://github.com/cozy/cozy-ui/compare/v136.2.0...v136.2.1) (2026-03-03)
 
 
