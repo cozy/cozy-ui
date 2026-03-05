@@ -73,12 +73,6 @@ $app-main
     overflow hidden
     height 100%
 
-    +medium-screen() // mobile + tablet
-        // iPhone X environment tweak
-        padding-left env(safe-area-inset-left)
-        padding-right env(safe-area-inset-right)
-        padding-bottom env(safe-area-inset-bottom)
-
     &-topbar
         // this pseudo-element is "ghost" element replacing bar
         &:before
