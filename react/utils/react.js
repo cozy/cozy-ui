@@ -35,14 +35,21 @@ export const getLastChild = props => {
 }
 
 /**
+ * Clone a React component and add props on it
+ * @param {React.ReactElement} comp
+ * @param {Function} propsCallback - get comp props as arg, return new props as object
+ * @returns
+ */
+export const AddPropsToComp = (comp, propsCallback) =>
+  isValidElement(comp)
+    ? cloneElement(comp, { ...propsCallback(comp.props) })
+    : null
+
+/**
  * Clone a React child and add props on it
  * @param {React.ReactElement} children
  * @param {Function} propsCallback - get child props as arg, return new props as object
  * @returns
  */
 export const AddPropsToChildren = (children, propsCallback) =>
-  Children.map(children, child =>
-    isValidElement(child)
-      ? cloneElement(child, { ...propsCallback(child.props) })
-      : null
-  )
+  Children.map(children, child => AddPropsToComp(child, propsCallback))
