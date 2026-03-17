@@ -111,7 +111,6 @@ module.exports = {
       name: 'Legacy',
       components: () => [
         '../react/legacy/Avatar',
-        '../react/BarButton',
         '../react/BarTitle',
         '../react/legacy/Breadcrumbs',
         '../react/Card',
