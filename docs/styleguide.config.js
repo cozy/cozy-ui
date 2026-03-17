@@ -18,7 +18,6 @@ module.exports = {
         '../react/AppTitle',
         '../react/Avatar',
         '../react/Badge',
-        '../react/Banner',
         '../react/Breadcrumbs',
         '../react/Buttons',
         '../react/Checkbox',
