@@ -538,6 +538,9 @@ export const makeLightNormalOverrides = theme => ({
   },
   MuiTableRow: {
     root: {
+      '&.new': {
+        backgroundColor: theme.palette.action.hover
+      },
       '&.disabled': {
         cursor: 'pointer',
         pointerEvents: 'none',
