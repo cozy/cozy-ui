@@ -7,7 +7,7 @@ You can pass a child that will be used as default value is app is not supported.
 ```jsx
 import AppTitle from 'cozy-ui/transpiled/react/AppTitle';
 
-const slugs = ["calendar", "chat", "contacts", "drive", "mail", "notes", "pass", "store", "photos", "home"];
+const slugs = ["calendar", "chat", "contacts", "drive", "mail", "notes", "pass", "store", "photos", "visio", "home"];
 
 <div class="u-flex u-flex-column">
   {

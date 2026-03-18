@@ -25,6 +25,8 @@ import StoreIcon from '../Icons/Store'
 import StoreTextIcon from '../Icons/StoreText'
 import TwakeTextIcon from '../Icons/TwakeText'
 import TwakeWorkplaceIcon from '../Icons/TwakeWorkplace'
+import VisioIcon from '../Icons/Visio'
+import VisioTextIcon from '../Icons/VisioText'
 import WorkplaceTextIcon from '../Icons/WorkplaceText'
 import Typography from '../Typography'
 import { useCozyTheme } from '../providers/CozyTheme'
@@ -69,6 +71,10 @@ const SLUG_TO_ICONS = {
   home: {
     icon: TwakeWorkplaceIcon,
     text: WorkplaceTextIcon
+  },
+  visio: {
+    icon: VisioIcon,
+    text: VisioTextIcon
   },
   assistant: {
     icon: null,
