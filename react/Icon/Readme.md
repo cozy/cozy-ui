@@ -774,6 +774,7 @@ import PassIcon from 'cozy-ui/transpiled/react/Icons/Pass'
 import ShareGrey08Icon from 'cozy-ui/transpiled/react/Icons/ShareGrey08'
 import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import PhotosIcon from 'cozy-ui/transpiled/react/Icons/Photos'
+import VisioIcon from 'cozy-ui/transpiled/react/Icons/Visio'
 import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
 import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
 import TwakeWorkplace from 'cozy-ui/transpiled/react/Icons/TwakeWorkplace'
@@ -831,6 +832,7 @@ const icons = [
   ShareGrey08Icon,
   StoreIcon,
   PhotosIcon,
+  VisioIcon,
   TopSelectIcon,
   TrashDuotoneIcon,
   TwakeWorkplace
