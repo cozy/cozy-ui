@@ -5,8 +5,12 @@ Displays a Grid of items
 ### Default usage
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/Grid';
-import Card from 'cozy-ui/transpiled/react/Card';
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Box from 'cozy-ui/transpiled/react/Box'
+
+const Card = props => <Box display="block" border={1} borderColor="var(--dividerColor)" borderRadius={8} padding={2} {...props} />
+
+;
 
 <Grid container spacing={3}>
     <Grid item xs={12}>
@@ -36,8 +40,12 @@ import Card from 'cozy-ui/transpiled/react/Card';
 ### Responsive usage
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/Grid';
-import Card from 'cozy-ui/transpiled/react/Card';
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Box from 'cozy-ui/transpiled/react/Box'
+
+const Card = props => <Box display="block" border={1} borderColor="var(--dividerColor)" borderRadius={8} padding={2} {...props} />
+
+;
 
 <Grid container spacing={1}>
     <Grid item xs={12}>
