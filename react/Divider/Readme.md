@@ -3,15 +3,17 @@ A divider can be used when you want to separate the content. See [Mui documentat
 Vertical division
 
 ```jsx
-import Card from 'cozy-ui/transpiled/react/Card'
+import Box from 'cozy-ui/transpiled/react/Box'
 import Typography from "cozy-ui/transpiled/react/Typography"
-import Divider from 'cozy-ui/transpiled/react/Divider';
+import Divider from 'cozy-ui/transpiled/react/Divider'
 
-<Card>
+;
+
+<Box display="block" border={1} borderColor="var(--dividerColor)" borderRadius={8} padding={2}>
   <Typography variant="body1" className="u-mb-1">Here is some content in a card.</Typography>
   <Divider />
   <Typography variant="body1" className="u-mt-1">Other content in a card, that is unrelated to the first paragraph.</Typography>
-</Card>
+</Box>
 ```
 
 Horizontal division
@@ -19,7 +21,9 @@ Horizontal division
 ```jsx
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import Typography from "cozy-ui/transpiled/react/Typography"
-import Grid from 'cozy-ui/transpiled/react/Grid';
+import Grid from 'cozy-ui/transpiled/react/Grid'
+
+;
 
 <Grid container alignItems="center">
   <Typography variant="body1" className="u-mr-1">Left block</Typography>
@@ -31,7 +35,9 @@ import Grid from 'cozy-ui/transpiled/react/Grid';
 Divider with default textAlign (left)
 
 ```jsx
-import Divider from 'cozy-ui/transpiled/react/Divider';
+import Divider from 'cozy-ui/transpiled/react/Divider'
+
+;
 
 <Divider>Text Left</Divider>
 ```
@@ -39,7 +45,9 @@ import Divider from 'cozy-ui/transpiled/react/Divider';
 Divider with textAlign (center)
 
 ```jsx
-import Divider from 'cozy-ui/transpiled/react/Divider';
+import Divider from 'cozy-ui/transpiled/react/Divider'
+
+;
 
 <Divider textAlign="center">Text Center</Divider>
 ```

@@ -2,7 +2,7 @@ import cx from 'classnames'
 import React from 'react'
 
 import styles from './styles.styl'
-import Card from '../Card'
+import Box from '../Box'
 import List from '../List'
 import ListSubheader from '../ListSubheader'
 import Stack from '../Stack'
@@ -29,7 +29,15 @@ const NavigationList = ({ children, style, className }) => {
 export default NavigationList
 
 const DesktopSection = ({ children }) => (
-  <Card className="u-p-0 u-ov-hidden u-mb-1-half">{children}</Card>
+  <Box
+    display="block"
+    className="u-ov-hidden u-mb-1-half"
+    border={1}
+    borderColor="var(--dividerColor)"
+    borderRadius={8}
+  >
+    {children}
+  </Box>
 )
 
 export const NavigationListSection = ({ children }) => {

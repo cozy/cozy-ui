@@ -113,7 +113,6 @@ module.exports = {
         '../react/legacy/Avatar',
         '../react/BarTitle',
         '../react/legacy/Breadcrumbs',
-        '../react/Card',
         '../react/Circle',
         '../react/DateMonthPicker',
         '../react/Figure/Figure.jsx',
