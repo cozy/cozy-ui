@@ -1,3 +1,11 @@
+# [136.3.0](https://github.com/cozy/cozy-ui/compare/v136.2.2...v136.3.0) (2026-03-18)
+
+
+### Features
+
+* Add icon for assistant and add app title for assistant :sparkles: ([d6da355](https://github.com/cozy/cozy-ui/commit/d6da355))
+* Add visual indication for new items in virtualized tables ([1e5f638](https://github.com/cozy/cozy-ui/commit/1e5f638))
+
 ## [136.2.2](https://github.com/cozy/cozy-ui/compare/v136.2.1...v136.2.2) (2026-03-05)
 
 
