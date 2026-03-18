@@ -8,15 +8,17 @@ The padding is responsive, it is smaller on mobile/tablet.
 You can use `xs`, `s`, `m` (default), `l`, `xl`, and `xxl` values for "spacing" to have less/more padding.
 
 ```jsx
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Card from 'cozy-ui/transpiled/react/Card';
-import Typography from 'cozy-ui/transpiled/react/Typography';
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Box from 'cozy-ui/transpiled/react/Box'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 initialState = {
   spacing: 'm'
-};
+}
 
-const spacings = ['xs', 's', 'm', 'l', 'xl', 'xxl'];
+const spacings = ['xs', 's', 'm', 'l', 'xl', 'xxl']
+
+const Card = props => <Box display="block" border={1} borderColor="var(--dividerColor)" borderRadius={8} padding={2} {...props} />
 
 const StateRadio = ({ name, value, ...props }) => {
   return (
@@ -32,7 +34,9 @@ const StateRadio = ({ name, value, ...props }) => {
       {value}
     </span>
   )
-};
+}
+
+;
 
 <>
   {!isTesting() && (
