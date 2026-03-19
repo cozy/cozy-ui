@@ -114,7 +114,6 @@ module.exports = {
         '../react/legacy/Input',
         '../react/InputGroup',
         '../react/LoadMore',
-        '../react/Page',
         '../react/PasswordExample',
         '../react/Labs/PasswordInput',
         '../react/Popup',
