@@ -113,7 +113,6 @@ module.exports = {
         '../react/FileInput',
         '../react/legacy/Input',
         '../react/InputGroup',
-        '../react/Label',
         '../react/LoadMore',
         '../react/Page',
         '../react/PasswordExample',
