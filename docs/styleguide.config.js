@@ -119,8 +119,7 @@ module.exports = {
         '../react/Spinner',
         '../react/Stack',
         '../react/Textarea',
-        '../react/UnorderedList',
-        '../react/Wizard'
+        '../react/UnorderedList'
       ]
     }
   ],
