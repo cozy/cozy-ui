@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import Alert from '../Alert'
-import { LinearProgress } from '../Progress'
+import LinearProgress from '../LinearProgress'
 import Typography from '../Typography'
 import { useBreakpoints } from '../providers/Breakpoints'
 import { withStyles } from '../styles'
