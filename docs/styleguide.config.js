@@ -45,7 +45,6 @@ module.exports = {
         '../react/ProgressionBanner',
         '../react/Radios',
         '../react/SearchBar',
-        '../react/SelectionBar',
         '../react/Skeletons',
         '../react/Snackbar',
         '../react/Stepper',
