@@ -63,20 +63,29 @@ Badges can be combined — in this example, we have an item with a new qualifica
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
 
 ;
 
-<InfosBadge
+<Badge
+  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
   badgeContent={
-    <Badge color="error" variant="dot" size="small">
-      <Icon icon={LinkIcon} size={16} />
-    </Badge>
+    <div
+      className="u-h-1-half u-miw-1-half u-bdrs-circle u-flex u-flex-items-center u-flex-justify-center"
+      style={{
+        backgroundColor: 'var(--paperBackgroundColor)',
+        color: 'var(--iconTextColor)',
+        boxShadow: 'var(--shadow3)'
+      }}
+    >
+      <Badge color="error" variant="dot" size="small">
+        <Icon icon={LinkIcon} size={16} />
+      </Badge>
+    </div>
   }
 >
-  <Avatar text="CD" size="medium" />
-</InfosBadge>
+  <Avatar>CD</Avatar>
+</Badge>
 ```

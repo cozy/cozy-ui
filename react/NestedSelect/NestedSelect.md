@@ -8,7 +8,7 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import { useState } from 'react'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Circle from 'cozy-ui/transpiled/react/Circle'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import SettingIcon from 'cozy-ui/transpiled/react/Icons/Setting'
 import NestedSelectResponsive from 'cozy-ui/transpiled/react/NestedSelect/NestedSelectResponsive'
@@ -23,9 +23,9 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import Alert from 'cozy-ui/transpiled/react/Alert'
 
 const Image = ({ letter }) => (
-  <Circle backgroundColor={palette.melon}>
+  <Avatar color={palette.melon}>
     { letter }
-  </Circle>
+  </Avatar>
 )
 
 const letterOption = (letter, description, key) => ({

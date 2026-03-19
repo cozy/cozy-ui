@@ -14,8 +14,10 @@ const useStyles = makeStyles(theme => ({
     fontSize: ({ size }) => size / 2
   },
   colorDefault: {
-    color: ({ color }) => (color ? theme.palette.primary.contrastText : ''),
-    background: ({ color }) => colorMapping[color]
+    color: ({ color, textColor }) =>
+      textColor ? textColor : color ? theme.palette.primary.contrastText : '',
+    background: ({ color }) =>
+      supportedColors.includes(color) ? colorMapping[color] : color
   }
 }))
 
@@ -27,6 +29,7 @@ const Avatar = ({
   innerBorder,
   disabled,
   display,
+  textColor,
   ...props
 }) => {
   const isCustomSize = typeof size === 'number'
@@ -34,12 +37,8 @@ const Avatar = ({
     typeof props.children === 'string' ? nameToColor(props.children) : undefined
   const classes = useStyles({
     size: isCustomSize ? size : undefined,
-    color:
-      color === 'none'
-        ? undefined
-        : supportedColors.includes(color)
-        ? color
-        : defaultColor
+    color: color === 'none' ? undefined : color || defaultColor,
+    textColor
   })
 
   return (
@@ -63,7 +62,11 @@ Avatar.propTypes = {
     PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
     PropTypes.number
   ]),
-  color: PropTypes.oneOf([...supportedColors, 'none']),
+  textColor: PropTypes.string,
+  color: PropTypes.oneOfType([
+    PropTypes.oneOf([...supportedColors, 'none']),
+    PropTypes.string
+  ]),
   /** Controls the display type */
   display: PropTypes.oneOf(['initial', 'inline']),
   disabled: PropTypes.bool

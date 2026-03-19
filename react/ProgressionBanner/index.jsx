@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import Banner from '../Banner'
-import { LinearProgress } from '../Progress'
+import Alert from '../Alert'
+import LinearProgress from '../LinearProgress'
 import Typography from '../Typography'
+import { useBreakpoints } from '../providers/Breakpoints'
 import { withStyles } from '../styles'
+import { AddPropsToComp } from '../utils/react'
 
 const progressHeight = '0.125rem'
 
-const styles = theme => ({
-  banner: {
-    backgroundColor: theme.palette.background.contrast
-  },
+const styles = () => ({
   progress: {
     backgroundColor: 'transparent',
     height: progressHeight,
@@ -22,20 +21,26 @@ const styles = theme => ({
 const ProgressionBanner = withStyles(styles)(
   ({ classes, value, text, icon, button, progressBar }) => {
     const variant = value ? 'determinate' : undefined
+    const { isMobile } = useBreakpoints()
+
+    const _icon = AddPropsToComp(icon, compProps => ({
+      ...compProps,
+      size: compProps.size ?? '32'
+    }))
 
     return (
       <>
-        <Banner
-          className={classes.banner}
-          icon={icon}
-          text={
-            <Typography component="span" variant="h6">
-              {text}
-            </Typography>
-          }
-          buttonOne={button}
-          inline
-        />
+        <Alert
+          icon={_icon}
+          color="var(--contrastBackgroundColor)"
+          square
+          block={isMobile}
+          action={button}
+        >
+          <Typography component="span" variant="h6">
+            {text}
+          </Typography>
+        </Alert>
         {progressBar && (
           <LinearProgress
             className={classes.progress}

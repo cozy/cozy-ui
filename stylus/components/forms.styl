@@ -225,21 +225,6 @@ $form-progress
             background     var(--dividerColor)
             border-radius  rem(18)
 
-// New styles
-$label
-    text-transform uppercase
-    color var(--secondaryTextColor)
-    font-size rem(13)
-    font-weight bold
-    line-height rem(16)
-
-    &.is-error
-        color var(--errorColor)
-
-$label--block
-    display block
-    padding rem(8) 0
-
 $input--disabled
     cursor not-allowed
     background-color var(--actionColorDisabledBackground)
@@ -404,25 +389,6 @@ $radio
             box-sizing border-box
             width rem(16)
             height rem(16)
-
-$textarea
-    @extend $input-text
-    display block
-    width 100%
-    min-height rem(120)
-    resize vertical
-
-$textarea--tiny
-    @extend $input-text--tiny
-    min-height rem(48)
-
-$textarea--medium
-    @extend $input-text--medium
-    min-height rem(80)
-
-$textarea--fullwidth
-    @extend $input-text--fullwidth
-
 
 $select-arrow-padding
     padding-right rem(38)

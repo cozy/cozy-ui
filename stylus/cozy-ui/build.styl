@@ -270,26 +270,6 @@
 */
 
 /*
- Label
-
- Label element coupled with any other form elements like inputs, textareas, select,etc
-
- Markup:
- <form>
-    <div>
-        <label class="c-label {{modifier_class}}" for="">Hello, I'm a label</label>
-    </div>
- </form>
-
- .is-error - Error variant
-
- Weight: 1
-
- Styleguide Components.form.label
-*/
-@require '../../react/Label/styles.styl'
-
-/*
  Input text
 
  Input element for text but also password, url, email
@@ -375,28 +355,6 @@
  Styleguide Components.form.input-radio
 */
 @require '../../react/deprecated/Radio/styles.styl'
-
-
-/*
- Textarea
-
- Markup:
- <form>
-    <div>
-        <textarea class="c-textarea {{modifier_class}}" placeholder="Once upon a time…"></textarea>
-    </div>
- </form>
-
- .is-error - Error variant
- .c-textarea--tiny - Tiny size variant
- .c-textarea--medium - Medium size variant
- .c-textarea--fullwidth - Full width variant
-
- Weight: 5
-
- Styleguide Components.form.textarea
-*/
-@require '../../react/Textarea/styles.styl'
 
 /*
  Select
@@ -586,28 +544,6 @@ table.c-table
     td.c-table-ellipsis
         @extend $table-ellipsis--legacy
 
-
-/*
- Avatar
-
-Display an avatar of a user or contact with initials or an image
-
- Markup:
-<div class="c-avatar {{modifier_class}}">
-    <span class="c-avatar-initials">CD</span>
-</div>
-<div class="c-avatar {{modifier_class}}">
-    <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
-</div>
-
- .c-avatar--xsmall - Extra small size variant
- .c-avatar--small - Small size variant
- .c-avatar--large - Large size variant
- .c-avatar--xlarge - Extra large variant
-
- Styleguide Components.avatar
-*/
-@require '../../react/legacy/Avatar/styles.styl'
 
 /*
  Chip
@@ -933,215 +869,6 @@ Display an chip that represents complex identity
  Styleguide utilities.typography
 */
 
-.wizard
-    @extend $wizard
-
-.wizard--waiting
-    @extend $wizard--waiting
-
-.wizard--scroll
-    @extend $wizard--scroll
-
-.wizard--dual
-    @extend $wizard--dual
-
-.wizard-wrapper
-    @extend $wizard-wrapper
-
-.wizard-header
-    @extend $wizard-header
-
-.wizard-footer
-    @extend $wizard-footer
-
-.wizard--welcome
-    .wizard-title
-        @extend $wizard-title--welcome
-    .wizard-footer
-        @extend $wizard-footer--welcome
-
-.wizard-wrapper--center
-    @extend $wizard-wrapper--center
-
-.wizard-wrapper--bleed
-    @extend $wizard-wrapper--bleed
-
-.wizard-wrapper--dual
-    @extend $wizard-wrapper--dual
-
-.wizard-dual
-    @extend $wizard-dual
-
-    .wizard-header
-        @extend $wizard-header--dual
-    .wizard-footer
-        @extend $wizard-footer--dual
-
-.wizard-errors
-    @extend $wizard-errors
-
-.wizard-main
-    @extend $wizard-main
-
-.wizard-logo
-    @extend $wizard-logo
-
-.wizard-logo-img
-    @extend $wizard-logo-img
-
-.wizard-logo-badge
-    @extend $wizard-logo-badge
-
-.wizard-disclaimer
-    @extend $wizard-disclaimer
-
-.wizard-desc
-    @extend $wizard-desc
-
-.wizard-desc--footer
-    @extend $wizard-desc--footer
-
-.wizard-header-help
-    @extend $wizard-header-help
-
-.wizard-header-fixed
-    @extend $wizard-header-fixed
-
-.wizard-previous
-    @extend $wizard-previous
-
-.wizard-brand
-    @extend $wizard-brand
-
-.wizard-brand--invert
-    @extend $wizard-brand--invert
-
-.wizard-previous + .wizard-brand
-    @extend $wizard-brand-with
-
-.wizard-next
-    @extend $wizard-next
-
-.wizard-button
-    @extend $wizard-button
-
-.wizard-buttonlink
-    @extend $wizard-buttonlink
-
-.wizard-input
-    @extend $wizard-input
-
-.wizard-dual-btn
-    @extend $wizard-dual-btn
-
-.wizard-waiting-icon
-    @extend $wizard-waiting-icon
-
-.wizard-dual-icon
-    @extend $wizard-dual-icon
-
-.wizard-title
-    @extend $wizard-title
-
-.wizard-dual-title
-    @extend $wizard-dual-title
-
-.wizard-title-sub
-    @extend $wizard-title-sub
-
-.wizard-subtitle
-    @extend $wizard-subtitle
-
-.wizard-dual-subtitle
-    @extend $wizard-dual-subtitle
-
-.wizard-showbutton
-    @extend $wizard-showbutton
-
-.wizard-dualfield
-    @extend $wizard-dualfield
-
-.wizard-dualfield--focus
-    @extend $wizard-dualfield--focus
-
-.wizard-dualfield--error
-    @extend $wizard-dualfield--error
-
-.wizard-dualfield-wrapper
-    @extend $wizard-dualfield-wrapper
-
-.wizard-dualfield-input
-    @extend $wizard-dualfield-input
-
-.wizard-protocol
-    @extend $wizard-protocol
-
-.wizard-domain
-    @extend $wizard-domain
-
-.wizard-select
-    @extend $wizard-select
-
-.wizard-select--medium
-    @extend $wizard-select--medium
-
-.wizard-requirements
-    @extend $wizard-requirements
-
-.wizard-agreements
-    @extend $wizard-agreements
-
-.wizard-agreements-item
-    @extend $wizard-agreements-item
-
-.wizard-agreements-desc
-    @extend $wizard-agreements-desc
-
-.wizard-agreements-icon
-    @extend $wizard-agreements-icon
-
-// @stylint off
-.wizard-agreements-item:nth-child(1)
-    .wizard-agreements-icon
-        --bgcolor var(--weirdGreen)
-
-.wizard-agreements-item:nth-child(2)
-    .wizard-agreements-icon
-        --bgcolor var(--mango)
-
-.wizard-agreements-item:nth-child(3)
-    .wizard-agreements-icon
-        --bgcolor var(--lightishPurple)
-
-.wizard-agreements-item:nth-child(4)
-    .wizard-agreements-icon
-        --bgcolor var(--pomegranate)
-
-.wizard-agreements-item:nth-child(5)
-    .wizard-agreements-icon
-        --bgcolor var(--azure)
-
-.wizard-agreements-item:nth-child(6)
-    .wizard-agreements-icon
-        --bgcolor var(--brightSun)
-// @stylint on
-
-.wizard-updated
-    @extend $wizard-updated
-
-.wizard-progress
-    @extend $wizard-progress
-
-.wizard-progress-bar
-    @extend $wizard-progress-bar
-
-.wizard-notice
-    @extend $wizard-notice
-
-.wizard-notice--lost
-    @extend $wizard-notice--lost
-
-
 /*
     Margins
 
@@ -1296,27 +1023,12 @@ Display an chip that represents complex identity
 
     Markup:
     <div class="{{modifier_class}}">
-        <div class="u-card">First children</div>
-        <div class="u-card">Second children</div>
-        <div class="u-card">Third children</div>
+        <div>First children</div>
+        <div>Second children</div>
+        <div>Third children</div>
     </div>
 
     Styleguide utilities.spacings
-*/
-
-/*
-    Card
-
-    .u-card - Adds a rounded outline
-
-    Markup:
-    <div class="{{modifier_class}}">
-        Content of a card
-    </div>
-
-    Weight: 1
-
-    Styleguide utilities.card
 */
 
 /*

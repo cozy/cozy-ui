@@ -9,12 +9,10 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import Buttons from 'cozy-ui/transpiled/react/Buttons'
 import TextField from 'cozy-ui/transpiled/react/TextField'
-import BarButton from 'cozy-ui/transpiled/react/BarButton'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
-import Figure from 'cozy-ui/transpiled/react/Figure'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 
 const props = [{}, { disabled: true}, { busy: true }]
 
@@ -62,11 +60,8 @@ const themesSupportingContext = [
 
       <Typography variant="h4">➡️ Not Mui components</Typography>
       <Typography className=' u-mb-1' variant="h5">Avatar</Typography>
-      <Avatar className="u-mb-1" ghost text="CD" />
+      <Avatar className="u-mb-1">CD</Avatar>
       <Typography className='u-mb-1' variant="h5">Figure</Typography>
-      <Figure total={1000} symbol='€' coloredPositive coloredNegative signed />
-      <Figure total={-1000} symbol='€' coloredPositive coloredNegative signed />
-      <Figure total={-1000} symbol='€' signed />
       <Typography className='u-mv-1' variant="h4">➡️ Utility classes only</Typography>
       <div className='u-stack-s'>
         <div className='u-error'>
