@@ -28,7 +28,6 @@ module.exports = {
         '../react/DropdownText',
         '../react/Empty',
         '../react/Fab',
-        '../react/GhostFileBadge',
         '../react/Grid',
         '../react/Icon',
         '../react/IconButton',
