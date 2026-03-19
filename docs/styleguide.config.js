@@ -22,7 +22,6 @@ module.exports = {
         '../react/Buttons',
         '../react/Checkbox',
         '../react/Chips',
-        '../react/CircleButton',
         '../react/CircularChart',
         '../react/Counter',
         '../react/Dialog',

@@ -92,7 +92,6 @@ export {
 export { default as Chips } from './Chips'
 export { default as PieChart } from './PieChart'
 export { default as DropdownText } from './DropdownText'
-export { default as CircleButton } from './CircleButton'
 export { default as Alert } from './Alert'
 export { default as AlertTitle } from './AlertTitle'
 export { default as PointerAlert } from './PointerAlert'
