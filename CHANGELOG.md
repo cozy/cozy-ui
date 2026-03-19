@@ -1,3 +1,17 @@
+# [137.0.0](https://github.com/cozy/cozy-ui/compare/v136.3.0...v137.0.0) (2026-03-19)
+
+
+### Features
+
+* Pass appIcon and appTextIcon instead of slug to AppTitle ([8b5c6cf](https://github.com/cozy/cozy-ui/commit/8b5c6cf))
+* Remove app text icons ([abea61b](https://github.com/cozy/cozy-ui/commit/abea61b))
+
+
+### BREAKING CHANGES
+
+* All app text icons have been changed. If you imported them, copy the code from cozy-ui to your app.
+* Replace <AppTitle slug="drive" /> by <AppTitle appIcon={DriveIcon} appTextIcon={DriveTextIcon} />. tag and children prop are also removed but were unused.
+
 # [136.3.0](https://github.com/cozy/cozy-ui/compare/v136.2.2...v136.3.0) (2026-03-18)
 
 
