@@ -58,7 +58,6 @@ export { default as FileInput } from './FileInput'
 export { default as InlineCard } from './deprecated/InlineCard'
 export { default as Stack } from './Stack'
 export { default as PercentageLine } from './deprecated/PercentageLine'
-export { default as Popup } from './Popup'
 export {
   default as ViewStack,
   ModalStack,

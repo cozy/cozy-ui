@@ -114,8 +114,6 @@ module.exports = {
         '../react/InputGroup',
         '../react/LoadMore',
         '../react/Labs/PasswordInput',
-        '../react/Popup',
-        '../react/PopupOpener',
         '../react/SelectBox/SelectBox.jsx',
         '../react/Spinner',
         '../react/Stack',
