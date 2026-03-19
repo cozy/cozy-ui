@@ -1,31 +1,25 @@
 ```jsx
-import Thumbnail from 'cozy-ui/transpiled/react/Thumbnail'
 import Skeleton from 'cozy-ui/transpiled/react/Skeleton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import Box from 'cozy-ui/transpiled/react/Box'
 import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 ;
 
 <>
-  <Thumbnail className="u-mb-1">
-    <Skeleton variant="rect" animation="wave" />
-  </Thumbnail>
-  <Thumbnail className="u-mb-1" isStacked={true}>
-    <Skeleton variant="rect" animation="wave" />
-  </Thumbnail>
-  <Thumbnail className="u-mb-1">
-    <img src={CloudWallpaper} alt="" />
-  </Thumbnail>
-  <Thumbnail className="u-mb-1" isStacked={true}>
-    <img src={CloudWallpaper} alt="" />
-  </Thumbnail>
-  <Thumbnail className="u-mb-1" isStacked={true}>
+  <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
+    <Skeleton className="u-w-100 u-h-100" variant="rect" animation="wave" />
+  </div>
+  <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
+    <img
+      className="u-w-2 u-h-2"
+      style={{ objectFit: "contain" }}
+      src={CloudWallpaper}
+      alt=""
+    />
+  </div>
+  <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
     <Icon icon={PeopleIcon} />
-  </Thumbnail>
-  <Thumbnail className="u-mb-1">
-    <Icon icon={PeopleIcon} />
-  </Thumbnail>
+  </div>
 </>
 ```
