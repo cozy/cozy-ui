@@ -4,99 +4,20 @@ import React from 'react'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
-import AITextIcon from '../Icons/AiText'
-import CalendarAppIcon from '../Icons/CalendarApp'
-import CalendarTextIcon from '../Icons/CalendarText'
-import ChatIcon from '../Icons/Chat'
-import ChatTextIcon from '../Icons/ChatText'
-import ContactsIcon from '../Icons/Contacts'
-import ContactsTextIcon from '../Icons/ContactsText'
-import DriveIcon from '../Icons/Drive'
-import DriveTextIcon from '../Icons/DriveText'
-import MailIcon from '../Icons/Mail'
-import MailTextIcon from '../Icons/MailText'
-import NotesIcon from '../Icons/Notes'
-import NotesTextIcon from '../Icons/NotesText'
-import PassIcon from '../Icons/Pass'
-import PassTextIcon from '../Icons/PassText'
-import PhotosIcon from '../Icons/Photos'
-import PhotosTextIcon from '../Icons/PhotosText'
-import StoreIcon from '../Icons/Store'
-import StoreTextIcon from '../Icons/StoreText'
 import TwakeTextIcon from '../Icons/TwakeText'
-import TwakeWorkplaceIcon from '../Icons/TwakeWorkplace'
-import WorkplaceTextIcon from '../Icons/WorkplaceText'
-import Typography from '../Typography'
 import { useCozyTheme } from '../providers/CozyTheme'
 
-const SLUG_TO_ICONS = {
-  calendar: {
-    icon: CalendarAppIcon,
-    text: CalendarTextIcon
-  },
-  chat: {
-    icon: ChatIcon,
-    text: ChatTextIcon
-  },
-  contacts: {
-    icon: ContactsIcon,
-    text: ContactsTextIcon
-  },
-  drive: {
-    icon: DriveIcon,
-    text: DriveTextIcon
-  },
-  mail: {
-    icon: MailIcon,
-    text: MailTextIcon
-  },
-  notes: {
-    icon: NotesIcon,
-    text: NotesTextIcon
-  },
-  passwords: {
-    icon: PassIcon,
-    text: PassTextIcon
-  },
-  store: {
-    icon: StoreIcon,
-    text: StoreTextIcon
-  },
-  photos: {
-    icon: PhotosIcon,
-    text: PhotosTextIcon
-  },
-  home: {
-    icon: TwakeWorkplaceIcon,
-    text: WorkplaceTextIcon
-  },
-  assistant: {
-    icon: null,
-    text: AITextIcon
-  }
-}
-
-const AppTitle = ({ slug, tag, className, children, ...otherProps }) => {
+const AppTitle = ({ appIcon, appTextIcon }) => {
   const { isLight } = useCozyTheme()
 
-  const titleData = SLUG_TO_ICONS[slug]
-
-  if (!titleData)
-    return (
-      <Typography
-        component={tag}
-        variant="h4"
-        className={cx(styles['c-apptitle'], className)}
-        {...otherProps}
-      >
-        {children}
-      </Typography>
-    )
+  if (!appIcon || !appTextIcon) {
+    return null
+  }
 
   return (
     <div className="u-flex u-flex-items-center">
       <Icon
-        icon={titleData.icon}
+        icon={appIcon}
         size="32"
         className={styles['c-apptitle-app-icon']}
       />
@@ -110,27 +31,14 @@ const AppTitle = ({ slug, tag, className, children, ...otherProps }) => {
           isLight ? styles['c-apptitle-light'] : styles['c-apptitle-dark']
         )}
       />
-      <Icon
-        icon={titleData.text}
-        width="auto"
-        height="22"
-        className={cx(
-          'u-w-auto',
-          slug === 'home' ? styles['c-apptitle-home-icon'] : undefined
-        )}
-      />
+      <Icon icon={appTextIcon} width="auto" height="22" className="u-w-auto" />
     </div>
   )
 }
 
 AppTitle.propTypes = {
-  slug: PropTypes.string,
-  tag: PropTypes.string,
-  className: PropTypes.string
-}
-
-AppTitle.defaultProps = {
-  tag: 'h1'
+  appIcon: PropTypes.func,
+  appTextIcon: PropTypes.func
 }
 
 export default AppTitle

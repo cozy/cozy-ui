@@ -1,21 +1,15 @@
-Display the app title of an app with icon, brand name and app name. Support Twake theme only.
-
-You can pass a child that will be used as default value is app is not supported.
+Display the app title of an app with app icon, brand icon and app text icon.
 
 ### Default
 
 ```jsx
 import AppTitle from 'cozy-ui/transpiled/react/AppTitle';
+import DriveIcon from 'cozy-ui/transpiled/react/Icons/Drive';
 
-const slugs = ["calendar", "chat", "contacts", "drive", "mail", "notes", "pass", "store", "photos", "home"];
+// This should be an a nice icon with "Drive" written with Twake font and gradient
+const DriveTextMock = () => <div>Drive</div>;
 
-<div class="u-flex u-flex-column">
-  {
-    slugs.map(slug => <AppTitle slug={slug} />)
-  }
-  <AppTitle slug="coachco2" />
-  <AppTitle slug="coachco2">CoachCO2</AppTitle>
-  <AppTitle>Drive</AppTitle>
+<div className="u-flex u-flex-column">
+  <AppTitle appIcon={DriveIcon} appTextIcon={DriveTextMock} />
 </div>
-
 ```
