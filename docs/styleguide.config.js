@@ -32,7 +32,6 @@ module.exports = {
         '../react/Icon',
         '../react/IconButton',
         '../react/Labs/IconGrid',
-        '../react/InfosBadge',
         '../react/List',
         '../react/ListItem',
         '../react/ListItemText',
