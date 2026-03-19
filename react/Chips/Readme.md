@@ -9,7 +9,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
 import Divider from "cozy-ui/transpiled/react/Divider"
@@ -45,7 +45,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                avatar={<Avatar textId="Ada Lovelace" text="AL" size='xsmall' />}
+                avatar={<Avatar text="AL" size='xs'>AL</Avatar>}
                 label="Avatar chip"
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
@@ -117,7 +117,6 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
 import Divider from "cozy-ui/transpiled/react/Divider"

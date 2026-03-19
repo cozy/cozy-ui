@@ -12,7 +12,7 @@ import TextField from 'cozy-ui/transpiled/react/TextField'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import Figure from 'cozy-ui/transpiled/react/Figure'
 
 const props = [{}, { disabled: true}, { busy: true }]
@@ -61,7 +61,7 @@ const themesSupportingContext = [
 
       <Typography variant="h4">➡️ Not Mui components</Typography>
       <Typography className=' u-mb-1' variant="h5">Avatar</Typography>
-      <Avatar className="u-mb-1" ghost text="CD" />
+      <Avatar className="u-mb-1">CD</Avatar>
       <Typography className='u-mb-1' variant="h5">Figure</Typography>
       <Figure total={1000} symbol='€' coloredPositive coloredNegative signed />
       <Figure total={-1000} symbol='€' coloredPositive coloredNegative signed />
