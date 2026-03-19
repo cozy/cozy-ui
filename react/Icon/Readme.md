@@ -723,7 +723,6 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
 import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
-import AITextIcon from 'cozy-ui/transpiled/react/Icons/AiText'
 import AssistantColorIcon from 'cozy-ui/transpiled/react/Icons/AssistantColor'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
@@ -780,7 +779,6 @@ import TwakeWorkplace from 'cozy-ui/transpiled/react/Icons/TwakeWorkplace'
 
 const icons = [
   AccountIcon,
-  AITextIcon,
   AssistantColorIcon,
   BottomSelectIcon,
   ChatIcon,
