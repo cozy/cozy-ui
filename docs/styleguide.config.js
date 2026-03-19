@@ -113,7 +113,6 @@ module.exports = {
         '../react/FilePath',
         '../react/FilePathLink',
         '../react/FileInput',
-        '../react/Hero',
         '../react/legacy/Input',
         '../react/InputGroup',
         '../react/Label',
