@@ -11,7 +11,6 @@ import {
   Content,
   Button,
   Chip,
-  Hero,
   Sprite,
   NavItem,
   NavText,
