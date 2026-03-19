@@ -110,10 +110,8 @@ module.exports = {
     {
       name: 'Legacy',
       components: () => [
-        '../react/legacy/Avatar',
         '../react/BarTitle',
         '../react/legacy/Breadcrumbs',
-        '../react/Circle',
         '../react/DateMonthPicker',
         '../react/Figure/Figure.jsx',
         '../react/Figure/FigureBlock.jsx',

@@ -5,11 +5,11 @@ Chips represent complex entities in small blocks, such as a contact.
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 const ContactChip = ({ contact }) => (
   <Chip style={{ paddingLeft: '0.25rem' }}>
-    <Avatar textId={ contact.name } text={contact.initials} size='small' style={{ marginRight: '0.5rem' }}/> {contact.name}
+    <Avatar textId={ contact.name } size='s' style={{ marginRight: '0.5rem' }}>{contact.initials}</Avatar> {contact.name}
   </Chip>
 );
 
