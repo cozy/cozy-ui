@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Circle from '../Circle'
+import Avatar from '../Avatar'
 import Icon from '../Icon'
 import DownloadIcon from '../Icons/Download'
 import FileIcon from '../Icons/File'
@@ -26,12 +26,9 @@ const HistoryRow = ({
       <div className="u-media u-media-grow u-row-m">
         <div className={styles.HistoryRowCircleWrapper}>
           <Img className={styles.HistoryRowMediaImg}>
-            <Circle
-              size={tag ? 'small' : 'xsmall'}
-              className={styles.HistoryRowCircle}
-            >
+            <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
               {tag && <Icon icon={FileIcon} color="var(--primaryTextColor)" />}
-            </Circle>
+            </Avatar>
           </Img>
         </div>
         <div className="u-media u-media-grow u-stack-xs u-row-m">

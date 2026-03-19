@@ -3,13 +3,13 @@ Ghost badges are specifically used to indicate that a file in a Cozy is a ghost 
 ```jsx
 import GhostFileBadge from 'cozy-ui/transpiled/react/GhostFileBadge';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import Avatar from 'cozy-ui/transpiled/react/legacy/Avatar';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
 import FolderIcon from "cozy-ui/transpiled/react/Icons/Folder";
 
 <p>
   <GhostFileBadge badgeContent={<Icon icon={FolderIcon} size="16" />}>
-    <Avatar text="CD" size="small" />
+    <Avatar size="s">CD</Avatar>
   </GhostFileBadge>
 </p>
 ```

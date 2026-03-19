@@ -3,11 +3,14 @@ Displays a simple circle with some text inside of it.
 ### Default
 
 ```jsx
-import Circle from 'cozy-ui/transpiled/react/Circle';
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
+
+;
+
 <div>
-  <Circle>
+  <Avatar color="var(--dodgerBlue)" textColor="var(--white)">
     Yo
-  </Circle>
+  </Avatar>
 </div>
 ```
 
@@ -16,26 +19,29 @@ import Circle from 'cozy-ui/transpiled/react/Circle';
 The size can also be specifically defined using a number of pixels.
 
 ```jsx
-import Circle from 'cozy-ui/transpiled/react/Circle';
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
+
+;
+
 <div>
   <div>
-    <Circle size="xsmall">Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size="xs">Yo</Avatar>
   </div>
   <div>
-    <Circle size="small">Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size="s">Yo</Avatar>
   </div>
   <div>
-    <Circle size="medium">Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size="m">Yo</Avatar>
   </div>
   <div>
-    <Circle size="large">Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size="l">Yo</Avatar>
   </div>
   <div>
-    <Circle size="xlarge">Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size="xl">Yo</Avatar>
   </div>
   <hr />
   <div>
-    <Circle size={24}>Yo</Circle>
+    <Avatar color="var(--dodgerBlue)" textColor="var(--white)" size={24}>Yo</Avatar>
   </div>
 </div>
 ```

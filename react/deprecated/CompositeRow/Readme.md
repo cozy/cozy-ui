@@ -2,7 +2,7 @@
 import { Media, Bd, Img } from 'cozy-ui/transpiled/react/deprecated/Media'
 import UIChip from 'cozy-ui/transpiled/react/deprecated/Chip'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Circle from 'cozy-ui/transpiled/react/Circle'
+import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import Variants from 'cozy-ui/docs/components/Variants'
 import CompositeRow from 'cozy-ui/transpiled/react/deprecated/CompositeRow'
 
@@ -34,9 +34,9 @@ const compositeStyle = {
 
 
 const CompositeImage = () => (
-  <Circle backgroundColor={palette.melon}>
+  <Avatar color={palette.melon}>
     <Icon icon={WalletIcon} />
-  </Circle>
+  </Avatar>
 )
 
 const Amount = () => (
