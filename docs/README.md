@@ -252,7 +252,6 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 #### Dependencies
 
 - @date-io/date-fns => DatePicker
-- chart.js => PieChart
 - date-fns => DateMonthPicker, DatePicker, I18n
 - react-markdown => Markdown
 - react-select => SelectBox
