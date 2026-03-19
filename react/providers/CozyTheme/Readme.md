@@ -13,7 +13,6 @@ import Paper from 'cozy-ui/transpiled/react/Paper'
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import Figure from 'cozy-ui/transpiled/react/Figure'
 
 const props = [{}, { disabled: true}, { busy: true }]
 
@@ -63,9 +62,6 @@ const themesSupportingContext = [
       <Typography className=' u-mb-1' variant="h5">Avatar</Typography>
       <Avatar className="u-mb-1">CD</Avatar>
       <Typography className='u-mb-1' variant="h5">Figure</Typography>
-      <Figure total={1000} symbol='€' coloredPositive coloredNegative signed />
-      <Figure total={-1000} symbol='€' coloredPositive coloredNegative signed />
-      <Figure total={-1000} symbol='€' signed />
       <Typography className='u-mv-1' variant="h4">➡️ Utility classes only</Typography>
       <div className='u-stack-s'>
         <div className='u-error'>

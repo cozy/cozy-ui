@@ -110,8 +110,6 @@ module.exports = {
         '../react/BarTitle',
         '../react/legacy/Breadcrumbs',
         '../react/DateMonthPicker',
-        '../react/Figure/Figure.jsx',
-        '../react/Figure/FigureBlock.jsx',
         '../react/Filename',
         '../react/FilePath',
         '../react/FilePathLink',
