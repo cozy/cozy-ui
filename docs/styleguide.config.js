@@ -53,7 +53,6 @@ module.exports = {
         '../react/Switch',
         '../react/Tabs',
         '../react/TextField',
-        '../react/Thumbnail',
         '../react/ToggleButton',
         '../react/ToggleButtonGroup',
         '../react/Tooltip',
