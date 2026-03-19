@@ -402,7 +402,6 @@ initialState = {
 ```jsx
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalBrandedHeader } from 'cozy-ui/transpiled/react/deprecated/Modal';
-import Panel from 'cozy-ui/transpiled/react/Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 
 <BreakpointsProvider>
@@ -413,17 +412,17 @@ const toggle = () => setState({ modalOpened: !state.modalOpened });
       dismissAction={toggle}
       size='xxlarge' overflowHidden={true}>
       <ModalBrandedHeader bg="linear-gradient(to right, #3c3b3f 0%,#605c3c 100%)" logo="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_80%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg" style={{ marginBottom: 0 }}/>
-      <Panel.Group>
-        <Panel.Main>
+      <div>
+        <div>
           { content.ada.long }
-        </Panel.Main>
-        <Panel.Side>
+        </div>
+        <div>
           { content.ada.facts.map(fact => <section>
             <h3>{ fact.title }</h3>
             <p>{ fact.description }</p>
           </section>) }
-        </Panel.Side>
-      </Panel.Group>
+        </div>
+      </div>
   </Modal> : null }
 </BreakpointsProvider>
 
