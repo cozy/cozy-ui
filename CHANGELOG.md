@@ -1,3 +1,10 @@
+## [137.0.1](https://github.com/cozy/cozy-ui/compare/v137.0.0...v137.0.1) (2026-03-20)
+
+
+### Bug Fixes
+
+* Adjust assistant color icon :bug: ([525911b](https://github.com/cozy/cozy-ui/commit/525911b))
+
 # [137.0.0](https://github.com/cozy/cozy-ui/compare/v136.3.0...v137.0.0) (2026-03-19)
 
 
