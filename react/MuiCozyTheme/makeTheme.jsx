@@ -1,15 +1,15 @@
 import { makeShadows } from './helpers'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
-import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
-import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
+import { makeDarkOverrides } from './overrides/makeDarkOverrides'
+import { makeLightOverrides } from './overrides/makeLightOverrides'
 import isTesting from '../helpers/isTesting'
 import { createTheme } from '../styles'
 import { createNodeWithThemeCssVars } from '../utils/color'
 
 const makeOverridesByTheme = theme => ({
-  light: makeLightNormalOverrides(theme),
-  dark: makeDarkNormalOverrides(theme)
+  light: makeLightOverrides(theme),
+  dark: makeDarkOverrides(theme)
 })
 
 const themesCommonConfig = {

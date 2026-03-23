@@ -8,7 +8,7 @@ import {
   getFlagshipCssVar
 } from '../helpers'
 
-export const makeLightNormalOverrides = theme => ({
+export const makeLightOverrides = theme => ({
   MuiAppBar: {
     colorDefault: {
       backgroundColor: theme.palette.grey.A400,
@@ -164,7 +164,6 @@ export const makeLightNormalOverrides = theme => ({
   MuiButton: {
     root: {
       borderRadius: 100,
-
       lineHeight: 'normal',
       padding: '10px 24px',
       '&.customSize': {

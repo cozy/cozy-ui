@@ -1,11 +1,11 @@
 import { makeTheme } from './makeTheme'
 
-export const lightNormalTheme = makeTheme('light')
-export const darkNormalTheme = makeTheme('dark')
+export const lightTheme = makeTheme('light')
+export const darkTheme = makeTheme('dark')
 
 const themes = {
-  light: lightNormalTheme,
-  dark: darkNormalTheme
+  light: lightTheme,
+  dark: darkTheme
 }
 
 export const getTheme = type => {

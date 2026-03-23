@@ -1,8 +1,8 @@
 import merge from 'lodash/merge'
 
-import { makeLightNormalOverrides } from './makeLightNormalOverrides'
+import { makeLightOverrides } from './makeLightOverrides'
 
-export const makeDarkNormalOverrides = theme => {
+export const makeDarkOverrides = theme => {
   const makeOverridesForDarkTheme = theme => ({
     MuiAppBar: {
       colorDefault: {
@@ -11,10 +11,10 @@ export const makeDarkNormalOverrides = theme => {
     }
   })
 
-  const DarkNormalOverrides = merge(
-    makeLightNormalOverrides(theme),
+  const DarkOverrides = merge(
+    makeLightOverrides(theme),
     makeOverridesForDarkTheme(theme)
   )
 
-  return DarkNormalOverrides
+  return DarkOverrides
 }
