@@ -1,10 +1,5 @@
-export { default as Alerter } from './deprecated/Alerter'
 export { default as Badge } from './Badge'
-export { Button, ButtonLink } from './deprecated/Button'
-export { default as ButtonClient } from './deprecated/PushClientButton'
 export { default as Banner } from './Banner'
-export { default as ButtonAction } from './deprecated/ButtonAction'
-export { default as BottomDrawer } from './deprecated/BottomDrawer'
 export { default as Icon } from './Icon'
 export { default as Sprite } from './Icon/Sprite'
 export { default as Sidebar } from './Sidebar'
@@ -26,41 +21,21 @@ export { default as Breadcrumbs } from './Breadcrumbs'
 export { default as withBreakpoints } from './helpers/withBreakpoints'
 export { default as useBreakpoints } from './providers/Breakpoints'
 export { default as useBrowserOffline } from './hooks/useBrowserOffline'
-export { Media, Img, Bd } from './deprecated/Media'
 export { Layout, Main, Content } from './Layout'
 export { default as MidEllipsis } from './MidEllipsis'
-export {
-  default as ActionMenu,
-  ActionMenuItem,
-  ActionMenuHeader,
-  ActionMenuRadio
-} from './deprecated/ActionMenu'
 export { default as ActionsMenu } from './ActionsMenu'
-export { default as Overlay } from './deprecated/Overlay'
 export { default as Checkbox } from './Checkbox'
-export { default as Radio } from './deprecated/Radio'
 export { default as Avatar } from './Avatar'
 export { default as IntentHeader } from './IntentHeader'
 export { default as SelectBox, SelectBoxWithFixedOptions } from './SelectBox'
-export { default as Chip } from './deprecated/Chip'
 export { default as Empty } from './Empty'
-export { default as Infos } from './deprecated/Infos'
-export { default as InfosCarrousel } from './deprecated/InfosCarrousel'
 export { default as InputGroup } from './InputGroup'
 export { default as AppTitle } from './AppTitle'
 export { default as Filename } from './Filename'
 export { default as FilePath } from './FilePath'
 export { default as FilePathLink } from './FilePathLink'
 export { default as FileInput } from './FileInput'
-export { default as InlineCard } from './deprecated/InlineCard'
 export { default as Stack } from './Stack'
-export { default as PercentageLine } from './deprecated/PercentageLine'
-export {
-  default as ViewStack,
-  ModalStack,
-  useViewStack,
-  ViewStackContext
-} from './deprecated/ViewStack'
 export { default as DateMonthPicker } from './DateMonthPicker'
 export { default as NestedSelect, NestedSelectModal } from './NestedSelect'
 export {
