@@ -1,21 +1,21 @@
 ```jsx
-import I18n from 'twake-i18n';
-import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker';
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Button from 'cozy-ui/transpiled/react/deprecated/Button';
-import Dialog, { DialogContent, DialogTitle } from 'cozy-ui/transpiled/react/Dialog';
+import I18n from 'twake-i18n'
+import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Dialog, { DialogContent, DialogTitle } from 'cozy-ui/transpiled/react/Dialog'
 import { useCozyDialog, DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 
 const dictRequire = x => ({})
 const initialState = { choosing: false, monthDate: '2019-08' }
-const showPicker = () => setState({ choosing: true });
-const hidePicker = () => setState({ choosing: false });
+const showPicker = () => setState({ choosing: true })
+const hidePicker = () => setState({ choosing: false })
 const handleSelect = monthDate => {
   setState({ monthDate })
   hidePicker()
-};
+}
 
 const Interactive = () => {
   const { dialogProps, dialogTitleProps } = useCozyDialog({
@@ -53,7 +53,9 @@ const Static = () => (
     onSelect={handleSelect}
     initialValue={state.monthDate}
   />
-);
+)
+
+;
 
 <BreakpointsProvider>
   <I18n dictRequire={dictRequire} lang='en'>

@@ -26,6 +26,8 @@ HISTORYROWMEDIA_PADDING=1rem
 
 .HistoryRowMedia
     position relative
+    display flex
+    align-items center
     padding HISTORYROWMEDIA_PADDING
 
 .HistoryRowMedia::before
@@ -43,3 +45,9 @@ HISTORYROWMEDIA_PADDING=1rem
 .HistoryRowMediaImg
     align-self: flex-start
     z-index 1
+    line-height 0
+    flex 0 0 auto
+
+.HistoryRowMediaBd
+    flex 1 1 auto
+    overflow hidden

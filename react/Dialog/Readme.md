@@ -10,18 +10,15 @@ import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dia
 import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
 import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
-import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 
 import Divider from 'cozy-ui/transpiled/react/Divider'
-import Button from 'cozy-ui/transpiled/react/deprecated/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import List from 'cozy-ui/transpiled/react/List'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Menu from 'cozy-ui/transpiled/react/deprecated/Menus'
-import MenuItem from '@material-ui/core/MenuItem'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
@@ -65,25 +62,6 @@ const ExampleDialog = ({ open, onClose }) => {
             <Icon icon={FileTypeFolderIcon} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text"/>
-          <ListItemSecondaryAction>
-            <Menu
-              component={
-                <Button
-                  label='Click for more !'
-                  theme="text"
-                  icon={DotsIcon}
-                  extension="narrow"
-                  iconOnly
-                  className="u-m-0 u-coolGrey"
-                />
-              }
-            >
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>My account</MenuItem>
-              <hr />
-              <MenuItem>Logout</MenuItem>
-            </Menu>
-          </ListItemSecondaryAction>
         </ListItem>
         <Divider {...dividerProps} variant='inset' />
         <ListItem {...listItemProps} button>
@@ -98,29 +76,18 @@ const ExampleDialog = ({ open, onClose }) => {
             <Icon icon={FileTypeText} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" />
-          <ListItemSecondaryAction>
-            <Button
-              label='Click for more !'
-              theme="text"
-              icon={DotsIcon}
-              extension="narrow"
-              iconOnly
-              className="u-m-0 u-coolGrey"
-            />
-          </ListItemSecondaryAction>
         </ListItem>
       </List>
       <Divider {...dividerProps} />
       <DialogActions {...dialogActionsProps}>
         <Button
-          theme="secondary"
+          variant="secondary"
           onClick={() => onClose()}
           label={'Close Modal'}
         />
         <Button
-          theme="primary"
           label='Click Me'
-          onClick={() => Alerter.info("This is an info alert!")}
+          onClick={() => console.info('Click!')}
         />
       </DialogActions>
     </Dialog>
@@ -134,7 +101,6 @@ const ExampleDialog = ({ open, onClose }) => {
     Toggle modal
   </button>
   <DemoProvider>
-    <Alerter />
     <ExampleDialog open={state.modalOpened} onClose={handleClose} />
   </DemoProvider>
 </>

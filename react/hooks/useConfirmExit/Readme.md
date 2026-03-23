@@ -1,6 +1,6 @@
 ```jsx
 import { useState } from 'react'
-import Button from 'cozy-ui/transpiled/react/deprecated/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import useConfirmExit from 'cozy-ui/transpiled/react/hooks/useConfirmExit'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
@@ -16,7 +16,7 @@ const NeedCloseConfirmation = () => {
       { exitConfirmationModal }
       There is a close confirmation.
       <Button
-        theme="secondary"
+        variant="secondary"
         label='Leave'
         onClick={() => requestToLeave('https://cozy.io')} />
     </div>

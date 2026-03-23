@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 
+import Button from '../Buttons'
 import Spinner from '../Spinner'
-import Button from '../deprecated/Button'
 
 import 'intersection-observer' // polyfill for safari (mobile and desktop)
 
@@ -44,7 +44,7 @@ const LoadMore = ({ fetchMore, label }) => {
   return (
     <span ref={elementRef}>
       <Button
-        theme="text"
+        variant="text"
         onClick={startFetchMore}
         label={isLoading ? <Spinner noMargin /> : label}
       />
