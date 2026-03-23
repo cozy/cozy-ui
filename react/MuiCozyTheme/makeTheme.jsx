@@ -1,23 +1,15 @@
 import { makeShadows } from './helpers'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
-import { makeDarkInvertedOverrides } from './overrides/makeDarkInvertedOverrides'
 import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
-import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
 import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
 import isTesting from '../helpers/isTesting'
 import { createTheme } from '../styles'
 import { createNodeWithThemeCssVars } from '../utils/color'
 
 const makeOverridesByTheme = theme => ({
-  light: {
-    normal: makeLightNormalOverrides(theme),
-    inverted: makeLightInvertedOverrides(theme)
-  },
-  dark: {
-    normal: makeDarkNormalOverrides(theme),
-    inverted: makeDarkInvertedOverrides(theme)
-  }
+  light: makeLightNormalOverrides(theme),
+  dark: makeDarkNormalOverrides(theme)
 })
 
 const themesCommonConfig = {
@@ -43,21 +35,20 @@ const themesCommonConfig = {
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
-export const makeTheme = (type, variant) => {
+export const makeTheme = type => {
   // to hold the values of css variables, recoverable by getCssVariableValue()
-  createNodeWithThemeCssVars(type, variant)
+  createNodeWithThemeCssVars(type)
 
-  const palette = makePalette(type, variant)
+  const palette = makePalette(type)
   const theme = createTheme({
     ...themesCommonConfig,
     typography: makeTypography(),
-    shadows: makeShadows(type, variant),
+    shadows: makeShadows(type),
     type,
-    variant,
     palette
   })
 
-  const overrides = makeOverridesByTheme(theme)[type][variant]
+  const overrides = makeOverridesByTheme(theme)[type]
 
   return {
     ...theme,

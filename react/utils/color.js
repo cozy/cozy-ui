@@ -1,30 +1,29 @@
-const getThemeNodeClassName = (type, variant) =>
-  `TwakeTheme--${type}-${variant}`
+const getThemeNodeClassName = type => `TwakeTheme--${type}`
 
-const getNodeWithThemeCssVars = (type, variant) => {
-  const className = getThemeNodeClassName(type, variant)
+const getNodeWithThemeCssVars = type => {
+  const className = getThemeNodeClassName(type)
 
   return document.getElementsByClassName(className)[0]
 }
 
-export const createNodeWithThemeCssVars = (type, variant) => {
+export const createNodeWithThemeCssVars = type => {
   if (process.env.NODE_ENV === 'test') return null
 
-  if (!getNodeWithThemeCssVars(type, variant)) {
+  if (!getNodeWithThemeCssVars(type)) {
     const node = document.createElement('div')
-    node.className = getThemeNodeClassName(type, variant)
+    node.className = getThemeNodeClassName(type)
     node.style.display = 'none'
     document.body.prepend(node)
   }
 }
 
-const realGetCssVariableValue = (varName, type, variant) => {
-  const node = getNodeWithThemeCssVars(type, variant)
+const realGetCssVariableValue = (varName, type) => {
+  const node = getNodeWithThemeCssVars(type)
 
   return window.getComputedStyle(node).getPropertyValue(`--${varName}`).trim()
 }
 
-export const getCssVariableValue = (varName, type, variant) =>
+export const getCssVariableValue = (varName, type) =>
   process.env.NODE_ENV === 'test'
     ? '#fff'
-    : realGetCssVariableValue(varName, type, variant)
+    : realGetCssVariableValue(varName, type)

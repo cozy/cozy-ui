@@ -65,8 +65,7 @@ const screenshotReactStyleguide = async (page, args, config, theme) => {
       componentConfig,
       screenshotDir: args.screenshotDir,
       viewport: componentViewport,
-      type: theme.type,
-      variant: theme.variant
+      theme
     })
   }
 }

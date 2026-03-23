@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const { prepareFS, prepareBrowser } = require('./screenshots/prepares')
-const screenshotReactStyleguide = require('./screenshots/screenshotReactStyleguide')
-const screenshotKSSStyleguide = require('./screenshots/screenshotKSSStyleguide')
-const makeParser = require('./screenshots/parser')
 const { readConfig, parseViewportArgument } = require('./screenshots/helpers')
+const makeParser = require('./screenshots/parser')
+const { prepareFS, prepareBrowser } = require('./screenshots/prepares')
+const screenshotKSSStyleguide = require('./screenshots/screenshotKSSStyleguide')
+const screenshotReactStyleguide = require('./screenshots/screenshotReactStyleguide')
 
 let puppeteer
 try {
@@ -34,15 +34,8 @@ const main = async () => {
   })
   console.log('✅ Done. Screenshot directory prepared')
 
-  for (const theme of [
-    { type: 'light', variant: 'normal' },
-    { type: 'light', variant: 'inverted' },
-    { type: 'dark', variant: 'normal' },
-    { type: 'dark', variant: 'inverted' }
-  ]) {
-    console.log(
-      `\n✨ Running process for '${theme.type} ${theme.variant}' theme...`
-    )
+  for (const theme of ['light', 'dark']) {
+    console.log(`\n✨ Running process for '${theme}' theme...`)
     console.log('\n⌛ Preparing browser...')
 
     const { browser, page } = await prepareBrowser(puppeteer, {
@@ -59,9 +52,7 @@ const main = async () => {
       await screenshotKSSStyleguide(page, args)
     }
 
-    console.log(
-      `✅ Done. Screenshots completed for '${theme.type} ${theme.variant}' theme.`
-    )
+    console.log(`✅ Done. Screenshots completed for '${theme}' theme.`)
 
     await browser.close()
     console.log('Browser closed')
