@@ -7,7 +7,6 @@ import Icon from '../Icon'
 import DownloadIcon from '../Icons/Download'
 import FileIcon from '../Icons/File'
 import Typography from '../Typography'
-import { Media, Bd, Img } from '../deprecated/Media'
 
 /**
  *
@@ -22,17 +21,17 @@ const HistoryRow = ({
   ...rest
 }) => {
   return (
-    <Media className={styles.HistoryRowMedia} style={style} {...rest}>
+    <div className={styles.HistoryRowMedia} style={style} {...rest}>
       <div className="u-media u-media-grow u-row-m">
         <div className={styles.HistoryRowCircleWrapper}>
-          <Img className={styles.HistoryRowMediaImg}>
+          <div className={styles.HistoryRowMediaImg}>
             <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
               {tag && <Icon icon={FileIcon} color="var(--primaryTextColor)" />}
             </Avatar>
-          </Img>
+          </div>
         </div>
         <div className="u-media u-media-grow u-stack-xs u-row-m">
-          <Bd>
+          <div className={styles.HistoryRowMediaBd}>
             <Typography variant="h6">{primaryText}</Typography>
             <Typography gutterBottom variant="h6">
               {tag}
@@ -42,18 +41,18 @@ const HistoryRow = ({
                 {secondaryText}
               </Typography>
             ) : null}
-          </Bd>
-          <Img>
+          </div>
+          <div>
             <Icon
               className="u-c-pointer"
               color="var(--secondaryTextColor)"
               icon={DownloadIcon}
               onClick={() => downloadLink()}
             />
-          </Img>
+          </div>
         </div>
       </div>
-    </Media>
+    </div>
   )
 }
 

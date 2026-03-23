@@ -8,7 +8,6 @@ import Icon from '../Icon'
 import IconButton from '../IconButton'
 import LeftIcon from '../Icons/Left'
 import List from '../List'
-import { Media, Bd, Img } from '../deprecated/Media'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
@@ -20,16 +19,16 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
 
   return (
     <DialogTitle {...dialogTitleProps}>
-      <Media>
+      <div className="u-flex u-flex-items-center">
         {showBack && (
-          <Img className={styles.Modal__back}>
+          <div className={styles.Modal__back}>
             <IconButton size="medium" onClick={onClickBack}>
               <Icon icon={LeftIcon} />
             </IconButton>
-          </Img>
+          </div>
         )}
-        <Bd className="u-ellipsis">{title}</Bd>
-      </Media>
+        <div className="u-ellipsis u-ov-hidden">{title}</div>
+      </div>
     </DialogTitle>
   )
 }

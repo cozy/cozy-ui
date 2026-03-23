@@ -56,7 +56,7 @@ If you need to programmatically access the underlying `<input />` for example to
 
 ```jsx
 import Input from 'cozy-ui/transpiled/react/legacy/Input';
-import Button from 'cozy-ui/transpiled/react/deprecated/Button';
+import Button from 'cozy-ui/transpiled/react/Buttons';
 class InputComponent extends React.Component {
   constructor() {
     super()

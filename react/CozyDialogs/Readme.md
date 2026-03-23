@@ -68,7 +68,7 @@ import {
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
+import { useAlert } from 'cozy-ui/transpiled/react/providers/Alert'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -92,8 +92,8 @@ import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 import BackgroundImg from './background.png'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
-const handleBack = () => {
-  Alerter.success('Back button has been pressed', { duration: 5000 })
+const handleBack = showAlert => () => {
+  showAlert({ message: "Back button has been pressed", severity: "success", duration: 5000})
   setState({ modalOpened: !state.modalOpened })
 }
 const hideBottomSheet = () => setState({ bottomSheetOpened: false })
@@ -277,164 +277,175 @@ const ButtonMenu = () => {
   )
 }
 
+const DemoComp = ({ variant }) => {
+  const { showAlert } = useAlert()
+
+  return (
+    <>
+      <FormControl component="fieldset" fullWidth>
+        <FormLabel component="legend">Content</FormLabel>
+        <RadioGroup
+          aria-label="radio"
+          name="content"
+          row
+          value={state.content}
+          onChange={event => { setState({ content: event.target.value }) }}
+        >
+          <FormControlLabel
+            value="default"
+            label="Default"
+            control={<Radio />}
+          />
+          <FormControlLabel
+            value="short"
+            label="Short"
+            control={<Radio />}
+          />
+          <FormControlLabel
+            value="long"
+            label="Long"
+            control={<Radio />}
+          />
+        </RadioGroup>
+      </FormControl>
+      <FormControl component="fieldset" >
+        <FormLabel component="legend">Size</FormLabel>
+        <RadioGroup
+          aria-label="radio"
+          name="size"
+          row
+          value={state.size}
+          onChange={event => { setState({ size: event.target.value }) }}
+        >
+          <FormControlLabel
+            value="small"
+            label="Small"
+            control={<Radio />}
+          />
+          <FormControlLabel
+            value="medium"
+            label="Medium"
+            control={<Radio />}
+          />
+          <FormControlLabel
+            value="large"
+            label="Large"
+            control={<Radio />}
+          />
+          <FormControlLabel
+            value="full"
+            label="Full"
+            control={<Radio />}
+          />
+        </RadioGroup>
+      </FormControl>
+      <div className="u-mt-1">
+        {dialogs.map(dialog => (
+          <Button
+            key={`open-btn-${dialog.name}`}
+            data-testid={`open-btn-${dialog.name}`}
+            className="u-m-half"
+            label={`Open ${dialog.name}`}
+            variant="ghost"
+            size="small"
+            onClick={() => toggleDialog(dialog)}
+          />
+        ))}
+      </div>
+
+      {state.modalOpened && (
+        <DialogComponent
+          open
+          {...(variant.fullScreen && { fullScreen: true })}
+          size={DialogComponent !== ConfirmDialog ? state.size : undefined}
+          onClose={variant.withCloseButton ? handleClose : undefined}
+          onBack={variant.withBackButton ? handleBack(showAlert) : undefined}
+          disableTitleAutoPadding={variant.disableTitleAutoPadding}
+          align={variant.alignTop ? 'top': 'middle'}
+          title={variant.hideTitle
+            ? undefined
+            : DialogComponent !== IllustrationDialog && variant.titleLong
+              ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+              : dialogTitles[DialogComponent.name]
+          }
+          disableGutters={variant.disableGutters}
+          background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
+          icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
+          content={
+            <>
+              <Typography component="div" variant="body1">
+                { state.content == 'default'
+                  ? dialogContents[DialogComponent.name]
+                  : state.content == 'long'
+                    ? content.ada.long
+                    : content.ada.short
+                }
+                <Stack className="u-mt-1" spacing="s">
+                  <div>
+                    <Button
+                      label="Show an alert"
+                      onClick={() => showAlert({ message: "Hello", severity: "success", duration: 100000})}
+                    />
+                  </div>
+                  <div>
+                    <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
+                  </div>
+                  <div>
+                    <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
+                  </div>
+                  <div>
+                    <Button label="Show inner dialog" onClick={showSecondDialog}/>
+                  </div>
+                  <ButtonMenu />
+                </Stack>
+              </Typography>
+
+              {state.secondConfirmDialogOpened && (
+                <ConfirmDialog open onClose={hideSecondConfirmDialog}
+                  title="This is a simple title"
+                  content="This is a simple content"
+                />
+              )}
+
+              {state.secondDialogOpened && (
+                <Dialog open onClose={hideSecondDialog}
+                  title="This is a simple title"
+                  content="This is a simple content"
+                />
+              )}
+
+              {state.bottomSheetOpened && (
+                <BottomSheet backdrop onClose={hideBottomSheet}>
+                  <BottomSheetItem>
+                    <div className="u-mb-1">
+                      <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+                    </div>
+                    {content.ada.long}
+                    {state.BSConfirmDialogOpened && (
+                      <ConfirmDialog open onClose={hideBSConfirmDialog}
+                        title="This is a simple title"
+                        content="This is a simple content"
+                      />
+                    )}
+                  </BottomSheetItem>
+                </BottomSheet>
+              )}
+            </>
+          }
+          actions={variant.showActions && dialogActions[DialogComponent.name]}
+          actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
+        />
+      )}
+    </>
+  )
+}
+
 ;
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>
     {variant => (
-      <>
-        <FormControl component="fieldset" fullWidth>
-          <FormLabel component="legend">Content</FormLabel>
-          <RadioGroup
-            aria-label="radio"
-            name="content"
-            row
-            value={state.content}
-            onChange={event => { setState({ content: event.target.value }) }}
-          >
-            <FormControlLabel
-              value="default"
-              label="Default"
-              control={<Radio />}
-            />
-            <FormControlLabel
-              value="short"
-              label="Short"
-              control={<Radio />}
-            />
-            <FormControlLabel
-              value="long"
-              label="Long"
-              control={<Radio />}
-            />
-          </RadioGroup>
-        </FormControl>
-        <FormControl component="fieldset" >
-          <FormLabel component="legend">Size</FormLabel>
-          <RadioGroup
-            aria-label="radio"
-            name="size"
-            row
-            value={state.size}
-            onChange={event => { setState({ size: event.target.value }) }}
-          >
-            <FormControlLabel
-              value="small"
-              label="Small"
-              control={<Radio />}
-            />
-            <FormControlLabel
-              value="medium"
-              label="Medium"
-              control={<Radio />}
-            />
-            <FormControlLabel
-              value="large"
-              label="Large"
-              control={<Radio />}
-            />
-            <FormControlLabel
-              value="full"
-              label="Full"
-              control={<Radio />}
-            />
-          </RadioGroup>
-        </FormControl>
-        <div className="u-mt-1">
-          {dialogs.map(dialog => (
-            <Button
-              key={`open-btn-${dialog.name}`}
-              data-testid={`open-btn-${dialog.name}`}
-              className="u-m-half"
-              label={`Open ${dialog.name}`}
-              variant="ghost"
-              size="small"
-              onClick={() => toggleDialog(dialog)}
-            />
-          ))}
-        </div>
-
-        {state.modalOpened && (
-          <DialogComponent
-            open
-            {...(variant.fullScreen && { fullScreen: true })}
-            size={DialogComponent !== ConfirmDialog ? state.size : undefined}
-            onClose={variant.withCloseButton ? handleClose : undefined}
-            onBack={variant.withBackButton ? handleBack : undefined}
-            disableTitleAutoPadding={variant.disableTitleAutoPadding}
-            align={variant.alignTop ? 'top': 'middle'}
-            title={variant.hideTitle
-              ? undefined
-              : DialogComponent !== IllustrationDialog && variant.titleLong
-                ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
-                : dialogTitles[DialogComponent.name]
-            }
-            disableGutters={variant.disableGutters}
-            background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
-            icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
-            content={
-              <>
-                <Typography component="div" variant="body1">
-                  { state.content == 'default'
-                    ? dialogContents[DialogComponent.name]
-                    : state.content == 'long'
-                      ? content.ada.long
-                      : content.ada.short
-                  }
-                  <Stack className="u-mt-1" spacing="s">
-                    <div>
-                      <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
-                    </div>
-                    <div>
-                      <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
-                    </div>
-                    <div>
-                      <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
-                    </div>
-                    <div>
-                      <Button label="Show inner dialog" onClick={showSecondDialog}/>
-                    </div>
-                    <ButtonMenu />
-                  </Stack>
-                </Typography>
-
-                {state.secondConfirmDialogOpened && (
-                  <ConfirmDialog open onClose={hideSecondConfirmDialog}
-                    title="This is a simple title"
-                    content="This is a simple content"
-                  />
-                )}
-
-                {state.secondDialogOpened && (
-                  <Dialog open onClose={hideSecondDialog}
-                    title="This is a simple title"
-                    content="This is a simple content"
-                  />
-                )}
-
-                {state.bottomSheetOpened && (
-                  <BottomSheet backdrop onClose={hideBottomSheet}>
-                    <BottomSheetItem>
-                      <div className="u-mb-1">
-                        <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
-                      </div>
-                      {content.ada.long}
-                      {state.BSConfirmDialogOpened && (
-                        <ConfirmDialog open onClose={hideBSConfirmDialog}
-                          title="This is a simple title"
-                          content="This is a simple content"
-                        />
-                      )}
-                    </BottomSheetItem>
-                  </BottomSheet>
-                )}
-              </>
-            }
-            actions={variant.showActions && dialogActions[DialogComponent.name]}
-            actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
-          />
-        )}
-      </>
+      <DemoComp variant={variant} />
     )}
   </Variants>
 </DemoProvider>

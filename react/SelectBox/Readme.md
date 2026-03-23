@@ -295,7 +295,7 @@ import { useState, useEffect } from 'react'
 import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
-import Button from 'cozy-ui/transpiled/react/deprecated/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox'
@@ -352,12 +352,11 @@ const ExampleDialog = ({ open, onClose }) => {
       actions={
         <>
           <Button
-            theme="secondary"
+            variant="secondary"
             onClick={() => onClose()}
             label={'Close Modal'}
           />
           <Button
-            theme="primary"
             label={'Touch Me'}
             onClick={() => alert('click')}
           />

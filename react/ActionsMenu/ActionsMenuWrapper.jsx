@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { useActionMenuEffects } from './ActionMenuEffects'
 import BottomSheet from '../BottomSheet'
 import Menu from '../Menu'
 import Paper from '../Paper'
-import { useActionMenuEffects } from '../deprecated/ActionMenu/ActionMenuEffects'
 import isTesting from '../helpers/isTesting'
 import useBreakpoints from '../providers/Breakpoints'
 

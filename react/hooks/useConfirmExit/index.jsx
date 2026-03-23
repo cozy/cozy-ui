@@ -6,8 +6,8 @@ import en from './locales/en.json'
 import fr from './locales/fr.json'
 import ru from './locales/ru.json'
 import vi from './locales/vi.json'
+import Button from '../../Buttons'
 import { ConfirmDialog } from '../../CozyDialogs'
-import Button from '../../deprecated/Button'
 import useEventListener from '../useEventListener'
 
 /**
@@ -35,12 +35,12 @@ function ConfirmModal({
           <Button
             label={confirmLabel || t('useConfirmExit.leave')}
             onClick={onConfirm}
-            theme="danger"
+            color="error"
           />
           <Button
             label={cancelLabel || t('useConfirmExit.back')}
             onClick={onCancel}
-            theme="secondary"
+            variant="secondary"
           />
         </>
       }

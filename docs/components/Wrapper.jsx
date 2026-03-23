@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Divider from '../../react/Divider'
 import Paper from '../../react/Paper'
 import Typography from '../../react/Typography'
-import Button from '../../react/deprecated/Button'
+import Button from '../../react/deprecated/Button' // TODO: should remove deprecated
 import isTesting from '../../react/helpers/isTesting'
 import CozyTheme from '../../react/providers/CozyTheme'
 import { isUsingDevStyleguidist } from '../../scripts/build-utils'

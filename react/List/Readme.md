@@ -35,18 +35,13 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import ActionsMenu from 'cozy-ui/transpiled/react/ActionsMenu'
 import ActionsMenuItem from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem'
 import ActionsMenuWrapper from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuWrapper'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Menu from 'cozy-ui/transpiled/react/deprecated/Menus'
-import MenuItem from '@material-ui/core/MenuItem'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
-import PenIcon from "cozy-ui/transpiled/react/Icons/Pen"
-import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash"
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
@@ -59,7 +54,6 @@ import PieChartIcon from 'cozy-ui/transpiled/react/Icons/PieChart'
 import CommentIcon from 'cozy-ui/transpiled/react/Icons/Comment'
 import MagicTrickIcon from 'cozy-ui/transpiled/react/Icons/MagicTrick'
 import Radio from 'cozy-ui/transpiled/react/Radios'
-import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { showMenu: false }
