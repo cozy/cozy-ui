@@ -10,7 +10,7 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 export const CozyThemeContext = createContext()
 
 /**
- * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean }}
+ * @returns {{ type: 'light'|'dark', isLight: boolean }}
  */
 export const useCozyTheme = () => {
   const context = useContext(CozyThemeContext)
@@ -23,7 +23,6 @@ export const useCozyTheme = () => {
 
     return {
       type: 'light',
-      variant: 'normal',
       isLight: true
     }
   }
@@ -31,9 +30,8 @@ export const useCozyTheme = () => {
   return context
 }
 
-const CozyTheme = ({ type, variant, className, ignoreItself, children }) => {
-  const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
-  const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
+const CozyTheme = ({ type, className, ignoreItself, children }) => {
+  const uiThemeType = localStorage.getItem('ui-theme') // use only for cozy-ui documentation and argos screenshots
 
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
     ? 'dark'
@@ -43,20 +41,18 @@ const CozyTheme = ({ type, variant, className, ignoreItself, children }) => {
     : undefined
 
   const _type = uiThemeType || filteredSettingsThemeType || deviceThemeType
-  const _variant = uiThemeVariant || variant
 
   return (
     <CozyThemeContext.Provider
       value={{
         type: _type,
-        variant: _variant,
         isLight: _type === 'light'
       }}
     >
-      <MuiCozyTheme type={_type} variant={_variant}>
+      <MuiCozyTheme type={_type}>
         <div
           className={cx(className, {
-            [`TwakeTheme--${_type}-${_variant}`]: Boolean(_variant),
+            [`TwakeTheme--${_type}`]: Boolean(_type),
             'u-dc': ignoreItself
           })}
         >
@@ -69,7 +65,6 @@ const CozyTheme = ({ type, variant, className, ignoreItself, children }) => {
 
 CozyTheme.propTypes = {
   type: PropTypes.oneOf(['light', 'dark', 'auto']),
-  variant: PropTypes.oneOf(['normal', 'inverted']),
   /** Causes this element's children to appear as if they were direct children of the element's parent, ignoring the element itself. */
   ignoreItself: PropTypes.bool,
   className: PropTypes.string,
@@ -77,7 +72,6 @@ CozyTheme.propTypes = {
 }
 
 CozyTheme.defaultProps = {
-  variant: 'normal',
   ignoreItself: true
 }
 

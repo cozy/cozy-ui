@@ -1,28 +1,20 @@
 import { makeTheme } from './makeTheme'
 
-export const lightNormalTheme = makeTheme('light', 'normal')
-export const lightInvertedTheme = makeTheme('light', 'inverted')
-export const darkNormalTheme = makeTheme('dark', 'normal')
-export const darkInvertedTheme = makeTheme('dark', 'inverted')
+export const lightNormalTheme = makeTheme('light')
+export const darkNormalTheme = makeTheme('dark')
 
 const themes = {
-  light: {
-    normal: lightNormalTheme,
-    inverted: lightInvertedTheme
-  },
-  dark: {
-    normal: darkNormalTheme,
-    inverted: darkInvertedTheme
-  }
+  light: lightNormalTheme,
+  dark: darkNormalTheme
 }
 
-export const getTheme = (type, variant) => {
-  const theme = themes[type]?.[variant]
+export const getTheme = type => {
+  const theme = themes[type]
 
   if (!theme) {
     const possibleThemes = Object.keys(themes).join(', ')
     throw new Error(
-      `[MuiCozyTheme] Unknown theme variant: ${variant}. Possible variants are ${possibleThemes}`
+      `[MuiCozyTheme] Unknown theme variant: ${type}. Possible variants are ${possibleThemes}`
     )
   }
 

@@ -4,194 +4,132 @@ import { getCssVariableValue } from '../utils/color'
 
 const opacityByTheme = {
   light: {
-    normal: {
-      action: {
-        hoverOpacity: 0.04,
-        selectedOpacity: 0.18,
-        disabledOpacity: 0.32,
-        focusOpacity: 0.12,
-        activatedOpacity: 0.12,
-        ghostOpacity: 0.08,
-        hoverGhostOpacity: 0.16
-      },
-      border: {
-        opacity: 0.32,
-        ghostOpacity: 0.48
-      },
-      background: {
-        contrastOpacity: 0.12
-      }
+    action: {
+      hoverOpacity: 0.04,
+      selectedOpacity: 0.18,
+      disabledOpacity: 0.32,
+      focusOpacity: 0.12,
+      activatedOpacity: 0.12,
+      ghostOpacity: 0.08,
+      hoverGhostOpacity: 0.16
     },
-    inverted: {
-      action: {
-        hoverOpacity: 0.08,
-        selectedOpacity: 0.18,
-        disabledOpacity: 0.32,
-        focusOpacity: 0.25,
-        activatedOpacity: 0.24,
-        ghostOpacity: 0.08,
-        hoverGhostOpacity: 0.16
-      },
-      border: {
-        opacity: 0.48,
-        ghostOpacity: 0.48
-      },
-      background: {
-        contrastOpacity: 0.24
-      }
+    border: {
+      opacity: 0.32,
+      ghostOpacity: 0.48
+    },
+    background: {
+      contrastOpacity: 0.12
     }
   },
   dark: {
-    normal: {
-      action: {
-        hoverOpacity: 0.08,
-        selectedOpacity: 0.18,
-        disabledOpacity: 0.32,
-        focusOpacity: 0.24,
-        activatedOpacity: 0.24,
-        ghostOpacity: 0.08,
-        hoverGhostOpacity: 0.16
-      },
-      border: {
-        opacity: 0.48,
-        ghostOpacity: 0.48
-      },
-      background: {
-        contrastOpacity: 0.24
-      }
+    action: {
+      hoverOpacity: 0.08,
+      selectedOpacity: 0.18,
+      disabledOpacity: 0.32,
+      focusOpacity: 0.24,
+      activatedOpacity: 0.24,
+      ghostOpacity: 0.08,
+      hoverGhostOpacity: 0.16
     },
-    inverted: {
-      action: {
-        hoverOpacity: 0.04,
-        selectedOpacity: 0.18,
-        disabledOpacity: 0.32,
-        focusOpacity: 0.12,
-        activatedOpacity: 0.12,
-        ghostOpacity: 0.08,
-        hoverGhostOpacity: 0.16
-      },
-      border: {
-        opacity: 0.32,
-        ghostOpacity: 0.48
-      },
-      background: {
-        contrastOpacity: 0.12
-      }
+    border: {
+      opacity: 0.48,
+      ghostOpacity: 0.48
+    },
+    background: {
+      contrastOpacity: 0.24
     }
   }
 }
 
-export const makePalette = (type, variant) => {
+export const makePalette = type => {
   const paletteByTheme = {
     type,
-    variant: variant,
     primary: {
-      light: getCssVariableValue('primaryColorLight', type, variant),
-      main: getCssVariableValue('primaryColor', type, variant),
-      dark: getCssVariableValue('primaryColorDark', type, variant),
-      contrastText: getCssVariableValue(
-        'primaryContrastTextColor',
-        type,
-        variant
-      )
+      light: getCssVariableValue('primaryColorLight', type),
+      main: getCssVariableValue('primaryColor', type),
+      dark: getCssVariableValue('primaryColorDark', type),
+      contrastText: getCssVariableValue('primaryContrastTextColor', type)
     },
     secondary: {
-      light: getCssVariableValue('secondaryColorLight', type, variant),
-      main: getCssVariableValue('secondaryColor', type, variant),
-      dark: getCssVariableValue('secondaryColorDark', type, variant),
-      contrastText: getCssVariableValue(
-        'secondaryContrastTextColor',
-        type,
-        variant
-      )
+      light: getCssVariableValue('secondaryColorLight', type),
+      main: getCssVariableValue('secondaryColor', type),
+      dark: getCssVariableValue('secondaryColorDark', type),
+      contrastText: getCssVariableValue('secondaryContrastTextColor', type)
     },
     error: {
-      light: getCssVariableValue('errorColorLight', type, variant),
-      main: getCssVariableValue('errorColor', type, variant),
-      dark: getCssVariableValue('errorColorDark', type, variant),
-      contrastText: getCssVariableValue('errorColorContrastText', type, variant)
+      light: getCssVariableValue('errorColorLight', type),
+      main: getCssVariableValue('errorColor', type),
+      dark: getCssVariableValue('errorColorDark', type),
+      contrastText: getCssVariableValue('errorColorContrastText', type)
     },
     warning: {
-      light: getCssVariableValue('warningColorLight', type, variant),
-      main: getCssVariableValue('warningColor', type, variant),
-      dark: getCssVariableValue('warningColorDark', type, variant),
-      contrastText: getCssVariableValue(
-        'warningColorContrastText',
-        type,
-        variant
-      )
+      light: getCssVariableValue('warningColorLight', type),
+      main: getCssVariableValue('warningColor', type),
+      dark: getCssVariableValue('warningColorDark', type),
+      contrastText: getCssVariableValue('warningColorContrastText', type)
     },
     success: {
-      light: getCssVariableValue('successColorLight', type, variant),
-      main: getCssVariableValue('successColor', type, variant),
-      dark: getCssVariableValue('successColorDark', type, variant),
-      contrastText: getCssVariableValue(
-        'successColorContrastText',
-        type,
-        variant
-      )
+      light: getCssVariableValue('successColorLight', type),
+      main: getCssVariableValue('successColor', type),
+      dark: getCssVariableValue('successColorDark', type),
+      contrastText: getCssVariableValue('successColorContrastText', type)
     },
     info: {
-      light: getCssVariableValue('infoColorLight', type, variant),
-      main: getCssVariableValue('infoColor', type, variant),
-      dark: getCssVariableValue('infoColorDark', type, variant),
-      contrastText: getCssVariableValue('infoColorContrastText', type, variant)
+      light: getCssVariableValue('infoColorLight', type),
+      main: getCssVariableValue('infoColor', type),
+      dark: getCssVariableValue('infoColorDark', type),
+      contrastText: getCssVariableValue('infoColorContrastText', type)
     },
     text: {
-      primary: getCssVariableValue('primaryTextColor', type, variant),
-      secondary: getCssVariableValue('secondaryTextColor', type, variant),
-      disabled: getCssVariableValue('disabledTextColor', type, variant),
-      hint: getCssVariableValue('hintTextColor', type, variant),
-      icon: getCssVariableValue('iconTextColor', type, variant)
+      primary: getCssVariableValue('primaryTextColor', type),
+      secondary: getCssVariableValue('secondaryTextColor', type),
+      disabled: getCssVariableValue('disabledTextColor', type),
+      hint: getCssVariableValue('hintTextColor', type),
+      icon: getCssVariableValue('iconTextColor', type)
     },
     grey: {
-      50: getCssVariableValue('grey50', type, variant),
-      100: getCssVariableValue('grey100', type, variant),
-      200: getCssVariableValue('grey200', type, variant),
-      300: getCssVariableValue('grey300', type, variant),
-      400: getCssVariableValue('grey400', type, variant),
-      500: getCssVariableValue('grey500', type, variant),
-      600: getCssVariableValue('grey600', type, variant),
-      700: getCssVariableValue('grey700', type, variant),
-      800: getCssVariableValue('grey800', type, variant),
-      900: getCssVariableValue('grey900', type, variant),
-      A100: getCssVariableValue('greyA100', type, variant),
-      A200: getCssVariableValue('greyA200', type, variant),
-      A400: getCssVariableValue('greyA400', type, variant),
-      A700: getCssVariableValue('greyA700', type, variant)
+      50: getCssVariableValue('grey50', type),
+      100: getCssVariableValue('grey100', type),
+      200: getCssVariableValue('grey200', type),
+      300: getCssVariableValue('grey300', type),
+      400: getCssVariableValue('grey400', type),
+      500: getCssVariableValue('grey500', type),
+      600: getCssVariableValue('grey600', type),
+      700: getCssVariableValue('grey700', type),
+      800: getCssVariableValue('grey800', type),
+      900: getCssVariableValue('grey900', type),
+      A100: getCssVariableValue('greyA100', type),
+      A200: getCssVariableValue('greyA200', type),
+      A400: getCssVariableValue('greyA400', type),
+      A700: getCssVariableValue('greyA700', type)
     },
-    divider: getCssVariableValue('dividerColor', type, variant),
+    divider: getCssVariableValue('dividerColor', type),
     action: {
-      active: getCssVariableValue('actionColorActive', type, variant),
-      hover: getCssVariableValue('actionColorHover', type, variant),
-      selected: getCssVariableValue('actionColorSelected', type, variant),
-      disabled: getCssVariableValue('actionColorDisabled', type, variant),
+      active: getCssVariableValue('actionColorActive', type),
+      hover: getCssVariableValue('actionColorHover', type),
+      selected: getCssVariableValue('actionColorSelected', type),
+      disabled: getCssVariableValue('actionColorDisabled', type),
       disabledBackground: getCssVariableValue(
         'actionColorDisabledBackground',
-        type,
-        variant
+        type
       ),
-      focus: getCssVariableValue('actionColorFocus', type, variant),
-      ghost: getCssVariableValue('actionColorGhost', type, variant),
-      hoverGhost: getCssVariableValue('actionColorHoverGhost', type, variant)
+      focus: getCssVariableValue('actionColorFocus', type),
+      ghost: getCssVariableValue('actionColorGhost', type),
+      hoverGhost: getCssVariableValue('actionColorHoverGhost', type)
     },
     border: {
-      main: getCssVariableValue('borderMainColor', type, variant),
-      disabled: getCssVariableValue('borderDisabledColor', type, variant),
-      ghost: getCssVariableValue('borderGhostColor', type, variant),
-      ghostDisabled: getCssVariableValue(
-        'borderGhostDisabledColor',
-        type,
-        variant
-      )
+      main: getCssVariableValue('borderMainColor', type),
+      disabled: getCssVariableValue('borderDisabledColor', type),
+      ghost: getCssVariableValue('borderGhostColor', type),
+      ghostDisabled: getCssVariableValue('borderGhostDisabledColor', type)
     },
     background: {
-      default: getCssVariableValue('defaultBackgroundColor', type, variant),
-      paper: getCssVariableValue('paperBackgroundColor', type, variant),
-      contrast: getCssVariableValue('contrastBackgroundColor', type, variant),
+      default: getCssVariableValue('defaultBackgroundColor', type),
+      paper: getCssVariableValue('paperBackgroundColor', type),
+      contrast: getCssVariableValue('contrastBackgroundColor', type),
       selected: '#F5FAFF' // deprecated, should be removed. Use action.selected instead
     }
   }
 
-  return merge(paletteByTheme, opacityByTheme[type][variant])
+  return merge(paletteByTheme, opacityByTheme[type])
 }

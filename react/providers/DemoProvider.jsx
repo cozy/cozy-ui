@@ -5,7 +5,7 @@ import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
 import AlertProvider from '../providers/Alert'
 
-const DemoProvider = ({ variant, dictRequire, children }) => {
+const DemoProvider = ({ dictRequire, children }) => {
   const lang = localStorage.getItem('lang') || 'en'
   const _dictRequire = dictRequire ? dictRequire : () => ({})
 
@@ -13,7 +13,7 @@ const DemoProvider = ({ variant, dictRequire, children }) => {
     <BreakpointsProvider>
       <AlertProvider>
         <I18n lang={lang} dictRequire={_dictRequire}>
-          <CozyTheme variant={variant}>{children}</CozyTheme>
+          <CozyTheme>{children}</CozyTheme>
         </I18n>
       </AlertProvider>
     </BreakpointsProvider>

@@ -1,5 +1,5 @@
-const path = require('path')
 const fs = require('fs')
+const path = require('path')
 
 const emptyDirectory = directory => {
   for (const filename of fs.readdirSync(directory)) {
@@ -47,10 +47,9 @@ const prepareBrowser = async (puppeteer, options) => {
   ])
   page.setViewport(options.viewport)
   await page.setDefaultNavigationTimeout(0)
-  await page.evaluateOnNewDocument(({ type, variant }) => {
+  await page.evaluateOnNewDocument(theme => {
     localStorage.clear()
-    localStorage.setItem('ui-theme-type', type)
-    localStorage.setItem('ui-theme-variant', variant)
+    localStorage.setItem('ui-theme', theme)
   }, options.theme)
   return { browser, page }
 }

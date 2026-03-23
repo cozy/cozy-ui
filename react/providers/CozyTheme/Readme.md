@@ -24,7 +24,7 @@ const themesSupportingContext = [
 ;
 
 <DemoProvider>
-  <CozyTheme variant='inverted' className='u-stack-m'>
+  <CozyTheme type='dark' className='u-stack-m'>
     <Paper className='u-p-1'>
       <Typography className='u-mb-1' variant="h4">Forced inverted variant</Typography>
       <Typography variant="h4">➡️ Mui components</Typography>
@@ -46,7 +46,7 @@ const themesSupportingContext = [
         placeholder="placeholder"
       />
       <Typography className='u-mt-1' variant="h5">Normal variant inside inverted one</Typography>
-      <CozyTheme variant='normal'>
+      <CozyTheme type='light'>
         <Paper className='u-p-1 u-mv-1'>
             <Typography variant='body1'>
               We can always go back to normal variant if a child must "get out" of the theme.
