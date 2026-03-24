@@ -21,13 +21,10 @@ const AppTitle = ({ appIcon, appTextIcon }) => {
         size="32"
         className={styles['c-apptitle-app-icon']}
       />
-      <Icon
-        icon={TwakeTextIcon}
-        width="auto"
+      <TwakeTextIcon
         height="22"
         className={cx(
           'u-mr-half',
-          'u-w-auto',
           isLight ? styles['c-apptitle-light'] : styles['c-apptitle-dark']
         )}
       />
