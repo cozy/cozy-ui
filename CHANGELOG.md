@@ -1,3 +1,72 @@
+# [138.0.0](https://github.com/cozy/cozy-ui/compare/v137.0.1...v138.0.0) (2026-03-24)
+
+
+### Features
+
+* Add AddPropsToComp react helper ([c570ca6](https://github.com/cozy/cozy-ui/commit/c570ca6))
+* **Avatar:** Add `textColor` prop to customize text color ([d2f0fc6](https://github.com/cozy/cozy-ui/commit/d2f0fc6))
+* **Avatar:** Prop `color` accept custom colors ([6ebe625](https://github.com/cozy/cozy-ui/commit/6ebe625))
+* Remove Banner component ([ec80e70](https://github.com/cozy/cozy-ui/commit/ec80e70))
+* Remove BarButton ([597b6f0](https://github.com/cozy/cozy-ui/commit/597b6f0))
+* Remove Card component and u-card classes ([a3a1f99](https://github.com/cozy/cozy-ui/commit/a3a1f99))
+* Remove chart.js and react-chartjs-2 packages ([31eaa12](https://github.com/cozy/cozy-ui/commit/31eaa12))
+* Remove CircleButton component ([47ffede](https://github.com/cozy/cozy-ui/commit/47ffede))
+* Remove CircularChart component ([4dd6c3c](https://github.com/cozy/cozy-ui/commit/4dd6c3c))
+* Remove Counter component ([5b8373e](https://github.com/cozy/cozy-ui/commit/5b8373e))
+* Remove Figure and FigureBlock components ([58b4822](https://github.com/cozy/cozy-ui/commit/58b4822))
+* Remove GhostFileBadge component ([9b2d0b3](https://github.com/cozy/cozy-ui/commit/9b2d0b3))
+* Remove Hero component ([2ea6b82](https://github.com/cozy/cozy-ui/commit/2ea6b82))
+* Remove IconStack component ([05deb5b](https://github.com/cozy/cozy-ui/commit/05deb5b))
+* Remove InfosBadge ([b619845](https://github.com/cozy/cozy-ui/commit/b619845))
+* Remove IntentWrapper component ([3e920cc](https://github.com/cozy/cozy-ui/commit/3e920cc))
+* Remove Label component ([d90f6ac](https://github.com/cozy/cozy-ui/commit/d90f6ac))
+* Remove legacy Avatar and Circle comp, remove `--circleSize` css var ([40dca3f](https://github.com/cozy/cozy-ui/commit/40dca3f))
+* Remove light inverted and dark inverted theme ([79f403d](https://github.com/cozy/cozy-ui/commit/79f403d))
+* Remove PageLayout, PageContent, PageFooter, MobilePageLayout ([931b551](https://github.com/cozy/cozy-ui/commit/931b551))
+* Remove Panel component ([b23f8e5](https://github.com/cozy/cozy-ui/commit/b23f8e5))
+* Remove PasswordExample component ([0883b92](https://github.com/cozy/cozy-ui/commit/0883b92))
+* Remove PieChart component ([f2cc825](https://github.com/cozy/cozy-ui/commit/f2cc825))
+* Remove Popup and PopupOpener components ([2456a9b](https://github.com/cozy/cozy-ui/commit/2456a9b))
+* Remove Progress component ([9990bda](https://github.com/cozy/cozy-ui/commit/9990bda))
+* Remove SelectionBar component ([69dcd5b](https://github.com/cozy/cozy-ui/commit/69dcd5b))
+* Remove Textarea component ([7fed852](https://github.com/cozy/cozy-ui/commit/7fed852))
+* Remove Thumbnail component ([c1a8304](https://github.com/cozy/cozy-ui/commit/c1a8304))
+* Remove Toggle component ([52c3487](https://github.com/cozy/cozy-ui/commit/52c3487))
+* Remove Wizard component ([747d2ce](https://github.com/cozy/cozy-ui/commit/747d2ce))
+* Rename theme files to remove `normal` keyword ([224ac68](https://github.com/cozy/cozy-ui/commit/224ac68))
+* Replace deprecated components ([76bb14e](https://github.com/cozy/cozy-ui/commit/76bb14e))
+* Stop exporting deprecated component ([d5b1cd4](https://github.com/cozy/cozy-ui/commit/d5b1cd4))
+
+
+### BREAKING CHANGES
+
+* You no longer can select inverted variant for CozyTheme
+* If you imported deprecated components directly, you need to use deep import now. `import { Button } from cozy-ui` goes `import Button from 'cozy-ui/transpiled/react/deprecated/Button/'`
+* IntentWrapper has been removed with no replacement
+* SelectionBar has been removed. Use ActionsBar instead
+* Thumbnail has been removed. Use TextField multiline instead
+* Thumbnail has been removed with no replacement. Use Div instead (see commit and doc)
+* Toggle has been removed, use Switch instead
+* Wizard has been removed with no replacement
+* Progress has been removed. Import CircularProgress or LinearProgress comp as usual instead `import LinearProgress from 'cozy-ui/transpiled/react/LinearProgress'`
+* Popup and PopupOpener have been removed with no replacement
+* PieChart has been removed with no replacement
+* PasswordExample has been removed with no replacement
+* Panel has been removed with no replacement
+* PageLayout, PageContent, PageFooter, MobilePageLayout have been removed with no replacement
+* Label has been removed with no replacement
+* InfosBadge has been removed. Use Badge instead (see commit or doc)
+* IconStack has been removed with no replacement
+* Hero has been removed with no replacement
+* GhostFileBadge has been removed. Use Badge instead (see commit or doc)
+* Figure and FigureBlock have been removed with no replacement
+* Counter has been removed with no replacement
+* CircularChart has been removed with no replacement
+* CircleButton has been removed with no replacement
+* Card and u-card have been removed. Use Box instead (see commit or doc for example)
+* BarButton has been removed. Use IconButton instead.
+* Banner has been removed. Use Alert instead (see component readme for example).
+
 ## [137.0.1](https://github.com/cozy/cozy-ui/compare/v137.0.0...v137.0.1) (2026-03-20)
 
 
