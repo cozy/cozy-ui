@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
+import Button from '../../react/Buttons'
 import Divider from '../../react/Divider'
 import Paper from '../../react/Paper'
-import Button from '../../react/deprecated/Button' // TODO: should remove deprecated
 import CozyTheme from '../../react/providers/CozyTheme'
 import { isUsingDevStyleguidist } from '../../scripts/build-utils'
 
@@ -40,8 +40,8 @@ export default ({ children }) => {
       <CozyTheme>
         <Paper className="u-pos-relative u-p-1" elevation={0} square>
           <Button
-            size="tiny"
-            theme="secondary"
+            size="small"
+            variant="text"
             label={lang}
             style={styles.buttonLang}
             onClick={handleLangClick}
