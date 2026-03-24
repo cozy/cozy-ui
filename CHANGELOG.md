@@ -1,3 +1,10 @@
+# [138.1.0](https://github.com/cozy/cozy-ui/compare/v138.0.0...v138.1.0) (2026-03-24)
+
+
+### Features
+
+* Replace deprecated button in documentation ([a474191](https://github.com/cozy/cozy-ui/commit/a474191))
+
 # [138.0.0](https://github.com/cozy/cozy-ui/compare/v137.0.1...v138.0.0) (2026-03-24)
 
 
