@@ -7,9 +7,9 @@ const rootDirectory = path.join(__dirname, '../')
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
 const getDefaultScreenshotName = ({ component, viewport, suffix, theme }) =>
-  `${component.testId}-${
-    suffix ? `${suffix}-` : ''
-  }${theme}-normal-${formatViewport(viewport)}.png` // TODO: normal keyword should be removed after verifying if screenshots are all good
+  `${component.testId}-${suffix ? `${suffix}-` : ''}${theme}-${formatViewport(
+    viewport
+  )}.png`
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
