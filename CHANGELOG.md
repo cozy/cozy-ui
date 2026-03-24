@@ -1,3 +1,10 @@
+## [138.1.1](https://github.com/cozy/cozy-ui/compare/v138.1.0...v138.1.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* **AppTitle:** Use direct Svg instead of Icon to avoid DOM error ([02c0e14](https://github.com/cozy/cozy-ui/commit/02c0e14))
+
 # [138.1.0](https://github.com/cozy/cozy-ui/compare/v138.0.0...v138.1.0) (2026-03-24)
 
 
