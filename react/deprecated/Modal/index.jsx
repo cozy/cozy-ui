@@ -250,15 +250,12 @@ ModalContent.propTypes = {
 }
 
 const Modal = props => {
-  const { type, variant } = useCozyTheme()
+  const { type } = useCozyTheme()
 
   return (
     <ModalWithoutTheme
       {...props}
-      containerClassName={cx(
-        props.containerClassName,
-        `CozyTheme--${type}-${variant}`
-      )}
+      containerClassName={cx(props.containerClassName, `CozyTheme--${type}`)}
     />
   )
 }

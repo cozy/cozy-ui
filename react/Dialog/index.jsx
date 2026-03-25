@@ -6,15 +6,12 @@ import { useDialogEffects } from './DialogEffects'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const Dialog = ({ className, ...props }) => {
-  const { type, variant } = useCozyTheme()
+  const { type } = useCozyTheme()
 
   useDialogEffects(props.open, props.fullScreen)
 
   return (
-    <MUIDialog
-      className={cx(`TwakeTheme--${type}-${variant}`, className)}
-      {...props}
-    />
+    <MUIDialog className={cx(`TwakeTheme--${type}`, className)} {...props} />
   )
 }
 
