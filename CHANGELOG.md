@@ -1,3 +1,10 @@
+## [138.1.2](https://github.com/cozy/cozy-ui/compare/v138.1.1...v138.1.2) (2026-03-25)
+
+
+### Bug Fixes
+
+* Now use correct css to deal with dark theme ([df4bb61](https://github.com/cozy/cozy-ui/commit/df4bb61))
+
 ## [138.1.1](https://github.com/cozy/cozy-ui/compare/v138.1.0...v138.1.1) (2026-03-24)
 
 
