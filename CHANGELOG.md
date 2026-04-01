@@ -1,3 +1,10 @@
+# [138.2.0](https://github.com/cozy/cozy-ui/compare/v138.1.2...v138.2.0) (2026-04-01)
+
+
+### Features
+
+* Add new ShareExternal icon component ([f9c8604](https://github.com/cozy/cozy-ui/commit/f9c8604))
+
 ## [138.1.2](https://github.com/cozy/cozy-ui/compare/v138.1.1...v138.1.2) (2026-03-25)
 
 
