@@ -21,7 +21,7 @@ $nav
 $nav-item
     position        relative
     z-index         var(--zIndex-app)
-    height          rem(44)
+    height          rem(36)
     box-sizing      border-box
     cursor          pointer
 
@@ -31,8 +31,8 @@ $nav-item
         z-index        var(--zIndex-below)
         border-radius  0 8px 8px 0
         top 0
-        left 0
-        right rem(16)
+        left 1.5rem
+        right 1.5rem
         bottom 0
         background     var(--actionColorHover)
 
@@ -73,7 +73,7 @@ $nav-item-icon
             height rem(16)
 
 $nav-item-text
-    font-size 16px
+    font-size 14px
     font-weight 500
     letter-spacing .15px
 
@@ -89,8 +89,9 @@ $nav-item-text
 $nav-link
     display              flex
     box-shadow           border-box
-    padding-left         rem(24)
-    padding-right        rem(16)
+    margin               0 1.5rem
+    padding-left         rem(8)
+    padding-right        rem(8)
     line-height          1.375
     text-decoration      none
     color                var(--primaryTextColor)
@@ -104,12 +105,14 @@ $nav-link
         color  var(--actionColorActive)
 
     &.is-active
-        box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
-        font-weight  bold
-        color  var(--primaryTextColor)
+        background-color  var(--primaryColorLight)
+        border-radius     8px
+        font-weight       bold
+        color             var(--primaryColor)
 
         +medium-screen()
             background-color initial
+            border-radius    initial
 
         .c-nav-icon
             color var(--primaryColor)
@@ -121,6 +124,7 @@ $nav-link
     +medium-screen()
         display              block
         height               auto
+        margin               0
         padding              0
         text-align           center
         font-size            rem(11)
