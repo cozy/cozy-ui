@@ -1,3 +1,11 @@
+# [138.3.0](https://github.com/cozy/cozy-ui/compare/v138.2.0...v138.3.0) (2026-04-08)
+
+
+### Features
+
+* Update design of the sidebar ([b7eee65](https://github.com/cozy/cozy-ui/commit/b7eee65))
+* Update NavDesktopDropdown style ([b4c5f53](https://github.com/cozy/cozy-ui/commit/b4c5f53))
+
 # [138.2.0](https://github.com/cozy/cozy-ui/compare/v138.1.2...v138.2.0) (2026-04-01)
 
 
