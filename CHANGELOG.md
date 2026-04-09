@@ -1,3 +1,10 @@
+# [138.4.0](https://github.com/cozy/cozy-ui/compare/v138.3.0...v138.4.0) (2026-04-09)
+
+
+### Features
+
+* Add new menu icon ([49a2ef6](https://github.com/cozy/cozy-ui/commit/49a2ef6))
+
 # [138.3.0](https://github.com/cozy/cozy-ui/compare/v138.2.0...v138.3.0) (2026-04-08)
 
 
