@@ -21,6 +21,46 @@ Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use
 
 Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide/) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
 
+## Cozy UI skills for coding agents
+
+Cozy UI ships a local skill for coding agents. The skill gives agents a compact entry point into Cozy UI conventions, then lets them load detailed references only when they need component APIs or CSS utilities.
+
+This is useful for agents because they can work from a concise `SKILL.md` instead of reading the whole repository or guessing from generic React and Material UI knowledge.
+
+### What the skill provides
+
+* A short Cozy UI overview for agents
+* A generated React component reference with imports, examples and extracted props
+* A CSS utility reference for spacing, typography, colors and legacy classes
+* Guidance to prefer Cozy UI components and theme conventions when building Cozy apps
+
+### Generate the skill
+
+```bash
+yarn build:doc:skill
+```
+
+The generated skill is written to:
+
+```text
+skills/cozy-ui/
+  SKILL.md
+  references/
+    components.md
+    css-classes.md
+```
+
+### Using the skill
+
+Point your agent at `skills/cozy-ui` when you want it to build or review Cozy application UI:
+
+```text
+Use the cozy-ui skill from this repository to implement this screen.
+Choose existing Cozy UI components where possible and check the component reference before inventing props.
+```
+
+Agents that support locally installed skills can copy or link `skills/cozy-ui` into their skills directory. Agents without skill discovery can still read `skills/cozy-ui/SKILL.md` and load the reference files on demand.
+
 ## Usage
 
 ### As a Components library
