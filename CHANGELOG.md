@@ -1,3 +1,10 @@
+# [138.5.0](https://github.com/cozy/cozy-ui/compare/v138.4.0...v138.5.0) (2026-04-10)
+
+
+### Features
+
+* Change the CloudSync icon ([a4ad3a0](https://github.com/cozy/cozy-ui/commit/a4ad3a0))
+
 # [138.4.0](https://github.com/cozy/cozy-ui/compare/v138.3.0...v138.4.0) (2026-04-09)
 
 
