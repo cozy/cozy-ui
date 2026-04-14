@@ -6014,29 +6014,6 @@ body {
   fill: inherit;
 }
 
-.divider--SuA5q {
-  align-items: center;
-  display: flex;
-}
-.divider--SuA5q::after,
-.divider--SuA5q::before {
-  content: '';
-  height: 1px;
-  background-color: var(--dividerColor);
-}
-.divider--SuA5q::before {
-  display: none;
-  margin-right: 0.5rem;
-}
-.divider--SuA5q::after {
-  flex: 1;
-  margin-left: 0.5rem;
-}
-.center--3K8dw::before {
-  display: block;
-  flex: 1;
-}
-
 .c-apptitle--eqV9l {
   display: inline-flex;
   align-items: center;
@@ -6069,6 +6046,29 @@ body {
 }
 .Stack--xxl--2KAsb > * + * {
   margin-top: 3rem;
+}
+
+.divider--SuA5q {
+  align-items: center;
+  display: flex;
+}
+.divider--SuA5q::after,
+.divider--SuA5q::before {
+  content: '';
+  height: 1px;
+  background-color: var(--dividerColor);
+}
+.divider--SuA5q::before {
+  display: none;
+  margin-right: 0.5rem;
+}
+.divider--SuA5q::after {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+.center--3K8dw::before {
+  display: block;
+  flex: 1;
 }
 
 .DialogCloseButton--cxKPO {
