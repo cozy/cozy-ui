@@ -1,3 +1,10 @@
+# [138.6.0](https://github.com/cozy/cozy-ui/compare/v138.5.0...v138.6.0) (2026-04-14)
+
+
+### Features
+
+* **Chip:** Adjust ghost style ([02758c2](https://github.com/cozy/cozy-ui/commit/02758c2))
+
 # [138.5.0](https://github.com/cozy/cozy-ui/compare/v138.4.0...v138.5.0) (2026-04-10)
 
 
