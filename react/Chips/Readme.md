@@ -166,3 +166,58 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
   )}
 </Variants>
 ```
+
+### Small size
+
+```jsx
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import Chip from 'cozy-ui/transpiled/react/Chips'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
+import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
+import Divider from "cozy-ui/transpiled/react/Divider"
+import Variants from 'cozy-ui/docs/components/Variants'
+
+const colors = ['success', 'error', 'warning', 'info']
+const initialVariants = [{ default: true, active: false, ghost: false }]
+
+;
+
+<Variants initialVariants={initialVariants} radio={true} screenshotAllVariants>
+  {variant => (
+    <Grid container>
+      {colors.map(color =>
+        <Grid item xs={12} sm={6} md={3} className="u-mb-1" key={JSON.stringify(color)}>
+          <Stack spacing="s">
+            <Typography>{color}</Typography>
+            <div>
+              <Chip
+                label="1 invoice"
+                onClick={() => alert('You clicked')}
+                clickable
+                color={color}
+                size="small"
+                variant={Object.keys(variant).find(key => variant[key])}
+              />
+            </div>
+            <div>
+              <Chip
+                label="1 invoice"
+                onClick={() => alert('You clicked')}
+                clickable
+                color={color}
+                size="small"
+                disabled
+                variant={Object.keys(variant).find(key => variant[key])}
+              />
+            </div>
+          </Stack>
+        </Grid>
+      )}
+    </Grid>
+  )}
+</Variants>
+```
