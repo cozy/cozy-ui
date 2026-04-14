@@ -111,28 +111,19 @@ export const makeChipStyleByColor = (theme, color) => ({
   },
   '&.ghost': {
     borderWidth: '1px',
-    borderStyle: 'dashed',
-    '&:not($disabled)': {
+    color: theme.palette[color].main,
+    borderColor: alpha(theme.palette[color].main, 0),
+    backgroundColor: alpha(
+      theme.palette[color].main,
+      theme.palette.action.ghostOpacity
+    ),
+    '& $icon, & $deleteIcon': {
       color: theme.palette[color].main,
-      borderColor: alpha(
-        theme.palette[color].main,
-        theme.palette.border.ghostOpacity
-      ),
-      backgroundColor: alpha(
-        theme.palette[color].main,
-        theme.palette.action.ghostOpacity
-      ),
-      '& $icon, & $deleteIcon': {
-        color: theme.palette[color].main,
-        fill: theme.palette[color].main
-      }
+      fill: theme.palette[color].main
     },
     '&$clickable, &$deletable': {
       '&:hover, &:focus': {
-        borderColor: alpha(
-          theme.palette[color].main,
-          theme.palette.border.ghostOpacity
-        ),
+        borderColor: alpha(theme.palette[color].main, 0),
         backgroundColor: alpha(
           theme.palette[color].main,
           theme.palette.action.hoverGhostOpacity
