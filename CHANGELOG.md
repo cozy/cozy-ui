@@ -1,3 +1,10 @@
+## [138.6.1](https://github.com/cozy/cozy-ui/compare/v138.6.0...v138.6.1) (2026-04-20)
+
+
+### Bug Fixes
+
+* Remove missing import of Banner ([c6c88d2](https://github.com/cozy/cozy-ui/commit/c6c88d2))
+
 # [138.6.0](https://github.com/cozy/cozy-ui/compare/v138.5.0...v138.6.0) (2026-04-14)
 
 
