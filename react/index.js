@@ -1,5 +1,4 @@
 export { default as Badge } from './Badge'
-export { default as Banner } from './Banner'
 export { default as Icon } from './Icon'
 export { default as Sprite } from './Icon/Sprite'
 export { default as Sidebar } from './Sidebar'
@@ -43,7 +42,6 @@ export {
   ExperimentalDialogActions,
   ExperimentalDialogTitle
 } from './Labs/ExperimentalDialog'
-
 export { default as BarTitle } from './BarTitle'
 export { default as CozyTheme } from './providers/CozyTheme'
 export { default as Paper } from './Paper'
