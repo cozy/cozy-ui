@@ -3,10 +3,10 @@
 @require '../tools/mixins'
 
 /*------------------------------------*\
-  Navigation
+  Navigation (next version - WIP)
 \*------------------------------------*/
 
-$nav
+$nav-next
     margin     rem(24) 0
     padding    0
     list-style none
@@ -18,10 +18,10 @@ $nav
         padding-right    0
 
 
-$nav-item
+$nav-next-item
     position        relative
     z-index         var(--zIndex-app)
-    height          rem(44)
+    height          rem(36)
     box-sizing      border-box
     cursor          pointer
 
@@ -31,8 +31,8 @@ $nav-item
         z-index        var(--zIndex-below)
         border-radius  0 8px 8px 0
         top 0
-        left 0
-        right rem(16)
+        left 1.5rem
+        right 1.5rem
         bottom 0
         background     var(--actionColorHover)
 
@@ -50,7 +50,7 @@ $nav-item
             content  none
 
 
-$nav-item-icon
+$nav-next-item-icon
     display inline-block
     margin-right 12px
     color var(--primaryTextColor)
@@ -72,8 +72,8 @@ $nav-item-icon
             width rem(16)
             height rem(16)
 
-$nav-item-text
-    font-size 16px
+$nav-next-item-text
+    font-size 14px
     font-weight 500
     letter-spacing .15px
 
@@ -86,11 +86,12 @@ $nav-item-text
         .is-active &
             color var(--primaryTextColor)
 
-$nav-link
+$nav-next-link
     display              flex
     box-shadow           border-box
-    padding-left         rem(24)
-    padding-right        rem(16)
+    margin               0 1.5rem
+    padding-left         rem(8)
+    padding-right        rem(8)
     line-height          1.375
     text-decoration      none
     color                var(--primaryTextColor)
@@ -104,14 +105,16 @@ $nav-link
         color  var(--actionColorActive)
 
     &.is-active
-        box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
-        font-weight  bold
-        color  var(--primaryTextColor)
+        background-color  var(--primaryColorLight)
+        border-radius     8px
+        font-weight       bold
+        color             var(--primaryColor)
 
         +medium-screen()
             background-color initial
+            border-radius    initial
 
-        .c-nav-icon
+        .c-nav-next-icon
             color var(--primaryColor)
 
             +medium-screen()
@@ -121,6 +124,7 @@ $nav-link
     +medium-screen()
         display              block
         height               auto
+        margin               0
         padding              0
         text-align           center
         font-size            rem(11)
@@ -134,7 +138,7 @@ $nav-link
             box-shadow   none
             font-weight  normal
 
-$nav-item-secondary
+$nav-next-item-secondary
     height auto
     margin 3px 0
 
@@ -158,7 +162,7 @@ $nav-item-secondary
         @media (hover: none)
             content none
 
-$nav-link-secondary
+$nav-next-link-secondary
     padding 8px 16px
     margin-left 2.8rem
     border-radius 8px 0 0 8px
@@ -172,7 +176,7 @@ $nav-link-secondary
         color var(--primaryContrastTextColor)
         background-color var(--secondaryColor)
 
-$nav-limiter
+$nav-next-limiter
     background transparent
     border 0
     cursor pointer

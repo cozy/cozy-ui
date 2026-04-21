@@ -2,21 +2,30 @@ import cx from 'classnames'
 import React, { Children, isValidElement, useState, forwardRef } from 'react'
 import { useI18n } from 'twake-i18n'
 
-import withNavLocales from './locales/withNavLocales'
 import styles from './styles.styl'
 import DropdownText from '../DropdownText'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 import TopIcon from '../Icons/Top'
 import ListItem from '../ListItem'
+import withNavLocales from '../Nav/locales/withNavLocales'
 import useBreakpoints from '../providers/Breakpoints'
+
+// WIP: the redesigned overline-like typography for NavDesktopDropdown titles.
+// Applied inline until the shared `overline` variant can safely be updated.
+const dropdownTitleStyle = {
+  fontSize: 10,
+  fontWeight: 700,
+  lineHeight: '13px',
+  letterSpacing: '0'
+}
 
 export const NavItem = ({ className, children, secondary, ...restProps }) => (
   <li
     className={cx(
-      styles['c-nav-item'],
+      styles['c-nav-next-item'],
       className,
-      secondary ? styles['c-nav-item-secondary'] : null
+      secondary ? styles['c-nav-next-item-secondary'] : null
     )}
     {...restProps}
   >
@@ -25,11 +34,11 @@ export const NavItem = ({ className, children, secondary, ...restProps }) => (
 )
 
 export const NavText = ({ className, children }) => (
-  <span className={cx(styles['c-nav-text'], className)}>{children}</span>
+  <span className={cx(styles['c-nav-next-text'], className)}>{children}</span>
 )
 
 export const NavLink = {
-  className: styles['c-nav-link'],
+  className: styles['c-nav-next-link'],
   activeClassName: styles['is-active']
 }
 
@@ -54,22 +63,22 @@ export const genNavLinkForV6 = RRNavLink =>
     <RRNavLink
       ref={ref}
       className={({ isActive }) =>
-        styles['c-nav-link'] + (isActive ? ` ${styles['is-active']}` : '')
+        styles['c-nav-next-link'] + (isActive ? ` ${styles['is-active']}` : '')
       }
       {...props}
     />
   ))
 
 export const NavIcon = ({ className, icon }) => (
-  <span className={cx(styles['c-nav-icon'], className)}>
+  <span className={cx(styles['c-nav-next-icon'], className)}>
     <Icon icon={icon} aria-hidden="true" focusable="false" />
   </span>
 )
 
-const Nav = ({ className, children }) => {
+const NavNext = ({ className, children }) => {
   return (
     <nav role="navigation">
-      <ul className={cx(styles['c-nav'], className)}>{children}</ul>
+      <ul className={cx(styles['c-nav-next'], className)}>{children}</ul>
     </nav>
   )
 }
@@ -100,7 +109,10 @@ const _NavDesktopLimiter = ({ children, max = 5 }) => {
         <NavItem secondary>
           <button
             type="button"
-            className={cx(styles['c-nav-link'], styles['c-nav-limiter'])}
+            className={cx(
+              styles['c-nav-next-link'],
+              styles['c-nav-next-limiter']
+            )}
             onClick={onToggle}
           >
             <NavIcon icon={viewingAll ? TopIcon : BottomIcon} />
@@ -140,9 +152,11 @@ export const NavDesktopDropdown = ({
     <>
       <ListItem size="small" className={isActivated ? 'u-c-pointer' : ''}>
         <DropdownText
-          variant="subtitle2"
+          variant="overline"
           color="textSecondary"
+          spaceBetween
           innerIconProps={innerIconProps}
+          innerTextProps={{ style: dropdownTitleStyle }}
           onClick={() => {
             if (!isActivated) {
               return
@@ -159,5 +173,5 @@ export const NavDesktopDropdown = ({
   )
 }
 
-export default Nav
-Nav.NavItem = NavItem
+export default NavNext
+NavNext.NavItem = NavItem
