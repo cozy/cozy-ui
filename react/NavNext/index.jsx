@@ -13,6 +13,7 @@ import useBreakpoints from '../providers/Breakpoints'
 
 // WIP: the redesigned overline-like typography for NavDesktopDropdown titles.
 // Applied inline until the shared `overline` variant can safely be updated.
+// this not finished yet
 const dropdownTitleStyle = {
   fontSize: 10,
   fontWeight: 700,
