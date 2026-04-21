@@ -6594,7 +6594,7 @@ body {
 .c-nav-item--3XOLK {
   position: relative;
   z-index: var(--zIndex-app);
-  height: 2.25rem;
+  height: 2.75rem;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -6604,8 +6604,8 @@ body {
   z-index: var(--zIndex-below);
   border-radius: 0 8px 8px 0;
   top: 0;
-  left: 1.5rem;
-  right: 1.5rem;
+  left: 0;
+  right: 1rem;
   bottom: 0;
   background: var(--actionColorHover);
 }
@@ -6648,7 +6648,7 @@ body {
   }
 }
 .c-nav-text--1J3yU {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.15px;
 }
@@ -6666,9 +6666,8 @@ body {
 .c-nav-link--3mK6W {
   display: flex;
   box-shadow: border-box;
-  margin: 0 1.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
   line-height: 1.375;
   text-decoration: none;
   color: var(--primaryTextColor);
@@ -6682,15 +6681,13 @@ body {
   color: var(--actionColorActive);
 }
 .c-nav-link--3mK6W.is-active--2D0jN {
-  background-color: var(--primaryColorLight);
-  border-radius: 8px;
+  box-shadow: inset 0.25rem 0 0 0 var(--primaryColor);
   font-weight: bold;
-  color: var(--primaryColor);
+  color: var(--primaryTextColor);
 }
 @media (max-width: 63.938rem) {
   .c-nav-link--3mK6W.is-active--2D0jN {
     background-color: initial;
-    border-radius: initial;
   }
 }
 .c-nav-link--3mK6W.is-active--2D0jN .c-nav-icon--hrJUe {
@@ -6705,7 +6702,6 @@ body {
   .c-nav-link--3mK6W {
     display: block;
     height: auto;
-    margin: 0;
     padding: 0;
     text-align: center;
     font-size: 0.688rem;
