@@ -1,0 +1,27 @@
+@require 'tools/mixins'
+@require 'settings/breakpoints'
+@require 'components/nav-next'
+
+.c-nav-next
+    @extend $nav-next
+
+.c-nav-next-item
+    @extend $nav-next-item
+
+.c-nav-next-link
+    @extend $nav-next-link
+
+.c-nav-next-icon
+    @extend $nav-next-item-icon
+
+.c-nav-next-text
+    @extend $nav-next-item-text
+
+.c-nav-next-item-secondary
+    @extend $nav-next-item-secondary
+
+    .c-nav-next-link
+        @extend $nav-next-link-secondary
+
+    .c-nav-next-limiter
+        @extend $nav-next-limiter

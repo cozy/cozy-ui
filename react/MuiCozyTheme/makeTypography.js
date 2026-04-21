@@ -69,10 +69,10 @@ export const makeTypography = () => ({
     letterSpacing: '0.5px'
   },
   overline: {
-    fontSize: 10,
-    fontWeight: 700,
-    lineHeight: '13px',
-    letterSpacing: '0',
+    fontSize: 11,
+    fontWeight: 500,
+    lineHeight: '16px',
+    letterSpacing: '0.5px',
     textTransform: 'inherit'
   }
 })
