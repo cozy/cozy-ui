@@ -1,3 +1,15 @@
+## [138.6.2](https://github.com/cozy/cozy-ui/compare/v138.6.1...v138.6.2) (2026-04-21)
+
+
+### Bug Fixes
+
+* indicate navnext is not finished ([8ab6bff](https://github.com/cozy/cozy-ui/commit/8ab6bff))
+
+
+### Reverts
+
+* Restore old sidebar and park redesign in NavNext ([9bbf946](https://github.com/cozy/cozy-ui/commit/9bbf946))
+
 ## [138.6.1](https://github.com/cozy/cozy-ui/compare/v138.6.0...v138.6.1) (2026-04-20)
 
 
