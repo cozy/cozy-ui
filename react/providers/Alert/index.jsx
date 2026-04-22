@@ -53,7 +53,7 @@ const AlertProvider = ({ children }) => {
        * @param {ShowAlertArgs} args
        */
       showAlert: args => {
-        setState({ open: true, ...args })
+        setState({ ...defaultState, ...args, open: true })
       }
     }),
     []
