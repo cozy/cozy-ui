@@ -1,5 +1,5 @@
 ---
-name: cozy-ui
+name: cozy-ui-reference
 description: Build, review, or modify Cozy applications with cozy-ui React components, Material-UI v4 based theming, Cozy design patterns, CSS utility classes, icons, and component APIs. Use when Codex needs to choose cozy-ui components, write imports from cozy-ui, apply Cozy styling utilities, or answer implementation questions about cozy-ui.
 ---
 
@@ -89,7 +89,7 @@ import { CozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
 ## Installed Skill Layout
 
 ```text
-skills/cozy-ui/
+skills/cozy-ui-reference/
   SKILL.md
   references/
     components.md

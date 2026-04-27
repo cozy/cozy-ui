@@ -43,7 +43,7 @@ yarn build:doc:skill
 The generated skill is written to:
 
 ```text
-skills/cozy-ui/
+skills/cozy-ui-reference/
   SKILL.md
   references/
     components.md
@@ -52,14 +52,14 @@ skills/cozy-ui/
 
 ### Using the skill
 
-Point your agent at `skills/cozy-ui` when you want it to build or review Cozy application UI:
+Point your agent at `skills/cozy-ui-reference` when you want it to build or review Cozy application UI:
 
 ```text
-Use the cozy-ui skill from this repository to implement this screen.
+Use the cozy-ui-reference skill from this repository to implement this screen.
 Choose existing Cozy UI components where possible and check the component reference before inventing props.
 ```
 
-Agents that support locally installed skills can copy or link `skills/cozy-ui` into their skills directory. Agents without skill discovery can still read `skills/cozy-ui/SKILL.md` and load the reference files on demand.
+Agents that support locally installed skills can copy or link `skills/cozy-ui-reference` into their skills directory. Agents without skill discovery can still read `skills/cozy-ui-reference/SKILL.md` and load the reference files on demand.
 
 ## Usage
 

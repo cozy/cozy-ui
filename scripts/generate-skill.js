@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Generates the cozy-ui skill reference files from source code.
+ * Generates the cozy-ui-reference skill files from source code.
  *
  * Sources:
  *   - react/[component]/Readme.md    component descriptions and usage examples
  *   - react/[component]/index.jsx    PropTypes and defaultProps
  *   - docs/skill/css-classes.md      static CSS reference (copied as-is)
  *
- * Output (skills/cozy-ui/):
+ * Output (skills/cozy-ui-reference/):
  *   - SKILL.md                       overview with component count
  *   - references/components.md       full component reference
  *   - references/css-classes.md      static CSS reference
@@ -28,7 +28,7 @@ const markdownProcessor = unified().use(remarkParse)
 const ROOT = path.join(__dirname, '..')
 const REACT_DIR = path.join(ROOT, 'react')
 const DOCS_SKILL_DIR = path.join(ROOT, 'docs', 'skill')
-const OUTPUT_DIR = path.join(ROOT, 'skills', 'cozy-ui')
+const OUTPUT_DIR = path.join(ROOT, 'skills', 'cozy-ui-reference')
 const REFERENCES_DIR = path.join(OUTPUT_DIR, 'references')
 
 // Directories to skip entirely
@@ -830,7 +830,7 @@ function generateSkillMd(componentCount) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 function main() {
-  console.log('Generating cozy-ui skill files...')
+  console.log('Generating cozy-ui-reference skill files...')
 
   // Find all components with a Readme
   const allComponents = findComponents(REACT_DIR)
