@@ -9,10 +9,10 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Buttons**: [Buttons](#buttons), [DropdownButton](#dropdownbutton), [Fab](#fab), [IconButton](#iconbutton), [ToggleButton](#togglebutton), [ToggleButtonGroup](#togglebuttongroup)
 - **Forms**: [Checkbox](#checkbox), [FileInput](#fileinput), [InputGroup](#inputgroup), [PasswordField](#passwordfield), [Radios](#radios), [SearchBar](#searchbar), [SelectBox](#selectbox), [Switch](#switch), [TextField](#textfield)
 - **Date/Time**: [DateMonthPicker](#datemonthpicker), [DatePicker](#datepicker)
-- **Layout**: [Card](#card), [Divider](#divider), [Empty](#empty), [Grid](#grid), [Paper](#paper), [Stack](#stack)
-- **Navigation**: [AppTitle](#apptitle), [BarTitle](#bartitle), [Breadcrumbs](#breadcrumbs), [MuiTabs](#muitabs), [NavigationList](#navigationlist), [Sidebar](#sidebar), [Tabs](#tabs)
+- **Layout**: [Card](#card), [Divider](#divider), [Divider (MuiCozyTheme/Divider)](#divider-muicozytheme-divider), [Empty](#empty), [Grid](#grid), [Paper](#paper), [Stack](#stack)
+- **Navigation**: [AppTitle](#apptitle), [BarTitle](#bartitle), [Breadcrumbs](#breadcrumbs), [MuiTabs](#muitabs), [NavigationList](#navigationlist), [NavNext](#navnext), [Sidebar](#sidebar), [Tabs](#tabs)
 - **Feedback**: [Alert](#alert), [Alert (providers/Alert)](#alert-providers-alert), [Banner](#banner), [CircularProgress](#circularprogress), [LinearProgress](#linearprogress), [PointerAlert](#pointeralert), [ProgressionBanner](#progressionbanner), [Skeletons](#skeletons), [Snackbar](#snackbar), [Spinner](#spinner)
-- **Data Display**: [Accordion](#accordion), [Avatar](#avatar), [Badge](#badge), [Chips](#chips), [Circle](#circle), [EditBadge](#editbadge), [Filename](#filename), [FilePath](#filepath), [FilePathLink](#filepathlink), [GhostFileBadge](#ghostfilebadge), [HistoryRow](#historyrow), [InfosBadge](#infosbadge), [List](#list), [ListItem](#listitem), [ListItemText](#listitemtext), [ListSubheader](#listsubheader), [LoadMore](#loadmore), [Markdown](#markdown), [MidEllipsis](#midellipsis), [MobileStepper](#mobilestepper), [OrderedList](#orderedlist), [Stepper](#stepper), [Table](#table), [Thumbnail](#thumbnail), [Tooltip](#tooltip), [Typography](#typography), [UnorderedList](#unorderedlist)
+- **Data Display**: [Accordion](#accordion), [Avatar](#avatar), [Badge](#badge), [Chips](#chips), [Circle](#circle), [EditBadge](#editbadge), [Filename](#filename), [FilePath](#filepath), [FilePathLink](#filepathlink), [GhostFileBadge](#ghostfilebadge), [HistoryRow](#historyrow), [InfosBadge](#infosbadge), [List](#list), [List (MuiCozyTheme/List)](#list-muicozytheme-list), [ListItem](#listitem), [ListItem (MuiCozyTheme/ListItem)](#listitem-muicozytheme-listitem), [ListItemText](#listitemtext), [ListSubheader](#listsubheader), [LoadMore](#loadmore), [Markdown](#markdown), [MidEllipsis](#midellipsis), [MobileStepper](#mobilestepper), [OrderedList](#orderedlist), [Stepper](#stepper), [Table](#table), [Thumbnail](#thumbnail), [Tooltip](#tooltip), [Typography](#typography), [UnorderedList](#unorderedlist)
 - **Dialogs**: [ActionsBar](#actionsbar), [ActionsMenu](#actionsmenu), [CozyDialogs](#cozydialogs), [Dialog](#dialog), [Menu](#menu), [SpecificDialogs (CozyDialogs/SpecificDialogs)](#specificdialogs-cozydialogs-specificdialogs)
 - **Icons**: [Icon](#icon)
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
@@ -393,6 +393,13 @@ import Divider from 'cozy-ui/transpiled/react/Divider'
 ```
 
 
+### Divider (MuiCozyTheme/Divider)
+
+```jsx
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+```
+
+
 ### Empty
 
 Empty (or error) view
@@ -632,6 +639,13 @@ A navigation list is used to present choices of navigation to the user. It will 
 
 ```jsx
 import NavigationList from 'cozy-ui/transpiled/react/NavigationList'
+```
+
+
+### NavNext
+
+```jsx
+import NavNext from 'cozy-ui/transpiled/react/NavNext'
 ```
 
 
@@ -1216,6 +1230,13 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 ```
 
 
+### List (MuiCozyTheme/List)
+
+```jsx
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
+```
+
+
 ### ListItem
 
 ```jsx
@@ -1228,6 +1249,13 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 | `size` | `small` \| `medium` \| `large` | `'medium'` | - |
 | `ellipsis` | boolean | - | - |
 | `componentElement` | React.elementType | - | If the `component` prop is already used to return `ListItem`, this prop still allows you to choose a component to render in `ListItem`. cf:`MenuItem` component |
+
+
+### ListItem (MuiCozyTheme/ListItem)
+
+```jsx
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
+```
 
 
 ### ListItemText

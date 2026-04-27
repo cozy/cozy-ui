@@ -24,7 +24,7 @@ import 'cozy-ui/transpiled/react/stylesheet.css'
 
 ## What This Skill Provides
 
-- 85+ React components with examples and extracted props.
+- 89+ React components with examples and extracted props.
 - CSS utility classes for spacing, typography, colors, layout, and component-specific classes.
 - Cozy theming conventions built on Material-UI v4.
 - Import patterns for `cozy-ui/transpiled/react` and `cozy-ui/dist`.

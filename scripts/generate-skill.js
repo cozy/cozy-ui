@@ -74,6 +74,7 @@ const CATEGORY_MAP = {
   Tabs: 'Navigation',
   MuiTabs: 'Navigation',
   Sidebar: 'Navigation',
+  NavNext: 'Navigation',
   NavigationList: 'Navigation',
   AppTitle: 'Navigation',
   BarTitle: 'Navigation',
@@ -164,27 +165,47 @@ function findComponents(dir, parentName = null, depth = 0) {
 
     const componentDir = path.join(dir, entry.name)
     const readmePath = path.join(componentDir, 'Readme.md')
+    const indexPath = findIndexFile(componentDir)
+    const hasReadme = fs.existsSync(readmePath)
 
-    if (fs.existsSync(readmePath)) {
+    const isKnownComponent = Object.prototype.hasOwnProperty.call(
+      CATEGORY_MAP,
+      entry.name
+    )
+
+    if (hasReadme || (indexPath && isKnownComponent)) {
       results.push({
         name: entry.name,
         parentName,
         dir: componentDir,
-        readmePath,
+        readmePath: hasReadme ? readmePath : null,
         relativePath: path.relative(REACT_DIR, componentDir)
       })
     }
 
-    // Recurse for providers/, Labs/, hooks/, etc.
+    // Recurse for providers/, Labs/, hooks/, etc. Inclusion is filtered above,
+    // so undocumented implementation subdirectories are ignored.
     results.push(...findComponents(componentDir, entry.name, depth + 1))
   }
 
   return results
 }
 
+function findIndexFile(dir) {
+  for (const basename of ['index.jsx', 'index.tsx', 'index.js']) {
+    const indexPath = path.join(dir, basename)
+    if (fs.existsSync(indexPath)) return indexPath
+  }
+  return null
+}
+
 // ─── Readme parser ────────────────────────────────────────────────────────────
 
 function parseReadme(filePath) {
+  if (!filePath) {
+    return { description: '', allExamples: [], importPath: null }
+  }
+
   const tree = markdownProcessor.parse(fs.readFileSync(filePath, 'utf8'))
 
   // Extract prose description: paragraphs before the first code block
@@ -813,7 +834,7 @@ function main() {
 
   // Find all components with a Readme
   const allComponents = findComponents(REACT_DIR)
-  console.log(`Found ${allComponents.length} components with Readme.md`)
+  console.log(`Found ${allComponents.length} components`)
 
   // Parse each component
   const processed = []
