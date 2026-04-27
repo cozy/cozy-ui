@@ -1,3 +1,10 @@
+# [138.7.0](https://github.com/cozy/cozy-ui/compare/v138.6.2...v138.7.0) (2026-04-27)
+
+
+### Features
+
+* Change overline style ([938e1e2](https://github.com/cozy/cozy-ui/commit/938e1e2))
+
 ## [138.6.2](https://github.com/cozy/cozy-ui/compare/v138.6.1...v138.6.2) (2026-04-21)
 
 
