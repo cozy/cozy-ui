@@ -74,7 +74,6 @@ const CATEGORY_MAP = {
   Tabs: 'Navigation',
   MuiTabs: 'Navigation',
   Sidebar: 'Navigation',
-  NavNext: 'Navigation',
   NavigationList: 'Navigation',
   AppTitle: 'Navigation',
   BarTitle: 'Navigation',
