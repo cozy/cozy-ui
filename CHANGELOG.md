@@ -1,3 +1,15 @@
+# [138.8.0](https://github.com/cozy/cozy-ui/compare/v138.7.0...v138.8.0) (2026-04-28)
+
+
+### Bug Fixes
+
+* Include NavNext in cozy-ui skill ([aba0a7f](https://github.com/cozy/cozy-ui/commit/aba0a7f))
+
+
+### Features
+
+* Add cozy-ui skill for coding agents ([804da2e](https://github.com/cozy/cozy-ui/commit/804da2e))
+
 # [138.7.0](https://github.com/cozy/cozy-ui/compare/v138.6.2...v138.7.0) (2026-04-27)
 
 
