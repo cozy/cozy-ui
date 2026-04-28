@@ -17,6 +17,7 @@ const initialVariants = [{
   outlined: false,
   noClickAway: false,
   noTimeOut: false,
+  persistent: false,
   close: true
 }]
 
@@ -46,6 +47,7 @@ const Component = ({ variant }) => {
             : undefined,
           noClickAway: variant.noClickAway,
           noTimeOut: variant.noTimeOut,
+          duration: variant.persistent ? null : undefined,
           onClose: variant.close ? () => {} : undefined
         })
       }

@@ -30,7 +30,6 @@ export const useAlert = () => {
 const defaultState = {
   title: '',
   message: '',
-  duration: null,
   open: false
 }
 
@@ -53,7 +52,7 @@ const AlertProvider = ({ children }) => {
        * @param {ShowAlertArgs} args
        */
       showAlert: args => {
-        setState({ open: true, ...args })
+        setState({ ...defaultState, ...args, open: true })
       }
     }),
     []
