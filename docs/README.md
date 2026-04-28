@@ -29,10 +29,10 @@ This is useful for agents because they can work from a concise `SKILL.md` instea
 
 ### What the skill provides
 
-* A short Cozy UI overview for agents
-* A generated React component reference with imports, examples and extracted props
-* A CSS utility reference for spacing, typography, colors and legacy classes
-* Guidance to prefer Cozy UI components and theme conventions when building Cozy apps
+- A short Cozy UI overview for agents
+- A generated React component reference with imports, examples and extracted props
+- A CSS utility reference for spacing, typography, colors and legacy classes
+- Guidance to prefer Cozy UI components and theme conventions when building Cozy apps
 
 ### Generate the skill
 
@@ -60,6 +60,20 @@ Choose existing Cozy UI components where possible and check the component refere
 ```
 
 Agents that support locally installed skills can copy or link `skills/cozy-ui-reference` into their skills directory. Agents without skill discovery can still read `skills/cozy-ui-reference/SKILL.md` and load the reference files on demand.
+
+#### Install in opencode
+
+```bash
+# Per-project (run from your app repo)
+mkdir -p .opencode/skills
+ln -s /absolute/path/to/cozy-ui/skills/cozy-ui-reference .opencode/skills/cozy-ui-reference
+
+# Or globally
+mkdir -p ~/.config/opencode/skills
+ln -s /absolute/path/to/cozy-ui/skills/cozy-ui-reference ~/.config/opencode/skills/cozy-ui-reference
+```
+
+Restart opencode and the `cozy-ui-reference` skill becomes available to agents.
 
 ## Usage
 
@@ -140,12 +154,12 @@ tips: If you are starting `js` and `css` to have full control, and you want to l
 
 If you want to add a new component, you must follow these steps:
 
-* Add the new component in `/react` folder with its `README.md` file
-* Expose it in the API by adding it in `react/index.js`
-* Add it in the documentation by modifying `docs/styleguide.config.js`
-* If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makeSpriteAndPalette && yarn build && yarn test -u`
-* Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
-* Try to think of ARIA attributes if you are coding new components
+- Add the new component in `/react` folder with its `README.md` file
+- Expose it in the API by adding it in `react/index.js`
+- Add it in the documentation by modifying `docs/styleguide.config.js`
+- If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makeSpriteAndPalette && yarn build && yarn test -u`
+- Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
+- Try to think of ARIA attributes if you are coding new components
 
 Be careful to respect MUI API when creating a new component. See [our guidelines to create a new component](./guidelines.md#new-component).
 
@@ -155,22 +169,22 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 
 ### Guidelines for component development
 
-* Use material UI whenever possible
-* Override material UI components inside `makeOverrides.js` when necessary
-* Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
-* Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
+- Use material UI whenever possible
+- Override material UI components inside `makeOverrides.js` when necessary
+- Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
+- Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
 
 ### Add an icon
 
 If you want to add a new icon to cozy-ui, you must follow these steps:
 
-* If you SVG file is an icon (not an illustration), verify that the file doesn't have any fill or fill-opacity properties. Remove them if necessary
-* Add the SVG in the `assets/icons/[ui || illus]` folder
-* Optimize it with `yarn svgo assets/icons/[ui || illus]/[new icon file name]`
-* Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
-* Update the documentation by adding the new file in `react/Icon/Readme.md`. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
-* Don't forget to check the icon's color on different theme (inverted, etc.)
-* Update the tests by running `yarn makeSpriteAndPalette && yarn build && yarn test -u`
+- If you SVG file is an icon (not an illustration), verify that the file doesn't have any fill or fill-opacity properties. Remove them if necessary
+- Add the SVG in the `assets/icons/[ui || illus]` folder
+- Optimize it with `yarn svgo assets/icons/[ui || illus]/[new icon file name]`
+- Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
+- Update the documentation by adding the new file in `react/Icon/Readme.md`. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
+- Don't forget to check the icon's color on different theme (inverted, etc.)
+- Update the tests by running `yarn makeSpriteAndPalette && yarn build && yarn test -u`
 
 ### Develop inside an app
 
@@ -225,16 +239,19 @@ it pushes to test for what the user sees.
 For complex components, we expose testing helpers in the `testing` file in their respective folders.
 
 ```jsx
-import { getCloseButton, getAllDialogs } from 'cozy-ui/transpiled/react/CozyDialogs/testing'
+import {
+  getCloseButton,
+  getAllDialogs,
+} from "cozy-ui/transpiled/react/CozyDialogs/testing";
 
-it('should close dialog', () => {
-  const onClose = jest.fn()
-  const root = render(<MyApp onCloseDialog={onClose} />)
-  const dialog = getDialog(root)
-  const closeBtn = getCloseButton(dialog)
-  fireEvent.click(closeBtn)
-  expect(onClose).toHaveBeenCalled()
-})
+it("should close dialog", () => {
+  const onClose = jest.fn();
+  const root = render(<MyApp onCloseDialog={onClose} />);
+  const dialog = getDialog(root);
+  const closeBtn = getCloseButton(dialog);
+  fireEvent.click(closeBtn);
+  expect(onClose).toHaveBeenCalled();
+});
 ```
 
 ### UI regression testing
@@ -284,7 +301,6 @@ yarn screenshots:server
 
 See our [travis configuration](https://github.com/cozy/cozy-ui/blob/master/.travis.yml) for more information.
 
-
 ### Packages and Dependencies
 
 Cozy-ui relies on many packages to work, but we tend to want it to be more agnostic. So this is the package list and usage:
@@ -316,7 +332,6 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 - cozy-device-helper => ActionMenu, Modal
 
-
 ## License
 
 Cozy UI is developed by Cozy Cloud and distributed under the MIT license.
@@ -334,11 +349,10 @@ hardware where no one profiles you.
 
 You can reach the Cozy Community by:
 
-* Chatting with us on IRC [#cozycloud](http://webchat.freenode.net/?channels=%23cozycloud) on irc.freenode.net
-* Posting on our [Forum](https://forum.cozy.io)
-* Posting issues on the [Github repos](https://github.com/cozy/)
-* Mentioning us on [Twitter](https://twitter.com/cozycloud)
+- Chatting with us on IRC [#cozycloud](http://webchat.freenode.net/?channels=%23cozycloud) on irc.freenode.net
+- Posting on our [Forum](https://forum.cozy.io)
+- Posting issues on the [Github repos](https://github.com/cozy/)
+- Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
-[React Styleguidist]: https://react-styleguidist.js.org/
-
-[Argos]: https://github.com/argos-ci/argos
+[react styleguidist]: https://react-styleguidist.js.org/
+[argos]: https://github.com/argos-ci/argos
