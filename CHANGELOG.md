@@ -1,3 +1,18 @@
+# [138.9.0](https://github.com/cozy/cozy-ui/compare/v138.8.0...v138.9.0) (2026-05-04)
+
+
+### Bug Fixes
+
+* Remove NavNext componenent remainings ([61eadba](https://github.com/cozy/cozy-ui/commit/61eadba))
+
+
+### Features
+
+* Change overline style ([3e3f863](https://github.com/cozy/cozy-ui/commit/3e3f863))
+* **Nav:** Reduce nav item horizontal spacing ([78f4172](https://github.com/cozy/cozy-ui/commit/78f4172))
+* **Nav:** Set all four rounded corner on selected and over elements ([4e39ddf](https://github.com/cozy/cozy-ui/commit/4e39ddf))
+* **Nav:** Use actionColorSelected on selected element ([02025a2](https://github.com/cozy/cozy-ui/commit/02025a2))
+
 # [138.8.0](https://github.com/cozy/cozy-ui/compare/v138.7.0...v138.8.0) (2026-04-28)
 
 
