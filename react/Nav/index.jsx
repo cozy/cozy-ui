@@ -140,7 +140,7 @@ export const NavDesktopDropdown = ({
     <>
       <ListItem size="small" className={isActivated ? 'u-c-pointer' : ''}>
         <DropdownText
-          variant="overline"
+          variant="caption"
           color="textSecondary"
           spaceBetween
           innerIconProps={innerIconProps}
