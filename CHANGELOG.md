@@ -1,3 +1,10 @@
+# [138.10.0](https://github.com/cozy/cozy-ui/compare/v138.9.0...v138.10.0) (2026-05-06)
+
+
+### Features
+
+* Change NavDesktopDropdown label to caption variant ([3567ebf](https://github.com/cozy/cozy-ui/commit/3567ebf))
+
 # [138.9.0](https://github.com/cozy/cozy-ui/compare/v138.8.0...v138.9.0) (2026-05-04)
 
 
