@@ -1,3 +1,10 @@
+# [138.11.0](https://github.com/cozy/cozy-ui/compare/v138.10.0...v138.11.0) (2026-05-07)
+
+
+### Features
+
+* **makeAction:** Add props `Component` and `componentProps` ([cebb6de](https://github.com/cozy/cozy-ui/commit/cebb6de))
+
 # [138.10.0](https://github.com/cozy/cozy-ui/compare/v138.9.0...v138.10.0) (2026-05-06)
 
 
