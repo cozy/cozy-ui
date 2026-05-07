@@ -5,14 +5,14 @@ import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
-const makeComponent = ({ label, icon, name }) => {
+const makeComponent = ({ label, icon, name, componentProps }) => {
   const Component = forwardRef((props, ref) => {
     return (
       <ActionsMenuItem {...props} ref={ref}>
         <ListItemIcon>
-          <Icon icon={icon} />
+          <Icon icon={icon} {...componentProps?.Icon} />
         </ListItemIcon>
-        <ListItemText primary={label} />
+        <ListItemText primary={label} {...componentProps?.ListItemText} />
       </ActionsMenuItem>
     )
   })
@@ -28,6 +28,8 @@ export const makeAction = ({
   icon,
   disabled,
   displayCondition,
+  Component,
+  componentProps,
   action
 }) => {
   return {
@@ -37,6 +39,7 @@ export const makeAction = ({
     disabled,
     displayCondition,
     action,
-    Component: makeComponent({ label, icon, name })
+    componentProps,
+    Component: Component || makeComponent({ label, icon, name, componentProps })
   }
 }
