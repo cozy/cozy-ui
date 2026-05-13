@@ -19,7 +19,7 @@ const styles = () => ({
 })
 
 const ProgressionBanner = withStyles(styles)(
-  ({ classes, value, text, icon, button, progressBar }) => {
+  ({ classes, value, text, icon, button, progressBar, color }) => {
     const variant = value ? 'determinate' : undefined
     const { isMobile } = useBreakpoints()
 
@@ -32,7 +32,7 @@ const ProgressionBanner = withStyles(styles)(
       <>
         <Alert
           icon={_icon}
-          color="var(--contrastBackgroundColor)"
+          color={color}
           square
           block={isMobile}
           action={button}
@@ -63,11 +63,14 @@ ProgressionBanner.propTypes = {
   /** Button to use in the banner */
   button: PropTypes.node,
   /** Progression bar is hidden if set to false (defaults to true) */
-  progressBar: PropTypes.bool
+  progressBar: PropTypes.bool,
+  /** Background color of the banner, css color */
+  color: PropTypes.string
 }
 
 ProgressionBanner.defaultProps = {
-  progressBar: true
+  progressBar: true,
+  color: 'var(--contrastBackgroundColor)'
 }
 
 export default ProgressionBanner
