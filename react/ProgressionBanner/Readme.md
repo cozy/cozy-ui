@@ -12,7 +12,7 @@ import { BreakpointsProvider } from "cozy-ui/transpiled/react/providers/Breakpoi
 const { progression } = useProgression();
 
 const initialVariants = [
-  { withValue: true, progressBar: true, withButton: false },
+  { withValue: true, progressBar: true, withButton: false, customColor: false },
 ];
 
 <BreakpointsProvider>
@@ -21,6 +21,7 @@ const initialVariants = [
       <ProgressionBanner
         progressBar={variant.progressBar}
         value={variant.withValue && progression}
+        color={variant.customColor ? 'var(--errorColorLight)': undefined}
         text={
           variant.withButton
             ? "Storage limit nearly reached"
