@@ -1,3 +1,10 @@
+# [138.12.0](https://github.com/cozy/cozy-ui/compare/v138.11.0...v138.12.0) (2026-05-13)
+
+
+### Features
+
+* Allow to customize background color of ProgressionBanner component ([91b5cee](https://github.com/cozy/cozy-ui/commit/91b5cee))
+
 # [138.11.0](https://github.com/cozy/cozy-ui/compare/v138.10.0...v138.11.0) (2026-05-07)
 
 
