@@ -4,6 +4,7 @@ import { useOnLongPress } from 'rooks'
 
 import TableCell from '../../TableCell'
 import { makeStyles } from '../../styles'
+import { AddPropsToChildren } from '../../utils/react'
 
 const useStyles = makeStyles({
   root: {
@@ -51,16 +52,12 @@ const Cell = ({ row, columns, column, onClick, onLongPress, children }) => {
       onContextMenu={isLongPress ? ev => ev.preventDefault() : undefined}
     >
       {children
-        ? React.Children.map(children, child =>
-            React.isValidElement(child)
-              ? React.cloneElement(child, {
-                  row,
-                  columns,
-                  column,
-                  cell: cellContent
-                })
-              : null
-          )
+        ? AddPropsToChildren(children, () => ({
+            row,
+            columns,
+            column,
+            cell: cellContent
+          }))
         : cellContent}
     </TableCell>
   )
