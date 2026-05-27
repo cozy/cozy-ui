@@ -95,7 +95,7 @@ const ExampleTable = ({ variant, ...props }) => {
         groups={variant.grouped ? makeGroups : undefined}
         selectedItems={selectedItemsId}
         isSelectedItem={row => isSelectedItem(row.id)}
-        onSelect={(row, event, index) => toggleSelectedItem(row.id)}
+        onSelect={(row, event, index) => row.id !== 1 ? toggleSelectedItem(row.id) : undefined}
         onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id !== 1 ? item.id : undefined))}
         onSortChange={onSortChange}
         withCheckbox={variant.withCheckbox}
@@ -104,7 +104,7 @@ const ExampleTable = ({ variant, ...props }) => {
             disableCheckbox: row => row.id === 1,
             onClick: (row, column) => {
               if (!variant.withCheckbox) {
-                return toggleSelectedItem(row.id)
+                return row.id !== 1 ? toggleSelectedItem(row.id) : undefined
               }
               console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`)
             },
