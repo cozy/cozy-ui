@@ -108,6 +108,9 @@ const ExampleTable = ({ variant, ...props }) => {
               }
               console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`)
             },
+            onDoubleClick: (row, column) => {
+              console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+            },
             onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
           },
         }}

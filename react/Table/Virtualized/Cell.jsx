@@ -6,6 +6,8 @@ import TableCell from '../../TableCell'
 import { makeStyles } from '../../styles'
 import { AddPropsToChildren } from '../../utils/react'
 
+const DOUBLECLICKDELAY = 400
+
 const useStyles = makeStyles({
   root: {
     cursor: ({ isClickable }) => (isClickable ? 'pointer' : undefined),
@@ -14,30 +16,49 @@ const useStyles = makeStyles({
   }
 })
 
-const Cell = ({ row, columns, column, onClick, onLongPress, children }) => {
+const Cell = ({
+  row,
+  columns,
+  column,
+  onClick,
+  onDoubleClick,
+  onLongPress,
+  children
+}) => {
   const [isLongPress, setIsLongPress] = useState(false) // onClick is triggered after a long press anyway, so we need this bool to avoid this behavior
+  const [lastClickTime, setLastClickTime] = useState(0)
 
   const classes = useStyles({ column, isClickable: !!onClick })
   const cellContent = get(row, column.id, '—')
 
-  const longPressRef = useOnLongPress(() => {
-    if (column.disableClick) {
-      return
-    }
+  const longPressRef = useOnLongPress(
+    () => {
+      if (column.disableClick) {
+        return
+      }
 
-    setIsLongPress(true)
-    onLongPress?.(row, column)
-  })
+      setIsLongPress(true)
+      onLongPress?.(row, column)
+    },
+    { duration: 300 }
+  )
 
   const handleClick = () => {
     if (column.disableClick) {
       return
     }
 
-    if (!isLongPress) {
-      onClick?.(row, column)
-    } else {
+    if (isLongPress) {
       setIsLongPress(false)
+      return
+    }
+
+    const currentTime = Date.now()
+    const isDoubleClick = currentTime - lastClickTime < DOUBLECLICKDELAY
+    setLastClickTime(currentTime)
+
+    if (!isDoubleClick) {
+      onClick?.(row, column)
     }
   }
 
@@ -49,6 +70,7 @@ const Cell = ({ row, columns, column, onClick, onLongPress, children }) => {
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
       onClick={handleClick}
+      onDoubleClick={() => onDoubleClick?.(row, column)}
       onContextMenu={isLongPress ? ev => ev.preventDefault() : undefined}
     >
       {children
