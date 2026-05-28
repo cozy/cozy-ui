@@ -1,3 +1,10 @@
+## [138.13.1](https://github.com/cozy/cozy-ui/compare/v138.13.0...v138.13.1) (2026-05-28)
+
+
+### Bug Fixes
+
+* Allow absence of success or error callback for useSubmitWithLoader ([f8f902c](https://github.com/cozy/cozy-ui/commit/f8f902c))
+
 # [138.13.0](https://github.com/cozy/cozy-ui/compare/v138.12.0...v138.13.0) (2026-05-28)
 
 
