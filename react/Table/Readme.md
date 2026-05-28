@@ -140,3 +140,86 @@ const ExampleTable = ({ variant, ...props }) => {
   )}
 </Variants>
 ```
+
+### With Drag'n'Drop
+
+```jsx
+import { useState } from 'react'
+import VirtualizedTableDnd from 'cozy-ui/transpiled/react/Table/Virtualized/Dnd'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+
+const createData = (_id, name, calories, fat, carbs, protein) => {
+  return { _id, name, calories, fat, carbs, protein }
+}
+
+const rows = [
+  createData(0, 'Cupcake', 305, 3.7, 67, 4.3),
+  createData(1, 'Frozen yoghurt', 159, 6.0, 24, 4.0),
+  createData(2, 'Donut', 452, 25.0, 51, 4.9),
+  createData(3, 'Eclair', 262, 16.0, 24, 6.0),
+  createData(4, 'Ice cream sandwich', 237, 9.0, 37, 4.3),
+  createData(5, 'Gingerbread', 356, 16.0, 49, 3.9),
+  createData(6, 'Honeycomb', 408, 3.2, 87, 6.5),
+  createData(7, 'Jelly Bean', 375, 0.0, 94, 0.0),
+  createData(8, 'KitKat', 518, 26.0, 65, 7.0),
+  createData(9, 'Oreo', 437, 18.0, 63, 4.0),
+]
+
+const columns = [
+  { id: 'name', disablePadding: false, label: 'Dessert' },
+  { id: 'calories', disablePadding: false, width: 80, label: 'Calories', textAlign: 'left' },
+  { id: 'fat', disablePadding: false, width: 85, label: 'Fat (g)', textAlign: 'right' },
+  { id: 'carbs', disablePadding: false, width: 115, label: 'Carbs (g)', textAlign: 'right' },
+  { id: 'protein', disablePadding: false, width: 115, label: 'Protein (g)', textAlign: 'right', disableClick: true }
+]
+
+const DndExample = () => {
+  const { selectedItemsId, isSelectedItem, toggleSelectedItem } = useSelection()
+
+  const dragProps = {
+    dragId: 'dessert-dnd',
+    onDrop: async (draggedItems, targetItem, selectedItems) => {
+      console.info('Dropped items:', draggedItems)
+      console.info('Target item:', targetItem)
+    },
+    canDrag: (item) => item.calories > 100,
+    canDrop: (item) => item.fat < 20,
+  }
+
+  return (
+    <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+      <VirtualizedTableDnd
+        rows={rows}
+        columns={columns}
+        dragProps={dragProps}
+        selectedItems={selectedItemsId}
+        isSelectedItem={row => isSelectedItem(row._id)}
+        componentsProps={{
+          rowContent: {
+            onClick: (row, column) => toggleSelectedItem(row._id),
+            onDoubleClick: (row, column) => {
+              console.info(`double click on cell. Row ${row['_id']}, Column ${column['id']}`)
+            },
+            onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['_id']}, Column ${column['id']}`) },
+          },
+        }}
+      />
+    </div>
+  )
+}
+
+;
+
+<>
+  <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+    <SelectionProvider>
+      <DndProvider backend={HTML5Backend}>
+        <DndExample />
+      </DndProvider>
+    </SelectionProvider>
+  </div>
+</>
+```
