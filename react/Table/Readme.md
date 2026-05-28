@@ -15,7 +15,7 @@ const createData = (id, name, calories, fat, carbs, protein) => {
 
 const rows = [
   createData(0, 'Cupcake', 305, 3.7, 67, 4.3),
-  createData(1, 'Frozen yoghurt', 159, 6.0, 24, 4.0),
+  createData(1, 'Frozen yoghurt (unselectable)', 159, 6.0, 24, 4.0),
   createData(2, 'Donut', 452, 25.0, 51, 4.9),
   createData(3, 'Eclair', 262, 16.0, 24, 6.0),
   createData(4, 'Ice cream sandwich', 237, 9.0, 37, 4.3),
@@ -108,12 +108,20 @@ const ExampleTable = ({ variant, ...props }) => {
           componentsProps={{
             rowContent: {
               onClick: (row, column) => {
-                row.id !== 1 ? toggleSelectedItem(row.id) : undefined
+                row.id !== 1
+                  ? toggleSelectedItem(row.id)
+                  : undefined
               },
               onDoubleClick: (row, column) => {
-                console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+                row.id !== 1
+                  ? console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+                  : undefined
               },
-              onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
+              onLongPress: (row, column) => {
+                row.id !== 1
+                  ? console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`)
+                  : undefined
+              },
             },
           }}
         />
