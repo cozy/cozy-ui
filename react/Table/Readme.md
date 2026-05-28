@@ -5,6 +5,7 @@ import { useState } from 'react'
 import VirtualizedTable from 'cozy-ui/transpiled/react/Table/Virtualized'
 import Variants from 'cozy-ui/docs/components/Variants'
 import Button from 'cozy-ui/transpiled/react/Buttons'
+import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
 
@@ -125,7 +126,7 @@ const ExampleTable = ({ variant, ...props }) => {
   {variant => (
     <>
       <Typography variant="h4">Not sorted table</Typography>
-      <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+      <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%", marginBottom: "6rem" }}>
         <SelectionProvider>
           <ExampleTable variant={variant} />
         </SelectionProvider>
