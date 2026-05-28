@@ -1,3 +1,10 @@
+# [138.13.0](https://github.com/cozy/cozy-ui/compare/v138.12.0...v138.13.0) (2026-05-28)
+
+
+### Features
+
+* Add hook to submit with a loader ([ff36c73](https://github.com/cozy/cozy-ui/commit/ff36c73))
+
 # [138.12.0](https://github.com/cozy/cozy-ui/compare/v138.11.0...v138.12.0) (2026-05-13)
 
 
