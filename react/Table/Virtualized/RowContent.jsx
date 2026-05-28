@@ -14,6 +14,7 @@ const RowContent = ({
   disableCheckbox,
   onSelectClick,
   onLongPress,
+  onDoubleClick,
   onClick
 }) => {
   const selectedCount = context.selectedItems.length
@@ -44,6 +45,7 @@ const RowContent = ({
           columns={columns}
           column={column}
           onClick={onClick}
+          onDoubleClick={onDoubleClick}
           onLongPress={onLongPress}
         >
           {children}
