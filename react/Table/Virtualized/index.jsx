@@ -17,15 +17,12 @@ const VirtualizedTable = forwardRef(
       defaultOrder,
       secondarySort,
       selectedItems,
-      onSelect,
-      onSelectAll,
       isSelectedItem,
       componentsProps,
       context,
       components,
       onSortChange,
       isNewItem,
-      withCheckbox,
       ...props
     },
     ref
@@ -46,9 +43,7 @@ const VirtualizedTable = forwardRef(
       ...(isGroupedTable && { data }), // we use directly `data` prop if no groupCounts
       isSelectedItem,
       selectedItems,
-      isNewItem,
-      withCheckbox,
-      onSelect
+      isNewItem
     }
 
     const handleSort = property => {
@@ -57,14 +52,6 @@ const VirtualizedTable = forwardRef(
       setOrderDirection(newOrder)
       setOrderBy(property)
       onSortChange?.({ order: newOrder, orderBy: property })
-    }
-
-    const handleSelectAll = event => {
-      if (event?.target?.checked) {
-        onSelectAll(rows)
-        return
-      }
-      onSelectAll([])
     }
 
     const Component = isGroupedTable ? GroupedTableVirtuoso : TableVirtuoso
@@ -86,7 +73,6 @@ const VirtualizedTable = forwardRef(
             orderDirection={orderDirection}
             orderBy={orderBy}
             onClick={handleSort}
-            onSelectAllClick={handleSelectAll}
           />
         )}
         {...(isGroupedTable && {
@@ -103,7 +89,6 @@ const VirtualizedTable = forwardRef(
             row={data[index]}
             columns={columns}
             context={_context}
-            onSelectClick={onSelect}
           >
             {componentsProps?.rowContent?.children}
           </RowContent>
@@ -118,10 +103,7 @@ VirtualizedTable.displayName = 'VirtualizedTable'
 
 VirtualizedTable.defaultProps = {
   selectedItems: [],
-  isSelectedItem: () => {},
-  onSelect: () => {},
-  onSelectAll: () => {},
-  withCheckbox: true
+  isSelectedItem: () => {}
 }
 
 VirtualizedTable.propTypes = {
@@ -146,18 +128,12 @@ VirtualizedTable.propTypes = {
   secondarySort: PropTypes.func,
   /** Array of selected items */
   selectedItems: PropTypes.array,
-  /** Callback function when a row is selected */
-  onSelect: PropTypes.func,
-  /** Callback function when all rows are selected/deselected */
-  onSelectAll: PropTypes.func,
   /** Function to determine if a row is selected */
   isSelectedItem: PropTypes.func,
   /** Callback called after the sort */
   onSortChange: PropTypes.func,
   /** Function to determine if a row is new */
-  isNewItem: PropTypes.func,
-  /** Whether to show checkboxes. When false, rows become clickable for selection */
-  withCheckbox: PropTypes.bool
+  isNewItem: PropTypes.func
 }
 
 export default VirtualizedTable

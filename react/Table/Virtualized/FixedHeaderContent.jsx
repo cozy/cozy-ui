@@ -1,9 +1,6 @@
-import cx from 'classnames'
 import React from 'react'
 
 import TableHeadCell from './HeadCell'
-import Checkbox from '../../Checkbox'
-import TableCell from '../../TableCell'
 import TableRow from '../../TableRow'
 import { makeStyles } from '../../styles'
 
@@ -21,34 +18,11 @@ const useStyles = makeStyles({
   }
 })
 
-const FixedHeaderContent = ({
-  columns,
-  orderDirection,
-  orderBy,
-  rowCount,
-  context,
-  onClick,
-  onSelectAllClick
-}) => {
+const FixedHeaderContent = ({ columns, orderDirection, orderBy, onClick }) => {
   const classes = useStyles()
-  const selectedCount = context.selectedItems.length
 
   return (
     <TableRow>
-      {context.withCheckbox && (
-        <TableCell align="center" padding="checkbox">
-          <Checkbox
-            className={cx('virtualizedCheckbox', {
-              checked: selectedCount > 0
-            })}
-            indeterminate={selectedCount > 0 && selectedCount < rowCount}
-            checked={rowCount > 0 && selectedCount === rowCount}
-            inputProps={{ 'aria-label': 'select all' }}
-            size="small"
-            onChange={onSelectAllClick}
-          />
-        </TableCell>
-      )}
       {columns.map(column => (
         <TableHeadCell
           key={column.id}

@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import VirtualizedTable from 'cozy-ui/transpiled/react/Table/Virtualized'
 import Variants from 'cozy-ui/docs/components/Variants'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
 
@@ -38,7 +39,7 @@ const rows = [
 const columns = [
   {
     id: 'name',
-    disablePadding: true,
+    disablePadding: false,
     label: 'Dessert'
   },
   {
@@ -73,7 +74,7 @@ const columns = [
   }
 ]
 
-const initialVariants = [{ grouped: false, withCheckbox: true }, { grouped: false, withCheckbox: false }]
+const initialVariants = [{ grouped: false}]
 
 // Very basic usage only works when Dessert is sorted "asc"
 // Ideally you have to create a logic to create groups with sorted data
@@ -87,34 +88,35 @@ const ExampleTable = ({ variant, ...props }) => {
   }
 
   return (
-    <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-      <VirtualizedTable
-        {...props}
-        rows={rows}
-        columns={columns}
-        groups={variant.grouped ? makeGroups : undefined}
-        selectedItems={selectedItemsId}
-        isSelectedItem={row => isSelectedItem(row.id)}
-        onSelect={(row, event, index) => row.id !== 1 ? toggleSelectedItem(row.id) : undefined}
-        onSelectAll={rows => toggleSelectAllItems(rows.map(item => item.id !== 1 ? item.id : undefined))}
-        onSortChange={onSortChange}
-        withCheckbox={variant.withCheckbox}
-        componentsProps={{
-          rowContent: {
-            disableCheckbox: row => row.id === 1,
-            onClick: (row, column) => {
-              if (!variant.withCheckbox) {
-                return row.id !== 1 ? toggleSelectedItem(row.id) : undefined
-              }
-              console.info(`click on cell. Row ${row['id']}, Column ${column['id']}`)
-            },
-            onDoubleClick: (row, column) => {
-              console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
-            },
-            onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
-          },
-        }}
+    <div>
+      <Button
+        className="u-mt-1 u-mb-1"
+        variant="ghost"
+        label="Select all"
+        onClick={() => toggleSelectAllItems(rows.map(item => item.id !== 1 ? item.id : undefined))}
       />
+      <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+        <VirtualizedTable
+          {...props}
+          rows={rows}
+          columns={columns}
+          groups={variant.grouped ? makeGroups : undefined}
+          selectedItems={selectedItemsId}
+          isSelectedItem={row => isSelectedItem(row.id)}
+          onSortChange={onSortChange}
+          componentsProps={{
+            rowContent: {
+              onClick: (row, column) => {
+                row.id !== 1 ? toggleSelectedItem(row.id) : undefined
+              },
+              onDoubleClick: (row, column) => {
+                console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+              },
+              onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`) },
+            },
+          }}
+        />
+      </div>
     </div>
   )
 }
