@@ -19,14 +19,15 @@ export const useSubmitWithLoader = () => {
         message: success?.message || t('useSubmitWithLoader.success')
       })
 
-      success?.action()
+      success?.action?.()
     } catch (e) {
       showAlert({
         severity: 'error',
-        message: error?.message(e) || t('useSubmitWithLoader.error', { error })
+        message:
+          error?.message?.(e) || t('useSubmitWithLoader.error', { error })
       })
 
-      error?.action()
+      error?.action?.()
     } finally {
       setIsLoading(false)
     }
