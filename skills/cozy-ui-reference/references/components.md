@@ -18,7 +18,7 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
 - **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
 - **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
-- **Other**: [providers](#providers)
+- **Other**: [BottomSheet](#bottomsheet), [providers](#providers)
 
 ## Buttons
 
@@ -789,6 +789,7 @@ import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner'
 | `icon` | React.node | - | Icon to be shown in the banner |
 | `button` | React.node | - | Button to use in the banner |
 | `progressBar` | boolean | `true` | Progression bar is hidden if set to false (defaults to true) |
+| `color` | string | `'var(--contrastBackgroundColor)'` | Background color of the banner, css color |
 
 
 ### Skeletons
@@ -1842,6 +1843,15 @@ import PasswordInput from 'cozy-ui/transpiled/react/Labs/PasswordInput'
 ---
 
 ## Other
+
+### BottomSheet
+
+Display content coming up from the bottom of the screen. The pane can be swiped to the top of the screen. Based on cozy / mui-bottom-sheet: API documentation is here. It uses Portal to have the same behavior as Dialogs / Modals (can be disabled with the disablePortal prop).
+
+```jsx
+import BottomSheet from 'cozy-ui/transpiled/react/BottomSheet'
+```
+
 
 ### providers
 
