@@ -1,0 +1,6 @@
+{
+  "useSubmitWithLoader": {
+    "success": "Thành công!",
+    "error": "Đã xảy ra lỗi %{error}"
+  }
+}
