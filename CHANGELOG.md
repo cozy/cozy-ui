@@ -1,3 +1,10 @@
+## [139.0.1](https://github.com/cozy/cozy-ui/compare/v139.0.0...v139.0.1) (2026-06-01)
+
+
+### Bug Fixes
+
+* **Table:** Disable double click when `disableClick` is true in column config ([6da0985](https://github.com/cozy/cozy-ui/commit/6da0985))
+
 # [139.0.0](https://github.com/cozy/cozy-ui/compare/v138.13.1...v139.0.0) (2026-06-01)
 
 
