@@ -9,6 +9,8 @@ export const useSubmitWithLoader = () => {
   const { t } = useI18n()
 
   const onSubmit = async ({ submit, success, error }) => {
+    if (isLoading) return
+
     setIsLoading(true)
 
     try {
