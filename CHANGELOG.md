@@ -1,3 +1,16 @@
+# [139.0.0](https://github.com/cozy/cozy-ui/compare/v138.13.1...v139.0.0) (2026-06-01)
+
+
+### Features
+
+* **Table:** Add `onDoubleClick` prop ([5fb38ec](https://github.com/cozy/cozy-ui/commit/5fb38ec))
+* **Table:** Remove checkboxes ([2f9761c](https://github.com/cozy/cozy-ui/commit/2f9761c))
+
+
+### BREAKING CHANGES
+
+* **Table:** Props `onSelect`, `onSelectAll` and `withCheckbox` have been removed from Virtualized Tables (`import Table from 'cozy-ui/transpiled/react/Table/Virtualized'`. You must put the `onSelectAll` in something else outside of the Table, and `onSelect` func in `componentsProps.rowContent.onClick` prop.
+
 ## [138.13.1](https://github.com/cozy/cozy-ui/compare/v138.13.0...v138.13.1) (2026-05-28)
 
 
