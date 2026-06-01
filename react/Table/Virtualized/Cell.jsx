@@ -70,7 +70,9 @@ const Cell = ({
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
       onClick={handleClick}
-      onDoubleClick={() => onDoubleClick?.(row, column)}
+      onDoubleClick={() =>
+        column.disableClick ? undefined : onDoubleClick?.(row, column)
+      }
       onContextMenu={isLongPress ? ev => ev.preventDefault() : undefined}
     >
       {children

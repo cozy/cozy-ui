@@ -121,8 +121,8 @@ const ExampleTable = ({ variant, ...props }) => {
                 row.id !== 1
                   ? console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`)
                   : undefined
-              },
-            },
+              }
+            }
           }}
         />
       </div>
