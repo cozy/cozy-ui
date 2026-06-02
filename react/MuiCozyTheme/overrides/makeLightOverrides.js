@@ -514,6 +514,13 @@ export const makeLightOverrides = theme => ({
       paddingRight: 16
     }
   },
+  MuiTable: {
+    root: {
+      tableLayout: 'fixed',
+      width: '100%',
+      minWidth: 'max-content'
+    }
+  },
   MuiTableHead: {
     root: {
       backgroundColor: theme.palette.background.paper,
