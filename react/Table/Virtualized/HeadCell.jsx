@@ -24,6 +24,7 @@ const TableHeadCell = ({
     <TableCell
       key={column.id}
       classes={classes}
+      className={column.noWrap ? 'u-ellipsis' : undefined}
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
       sortDirection={orderBy === column.id ? orderDirection : false}
