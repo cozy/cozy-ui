@@ -67,6 +67,7 @@ const Cell = ({
       key={column.id}
       ref={longPressRef}
       classes={classes}
+      className={column.noWrap ? 'u-ellipsis' : undefined}
       align={column.textAlign ?? 'left'}
       padding={column.disablePadding ? 'none' : 'normal'}
       onClick={handleClick}

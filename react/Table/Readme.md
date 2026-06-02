@@ -41,7 +41,8 @@ const columns = [
   {
     id: 'name',
     disablePadding: false,
-    label: 'Dessert'
+    label: 'Dessert',
+    noWrap: false
   },
   {
     id: 'calories',
@@ -178,7 +179,7 @@ const rows = [
 ]
 
 const columns = [
-  { id: 'name', disablePadding: false, label: 'Dessert' },
+  { id: 'name', disablePadding: false, label: 'Dessert', noWrap: true },
   { id: 'calories', disablePadding: false, width: 80, label: 'Calories', textAlign: 'left' },
   { id: 'fat', disablePadding: false, width: 85, label: 'Fat (g)', textAlign: 'right' },
   { id: 'carbs', disablePadding: false, width: 115, label: 'Carbs (g)', textAlign: 'right' },
