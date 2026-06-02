@@ -1,3 +1,10 @@
+## [139.0.2](https://github.com/cozy/cozy-ui/compare/v139.0.1...v139.0.2) (2026-06-02)
+
+
+### Bug Fixes
+
+* **useSubmitWithLoader:** Avoid double submit ([c65b431](https://github.com/cozy/cozy-ui/commit/c65b431))
+
 ## [139.0.1](https://github.com/cozy/cozy-ui/compare/v139.0.0...v139.0.1) (2026-06-01)
 
 
