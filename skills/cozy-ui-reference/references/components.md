@@ -1407,6 +1407,25 @@ import Stepper from 'cozy-ui/transpiled/react/Stepper'
 import Table from 'cozy-ui/transpiled/react/Table'
 ```
 
+**Example:**
+
+```jsx
+import { useState } from 'react'
+import VirtualizedTableDnd from 'cozy-ui/transpiled/react/Table/Virtualized/Dnd'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+
+<SelectionProvider>
+  <DndProvider backend={HTML5Backend}>
+    <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+      <DndExample />
+    </div>
+  </DndProvider>
+</SelectionProvider>
+```
+
 
 ### Thumbnail
 
