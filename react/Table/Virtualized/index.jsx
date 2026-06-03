@@ -77,7 +77,7 @@ const VirtualizedTable = forwardRef(
         )}
         {...(isGroupedTable && {
           groupContent: index => (
-            <TableCell colSpan={columns.length + 1} size="small">
+            <TableCell colSpan={columns.length} size="small">
               {groupLabels[index]}
             </TableCell>
           )
@@ -93,7 +93,6 @@ const VirtualizedTable = forwardRef(
             {componentsProps?.rowContent?.children}
           </RowContent>
         )}
-        rowSpan={2}
       />
     )
   }
