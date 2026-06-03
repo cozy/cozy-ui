@@ -1,3 +1,16 @@
+# [139.1.0](https://github.com/cozy/cozy-ui/compare/v139.0.2...v139.1.0) (2026-06-03)
+
+
+### Bug Fixes
+
+* **Table:** No need colSpan + 1 anymore, checkbox has been removed ([4329e35](https://github.com/cozy/cozy-ui/commit/4329e35))
+
+
+### Features
+
+* **Table:** Add `noWrap` column prop to enable ellipsis on cells content ([5ebd5c0](https://github.com/cozy/cozy-ui/commit/5ebd5c0))
+* **Table:** Apply tableLayout fixed for ellipsis support ([00663fa](https://github.com/cozy/cozy-ui/commit/00663fa))
+
 ## [139.0.2](https://github.com/cozy/cozy-ui/compare/v139.0.1...v139.0.2) (2026-06-02)
 
 
