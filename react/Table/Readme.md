@@ -76,7 +76,7 @@ const columns = [
   }
 ]
 
-const initialVariants = [{ grouped: false}]
+const initialVariants = [{ grouped: false }]
 
 // Very basic usage only works when Dessert is sorted "asc"
 // Ideally you have to create a logic to create groups with sorted data
@@ -90,62 +90,69 @@ const ExampleTable = ({ variant, ...props }) => {
   }
 
   return (
-    <div>
-      <Button
+    <VirtualizedTable
+      {...props}
+      rows={rows}
+      columns={columns}
+      groups={variant.grouped ? makeGroups : undefined}
+      selectedItems={selectedItemsId}
+      isSelectedItem={row => isSelectedItem(row.id)}
+      onSortChange={onSortChange}
+      componentsProps={{
+        rowContent: {
+          onClick: (row, column) => {
+            row.id !== 1
+              ? toggleSelectedItem(row.id)
+              : undefined
+          },
+          onDoubleClick: (row, column) => {
+            row.id !== 1
+              ? console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+              : undefined
+          },
+          onLongPress: (row, column) => {
+            row.id !== 1
+              ? console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`)
+              : undefined
+          }
+        }
+      }}
+    />
+  )
+}
+
+const SelectButton = () => {
+  const { toggleSelectAllItems } = useSelection()
+
+  return (
+    <Button
         className="u-mt-1 u-mb-1"
         variant="ghost"
         label="Select all"
         onClick={() => toggleSelectAllItems(rows.map(item => item.id !== 1 ? item.id : undefined))}
-      />
-      <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-        <VirtualizedTable
-          {...props}
-          rows={rows}
-          columns={columns}
-          groups={variant.grouped ? makeGroups : undefined}
-          selectedItems={selectedItemsId}
-          isSelectedItem={row => isSelectedItem(row.id)}
-          onSortChange={onSortChange}
-          componentsProps={{
-            rowContent: {
-              onClick: (row, column) => {
-                row.id !== 1
-                  ? toggleSelectedItem(row.id)
-                  : undefined
-              },
-              onDoubleClick: (row, column) => {
-                row.id !== 1
-                  ? console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
-                  : undefined
-              },
-              onLongPress: (row, column) => {
-                row.id !== 1
-                  ? console.info(`long press on cell. Row ${row['id']}, Column ${column['id']}`)
-                  : undefined
-              }
-            }
-          }}
-        />
-      </div>
-    </div>
+    />
   )
 }
+
+;
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
     <>
-      <Typography variant="h4">Not sorted table</Typography>
-      <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%", marginBottom: "6rem" }}>
-        <SelectionProvider>
+      <SelectionProvider>
+        <Typography className="u-mt-1" variant="h4">Not sorted table</Typography>
+        <SelectButton />
+        <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
           <ExampleTable variant={variant} />
-        </SelectionProvider>
-      </div>
-      <Typography className="u-mt-1" variant="h4">Sorted table</Typography>
-      <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-        <SelectionProvider>
+        </div>
+      </SelectionProvider>
+      <SelectionProvider>
+        <Typography className="u-mt-1" variant="h4">Sorted table</Typography>
+        <SelectButton />
+        <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
           <ExampleTable variant={variant} defaultOrder={{by: columns[0].id, direction: 'asc'}} />
-        </SelectionProvider>
-      </div>
+        </div>
+      </SelectionProvider>
     </>
   )}
 </Variants>
@@ -176,6 +183,14 @@ const rows = [
   createData(7, 'Jelly Bean', 375, 0.0, 94, 0.0),
   createData(8, 'KitKat', 518, 26.0, 65, 7.0),
   createData(9, 'Oreo', 437, 18.0, 63, 4.0),
+  createData(
+    10,
+    'Ice cream with a very long list of ingredient to see how the table can handle this kind of item, and this is the end',
+    237,
+    9.0,
+    37,
+    4.3
+  )
 ]
 
 const columns = [
@@ -200,36 +215,32 @@ const DndExample = () => {
   }
 
   return (
-    <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-      <VirtualizedTableDnd
-        rows={rows}
-        columns={columns}
-        dragProps={dragProps}
-        selectedItems={selectedItemsId}
-        isSelectedItem={row => isSelectedItem(row._id)}
-        componentsProps={{
-          rowContent: {
-            onClick: (row, column) => toggleSelectedItem(row._id),
-            onDoubleClick: (row, column) => {
-              console.info(`double click on cell. Row ${row['_id']}, Column ${column['id']}`)
-            },
-            onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['_id']}, Column ${column['id']}`) },
+    <VirtualizedTableDnd
+      rows={rows}
+      columns={columns}
+      dragProps={dragProps}
+      selectedItems={selectedItemsId}
+      isSelectedItem={row => isSelectedItem(row._id)}
+      componentsProps={{
+        rowContent: {
+          onClick: (row, column) => toggleSelectedItem(row._id),
+          onDoubleClick: (row, column) => {
+            console.info(`double click on cell. Row ${row['_id']}, Column ${column['id']}`)
           },
-        }}
-      />
-    </div>
+          onLongPress: (row, column) => { console.info(`long press on cell. Row ${row['_id']}, Column ${column['id']}`) },
+        },
+      }}
+    />
   )
 }
 
 ;
 
-<>
-  <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-    <SelectionProvider>
-      <DndProvider backend={HTML5Backend}>
-        <DndExample />
-      </DndProvider>
-    </SelectionProvider>
-  </div>
-</>
+<SelectionProvider>
+  <DndProvider backend={HTML5Backend}>
+    <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+      <DndExample />
+    </div>
+  </DndProvider>
+</SelectionProvider>
 ```
