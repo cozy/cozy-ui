@@ -523,23 +523,7 @@ export const makeLightOverrides = theme => ({
   },
   MuiTableHead: {
     root: {
-      backgroundColor: theme.palette.background.paper,
-      '&.virtualized': {
-        '& .virtualizedCheckbox': {
-          opacity: 0,
-          '&.checked': {
-            opacity: 1
-          },
-          '&:hover': {
-            opacity: 1
-          }
-        },
-        '&:hover': {
-          '& .virtualizedCheckbox': {
-            opacity: 0.5
-          }
-        }
-      }
+      backgroundColor: theme.palette.background.paper
     }
   },
   MuiTableRow: {
@@ -551,25 +535,6 @@ export const makeLightOverrides = theme => ({
         cursor: 'pointer',
         pointerEvents: 'none',
         opacity: 0.5
-      },
-      '&.virtualized': {
-        '& .virtualizedCheckbox': {
-          opacity: 0,
-          '&.visible': {
-            opacity: 0.5
-          },
-          '&.checked': {
-            opacity: 1
-          },
-          '&:hover': {
-            opacity: 1
-          }
-        },
-        '&:hover': {
-          '& .virtualizedCheckbox': {
-            opacity: 0.5
-          }
-        }
       }
     }
   },
