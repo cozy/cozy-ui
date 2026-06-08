@@ -42,7 +42,9 @@ const columns = [
     id: 'name',
     disablePadding: false,
     label: 'Dessert',
-    noWrap: false
+    width: 300,
+    maxWidth: 300,
+    noWrap: true
   },
   {
     id: 'calories',
