@@ -1,3 +1,15 @@
+# [139.2.0](https://github.com/cozy/cozy-ui/compare/v139.1.0...v139.2.0) (2026-06-09)
+
+
+### Bug Fixes
+
+* Remove override for table that fixed table layout ([a898f1d](https://github.com/cozy/cozy-ui/commit/a898f1d))
+
+
+### Features
+
+* Remove useless overrides for checkboxes in tables ([5fd8270](https://github.com/cozy/cozy-ui/commit/5fd8270))
+
 # [139.1.0](https://github.com/cozy/cozy-ui/compare/v139.0.2...v139.1.0) (2026-06-03)
 
 
