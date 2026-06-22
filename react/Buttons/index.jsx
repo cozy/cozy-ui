@@ -1,10 +1,8 @@
+import { Icon, Spinner } from '@linagora/twake-icons'
 import MuiButton from '@material-ui/core/Button'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
-
-import Icon from '../Icon'
-import SpinnerIcon from '../Icons/Spinner'
 
 const CUSTOM_COLORS = ['success', 'error', 'warning', 'info']
 
@@ -41,7 +39,7 @@ const DefaultButton = forwardRef(
         disabled={disabled || busy}
         endIcon={
           busy ? (
-            <Icon icon={SpinnerIcon} spin aria-hidden focusable="false" />
+            <Icon icon={Spinner} spin aria-hidden focusable="false" />
           ) : (
             endIcon
           )

@@ -18,11 +18,9 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
-import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
+import { FileTypeFolder, FileTypeText, Icon } from '@linagora/twake-icons'
 
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
+import { Dots } from '@linagora/twake-icons'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -59,7 +57,7 @@ const ExampleDialog = ({ open, onClose }) => {
       <List className='u-mv-half'>
         <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon={FileTypeFolderIcon} width="32" height="32" />
+            <Icon icon={FileTypeFolder} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text"/>
         </ListItem>

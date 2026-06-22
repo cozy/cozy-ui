@@ -1,8 +1,8 @@
+import { Previous } from '@linagora/twake-icons'
 import cx from 'classnames'
 import React from 'react'
 
 import styles from './styles.styl'
-import PreviousIcon from '../../Icons/Previous'
 import useBreakpoints from '../../providers/Breakpoints'
 import Button from '../Button'
 
@@ -12,7 +12,7 @@ const DumbModalBackButton = props => {
 
   return (
     <Button
-      icon={PreviousIcon}
+      icon={Previous}
       iconOnly
       extension="narrow"
       theme="text"

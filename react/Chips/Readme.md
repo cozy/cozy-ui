@@ -7,11 +7,8 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Chip from 'cozy-ui/transpiled/react/Chips'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
+import { FileOutline, Icon, Openwith, Right } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
-import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
 import Divider from "cozy-ui/transpiled/react/Divider"
 import Variants from 'cozy-ui/docs/components/Variants'
 
@@ -36,7 +33,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="Clickable chip"
                 clickable
                 disabled={Object.values(column)[1]}
@@ -62,7 +59,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="Deletable chip with icon"
                 clickable
                 onDelete={() => alert('You clicked on delete icon')}
@@ -72,11 +69,11 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="1 invoice"
                 onClick={() => alert('You clicked')}
                 onDelete={() => alert('You clicked on the icon')}
-                deleteIcon={<Icon icon={OpenwithIcon} className="u-h-1" />}
+                deleteIcon={<Icon icon={Openwith} className="u-h-1" />}
                 clickable
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
@@ -85,7 +82,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             <div>
               <Chip
                 className="u-ml-1"
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="Deletable chip with icon and class"
                 clickable
                 onDelete={() => alert('You clicked on delete icon')}
@@ -95,7 +92,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                icon={<Icon icon={RightIcon} />}
+                icon={<Icon icon={Right} />}
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
@@ -115,10 +112,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Chip from 'cozy-ui/transpiled/react/Chips'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
-import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
+import { FileOutline, Icon, Openwith, Right } from '@linagora/twake-icons'
 import Divider from "cozy-ui/transpiled/react/Divider"
 import Variants from 'cozy-ui/docs/components/Variants'
 
@@ -136,11 +130,11 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             <Typography>{color}</Typography>
             <div>
               <Chip
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="1 invoice"
                 onClick={() => alert('You clicked')}
                 onDelete={() => alert('You clicked on delete icon')}
-                deleteIcon={<Icon icon={OpenwithIcon} className="u-h-1" />}
+                deleteIcon={<Icon icon={Openwith} className="u-h-1" />}
                 clickable
                 color={color}
                 variant={Object.keys(variant).find(key => variant[key])}
@@ -148,11 +142,11 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
             </div>
             <div>
               <Chip
-                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                icon={<Icon icon={FileOutline} className="u-ml-half" />}
                 label="1 invoice"
                 onClick={() => alert('You clicked')}
                 onDelete={() => alert('You clicked on delete icon')}
-                deleteIcon={<Icon icon={OpenwithIcon} className="u-h-1" />}
+                deleteIcon={<Icon icon={Openwith} className="u-h-1" />}
                 clickable
                 color={color}
                 disabled
@@ -174,10 +168,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Chip from 'cozy-ui/transpiled/react/Chips'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
-import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
+import { FileOutline, Icon, Openwith, Right } from '@linagora/twake-icons'
 import Divider from "cozy-ui/transpiled/react/Divider"
 import Variants from 'cozy-ui/docs/components/Variants'
 

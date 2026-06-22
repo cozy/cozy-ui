@@ -1,9 +1,8 @@
+import { Icon, Bottom } from '@linagora/twake-icons'
 import MuiTextField from '@material-ui/core/TextField'
 import React, { forwardRef } from 'react'
 
 import MobileSelect from './MobileSelect'
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
 import { getRandomUUID } from '../helpers/getRandomUUID'
 import { useBreakpoints } from '../providers/Breakpoints'
 
@@ -32,7 +31,7 @@ const TextField = forwardRef(
           IconComponent: iconProps => (
             <Icon
               {...iconProps}
-              icon={BottomIcon}
+              icon={Bottom}
               color={
                 props.disabled
                   ? 'var(--disabledTextColor)'

@@ -9,8 +9,7 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import { useState } from 'react'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import SettingIcon from 'cozy-ui/transpiled/react/Icons/Setting'
+import { Icon, Setting } from '@linagora/twake-icons'
 import NestedSelectResponsive from 'cozy-ui/transpiled/react/NestedSelect/NestedSelectResponsive'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
@@ -40,7 +39,7 @@ const SettingAction = ({ item, onClick }) => {
   return (
     <ListItemSecondaryAction>
       <IconButton onClick={() => onClick({ item })}>
-        <Icon icon={SettingIcon} />
+        <Icon icon={Setting} />
       </IconButton>
     </ListItemSecondaryAction>
   )

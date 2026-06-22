@@ -1,6 +1,6 @@
+import { Icon } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
-import Icon from '../../Icon'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'

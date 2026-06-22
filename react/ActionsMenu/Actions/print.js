@@ -1,18 +1,17 @@
+import { Icon, Printer } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import logger from 'cozy-logger'
 
 import { makeBase64FromFile, makePdfBlob } from './helpers'
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import PrinterIcon from '../../Icons/Printer'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
 export const print = ({ client, fetchBlobFileById, isFile }) => {
   const { t } = getActionsI18n()
-  const icon = PrinterIcon
+  const icon = Printer
   const label = t('print')
 
   return {

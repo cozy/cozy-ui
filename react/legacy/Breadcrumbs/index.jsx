@@ -1,11 +1,10 @@
+import { Icon, Left } from '@linagora/twake-icons'
 import IconButton from '@material-ui/core/IconButton'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
-import LeftIcon from '../../Icons/Left'
 import Typography from '../../Typography'
 
 const BreadcrumbSeparator = () => (
@@ -60,7 +59,7 @@ const Breadcrumbs = ({ items, className, style }) => {
           className={styles.Breadcrumb__previousButton}
           size="medium"
         >
-          <Icon icon={LeftIcon} />
+          <Icon icon={Left} />
         </IconButton>
       )}
       <div className={styles.Breadcrumb__items}>

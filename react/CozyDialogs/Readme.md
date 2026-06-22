@@ -69,7 +69,6 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import { useAlert } from 'cozy-ui/transpiled/react/providers/Alert'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
 import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
@@ -84,11 +83,7 @@ import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 
-import PenIcon from 'cozy-ui/transpiled/react/Icons/Pen'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import AttachmentIcon from 'cozy-ui/transpiled/react/Icons/Attachment'
-import ToTheCloudIcon from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
-import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
+import { Icon, Attachment, Cloud, Pen, People, ToTheCloud } from '@linagora/twake-icons'
 import BackgroundImg from './background.png'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
@@ -145,7 +140,7 @@ const ConfirmDialogActions = () => {
 
 const dialogTitles = {
   ConfirmDialog: "Are you sure ?",
-  IllustrationDialog: <Icon icon={CloudIcon} size="140" />,
+  IllustrationDialog: <Icon icon={Cloud} size="140" />,
   FixedDialog: 'Fixed Dialog',
   FixedActionsDialog: 'Fixed Actions Dialog',
   Dialog: 'Dialog',
@@ -255,19 +250,19 @@ const ButtonMenu = () => {
           >
           <MenuItem onClick={hideMenu}>
             <ListItemIcon>
-              <Icon icon={PenIcon} />
+              <Icon icon={Pen} />
             </ListItemIcon>
             <ListItemText primary="Modify" />
           </MenuItem>
           <MenuItem onClick={hideMenu}>
             <ListItemIcon>
-              <Icon icon={PeopleIcon} />
+              <Icon icon={People} />
             </ListItemIcon>
             <ListItemText primary="People" />
           </MenuItem>
           <MenuItem onClick={hideMenu}>
             <ListItemIcon>
-              <Icon icon={AttachmentIcon} />
+              <Icon icon={Attachment} />
             </ListItemIcon>
             <ListItemText primary="Attachment" />
           </MenuItem>
@@ -370,7 +365,7 @@ const DemoComp = ({ variant }) => {
           }
           disableGutters={variant.disableGutters}
           background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
-          icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
+          icon={DialogComponent === PermissionDialog ? Cloud : undefined}
           content={
             <>
               <Typography component="div" variant="body1">
@@ -461,8 +456,7 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
 import Button from  'cozy-ui/transpiled/react/Buttons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+import { Dots, Icon } from '@linagora/twake-icons'
 
 initialState = { showModal: false }
 
@@ -476,7 +470,7 @@ const Modal = () => {
         <>
           This is the title
           <IconButton>
-            <Icon icon={DotsIcon} />
+            <Icon icon={Dots} />
           </IconButton>
         </>
       }

@@ -10,7 +10,6 @@ runs:
         cache-name: cache-builds
       with:
         path: |
-          ${{ github.workspace }}/react/Icon/icons-sprites.js
           ${{ github.workspace }}/react/palette.js
           ${{ github.workspace }}/transpiled
           ${{ github.workspace }}/dist

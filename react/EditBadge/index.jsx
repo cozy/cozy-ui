@@ -1,3 +1,4 @@
+import { Icon, Pen } from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React, { useState, useRef } from 'react'
 
@@ -5,8 +6,6 @@ import EditMenu from './EditMenu'
 import StatusWrapper from './StatusWrapper'
 import Badge from '../Badge'
 import Button from '../Buttons'
-import Icon from '../Icon'
-import PenIcon from '../Icons/Pen'
 
 const EditBadge = ({
   src,
@@ -36,7 +35,7 @@ const EditBadge = ({
             style={{
               outline: '4px solid var(--paperBackgroundColor)'
             }}
-            label={<Icon icon={PenIcon} />}
+            label={<Icon icon={Pen} />}
             size="small"
             onClick={() => setShowMenu(v => !v)}
           />

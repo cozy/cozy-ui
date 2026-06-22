@@ -1,3 +1,4 @@
+import { Bottom, Icon } from '@linagora/twake-icons'
 import MuiTextField from '@material-ui/core/TextField'
 import merge from 'lodash/merge'
 import PropTypes from 'prop-types'
@@ -7,8 +8,6 @@ import { getLabelByValue, toggleInArray } from './helpers'
 import ActionsMenuItem from '../ActionsMenu/ActionsMenuItem'
 import ActionsMenuWrapper from '../ActionsMenu/ActionsMenuWrapper'
 import Checkbox from '../Checkbox'
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
 import InputAdornment from '../InputAdornment'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
@@ -92,7 +91,7 @@ const MobileSelect = forwardRef(
             endAdornment: (
               <InputAdornment position="end">
                 <Icon
-                  icon={BottomIcon}
+                  icon={Bottom}
                   rotate={showDrawer ? 180 : 0}
                   color={
                     disabled

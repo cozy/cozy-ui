@@ -11,9 +11,10 @@ module.exports = {
     'react-styleguidist.+\\.jsx?$': 'babel-jest',
     '^rsg-components(.*)$':
       '<rootDir>/node_modules/react-styleguidist/lib/client/rsg-components$1',
-    '^cozy-client$': 'cozy-client/dist/index'
+    '^cozy-client$': 'cozy-client/dist/index',
+    '^mime$': 'mime/mime.js'
   },
-  transformIgnorePatterns: ['node_modules/(?!(react-styleguidist)/)'],
+  transformIgnorePatterns: ['node_modules/(?!(react-styleguidist|@linagora)/)'],
   testPathIgnorePatterns: ['/node_modules/', '/transpiled/', '/dist/'],
   transform: {
     '^.+\\.(ts|tsx|js|jsx)?$': 'babel-jest'

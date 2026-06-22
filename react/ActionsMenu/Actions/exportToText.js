@@ -1,3 +1,4 @@
+import { Icon, Export } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import logger from 'cozy-logger'
@@ -5,8 +6,6 @@ import logger from 'cozy-logger'
 import { downloadBlob } from './helpers'
 import { getActionsI18n } from './locales/withActionsLocales'
 import { makePdfBlobFromText } from './pdfHelpers'
-import Icon from '../../Icon'
-import ExportIcon from '../../Icons/Export'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -30,7 +29,7 @@ const makeComponent = (label, icon) => {
 
 export const exportToText = ({ exportedText, file }) => {
   const { t } = getActionsI18n()
-  const icon = ExportIcon
+  const icon = Export
   const label = t('exportToText')
 
   return {

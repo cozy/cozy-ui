@@ -2,9 +2,7 @@
 import { useState } from 'react'
 import MobileStepper from 'cozy-ui/transpiled/react/MobileStepper'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import { Icon, Left, Right } from '@linagora/twake-icons'
 
 const maxSteps = 5
 const [activeStep, setActiveStep] = useState(0)
@@ -30,14 +28,13 @@ const handleBack = () => {
         onClick={handleNext}
         disabled={activeStep === maxSteps - 1}
       >
-        <Icon icon={RightIcon} />
+        <Icon icon={Right} />
       </IconButton>
     }
     backButton={
       <IconButton onClick={handleBack} disabled={activeStep === 0}>
-        <Icon icon={LeftIcon} />
+        <Icon icon={Left} />
       </IconButton>
     }
   />
 </div>
-```

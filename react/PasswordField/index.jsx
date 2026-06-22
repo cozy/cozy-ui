@@ -1,3 +1,4 @@
+import { Icon, Eye, EyeClosed } from '@linagora/twake-icons'
 import React, { useState } from 'react'
 import { useI18n, withOnlyLocales } from 'twake-i18n'
 
@@ -5,10 +6,7 @@ import en from './locales/en.json'
 import fr from './locales/fr.json'
 import ru from './locales/ru.json'
 import vi from './locales/vi.json'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import EyeIcon from '../Icons/Eye'
-import EyeClosedIcon from '../Icons/EyeClosed'
 import InputAdornment from '../InputAdornment'
 import TextField from '../TextField'
 
@@ -42,7 +40,7 @@ const PasswordField = props => {
               onClick={() => setHidden(!hidden)}
               edge="end"
             >
-              <Icon icon={hidden ? EyeIcon : EyeClosedIcon} />
+              <Icon icon={hidden ? Eye : EyeClosed} />
             </IconButton>
           </InputAdornment>
         ),

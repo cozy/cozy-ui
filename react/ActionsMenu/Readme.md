@@ -61,9 +61,7 @@ import ActionsMenuItem from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuIte
 import ActionsMenuMobileHeader from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuMobileHeader'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import { File, FileTypeText, Icon } from '@linagora/twake-icons'
 
 import { makeActions, modify, emailTo, print, viewInContacts, viewInDrive, divider, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
 
@@ -89,7 +87,7 @@ const customAction = () => ({
     return (
       <ActionsMenuItem {...props} ref={ref}>
         <ListItemIcon>
-          <Icon icon={FileIcon} />
+          <Icon icon={File} />
         </ListItemIcon>
         <ListItemText
           primary="This is a custom action, with a very long text to show how it is displayed"
@@ -149,17 +147,9 @@ import ActionsMenuItem from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuIte
 import ActionsMenuMobileHeader from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuMobileHeader'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import CopyIcon from 'cozy-ui/transpiled/react/Icons/Copy'
-import PenIcon from 'cozy-ui/transpiled/react/Icons/Pen'
-import TelephoneIcon from 'cozy-ui/transpiled/react/Icons/Telephone'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import AttachmentIcon from 'cozy-ui/transpiled/react/Icons/Attachment'
-import ContrastIcon from 'cozy-ui/transpiled/react/Icons/Contrast'
-import AttentionIcon from 'cozy-ui/transpiled/react/Icons/Attention'
+import { Attachment, Attention, Contrast, Copy, FileTypeText, Icon, Pen, People, Telephone } from '@linagora/twake-icons'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
 initialState = { showMenu: isTesting() }
 
@@ -205,24 +195,24 @@ const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
       </ActionsMenuMobileHeader>
       <ActionsMenuItem autoFocus={true} onClick={() => alert('click')}>
         <ListItemIcon>
-          <Icon icon={PenIcon} />
+          <Icon icon={Pen} />
         </ListItemIcon>
         <ListItemText primary="Modify" />
         <ListItemIcon>
           <Typography color='error'>
-            <Icon icon={AttentionIcon} />
+            <Icon icon={Attention} />
           </Typography>
         </ListItemIcon>
       </ActionsMenuItem>
       <ActionsMenuItem>
         <ListItemIcon>
-          <Icon icon={PeopleIcon} />
+          <Icon icon={People} />
         </ListItemIcon>
         <ListItemText primary="People" />
       </ActionsMenuItem>
       <ActionsMenuItem>
         <ListItemIcon>
-          <Icon icon={AttachmentIcon} />
+          <Icon icon={Attachment} />
         </ListItemIcon>
         <ListItemText primary="Attachment" />
       </ActionsMenuItem>
@@ -234,19 +224,19 @@ const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
 
       <ActionsMenuItem>
         <ListItemIcon>
-          <Icon icon={TelephoneIcon} />
+          <Icon icon={Telephone} />
         </ListItemIcon>
         <ListItemText primary="Call" />
       </ActionsMenuItem>
       <ActionsMenuItem>
         <ListItemIcon>
-          <Icon icon={ContrastIcon} />
+          <Icon icon={Contrast} />
         </ListItemIcon>
         <ListItemText primary="Contrast" />
       </ActionsMenuItem>
       <ActionsMenuItem>
         <ListItemIcon>
-          <Icon icon={CopyIcon} />
+          <Icon icon={Copy} />
         </ListItemIcon>
         <ListItemText primary="Copy" />
       </ActionsMenuItem>

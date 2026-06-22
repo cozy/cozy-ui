@@ -1,7 +1,6 @@
+import { Icon } from '@linagora/twake-icons'
 import MuiSwitch from '@material-ui/core/Switch'
 import React from 'react'
-
-import Icon from '../Icon'
 
 /**
  * @type JSX.Element<HTMLDivElement, import('@material-ui/core/Switch').SwitchProps>

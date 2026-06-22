@@ -1,8 +1,8 @@
+import { Telephone } from '@linagora/twake-icons'
 import React from 'react'
 import { useI18n } from 'twake-i18n'
 
 import withActionsLocales from './locales/withActionsLocales'
-import TelephoneIcon from '../../../Icons/Telephone'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 
 export const call = () => {
@@ -18,7 +18,7 @@ export const call = () => {
       return (
         <ActionMenuItemWrapper
           className={className}
-          icon={TelephoneIcon}
+          icon={Telephone}
           onClick={onClick}
         >
           {t('call')}

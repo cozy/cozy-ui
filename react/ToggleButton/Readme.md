@@ -1,8 +1,7 @@
 ```jsx
 import { useState } from 'react'
 import ToggleButton from 'cozy-ui/transpiled/react/ToggleButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import HeartIcon from 'cozy-ui/transpiled/react/Icons/Heart'
+import { Heart, Icon } from '@linagora/twake-icons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -35,7 +34,7 @@ const makeSize = variant => Object.keys(variant).filter(key => variant[key])[0]
                     size={makeSize(variant)}
                     disabled={col.includes('disabled')}
                   >
-                    <Icon icon={HeartIcon} />
+                    <Icon icon={Heart} />
                   </ToggleButton>
                   <ToggleButton
                     value="list"
@@ -46,7 +45,7 @@ const makeSize = variant => Object.keys(variant).filter(key => variant[key])[0]
                     size={makeSize(variant)}
                     disabled={col.includes('disabled')}
                   >
-                    <Icon icon={HeartIcon} />
+                    <Icon icon={Heart} />
                   </ToggleButton>
                 </div>
               </div>

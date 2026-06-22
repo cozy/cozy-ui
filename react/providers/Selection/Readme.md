@@ -2,9 +2,8 @@
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { DeviceLaptop, Icon } from '@linagora/twake-icons'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 
 const Component = () => {
   const { selectedItemsId, addSelectedItem, removeSelectedItem } = useSelection()

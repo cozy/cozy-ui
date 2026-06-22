@@ -5,8 +5,7 @@
 import AvatarGroup, { spacingByAvatarSize } from 'cozy-ui/transpiled/react/AvatarGroup'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import { supportedColors } from 'cozy-ui/transpiled/react/Avatar/helpers'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
+import { Icon, Link } from '@linagora/twake-icons'
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
 import Variants from 'cozy-ui/docs/components/Variants'
 
@@ -34,7 +33,7 @@ const initialVariants = [{ disabled: false }]
           innerBorder
           disabled={variant.disabled}
         >
-          <Icon icon={LinkIcon} />
+          <Icon icon={Link} />
         </Avatar>
       </div>
     ))
@@ -46,13 +45,9 @@ const initialVariants = [{ disabled: false }]
 
 ```jsx
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
-import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import { Cozy, Icon, Link, Warning } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import { supportedColors } from 'cozy-ui/transpiled/react/Avatar/helpers'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const sizes = ['xs', 's', 'm', 'l', 'xl']
@@ -70,7 +65,7 @@ const initialVariants = [{ disabled: false, border: false, innerBorder: false }]
             <React.Fragment key={size}>
               <Avatar size={size} color={color} disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder} />
               <Avatar size={size} color={color} disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}>AB</Avatar>
-              <Avatar size={size} color={color} disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}><Icon icon={LinkIcon} /></Avatar>
+              <Avatar size={size} color={color} disabled={variant.disabled} border={variant.border} innerBorder={variant.innerBorder}><Icon icon={Link} /></Avatar>
             </React.Fragment>
           ))}
         </div>

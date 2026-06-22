@@ -1,7 +1,6 @@
 ```jsx
 import Skeleton from 'cozy-ui/transpiled/react/Skeleton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import { Icon, People } from '@linagora/twake-icons'
 import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 ;
@@ -19,7 +18,7 @@ import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
     />
   </div>
   <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
-    <Icon icon={PeopleIcon} />
+    <Icon icon={People} />
   </div>
 </>
 ```

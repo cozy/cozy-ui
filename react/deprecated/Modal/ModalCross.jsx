@@ -1,9 +1,8 @@
+import { Icon, Cross } from '@linagora/twake-icons'
 import cx from 'classnames'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
-import CrossIcon from '../../Icons/Cross'
 import palette from '../../palette'
 import useBreakpoints from '../../providers/Breakpoints'
 
@@ -12,7 +11,7 @@ export const ModalCrossIcon = props => {
   const { color } = props
   return (
     <Icon
-      icon={CrossIcon}
+      icon={Cross}
       size={isMobile ? '16' : '24'}
       color={color || palette['coolGrey']}
     />

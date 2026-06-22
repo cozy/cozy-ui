@@ -1,7 +1,7 @@
+import { Icon } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import Fab from '.'
-import Icon from '../Icon'
 import useScroll from '../hooks/useScroll'
 
 const ExtendableFab = forwardRef(

@@ -1,3 +1,4 @@
+import { Icon, Bottom, Top } from '@linagora/twake-icons'
 import cx from 'classnames'
 import React, { Children, isValidElement, useState, forwardRef } from 'react'
 import { useI18n } from 'twake-i18n'
@@ -5,9 +6,6 @@ import { useI18n } from 'twake-i18n'
 import withNavLocales from './locales/withNavLocales'
 import styles from './styles.styl'
 import DropdownText from '../DropdownText'
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
-import TopIcon from '../Icons/Top'
 import ListItem from '../ListItem'
 import useBreakpoints from '../providers/Breakpoints'
 
@@ -103,7 +101,7 @@ const _NavDesktopLimiter = ({ children, max = 5 }) => {
             className={cx(styles['c-nav-link'], styles['c-nav-limiter'])}
             onClick={onToggle}
           >
-            <NavIcon icon={viewingAll ? TopIcon : BottomIcon} />
+            <NavIcon icon={viewingAll ? Top : Bottom} />
             <NavText>
               {viewingAll
                 ? t('navLimiter.showLess')

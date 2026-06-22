@@ -14,10 +14,9 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Feedback**: [Alert](#alert), [Alert (providers/Alert)](#alert-providers-alert), [Banner](#banner), [CircularProgress](#circularprogress), [LinearProgress](#linearprogress), [PointerAlert](#pointeralert), [ProgressionBanner](#progressionbanner), [Skeletons](#skeletons), [Snackbar](#snackbar), [Spinner](#spinner)
 - **Data Display**: [Accordion](#accordion), [Avatar](#avatar), [Badge](#badge), [Chips](#chips), [Circle](#circle), [EditBadge](#editbadge), [Filename](#filename), [FilePath](#filepath), [FilePathLink](#filepathlink), [GhostFileBadge](#ghostfilebadge), [HistoryRow](#historyrow), [InfosBadge](#infosbadge), [List](#list), [List (MuiCozyTheme/List)](#list-muicozytheme-list), [ListItem](#listitem), [ListItem (MuiCozyTheme/ListItem)](#listitem-muicozytheme-listitem), [ListItemText](#listitemtext), [ListSubheader](#listsubheader), [LoadMore](#loadmore), [Markdown](#markdown), [MidEllipsis](#midellipsis), [MobileStepper](#mobilestepper), [OrderedList](#orderedlist), [Stepper](#stepper), [Table](#table), [Thumbnail](#thumbnail), [Tooltip](#tooltip), [Typography](#typography), [UnorderedList](#unorderedlist)
 - **Dialogs**: [ActionsBar](#actionsbar), [ActionsMenu](#actionsmenu), [CozyDialogs](#cozydialogs), [Dialog](#dialog), [Menu](#menu), [SpecificDialogs (CozyDialogs/SpecificDialogs)](#specificdialogs-cozydialogs-specificdialogs)
-- **Icons**: [Icon](#icon)
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
 - **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
-- **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
+- **Labs**: [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
 - **Other**: [BottomSheet](#bottomsheet), [providers](#providers)
 
 ## Buttons
@@ -78,16 +77,15 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 
 ```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Icon, Stop } from '@linagora/twake-icons'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
 
 <IconButton className="u-p-half">
   <Button
     component="div"
     className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
     classes={{ label: "u-flex u-w-auto" }}
-    label={<Icon icon={StopIcon} size={12} />}
+    label={<Icon icon={Stop} size={12} />}
     size="small"
   />
 </IconButton>
@@ -412,12 +410,11 @@ import Empty from 'cozy-ui/transpiled/react/Empty'
 
 ```jsx
 import Empty from 'cozy-ui/transpiled/react/Empty'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import { Cozy, Icon } from '@linagora/twake-icons'
 
 <>
   <Empty
-    icon={CozyIcon}
+    icon={Cozy}
     title="With functional SVG"
     text="Try adding some content to this list"
   />
@@ -436,7 +433,7 @@ import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
     text="Try adding some content to this list"
   />
   <Empty
-    icon={<Icon icon={CozyIcon} />}
+    icon={<Icon icon={Cozy} />}
     title="With Icon component"
     text="Try adding some content to this list"
   />
@@ -526,13 +523,13 @@ import AppTitle from 'cozy-ui/transpiled/react/AppTitle'
 
 ```jsx
 import AppTitle from 'cozy-ui/transpiled/react/AppTitle';
-import DriveIcon from 'cozy-ui/transpiled/react/Icons/Drive';
+import { Drive } from '@linagora/twake-icons';
 
 // This should be an a nice icon with "Drive" written with Twake font and gradient
 const DriveTextMock = () => <div>Drive</div>;
 
 <div className="u-flex u-flex-column">
-  <AppTitle appIcon={DriveIcon} appTextIcon={DriveTextMock} />
+  <AppTitle appIcon={Drive} appTextIcon={DriveTextMock} />
 </div>
 ```
 
@@ -655,22 +652,20 @@ import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 ```jsx
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav'
-import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import { Check, Download, Warn } from '@linagora/twake-icons'
 import cx from 'classnames'
 
 <Sidebar id='sidebar' style={demoStyle}>
   <Nav>
     <NavItem id='nav-item'>
       <NavLink to="/warn" active>
-        <NavIcon icon={WarnIcon} />
+        <NavIcon icon={Warn} />
         <NavText>Warn</NavText>
       </NavLink>
     </NavItem>
     <NavItem>
       <NavLink to="/check">
-        <NavIcon icon={CheckIcon} />
+        <NavIcon icon={Check} />
         <NavText>Check</NavText>
       </NavLink>
     </NavItem>
@@ -681,7 +676,7 @@ import cx from 'classnames'
     </NavItem>
     <NavItem>
       <NavLink to="/download">
-        <NavIcon icon={DownloadIcon} />
+        <NavIcon icon={Download} />
         <NavText>Download</NavText>
       </NavLink>
     </NavItem>
@@ -908,9 +903,8 @@ import Badge from 'cozy-ui/transpiled/react/Badge'
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Icon, Link } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
 
 <Badge
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -924,7 +918,7 @@ import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
       }}
     >
       <Badge color="error" variant="dot" size="small">
-        <Icon icon={LinkIcon} size={16} />
+        <Icon icon={Link} size={16} />
       </Badge>
     </div>
   }
@@ -1053,9 +1047,8 @@ import GhostFileBadge from 'cozy-ui/transpiled/react/GhostFileBadge'
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Folder, Icon } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import FolderIcon from "cozy-ui/transpiled/react/Icons/Folder"
 
 <Badge
   badgeContent={
@@ -1069,7 +1062,7 @@ import FolderIcon from "cozy-ui/transpiled/react/Icons/Folder"
         borderRadius: "6px"
       }}
     >
-      <Icon icon={FolderIcon} size="16" />
+      <Icon icon={Folder} size="16" />
     </div>
   }
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -1155,9 +1148,7 @@ import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge'
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
-import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
+import { CircleFilled, Icon, Link } from '@linagora/twake-icons'
 
 <Badge
   badgeContent={
@@ -1169,12 +1160,12 @@ import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
         boxShadow: 'var(--shadow3)'
       }}
     >
-      <Icon icon={LinkIcon} size="10" />
+      <Icon icon={Link} size="10" />
     </div>
   }
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
 >
-  <Icon icon={CircleFilledIcon} size="32" color="var(--slateGrey)" />
+  <Icon icon={CircleFilled} size="32" color="var(--slateGrey)" />
 </Badge>
 ```
 
@@ -1194,29 +1185,27 @@ import List from 'cozy-ui/transpiled/react/List'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { FileTypeFolder, FileTypeText, Icon } from '@linagora/twake-icons'
 import Divider from 'cozy-ui/transpiled/react/Divider'
-import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
-import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
 <List>
   <ListItem button>
     <ListItemIcon>
-      <Icon icon={FileTypeFolderIcon} width="32" height="32" />
+      <Icon icon={FileTypeFolder} width="32" height="32" />
     </ListItemIcon>
     <ListItemText primary="I'm a primary text"/>
   </ListItem>
   <Divider variant="inset" />
   <ListItem selected={true} button>
     <ListItemIcon>
-      <Icon icon={FiletypeTextIcon} width="32" height="32" />
+      <Icon icon={FileTypeText} width="32" height="32" />
     </ListItemIcon>
     <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
   </ListItem>
   <Divider variant="inset" />
   <ListItem  button>
     <ListItemIcon>
-      <Icon icon={FiletypeTextIcon} width="32" height="32" />
+      <Icon icon={FileTypeText} width="32" height="32" />
     </ListItemIcon>
     <ListItemText primary="I'm a primary text" />
   </ListItem>
@@ -1345,9 +1334,7 @@ import MobileStepper from 'cozy-ui/transpiled/react/MobileStepper'
 import { useState } from 'react'
 import MobileStepper from 'cozy-ui/transpiled/react/MobileStepper'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import { Icon, Left, Right } from '@linagora/twake-icons'
 
 <div class="u-flex">
   <MobileStepper
@@ -1360,12 +1347,12 @@ import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
         onClick={handleNext}
         disabled={activeStep === maxSteps - 1}
       >
-        <Icon icon={RightIcon} />
+        <Icon icon={Right} />
       </IconButton>
     }
     backButton={
       <IconButton onClick={handleBack} disabled={activeStep === 0}>
-        <Icon icon={LeftIcon} />
+        <Icon icon={Left} />
       </IconButton>
     }
   />
@@ -1437,8 +1424,7 @@ import Thumbnail from 'cozy-ui/transpiled/react/Thumbnail'
 
 ```jsx
 import Skeleton from 'cozy-ui/transpiled/react/Skeleton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import { Icon, People } from '@linagora/twake-icons'
 
 <>
   <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
@@ -1453,7 +1439,7 @@ import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
     />
   </div>
   <div className="u-flex u-w-2 u-h-2 u-flex-items-center u-flex-justify-center">
-    <Icon icon={PeopleIcon} />
+    <Icon icon={People} />
   </div>
 </>
 ```
@@ -1569,48 +1555,6 @@ import Menu from 'cozy-ui/transpiled/react/Menu'
 ```jsx
 import SpecificDialogs from 'cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs'
 ```
-
-
----
-
-## Icons
-
-### Icon
-
-Provides an easy way to use SVG icons included in Cozy-UI as well as your custom icons. The icon attribute can take an arbitrary React component, a SVG, SVGr, Sprite or Icon component. It is expected that this component print an <svg> tag and forwards any props to it.
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-```
-
-**Example:**
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import People from 'cozy-ui/transpiled/react/Icons/People'
-import Box from 'cozy-ui/transpiled/react/Box'
-
-<>
-  <Box display="flex" gridGap={5}>
-    <Icon icon="people" />
-    <Icon icon={People} />
-    <Icon icon={MyIcon} width={16} height={16} color="var(--paperBackgroundColor)"/>
-    <Icon icon={<Icon icon={People} />} />
-  </Box>
-</>
-```
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `width` | string \| number | - | - |
-| `height` | string \| number | - | - |
-| `color` | string \| object | - | - |
-| `style` | object | - | - |
-| `className` | string | - | - |
-| `preserveColor` | boolean | - | - |
-| `size` | string \| number | - | Shorthand for both width and height |
-| `rotate` | number | - | - |
-| `spin` | boolean | `false` | - |
 
 
 ---
@@ -1808,33 +1752,6 @@ const Example = () => {
 ---
 
 ## Labs
-
-### IconGrid (Labs/IconGrid)
-
-A component to display a grid of 4 icons. This component is not considered stable and may be replaced by a more generic grid component in the future.
-
-```jsx
-import IconGrid from 'cozy-ui/transpiled/react/Labs/IconGrid'
-```
-
-**Example:**
-
-```jsx
-import IconGrid from 'cozy-ui/transpiled/react/Labs/IconGrid';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import FileIcon from "cozy-ui/transpiled/react/Icons/File";
-import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
-import CloudHappyIcon from "cozy-ui/transpiled/react/Icons/CloudHappy";
-import OnlineIcon from "cozy-ui/transpiled/react/Icons/Online";
-
-<IconGrid>
-  <Icon icon={FileIcon} />
-  <Icon icon={CloudIcon} />
-  <Icon icon={CloudHappyIcon} />
-  <Icon icon={OnlineIcon} />
-</IconGrid>
-```
-
 
 ### Labs
 

@@ -1,10 +1,9 @@
+import { Icon, DeviceLaptop } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
-import DeviceLaptopIcon from '../../Icons/DeviceLaptop'
 
 const ButtonClient = props => {
   const { label, href, onClick, className, icon } = props
@@ -19,7 +18,7 @@ const ButtonClient = props => {
       rel="noreferrer"
     >
       <figure>
-        <Icon icon={icon || DeviceLaptopIcon} size="32" />
+        <Icon icon={icon || DeviceLaptop} size="32" />
       </figure>
       <span>{label}</span>
     </a>

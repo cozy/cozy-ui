@@ -2,13 +2,10 @@
 import Alert from 'cozy-ui/transpiled/react/Alert'
 import AlertTitle from 'cozy-ui/transpiled/react/AlertTitle'
 import Button from 'cozy-ui/transpiled/react/Buttons'
+import { DeviceLaptop, Dots, Download, Icon } from '@linagora/twake-icons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
-import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import Variants from 'cozy-ui/docs/components/Variants'
-import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 
 const initialVariants = [{
   longText: false,
@@ -34,11 +31,11 @@ const initialVariants = [{
       variant={variant.filled ? 'filled' : undefined}
       block={variant.block}
       square={variant.square}
-      icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} /> : undefined}
+      icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptop} color="var(--errorColor)" size={32} /> : undefined}
       action={(variant.actionOne || variant.actionTwo || variant.actionThree) ?
         <>
           {variant.actionOne &&
-            <Button variant="text" size="small" label="Download" startIcon={<Icon icon={DownloadIcon} />} />
+            <Button variant="text" size="small" label="Download" startIcon={<Icon icon={Download} />} />
           }
           {variant.actionTwo &&
             <Button variant="text" size="small" label="No, thanks!" />
@@ -46,7 +43,7 @@ const initialVariants = [{
           {variant.actionThree &&
             <ListItemIcon>
               <IconButton>
-                <Icon icon={DotsIcon} />
+                <Icon icon={Dots} />
               </IconButton>
             </ListItemIcon>
           }

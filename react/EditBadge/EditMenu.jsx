@@ -1,11 +1,9 @@
+import { Icon, Camera, Trash } from '@linagora/twake-icons'
 import React, { useRef } from 'react'
 import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import { handleDelete, handleUpload } from './helpers'
 import { locales } from './locales'
-import Icon from '../Icon'
-import CameraIcon from '../Icons/Camera'
-import TrashIcon from '../Icons/Trash'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
 import Menu from '../Menu'
@@ -71,7 +69,7 @@ const EditMenu = ({
             }}
           >
             <ListItemIcon>
-              <Icon icon={CameraIcon} />
+              <Icon icon={Camera} />
             </ListItemIcon>
             <ListItemText primary={t('EditBadge.menu.update')} />
           </MenuItem>
@@ -89,7 +87,7 @@ const EditMenu = ({
             }
           >
             <ListItemIcon>
-              <Icon icon={TrashIcon} />
+              <Icon icon={Trash} />
             </ListItemIcon>
             <ListItemText primary={t('EditBadge.menu.delete')} />
           </MenuItem>

@@ -1,3 +1,10 @@
+import {
+  CheckCircle,
+  Cross,
+  CrossCircle,
+  Dots,
+  Icon
+} from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React, { useRef, useState, useMemo } from 'react'
 import { useI18n } from 'twake-i18n'
@@ -10,12 +17,7 @@ import { getOnlyNeededActions } from '../ActionsMenu/Actions/helpers'
 import ActionsItems from '../ActionsMenu/ActionsItems'
 import AppBar from '../AppBar'
 import Box from '../Box'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import CheckCircleIcon from '../Icons/CheckCircle'
-import CrossIcon from '../Icons/Cross'
-import CrossCircleIcon from '../Icons/CrossCircle'
-import DotsIcon from '../Icons/Dots'
 import Toolbar from '../Toolbar'
 import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
@@ -69,7 +71,7 @@ const useStyles = makeStyles({
   })
 })
 
-const DefaultIcon = () => <Icon className="u-mr-1" icon={CheckCircleIcon} />
+const DefaultIcon = () => <Icon className="u-mr-1" icon={CheckCircle} />
 
 const SelectedCount = ({ docs, onClose, IconComponent }) => {
   const { isMobile } = useBreakpoints()
@@ -85,7 +87,7 @@ const SelectedCount = ({ docs, onClose, IconComponent }) => {
         color="text.primary"
       >
         <IconButton color="inherit" onClick={onClose}>
-          <Icon icon={CrossCircleIcon} />
+          <Icon icon={CrossCircle} />
         </IconButton>
         {docs.length}
       </Box>
@@ -149,7 +151,7 @@ const ActionsBar = ({
             onClick={onClose}
             color="inherit"
           >
-            <Icon icon={CrossIcon} />
+            <Icon icon={Cross} />
           </IconButton>
         )}
         <SelectedCount
@@ -182,7 +184,7 @@ const ActionsBar = ({
                   ref={anchorRef}
                   onClick={() => setShowMenu(true)}
                 >
-                  <Icon icon={DotsIcon} />
+                  <Icon icon={Dots} />
                 </IconButton>
               )}
               <ActionsMenu

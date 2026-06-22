@@ -1,9 +1,9 @@
+import { Icon } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import ConfirmDialog from './ConfirmDialog'
-import Icon from '../Icon'
 import Paper from '../Paper'
 import { makeStyles } from '../styles'
 

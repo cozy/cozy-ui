@@ -1,10 +1,9 @@
+import { Icon, TwakeText } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../Icon'
-import TwakeTextIcon from '../Icons/TwakeText'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 const AppTitle = ({ appIcon, appTextIcon }) => {
@@ -21,7 +20,7 @@ const AppTitle = ({ appIcon, appTextIcon }) => {
         size="32"
         className={styles['c-apptitle-app-icon']}
       />
-      <TwakeTextIcon
+      <TwakeText
         height="22"
         className={cx(
           'u-mr-half',

@@ -1,8 +1,7 @@
+import { Icon, Download } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import DownloadIcon from '../../Icons/Download'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -26,7 +25,7 @@ const makeComponent = (label, icon) => {
 
 export const download = ({ client, encryptedUrl, downloadFile }) => {
   const { t } = getActionsI18n()
-  const icon = DownloadIcon
+  const icon = Download
   const label = t('download')
 
   return {

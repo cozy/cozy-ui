@@ -3,8 +3,7 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import AlertProvider, { useAlert } from 'cozy-ui/transpiled/react/providers/Alert'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
+import { DeviceLaptop, Icon } from '@linagora/twake-icons'
 
 const initialVariants = [{
   title: false,
@@ -43,7 +42,7 @@ const Component = ({ variant }) => {
           icon: variant.noIcon
             ? false
             : variant.largeIcon
-            ? <Icon icon={DeviceLaptopIcon} size={32} />
+            ? <Icon icon={DeviceLaptop} size={32} />
             : undefined,
           noClickAway: variant.noClickAway,
           noTimeOut: variant.noTimeOut,

@@ -1,9 +1,9 @@
+import { Icon } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../Icon'
 import Typography from '../Typography'
 
 export const Empty = ({

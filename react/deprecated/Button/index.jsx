@@ -1,10 +1,9 @@
+import { Icon, Spinner } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
-import SpinnerIcon from '../../Icons/Spinner'
 
 const btnClass = function (options) {
   const { className, extension, size, theme, variant, round, align } = options
@@ -103,7 +102,7 @@ const BaseButton = props => {
         {restProps.busy && (
           <Icon
             size={sizeToIconSize[size]}
-            icon={SpinnerIcon}
+            icon={Spinner}
             spin
             className="u-ml-half"
             aria-hidden

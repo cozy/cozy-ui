@@ -1,8 +1,7 @@
+import { Icon, FolderOpen } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import FolderOpenIcon from '../../Icons/FolderOpen'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -26,7 +25,7 @@ const makeComponent = (label, icon) => {
 
 export const viewInDrive = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
-  const icon = FolderOpenIcon
+  const icon = FolderOpen
   const label = t('viewInDrive')
 
   return {

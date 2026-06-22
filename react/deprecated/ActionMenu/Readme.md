@@ -33,7 +33,7 @@ const expl = () => ({
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import { File } from '@linagora/twake-icons'
 import { ActionMenuItemWrapper, ActionMenuWithClose, ActionsItems } from 'cozy-ui/transpiled/react/deprecated/ActionMenu'
 import { makeActions, hr, modify, call } from 'cozy-ui/transpiled/react/deprecated/ActionMenu/Actions'
 
@@ -55,7 +55,7 @@ const customAction = () => ({
   action: () => { alert('click') },
   Component: props => {
     return (
-      <ActionMenuItemWrapper icon={FileIcon} {...props}>
+      <ActionMenuItemWrapper icon={File} {...props}>
         This is a custom action
       </ActionMenuItemWrapper>
     )
@@ -87,12 +87,10 @@ const actions = makeActions([ modify, hr, call, customAction ])
 ```jsx
 import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/deprecated/ActionMenu'
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import { File, Icon, Warning } from '@linagora/twake-icons'
 import Filename from 'cozy-ui/transpiled/react/Filename'
-import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
 import Variants from 'cozy-ui/docs/components/Variants'
 import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs'
 import Button from 'cozy-ui/transpiled/react/deprecated/Button'
@@ -125,25 +123,25 @@ const onClose = () => setState({ modalOpened: !state.modalOpened })
           >
             {variant.withMobileHeader && (
               <ActionMenuHeader>
-                <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
+                <Filename icon={File} filename="my_awesome_paper" extension=".pdf" />
               </ActionMenuHeader>
             )}
             <ActionMenuItem
-              left={<Icon icon={FileIcon} />}
-              right={<Icon icon={WarningIcon} color="var(--errorColor)" />}
+              left={<Icon icon={File} />}
+              right={<Icon icon={Warning} color="var(--errorColor)" />}
               onClick={() => alert('click')}
             >
               Item 1 with onclick action
             </ActionMenuItem>
             <ActionMenuItem
-              left={<Icon icon={FileIcon} />}
+              left={<Icon icon={File} />}
               onClick={() => setState({ modalOpened: !state.modalOpened })}>
                 Item 2 with dialog action
             </ActionMenuItem>
             <ActionMenuItem left={<ActionMenuRadio />}>
               Item 3
             </ActionMenuItem>
-            <ActionMenuItem left={<Icon icon={FileIcon} />}>
+            <ActionMenuItem left={<Icon icon={File} />}>
               <Typography variant="body1" gutterBottom>
                 Item 4
               </Typography>

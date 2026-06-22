@@ -3,7 +3,7 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import SearchBar from 'cozy-ui/transpiled/react/SearchBar'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import CloudIcon from 'cozy-ui/transpiled/react/Icons/Cloud'
+import { Cloud } from '@linagora/twake-icons'
 import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
 import RadioGroup from 'cozy-ui/transpiled/react/RadioGroup'
 import Radio from 'cozy-ui/transpiled/react/Radios'
@@ -57,7 +57,7 @@ initialState = { size: 'small' }
           disabledClear={variant.disabledClear}
           disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
-          icon={variant.customIcon ? CloudIcon : undefined}
+          icon={variant.customIcon ? Cloud : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
         />
         <Typography className="u-mb-half">With elevation</Typography>
@@ -67,7 +67,7 @@ initialState = { size: 'small' }
           disabledClear={variant.disabledClear}
           disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
-          icon={variant.customIcon ? CloudIcon : undefined}
+          icon={variant.customIcon ? Cloud : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
         />
         <Typography className="u-mb-half">Disabled</Typography>
@@ -77,7 +77,7 @@ initialState = { size: 'small' }
           disabledClear={variant.disabledClear}
           disabledHover={variant.disabledHover}
           type={variant.button ? "button" : "search"}
-          icon={variant.customIcon ? CloudIcon : undefined}
+          icon={variant.customIcon ? Cloud : undefined}
           label={variant.button ? <Typography color="primary">This is a label</Typography> : undefined}
         />
       </>

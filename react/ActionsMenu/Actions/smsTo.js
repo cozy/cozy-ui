@@ -1,15 +1,14 @@
+import { Icon, Comment } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import CommentIcon from '../../Icons/Comment'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
 export const smsTo = () => {
   const { t } = getActionsI18n()
-  const icon = CommentIcon
+  const icon = Comment
   const label = t('smsTo')
 
   return {

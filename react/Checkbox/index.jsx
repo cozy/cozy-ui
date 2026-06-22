@@ -1,11 +1,10 @@
+import { Icon, CheckSquare } from '@linagora/twake-icons'
 import MUICheckbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import Icon from '../Icon'
-import CheckSquareIcon from '../Icons/CheckSquare'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 const logDepecratedCheckbox = createDepreciationLogger()
@@ -44,7 +43,7 @@ const DefaultCheckbox = ({
             height: size === 'small' ? 20 : 24
           }}
         >
-          <Icon icon={CheckSquareIcon} size={size === 'small' ? 16 : 18} />
+          <Icon icon={CheckSquare} size={size === 'small' ? 16 : 18} />
         </div>
       }
       {...props}

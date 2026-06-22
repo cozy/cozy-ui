@@ -126,11 +126,10 @@ If you want a button with only an icon as content, you must set the `iconOnly` p
 
 ```jsx
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';
-import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import { Dots, Trash } from '@linagora/twake-icons'
 <div>
-  <Button theme="danger" icon={TrashIcon} label='delete' />
-  <Button theme="secondary" icon={DotsIcon} iconOnly label="See more" extension='narrow' />
+  <Button theme="danger" icon={Trash} label='delete' />
+  <Button theme="secondary" icon={Dots} iconOnly label="See more" extension='narrow' />
 </div>
 ```
 
@@ -138,10 +137,9 @@ You can also pass an Icon directly if you need more flexibility.
 
 ```jsx
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
+import { Icon, Trash } from '@linagora/twake-icons'
 <div>
-  <Button theme="danger" icon={ <Icon icon={TrashIcon} color='yellow' /> } label='delete' />
+  <Button theme="danger" icon={ <Icon icon={Trash} color='yellow' /> } label='delete' />
 </div>
 ```
 
@@ -149,11 +147,10 @@ import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
 
 ```jsx
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';
-import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
-import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
+import { Cross, Plus } from '@linagora/twake-icons'
 <div>
-  <Button icon={PlusIcon} label='Add' iconOnly round />
-  <Button theme="secondary" icon={CrossIcon} label='Delete' iconOnly round />
+  <Button icon={Plus} label='Add' iconOnly round />
+  <Button theme="secondary" icon={Cross} label='Delete' iconOnly round />
 </div>
 ```
 
@@ -163,14 +160,13 @@ Subtle buttons are buttons without background and borders, wich look "inverted" 
 
 ```jsx
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';
-import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
-import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
+import { Cozy, Plus } from '@linagora/twake-icons'
 <div>
   <p>
-    <Button subtle icon={PlusIcon} size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
-    <Button subtle icon={PlusIcon} size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
-    <Button subtle icon={PlusIcon} label='Regular text' onClick={() => alert('Clicked on Regular text')} />
-    <Button subtle icon={PlusIcon} size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
+    <Button subtle icon={Plus} size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
+    <Button subtle icon={Plus} size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
+    <Button subtle icon={Plus} label='Regular text' onClick={() => alert('Clicked on Regular text')} />
+    <Button subtle icon={Plus} size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
   </p>
   <p>
     <Button subtle theme='secondary' label='Secondary theme' onClick={() => alert('Clicked on Secondary theme')} />
@@ -187,10 +183,10 @@ import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
     <Button subtle busy theme='danger' label='Busy danger'  onClick={() => alert('Clicked on Busy danger')} />
   </p>
   <p>
-    <Button subtle icon={CozyIcon} label='Cozy' />
+    <Button subtle icon={Cozy} label='Cozy' />
   </p>
   <p>
-    <Button subtle icon={PlusIcon} label='Subtle Secondary Cozy' theme='secondary' />
+    <Button subtle icon={Plus} label='Subtle Secondary Cozy' theme='secondary' />
   </p>
 </div>
 ```
@@ -199,7 +195,7 @@ import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
 
 ```jsx
 import { ButtonLink } from 'cozy-ui/transpiled/react/deprecated/Button';
-import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
+import { Cozy } from '@linagora/twake-icons'
 <div>
   <p>
     <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
@@ -214,7 +210,7 @@ import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
     <ButtonLink size="large" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
   <p>
-    <ButtonLink subtle icon={CozyIcon} href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+    <ButtonLink subtle icon={Cozy} href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
 </div>
 ```

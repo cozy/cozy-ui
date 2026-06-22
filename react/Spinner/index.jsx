@@ -1,11 +1,10 @@
+import { Icon, Spinner as SpinnerIcon } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { translate } from 'twake-i18n'
 
 import styles from './styles.styl'
-import Icon from '../Icon'
-import SpinnerIcon from '../Icons/Spinner'
 import Typography from '../Typography'
 
 export const Spinner = ({
