@@ -9,7 +9,7 @@ A header `ActionsMenuMobileHeader` can be used to provide context on the menu ac
 An action is a simple function that returns an object with specific keys:
 
 * **name** : `<string>` – Action's name
-* **icon** : `<iconPropType>` – Action's icon
+* **icon** : `<string>|<object>|<func>` – Action's icon
 * **label** : `<string>` – Action's label
 * **disabled** : `<func>` – Used to add `disable` effect (the action is still displayed)
 * **displayCondition** : `<func>` – Whether the action is displayed. Must return a boolean

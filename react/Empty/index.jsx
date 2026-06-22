@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon, { iconPropType } from '../Icon'
+import Icon from '../Icon'
 import Typography from '../Typography'
 
 export const Empty = ({
@@ -77,7 +77,11 @@ export const Empty = ({
 }
 
 Empty.propTypes = {
-  icon: iconPropType,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   iconSize: PropTypes.oneOf(['normal', 'medium', 'large']),
   title: PropTypes.node,
   text: PropTypes.node,

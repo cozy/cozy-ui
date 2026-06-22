@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
 import styles from './styles.styl'
-import { iconPropType } from '../Icon'
 import MidEllipsis from '../MidEllipsis'
 import Typography from '../Typography'
 
@@ -75,7 +74,11 @@ const Filename = ({
 
 Filename.propTypes = {
   /** Filename icon */
-  icon: iconPropType,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   /** folder or file name */
   filename: PropTypes.string,
   /** If a file name, you can specify the extension */
