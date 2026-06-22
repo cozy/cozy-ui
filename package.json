@@ -2,6 +2,9 @@
   "name": "cozy-ui",
   "version": "45.0.0-beta.3",
   "description": "Cozy apps UI SDK",
+  "engines": {
+    "node": "24.x"
+  },
   "main": "./index.js",
   "bin": {
     "rsg-screenshots": "./scripts/screenshots.js"
