@@ -2,10 +2,7 @@
 import { useState } from 'react'
 import ToggleButton from 'cozy-ui/transpiled/react/ToggleButton'
 import ToggleButtonGroup from 'cozy-ui/transpiled/react/ToggleButtonGroup'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import ListIcon from 'cozy-ui/transpiled/react/Icons/List'
-import MosaicIcon from 'cozy-ui/transpiled/react/Icons/MosaicMin'
-import GroupListIcon from 'cozy-ui/transpiled/react/Icons/GroupList'
+import { GroupList, Icon, List, MosaicMin } from '@linagora/twake-icons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -41,7 +38,7 @@ const ToggleGroup = ({ row, col, variant }) => {
         color={col.replace('-disabled','')}
         disabled={col.includes('disabled')}
       >
-        <Icon icon={ListIcon} />
+        <Icon icon={List} />
       </ToggleButton>
       <ToggleButton
         value="mosaic"
@@ -50,7 +47,7 @@ const ToggleGroup = ({ row, col, variant }) => {
         color={col.replace('-disabled','')}
         disabled={col.includes('disabled')}
       >
-        <Icon icon={MosaicIcon} />
+        <Icon icon={MosaicMin} />
       </ToggleButton>
       {variant.third && (
         <ToggleButton
@@ -60,7 +57,7 @@ const ToggleGroup = ({ row, col, variant }) => {
           color={col.replace('-disabled','')}
           disabled={col.includes('disabled')}
         >
-          <Icon icon={GroupListIcon} />
+          <Icon icon={GroupList} />
         </ToggleButton>
       )}
     </ToggleButtonGroup>

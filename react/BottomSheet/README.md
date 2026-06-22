@@ -71,14 +71,7 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
-import FileTypeSheetIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSheet'
-import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
-import FileTypeVideoIcon from 'cozy-ui/transpiled/react/Icons/FileTypeVideo'
-import FileTypePdfIcon from 'cozy-ui/transpiled/react/Icons/FileTypePdf'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import { File, FileTypePdf, FileTypeSheet, FileTypeSlide, FileTypeText, FileTypeVideo, Icon, Right } from '@linagora/twake-icons'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import Radio from 'cozy-ui/transpiled/react/Radios'
@@ -210,14 +203,14 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
               <BottomSheetItem disableGutters>
                 {variant.withTitle && (
                   <>
-                    <BottomSheetTitle icon={FileTypeTextIcon} label="Title" />
+                    <BottomSheetTitle icon={FileTypeText} label="Title" />
                     <Divider />
                   </>
                 )}
                 <List>
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileIcon} />
+                      <Icon icon={File} />
                     </ListItemIcon>
                     <ListItemText primary="Item with icon" secondary=" and with secondary text" />
                   </ListItem>
@@ -238,10 +231,10 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                   <Divider variant="inset" />
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileIcon} />
+                      <Icon icon={File} />
                     </ListItemIcon>
                     <ListItemText primary="Item with secondary action" />
-                    <Icon icon={RightIcon} />
+                    <Icon icon={Right} />
                   </ListItem>
                 </List>
 
@@ -250,13 +243,13 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                 <List>
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileTypeTextIcon} size={32} />
+                      <Icon icon={FileTypeText} size={32} />
                     </ListItemIcon>
                     <ListItemText primary="Files" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileTypeSheetIcon} size={32} />
+                      <Icon icon={FileTypeSheet} size={32} />
                     </ListItemIcon>
                     <ListItemText primary="Sheets" />
                   </ListItem>
@@ -267,13 +260,13 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                 <List>
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileTypeSlideIcon} size={32} />
+                      <Icon icon={FileTypeSlide} size={32} />
                     </ListItemIcon>
                     <ListItemText primary="Slides" />
                   </ListItem>
                   <ListItem button>
                     <ListItemIcon>
-                      <Icon icon={FileTypeVideoIcon} size={32} />
+                      <Icon icon={FileTypeVideo} size={32} />
                     </ListItemIcon>
                     <ListItemText primary="Videos" />
                   </ListItem>

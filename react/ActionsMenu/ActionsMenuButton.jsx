@@ -1,11 +1,10 @@
+import { Icon, Dots } from '@linagora/twake-icons'
 import React, { useState, useRef } from 'react'
 import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import ActionsMenu from '.'
 import { locales } from './Actions/locales/withActionsLocales'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import DotsIcon from '../Icons/Dots'
 import ListItemIcon from '../ListItemIcon'
 
 const ActionsMenuButton = ({ docs, actions }) => {
@@ -22,7 +21,7 @@ const ActionsMenuButton = ({ docs, actions }) => {
           arial-label={t('menu')}
           onClick={() => setShowActions(true)}
         >
-          <Icon icon={DotsIcon} />
+          <Icon icon={Dots} />
         </IconButton>
       </ListItemIcon>
       {showActions && (

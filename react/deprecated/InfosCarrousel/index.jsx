@@ -1,3 +1,4 @@
+import { Icon, Left, Right } from '@linagora/twake-icons'
 import cx from 'classnames'
 import clamp from 'lodash/clamp'
 import PropTypes from 'prop-types'
@@ -5,10 +6,7 @@ import React, { useState, useCallback, useEffect } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
 import IconButton from '../../IconButton'
-import LeftIcon from '../../Icons/Left'
-import RightIcon from '../../Icons/Right'
 
 const useClampedValue = (initialValue, min, max) => {
   const [value, setValue] = useState(initialValue)
@@ -70,7 +68,7 @@ const InfosCarrousel = ({
             size="medium"
             {...previousButtonProps}
           >
-            <Icon icon={LeftIcon} />
+            <Icon icon={Left} />
           </IconButton>
           <span className={styles['InfosCarrousel-separator']} />
           <IconButton
@@ -79,7 +77,7 @@ const InfosCarrousel = ({
             size="medium"
             {...nextButtonProps}
           >
-            <Icon icon={RightIcon} />
+            <Icon icon={Right} />
           </IconButton>
         </div>
       ) : null}

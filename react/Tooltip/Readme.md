@@ -6,8 +6,7 @@ documentation for more information.
 
 ```jsx
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
+import { CarbonCopy, Icon } from '@linagora/twake-icons'
 import Tooltip from 'cozy-ui/transpiled/react/Tooltip'
 
 ;
@@ -17,7 +16,7 @@ import Tooltip from 'cozy-ui/transpiled/react/Tooltip'
   title={
     <>
       <div className="u-flex u-flex-items-center u-mb-half">
-        <Icon icon={CarbonCopyIcon} className="u-mr-half" />
+        <Icon icon={CarbonCopy} className="u-mr-half" />
         <Typography variant="body1" color="inherit">Carbon copy</Typography>
       </div>
       <Typography variant="caption" color="inherit">

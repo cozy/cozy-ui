@@ -1,15 +1,13 @@
 ```jsx
 import { Media, Bd, Img } from 'cozy-ui/transpiled/react/deprecated/Media'
 import UIChip from 'cozy-ui/transpiled/react/deprecated/Chip'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Dots, Icon, Wallet } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import Variants from 'cozy-ui/docs/components/Variants'
 import CompositeRow from 'cozy-ui/transpiled/react/deprecated/CompositeRow'
 
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
-import WalletIcon from 'cozy-ui/transpiled/react/Icons/Wallet'
-import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 import palette from 'cozy-ui/transpiled/react/palette'
 
 const fnacLogoURL = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg'
@@ -35,7 +33,7 @@ const compositeStyle = {
 
 const CompositeImage = () => (
   <Avatar color={palette.melon}>
-    <Icon icon={WalletIcon} />
+    <Icon icon={Wallet} />
   </Avatar>
 )
 
@@ -45,7 +43,7 @@ const Amount = () => (
 
 const onDotsClick = () => { alert('clicked dots !')}
 const Dots = () => (
-  <Icon className="u-c-pointer" color="var(--coolGrey)" icon={DotsIcon} onClick={onDotsClick}/>
+  <Icon className="u-c-pointer" color="var(--coolGrey)" icon={Dots} onClick={onDotsClick}/>
 )
 
 const Chips = () => (

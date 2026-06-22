@@ -4,8 +4,7 @@ See [Material UI documentation](https://material-ui.com/components/floating-acti
 
 ```jsx
 import Fab from 'cozy-ui/transpiled/react/Fab'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import { Icon, Plus } from '@linagora/twake-icons'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -23,7 +22,7 @@ const initialVariants = [{ small: false, medium: true, large: false }]
           <Stack spacing="s">
             <div className="u-mb-half u-mt-1">{prop.color} {prop.default && '(default)'}</div>
             <Fab aria-label="add" {...prop} size={Object.keys(variant).find(key => variant[key])}>
-              <Icon icon={PlusIcon} />
+              <Icon icon={Plus} />
             </Fab>
           </Stack>
         </Grid>
@@ -32,7 +31,7 @@ const initialVariants = [{ small: false, medium: true, large: false }]
         <Grid item xs={12} sm={6} className="u-mb-1" key={Object.values(prop)[0]}>
           <Stack spacing="s">
             <Fab aria-label="add" {...prop} variant="extended" size={Object.keys(variant).find(key => variant[key])}>
-              <Icon icon={PlusIcon} className='u-mr-half' />
+              <Icon icon={Plus} className='u-mr-half' />
               Extended
             </Fab>
           </Stack>
@@ -47,8 +46,7 @@ const initialVariants = [{ small: false, medium: true, large: false }]
 
 ```jsx
 import Fab from 'cozy-ui/transpiled/react/Fab'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import { Icon, Plus } from '@linagora/twake-icons'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
@@ -62,7 +60,7 @@ const props = [{ color: 'primary' }, { color: 'inherit', default: true }]
       <Stack spacing="s">
         <div className="u-mb-half u-mt-1">{prop.color} {prop.default && '(default)'}</div>
         <Fab aria-label="add" {...prop} disabled>
-          <Icon icon={PlusIcon} />
+          <Icon icon={Plus} />
         </Fab>
       </Stack>
     </Grid>
@@ -71,7 +69,7 @@ const props = [{ color: 'primary' }, { color: 'inherit', default: true }]
     <Grid item xs={12} sm={6} className="u-mb-1" key={Object.values(prop)[0]}>
       <Stack spacing="s">
         <Fab aria-label="add" {...prop} disabled variant="extended">
-          <Icon icon={PlusIcon} className='u-mr-half' />
+          <Icon icon={Plus} className='u-mr-half' />
           Extended
         </Fab>
       </Stack>
@@ -86,7 +84,7 @@ To increase discoverability, the FAB can be extended at first and then changed t
 
 ```jsx
 import { ExtendableFab } from 'cozy-ui/transpiled/react/Fab'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import { Plus } from '@linagora/twake-icons'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import {useRef} from 'react'
 
@@ -100,7 +98,7 @@ const Demo = ({ onClick, className }) => {
         follow={box}
         color="primary"
         className="u-mb-1"
-        icon={PlusIcon}
+        icon={Plus}
         style={{position: 'sticky', top: 16, left: 16}}
       />
       <div className="u-p-1">Scroll Horizontally</div>

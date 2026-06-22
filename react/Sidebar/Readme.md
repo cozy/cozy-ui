@@ -16,9 +16,7 @@ In action :
 ```jsx
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav'
-import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import { Check, Download, Warn } from '@linagora/twake-icons'
 
 // <-- only usefull for the documentation,
 // should be `const NavLink = genNavLink(RouterLink)`
@@ -39,13 +37,13 @@ const demoStyle = { position: "initial" }
   <Nav>
     <NavItem id='nav-item'>
       <NavLink to="/warn" active>
-        <NavIcon icon={WarnIcon} />
+        <NavIcon icon={Warn} />
         <NavText>Warn</NavText>
       </NavLink>
     </NavItem>
     <NavItem>
       <NavLink to="/check">
-        <NavIcon icon={CheckIcon} />
+        <NavIcon icon={Check} />
         <NavText>Check</NavText>
       </NavLink>
     </NavItem>
@@ -56,7 +54,7 @@ const demoStyle = { position: "initial" }
     </NavItem>
     <NavItem>
       <NavLink to="/download">
-        <NavIcon icon={DownloadIcon} />
+        <NavIcon icon={Download} />
         <NavText>Download</NavText>
       </NavLink>
     </NavItem>

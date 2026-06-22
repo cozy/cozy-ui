@@ -1,12 +1,11 @@
+import { Icon, CrossMedium } from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { createUseI18n } from 'twake-i18n'
 
 import locales from './locales'
 import styles from './styles.styl'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import CrossMediumIcon from '../Icons/CrossMedium'
 
 const useI18n = createUseI18n(locales)
 
@@ -21,7 +20,7 @@ const CloseButton = ({ onClick, ...props }) => {
         className="dialogIconButton"
         size="medium"
       >
-        <Icon icon={CrossMediumIcon} />
+        <Icon icon={CrossMedium} />
       </IconButton>
     </div>
   )

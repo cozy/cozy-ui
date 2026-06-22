@@ -1,12 +1,10 @@
+import { Icon, Eye, EyeClosed } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 
 import { getStrength } from './helpers'
 import styles from './styles.styl'
-import Icon from '../../Icon'
-import EyeIcon from '../../Icons/Eye'
-import EyeClosedIcon from '../../Icons/EyeClosed'
 import InputGroup from '../../InputGroup'
 import Input from '../../legacy/Input'
 
@@ -19,11 +17,7 @@ const HideShowButton = props => {
       className={cx(styles['PasswordInput__visibilityButton'], className)}
       {...rest}
     >
-      <Icon
-        icon={hidden ? EyeIcon : EyeClosedIcon}
-        size={16}
-        color="var(--coolGrey)"
-      />
+      <Icon icon={hidden ? Eye : EyeClosed} size={16} color="var(--coolGrey)" />
     </button>
   )
 }

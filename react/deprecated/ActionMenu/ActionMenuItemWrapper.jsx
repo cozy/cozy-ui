@@ -1,9 +1,9 @@
+import { Icon } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import { ActionMenuItem } from '.'
-import Icon from '../../Icon'
 import Typography from '../../Typography'
 import { makeStyles } from '../../styles'
 

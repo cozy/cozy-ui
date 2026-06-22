@@ -2,8 +2,7 @@
 
 ```jsx
 import Filename from 'cozy-ui/transpiled/react/Filename'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { File, Icon } from '@linagora/twake-icons'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const initialVariants = [
@@ -15,7 +14,7 @@ const initialVariants = [
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
     <Filename
-      icon={variant.icon ? <Icon icon={FileIcon} size={32} /> : undefined}
+      icon={variant.icon ? <Icon icon={File} size={32} /> : undefined}
       variant={variant.body1Variant ? 'body1' : undefined}
       midEllipsis={variant.midEllipsis}
       filename={variant.short ? "Lacinia condimentum this is the end" : "Lacinia condimentum potenti id est tortor dictumst lectus tincidunt hac ultricies, curae mattis nisi neque sodales sagittis dui nulla aliquam turpis eros, finibus ac iaculis dictum et orci elit posuere ex and this is the end"}
@@ -24,4 +23,3 @@ const initialVariants = [
     />
   )}
 </Variants>
-```

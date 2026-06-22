@@ -13,14 +13,13 @@ Flexbox : <https://philipwalton.github.io/solved-by-flexbox/demos/media-object/>
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/deprecated/Media';
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import { Icon, People } from '@linagora/twake-icons'
 import Typography from 'cozy-ui/transpiled/react/Typography';
-import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
 const imgStyle = { paddingRight: '1rem' };
 
 <Media>
   <Img style={imgStyle}>
-    <Icon icon={PeopleIcon} />
+    <Icon icon={People} />
   </Img>
   <Bd>
     <Typography variant='body1'>{ content.ada.short }</Typography>
@@ -32,16 +31,14 @@ const imgStyle = { paddingRight: '1rem' };
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/deprecated/Media';
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import { Icon, People } from '@linagora/twake-icons'
 import Typography from 'cozy-ui/transpiled/react/Typography';
-
-import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
 
 const imgStyle = { paddingRight: '1rem' };
 
 <Media align='top'>
   <Img style={imgStyle}>
-    <Icon icon={PeopleIcon} />
+    <Icon icon={People} />
   </Img>
   <Bd>
     <Typography variant='body1'>{ content.ada.short }</Typography>
@@ -53,16 +50,14 @@ const imgStyle = { paddingRight: '1rem' };
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/deprecated/Media';
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import { Icon, People } from '@linagora/twake-icons'
 import Typography from 'cozy-ui/transpiled/react/Typography';
-
-import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
 
 const imgStyle = { paddingRight: '1rem' };
 
 <Media align='bottom'>
   <Img style={imgStyle}>
-    <Icon icon={PeopleIcon} />
+    <Icon icon={People} />
   </Img>
   <Bd>
     <Typography variant='body1'>{ content.ada.short }</Typography>

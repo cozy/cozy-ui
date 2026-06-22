@@ -2,7 +2,7 @@
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from 'cozy-ui/transpiled/react/deprecated/Menus'
 import Button from 'cozy-ui/transpiled/react/deprecated/Button'
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
+import { Dots } from '@linagora/twake-icons'
 
 ;
 
@@ -11,7 +11,7 @@ import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
     <Button
       label='Click for more !'
       theme="secondary"
-      icon={DotsIcon}
+      icon={Dots}
       extension="narrow"
       iconOnly
     />

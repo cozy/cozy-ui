@@ -1,3 +1,4 @@
+import { Icon, Bottom, Check, Top } from '@linagora/twake-icons'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
@@ -5,10 +6,6 @@ import ReactSelect, { components } from 'react-select'
 
 import ControlDefault from './ControlDefault'
 import styles from './styles.styl'
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
-import CheckIcon from '../Icons/Check'
-import TopIcon from '../Icons/Top'
 import withBreakpoints from '../helpers/withBreakpoints'
 
 const heights = {
@@ -119,7 +116,7 @@ const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
       <Icon
-        icon={props.selectProps.menuIsOpen ? TopIcon : BottomIcon}
+        icon={props.selectProps.menuIsOpen ? Top : Bottom}
         color="var(--iconTextColor)"
         width="20"
         height="16"
@@ -175,7 +172,7 @@ const Option = ({
       <span className={styles['select-option__checkmark']}>
         {isSelected && (
           <Icon
-            icon={CheckIcon}
+            icon={Check}
             color="var(--primaryColor)"
             className="u-ph-half"
           />

@@ -1,8 +1,7 @@
+import { Icon, Copy } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import CopyIcon from '../../Icons/Copy'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -26,7 +25,7 @@ const makeComponent = (label, icon) => {
 
 export const copyToClipboard = () => {
   const { t } = getActionsI18n()
-  const icon = CopyIcon
+  const icon = Copy
   const label = t('copyToClipboard.copy')
 
   return {

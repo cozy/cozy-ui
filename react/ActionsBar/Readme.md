@@ -13,10 +13,8 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Buttons from 'cozy-ui/transpiled/react/Buttons'
 import ActionsBar from 'cozy-ui/transpiled/react/ActionsBar'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import { makeActions, modify, emailTo, download, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
-import StarIcon from 'cozy-ui/transpiled/react/Icons/Star'
-import FlagIcon from 'cozy-ui/transpiled/react/Icons/FlagOutlined'
+import { Icon, FlagOutlined, Star } from '@linagora/twake-icons'
 
 const doc = {
   _id: 'id01',
@@ -47,8 +45,8 @@ const actions = makeActions([ modify, call, download, smsTo, emailTo ])
 
 const colors = ['default', 'inherit', 'primary', 'secondary', 'error', 'warning', 'info', 'success']
 
-const StarIconComponent = () => <Icon className="u-mr-1" icon={StarIcon} />
-const FlagIconComponent = () => <Icon className="u-mr-1" icon={FlagIcon} />
+const StarIconComponent = () => <Icon className="u-mr-1" icon={Star} />
+const FlagIconComponent = () => <Icon className="u-mr-1" icon={FlagOutlined} />
 
 const icons = {
   default: undefined,

@@ -2,11 +2,9 @@
 import Snackbar from 'cozy-ui/transpiled/react/Snackbar'
 import Alert from 'cozy-ui/transpiled/react/Alert'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+import { Cross, Icon, Info } from '@linagora/twake-icons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import InfoIcon from 'cozy-ui/transpiled/react/Icons/Info'
 import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/providers/Breakpoints'
@@ -31,7 +29,7 @@ const handleToggle = () => {setState(state => ({ open: !state.open }))}
       <>
         <Button variant="text" color="error" size="small" label="UNDO" onClick={handleToggle} />
         <IconButton aria-label="close" color="inherit" onClick={handleToggle}>
-          <Icon icon={CrossIcon} size={14} />
+          <Icon icon={Cross} size={14} />
         </IconButton>
       </>
     }

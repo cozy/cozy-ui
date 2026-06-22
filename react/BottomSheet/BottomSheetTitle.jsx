@@ -1,9 +1,9 @@
+import { Icon } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
 
 import { BottomSheetItem } from '../BottomSheet'
-import Icon from '../Icon'
 import List from '../List'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'

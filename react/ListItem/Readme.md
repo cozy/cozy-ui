@@ -6,14 +6,8 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Comment, Dots, Icon, Pen, People, Right, Trash } from '@linagora/twake-icons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import CommentIcon from 'cozy-ui/transpiled/react/Icons/Comment'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
-import PenIcon from "cozy-ui/transpiled/react/Icons/Pen"
-import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash"
 import Radio from 'cozy-ui/transpiled/react/Radios'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 
@@ -48,12 +42,12 @@ const initialVariants = [{
         <List dense={variant.dense} subheader={<ListSubheader>Section 1</ListSubheader>}>
           <ListItem {...listItemProps} button>
             <ListItemIcon>
-              <Icon icon={CommentIcon} size={iconSize} />
+              <Icon icon={Comment} size={iconSize} />
             </ListItemIcon>
             {variant.multipleLeftIcons && (
               <>
                 <ListItemIcon>
-                  <Icon icon={PeopleIcon} size={iconSize} />
+                  <Icon icon={People} size={iconSize} />
                 </ListItemIcon>
                 <ListItemIcon>
                   <Radio />
@@ -67,7 +61,7 @@ const initialVariants = [{
             {variant.multipleRightIcons && (
               <>
                 <ListItemIcon>
-                  <Icon icon={RightIcon} size={iconSize} />
+                  <Icon icon={Right} size={iconSize} />
                 </ListItemIcon>
                 <ListItemIcon>
                   <Radio />
@@ -80,13 +74,13 @@ const initialVariants = [{
             {variant.withActions && (
               <ListItemSecondaryAction>
                 <IconButton>
-                  <Icon icon={PenIcon} />
+                  <Icon icon={Pen} />
                 </IconButton>
                 <IconButton>
-                  <Icon icon={TrashIcon} />
+                  <Icon icon={Trash} />
                 </IconButton>
                 <IconButton>
-                  <Icon icon={DotsIcon} />
+                  <Icon icon={Dots} />
                 </IconButton>
               </ListItemSecondaryAction>
             )}
@@ -96,4 +90,3 @@ const initialVariants = [{
     )
   }}
 </Variants>
-```

@@ -1,12 +1,11 @@
+import { Icon, Left } from '@linagora/twake-icons'
 import React from 'react'
 
 import NestedSelect from './NestedSelect'
 import styles from './styles.styl'
 import { useCozyDialog, DialogCloseButton } from '../CozyDialogs'
 import Dialog, { DialogTitle, DialogContent } from '../Dialog'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import LeftIcon from '../Icons/Left'
 import List from '../List'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
@@ -23,7 +22,7 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
         {showBack && (
           <div className={styles.Modal__back}>
             <IconButton size="medium" onClick={onClickBack}>
-              <Icon icon={LeftIcon} />
+              <Icon icon={Left} />
             </IconButton>
           </div>
         )}

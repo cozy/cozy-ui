@@ -4,9 +4,8 @@ Chips represent complex entities in small blocks, such as a contact.
 
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
-import Icon from 'cozy-ui/transpiled/react/Icon';
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
-import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import { File, Icon } from '@linagora/twake-icons'
 const ContactChip = ({ contact }) => (
   <Chip style={{ paddingLeft: '0.25rem' }}>
     <Avatar textId={ contact.name } size='s' style={{ marginRight: '0.5rem' }}>{contact.initials}</Avatar> {contact.name}
@@ -15,7 +14,7 @@ const ContactChip = ({ contact }) => (
 
 <div>
   <Chip>
-    <Icon icon={FileIcon} style={{ marginRight: '0.5rem' }}/> File
+    <Icon icon={File} style={{ marginRight: '0.5rem' }}/> File
   </Chip><br/>
   <ContactChip contact={{ initials: 'AL',  name: 'Ada Lovelace'}} />
   <ContactChip contact={{ initials: 'CB',  name: 'Charles Babbage'}} />
@@ -30,10 +29,10 @@ const ContactChip = ({ contact }) => (
 
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import { Icon, Right } from '@linagora/twake-icons'
+
 <Chip.Round>
-  <Icon icon={RightIcon}/>
+  <Icon icon={Right}/>
 </Chip.Round>
 ```
 
@@ -52,12 +51,10 @@ import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
 
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
-import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
+import { Icon, Left, Right } from '@linagora/twake-icons'
 <div>
-  <Chip.Button><Icon icon={RightIcon} /></Chip.Button>
-  <Chip.Button disabled><Icon icon={LeftIcon} /></Chip.Button>
+  <Chip.Button><Icon icon={Right} /></Chip.Button>
+  <Chip.Button disabled><Icon icon={Left} /></Chip.Button>
 </div>
 ```
 
@@ -144,18 +141,16 @@ import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
 
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/deprecated/Chip';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import FileIcon from "cozy-ui/transpiled/react/Icons/File";
-import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith";
+import { File, Icon, Openwith } from '@linagora/twake-icons'
 <Chip
   size="small"
   variant="outlined"
   theme="primary"
   onClick={() => alert('you clicked')}
 >
-  <Icon icon={FileIcon} size={16} style={{ marginRight: '0.5rem' }} />
+  <Icon icon={File} size={16} style={{ marginRight: '0.5rem' }} />
   1 invoice
   <Chip.Separator />
-  <Icon icon={OpenwithIcon} size={16} />
+  <Icon icon={Openwith} size={16} />
 </Chip>
 ```

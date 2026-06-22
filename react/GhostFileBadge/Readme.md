@@ -2,10 +2,8 @@ Ghost badges are specifically used to indicate that a file in a Cozy is a ghost 
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Folder, Icon } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-
-import FolderIcon from "cozy-ui/transpiled/react/Icons/Folder"
 
 ;
 
@@ -21,11 +19,10 @@ import FolderIcon from "cozy-ui/transpiled/react/Icons/Folder"
         borderRadius: "6px"
       }}
     >
-      <Icon icon={FolderIcon} size="16" />
+      <Icon icon={Folder} size="16" />
     </div>
   }
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
 >
   <Avatar size="s">CD</Avatar>
 </Badge>
-```

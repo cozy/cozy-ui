@@ -15,10 +15,9 @@ You render what you want:
 
 ```jsx
 import FileInput from 'cozy-ui/transpiled/react/FileInput';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import { File, Icon } from '@linagora/twake-icons';
 <FileInput onChange={console.log}>
-  <Icon icon={FileIcon} role="button" />
+  <Icon icon={File} role="button" />
 </FileInput>
 ```
 
@@ -47,4 +46,3 @@ If you want a classic input file, just set `hidden` prop to `false`:
 ```jsx
 import FileInput from 'cozy-ui/transpiled/react/FileInput';
 <FileInput hidden={false} onChange={console.log} />
-```

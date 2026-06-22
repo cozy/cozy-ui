@@ -1,11 +1,10 @@
+import { Icon, Cross } from '@linagora/twake-icons'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon from '../../Icon'
 import IconButton from '../../IconButton'
-import CrossIcon from '../../Icons/Cross'
 import Stack from '../../Stack'
 import Typography from '../../Typography'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
@@ -33,7 +32,7 @@ export const Infos = ({
             onClick={dismissAction}
             {...dismissButtonProps}
           >
-            <Icon icon={CrossIcon} size="12" />
+            <Icon icon={Cross} size="12" />
           </IconButton>
         </div>
       )}

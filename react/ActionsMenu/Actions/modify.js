@@ -1,15 +1,14 @@
+import { Icon, Pen } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import PenIcon from '../../Icons/Pen'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
 export const modify = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
-  const icon = PenIcon
+  const icon = Pen
   const label = t('modify')
 
   return {

@@ -17,11 +17,9 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import PointerAlert from 'cozy-ui/transpiled/react/PointerAlert'
 import AlertTitle from 'cozy-ui/transpiled/react/AlertTitle'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { DeviceLaptop, Download, Icon } from '@linagora/twake-icons'
 import TextField from 'cozy-ui/transpiled/react/TextField'
 import Variants from 'cozy-ui/docs/components/Variants'
-import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 
 const initialVariants = [{
   longText: false,
@@ -71,11 +69,11 @@ const handleChangePosition = el => {
                 color={variant.color ? "#EFA82D" : undefined}
                 block={variant.block}
                 square={variant.square}
-                icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} /> : undefined}
+                icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptop} color="var(--errorColor)" size={32} /> : undefined}
                 action={(variant.actionOne || variant.actionTwo) ?
                   <>
                     {variant.actionOne &&
-                      <Button variant="text" size="small" label="Download" startIcon={<Icon icon={DownloadIcon} />} />
+                      <Button variant="text" size="small" label="Download" startIcon={<Icon icon={Download} />} />
                     }
                     {variant.actionTwo &&
                       <Button variant="text" size="small" label="No, thanks!" />

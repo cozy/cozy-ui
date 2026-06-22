@@ -8,9 +8,8 @@ The `dot` variant can be used to indicate that the item _itself_ is new. A `dot`
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import Variants from 'cozy-ui/docs/components/Variants'
-import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
+import { CircleFilled, Icon } from '@linagora/twake-icons'
 
 const initialVariants = [
   { overlap: true, dot: false, withBorder: false, left: false, bottom: false, small: false, large: false }
@@ -32,7 +31,7 @@ const DemoBadge = ({ variant, ...props }) => {
       overlap={variant.overlap ? "circular" : "rectangular"}
     >
       <Icon
-        icon={CircleFilledIcon}
+        icon={CircleFilled}
         size={variant.large ? "32" : variant.small ? "16" : "24"}
         color="var(--slateGrey)"
       />
@@ -63,9 +62,8 @@ Badges can be combined — in this example, we have an item with a new qualifica
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
+import { Icon, Link } from '@linagora/twake-icons'
 
 ;
 
@@ -81,7 +79,7 @@ import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
       }}
     >
       <Badge color="error" variant="dot" size="small">
-        <Icon icon={LinkIcon} size={16} />
+        <Icon icon={Link} size={16} />
       </Badge>
     </div>
   }

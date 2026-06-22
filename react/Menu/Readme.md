@@ -7,16 +7,8 @@ import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
 import List from 'cozy-ui/transpiled/react/List'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Attachment, Attention, Contrast, Copy, Dots, Icon, Pen, People, Telephone } from '@linagora/twake-icons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import CopyIcon from 'cozy-ui/transpiled/react/Icons/Copy'
-import PenIcon from 'cozy-ui/transpiled/react/Icons/Pen'
-import TelephoneIcon from 'cozy-ui/transpiled/react/Icons/Telephone'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
-import AttachmentIcon from 'cozy-ui/transpiled/react/Icons/Attachment'
-import ContrastIcon from 'cozy-ui/transpiled/react/Icons/Contrast'
-import AttentionIcon from 'cozy-ui/transpiled/react/Icons/Attention'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
@@ -55,30 +47,30 @@ const hideMenu = () => setState({ showMenu: false })
   >
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={PenIcon} />
+        <Icon icon={Pen} />
       </ListItemIcon>
       <ListItemText primary="Modify" />
       <ListItemIcon>
         <Typography color='error'>
-          <Icon icon={AttentionIcon} />
+          <Icon icon={Attention} />
         </Typography>
       </ListItemIcon>
     </MenuItem>
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={PeopleIcon} />
+        <Icon icon={People} />
       </ListItemIcon>
       <ListItemText primary="People" />
     </MenuItem>
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={AttachmentIcon} />
+        <Icon icon={Attachment} />
       </ListItemIcon>
       <ListItemText primary="Attachment" />
     </MenuItem>
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={PeopleIcon} />
+        <Icon icon={People} />
       </ListItemIcon>
       <ListItemText
         primary="Item with a very long title to show how it should be displayed"
@@ -93,22 +85,21 @@ const hideMenu = () => setState({ showMenu: false })
 
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={TelephoneIcon} />
+        <Icon icon={Telephone} />
       </ListItemIcon>
       <ListItemText primary="Call" />
     </MenuItem>
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={ContrastIcon} />
+        <Icon icon={Contrast} />
       </ListItemIcon>
       <ListItemText primary="Contrast" />
     </MenuItem>
     <MenuItem onClick={hideMenu}>
       <ListItemIcon>
-        <Icon icon={CopyIcon} />
+        <Icon icon={Copy} />
       </ListItemIcon>
       <ListItemText primary="Copy" />
     </MenuItem>
   </Menu>
 </>
-```

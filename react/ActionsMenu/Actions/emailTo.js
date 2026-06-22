@@ -1,15 +1,14 @@
+import { Icon, Email } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import EmailIcon from '../../Icons/Email'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
 export const emailTo = () => {
   const { t } = getActionsI18n()
-  const icon = EmailIcon
+  const icon = Email
   const label = t('emailTo')
 
   return {

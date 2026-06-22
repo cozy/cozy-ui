@@ -3,13 +3,9 @@ Provides hover, active styles + accessible size.
 
 ```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Cross, Icon, People, Restore, Trash } from '@linagora/twake-icons'
 
 // <-- only useful for the documentation
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
-import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
-import RestoreIcon from 'cozy-ui/transpiled/react/Icons/Restore'
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -33,28 +29,28 @@ const initialVariants = [{ small: false, medium: true, large: false, xlarge: fal
                 disabled={Object.values(column)[1]}
                 size={Object.keys(variant).find(key => variant[key])}
               >
-                <Icon icon={PeopleIcon}/>
+                <Icon icon={People}/>
               </IconButton>
               <IconButton
                 color="primary"
                 disabled={Object.values(column)[1]}
                 size={Object.keys(variant).find(key => variant[key])}
               >
-                <Icon icon={RestoreIcon} />
+                <Icon icon={Restore} />
               </IconButton>
               <IconButton
                 color="secondary"
                 disabled={Object.values(column)[1]}
                 size={Object.keys(variant).find(key => variant[key])}
               >
-                <Icon icon={CrossIcon}/>
+                <Icon icon={Cross}/>
               </IconButton>
               <IconButton
                 color="error"
                 disabled={Object.values(column)[1]}
                 size={Object.keys(variant).find(key => variant[key])}
               >
-                <Icon icon={TrashIcon}/>
+                <Icon icon={Trash}/>
               </IconButton>
             </p>
           </Stack>
@@ -69,9 +65,8 @@ const initialVariants = [{ small: false, medium: true, large: false, xlarge: fal
 
 ```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Icon, Stop } from '@linagora/twake-icons'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
 
 ;
 
@@ -80,8 +75,7 @@ import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
     component="div"
     className="u-miw-auto u-w-2 u-h-2 u-bdrs-circle"
     classes={{ label: "u-flex u-w-auto" }}
-    label={<Icon icon={StopIcon} size={12} />}
+    label={<Icon icon={Stop} size={12} />}
     size="small"
   />
 </IconButton>
-```

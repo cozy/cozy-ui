@@ -7,7 +7,7 @@ import Typography from "cozy-ui/transpiled/react/Typography"
 import Stack from "cozy-ui/transpiled/react/Stack"
 import Box from 'cozy-ui/transpiled/react/Box'
 import Divider from 'cozy-ui/transpiled/react/Divider'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import { Check } from '@linagora/twake-icons'
 import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
 import FormGroup from 'cozy-ui/transpiled/react/FormGroup'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -21,7 +21,7 @@ const StateSwitch = ({ id, color }) => {
   return <Switch
     color={color}
     checked={checked}
-    icon={CheckIcon}
+    icon={Check}
     onChange={handleClick}
   />
 }
@@ -73,7 +73,7 @@ const StateSwitch = ({ id, color }) => {
           control={
             <Switch
               color="primary"
-              icon={CheckIcon}
+              icon={Check}
               disabled
             />
           }
@@ -84,7 +84,7 @@ const StateSwitch = ({ id, color }) => {
           control={
             <Switch
               color="primary"
-              icon={CheckIcon}
+              icon={Check}
               checked
               disabled
             />

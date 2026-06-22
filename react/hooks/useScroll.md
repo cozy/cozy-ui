@@ -7,8 +7,7 @@ Scroll events can be issued at a high frequency. To avoid massive re-rendering, 
 ```jsx
 import useScroll from 'cozy-ui/transpiled/react/hooks/useScroll'
 import Fab from 'cozy-ui/transpiled/react/Fab'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import { Icon, Plus } from '@linagora/twake-icons'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import {useRef, useEffect} from 'react'
 

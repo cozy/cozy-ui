@@ -4,7 +4,7 @@ Call To Action for downloading Cozy desktop client.
 
 ```jsx
 import ButtonClient from "cozy-ui/transpiled/react/deprecated/PushClientButton";
-import BrowserBraveIcon from "cozy-ui/transpiled/react/Icons/BrowserBrave";
+import { BrowserBrave } from '@linagora/twake-icons';
 import Variants from "cozy-ui/docs/components/Variants";
 
 const initialVariants = [{ onClick: true, className: false, icon: false }];
@@ -17,7 +17,7 @@ const initialVariants = [{ onClick: true, className: false, icon: false }];
         href="https://cozy.io"
         onClick={variant.onClick ? () => alert("Clicked!") : undefined}
         className={variant.className ? "u-m-1" : undefined}
-        icon={variant.icon ? BrowserBraveIcon : undefined}
+        icon={variant.icon ? BrowserBrave : undefined}
       />
     )}
   </Variants>
@@ -32,7 +32,7 @@ const initialVariants = [{ onClick: true, className: false, icon: false }];
       <ButtonClient
         label="Button with custom icon"
         href="https://cozy.io"
-        icon={BrowserBraveIcon}
+        icon={BrowserBrave}
       />
     </>
   ) : null}

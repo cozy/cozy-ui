@@ -30,8 +30,8 @@ jobs:
       - uses: ./.github/actions/build_cache
       - name: Lint
         run: yarn lint
-      - name: Generate Sprite and Palette
-        run: yarn makeSpriteAndPalette
+      - name: Generate Palette
+        run: yarn makePalette
       - name: Build JS
         run: yarn build
       - name: Build CSS

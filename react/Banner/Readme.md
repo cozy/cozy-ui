@@ -4,10 +4,8 @@ We should now use Alert instead. See this example:
 
 ```jsx
 import Alert from 'cozy-ui/transpiled/react/Alert'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { DeviceLaptop, Download, Icon } from '@linagora/twake-icons'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import Variants from 'cozy-ui/docs/components/Variants'
 import { useBreakpoints, BreakpointsProvider} from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
@@ -29,7 +27,7 @@ const Comp = ({ variant }) => {
   return (
     <Alert
       icon={variant.icon
-        ? <Icon icon={DeviceLaptopIcon} size={32} color="var(--primaryTextColor)" />
+        ? <Icon icon={DeviceLaptop} size={32} color="var(--primaryTextColor)" />
         : false
       }
       color={variant.backgroundColor ? "var(--contrastBackgroundColor)" : undefined}
@@ -42,7 +40,7 @@ const Comp = ({ variant }) => {
               variant="text"
               size="small"
               label="DOWNLOAD"
-              startIcon={<Icon icon={DownloadIcon} />}
+              startIcon={<Icon icon={Download} />}
               onClick={() => alert('Clicked!')}
             />
           )}

@@ -1,11 +1,9 @@
+import { Icon, Download, File } from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
 import Avatar from '../Avatar'
-import Icon from '../Icon'
-import DownloadIcon from '../Icons/Download'
-import FileIcon from '../Icons/File'
 import Typography from '../Typography'
 
 /**
@@ -26,7 +24,7 @@ const HistoryRow = ({
         <div className={styles.HistoryRowCircleWrapper}>
           <div className={styles.HistoryRowMediaImg}>
             <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
-              {tag && <Icon icon={FileIcon} color="var(--primaryTextColor)" />}
+              {tag && <Icon icon={File} color="var(--primaryTextColor)" />}
             </Avatar>
           </div>
         </div>
@@ -46,7 +44,7 @@ const HistoryRow = ({
             <Icon
               className="u-c-pointer"
               color="var(--secondaryTextColor)"
-              icon={DownloadIcon}
+              icon={Download}
               onClick={() => downloadLink()}
             />
           </div>

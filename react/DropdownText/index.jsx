@@ -1,8 +1,7 @@
+import { Icon, Bottom } from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
 
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
 import Typography from '../Typography'
 import { makeStyles } from '../styles'
 
@@ -76,7 +75,7 @@ const DropdownText = forwardRef(
           {...innerIconContainerProps}
         >
           <Icon
-            icon={BottomIcon}
+            icon={Bottom}
             size={endIconSizeByVariant[variant]}
             {...innerIconProps}
           />

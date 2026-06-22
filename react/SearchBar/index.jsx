@@ -1,3 +1,4 @@
+import { Cross, Icon, Magnifier } from '@linagora/twake-icons'
 import cx from 'classnames'
 import debounce from 'lodash/debounce'
 import PropTypes from 'prop-types'
@@ -6,10 +7,7 @@ import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import { locales } from './locales/withOnlyLocales'
 import ButtonBase from '../ButtonBase'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import CrossIcon from '../Icons/Cross'
-import MagnifierIcon from '../Icons/Magnifier'
 import InputBase from '../InputBase'
 import Paper from '../Paper'
 import Typography from '../Typography'
@@ -223,7 +221,7 @@ const SearchBar = forwardRef(
         )}
         {spreadValue && !disabledClear && (
           <IconButton size="medium" onClick={handleClear}>
-            <Icon icon={CrossIcon} />
+            <Icon icon={Cross} />
           </IconButton>
         )}
         {!disabledHover && (
@@ -245,7 +243,7 @@ SearchBar.displayName = 'SearchBar'
 
 SearchBar.defaultProps = {
   elevation: 1,
-  icon: MagnifierIcon,
+  icon: Magnifier,
   size: 'small',
   type: 'search',
   disabledClear: false,

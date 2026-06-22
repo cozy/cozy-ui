@@ -6,7 +6,7 @@ simply as a list with subheaders.
 ```jsx
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import { Bank, Gear, Icon, People, Right, Trash } from '@linagora/twake-icons'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import Divider from 'cozy-ui/transpiled/react/Divider'
 import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/ListItemIcon'
@@ -20,12 +20,6 @@ import NavigationList, {
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
-import GearIcon from "cozy-ui/transpiled/react/Icons/Gear";
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
-import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
-import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
-import BankIcon from "cozy-ui/transpiled/react/Icons/Bank";
-
 const NavigationListExample = ({ style }) => {
   return (
     <NavigationList style={style}>
@@ -33,12 +27,12 @@ const NavigationListExample = ({ style }) => {
         <NavigationListSection>
        <ListItem>
           <ListItemIcon>
-            <Icon icon={GearIcon} size={mediumSize} />
+            <Icon icon={Gear} size={mediumSize} />
           </ListItemIcon>
           <ListItemText primary="General settings" />
           <ListItemSecondaryAction>
             <Icon
-              icon={RightIcon}
+              icon={Right}
               size={smallSize}
               className="u-mr-1"
             />
@@ -47,12 +41,12 @@ const NavigationListExample = ({ style }) => {
         <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
-            <Icon icon={GearIcon} size={largeSize} />
+            <Icon icon={Gear} size={largeSize} />
           </ListItemIcon>
           <ListItemText primary="A large icon does not change size of icon area" />
           <ListItemSecondaryAction>
             <Icon
-              icon={RightIcon}
+              icon={Right}
               size={smallSize}
               className="u-mr-1"
             />
@@ -61,7 +55,7 @@ const NavigationListExample = ({ style }) => {
         <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
-            <Icon icon={PeopleIcon} size={smallSize} />
+            <Icon icon={People} size={smallSize} />
           </ListItemIcon>
           <ListItemText
             primary="User preferences"
@@ -69,7 +63,7 @@ const NavigationListExample = ({ style }) => {
           />
           <ListItemSecondaryAction>
             <Icon
-              icon={RightIcon}
+              icon={Right}
               size={smallSize}
               className="u-mr-1"
             />
@@ -78,7 +72,7 @@ const NavigationListExample = ({ style }) => {
         <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
-            <Icon icon={TrashIcon} className="u-error" size={smallSize} />
+            <Icon icon={Trash} className="u-error" size={smallSize} />
           </ListItemIcon>
           <ListItemText
             primary="Delete account"
@@ -92,12 +86,12 @@ const NavigationListExample = ({ style }) => {
       <NavigationListSection>
         <ListItem>
           <ListItemIcon>
-            <Icon icon={BankIcon} size={smallSize} />
+            <Icon icon={Bank} size={smallSize} />
           </ListItemIcon>
           <ListItemText primary="Bank accounts" />
           <ListItemSecondaryAction>
             <Icon
-              icon={RightIcon}
+              icon={Right}
               size={smallSize}
               className="u-mr-1"
             />

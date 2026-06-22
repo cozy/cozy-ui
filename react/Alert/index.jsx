@@ -1,23 +1,25 @@
+import {
+  CheckCircle,
+  Icon,
+  Info,
+  Warning,
+  WarningCircle
+} from '@linagora/twake-icons'
 import MuiAlert from '@material-ui/lab/Alert'
 import cx from 'classnames'
 import merge from 'lodash/merge'
 import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
 
-import Icon from '../Icon'
-import CheckCircleIcon from '../Icons/CheckCircle'
-import InfoIcon from '../Icons/Info'
-import WarningIcon from '../Icons/Warning'
-import WarningCircleIcon from '../Icons/WarningCircle'
 import { makeStyles } from '../styles'
 
 const DEFAULT_ICON_SIZE = 16
 
 const defaultIconMapping = {
-  success: <Icon icon={CheckCircleIcon} />,
-  warning: <Icon icon={WarningIcon} />,
-  error: <Icon icon={WarningCircleIcon} />,
-  info: <Icon icon={InfoIcon} />
+  success: <Icon icon={CheckCircle} />,
+  warning: <Icon icon={Warning} />,
+  error: <Icon icon={WarningCircle} />,
+  info: <Icon icon={Info} />
 }
 
 const makeIcon = (icon, severity) => {
@@ -28,7 +30,7 @@ const makeIcon = (icon, severity) => {
 
   return (
     icon ||
-    (['primary', 'secondary'].includes(severity) && <Icon icon={InfoIcon} />) ||
+    (['primary', 'secondary'].includes(severity) && <Icon icon={Info} />) ||
     undefined
   )
 }

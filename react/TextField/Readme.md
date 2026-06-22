@@ -4,8 +4,7 @@ Cozy themed MUI TextField. See [the official API](https://v4.mui.com/api/text-fi
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import TextField from 'cozy-ui/transpiled/react/TextField'
 import Variants from 'cozy-ui/docs/components/Variants'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { File, Icon } from '@linagora/twake-icons'
 import InputAdornment from 'cozy-ui/transpiled/react/InputAdornment'
 import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
 
@@ -22,7 +21,7 @@ const initialVariants = [{
 const inputProps = {
   startAdornment: (
     <InputAdornment position="start">
-      <Icon className="u-mr-half" icon={FileIcon} />Ko
+      <Icon className="u-mr-half" icon={File} />Ko
     </InputAdornment>
   ),
   endAdornment: (

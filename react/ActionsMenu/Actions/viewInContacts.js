@@ -1,15 +1,14 @@
+import { Icon, Openapp } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import OpenappIcon from '../../Icons/Openapp'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
 
 export const viewInContacts = ({ client, generateWebLink }) => {
   const { t } = getActionsI18n()
-  const icon = OpenappIcon
+  const icon = Openapp
   const label = t('viewInContacts')
 
   return {

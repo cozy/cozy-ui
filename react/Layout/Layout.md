@@ -37,14 +37,10 @@ import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter, NavDesktopDropdown } from 'cozy-ui/transpiled/react/Nav'
 import cx from 'classnames'
 import isEqual from 'lodash/isEqual'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Check, CrossMedium, Download, Icon, Warn } from '@linagora/twake-icons'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
-import CrossMediumIcon from 'cozy-ui/transpiled/react/Icons/CrossMedium'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Dialog from 'cozy-ui/transpiled/react/Dialog'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -111,7 +107,7 @@ const SideBar = ({ variant }) => {
       <Nav>
         <NavItem>
           <NavLink {...makeProps(['Section 1'])}>
-            <NavIcon icon={WarnIcon} />
+            <NavIcon icon={Warn} />
             <NavText>Section 1</NavText>
           </NavLink>
         </NavItem>
@@ -128,13 +124,13 @@ const SideBar = ({ variant }) => {
         </NavDesktopLimiter>
         <NavItem>
           <NavLink {...makeProps(['Section 2'])}>
-            <NavIcon icon={CheckIcon} />
+            <NavIcon icon={Check} />
             <NavText>Section 2</NavText>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink {...makeProps(['Section 3'])}>
-            <NavIcon icon={DownloadIcon} />
+            <NavIcon icon={Download} />
             <NavText>Section 3</NavText>
           </NavLink>
         </NavItem>
@@ -169,7 +165,7 @@ const SideBar = ({ variant }) => {
             className={styles.closeButton}
             onClick={() => setShowDialog(false)}
           >
-            <Icon icon={CrossMediumIcon} />
+            <Icon icon={CrossMedium} />
           </IconButton>
           {variant.withTopBar &&
             <div
@@ -201,4 +197,3 @@ const SideBar = ({ variant }) => {
     </DemoProvider>
   )}
 </Variants>
-```

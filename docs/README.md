@@ -135,7 +135,7 @@ First `nvm use` (to set node version as defined in .nvmrc) then `yarn install`
 It is convenient when modifying a component to use the styleguide site.
 
 ```bash
-yarn makeSpriteAndPalette # Create sprite and palette
+yarn makePalette # Create palette
 yarn start # Transpile the files in watch mode
 yarn build:css:all # Build CSS files needed by the documentation
 yarn start:doc # Run the styleguide in watch mode
@@ -157,7 +157,7 @@ If you want to add a new component, you must follow these steps:
 - Add the new component in `/react` folder with its `README.md` file
 - Expose it in the API by adding it in `react/index.js`
 - Add it in the documentation by modifying `docs/styleguide.config.js`
-- If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makeSpriteAndPalette && yarn build && yarn test -u`
+- If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makePalette && yarn build && yarn test -u`
 - Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
 - Try to think of ARIA attributes if you are coding new components
 
@@ -174,18 +174,6 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 - Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
 - Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
 
-### Add an icon
-
-If you want to add a new icon to cozy-ui, you must follow these steps:
-
-- If you SVG file is an icon (not an illustration), verify that the file doesn't have any fill or fill-opacity properties. Remove them if necessary
-- Add the SVG in the `assets/icons/[ui || illus]` folder
-- Optimize it with `yarn svgo assets/icons/[ui || illus]/[new icon file name]`
-- Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
-- Update the documentation by adding the new file in `react/Icon/Readme.md`. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
-- Don't forget to check the icon's color on different theme (inverted, etc.)
-- Update the tests by running `yarn makeSpriteAndPalette && yarn build && yarn test -u`
-
 ### Develop inside an app
 
 Sometimes, you want to develop on a component, from the context of an app.
@@ -193,10 +181,10 @@ Then you need to link cozy-ui with `yarn link`. Since `cozy-ui` is transpiled, w
 
 ```bash
 cd cozy-ui
-yarn makeSpriteAndPalette # if first time
+yarn makePalette # if first time
 yarn link
 yarn start # Launch transpilation
-yarn makeSpriteAndPalette # if you change icons or palette
+yarn makePalette # if you change palette
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
@@ -229,7 +217,7 @@ yarn build:all && yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 Be aware that snapshots in unit tests use the transpiled version of cozy-ui. Therefore if you make changes and need to update the snapshots, you need to transpile first.
 
 ```bash
-yarn makeSpriteAndPalette && yarn build && yarn test -u
+yarn makePalette && yarn build && yarn test -u
 ```
 
 We suggest to use `@testing-library/react` over `enzyme` for tests. We have
@@ -273,6 +261,8 @@ Before creating any screenshots, make sure you have built everything:
 ```bash
 yarn build:all
 ```
+
+You may have to change `executablePath` value of `prepareBrowser` function to match your OS configuration.
 
 Now you are ready to create screenshots:
 

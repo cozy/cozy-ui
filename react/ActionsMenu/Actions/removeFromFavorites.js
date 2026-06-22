@@ -1,8 +1,7 @@
+import { Icon, Star } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import StarIcon from '../../Icons/Star'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -26,7 +25,7 @@ const makeComponent = (label, icon) => {
 
 export const removeFromFavorites = ({ client, showAlert, splitFilename }) => {
   const { t } = getActionsI18n()
-  const icon = StarIcon
+  const icon = Star
   const label = t('favorites.remove.label')
 
   return {

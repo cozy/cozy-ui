@@ -1,3 +1,4 @@
+import { Icon, Left, Right } from '@linagora/twake-icons'
 import cx from 'classnames'
 import format from 'date-fns/format'
 import range from 'lodash/range'
@@ -6,9 +7,6 @@ import React, { useState } from 'react'
 import { useI18n } from 'twake-i18n'
 
 import styles from './styles.styl'
-import Icon from '../Icon'
-import LeftIcon from '../Icons/Left'
-import RightIcon from '../Icons/Right'
 
 const MonthButton = ({ monthNum, onClick, isSelected }) => {
   const { f } = useI18n()
@@ -60,7 +58,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           title={year - 1}
           onClick={decreaseYear}
         >
-          <Icon icon={LeftIcon} />
+          <Icon icon={Left} />
         </button>
         <div className={cx(styles.DateMonthPicker__Year)}>{year}</div>
         <button
@@ -68,7 +66,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           title={year + 1}
           onClick={increaseYear}
         >
-          <Icon icon={RightIcon} />
+          <Icon icon={Right} />
         </button>
       </div>
       <div className={styles.DateMonthPicker__MonthGrid}>

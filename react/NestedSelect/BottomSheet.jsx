@@ -1,12 +1,11 @@
+import { Icon, ArrowUp } from '@linagora/twake-icons'
 import cx from 'classnames'
 import React from 'react'
 
 import NestedSelect from './NestedSelect'
 import BottomSheet, { BottomSheetHeader, BottomSheetItem } from '../BottomSheet'
 import Divider from '../Divider'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
-import ArrowUpIcon from '../Icons/ArrowUp'
 import Typography from '../Typography'
 
 const HeaderComponent = ({ title, showBack, onClickBack }) => {
@@ -19,7 +18,7 @@ const HeaderComponent = ({ title, showBack, onClickBack }) => {
       >
         {showBack && (
           <IconButton onClick={onClickBack}>
-            <Icon icon={ArrowUpIcon} rotate={-90} />
+            <Icon icon={ArrowUp} rotate={-90} />
           </IconButton>
         )}
         <Typography className="u-w-100" variant="h6" align="center">

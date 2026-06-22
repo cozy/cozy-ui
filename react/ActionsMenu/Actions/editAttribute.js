@@ -1,8 +1,7 @@
+import { Icon, TextInfo } from '@linagora/twake-icons'
 import React, { forwardRef } from 'react'
 
 import { getActionsI18n } from './locales/withActionsLocales'
-import Icon from '../../Icon'
-import TextInfoIcon from '../../Icons/TextInfo'
 import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -26,7 +25,7 @@ const makeComponent = (label, icon) => {
 
 export const editAttribute = () => {
   const { t } = getActionsI18n()
-  const icon = TextInfoIcon
+  const icon = TextInfo
   const label = t('editAttribute')
 
   return {

@@ -2,9 +2,7 @@ The InfosBadge is used to provide extra information about the item it is annotat
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
-import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
+import { CircleFilled, Icon, Link } from '@linagora/twake-icons'
 
 ;
 
@@ -18,11 +16,10 @@ import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
         boxShadow: 'var(--shadow3)'
       }}
     >
-      <Icon icon={LinkIcon} size="10" />
+      <Icon icon={Link} size="10" />
     </div>
   }
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
 >
-  <Icon icon={CircleFilledIcon} size="32" color="var(--slateGrey)" />
+  <Icon icon={CircleFilled} size="32" color="var(--slateGrey)" />
 </Badge>
-```

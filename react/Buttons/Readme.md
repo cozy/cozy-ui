@@ -13,7 +13,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Icon } from '@linagora/twake-icons'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
@@ -72,10 +72,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import StopIcon from 'cozy-ui/transpiled/react/Icons/Stop'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import ArrowUpIcon from 'cozy-ui/transpiled/react/Icons/ArrowUp'
+import { ArrowUp, Icon, Plus, Stop } from '@linagora/twake-icons'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const iconPositions = ['startIcon', 'endIcon']
@@ -92,7 +89,7 @@ const iconPositions = ['startIcon', 'endIcon']
             <Button
               label={variant}
               variant={variant}
-              {...({[`${iconPosition}`]: <Icon icon={PlusIcon} />})}
+              {...({[`${iconPosition}`]: <Icon icon={Plus} />})}
             />
           </div>
         )}
@@ -106,12 +103,12 @@ const iconPositions = ['startIcon', 'endIcon']
           <div key={variant}>
             <Button
               className="u-miw-auto"
-              label={<Icon icon={PlusIcon} />}
+              label={<Icon icon={Plus} />}
               variant={variant}
             />
             <Button
               className="u-ml-1 u-miw-auto"
-              label={<Icon icon={PlusIcon} />}
+              label={<Icon icon={Plus} />}
               variant={variant}
               disabled
             />
@@ -128,13 +125,13 @@ const iconPositions = ['startIcon', 'endIcon']
               className="u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
               size="small"
-              label={<Icon icon={StopIcon} size={12} />}
+              label={<Icon icon={Stop} size={12} />}
               variant={variant}
             />
             <Button
               className="u-ml-1 u-miw-auto u-mih-auto u-w-2 u-h-2 u-bdrs-circle"
               classes={{ label: "u-flex u-w-auto" }}
-              label={<Icon icon={StopIcon} size={12} />}
+              label={<Icon icon={Stop} size={12} />}
               size="small"
               variant={variant}
               disabled
@@ -153,8 +150,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import { Icon, Plus } from '@linagora/twake-icons'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const iconPositions = ['startIcon', 'endIcon']
@@ -174,7 +170,7 @@ const sizes = ['small', 'medium', 'large']
               label={variant}
               variant={variant}
               size={size}
-              {...({[`${iconPosition}`]: <Icon icon={PlusIcon}/>})}
+              {...({[`${iconPosition}`]: <Icon icon={Plus}/>})}
             />
           </div>
         )}

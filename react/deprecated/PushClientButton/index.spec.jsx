@@ -3,9 +3,10 @@ import React from 'react'
 
 import PushClientButton from '.'
 
-jest.mock('../../Icons/DeviceLaptop', () => () => (
-  <div data-testid="device-laptop" />
-))
+jest.mock('@linagora/twake-icons', () => ({
+  ...jest.requireActual('@linagora/twake-icons'),
+  DeviceLaptop: () => <div data-testid="device-laptop" />
+}))
 
 describe('PushClientButton', () => {
   it('should use DeviceLaptop if icon prop is not defined', async () => {

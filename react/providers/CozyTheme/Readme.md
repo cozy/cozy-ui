@@ -10,7 +10,7 @@ import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import Buttons from 'cozy-ui/transpiled/react/Buttons'
 import TextField from 'cozy-ui/transpiled/react/TextField'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+import { Dots } from '@linagora/twake-icons'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 

@@ -7,9 +7,7 @@ context.
 ```jsx
 import { Component } from 'react'
 import Breadcrumbs from 'cozy-ui/transpiled/react/legacy/Breadcrumbs';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import FolderIcon from 'cozy-ui/transpiled/react/Icons/Folder'
+import { File, Folder, Icon } from '@linagora/twake-icons'
 
 const items = [
   {
@@ -36,7 +34,7 @@ const Items = ({ items, onClickItem }) => {
   return items.map(item => (
     <div style={{ color: 'var(--primaryTextColor)', height: '2rem', display: 'flex', alignItems: 'center'}} className={item.items ? 'u-c-pointer' : null } onClick={() => onClickItem(item)}>
       <Icon
-        icon={!item.items ? FileIcon : FolderIcon}
+        icon={!item.items ? File : Folder}
         className='u-mr-half' color='var(--primaryTextColor)' />
       { item.name }
     </div>

@@ -1,9 +1,8 @@
+import { Icon, Right } from '@linagora/twake-icons'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import Divider from '../Divider'
-import Icon from '../Icon'
-import RightIcon from '../Icons/Right'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
@@ -47,7 +46,7 @@ const ItemRow = ({
 
         {item.children && item.children.length > 0 && (
           <ListItemIcon>
-            <Icon icon={RightIcon} color="var(--secondaryTextColor)" />
+            <Icon icon={Right} color="var(--secondaryTextColor)" />
           </ListItemIcon>
         )}
 
