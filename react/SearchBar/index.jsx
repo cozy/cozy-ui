@@ -7,7 +7,6 @@ import { useI18n, useExtendI18n } from 'twake-i18n'
 import { locales } from './locales/withOnlyLocales'
 import ButtonBase from '../ButtonBase'
 import Icon from '../Icon'
-import { iconPropType } from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
 import MagnifierIcon from '../Icons/Magnifier'
@@ -262,7 +261,11 @@ SearchBar.defaultProps = {
 SearchBar.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(['button', 'search']),
-  icon: iconPropType,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   size: PropTypes.oneOf(['small', 'medium', 'large', 'auto']),
   componentsProps: PropTypes.shape({
     /** Props spread to InputBase component */

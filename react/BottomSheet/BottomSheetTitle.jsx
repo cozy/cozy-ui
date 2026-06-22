@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { forwardRef } from 'react'
 
 import { BottomSheetItem } from '../BottomSheet'
-import Icon, { iconPropType } from '../Icon'
+import Icon from '../Icon'
 import List from '../List'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
@@ -48,7 +48,11 @@ const BottomSheetTitle = forwardRef(({ className, label, icon }, ref) => {
 BottomSheetTitle.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
-  icon: iconPropType
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ])
 }
 
 export default BottomSheetTitle

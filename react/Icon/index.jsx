@@ -105,14 +105,12 @@ Icon.isProperIcon = icon => {
   return isSvgSymbol || isIconIdentifier || isSvgr
 }
 
-export const iconPropType = PropTypes.oneOfType([
-  PropTypes.string,
-  PropTypes.object,
-  PropTypes.func
-])
-
 Icon.propTypes = {
-  icon: iconPropType,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './styles.styl'
-import Icon, { iconPropType } from '../../Icon'
+import Icon from '../../Icon'
 import SpinnerIcon from '../../Icons/Spinner'
 
 const btnClass = function (options) {
@@ -139,7 +139,12 @@ Button.propTypes = {
   /** Label of the button */
   label: PropTypes.node.isRequired,
   /** Icon of the button */
-  icon: PropTypes.oneOfType([PropTypes.node, iconPropType]),
+  icon: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   /** Displays only the icon, not the label */
   iconOnly: PropTypes.bool,
   theme: PropTypes.string,

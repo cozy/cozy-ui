@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { ActionMenuItem } from '.'
-import Icon, { iconPropType } from '../../Icon'
+import Icon from '../../Icon'
 import Typography from '../../Typography'
 import { makeStyles } from '../../styles'
 
@@ -69,7 +69,11 @@ ActionMenuItemWrapper.defaultProps = {
 }
 
 ActionMenuItemWrapper.propTypes = {
-  icon: iconPropType,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   className: PropTypes.string,
   isEnabled: PropTypes.bool,
   componentsProps: PropTypes.shape({
