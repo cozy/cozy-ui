@@ -5944,6 +5944,46 @@ body {
   margin-top: 3rem;
 }
 
+.renderSaferAnim--2rNtc {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  animation: slidein--1E_4T 1s;
+}
+@-moz-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@-webkit-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@-o-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
 .divider--SuA5q {
   align-items: center;
   display: flex;
@@ -5989,46 +6029,6 @@ body {
   .DialogBackButton--1c7yH {
     top: 0.25rem;
     left: 0.25rem;
-  }
-}
-
-.renderSaferAnim--2rNtc {
-  position: absolute;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  animation: slidein--1E_4T 1s;
-}
-@-moz-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@-webkit-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@-o-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
   }
 }
 
