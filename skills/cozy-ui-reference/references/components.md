@@ -16,8 +16,8 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Dialogs**: [ActionsBar](#actionsbar), [ActionsMenu](#actionsmenu), [CozyDialogs](#cozydialogs), [Dialog](#dialog), [Menu](#menu), [SpecificDialogs (CozyDialogs/SpecificDialogs)](#specificdialogs-cozydialogs-specificdialogs)
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
 - **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
-- **Labs**: [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
-- **Other**: [BottomSheet](#bottomsheet), [providers](#providers)
+- **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
+- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [providers](#providers)
 
 ## Buttons
 
@@ -253,6 +253,7 @@ import SearchBar from 'cozy-ui/transpiled/react/SearchBar'
 |------|------|---------|-------------|
 | `className` | string | - | - |
 | `type` | `button` \| `search` | `'search'` | - |
+| `icon` | string \| object \| function | `Magnifier` | - |
 | `size` | `small` \| `medium` \| `large` \| `auto` | `'small'` | - |
 | `componentsProps` | object | - | - |
 | `value` | string | - | Used to control the component outside of it |
@@ -409,8 +410,8 @@ import Empty from 'cozy-ui/transpiled/react/Empty'
 **Example:**
 
 ```jsx
+import { Icon, Cozy } from '@linagora/twake-icons'
 import Empty from 'cozy-ui/transpiled/react/Empty'
-import { Cozy, Icon } from '@linagora/twake-icons'
 
 <>
   <Empty
@@ -442,6 +443,7 @@ import { Cozy, Icon } from '@linagora/twake-icons'
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
+| `icon` | string \| object \| function | - | - |
 | `iconSize` | `normal` \| `medium` \| `large` | `'normal'` | - |
 | `title` | React.node | - | - |
 | `text` | React.node | - | - |
@@ -903,8 +905,8 @@ import Badge from 'cozy-ui/transpiled/react/Badge'
 
 ```jsx
 import Badge from 'cozy-ui/transpiled/react/Badge'
-import { Icon, Link } from '@linagora/twake-icons'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
+import { Icon, Link } from '@linagora/twake-icons'
 
 <Badge
   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -999,6 +1001,7 @@ import Filename from 'cozy-ui/transpiled/react/Filename'
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
+| `icon` | string \| object \| function | - | Filename icon |
 | `filename` | string | - | folder or file name |
 | `extension` | string | - | If a file name, you can specify the extension |
 | `midEllipsis` | boolean | `false` | To replace the end ellipsis by a middle on in the filename |
@@ -1097,7 +1100,7 @@ const HistoryRow = ({
         <div className={styles.HistoryRowCircleWrapper}>
           <div className={styles.HistoryRowMediaImg}>
             <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
-              {tag && <Icon icon={FileIcon} color="var(--primaryTextColor)" />}
+              {tag && <Icon icon={File} color="var(--primaryTextColor)" />}
             </Avatar>
           </div>
         </div>
@@ -1117,7 +1120,7 @@ const HistoryRow = ({
             <Icon
               className="u-c-pointer"
               color="var(--secondaryTextColor)"
-              icon={DownloadIcon}
+              icon={Download}
               onClick={() => downloadLink()}
             />
           </div>
@@ -1753,6 +1756,29 @@ const Example = () => {
 
 ## Labs
 
+### IconGrid (Labs/IconGrid)
+
+A component to display a grid of 4 icons. This component is not considered stable and may be replaced by a more generic grid component in the future.
+
+```jsx
+import IconGrid from 'cozy-ui/transpiled/react/Labs/IconGrid'
+```
+
+**Example:**
+
+```jsx
+import IconGrid from 'cozy-ui/transpiled/react/Labs/IconGrid'
+import { Cloud, CloudHappy, File, Icon, Online } from '@linagora/twake-icons'
+
+<IconGrid>
+  <Icon icon={File} />
+  <Icon icon={Cloud} />
+  <Icon icon={CloudHappy} />
+  <Icon icon={Online} />
+</IconGrid>
+```
+
+
 ### Labs
 
 In this directory, components you will find are experimental and subject to API change without creating any breaking change.
@@ -1779,6 +1805,15 @@ import PasswordInput from 'cozy-ui/transpiled/react/Labs/PasswordInput'
 ---
 
 ## Other
+
+### Autocomplete
+
+Re-export of @material-ui. See the official API.
+
+```jsx
+import Autocomplete from 'cozy-ui/transpiled/react/Autocomplete'
+```
+
 
 ### BottomSheet
 
