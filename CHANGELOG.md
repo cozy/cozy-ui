@@ -1,3 +1,24 @@
+# [140.0.0](https://github.com/cozy/cozy-ui/compare/v139.2.0...v140.0.0) (2026-06-23)
+
+
+### Features
+
+* **Icon:** Remove `iconPropType` export ([aad4a08](https://github.com/cozy/cozy-ui/commit/aad4a08))
+* Replace Icons by twake-icons ([f8480ad](https://github.com/cozy/cozy-ui/commit/f8480ad)), closes [linagora/cozy-libs#3039](https://github.com/linagora/cozy-libs/issues/3039)
+
+
+### BREAKING CHANGES
+
+* You must import Icon, Sprite and Icons from `@linagora/twake-icons`. You can use this codemodes :
+```
+yarn add @linagora/twake-icons
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift babel --parser tsx --ignore-pattern=src/targets/ --extensions js,jsx,ts,tsx -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-bc-140.js src
+yarn lint --fix
+```
+* **Icon:** You must replace `import { iconPropType } from 'cozy-ui/transpiled/react/Icon'` by `PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.func])`
+
 # [139.2.0](https://github.com/cozy/cozy-ui/compare/v139.1.0...v139.2.0) (2026-06-09)
 
 
