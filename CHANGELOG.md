@@ -1,3 +1,10 @@
+# [140.1.0](https://github.com/cozy/cozy-ui/compare/v140.0.0...v140.1.0) (2026-06-23)
+
+
+### Features
+
+* Re-export of [@material-ui](https://github.com/material-ui) Autocomplete ([73c077a](https://github.com/cozy/cozy-ui/commit/73c077a))
+
 # [140.0.0](https://github.com/cozy/cozy-ui/compare/v139.2.0...v140.0.0) (2026-06-23)
 
 
