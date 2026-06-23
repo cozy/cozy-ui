@@ -11,19 +11,19 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_modules
   prepareArgos:
     needs: [install]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_argos
   build:
     needs: [install]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
       - uses: ./.github/actions/setup_modules
@@ -44,7 +44,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_modules
       - uses: ./.github/actions/build_cache_read
       - name: BundleMon
@@ -56,7 +56,7 @@ jobs:
     needs: [prepareArgos, build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_argos
       - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_desktop_cache
@@ -68,7 +68,7 @@ jobs:
     needs: [prepareArgos, build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_argos
       - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_mobile_cache
@@ -80,7 +80,7 @@ jobs:
     needs: [prepareArgos, build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_argos
       - uses: ./.github/actions/build_cache_read
       - uses: ./.github/actions/build_argos_kss_cache
@@ -92,7 +92,7 @@ jobs:
     needs: [argosDesktop, argosMobile, argosKss]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/setup_argos
       - uses: ./.github/actions/build_argos_desktop_cache
       - uses: ./.github/actions/build_argos_mobile_cache
@@ -107,7 +107,7 @@ jobs:
     needs: [argosUpload, test]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
       - uses: ./.github/actions/setup_modules

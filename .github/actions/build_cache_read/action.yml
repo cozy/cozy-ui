@@ -5,7 +5,7 @@ runs:
   steps:
     - name: Read builds cache
       id: cache-builds-read
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v5
       env:
         cache-name: cache-builds
       with:
