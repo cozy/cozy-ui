@@ -1,3 +1,10 @@
+## [140.1.1](https://github.com/cozy/cozy-ui/compare/v140.1.0...v140.1.1) (2026-06-25)
+
+
+### Bug Fixes
+
+* Add missing svg ([aeb17a8](https://github.com/cozy/cozy-ui/commit/aeb17a8))
+
 # [140.1.0](https://github.com/cozy/cozy-ui/compare/v140.0.0...v140.1.0) (2026-06-23)
 
 
