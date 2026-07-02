@@ -11,7 +11,13 @@ const options = ['one', 'two', 'three']
 <DemoProvider>
   <Autocomplete
     options={options}
-    renderInput={params => <TextField {...params} label="Basic" />}
+    renderInput={params => <TextField {...params} label="Basic" variant="outlined" />}
+  />
+  <Autocomplete
+    className="u-mt-1"
+    options={options}
+    size="small"
+    renderInput={params => <TextField {...params} label="Basic" variant="outlined" />}
   />
 </DemoProvider>
 ```

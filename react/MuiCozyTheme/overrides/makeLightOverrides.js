@@ -959,6 +959,53 @@ export const makeLightOverrides = theme => ({
       padding: '8px 12px'
     }
   },
+  MuiAutocomplete: {
+    inputRoot: {
+      '&[class*="MuiInput-root"]': {
+        paddingBottom: undefined,
+        '& $input': {
+          padding: undefined
+        }
+      },
+      '&[class*="MuiInput-root"][class*="MuiInput-marginDense"]': {
+        '& $input': {
+          padding: undefined
+        },
+        '& $input:first-child': {
+          padding: undefined
+        }
+      },
+      '&[class*="MuiOutlinedInput-root"]': {
+        padding: undefined,
+        '& $input': {
+          padding: undefined
+        },
+        '& $input:first-child': {
+          paddingLeft: undefined
+        }
+      },
+      '&[class*="MuiOutlinedInput-root"][class*="MuiOutlinedInput-marginDense"]':
+        {
+          padding: undefined,
+          '& $input': {
+            padding: undefined
+          }
+        },
+      '&[class*="MuiFilledInput-root"]': {
+        paddingTop: undefined,
+        paddingLeft: undefined,
+        '& $input': {
+          padding: undefined
+        }
+      },
+      '&[class*="MuiFilledInput-root"][class*="MuiFilledInput-marginDense"]': {
+        paddingBottom: undefined,
+        '& $input': {
+          padding: undefined
+        }
+      }
+    }
+  },
   MuiIconButton: {
     root: {
       color: theme.palette.text.secondary,
