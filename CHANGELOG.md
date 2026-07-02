@@ -1,3 +1,10 @@
+## [140.1.2](https://github.com/cozy/cozy-ui/compare/v140.1.1...v140.1.2) (2026-07-02)
+
+
+### Bug Fixes
+
+* **Autocomplete:** Small size is now the same as TextField component ([f4b75a5](https://github.com/cozy/cozy-ui/commit/f4b75a5))
+
 ## [140.1.1](https://github.com/cozy/cozy-ui/compare/v140.1.0...v140.1.1) (2026-06-25)
 
 
