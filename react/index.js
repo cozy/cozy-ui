@@ -55,6 +55,7 @@ export {
   BottomSheetHeader
 } from './BottomSheet'
 export { default as Chips } from './Chips'
+export { default as ColorPickerCustom } from './ColorPickerCustom'
 export { default as DropdownText } from './DropdownText'
 export { default as Alert } from './Alert'
 export { default as AlertTitle } from './AlertTitle'
