@@ -23,3 +23,5 @@ const initialVariants = [
     />
   )}
 </Variants>
+
+```

@@ -197,3 +197,5 @@ const SideBar = ({ variant }) => {
     </DemoProvider>
   )}
 </Variants>
+
+```

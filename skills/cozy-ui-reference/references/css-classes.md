@@ -17,7 +17,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 @import 'cozy-ui/stylus/mixins'
 ```
 
----
+* * *
 
 ## Utility Classes
 
@@ -58,7 +58,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-m-{size}-{breakpoint}    /* responsive margin */
 ```
 
----
+* * *
 
 ### Typography Utilities
 
@@ -120,7 +120,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-link         /* link color and hover state */
 ```
 
----
+* * *
 
 ### Color Utilities
 
@@ -149,7 +149,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-bg-info           /* info background */
 ```
 
----
+* * *
 
 ### Opacity Utilities
 
@@ -169,7 +169,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-o-100    /* opacity: 100% */
 ```
 
----
+* * *
 
 ### Elevation (Shadows)
 
@@ -180,7 +180,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-elevation-3    /* elevation level 3 */
 ```
 
----
+* * *
 
 ### Visual Effects
 
@@ -190,7 +190,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .u-visuallyhidden      /* visually hidden but accessible */
 ```
 
----
+* * *
 
 ## Component Classes
 
@@ -246,7 +246,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .c-table-ellipsis        /* ellipsis in cell */
 ```
 
----
+* * *
 
 ## Theme Classes
 
@@ -255,7 +255,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 .TwakeTheme--dark     /* dark theme */
 ```
 
----
+* * *
 
 ## Animation Keyframes
 
@@ -267,7 +267,7 @@ Complete reference for CSS utility classes and component-specific classes in coz
 @keyframes shake
 ```
 
----
+* * *
 
 ## CSS Variables
 

@@ -23,3 +23,5 @@ import { CircleFilled, Icon, Link } from '@linagora/twake-icons'
 >
   <Icon icon={CircleFilled} size="32" color="var(--slateGrey)" />
 </Badge>
+
+```

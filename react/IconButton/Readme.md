@@ -79,3 +79,5 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
     size="small"
   />
 </IconButton>
+
+```

@@ -26,3 +26,5 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar'
 >
   <Avatar size="s">CD</Avatar>
 </Badge>
+
+```
