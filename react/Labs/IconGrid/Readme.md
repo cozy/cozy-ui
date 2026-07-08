@@ -14,3 +14,5 @@ import { Cloud, CloudHappy, File, Icon, Online } from '@linagora/twake-icons'
   <Icon icon={CloudHappy} />
   <Icon icon={Online} />
 </IconGrid>
+
+```

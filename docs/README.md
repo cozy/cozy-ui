@@ -29,10 +29,10 @@ This is useful for agents because they can work from a concise `SKILL.md` instea
 
 ### What the skill provides
 
-- A short Cozy UI overview for agents
-- A generated React component reference with imports, examples and extracted props
-- A CSS utility reference for spacing, typography, colors and legacy classes
-- Guidance to prefer Cozy UI components and theme conventions when building Cozy apps
+* A short Cozy UI overview for agents
+* A generated React component reference with imports, examples and extracted props
+* A CSS utility reference for spacing, typography, colors and legacy classes
+* Guidance to prefer Cozy UI components and theme conventions when building Cozy apps
 
 ### Generate the skill
 
@@ -154,12 +154,12 @@ tips: If you are starting `js` and `css` to have full control, and you want to l
 
 If you want to add a new component, you must follow these steps:
 
-- Add the new component in `/react` folder with its `README.md` file
-- Expose it in the API by adding it in `react/index.js`
-- Add it in the documentation by modifying `docs/styleguide.config.js`
-- If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makePalette && yarn build && yarn test -u`
-- Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
-- Try to think of ARIA attributes if you are coding new components
+* Add the new component in `/react` folder with its `README.md` file
+* Expose it in the API by adding it in `react/index.js`
+* Add it in the documentation by modifying `docs/styleguide.config.js`
+* If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makePalette && yarn build && yarn test -u`
+* Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
+* Try to think of ARIA attributes if you are coding new components
 
 Be careful to respect MUI API when creating a new component. See [our guidelines to create a new component](./guidelines.md#new-component).
 
@@ -169,10 +169,10 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 
 ### Guidelines for component development
 
-- Use material UI whenever possible
-- Override material UI components inside `makeOverrides.js` when necessary
-- Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
-- Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
+* Use material UI whenever possible
+* Override material UI components inside `makeOverrides.js` when necessary
+* Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
+* Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
 
 ### Develop inside an app
 
@@ -297,30 +297,30 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 #### Dependencies
 
-- @date-io/date-fns => DatePicker
-- date-fns => DateMonthPicker, DatePicker, I18n
-- react-markdown => Markdown
-- react-select => SelectBox
-- react-virtuoso => Table/Virtualized, GridList/Virtualized
-- rooks => BottomSheet, Table/Virtualized
+* @date-io/date-fns => DatePicker
+* date-fns => DateMonthPicker, DatePicker, I18n
+* react-markdown => Markdown
+* react-select => SelectBox
+* react-virtuoso => Table/Virtualized, GridList/Virtualized
+* rooks => BottomSheet, Table/Virtualized
 
 #### Dependencies for deprecated components
 
-- @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
-- react-remove-scroll => BottomDrawer, Overlay
-- react-swipeable-views => InfosCarroussel, ViewStack
+* @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
+* react-remove-scroll => BottomDrawer, Overlay
+* react-swipeable-views => InfosCarroussel, ViewStack
 
 #### PeerDependencies
 
-- cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => Dialog
-- cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, Dialog, SelectionBar
-- react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
-- react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
-- twake-i18n => lots of component
+* cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => Dialog
+* cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, Dialog, SelectionBar
+* react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
+* react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
+* twake-i18n => lots of component
 
 #### PeerDependencies for deprecated components
 
-- cozy-device-helper => ActionMenu, Modal
+* cozy-device-helper => ActionMenu, Modal
 
 ## License
 
@@ -339,10 +339,11 @@ hardware where no one profiles you.
 
 You can reach the Cozy Community by:
 
-- Chatting with us on IRC [#cozycloud](http://webchat.freenode.net/?channels=%23cozycloud) on irc.freenode.net
-- Posting on our [Forum](https://forum.cozy.io)
-- Posting issues on the [Github repos](https://github.com/cozy/)
-- Mentioning us on [Twitter](https://twitter.com/cozycloud)
+* Chatting with us on IRC [#cozycloud](http://webchat.freenode.net/?channels=%23cozycloud) on irc.freenode.net
+* Posting on our [Forum](https://forum.cozy.io)
+* Posting issues on the [Github repos](https://github.com/cozy/)
+* Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
 [react styleguidist]: https://react-styleguidist.js.org/
+
 [argos]: https://github.com/argos-ci/argos

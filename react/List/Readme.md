@@ -258,3 +258,5 @@ import Divider from 'cozy-ui/transpiled/react/Divider'
     <ListItemText primary="I'm a primary text" />
   </ListItem>
 </List>
+
+```

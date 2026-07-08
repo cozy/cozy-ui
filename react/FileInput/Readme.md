@@ -46,3 +46,5 @@ If you want a classic input file, just set `hidden` prop to `false`:
 ```jsx
 import FileInput from 'cozy-ui/transpiled/react/FileInput';
 <FileInput hidden={false} onChange={console.log} />
+
+```
