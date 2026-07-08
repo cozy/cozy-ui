@@ -6,18 +6,18 @@ Generated reference for React components available in cozy-ui. Use this file to 
 
 ## Component Index
 
-* **Buttons**: [Buttons](#buttons), [DropdownButton](#dropdownbutton), [Fab](#fab), [IconButton](#iconbutton), [ToggleButton](#togglebutton), [ToggleButtonGroup](#togglebuttongroup)
-* **Forms**: [Checkbox](#checkbox), [FileInput](#fileinput), [InputGroup](#inputgroup), [PasswordField](#passwordfield), [Radios](#radios), [SearchBar](#searchbar), [SelectBox](#selectbox), [Switch](#switch), [TextField](#textfield)
-* **Date/Time**: [DateMonthPicker](#datemonthpicker), [DatePicker](#datepicker)
-* **Layout**: [Card](#card), [Divider](#divider), [Divider (MuiCozyTheme/Divider)](#divider-muicozytheme-divider), [Empty](#empty), [Grid](#grid), [Paper](#paper), [Stack](#stack)
-* **Navigation**: [AppTitle](#apptitle), [BarTitle](#bartitle), [Breadcrumbs](#breadcrumbs), [MuiTabs](#muitabs), [NavigationList](#navigationlist), [Sidebar](#sidebar), [Tabs](#tabs)
-* **Feedback**: [Alert](#alert), [Alert (providers/Alert)](#alert-providers-alert), [Banner](#banner), [CircularProgress](#circularprogress), [LinearProgress](#linearprogress), [PointerAlert](#pointeralert), [ProgressionBanner](#progressionbanner), [Skeletons](#skeletons), [Snackbar](#snackbar), [Spinner](#spinner)
-* **Data Display**: [Accordion](#accordion), [Avatar](#avatar), [Badge](#badge), [Chips](#chips), [Circle](#circle), [EditBadge](#editbadge), [Filename](#filename), [FilePath](#filepath), [FilePathLink](#filepathlink), [GhostFileBadge](#ghostfilebadge), [HistoryRow](#historyrow), [InfosBadge](#infosbadge), [List](#list), [List (MuiCozyTheme/List)](#list-muicozytheme-list), [ListItem](#listitem), [ListItem (MuiCozyTheme/ListItem)](#listitem-muicozytheme-listitem), [ListItemText](#listitemtext), [ListSubheader](#listsubheader), [LoadMore](#loadmore), [Markdown](#markdown), [MidEllipsis](#midellipsis), [MobileStepper](#mobilestepper), [OrderedList](#orderedlist), [Stepper](#stepper), [Table](#table), [Thumbnail](#thumbnail), [Tooltip](#tooltip), [Typography](#typography), [UnorderedList](#unorderedlist)
-* **Dialogs**: [ActionsBar](#actionsbar), [ActionsMenu](#actionsmenu), [CozyDialogs](#cozydialogs), [Dialog](#dialog), [Menu](#menu), [SpecificDialogs (CozyDialogs/SpecificDialogs)](#specificdialogs-cozydialogs-specificdialogs)
-* **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
-* **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
-* **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
-* **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorPickerCustom](#colorpickercustom), [providers](#providers)
+- **Buttons**: [Buttons](#buttons), [DropdownButton](#dropdownbutton), [Fab](#fab), [IconButton](#iconbutton), [ToggleButton](#togglebutton), [ToggleButtonGroup](#togglebuttongroup)
+- **Forms**: [Checkbox](#checkbox), [FileInput](#fileinput), [InputGroup](#inputgroup), [PasswordField](#passwordfield), [Radios](#radios), [SearchBar](#searchbar), [SelectBox](#selectbox), [Switch](#switch), [TextField](#textfield)
+- **Date/Time**: [DateMonthPicker](#datemonthpicker), [DatePicker](#datepicker)
+- **Layout**: [Card](#card), [Divider](#divider), [Divider (MuiCozyTheme/Divider)](#divider-muicozytheme-divider), [Empty](#empty), [Grid](#grid), [Paper](#paper), [Stack](#stack)
+- **Navigation**: [AppTitle](#apptitle), [BarTitle](#bartitle), [Breadcrumbs](#breadcrumbs), [MuiTabs](#muitabs), [NavigationList](#navigationlist), [Sidebar](#sidebar), [Tabs](#tabs)
+- **Feedback**: [Alert](#alert), [Alert (providers/Alert)](#alert-providers-alert), [Banner](#banner), [CircularProgress](#circularprogress), [LinearProgress](#linearprogress), [PointerAlert](#pointeralert), [ProgressionBanner](#progressionbanner), [Skeletons](#skeletons), [Snackbar](#snackbar), [Spinner](#spinner)
+- **Data Display**: [Accordion](#accordion), [Avatar](#avatar), [Badge](#badge), [Chips](#chips), [Circle](#circle), [EditBadge](#editbadge), [Filename](#filename), [FilePath](#filepath), [FilePathLink](#filepathlink), [GhostFileBadge](#ghostfilebadge), [HistoryRow](#historyrow), [InfosBadge](#infosbadge), [List](#list), [List (MuiCozyTheme/List)](#list-muicozytheme-list), [ListItem](#listitem), [ListItem (MuiCozyTheme/ListItem)](#listitem-muicozytheme-listitem), [ListItemText](#listitemtext), [ListSubheader](#listsubheader), [LoadMore](#loadmore), [Markdown](#markdown), [MidEllipsis](#midellipsis), [MobileStepper](#mobilestepper), [OrderedList](#orderedlist), [Stepper](#stepper), [Table](#table), [Thumbnail](#thumbnail), [Tooltip](#tooltip), [Typography](#typography), [UnorderedList](#unorderedlist)
+- **Dialogs**: [ActionsBar](#actionsbar), [ActionsMenu](#actionsmenu), [CozyDialogs](#cozydialogs), [Dialog](#dialog), [Menu](#menu), [SpecificDialogs (CozyDialogs/SpecificDialogs)](#specificdialogs-cozydialogs-specificdialogs)
+- **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
+- **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
+- **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
+- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorPickerCustom](#colorpickercustom), [providers](#providers)
 
 ## Buttons
 
@@ -29,11 +29,12 @@ Buttons are a wrapper arround MuiButton integrated with Cozy's design system The
 import Button from 'cozy-ui/transpiled/react/Buttons'
 ```
 
-| Prop      | Type                                                                                              | Default     | Description |
-| --------- | ------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| `variant` | `primary` \| `secondary` \| `ghost` \| `text`                                                     | `'primary'` | -           |
-| `color`   | `default` \| `inherit` \| `primary` \| `secondary` \| `success` \| `error` \| `warning` \| `info` | -           | -           |
-| `height`  | `default` \| `auto`                                                                               | `'default'` | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `primary` \| `secondary` \| `ghost` \| `text` | `'primary'` | - |
+| `color` | `default` \| `inherit` \| `primary` \| `secondary` \| `success` \| `error` \| `warning` \| `info` | - | - |
+| `height` | `default` \| `auto` | `'default'` | - |
+
 
 ### DropdownButton
 
@@ -43,16 +44,17 @@ This component can be used as a trigger to open menus, for example an ActionMenu
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
 ```
 
-| Prop                | Type       | Default   | Description                                             |
-| ------------------- | ---------- | --------- | ------------------------------------------------------- |
-| `spaceBetween`      | boolean    | `false`   | Whether there is a space between the label and the icon |
-| `textVariant`       | string     | `'body1'` | Like variant from Typography component                  |
-| `disabled`          | boolean    | `false`   | Whether the component is disabled                       |
-| `fullWidth`         | boolean    | `false`   | -                                                       |
-| `noWrap`            | boolean    | `false`   | Whether using ellipsis on text                          |
-| `dropdownTextProps` | object     | -         | Props assigned to the DropdownText inner component      |
-| `className`         | string     | -         | -                                                       |
-| `children`          | React.node | -         | -                                                       |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `spaceBetween` | boolean | `false` | Whether there is a space between the label and the icon |
+| `textVariant` | string | `'body1'` | Like variant from Typography component |
+| `disabled` | boolean | `false` | Whether the component is disabled |
+| `fullWidth` | boolean | `false` | - |
+| `noWrap` | boolean | `false` | Whether using ellipsis on text |
+| `dropdownTextProps` | object | - | Props assigned to the DropdownText inner component |
+| `className` | string | - | - |
+| `children` | React.node | - | - |
+
 
 ### Fab
 
@@ -61,6 +63,7 @@ See Material UI documentation to learn more about Floating Action Button (Fab).
 ```jsx
 import Fab from 'cozy-ui/transpiled/react/Fab'
 ```
+
 
 ### IconButton
 
@@ -88,11 +91,12 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 </IconButton>
 ```
 
-| Prop        | Type                                                          | Default | Description |
-| ----------- | ------------------------------------------------------------- | ------- | ----------- |
-| `className` | string                                                        | -       | -           |
-| `color`     | `default` \| `inherit` \| `primary` \| `secondary` \| `error` | -       | -           |
-| `size`      | `small` \| `medium` \| `large` \| `xlarge`                    | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | - |
+| `color` | `default` \| `inherit` \| `primary` \| `secondary` \| `error` | - | - |
+| `size` | `small` \| `medium` \| `large` \| `xlarge` | - | - |
+
 
 ### ToggleButton
 
@@ -100,11 +104,12 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import ToggleButton from 'cozy-ui/transpiled/react/ToggleButton'
 ```
 
-| Prop        | Type    | Default | Description |
-| ----------- | ------- | ------- | ----------- |
-| `className` | string  | -       | -           |
-| `rounded`   | boolean | -       | -           |
-| `color`     | string  | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | - |
+| `rounded` | boolean | - | - |
+| `color` | string | - | - |
+
 
 ### ToggleButtonGroup
 
@@ -112,7 +117,8 @@ import ToggleButton from 'cozy-ui/transpiled/react/ToggleButton'
 import ToggleButtonGroup from 'cozy-ui/transpiled/react/ToggleButtonGroup'
 ```
 
-* * *
+
+---
 
 ## Forms
 
@@ -132,17 +138,18 @@ import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 </div>
 ```
 
-| Prop             | Type                                  | Default    | Description |
-| ---------------- | ------------------------------------- | ---------- | ----------- |
-| `className`      | string                                | `''`       | -           |
-| `value`          | string                                | `''`       | -           |
-| `error`          | boolean                               | `false`    | -           |
-| `disabled`       | boolean                               | -          | -           |
-| `mixed`          | boolean                               | `false`    | -           |
-| `disableEffect`  | boolean                               | `false`    | -           |
-| `size`           | `small` \| `medium`                   | `'medium'` | -           |
-| `labelPlacement` | `top` \| `end` \| `bottom` \| `start` | `'end'`    | -           |
-| `label`          | string \| React.node                  | `''`       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | `''` | - |
+| `value` | string | `''` | - |
+| `error` | boolean | `false` | - |
+| `disabled` | boolean | - | - |
+| `mixed` | boolean | `false` | - |
+| `disableEffect` | boolean | `false` | - |
+| `size` | `small` \| `medium` | `'medium'` | - |
+| `labelPlacement` | `top` \| `end` \| `bottom` \| `start` | `'end'` | - |
+| `label` | string \| React.node | `''` | - |
+
 
 ### FileInput
 
@@ -162,14 +169,15 @@ import FileInput from 'cozy-ui/transpiled/react/FileInput';
 </FileInput>
 ```
 
-| Prop        | Type       | Default | Description |
-| ----------- | ---------- | ------- | ----------- |
-| `children`  | React.node | -       | -           |
-| `className` | string     | -       | -           |
-| `disabled`  | boolean    | `false` | -           |
-| `hidden`    | boolean    | `true`  | -           |
-| `multiple`  | boolean    | `false` | -           |
-| `onChange`  | function   | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | React.node | - | - |
+| `className` | string | - | - |
+| `disabled` | boolean | `false` | - |
+| `hidden` | boolean | `true` | - |
+| `multiple` | boolean | `false` | - |
+| `onChange` | function | - | - |
+
 
 ### InputGroup
 
@@ -192,19 +200,21 @@ import Input from 'cozy-ui/transpiled/react/legacy/Input';
 </form>
 ```
 
-| Prop        | Type    | Default | Description |
-| ----------- | ------- | ------- | ----------- |
-| `prepend`   | object  | -       | -           |
-| `append`    | object  | -       | -           |
-| `error`     | boolean | `false` | -           |
-| `fullwidth` | boolean | `false` | -           |
-| `className` | string  | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `prepend` | object | - | - |
+| `append` | object | - | - |
+| `error` | boolean | `false` | - |
+| `fullwidth` | boolean | `false` | - |
+| `className` | string | - | - |
+
 
 ### PasswordField
 
 ```jsx
 import PasswordField from 'cozy-ui/transpiled/react/PasswordField'
 ```
+
 
 ### Radios
 
@@ -232,32 +242,34 @@ import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
 </>
 ```
 
+
 ### SearchBar
 
 ```jsx
 import SearchBar from 'cozy-ui/transpiled/react/SearchBar'
 ```
 
-| Prop              | Type                                     | Default     | Description                                 |
-| ----------------- | ---------------------------------------- | ----------- | ------------------------------------------- |
-| `className`       | string                                   | -           | -                                           |
-| `type`            | `button` \| `search`                     | `'search'`  | -                                           |
-| `icon`            | string \| object \| function             | `Magnifier` | -                                           |
-| `size`            | `small` \| `medium` \| `large` \| `auto` | `'small'`   | -                                           |
-| `componentsProps` | object                                   | -           | -                                           |
-| `value`           | string                                   | -           | Used to control the component outside of it |
-| `defaultValue`    | string                                   | `''`        | Used only with self-controlled component    |
-| `disabledClear`   | boolean                                  | `false`     | -                                           |
-| `disabledFocus`   | boolean                                  | `false`     | -                                           |
-| `disabledHover`   | boolean                                  | `false`     | -                                           |
-| `elevation`       | number                                   | `1`         | -                                           |
-| `placeholder`     | string                                   | -           | -                                           |
-| `label`           | string \| function \| object             | -           | -                                           |
-| `disabled`        | boolean                                  | -           | -                                           |
-| `onChange`        | function                                 | `() => {}`  | -                                           |
-| `onFocus`         | function                                 | `() => {}`  | -                                           |
-| `onClear`         | function                                 | `() => {}`  | -                                           |
-| `onBlur`          | function                                 | `() => {}`  | -                                           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | - |
+| `type` | `button` \| `search` | `'search'` | - |
+| `icon` | string \| object \| function | `Magnifier` | - |
+| `size` | `small` \| `medium` \| `large` \| `auto` | `'small'` | - |
+| `componentsProps` | object | - | - |
+| `value` | string | - | Used to control the component outside of it |
+| `defaultValue` | string | `''` | Used only with self-controlled component |
+| `disabledClear` | boolean | `false` | - |
+| `disabledFocus` | boolean | `false` | - |
+| `disabledHover` | boolean | `false` | - |
+| `elevation` | number | `1` | - |
+| `placeholder` | string | - | - |
+| `label` | string \| function \| object | - | - |
+| `disabled` | boolean | - | - |
+| `onChange` | function | `() => {}` | - |
+| `onFocus` | function | `() => {}` | - |
+| `onClear` | function | `() => {}` | - |
+| `onBlur` | function | `() => {}` | - |
+
 
 ### SelectBox
 
@@ -287,6 +299,7 @@ const options = [
 </div>
 ```
 
+
 ### Switch
 
 Used to present a binary choice to the user.
@@ -294,6 +307,7 @@ Used to present a binary choice to the user.
 ```jsx
 import Switch from 'cozy-ui/transpiled/react/Switch'
 ```
+
 
 ### TextField
 
@@ -303,7 +317,8 @@ Cozy themed MUI TextField. See the official API to find the props.
 import TextField from 'cozy-ui/transpiled/react/TextField'
 ```
 
-* * *
+
+---
 
 ## Date/Time
 
@@ -313,9 +328,10 @@ import TextField from 'cozy-ui/transpiled/react/TextField'
 import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker'
 ```
 
-| Prop       | Type     | Default | Description |
-| ---------- | -------- | ------- | ----------- |
-| `onSelect` | function | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `onSelect` | function | - | - |
+
 
 ### DatePicker
 
@@ -325,7 +341,8 @@ Use @date-io/date-fns under the hood. ⚠️ Breakpoints & I18n Providers are ne
 import DatePicker from 'cozy-ui/transpiled/react/DatePicker'
 ```
 
-* * *
+
+---
 
 ## Layout
 
@@ -351,6 +368,7 @@ import Typography from "cozy-ui/transpiled/react/Typography"
 </Box>
 ```
 
+
 ### Divider
 
 A divider can be used when you want to separate the content. See Mui documentation. Vertical division
@@ -373,11 +391,13 @@ import Divider from 'cozy-ui/transpiled/react/Divider'
 </Box>
 ```
 
+
 ### Divider (MuiCozyTheme/Divider)
 
 ```jsx
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 ```
+
 
 ### Empty
 
@@ -421,16 +441,17 @@ import Empty from 'cozy-ui/transpiled/react/Empty'
 </>
 ```
 
-| Prop              | Type                            | Default    | Description                                                                              |
-| ----------------- | ------------------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| `icon`            | string \| object \| function    | -          | -                                                                                        |
-| `iconSize`        | `normal` \| `medium` \| `large` | `'normal'` | -                                                                                        |
-| `title`           | React.node                      | -          | -                                                                                        |
-| `text`            | React.node                      | -          | -                                                                                        |
-| `centered`        | boolean                         | -          | Sets horizontal and vertical centring. The reference element is that of a fixed position |
-| `children`        | React.node                      | -          | -                                                                                        |
-| `componentsProps` | object                          | -          | -                                                                                        |
-| `className`       | string                          | -          | -                                                                                        |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | string \| object \| function | - | - |
+| `iconSize` | `normal` \| `medium` \| `large` | `'normal'` | - |
+| `title` | React.node | - | - |
+| `text` | React.node | - | - |
+| `centered` | boolean | - | Sets horizontal and vertical centring. The reference element is that of a fixed position |
+| `children` | React.node | - | - |
+| `componentsProps` | object | - | - |
+| `className` | string | - | - |
+
 
 ### Grid
 
@@ -471,11 +492,13 @@ import Box from 'cozy-ui/transpiled/react/Box'
   </Grid>
 ```
 
+
 ### Paper
 
 ```jsx
 import Paper from 'cozy-ui/transpiled/react/Paper'
 ```
+
 
 ### Stack
 
@@ -485,7 +508,8 @@ A Stack is a simple layout component that is used to vertically pad elements tha
 import Stack from 'cozy-ui/transpiled/react/Stack'
 ```
 
-* * *
+
+---
 
 ## Navigation
 
@@ -511,10 +535,11 @@ const DriveTextMock = () => <div>Drive</div>;
 </div>
 ```
 
-| Prop          | Type     | Default | Description |
-| ------------- | -------- | ------- | ----------- |
-| `appIcon`     | function | -       | -           |
-| `appTextIcon` | function | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `appIcon` | function | - | - |
+| `appTextIcon` | function | - | - |
+
 
 ### BarTitle
 
@@ -533,9 +558,10 @@ import BarTitle from 'cozy-ui/transpiled/react/BarTitle'
 </div>
 ```
 
-| Prop     | Type    | Default | Description                                                     |
-| -------- | ------- | ------- | --------------------------------------------------------------- |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
 | `noWrap` | boolean | `false` | Add an ellipsis like `noWrap` prop on Typography component does |
+
 
 ### Breadcrumbs
 
@@ -556,6 +582,7 @@ import MuiBreadcrumbs from 'cozy-ui/transpiled/react/Breadcrumbs'
   <Typography color="textPrimary">B</Typography>
 </MuiBreadcrumbs>
 ```
+
 
 ### MuiTabs
 
@@ -604,6 +631,7 @@ const Example = () => {
 </BreakpointsProvider>
 ```
 
+
 ### NavigationList
 
 A navigation list is used to present choices of navigation to the user. It will be rendered slightly differently on desktop or mobile, with desktop sections rendered into cards while on mobile, it will rendered simply as a list with subheaders.
@@ -611,6 +639,7 @@ A navigation list is used to present choices of navigation to the user. It will 
 ```jsx
 import NavigationList from 'cozy-ui/transpiled/react/NavigationList'
 ```
+
 
 ### Sidebar
 
@@ -657,10 +686,11 @@ import cx from 'classnames'
 </Sidebar>
 ```
 
-| Prop        | Type       | Default | Description |
-| ----------- | ---------- | ------- | ----------- |
-| `children`  | React.node | -       | -           |
-| `className` | string     | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | React.node | - | - |
+| `className` | string | - | - |
+
 
 ### Tabs
 
@@ -668,14 +698,15 @@ import cx from 'classnames'
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 ```
 
-| Prop        | Type                                      | Default      | Description |
-| ----------- | ----------------------------------------- | ------------ | ----------- |
-| `className` | string                                    | -            | -           |
-| `variant`   | `standard` \| `fullWidth` \| `scrollable` | `'standard'` | -           |
-| `narrowed`  | boolean                                   | `false`      | -           |
-| `segmented` | boolean                                   | `false`      | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | - |
+| `variant` | `standard` \| `fullWidth` \| `scrollable` | `'standard'` | - |
+| `narrowed` | boolean | `false` | - |
+| `segmented` | boolean | `false` | - |
 
-* * *
+
+---
 
 ## Feedback
 
@@ -685,21 +716,23 @@ import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Alert from 'cozy-ui/transpiled/react/Alert'
 ```
 
-| Prop        | Type                                                                    | Default | Description                                                         |
-| ----------- | ----------------------------------------------------------------------- | ------- | ------------------------------------------------------------------- |
-| `className` | string                                                                  | -       | Classname of the alert                                              |
-| `icon`      | React.element \| boolean                                                | -       | Icon component to display in the alert (or false to hide it)        |
-| `severity`  | `primary` \| `secondary` \| `success` \| `error` \| `warning` \| `info` | -       | Severity of the alert (default: primary)                            |
-| `block`     | boolean                                                                 | -       | Block the alert to the full width of its container (default: false) |
-| `color`     | string                                                                  | -       | Background color of the alert                                       |
-| `square`    | boolean                                                                 | -       | Square the alert corners (default: false)                           |
-| `variant`   | `standard` \| `outlined` \| `filled`                                    | -       | Variant of the alert (default: standard)                            |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | Classname of the alert |
+| `icon` | React.element \| boolean | - | Icon component to display in the alert (or false to hide it) |
+| `severity` | `primary` \| `secondary` \| `success` \| `error` \| `warning` \| `info` | - | Severity of the alert (default: primary) |
+| `block` | boolean | - | Block the alert to the full width of its container (default: false) |
+| `color` | string | - | Background color of the alert |
+| `square` | boolean | - | Square the alert corners (default: false) |
+| `variant` | `standard` \| `outlined` \| `filled` | - | Variant of the alert (default: standard) |
+
 
 ### Alert (providers/Alert)
 
 ```jsx
 import Alert from 'cozy-ui/transpiled/react/providers/Alert'
 ```
+
 
 ### Banner
 
@@ -709,17 +742,20 @@ We should now use Alert instead. See this example:
 import Banner from 'cozy-ui/transpiled/react/Banner'
 ```
 
+
 ### CircularProgress
 
 ```jsx
 import CircularProgress from 'cozy-ui/transpiled/react/CircularProgress'
 ```
 
+
 ### LinearProgress
 
 ```jsx
 import LinearProgress from 'cozy-ui/transpiled/react/LinearProgress'
 ```
+
 
 ### PointerAlert
 
@@ -729,10 +765,11 @@ Displays a Alert with an Arrow pointing to a direction (top, right, bottom, left
 import PointerAlert from 'cozy-ui/transpiled/react/PointerAlert'
 ```
 
-| Prop        | Type                                   | Default    | Description                                                                                                                                                                                                                                                      |
-| ----------- | -------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `direction` | `top` \| `right` \| `bottom` \| `left` | `'bottom'` | Direction of the arrow.                                                                                                                                                                                                                                          |
-| `position`  | string                                 | `'50%'`    | Position of the arrow. Can be any length or percentage value like "100px" or "30%". If you want to position the arrow on the edge, you need to pay attention to the arrow width. For example, "calc(0% + 0.75rem)" will position the arrow at the starting edge. |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `direction` | `top` \| `right` \| `bottom` \| `left` | `'bottom'` | Direction of the arrow. |
+| `position` | string | `'50%'` | Position of the arrow. Can be any length or percentage value like "100px" or "30%". If you want to position the arrow on the edge, you need to pay attention to the arrow width. For example, "calc(0% + 0.75rem)" will position the arrow at the starting edge. |
+
 
 ### ProgressionBanner
 
@@ -742,14 +779,15 @@ A banner with a progress bar at the bottom.
 import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner'
 ```
 
-| Prop          | Type       | Default                            | Description                                                  |
-| ------------- | ---------- | ---------------------------------- | ------------------------------------------------------------ |
-| `value`       | number     | -                                  | Percentage of progression, should be between 0 and 100       |
-| `text`        | string     | -                                  | Text to be shown in the banner                               |
-| `icon`        | React.node | -                                  | Icon to be shown in the banner                               |
-| `button`      | React.node | -                                  | Button to use in the banner                                  |
-| `progressBar` | boolean    | `true`                             | Progression bar is hidden if set to false (defaults to true) |
-| `color`       | string     | `'var(--contrastBackgroundColor)'` | Background color of the banner, css color                    |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | number | - | Percentage of progression, should be between 0 and 100 |
+| `text` | string | - | Text to be shown in the banner |
+| `icon` | React.node | - | Icon to be shown in the banner |
+| `button` | React.node | - | Button to use in the banner |
+| `progressBar` | boolean | `true` | Progression bar is hidden if set to false (defaults to true) |
+| `color` | string | `'var(--contrastBackgroundColor)'` | Background color of the banner, css color |
+
 
 ### Skeletons
 
@@ -757,11 +795,13 @@ import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner'
 import Skeletons from 'cozy-ui/transpiled/react/Skeletons'
 ```
 
+
 ### Snackbar
 
 ```jsx
 import Snackbar from 'cozy-ui/transpiled/react/Snackbar'
 ```
+
 
 ### Spinner
 
@@ -779,16 +819,17 @@ import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <Spinner />
 ```
 
-| Prop          | Type                                                              | Default                 | Description |
-| ------------- | ----------------------------------------------------------------- | ----------------------- | ----------- |
-| `loadingType` | string                                                            | `''`                    | -           |
-| `middle`      | boolean                                                           | `false`                 | -           |
-| `noMargin`    | boolean                                                           | `false`                 | -           |
-| `color`       | string                                                            | `'var(--primaryColor)'` | -           |
-| `size`        | `tiny` \| `small` \| `medium` \| `large` \| `xlarge` \| `xxlarge` | `'medium'`              | -           |
-| `className`   | string                                                            | `''`                    | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `loadingType` | string | `''` | - |
+| `middle` | boolean | `false` | - |
+| `noMargin` | boolean | `false` | - |
+| `color` | string | `'var(--primaryColor)'` | - |
+| `size` | `tiny` \| `small` \| `medium` \| `large` \| `xlarge` \| `xxlarge` | `'medium'` | - |
+| `className` | string | `''` | - |
 
-* * *
+
+---
 
 ## Data Display
 
@@ -835,20 +876,22 @@ import AccordionDetails from 'cozy-ui/transpiled/react/AccordionDetails'
 </>
 ```
 
+
 ### Avatar
 
 ```jsx
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 ```
 
-| Prop        | Type                                        | Default     | Description               |
-| ----------- | ------------------------------------------- | ----------- | ------------------------- |
-| `className` | string                                      | -           | -                         |
-| `size`      | `xs` \| `s` \| `m` \| `l` \| `xl` \| number | `'m'`       | -                         |
-| `textColor` | string                                      | -           | -                         |
-| `color`     | `none` \| string                            | -           | -                         |
-| `display`   | `initial` \| `inline`                       | `'initial'` | Controls the display type |
-| `disabled`  | boolean                                     | -           | -                         |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | string | - | - |
+| `size` | `xs` \| `s` \| `m` \| `l` \| `xl` \| number | `'m'` | - |
+| `textColor` | string | - | - |
+| `color` | `none` \| string | - | - |
+| `display` | `initial` \| `inline` | `'initial'` | Controls the display type |
+| `disabled` | boolean | - | - |
+
 
 ### Badge
 
@@ -886,16 +929,17 @@ import { Icon, Link } from '@linagora/twake-icons'
 </Badge>
 ```
 
-| Prop           | Type                                                                                 | Default                 | Description |
-| -------------- | ------------------------------------------------------------------------------------ | ----------------------- | ----------- |
-| `anchorOrigin` | object                                                                               | `{ horizontal: 'right'` | -           |
-| `vertical`     | `bottom` \| `top`                                                                    | -                       | -           |
-| `className`    | string                                                                               | -                       | -           |
-| `color`        | `default` \| `success` \| `warning` \| `error` \| `info` \| `primary` \| `secondary` | -                       | -           |
-| `size`         | `small` \| `medium` \| `large`                                                       | `'medium'`              | -           |
-| `showZero`     | boolean                                                                              | `true`                  | -           |
-| `variant`      | `standard` \| `dot`                                                                  | -                       | -           |
-| `withBorder`   | boolean                                                                              | `true`                  | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `anchorOrigin` | object | `{ horizontal: 'right'` | - |
+| `vertical` | `bottom` \| `top` | - | - |
+| `className` | string | - | - |
+| `color` | `default` \| `success` \| `warning` \| `error` \| `info` \| `primary` \| `secondary` | - | - |
+| `size` | `small` \| `medium` \| `large` | `'medium'` | - |
+| `showZero` | boolean | `true` | - |
+| `variant` | `standard` \| `dot` | - | - |
+| `withBorder` | boolean | `true` | - |
+
 
 ### Chips
 
@@ -905,12 +949,13 @@ Chips represent complex entities in small blocks, such as a contact.
 import Chip from 'cozy-ui/transpiled/react/Chips'
 ```
 
-| Prop        | Type                                                     | Default | Description |
-| ----------- | -------------------------------------------------------- | ------- | ----------- |
-| `label`     | string \| object                                         | -       | -           |
-| `variant`   | `default` \| `active` \| `ghost`                         | -       | -           |
-| `color`     | `primary` \| `success` \| `error` \| `warning` \| `info` | -       | -           |
-| `className` | string                                                   | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `label` | string \| object | - | - |
+| `variant` | `default` \| `active` \| `ghost` | - | - |
+| `color` | `primary` \| `success` \| `error` \| `warning` \| `info` | - | - |
+| `className` | string | - | - |
+
 
 ### Circle
 
@@ -932,6 +977,7 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar'
 </div>
 ```
 
+
 ### EditBadge
 
 ⚠️ Must be used within AlertProvider.
@@ -940,11 +986,12 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import EditBadge from 'cozy-ui/transpiled/react/EditBadge'
 ```
 
-| Prop       | Type     | Default | Description |
-| ---------- | -------- | ------- | ----------- |
-| `src`      | function | -       | -           |
-| `onUpload` | function | -       | -           |
-| `onDelete` | function | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `src` | function | - | - |
+| `onUpload` | function | - | - |
+| `onDelete` | function | - | - |
+
 
 ### Filename
 
@@ -952,13 +999,14 @@ import EditBadge from 'cozy-ui/transpiled/react/EditBadge'
 import Filename from 'cozy-ui/transpiled/react/Filename'
 ```
 
-| Prop          | Type                         | Default | Description                                                |
-| ------------- | ---------------------------- | ------- | ---------------------------------------------------------- |
-| `icon`        | string \| object \| function | -       | Filename icon                                              |
-| `filename`    | string                       | -       | folder or file name                                        |
-| `extension`   | string                       | -       | If a file name, you can specify the extension              |
-| `midEllipsis` | boolean                      | `false` | To replace the end ellipsis by a middle on in the filename |
-| `variant`     | string                       | `'h6'`  | -                                                          |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | string \| object \| function | - | Filename icon |
+| `filename` | string | - | folder or file name |
+| `extension` | string | - | If a file name, you can specify the extension |
+| `midEllipsis` | boolean | `false` | To replace the end ellipsis by a middle on in the filename |
+| `variant` | string | `'h6'` | - |
+
 
 ### FilePath
 
@@ -974,6 +1022,7 @@ import FilePath from 'cozy-ui/transpiled/react/FilePath';
 <FilePath>/Partages reçus/Cozy 🗄 - Team/Customers & Partners 🛒/Xxxxxx (Xxxxxxxx)/4_Suivi opérationnel/Point de synchro</FilePath>
 ```
 
+
 ### FilePathLink
 
 ```jsx
@@ -987,6 +1036,7 @@ import FilePathLink from 'cozy-ui/transpiled/react/FilePathLink';
 
 <FilePathLink href="/">/Partages reçus/Cozy 🗄 - Team/Customers & Partners 🛒/Xxxxxx (Xxxxxxxx)/4_Suivi opérationnel/Point de synchro</FilePathLink>
 ```
+
 
 ### GhostFileBadge
 
@@ -1024,6 +1074,7 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar'
 </Badge>
 ```
 
+
 ### HistoryRow
 
 HistoryRow is used to display the different versions of a file
@@ -1032,10 +1083,9 @@ HistoryRow is used to display the different versions of a file
 import HistoryRow from 'cozy-ui/transpiled/react/HistoryRow'
 ```
 
-| Prop    | Type   | Default | Description                                           |
-| ------- | ------ | ------- | ----------------------------------------------------- |
-| `style` | object | -       | This component display a timeline of file's version / |
-
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `style` | object | - | This component display a timeline of file's version /
 const HistoryRow = ({
   style,
   primaryText,
@@ -1045,52 +1095,49 @@ const HistoryRow = ({
   ...rest
 }) => {
   return (
-
-```
-<div className={styles.HistoryRowMedia} style={style} {...rest}>
-  <div className="u-media u-media-grow u-row-m">
-    <div className={styles.HistoryRowCircleWrapper}>
-      <div className={styles.HistoryRowMediaImg}>
-        <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
-          {tag && <Icon icon={File} color="var(--primaryTextColor)" />}
-        </Avatar>
+    <div className={styles.HistoryRowMedia} style={style} {...rest}>
+      <div className="u-media u-media-grow u-row-m">
+        <div className={styles.HistoryRowCircleWrapper}>
+          <div className={styles.HistoryRowMediaImg}>
+            <Avatar size={tag ? 's' : 'xs'} className={styles.HistoryRowCircle}>
+              {tag && <Icon icon={File} color="var(--primaryTextColor)" />}
+            </Avatar>
+          </div>
+        </div>
+        <div className="u-media u-media-grow u-stack-xs u-row-m">
+          <div className={styles.HistoryRowMediaBd}>
+            <Typography variant="h6">{primaryText}</Typography>
+            <Typography gutterBottom variant="h6">
+              {tag}
+            </Typography>
+            {secondaryText ? (
+              <Typography gutterBottom variant="caption" color="textSecondary">
+                {secondaryText}
+              </Typography>
+            ) : null}
+          </div>
+          <div>
+            <Icon
+              className="u-c-pointer"
+              color="var(--secondaryTextColor)"
+              icon={Download}
+              onClick={() => downloadLink()}
+            />
+          </div>
+        </div>
       </div>
     </div>
-    <div className="u-media u-media-grow u-stack-xs u-row-m">
-      <div className={styles.HistoryRowMediaBd}>
-        <Typography variant="h6">{primaryText}</Typography>
-        <Typography gutterBottom variant="h6">
-          {tag}
-        </Typography>
-        {secondaryText ? (
-          <Typography gutterBottom variant="caption" color="textSecondary">
-            {secondaryText}
-          </Typography>
-        ) : null}
-      </div>
-      <div>
-        <Icon
-          className="u-c-pointer"
-          color="var(--secondaryTextColor)"
-          icon={Download}
-          onClick={() => downloadLink()}
-        />
-      </div>
-    </div>
-  </div>
-</div>
-```
-
   )
 }
 
 HistoryRow.propTypes = {
   /  Custom CSS |
-\| `title` | string | - | title |
-\| `primaryText` | string | - | First line |
-\| `secondaryText` | string | - | Second line |
-\| `tag` | string | - | tag of file |
-\| `downloadLink` | function | - | Action when icon is clicked |
+| `title` | string | - | title |
+| `primaryText` | string | - | First line |
+| `secondaryText` | string | - | Second line |
+| `tag` | string | - | tag of file |
+| `downloadLink` | function | - | Action when icon is clicked |
+
 
 ### InfosBadge
 
@@ -1124,6 +1171,7 @@ import { CircleFilled, Icon, Link } from '@linagora/twake-icons'
   <Icon icon={CircleFilled} size="32" color="var(--slateGrey)" />
 </Badge>
 ```
+
 
 ### List
 
@@ -1167,11 +1215,13 @@ import Divider from 'cozy-ui/transpiled/react/Divider'
 </List>
 ```
 
+
 ### List (MuiCozyTheme/List)
 
 ```jsx
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
 ```
+
 
 ### ListItem
 
@@ -1179,18 +1229,20 @@ import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 ```
 
-| Prop               | Type                                | Default     | Description                                                                                                                                                     |
-| ------------------ | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `gutters`          | `disabled` \| `double` \| `default` | `'default'` | -                                                                                                                                                               |
-| `size`             | `small` \| `medium` \| `large`      | `'medium'`  | -                                                                                                                                                               |
-| `ellipsis`         | boolean                             | -           | -                                                                                                                                                               |
-| `componentElement` | React.elementType                   | -           | If the `component` prop is already used to return `ListItem`, this prop still allows you to choose a component to render in `ListItem`. cf:`MenuItem` component |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `gutters` | `disabled` \| `double` \| `default` | `'default'` | - |
+| `size` | `small` \| `medium` \| `large` | `'medium'` | - |
+| `ellipsis` | boolean | - | - |
+| `componentElement` | React.elementType | - | If the `component` prop is already used to return `ListItem`, this prop still allows you to choose a component to render in `ListItem`. cf:`MenuItem` component |
+
 
 ### ListItem (MuiCozyTheme/ListItem)
 
 ```jsx
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
 ```
+
 
 ### ListItemText
 
@@ -1206,15 +1258,17 @@ import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 <ListItemText primary="I'm a list item text"/>
 ```
 
+
 ### ListSubheader
 
 ```jsx
 import ListSubheader from 'cozy-ui/transpiled/react/ListSubheader'
 ```
 
-| Prop      | Type                                | Default     | Description |
-| --------- | ----------------------------------- | ----------- | ----------- |
-| `gutters` | `disabled` \| `double` \| `default` | `'default'` | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `gutters` | `disabled` \| `double` \| `default` | `'default'` | - |
+
 
 ### LoadMore
 
@@ -1234,10 +1288,11 @@ import LoadMore from 'cozy-ui/transpiled/react/LoadMore';
 </div>
 ```
 
-| Prop        | Type     | Default | Description                                                                                      |
-| ----------- | -------- | ------- | ------------------------------------------------------------------------------------------------ |
-| `fetchMore` | function | -       | A function that is called when the next batch of data needs to be loaded.  Can return a promise. |
-| `label`     | string   | -       | The label for the button                                                                         |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `fetchMore` | function | - | A function that is called when the next batch of data needs to be loaded.  Can return a promise. |
+| `label` | string | - | The label for the button |
+
 
 ### Markdown
 
@@ -1246,6 +1301,7 @@ This component is used to render markdown content. To see more about the Markdow
 ```jsx
 import Markdown from 'cozy-ui/transpiled/react/Markdown'
 ```
+
 
 ### MidEllipsis
 
@@ -1263,10 +1319,11 @@ import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis'
 <MidEllipsis text={content.ada.short} />
 ```
 
-| Prop        | Type   | Default | Description |
-| ----------- | ------ | ------- | ----------- |
-| `text`      | string | -       | -           |
-| `className` | string | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `text` | string | - | - |
+| `className` | string | - | - |
+
 
 ### MobileStepper
 
@@ -1305,6 +1362,7 @@ import { Icon, Left, Right } from '@linagora/twake-icons'
 </div>
 ```
 
+
 ### OrderedList
 
 ```jsx
@@ -1323,13 +1381,15 @@ import { OrderedList, ListItem } from 'cozy-ui/transpiled/react/OrderedList';
 </OrderedList>
 ```
 
+
 ### Stepper
 
-Steppers convey progress through numbered steps. They provide a wizard-like workflows. See <https://material-ui.com/components/steppers/> for more information.
+Steppers convey progress through numbered steps. They provide a wizard-like workflows. See https://material-ui.com/components/steppers/ for more information.
 
 ```jsx
 import Stepper from 'cozy-ui/transpiled/react/Stepper'
 ```
+
 
 ### Table
 
@@ -1355,6 +1415,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
   </DndProvider>
 </SelectionProvider>
 ```
+
 
 ### Thumbnail
 
@@ -1386,6 +1447,7 @@ import { Icon, People } from '@linagora/twake-icons'
 </>
 ```
 
+
 ### Tooltip
 
 This component is imported from MUI and has the same API. Read the original Tooltip component documentation for more information.
@@ -1394,6 +1456,7 @@ This component is imported from MUI and has the same API. Read the original Tool
 import Tooltip from 'cozy-ui/transpiled/react/Tooltip'
 ```
 
+
 ### Typography
 
 Use typographic components to have sensible defaults for text content. The typography variants naming is based on material design. Read the original Typography component documentation for more information.
@@ -1401,6 +1464,7 @@ Use typographic components to have sensible defaults for text content. The typog
 ```jsx
 import Typography from 'cozy-ui/transpiled/react/Typography'
 ```
+
 
 ### UnorderedList
 
@@ -1420,7 +1484,8 @@ import { UnorderedList, ListItem } from 'cozy-ui/transpiled/react/UnorderedList'
 </UnorderedList>
 ```
 
-* * *
+
+---
 
 ## Dialogs
 
@@ -1432,12 +1497,13 @@ Use same actions as <ActionsMenu />. This demo showcases all ActionsBar features
 import ActionsBar from 'cozy-ui/transpiled/react/ActionsBar'
 ```
 
-| Prop                | Type              | Default     | Description                                                                                                                                                                                                |
-| ------------------- | ----------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `maxDesktopActions` | number            | `5`         | A number corresponding to the display of the maximum number of items. The other actions will be displayed in an additional menu. Only works on desktop since maximum number is forced in mobile            |
-| `autoClose`         | boolean           | `true`      | -                                                                                                                                                                                                          |
-| `color`             | string            | `'default'` | -                                                                                                                                                                                                          |
-| `IconComponent`     | React.elementType | -           | Custom React component to replace the default Icon with CheckCircleIcon displayed next to the selection count on desktop. The component will be rendered as-is, giving full control over the icon styling. |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `maxDesktopActions` | number | `5` | A number corresponding to the display of the maximum number of items. The other actions will be displayed in an additional menu. Only works on desktop since maximum number is forced in mobile |
+| `autoClose` | boolean | `true` | - |
+| `color` | string | `'default'` | - |
+| `IconComponent` | React.elementType | - | Custom React component to replace the default Icon with CheckCircleIcon displayed next to the selection count on desktop. The component will be rendered as-is, giving full control over the icon styling. |
+
 
 ### ActionsMenu
 
@@ -1447,17 +1513,18 @@ Use an ActionsMenu to show a list of actions. ActionsMenu automatically switch d
 import ActionsMenu from 'cozy-ui/transpiled/react/ActionsMenu'
 ```
 
-| Prop                     | Type                          | Default  | Description                                                                      |
-| ------------------------ | ----------------------------- | -------- | -------------------------------------------------------------------------------- |
-| `open`                   | boolean                       | -        | Whether the menu is open                                                         |
-| `docs`                   | array                         | -        | Reference documents for the actions                                              |
-| `actions`                | array                         | -        | List of actions                                                                  |
-| `anchorOrigin`           | object                        | `{`      | Allows you to position the menu in relation to the anchor element                |
-| `horizontal`             | `left` \| `center` \| `right` | `'left'` | -                                                                                |
-| `autoClose`              | boolean                       | `true`   | Whether the menu should automatically close itself when an item is clicked       |
-| `autoCloseOnContextMenu` | boolean                       | `true`   | Whether the menu should automatically close itself when right-click is triggered |
-| `componentsProps`        | object                        | `{}`     | -                                                                                |
-| `onClose`                | function                      | -        | Function triggered when closing the menu                                         |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `open` | boolean | - | Whether the menu is open |
+| `docs` | array | - | Reference documents for the actions |
+| `actions` | array | - | List of actions |
+| `anchorOrigin` | object | `{` | Allows you to position the menu in relation to the anchor element |
+| `horizontal` | `left` \| `center` \| `right` | `'left'` | - |
+| `autoClose` | boolean | `true` | Whether the menu should automatically close itself when an item is clicked |
+| `autoCloseOnContextMenu` | boolean | `true` | Whether the menu should automatically close itself when right-click is triggered |
+| `componentsProps` | object | `{}` | - |
+| `onClose` | function | - | Function triggered when closing the menu |
+
 
 ### CozyDialogs
 
@@ -1467,6 +1534,7 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 import CozyDialogs from 'cozy-ui/transpiled/react/CozyDialogs'
 ```
 
+
 ### Dialog
 
 If no ready made CozyDialogs corresponds to what you need, you can use Dialog directly. The useCozyDialog takes CozyDialog props and returns props to spread on the components used in your custom Dialog. Those props will make sure that even your custom Dialogs will behave as CozyDialogs.
@@ -1474,6 +1542,7 @@ If no ready made CozyDialogs corresponds to what you need, you can use Dialog di
 ```jsx
 import Dialog from 'cozy-ui/transpiled/react/Dialog'
 ```
+
 
 ### Menu
 
@@ -1483,13 +1552,15 @@ Re-export of @material-ui. See the official API.
 import Menu from 'cozy-ui/transpiled/react/Menu'
 ```
 
+
 ### SpecificDialogs (CozyDialogs/SpecificDialogs)
 
 ```jsx
 import SpecificDialogs from 'cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs'
 ```
 
-* * *
+
+---
 
 ## Utils
 
@@ -1501,17 +1572,18 @@ This component can be used as a trigger to open menus, for example an ActionMenu
 import DropdownText from 'cozy-ui/transpiled/react/DropdownText'
 ```
 
-| Prop                      | Type       | Default | Description                                             |
-| ------------------------- | ---------- | ------- | ------------------------------------------------------- |
-| `color`                   | string     | -       | Color used by Typography component                      |
-| `spaceBetween`            | boolean    | -       | Whether there is a space between the label and the icon |
-| `variant`                 | string     | -       | Variant used by Typography component                    |
-| `disabled`                | boolean    | -       | Whether the component is disabled                       |
-| `noWrap`                  | boolean    | -       | Whether using ellipsis on text                          |
-| `innerTextProps`          | object     | -       | Props passed to the text                                |
-| `innerIconContainerProps` | object     | -       | Props passed to the icon container                      |
-| `innerIconProps`          | object     | -       | Props passed to the icon                                |
-| `children`                | React.node | -       | -                                                       |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `color` | string | - | Color used by Typography component |
+| `spaceBetween` | boolean | - | Whether there is a space between the label and the icon |
+| `variant` | string | - | Variant used by Typography component |
+| `disabled` | boolean | - | Whether the component is disabled |
+| `noWrap` | boolean | - | Whether using ellipsis on text |
+| `innerTextProps` | object | - | Props passed to the text |
+| `innerIconContainerProps` | object | - | Props passed to the icon container |
+| `innerIconProps` | object | - | Props passed to the icon |
+| `children` | React.node | - | - |
+
 
 ### MuiCozyTheme
 
@@ -1519,11 +1591,12 @@ import DropdownText from 'cozy-ui/transpiled/react/DropdownText'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 ```
 
-| Prop   | Type              | Default   | Description |
-| ------ | ----------------- | --------- | ----------- |
-| `type` | `light` \| `dark` | `'light'` | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | `light` \| `dark` | `'light'` | - |
 
-* * *
+
+---
 
 ## Hooks & Providers
 
@@ -1535,15 +1608,17 @@ You can use the useBreakpoints hook to know whether the window has a mobile or d
 import Breakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 ```
 
-| Prop                | Type    | Default | Description                                                                              |
-| ------------------- | ------- | ------- | ---------------------------------------------------------------------------------------- |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
 | `parentBasedIframe` | boolean | `false` | Iframes breakpoints are based on parent window inner width instead of iframe inner width |
+
 
 ### ConfirmDialog (providers/ConfirmDialog)
 
 ```jsx
 import ConfirmDialog from 'cozy-ui/transpiled/react/providers/ConfirmDialog'
 ```
+
 
 ### CozyTheme (providers/CozyTheme)
 
@@ -1553,11 +1628,10 @@ An area of a page can have a different CozyTheme and components inside will be a
 import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
 ```
 
-| Prop           | Type                        | Default | Description               |                               |
-| -------------- | --------------------------- | ------- | ------------------------- | ----------------------------- |
-| `type`         | `light` \| `dark` \| `auto` | -       | -                         |                               |
-| `ignoreItself` | boolean                     | `true`  | @returns {{ type: 'light' | 'dark', isLight: boolean }} / |
-
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | `light` \| `dark` \| `auto` | - | - |
+| `ignoreItself` | boolean | `true` | @returns {{ type: 'light'|'dark', isLight: boolean }} /
 export const useCozyTheme = () => {
   const context = useContext(CozyThemeContext)
 
@@ -1567,13 +1641,10 @@ export const useCozyTheme = () => {
       '`CozyThemeContext` is missing. `useCozyTheme()` must be used within a `<CozyTheme>`. `light normal` is returned as fallback value.'
     )
 
-```
-return {
-  type: 'light',
-  isLight: true
-}
-```
-
+    return {
+      type: 'light',
+      isLight: true
+    }
   }
 
   return context
@@ -1589,44 +1660,42 @@ const CozyTheme = ({ type, className, ignoreItself, children }) => {
     ? type
     : undefined
 
-  const \_type = uiThemeType || filteredSettingsThemeType || deviceThemeType
+  const _type = uiThemeType || filteredSettingsThemeType || deviceThemeType
 
   return (
-    &lt;CozyThemeContext.Provider
+    <CozyThemeContext.Provider
       value={{
-        type: \_type,
-        isLight: \_type === 'light'
+        type: _type,
+        isLight: _type === 'light'
       }}
-
-```
->
-  <MuiCozyTheme type={_type}>
-    <div
-      className={cx(className, {
-        [`TwakeTheme--${_type}`]: Boolean(_type),
-        'u-dc': ignoreItself
-      })}
     >
-      {children}
-    </div>
-  </MuiCozyTheme>
-</CozyThemeContext.Provider>
-```
-
+      <MuiCozyTheme type={_type}>
+        <div
+          className={cx(className, {
+            [`TwakeTheme--${_type}`]: Boolean(_type),
+            'u-dc': ignoreItself
+          })}
+        >
+          {children}
+        </div>
+      </MuiCozyTheme>
+    </CozyThemeContext.Provider>
   )
 }
 
 CozyTheme.propTypes = {
   type: PropTypes.oneOf(['light', 'dark', 'auto']),
   /  Causes this element's children to appear as if they were direct children of the element's parent, ignoring the element itself. |
-\| `className` | string | - | - |
-\| `children` | React.node | - | - |
+| `className` | string | - | - |
+| `children` | React.node | - | - |
+
 
 ### Selection (providers/Selection)
 
 ```jsx
 import Selection from 'cozy-ui/transpiled/react/providers/Selection'
 ```
+
 
 ### useConfirmExit (hooks/useConfirmExit)
 
@@ -1673,16 +1742,17 @@ const Example = () => {
 </BreakpointsProvider>
 ```
 
-| Prop           | Type     | Default | Description |
-| -------------- | -------- | ------- | ----------- |
-| `message`      | string   | -       | -           |
-| `title`        | string   | -       | -           |
-| `onConfirm`    | function | -       | -           |
-| `onCancel`     | function | -       | -           |
-| `cancelLabel`  | string   | -       | -           |
-| `confirmLabel` | string   | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `message` | string | - | - |
+| `title` | string | - | - |
+| `onConfirm` | function | - | - |
+| `onCancel` | function | - | - |
+| `cancelLabel` | string | - | - |
+| `confirmLabel` | string | - | - |
 
-* * *
+
+---
 
 ## Labs
 
@@ -1708,6 +1778,7 @@ import { Cloud, CloudHappy, File, Icon, Online } from '@linagora/twake-icons'
 </IconGrid>
 ```
 
+
 ### Labs
 
 In this directory, components you will find are experimental and subject to API change without creating any breaking change.
@@ -1715,6 +1786,7 @@ In this directory, components you will find are experimental and subject to API 
 ```jsx
 import Labs from 'cozy-ui/transpiled/react/Labs'
 ```
+
 
 ### PasswordInput (Labs/PasswordInput)
 
@@ -1724,12 +1796,13 @@ This component takes the same props as the Input component. Input props are spre
 import PasswordInput from 'cozy-ui/transpiled/react/Labs/PasswordInput'
 ```
 
-| Prop           | Type    | Default | Description |
-| -------------- | ------- | ------- | ----------- |
-| `showStrength` | boolean | `false` | -           |
-| `error`        | boolean | `false` | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `showStrength` | boolean | `false` | - |
+| `error` | boolean | `false` | - |
 
-* * *
+
+---
 
 ## Other
 
@@ -1741,6 +1814,7 @@ Re-export of @material-ui. See the official API.
 import Autocomplete from 'cozy-ui/transpiled/react/Autocomplete'
 ```
 
+
 ### BottomSheet
 
 Display content coming up from the bottom of the screen. The pane can be swiped to the top of the screen. Based on cozy / mui-bottom-sheet: API documentation is here. It uses Portal to have the same behavior as Dialogs / Modals (can be disabled with the disablePortal prop).
@@ -1749,7 +1823,10 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
 import BottomSheet from 'cozy-ui/transpiled/react/BottomSheet'
 ```
 
+
 ### ColorPickerCustom
+
+With saturation, hue and hex input for manual input or copy/paste.
 
 ```jsx
 import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
@@ -1758,15 +1835,24 @@ import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 **Example:**
 
 ```jsx
-import useProgression from 'cozy-ui/transpiled/react/helpers/useProgression'
+import { useState } from 'react'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import Paper from 'cozy-ui/transpiled/react/Paper';
 import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 
-<ColorPickerCustom />
+<BreakpointsProvider>
+  <Paper className="u-p-1">
+    <ColorPickerCustom color={color} setColor={setColor}/>
+  </Paper>
+</BreakpointsProvider>
 ```
 
-| Prop        | Type   | Default | Description |
-| ----------- | ------ | ------- | ----------- |
-| `className` | string | -       | -           |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `color` | string | - | - |
+| `setColor` | function | - | - |
+| `className` | string | - | - |
+
 
 ### providers
 
@@ -1774,4 +1860,5 @@ import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 import providers from 'cozy-ui/transpiled/react/providers'
 ```
 
-* * *
+
+---
