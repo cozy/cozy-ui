@@ -6007,6 +6007,28 @@ body {
   flex: 1;
 }
 
+.root--1wSag .react-colorful {
+  height: 140px;
+}
+.root--1wSag .react-colorful__saturation {
+  width: 246px;
+  border-radius: 0;
+}
+.root--1wSag .react-colorful__hue {
+  width: 246px;
+  height: 18px;
+  border-radius: 0;
+  margin-top: 20px;
+}
+.root--1wSag .react-colorful__pointer {
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+}
+.input--QRNzz {
+  width: 72px;
+}
+
 .DialogCloseButton--cxKPO {
   position: absolute;
   top: 1.15rem;
