@@ -1,3 +1,16 @@
+# [140.2.0](https://github.com/cozy/cozy-ui/compare/v140.1.2...v140.2.0) (2026-07-09)
+
+
+### Bug Fixes
+
+* Markdown lint ([184fd6b](https://github.com/cozy/cozy-ui/commit/184fd6b))
+
+
+### Features
+
+* Add ColorPickerCustom component ([25bb4c3](https://github.com/cozy/cozy-ui/commit/25bb4c3))
+* Add react-colorful ([a8e0390](https://github.com/cozy/cozy-ui/commit/a8e0390))
+
 ## [140.1.2](https://github.com/cozy/cozy-ui/compare/v140.1.1...v140.1.2) (2026-07-02)
 
 
