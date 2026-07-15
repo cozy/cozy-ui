@@ -17,7 +17,7 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
 - **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
 - **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
-- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorPickerCustom](#colorpickercustom), [providers](#providers)
+- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorList](#colorlist), [ColorPickerCustom](#colorpickercustom), [providers](#providers)
 
 ## Buttons
 
@@ -1821,6 +1821,13 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
 
 ```jsx
 import BottomSheet from 'cozy-ui/transpiled/react/BottomSheet'
+```
+
+
+### ColorList
+
+```jsx
+import ColorList from 'cozy-ui/transpiled/react/ColorList'
 ```
 
 
