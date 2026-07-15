@@ -66,6 +66,7 @@ module.exports = {
         '../react/ActionsBar',
         '../react/ActionsMenu',
         '../react/BottomSheet',
+        '../react/ColorList',
         '../react/CozyDialogs',
         '../react/CozyDialogs/SpecificDialogs',
         '../react/EditBadge',
