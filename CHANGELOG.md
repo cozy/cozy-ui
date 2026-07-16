@@ -1,3 +1,11 @@
+# [140.5.0](https://github.com/cozy/cozy-ui/compare/v140.4.0...v140.5.0) (2026-07-16)
+
+
+### Features
+
+* **ColorList:** Add customColorProps prop ([4c5a23d](https://github.com/cozy/cozy-ui/commit/4c5a23d))
+* **ColorPickerCustom:** Change API and behavior ([99cf242](https://github.com/cozy/cozy-ui/commit/99cf242))
+
 # [140.4.0](https://github.com/cozy/cozy-ui/compare/v140.3.0...v140.4.0) (2026-07-16)
 
 
