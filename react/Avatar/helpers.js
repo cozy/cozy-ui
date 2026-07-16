@@ -1,3 +1,5 @@
+import { darken, lighten, rgbToHex } from '@material-ui/core/styles'
+
 export const sizeToFontSize = {
   xs: 8,
   s: 11,
@@ -57,4 +59,19 @@ const makeKey = (colors, name) =>
 export const nameToColor = (name = '') => {
   const key = makeKey(colors, name)
   return colors[key]
+}
+
+/**
+ * Transorms a color to a css gradient to be used as background color
+ * @param {string} color - Color to be transformed
+ * @returns {string} css linear-gradient
+ */
+export const colorToGradient = color => {
+  if (!/^#[0-9A-Fa-f]{6}$/.test(color)) {
+    throw new Error('Color must be an 6-HEX color')
+  }
+
+  return `linear-gradient(136deg, ${rgbToHex(
+    lighten(color, 0.17)
+  )} 14.84%, ${rgbToHex(darken(color, 0.15))} 96.03%)`
 }
