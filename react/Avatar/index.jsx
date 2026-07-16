@@ -3,7 +3,12 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { colorMapping, supportedColors, nameToColor } from './helpers'
+import {
+  colorMapping,
+  supportedColors,
+  nameToColor,
+  colorToGradient
+} from './helpers'
 import { makeStyles } from '../styles'
 import { capitalize } from '../utils/index'
 
@@ -76,5 +81,7 @@ Avatar.defaultProps = {
   display: 'initial',
   size: 'm'
 }
+
+export { colorToGradient }
 
 export default Avatar
