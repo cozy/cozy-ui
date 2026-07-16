@@ -1,3 +1,11 @@
+# [140.3.0](https://github.com/cozy/cozy-ui/compare/v140.2.0...v140.3.0) (2026-07-16)
+
+
+### Features
+
+* Add ColorList component ([ade8132](https://github.com/cozy/cozy-ui/commit/ade8132))
+* Reexport ImageList, ImageListItem and ImageListItemBar ([7480e4b](https://github.com/cozy/cozy-ui/commit/7480e4b))
+
 # [140.2.0](https://github.com/cozy/cozy-ui/compare/v140.1.2...v140.2.0) (2026-07-09)
 
 
