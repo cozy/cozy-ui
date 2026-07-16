@@ -1,10 +1,11 @@
-import { Icon, Check } from '@linagora/twake-icons'
+import { Icon, Check, Palette } from '@linagora/twake-icons'
 import propTypes from 'prop-types'
 import React from 'react'
 
 import { COLORS } from './helpers'
 import Avatar from '../Avatar'
 import ButtonBase from '../ButtonBase'
+import Button from '../Buttons'
 import ImageList from '../ImageList'
 import ImageListItem from '../ImageListItem'
 import { useBreakpoints } from '../providers/Breakpoints'
@@ -14,14 +15,17 @@ const sizeToPx = {
   medium: 41
 }
 
-const ColorList = ({ size, selectedColor, onClick }) => {
+const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
   const { isMobile } = useBreakpoints()
+
   const _size = size || (isMobile ? 'medium' : 'small')
+  const avatarSize = sizeToPx[_size]
+  const iconSize = _size === 'medium' ? 16 : 10
 
   return (
     <ImageList
       cols={_size === 'medium' ? 5 : 7}
-      rowHeight={sizeToPx[_size]}
+      rowHeight={avatarSize}
       gap={_size === 'medium' ? 16 : 5}
     >
       {COLORS.map(color => (
@@ -35,9 +39,9 @@ const ColorList = ({ size, selectedColor, onClick }) => {
             component="div"
             onClick={() => onClick?.(color)}
           >
-            <Avatar color={color} size={sizeToPx[_size]}>
+            <Avatar color={color} size={avatarSize}>
               {selectedColor?.toUpperCase() === color ? (
-                <Icon icon={Check} size={_size === 'medium' ? 19 : 10} />
+                <Icon icon={Check} size={iconSize} />
               ) : (
                 ' '
               )}
@@ -45,6 +49,29 @@ const ColorList = ({ size, selectedColor, onClick }) => {
           </ButtonBase>
         </ImageListItem>
       ))}
+      {customColorProps?.enabled && (
+        <ImageListItem
+          className="u-ta-center"
+          classes={{ item: 'u-ov-visible' }}
+        >
+          <Button
+            className="u-miw-auto u-mih-auto u-p-0 u-bdrs-circle"
+            variant="ghost"
+            style={{
+              width: avatarSize,
+              height: avatarSize,
+              border: '1px solid transparent',
+              backgroundImage:
+                'linear-gradient(#fff, #fff), conic-gradient(from 0deg, #FB2C36, #AD46FF, #2B7FFF, #FB2C36)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'padding-box, border-box'
+            }}
+            classes={{ label: 'u-flex u-w-auto' }}
+            label={<Icon icon={Palette} size={iconSize} color="#000" />}
+            onClick={() => customColorProps?.onClick()}
+          />
+        </ImageListItem>
+      )}
     </ImageList>
   )
 }

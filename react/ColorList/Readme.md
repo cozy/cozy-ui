@@ -12,9 +12,13 @@ const ColorPickerDemo = ({ variant }) => {
   const [selectedColor, setSelectedColor] = useState('')
 
   return (
-    <div style={{ width: (variant.medium || isMobile) ? '100%' : 180 }}>
+    <div style={{ width: (variant.medium || isMobile) ? '100%' : 200 }}>
       <ColorList
         size={variant.medium ? 'medium' : undefined}
+        customColorProps={{
+          enabled: true,
+          onClick: () => {}
+        }}
         selectedColor={selectedColor}
         onClick={color => {
           console.info('color :', color)
