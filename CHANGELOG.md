@@ -1,3 +1,10 @@
+# [140.4.0](https://github.com/cozy/cozy-ui/compare/v140.3.0...v140.4.0) (2026-07-16)
+
+
+### Features
+
+* **Avatar:** Add colorToGradient func ([1b1c442](https://github.com/cozy/cozy-ui/commit/1b1c442))
+
 # [140.3.0](https://github.com/cozy/cozy-ui/compare/v140.2.0...v140.3.0) (2026-07-16)
 
 
