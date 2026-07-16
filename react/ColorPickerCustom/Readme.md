@@ -5,18 +5,19 @@ With saturation, hue and hex input for manual input or copy/paste.
 ```jsx
 import { useState } from 'react'
 
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
-import Paper from 'cozy-ui/transpiled/react/Paper';
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import Paper from 'cozy-ui/transpiled/react/Paper'
 import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 
-const [color, setColor] = useState('#aabbcc')
 ;
 
-
-<BreakpointsProvider>
+<DemoProvider>
   <Paper className="u-p-1">
-    <ColorPickerCustom color={color} setColor={setColor}/>
+    <ColorPickerCustom
+      color={'#AABBCC'}
+      onCancel={color => console.info('old color was:', color)}
+      onSave={color => console.info('color:', color)}
+    />
   </Paper>
-</BreakpointsProvider>
-
+</DemoProvider>
 ```
