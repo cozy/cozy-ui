@@ -1,3 +1,10 @@
+## [140.5.1](https://github.com/cozy/cozy-ui/compare/v140.5.0...v140.5.1) (2026-07-20)
+
+
+### Bug Fixes
+
+* **ColorList:** Now propagate onClick ev ([3227ee6](https://github.com/cozy/cozy-ui/commit/3227ee6))
+
 # [140.5.0](https://github.com/cozy/cozy-ui/compare/v140.4.0...v140.5.0) (2026-07-16)
 
 
