@@ -68,7 +68,7 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
             }}
             classes={{ label: 'u-flex u-w-auto' }}
             label={<Icon icon={Palette} size={iconSize} color="#000" />}
-            onClick={() => customColorProps?.onClick()}
+            onClick={ev => customColorProps?.onClick(ev)}
           />
         </ImageListItem>
       )}
@@ -79,6 +79,10 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
 ColorList.propTypes = {
   size: propTypes.oneOf(['small', 'medium']),
   selectedColor: propTypes.string,
+  customColorProps: propTypes.shape({
+    enabled: propTypes.bool,
+    onClick: propTypes.func
+  }),
   onClick: propTypes.func
 }
 
