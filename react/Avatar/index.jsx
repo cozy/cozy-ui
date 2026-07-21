@@ -12,7 +12,7 @@ import {
 import { makeStyles } from '../styles'
 import { capitalize } from '../utils/index'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: ({ size }) => size,
     height: ({ size }) => size,
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   colorDefault: {
     color: ({ color, textColor }) =>
-      textColor ? textColor : color ? theme.palette.primary.contrastText : '',
+      textColor ? textColor : color ? '#fff' : '', // We don't want avatar color to be theme responsive
     background: ({ color }) =>
       supportedColors.includes(color) ? colorMapping[color] : color
   }
