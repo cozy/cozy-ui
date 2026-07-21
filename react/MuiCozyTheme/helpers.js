@@ -70,6 +70,9 @@ export const makeChipStyleByColor = (theme, color) => ({
           : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity)
     }
   },
+  '& $avatar': {
+    color: '#fff' // We don't want avatar color to be theme responsive
+  },
   '& $icon': {
     color:
       color === 'primary' ? theme.palette.text.icon : theme.palette[color].main,
