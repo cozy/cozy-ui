@@ -1,3 +1,10 @@
+## [140.5.2](https://github.com/cozy/cozy-ui/compare/v140.5.1...v140.5.2) (2026-07-21)
+
+
+### Bug Fixes
+
+* Force white for avatar color ([d840ebe](https://github.com/cozy/cozy-ui/commit/d840ebe))
+
 ## [140.5.1](https://github.com/cozy/cozy-ui/compare/v140.5.0...v140.5.1) (2026-07-20)
 
 
