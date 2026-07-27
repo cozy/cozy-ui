@@ -21,6 +21,7 @@ module.exports = {
         '../react/Badge',
         '../react/Breadcrumbs',
         '../react/Buttons',
+        '../react/ButtonNew',
         '../react/Checkbox',
         '../react/Chips',
         '../react/CircularProgress',

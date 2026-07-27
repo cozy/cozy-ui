@@ -277,7 +277,25 @@ export const makeLightOverrides = theme => ({
       // !important needed to override all sizes
       // should be remove when https://github.com/cozy/cozy-ui/issues/1808 is fixed
       marginLeft: '0 !important'
-    }
+    },
+    // ponytail: no icon fade transition, add if needed
+    '&.loading': {
+      position: 'relative'
+    },
+    '&.loading.loadingPosition-center $label': {
+      color: 'transparent'
+    },
+    '& .loadingIndicator': {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      display: 'none'
+    },
+    '&.loading.loadingPosition-center .loadingIndicator': {
+      color: theme.palette.action.disabled
+    },
+    '&.loading .loadingIndicator': { display: 'flex' }
   },
   MuiTabs: {
     root: {
