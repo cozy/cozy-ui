@@ -1,3 +1,10 @@
+# [140.6.0](https://github.com/cozy/cozy-ui/compare/v140.5.2...v140.6.0) (2026-07-29)
+
+
+### Features
+
+* Add gap utility classes ([d4ff984](https://github.com/cozy/cozy-ui/commit/d4ff984))
+
 ## [140.5.2](https://github.com/cozy/cozy-ui/compare/v140.5.1...v140.5.2) (2026-07-21)
 
 
