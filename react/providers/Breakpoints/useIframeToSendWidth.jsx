@@ -1,27 +1,19 @@
 import throttle from 'lodash/throttle'
 import { useEffect } from 'react'
 
-/**
- * To send window innerWidth to first iframe
- * @returns
- */
-const sendWidthToIframe = () =>
-  window.frames[1].postMessage(`UI-breakpoints-value:${window.innerWidth}`, '*')
+const sendWidthToIframe = iframeWindow =>
+  iframeWindow?.postMessage(`UI-breakpoints-value:${window.innerWidth}`, '*')
 
-export const useIframeToSendWidth = ({ hasIframe }) => {
+export const useIframeToSendWidth = ({ iframeWindow }) => {
   // parent window send its innerWidth
   useEffect(() => {
-    if (hasIframe) {
-      sendWidthToIframe()
-    }
-  }, [hasIframe])
+    sendWidthToIframe(iframeWindow)
+  }, [iframeWindow])
 
   // parent window send its innerWidth on resize
   useEffect(() => {
     const handleResize = throttle(() => {
-      if (hasIframe) {
-        sendWidthToIframe()
-      }
+      sendWidthToIframe(iframeWindow)
     }, 100)
 
     window.addEventListener('resize', handleResize)
@@ -29,5 +21,5 @@ export const useIframeToSendWidth = ({ hasIframe }) => {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [hasIframe])
+  }, [iframeWindow])
 }

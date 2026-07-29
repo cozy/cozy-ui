@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { isInsideIframe } from '../../helpers/breakpoints'
 
 export const useIframeConnection = ({ parentBasedIframe }) => {
-  const [hasIframe, setHasIframe] = useState(false)
+  const [iframeWindow, setIframeWindow] = useState(null)
 
   const isIframe = parentBasedIframe && isInsideIframe()
 
@@ -11,7 +11,7 @@ export const useIframeConnection = ({ parentBasedIframe }) => {
   useEffect(() => {
     const handleMessage = ev => {
       if (ev.data === 'UI-breakpoints-needParentBreakpoints') {
-        setHasIframe(true)
+        setIframeWindow(ev.source)
       }
     }
 
@@ -27,5 +27,5 @@ export const useIframeConnection = ({ parentBasedIframe }) => {
     }
   }, [isIframe])
 
-  return { hasIframe }
+  return { iframeWindow }
 }
