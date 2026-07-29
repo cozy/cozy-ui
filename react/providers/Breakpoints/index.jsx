@@ -13,8 +13,8 @@ export const BreakpointsProvider = ({ parentBasedIframe, children }) => {
   const [breakpoints, setBreakpoints] = useState(
     getBreakpointsStatus(breakpointDefs)
   )
-  const { hasIframe } = useIframeConnection({ parentBasedIframe })
-  useIframeToSendWidth({ hasIframe })
+  const { iframeWindow } = useIframeConnection({ parentBasedIframe })
+  useIframeToSendWidth({ iframeWindow })
   const { parentBreakpoints } = useParentBreakpoints({ parentBasedIframe })
 
   useEffect(() => {
