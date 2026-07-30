@@ -1,3 +1,16 @@
+# [141.0.0](https://github.com/cozy/cozy-ui/compare/v140.6.0...v141.0.0) (2026-07-30)
+
+
+* fix(breakpoints)!: target the requesting iframe ([b222ae2](https://github.com/cozy/cozy-ui/commit/b222ae2)), closes [#2949](https://github.com/cozy/cozy-ui/issues/2949)
+
+
+### BREAKING CHANGES
+
+* replace the old hook usage with:
+
+const { iframeWindow } = useIframeConnection({ parentBasedIframe })
+useIframeToSendWidth({ iframeWindow })
+
 # [140.6.0](https://github.com/cozy/cozy-ui/compare/v140.5.2...v140.6.0) (2026-07-29)
 
 
