@@ -91,11 +91,23 @@ export const makeChipStyleByColor = (theme, color) => ({
   },
   '&$colorPrimary': {
     padding: '0 1px',
-    color: theme.palette[color].contrastText,
-    backgroundColor: theme.palette[color].main,
+    color:
+      color === 'primary'
+        ? theme.palette[color].main
+        : theme.palette[color].contrastText,
+    backgroundColor:
+      color === 'primary'
+        ? alpha(theme.palette[color].main, theme.palette.action.ghostOpacity)
+        : theme.palette[color].main,
     '& $icon, & $deleteIcon': {
-      color: theme.palette[color].contrastText,
-      fill: theme.palette[color].contrastText
+      color:
+        color === 'primary'
+          ? theme.palette[color].main
+          : theme.palette[color].contrastText,
+      fill:
+        color === 'primary'
+          ? theme.palette[color].main
+          : theme.palette[color].contrastText
     },
     '&$disabled': {
       opacity: 1,
@@ -108,7 +120,13 @@ export const makeChipStyleByColor = (theme, color) => ({
     },
     '&$clickable, &$deletable': {
       '&:hover, &:focus': {
-        backgroundColor: theme.palette[color].dark
+        backgroundColor:
+          color === 'primary'
+            ? alpha(
+                theme.palette[color].main,
+                theme.palette.action.hoverGhostOpacity
+              )
+            : theme.palette[color].dark
       }
     }
   },
