@@ -308,7 +308,6 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 * @popperjs/core => react-popper => ActionMenu/NotInlineWrapper
 * react-remove-scroll => BottomDrawer, Overlay
-* react-swipeable-views => InfosCarroussel, ViewStack
 
 #### PeerDependencies
 
