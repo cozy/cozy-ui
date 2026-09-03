@@ -1,3 +1,18 @@
+# [142.0.0](https://github.com/cozy/cozy-ui/compare/v141.0.0...v142.0.0) (2026-09-03)
+
+
+### Features
+
+* Build docs with transpiled [@react-spring](https://github.com/react-spring) ([07af455](https://github.com/cozy/cozy-ui/commit/07af455))
+* Remove ViewStack and InfosCarrousel ([db3eeef](https://github.com/cozy/cozy-ui/commit/db3eeef))
+* Update mui-bottom-sheet ([384f167](https://github.com/cozy/cozy-ui/commit/384f167))
+* Update react-markdown ([7eb612c](https://github.com/cozy/cozy-ui/commit/7eb612c))
+
+
+### BREAKING CHANGES
+
+* ViewStack and InfosCarrousel have been removed without replacement.
+
 # [141.0.0](https://github.com/cozy/cozy-ui/compare/v140.6.0...v141.0.0) (2026-07-30)
 
 
