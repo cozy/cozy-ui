@@ -175,12 +175,13 @@
     "patch-package": "^8.0.0",
     "pdf-lib": "1.17.1",
     "react-colorful": "5.7.0",
-    "react-markdown": "^4.0.8",
+    "react-markdown": "^6.0.3",
     "react-popper": "^2.2.3",
     "react-remove-scroll": "^2.4.0",
     "react-select": "^4.3.0",
     "react-swipeable-views": "^0.13.3",
     "react-virtuoso": "^4.13.0",
+    "remark-gfm": "^1.0.0",
     "rooks": "7.14.1"
   },
   "peerDependencies": {
