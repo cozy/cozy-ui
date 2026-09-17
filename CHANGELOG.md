@@ -1,3 +1,10 @@
+## [142.0.1](https://github.com/cozy/cozy-ui/compare/v142.0.0...v142.0.1) (2026-09-17)
+
+
+### Bug Fixes
+
+* Dialog doc ([1d28879](https://github.com/cozy/cozy-ui/commit/1d28879))
+
 # [142.0.0](https://github.com/cozy/cozy-ui/compare/v141.0.0...v142.0.0) (2026-09-03)
 
 
