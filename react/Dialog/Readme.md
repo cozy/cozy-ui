@@ -18,9 +18,7 @@ import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import { FileTypeFolder, FileTypeText, Icon } from '@linagora/twake-icons'
-
-import { Dots } from '@linagora/twake-icons'
+import { FileTypeFolder, FileTypeText, Icon, Dots } from '@linagora/twake-icons'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
