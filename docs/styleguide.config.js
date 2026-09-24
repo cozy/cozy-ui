@@ -74,6 +74,7 @@ module.exports = {
         '../react/HistoryRow',
         '../react/Layout/Layout.jsx',
         '../react/MidEllipsis',
+        '../react/NavbarButton',
         '../react/NavigationList',
         '../react/NestedSelect/NestedSelect.jsx',
         '../react/Sidebar',

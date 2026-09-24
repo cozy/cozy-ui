@@ -14,6 +14,7 @@ export {
 export { default as ListItemText } from './ListItemText'
 export { default as Spinner } from './Spinner'
 export { default as ColorList } from './ColorList'
+export { default as NavbarButton } from './NavbarButton'
 export { default as Accordion } from './Accordion'
 export { default as AccordionSummary } from './AccordionSummary'
 export { default as AccordionDetails } from './AccordionDetails'
