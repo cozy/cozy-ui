@@ -1,3 +1,18 @@
+# [142.1.0](https://github.com/cozy/cozy-ui/compare/v142.0.1...v142.1.0) (2026-09-24)
+
+
+### Bug Fixes
+
+* **Table:** Keep slow clicks on VirtualizedTable cells without a long press handler ([a283f77](https://github.com/cozy/cozy-ui/commit/a283f77))
+* **Table:** Show a pointer only on clickable VirtualizedTable cells ([9953f49](https://github.com/cozy/cozy-ui/commit/9953f49))
+* **Table:** Sort VirtualizedTable rows only when rows or order change ([b1be981](https://github.com/cozy/cozy-ui/commit/b1be981))
+* **Table:** Translate the VirtualizedTable sort direction announcement ([2d67cd8](https://github.com/cozy/cozy-ui/commit/2d67cd8))
+
+
+### Features
+
+* **Table:** Export VirtuosoMockContext to test VirtualizedTable ([ba3e8bd](https://github.com/cozy/cozy-ui/commit/ba3e8bd))
+
 ## [142.0.1](https://github.com/cozy/cozy-ui/compare/v142.0.0...v142.0.1) (2026-09-17)
 
 
