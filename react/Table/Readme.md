@@ -3,6 +3,7 @@
 ```jsx
 import { useState } from 'react'
 import VirtualizedTable from 'cozy-ui/transpiled/react/Table/Virtualized'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
@@ -138,26 +139,28 @@ const SelectButton = () => {
 
 ;
 
-<Variants initialVariants={initialVariants} screenshotAllVariants>
-  {variant => (
-    <>
-      <SelectionProvider>
-        <Typography className="u-mt-1" variant="h4">Not sorted table</Typography>
-        <SelectButton />
-        <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-          <ExampleTable variant={variant} />
-        </div>
-      </SelectionProvider>
-      <SelectionProvider>
-        <Typography className="u-mt-1" variant="h4">Sorted table</Typography>
-        <SelectButton />
-        <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-          <ExampleTable variant={variant} defaultOrder={{by: columns[0].id, direction: 'asc'}} />
-        </div>
-      </SelectionProvider>
-    </>
-  )}
-</Variants>
+<DemoProvider>
+  <Variants initialVariants={initialVariants} screenshotAllVariants>
+    {variant => (
+      <>
+        <SelectionProvider>
+          <Typography className="u-mt-1" variant="h4">Not sorted table</Typography>
+          <SelectButton />
+          <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+            <ExampleTable variant={variant} />
+          </div>
+        </SelectionProvider>
+        <SelectionProvider>
+          <Typography className="u-mt-1" variant="h4">Sorted table</Typography>
+          <SelectButton />
+          <div style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+            <ExampleTable variant={variant} defaultOrder={{by: columns[0].id, direction: 'asc'}} />
+          </div>
+        </SelectionProvider>
+      </>
+    )}
+  </Variants>
+</DemoProvider>
 ```
 
 ### With Drag'n'Drop
@@ -165,6 +168,7 @@ const SelectButton = () => {
 ```jsx
 import { useState } from 'react'
 import VirtualizedTableDnd from 'cozy-ui/transpiled/react/Table/Virtualized/Dnd'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
 import { DndProvider } from 'react-dnd'
@@ -238,11 +242,13 @@ const DndExample = () => {
 
 ;
 
-<SelectionProvider>
-  <DndProvider backend={HTML5Backend}>
-    <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-      <DndExample />
-    </div>
-  </DndProvider>
-</SelectionProvider>
+<DemoProvider>
+  <SelectionProvider>
+    <DndProvider backend={HTML5Backend}>
+      <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
+        <DndExample />
+      </div>
+    </DndProvider>
+  </SelectionProvider>
+</DemoProvider>
 ```
