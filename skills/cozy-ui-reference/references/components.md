@@ -17,7 +17,7 @@ Generated reference for React components available in cozy-ui. Use this file to 
 - **Utils**: [DropdownText](#dropdowntext), [MuiCozyTheme](#muicozytheme)
 - **Hooks & Providers**: [Breakpoints (providers/Breakpoints)](#breakpoints-providers-breakpoints), [ConfirmDialog (providers/ConfirmDialog)](#confirmdialog-providers-confirmdialog), [CozyTheme (providers/CozyTheme)](#cozytheme-providers-cozytheme), [Selection (providers/Selection)](#selection-providers-selection), [useConfirmExit (hooks/useConfirmExit)](#useconfirmexit-hooks-useconfirmexit)
 - **Labs**: [IconGrid (Labs/IconGrid)](#icongrid-labs-icongrid), [Labs](#labs), [PasswordInput (Labs/PasswordInput)](#passwordinput-labs-passwordinput)
-- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorList](#colorlist), [ColorPickerCustom](#colorpickercustom), [providers](#providers)
+- **Other**: [Autocomplete](#autocomplete), [BottomSheet](#bottomsheet), [ColorList](#colorlist), [ColorPickerCustom](#colorpickercustom), [NavbarButton](#navbarbutton), [providers](#providers)
 
 ## Buttons
 
@@ -1858,6 +1858,24 @@ import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 |------|------|---------|-------------|
 | `color` | string | - | - |
 | `setColor` | function | - | - |
+| `className` | string | - | - |
+
+
+### NavbarButton
+
+Main action button of a sidebar, like "Create" or "Upload". The icon and text props are required.
+
+```jsx
+import NavbarButton from 'cozy-ui/transpiled/react/NavbarButton'
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | React.node | - | Icon displayed before the text |
+| `text` | React.node | - | Text of the button |
+| `variant` | `primary` \| `secondary` | `'primary'` | - |
+| `disabled` | boolean | - | - |
+| `fullWidth` | boolean | - | - |
 | `className` | string | - | - |
 
 
