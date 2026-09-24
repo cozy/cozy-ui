@@ -33,12 +33,13 @@ const Cell = ({
 
   const longPressRef = useOnLongPress(
     () => {
-      if (column.disableClick) {
+      // without a long press handler, a slow click must stay a click
+      if (column.disableClick || !onLongPress) {
         return
       }
 
       setIsLongPress(true)
-      onLongPress?.(row, column)
+      onLongPress(row, column)
     },
     { duration: 300 }
   )
