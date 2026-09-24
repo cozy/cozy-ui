@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { useState, forwardRef } from 'react'
+import React, { useMemo, useState, forwardRef } from 'react'
 import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
 import FixedHeaderContent from './FixedHeaderContent'
@@ -32,10 +32,12 @@ const VirtualizedTable = forwardRef(
     )
     const [orderBy, setOrderBy] = useState(defaultOrder?.by ?? undefined)
 
-    const sortedData = orderBy
-      ? stableSort(rows, getComparator(orderDirection, orderBy))
-      : rows
-    const data = secondarySort ? secondarySort(sortedData) : sortedData
+    const data = useMemo(() => {
+      const sortedData = orderBy
+        ? stableSort(rows, getComparator(orderDirection, orderBy))
+        : rows
+      return secondarySort ? secondarySort(sortedData) : sortedData
+    }, [rows, orderBy, orderDirection, secondarySort])
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
     const _context = {
