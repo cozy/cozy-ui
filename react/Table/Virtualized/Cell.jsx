@@ -28,7 +28,10 @@ const Cell = ({
   const [isLongPress, setIsLongPress] = useState(false) // onClick is triggered after a long press anyway, so we need this bool to avoid this behavior
   const [lastClickTime, setLastClickTime] = useState(0)
 
-  const classes = useStyles({ column, isClickable: !!onClick })
+  const classes = useStyles({
+    column,
+    isClickable: !!onClick && !column.disableClick
+  })
   const cellContent = get(row, column.id, '—')
 
   const longPressRef = useOnLongPress(
