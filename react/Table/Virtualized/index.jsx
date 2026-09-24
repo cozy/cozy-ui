@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React, { useMemo, useState, forwardRef } from 'react'
 import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
+export { VirtuosoMockContext } from 'react-virtuoso'
+
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
