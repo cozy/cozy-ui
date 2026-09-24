@@ -1,8 +1,15 @@
 import React from 'react'
+import { useI18n, useExtendI18n } from 'twake-i18n'
 
+import en from './locales/en.json'
+import fr from './locales/fr.json'
+import ru from './locales/ru.json'
+import vi from './locales/vi.json'
 import TableCell from '../../TableCell'
 import TableSortLabel from '../../TableSortLabel'
 import { makeStyles } from '../../styles'
+
+const locales = { en, fr, ru, vi }
 
 const useStyles = makeStyles({
   root: {
@@ -18,6 +25,8 @@ const TableHeadCell = ({
   orderDirection,
   onClick
 }) => {
+  useExtendI18n(locales)
+  const { t } = useI18n()
   const classes = useStyles({ column })
 
   return (
@@ -39,8 +48,8 @@ const TableHeadCell = ({
           {orderBy === column.id && (
             <span className={className}>
               {orderDirection === 'desc'
-                ? 'sorted descending'
-                : 'sorted ascending'}
+                ? t('VirtualizedTable.sortedDesc')
+                : t('VirtualizedTable.sortedAsc')}
             </span>
           )}
         </TableSortLabel>
