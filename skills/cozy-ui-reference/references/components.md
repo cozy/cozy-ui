@@ -552,10 +552,16 @@ import BarTitle from 'cozy-ui/transpiled/react/BarTitle'
 **Example:**
 
 ```jsx
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
-<div style={{ border: '1px solid red' }}>
-  <BarTitle>My transactions</BarTitle>
-</div>
+const MyPage = () => {
+  const { isMobile } = useBreakpoints()
+  return (
+    <BarCenter>
+      {isMobile ? <BarTitle>My transactions</BarTitle> : null }
+    </BarCenter>
+  )
+}
 ```
 
 | Prop | Type | Default | Description |
@@ -652,38 +658,10 @@ import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
 **Example:**
 
 ```jsx
-import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
-import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav'
-import { Check, Download, Warn } from '@linagora/twake-icons'
-import cx from 'classnames'
+import { NavLink as RouterLink } from 'react-router'
+import { genNavLink } from 'cozy-ui/transpiled/react/Nav'
 
-<Sidebar id='sidebar' style={demoStyle}>
-  <Nav>
-    <NavItem id='nav-item'>
-      <NavLink to="/warn" active>
-        <NavIcon icon={Warn} />
-        <NavText>Warn</NavText>
-      </NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink to="/check">
-        <NavIcon icon={Check} />
-        <NavText>Check</NavText>
-      </NavLink>
-    </NavItem>
-    <NavItem secondary>
-      <NavLink to="/secondary">
-        <NavText>Secondary link</NavText>
-      </NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink to="/download">
-        <NavIcon icon={Download} />
-        <NavText>Download</NavText>
-      </NavLink>
-    </NavItem>
-  </Nav>
-</Sidebar>
+const NavLink = genNavLink(RouterLink)
 ```
 
 | Prop | Type | Default | Description |
@@ -1397,25 +1375,6 @@ import Stepper from 'cozy-ui/transpiled/react/Stepper'
 import Table from 'cozy-ui/transpiled/react/Table'
 ```
 
-**Example:**
-
-```jsx
-import { useState } from 'react'
-import VirtualizedTableDnd from 'cozy-ui/transpiled/react/Table/Virtualized/Dnd'
-import Typography from 'cozy-ui/transpiled/react/Typography'
-import SelectionProvider, { useSelection } from 'cozy-ui/transpiled/react/providers/Selection'
-import { DndProvider } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
-
-<SelectionProvider>
-  <DndProvider backend={HTML5Backend}>
-    <div className="u-mt-half" style={{ border: "1px solid var(--borderMainColor)", height: 400, width: "100%" }}>
-      <DndExample />
-    </div>
-  </DndProvider>
-</SelectionProvider>
-```
-
 
 ### Thumbnail
 
@@ -1589,6 +1548,19 @@ import DropdownText from 'cozy-ui/transpiled/react/DropdownText'
 
 ```jsx
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+```
+
+**Example:**
+
+```jsx
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import Button from '@material-ui/core/Button'
+
+const DisplayButtonWithCozyTheme = () => (
+  <MuiCozyTheme>
+    <Button>Default button with Cozy theme</Button>
+  </MuiCozyTheme>
+)
 ```
 
 | Prop | Type | Default | Description |
@@ -1839,26 +1811,12 @@ With saturation, hue and hex input for manual input or copy/paste.
 import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
 ```
 
-**Example:**
-
-```jsx
-import { useState } from 'react'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
-import Paper from 'cozy-ui/transpiled/react/Paper';
-import ColorPickerCustom from 'cozy-ui/transpiled/react/ColorPickerCustom'
-
-<BreakpointsProvider>
-  <Paper className="u-p-1">
-    <ColorPickerCustom color={color} setColor={setColor}/>
-  </Paper>
-</BreakpointsProvider>
-```
-
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `color` | string | - | - |
-| `setColor` | function | - | - |
 | `className` | string | - | - |
+| `color` | string | - | - |
+| `onSave` | function | - | - |
+| `onCancel` | function | - | - |
 
 
 ### providers
