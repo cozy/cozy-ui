@@ -181,7 +181,7 @@
     "react-select": "^4.3.0",
     "react-virtuoso": "^4.13.0",
     "remark-gfm": "^1.0.0",
-    "rooks": "7.14.1"
+    "rooks": "8.4.0"
   },
   "peerDependencies": {
     "@linagora/twake-icons": ">=2.6.2",

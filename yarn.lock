@@ -17350,15 +17350,15 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rooks@7.14.1:
-  version "7.14.1"
-  resolved "https://registry.yarnpkg.com/rooks/-/rooks-7.14.1.tgz#f3660752c299da02eb6cc733c55f8270c3376a87"
-  integrity sha512-oPuLNGm3OaFm3WfZHzmDvJvRit8QrXGm9/Kn49Bz8lJUjkThSBtERWzuQ9wb5DveqrpUZvmNyBXjBE0KWVt13w==
+rooks@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/rooks/-/rooks-8.4.0.tgz#3cf803828248162e73bda4d83eddcd2fc0ac100f"
+  integrity sha512-pcBsWe3aF91ec5M+4T1kNQvkWZ/FLFmtDKKwPqi/sh9JAUb4HWB4QoRV8fLLVp3oAhEF8TN2P3xpyYKwJ6E07A==
   dependencies:
     fast-deep-equal "^3.1.3"
     lodash.debounce "^4.0.8"
     raf "^3.4.1"
-    use-sync-external-store "^1.2.0"
+    use-sync-external-store "^1.4.0"
 
 rsvp@^4.8.4:
   version "4.8.4"
@@ -19960,10 +19960,10 @@ use-sidecar@^1.0.1:
     detect-node-es "^1.0.0"
     tslib "^1.9.3"
 
-use-sync-external-store@^1.2.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.5.0.tgz#55122e2a3edd2a6c106174c27485e0fd59bcfca0"
-  integrity sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==
+use-sync-external-store@^1.4.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.7.0.tgz#6dcb66ef569e02f186af6b3d575f414ce746e18f"
+  integrity sha512-6L+EeigHMQhdaIPNIFUKwfWJSwWFQ8gJbJ2DLOs5sDIegTwR9fRxvnM3uciHKjIZhFz+KAv2emhWMRvDmMcY8A==
 
 use@^3.1.0:
   version "3.1.1"
