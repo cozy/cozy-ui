@@ -65,6 +65,16 @@ PERFORMANCE OF THIS SOFTWARE.
 /*! https://mths.be/regenerate v1.3.3 by @mathias | MIT license */
 
 /**
+ * @license React
+ * use-sync-external-store-shim.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
  * A better abstraction over CSS.
  *
  * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
