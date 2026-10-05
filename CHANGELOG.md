@@ -1,3 +1,10 @@
+## [142.2.1](https://github.com/cozy/cozy-ui/compare/v142.2.0...v142.2.1) (2026-10-05)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Upgrade mui-bottom-sheet to 1.0.11 ([a198aea](https://github.com/cozy/cozy-ui/commit/a198aea))
+
 # [142.2.0](https://github.com/cozy/cozy-ui/compare/v142.1.1...v142.2.0) (2026-10-05)
 
 
