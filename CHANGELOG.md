@@ -1,3 +1,15 @@
+# [142.2.0](https://github.com/cozy/cozy-ui/compare/v142.1.1...v142.2.0) (2026-10-05)
+
+
+### Bug Fixes
+
+* **docs:** Transpile rooks in styleguidist build ([2bf37f7](https://github.com/cozy/cozy-ui/commit/2bf37f7))
+
+
+### Features
+
+* Update rooks to 8.4.0 ([ece5e36](https://github.com/cozy/cozy-ui/commit/ece5e36))
+
 ## [142.1.1](https://github.com/cozy/cozy-ui/compare/v142.1.0...v142.1.1) (2026-10-05)
 
 
