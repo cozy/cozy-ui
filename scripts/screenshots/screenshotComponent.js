@@ -22,6 +22,10 @@ const screenshotComponent = async (page, options) => {
 
   await page.goto(link)
   await page.addStyleTag({ content: 'body {height: auto;}' }) // to resize viewport according to its content
+  // twake-icons spin animation ignores prefers-reduced-motion, which makes Spinner screenshots flaky
+  await page.addStyleTag({
+    content: '.twake-icon--spin { animation: none !important; }'
+  })
   await sleep(200) // to be sure the page is entirely loaded
 
   const getScreenshotName =
