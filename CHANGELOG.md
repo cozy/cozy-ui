@@ -1,3 +1,10 @@
+## [142.1.1](https://github.com/cozy/cozy-ui/compare/v142.1.0...v142.1.1) (2026-10-05)
+
+
+### Bug Fixes
+
+* Freeze spinner animation in screenshots to avoid flaky Argos diffs ([ca9e469](https://github.com/cozy/cozy-ui/commit/ca9e469))
+
 # [142.1.0](https://github.com/cozy/cozy-ui/compare/v142.0.1...v142.1.0) (2026-09-24)
 
 
