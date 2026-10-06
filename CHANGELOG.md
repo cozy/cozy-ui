@@ -1,3 +1,10 @@
+# [142.3.0](https://github.com/cozy/cozy-ui/compare/v142.2.3...v142.3.0) (2026-10-06)
+
+
+### Features
+
+* Add Spanish, German and Italian locales ([0397ea2](https://github.com/cozy/cozy-ui/commit/0397ea2))
+
 ## [142.2.3](https://github.com/cozy/cozy-ui/compare/v142.2.2...v142.2.3) (2026-10-06)
 
 
