@@ -1,0 +1,30 @@
+{
+  "menu": "Menu",
+  "viewInContacts": "Visualizza in Cozy Contacts",
+  "viewInDrive": "Apri",
+  "modify": "Modifica",
+  "emailTo": "Invia un'email",
+  "smsTo": "Invia un messaggio",
+  "print": "Stampa",
+  "download": "Scarica",
+  "favorites": {
+    "add": {
+      "label": "Aggiungi ai preferiti",
+      "success": "%{filename} è stato aggiunto ai preferiti |||| Questi elementi sono stati aggiunti ai preferiti"
+    },
+    "remove": {
+      "label": "Rimuovi dai preferiti",
+      "success": "%{filename} è stato rimosso dai preferiti |||| Questi elementi sono stati rimossi dai preferiti"
+    },
+    "error": "Si è verificato un errore, riprova."
+  },
+  "others": "Altro",
+  "editAttribute": "Modifica attributo",
+  "copyToClipboard": {
+    "copy": "Copia",
+    "success": "Copiato negli appunti",
+    "error": "Impossibile copiare negli appunti"
+  },
+  "call": "Chiama",
+  "exportToText": "Esporta come testo"
+}

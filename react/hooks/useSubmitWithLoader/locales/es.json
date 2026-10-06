@@ -1,0 +1,6 @@
+{
+  "useSubmitWithLoader": {
+    "success": "¡Hecho!",
+    "error": "Se ha producido un error %{error}"
+  }
+}

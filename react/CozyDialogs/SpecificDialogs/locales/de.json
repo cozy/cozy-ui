@@ -1,0 +1,41 @@
+{
+  "cancel": "Abbrechen",
+  "allow": "Zulassen",
+  "allow-location-dialog": {
+    "title": "Zugriff auf Ihren Standort zulassen",
+    "description": "Ihr Twake benötigt dauerhaft Zugriff auf den Standort Ihres Telefons, um Ihre Wege zu speichern und Ihnen bei deren Auswertung zu helfen, auch wenn die App nicht verwendet wird.\n\nIhr Standort wird NIEMALS ohne Ihre Zustimmung an Dritte weitergegeben.\n\nSie können diese Funktion in den Einstellungen der App Coach CO2 deaktivieren."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Scannen Sie den QR-Code",
+    "text": "oder öffnen Sie direkt den <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>oder den <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a>, um die App Twake Workplace zu installieren",
+    "a11n": "Zur Downloadseite der Anwendung Twake Workplace"
+  },
+  "authentification-dialog": {
+    "title": "Anmeldung",
+    "title-oidc": "Twake Pass",
+    "subtitle": "Bitte bestätigen Sie aus Sicherheitsgründen Ihre Identität",
+    "label": "Twake-Passwort",
+    "label-oidc": "Twake Pass-Passwort",
+    "abort": "Verlassen",
+    "unlock": "Entsperren",
+    "forgotten-password": "Ich habe mein Passwort vergessen",
+    "errors": {
+      "invalid_password": "Falsches Passwort. Bitte versuchen Sie es erneut.",
+      "server_error": "Auf dem Server ist ein Fehler aufgetreten. Bitte laden Sie die Seite neu."
+    }
+  },
+  "shortcut-dialog": {
+    "create-title": "Verknüpfung erstellen",
+    "edit-title": "Verknüpfung bearbeiten",
+    "filename": "Name der Verknüpfung",
+    "url": "URL",
+    "cancel": "Abbrechen",
+    "create": "Erstellen",
+    "edit": "Speichern",
+    "created": "Die Verknüpfung wurde erstellt",
+    "edited": "Die Verknüpfung wurde geändert",
+    "errored": "Ein Fehler ist aufgetreten",
+    "needs-info": "Eine Verknüpfung benötigt einen Namen und eine URL",
+    "url-bad-format": "Die eingegebene URL hat nicht das richtige Format"
+  }
+}

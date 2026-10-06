@@ -1,16 +1,25 @@
+const dayFirstDateFormats = {
+  fr: 'dd/LL/yyyy',
+  es: 'dd/LL/yyyy',
+  it: 'dd/LL/yyyy',
+  de: 'dd.LL.yyyy'
+}
+
 export const makeFormat = ({ ampm, mode, lang }) => {
+  const dayFirstDate = dayFirstDateFormats[lang]
+
   switch (mode) {
     case 'date':
-      return lang === 'fr' ? 'dd/LL/yyyy' : 'LL/dd/yyyy'
+      return dayFirstDate || 'LL/dd/yyyy'
     case 'time':
-      return lang === 'fr' ? 'HH:mm' : ampm ? 'HH:mm a' : 'HH:mm'
+      return dayFirstDate ? 'HH:mm' : ampm ? 'HH:mm a' : 'HH:mm'
     case 'dateTime':
-      return lang === 'fr'
-        ? 'dd/LL/yyyy HH:mm'
+      return dayFirstDate
+        ? `${dayFirstDate} HH:mm`
         : ampm
         ? 'LL/dd/yyyy HH:mm a'
         : 'LL/dd/yyyy HH:mm'
     default:
-      return lang === 'fr' ? 'dd/LL/yyyy' : ampm ? 'LL/dd/yyyy a' : 'LL/dd/yyyy'
+      return dayFirstDate || (ampm ? 'LL/dd/yyyy a' : 'LL/dd/yyyy')
   }
 }

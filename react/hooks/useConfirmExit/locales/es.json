@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Cancelar",
+    "leave": "Salir sin guardar",
+    "title": "¿Descartar los cambios?",
+    "message": "Es posible que algunos cambios aún no se hayan guardado. ¿Seguro que desea salir y perder estos cambios?"
+  }
+}

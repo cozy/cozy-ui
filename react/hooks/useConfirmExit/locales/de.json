@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Abbrechen",
+    "leave": "Ohne Speichern verlassen",
+    "title": "Änderungen verwerfen?",
+    "message": "Einige Änderungen wurden möglicherweise noch nicht gespeichert. Möchten Sie die Seite wirklich verlassen und diese Änderungen verwerfen?"
+  }
+}

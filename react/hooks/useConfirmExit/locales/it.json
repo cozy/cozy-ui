@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Annulla",
+    "leave": "Esci senza salvare",
+    "title": "Annullare le modifiche?",
+    "message": "Alcune modifiche potrebbero non essere ancora state salvate. Vuoi davvero uscire e perdere queste modifiche?"
+  }
+}

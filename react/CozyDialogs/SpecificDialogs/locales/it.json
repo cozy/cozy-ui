@@ -1,0 +1,41 @@
+{
+  "cancel": "Annulla",
+  "allow": "Consenti",
+  "allow-location-dialog": {
+    "title": "Consenti l'accesso alla tua posizione",
+    "description": "Il tuo Twake deve essere sempre autorizzato ad accedere alla posizione del tuo telefono per memorizzare i tuoi spostamenti e aiutarti ad analizzarli, anche quando l'app non è in uso.\n\nNon verrà MAI condivisa con nessuno senza una tua richiesta.\n\nPuoi disattivare questa funzione dalle impostazioni dell'app Coach CO2."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Scansiona il codice QR",
+    "text": "oppure vai direttamente su <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>o su <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> per installare l'app Twake Workplace",
+    "a11n": "Vai alla pagina di download dell'applicazione Twake Workplace"
+  },
+  "authentification-dialog": {
+    "title": "Accesso",
+    "title-oidc": "Twake Pass",
+    "subtitle": "Per sicurezza, conferma la tua identità",
+    "label": "Password di Twake",
+    "label-oidc": "Password di Twake Pass",
+    "abort": "Esci",
+    "unlock": "Sblocca",
+    "forgotten-password": "Ho dimenticato la password",
+    "errors": {
+      "invalid_password": "Password errata, riprova.",
+      "server_error": "Si è verificato un errore del server. Ricarica la pagina."
+    }
+  },
+  "shortcut-dialog": {
+    "create-title": "Crea un collegamento",
+    "edit-title": "Modifica un collegamento",
+    "filename": "Nome del collegamento",
+    "url": "URL",
+    "cancel": "Annulla",
+    "create": "Crea",
+    "edit": "Salva",
+    "created": "Il collegamento è stato creato",
+    "edited": "Il collegamento è stato modificato",
+    "errored": "Si è verificato un errore",
+    "needs-info": "Un collegamento richiede un nome e un URL",
+    "url-bad-format": "L'URL inserito non è nel formato corretto"
+  }
+}

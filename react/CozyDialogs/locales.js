@@ -11,6 +11,14 @@ export default {
     closeButton: 'Cerrar',
     backButton: 'Atrás'
   },
+  de: {
+    closeButton: 'Schließen',
+    backButton: 'Zurück'
+  },
+  it: {
+    closeButton: 'Chiudi',
+    backButton: 'Indietro'
+  },
   ru: {
     closeButton: 'Закрыть',
     backButton: 'Назад'
