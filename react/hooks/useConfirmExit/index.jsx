@@ -2,8 +2,11 @@ import PropTypes from 'prop-types'
 import React, { useCallback, useRef, useState } from 'react'
 import { withLocales } from 'twake-i18n'
 
+import de from './locales/de.json'
 import en from './locales/en.json'
+import es from './locales/es.json'
 import fr from './locales/fr.json'
+import it from './locales/it.json'
 import ru from './locales/ru.json'
 import vi from './locales/vi.json'
 import Button from '../../Buttons'
@@ -59,7 +62,7 @@ ConfirmModal.propTypes = {
   confirmLabel: PropTypes.string
 }
 
-const dictRequire = { en, fr, ru, vi }
+const dictRequire = { de, en, es, fr, it, ru, vi }
 const LocalizedConfirmModal = withLocales(dictRequire)(ConfirmModal)
 
 /**

@@ -1,0 +1,4 @@
+{
+  "selected": "%{smart_count} elemento seleccionado |||| %{smart_count} elementos seleccionados",
+  "selected_light": "%{smart_count} elemento |||| %{smart_count} elementos"
+}

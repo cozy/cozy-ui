@@ -1,0 +1,18 @@
+{
+  "EditBadge": {
+    "menu": {
+      "update": "Aktualisieren",
+      "delete": "Löschen"
+    },
+    "upload": {
+      "file-size": "Die maximale Dateigröße beträgt 5 MB.",
+      "file-type": "Dieser Dateityp wird nicht unterstützt. Bitte versuchen Sie es erneut.",
+      "success": "Avatar erfolgreich aktualisiert",
+      "error": "Das Hochladen des Avatars ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    },
+    "delete": {
+      "success": "Avatar erfolgreich gelöscht",
+      "error": "Das Löschen des Avatars ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  }
+}

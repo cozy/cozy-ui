@@ -35,7 +35,29 @@ describe('makeFormat', () => {
     })
   })
 
-  describe('When lang is not "fr"', () => {
+  describe.each([
+    ['es', 'dd/LL/yyyy'],
+    ['it', 'dd/LL/yyyy'],
+    ['de', 'dd.LL.yyyy']
+  ])('When lang is "%s"', (lang, dateFormat) => {
+    it('should return a day-first format for default mode', () => {
+      expect(makeFormat({ lang })).toBe(dateFormat)
+      expect(makeFormat({ ampm: true, lang })).toBe(dateFormat)
+    })
+
+    it('should return a 24-hour format for time mode', () => {
+      expect(makeFormat({ mode: 'time', lang })).toBe('HH:mm')
+      expect(makeFormat({ mode: 'time', ampm: true, lang })).toBe('HH:mm')
+    })
+
+    it('should return a day-first format for dateTime mode', () => {
+      expect(makeFormat({ mode: 'dateTime', ampm: true, lang })).toBe(
+        `${dateFormat} HH:mm`
+      )
+    })
+  })
+
+  describe('When lang is "en"', () => {
     it('should return the right format for default mode', () => {
       const format = makeFormat({ lang: 'en', ampm: false })
       expect(format).toBe('LL/dd/yyyy')

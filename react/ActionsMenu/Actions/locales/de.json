@@ -1,0 +1,30 @@
+{
+  "menu": "Menü",
+  "viewInContacts": "In Cozy Contacts anzeigen",
+  "viewInDrive": "Öffnen",
+  "modify": "Bearbeiten",
+  "emailTo": "E-Mail senden",
+  "smsTo": "Nachricht senden",
+  "print": "Drucken",
+  "download": "Herunterladen",
+  "favorites": {
+    "add": {
+      "label": "Zu Favoriten hinzufügen",
+      "success": "%{filename} wurde zu den Favoriten hinzugefügt |||| Diese Elemente wurden zu den Favoriten hinzugefügt"
+    },
+    "remove": {
+      "label": "Aus Favoriten entfernen",
+      "success": "%{filename} wurde aus den Favoriten entfernt |||| Diese Elemente wurden aus den Favoriten entfernt"
+    },
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "others": "Weitere",
+  "editAttribute": "Attribut bearbeiten",
+  "copyToClipboard": {
+    "copy": "Kopieren",
+    "success": "In die Zwischenablage kopiert",
+    "error": "Kopieren in die Zwischenablage nicht möglich"
+  },
+  "call": "Anrufen",
+  "exportToText": "Als Text exportieren"
+}

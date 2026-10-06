@@ -11,8 +11,11 @@ import {
 import cx from 'classnames'
 import formatFNS from 'date-fns/format'
 import isBefore from 'date-fns/isBefore'
+import LocaleDE from 'date-fns/locale/de'
 import LocaleEN from 'date-fns/locale/en-US'
+import LocaleES from 'date-fns/locale/es'
 import LocaleFR from 'date-fns/locale/fr'
+import LocaleIT from 'date-fns/locale/it'
 import subDays from 'date-fns/subDays'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useState } from 'react'
@@ -25,7 +28,10 @@ import { makeStyles } from '../styles'
 
 const localesFNS = {
   fr: LocaleFR,
-  en: LocaleEN
+  en: LocaleEN,
+  es: LocaleES,
+  de: LocaleDE,
+  it: LocaleIT
 }
 
 const useStyles = makeStyles(() => ({

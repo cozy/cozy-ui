@@ -1,0 +1,8 @@
+{
+  "cancel": "Annulla",
+  "clear": "Cancella",
+  "invalidDate": "Data non valida",
+  "ok": "OK",
+  "today": "Oggi",
+  "minDateLabelError": "La data non deve essere precedente alla data minima (%{date})"
+}
