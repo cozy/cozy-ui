@@ -1,3 +1,10 @@
+## [142.2.3](https://github.com/cozy/cozy-ui/compare/v142.2.2...v142.2.3) (2026-10-06)
+
+
+### Bug Fixes
+
+* **ci:** Stop passing Argos token as a CLI flag ([efc5b4d](https://github.com/cozy/cozy-ui/commit/efc5b4d))
+
 ## [142.2.2](https://github.com/cozy/cozy-ui/compare/v142.2.1...v142.2.2) (2026-10-05)
 
 
