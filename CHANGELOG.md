@@ -1,3 +1,10 @@
+## [142.3.1](https://github.com/cozy/cozy-ui/compare/v142.3.0...v142.3.1) (2026-10-13)
+
+
+### Bug Fixes
+
+* **Badge:** Draw counts as a pill ([5e0875c](https://github.com/cozy/cozy-ui/commit/5e0875c))
+
 # [142.3.0](https://github.com/cozy/cozy-ui/compare/v142.2.3...v142.3.0) (2026-10-06)
 
 
