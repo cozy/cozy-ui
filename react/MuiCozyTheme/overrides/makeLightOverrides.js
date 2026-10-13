@@ -1047,7 +1047,9 @@ export const makeLightOverrides = theme => ({
     badge: {
       boxSizing: 'content-box',
       padding: 0,
-      borderRadius: '100%',
+      borderRadius: 100,
+      // Every two-digit count fits the circle, longer counts grow into a pill
+      fontVariantNumeric: 'tabular-nums',
       '&.badgeBorder': {
         border: `2px solid ${theme.palette.background.paper}`
       },
