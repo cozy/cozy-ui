@@ -56,6 +56,32 @@ const DemoBadge = ({ variant, ...props }) => {
 </Variants>
 ```
 
+### Counts
+
+One or two digits sit in a circle, longer counts in a pill.
+
+```jsx
+import Badge from 'cozy-ui/transpiled/react/Badge'
+import { CircleFilled, Icon } from '@linagora/twake-icons'
+
+;
+
+<>
+  {[1, 12, 44, 99, 120].map(count => (
+    <Badge
+      key={count}
+      className="u-m-1"
+      badgeContent={count}
+      max={99}
+      color="primary"
+      size="medium"
+    >
+      <Icon icon={CircleFilled} size="24" color="var(--iconTextColor)" />
+    </Badge>
+  ))}
+</>
+```
+
 ### Double badges
 
 Badges can be combined — in this example, we have an item with a new qualification.
