@@ -17,6 +17,7 @@ const VirtualizedTable = forwardRef(
       columns,
       groups,
       defaultOrder,
+      sortingMode,
       secondarySort,
       selectedItems,
       isSelectedItem,
@@ -35,11 +36,12 @@ const VirtualizedTable = forwardRef(
     const [orderBy, setOrderBy] = useState(defaultOrder?.by ?? undefined)
 
     const data = useMemo(() => {
-      const sortedData = orderBy
-        ? stableSort(rows, getComparator(orderDirection, orderBy))
-        : rows
+      const sortedData =
+        orderBy && sortingMode === 'client'
+          ? stableSort(rows, getComparator(orderDirection, orderBy))
+          : rows
       return secondarySort ? secondarySort(sortedData) : sortedData
-    }, [rows, orderBy, orderDirection, secondarySort])
+    }, [rows, orderBy, orderDirection, sortingMode, secondarySort])
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
     const _context = {
@@ -105,6 +107,7 @@ const VirtualizedTable = forwardRef(
 VirtualizedTable.displayName = 'VirtualizedTable'
 
 VirtualizedTable.defaultProps = {
+  sortingMode: 'client',
   selectedItems: [],
   isSelectedItem: () => {}
 }
@@ -116,11 +119,13 @@ VirtualizedTable.propTypes = {
   columns: PropTypes.array,
   /** Returned object is: PropTypes.shape({ groupLabels: PropTypes.array, groupCounts: PropTypes.array }) */
   groups: PropTypes.func,
-  /** Default sorting configuration */
+  /** Column sorted at first: without it, no column is sorted until one is clicked */
   defaultOrder: PropTypes.shape({
     direction: PropTypes.oneOf(['asc', 'desc']),
     by: PropTypes.string
   }),
+  /** Who sorts the rows. 'server': the table keeps the given order, its headers changing the sort and calling onSortChange for the caller to sort them, e.g. on its server. 'client': the table sorts them by the sorted column */
+  sortingMode: PropTypes.oneOf(['client', 'server']),
   /** Context object passed down to children and virtuoso */
   context: PropTypes.object,
   /** Props passed to child components */
