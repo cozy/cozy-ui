@@ -1,3 +1,25 @@
+# [143.0.0](https://github.com/cozy/cozy-ui/compare/v142.3.1...v143.0.0) (2026-10-15)
+
+
+### Code Refactoring
+
+* **Table:** Remove secondarySort from VirtualizedTable ([772c5f7](https://github.com/cozy/cozy-ui/commit/772c5f7))
+
+
+### Features
+
+* **Table:** Add sortingMode to VirtualizedTable ([2413bd5](https://github.com/cozy/cozy-ui/commit/2413bd5))
+
+
+### BREAKING CHANGES
+
+* **Table:** VirtualizedTable no longer takes secondarySort. Sort
+the rows, secondary order included, before passing them (stableSort
+and getComparator are in cozy-ui/transpiled/react/Table/Virtualized/helpers),
+and set sortingMode="server" so that the table keeps their order.
+
+Assisted-by: LLM
+
 ## [142.3.1](https://github.com/cozy/cozy-ui/compare/v142.3.0...v142.3.1) (2026-10-13)
 
 
