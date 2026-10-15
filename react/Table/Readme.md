@@ -252,3 +252,51 @@ const DndExample = () => {
   </SelectionProvider>
 </DemoProvider>
 ```
+
+### With rows sorted by the caller
+
+With `sortingMode="server"`, the table keeps the rows in the given order, e.g. paged from a server: the headers still change the sort and call `onSortChange`, for the caller to sort the rows. With `sortingMode="client"`, the default, the table sorts them.
+
+```jsx
+import { useState } from 'react'
+import VirtualizedTable from 'cozy-ui/transpiled/react/Table/Virtualized'
+import { getComparator, stableSort } from 'cozy-ui/transpiled/react/Table/Virtualized/helpers'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+
+const rows = [
+  { id: 0, name: 'Cupcake', calories: 305 },
+  { id: 1, name: 'Donut', calories: 452 },
+  { id: 2, name: 'Eclair', calories: 262 },
+  { id: 3, name: 'Gingerbread', calories: 356 },
+  { id: 4, name: 'Honeycomb', calories: 408 }
+]
+
+const columns = [
+  { id: 'name', label: 'Dessert', width: 300 },
+  { id: 'calories', label: 'Calories', width: 80, textAlign: 'right' }
+]
+
+// The caller sorts the rows, as a server would, and the table keeps their order
+const SortedByCallerTable = () => {
+  const [sortedRows, setSortedRows] = useState(rows)
+
+  return (
+    <VirtualizedTable
+      rows={sortedRows}
+      columns={columns}
+      sortingMode="server"
+      onSortChange={({ order, orderBy }) =>
+        setSortedRows(stableSort(rows, getComparator(order, orderBy)))
+      }
+    />
+  )
+}
+
+;
+
+<DemoProvider>
+  <div style={{ border: "1px solid var(--borderMainColor)", height: 300, width: "100%" }}>
+    <SortedByCallerTable />
+  </div>
+</DemoProvider>
+```
