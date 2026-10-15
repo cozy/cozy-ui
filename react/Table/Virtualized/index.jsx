@@ -18,7 +18,6 @@ const VirtualizedTable = forwardRef(
       groups,
       defaultOrder,
       sortingMode,
-      secondarySort,
       selectedItems,
       isSelectedItem,
       componentsProps,
@@ -35,13 +34,13 @@ const VirtualizedTable = forwardRef(
     )
     const [orderBy, setOrderBy] = useState(defaultOrder?.by ?? undefined)
 
-    const data = useMemo(() => {
-      const sortedData =
+    const data = useMemo(
+      () =>
         orderBy && sortingMode === 'client'
           ? stableSort(rows, getComparator(orderDirection, orderBy))
-          : rows
-      return secondarySort ? secondarySort(sortedData) : sortedData
-    }, [rows, orderBy, orderDirection, sortingMode, secondarySort])
+          : rows,
+      [rows, orderBy, orderDirection, sortingMode]
+    )
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
     const _context = {
@@ -132,8 +131,6 @@ VirtualizedTable.propTypes = {
   componentsProps: PropTypes.object,
   /** Custom components used by react-virtuoso */
   components: PropTypes.object,
-  /** Sort files by type to put directory and trash before files */
-  secondarySort: PropTypes.func,
   /** Array of selected items */
   selectedItems: PropTypes.array,
   /** Function to determine if a row is selected */
