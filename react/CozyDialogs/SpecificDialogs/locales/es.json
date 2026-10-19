@@ -1,10 +1,4 @@
 {
-  "cancel": "Cancelar",
-  "allow": "Permitir",
-  "allow-location-dialog": {
-    "title": "Permitir el acceso a su ubicación",
-    "description": "Su Twake necesita tener siempre autorización para acceder a la ubicación de su teléfono a fin de memorizar sus desplazamientos y ayudarle a analizarlos, incluso cuando la app no esté en uso.\n\nNUNCA se compartirá con nadie sin su solicitud.\n\nPuede desactivar esta función desde los ajustes de la app Coach CO2."
-  },
   "install-flagship-app-dialog": {
     "title": "Escanee el código QR",
     "text": "o vaya directamente a <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>o a <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> para instalar la app Twake Workplace",
