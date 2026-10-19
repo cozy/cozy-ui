@@ -1,3 +1,16 @@
+# [144.0.0](https://github.com/cozy/cozy-ui/compare/v143.0.0...v144.0.0) (2026-10-19)
+
+
+### Features
+
+* **CozyDialogs:** Remove AllowLocationDialog ([238bfd6](https://github.com/cozy/cozy-ui/commit/238bfd6))
+
+
+### BREAKING CHANGES
+
+* **CozyDialogs:** AllowLocationDialog is no longer exported from
+CozyDialogs. Apps that still need it must copy it.
+
 # [143.0.0](https://github.com/cozy/cozy-ui/compare/v142.3.1...v143.0.0) (2026-10-15)
 
 
