@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 
+import { remarkPlugins } from './helpers'
 import Link from '../Link'
 import Typography from '../Typography'
 
@@ -32,7 +32,7 @@ const components = {
 
 const Markdown = ({ content }) => {
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+    <ReactMarkdown remarkPlugins={remarkPlugins} components={components}>
       {content}
     </ReactMarkdown>
   )

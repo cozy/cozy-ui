@@ -1280,6 +1280,15 @@ This component is used to render markdown content. To see more about the Markdow
 import Markdown from 'cozy-ui/transpiled/react/Markdown'
 ```
 
+**Example:**
+
+```jsx
+import { getPlainTextFromMarkdown } from 'cozy-ui/transpiled/react/Markdown/helpers'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+
+<Typography noWrap>{getPlainTextFromMarkdown(answer)}</Typography>
+```
+
 
 ### MidEllipsis
 
