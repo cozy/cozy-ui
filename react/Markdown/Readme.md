@@ -69,3 +69,18 @@ Block code:
 <Markdown content={textInMarkdown} />
 
 ```
+
+### Plain text
+
+`getPlainTextFromMarkdown` gives the words of a Markdown content on one line, without its syntax, as `Markdown` shows them: for a preview, in a list for example.
+
+```jsx
+import { getPlainTextFromMarkdown } from 'cozy-ui/transpiled/react/Markdown/helpers'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+
+const answer = '# Demo\n\nSome **bold** text, a [link](https://cozy.io) and a list:\n\n- first\n- second'
+
+;
+
+<Typography noWrap>{getPlainTextFromMarkdown(answer)}</Typography>
+```
