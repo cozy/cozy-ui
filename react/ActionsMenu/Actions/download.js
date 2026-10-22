@@ -23,7 +23,7 @@ const makeComponent = (label, icon) => {
   return Component
 }
 
-export const download = ({ client, encryptedUrl, downloadFile }) => {
+export const download = ({ client, downloadFile }) => {
   const { t } = getActionsI18n()
   const icon = Download
   const label = t('download')
@@ -37,7 +37,6 @@ export const download = ({ client, encryptedUrl, downloadFile }) => {
       downloadFile({
         client,
         file: docs[0],
-        url: encryptedUrl,
         webviewIntent,
         driveId
       })
