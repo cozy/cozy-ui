@@ -1,3 +1,22 @@
+# [145.0.0](https://github.com/cozy/cozy-ui/compare/v144.0.0...v145.0.0) (2026-10-22)
+
+
+* feat(providers)!: Remove EncryptedProvider ([77d3133](https://github.com/cozy/cozy-ui/commit/77d3133))
+* feat(ActionsMenu)!: Remove encryptedUrl from download action ([f101a2e](https://github.com/cozy/cozy-ui/commit/f101a2e))
+
+
+### BREAKING CHANGES
+
+* `cozy-ui/transpiled/react/providers/Encrypted` is
+removed. Upgrade cozy-viewer and cozy-ui-plus to versions that no
+longer import it.
+
+Assisted-by: LLM
+* `download()` no longer accepts `encryptedUrl`. Stop
+passing it.
+
+Assisted-by: LLM
+
 # [144.0.0](https://github.com/cozy/cozy-ui/compare/v143.0.0...v144.0.0) (2026-10-19)
 
 
