@@ -587,6 +587,11 @@ export const makeLightOverrides = theme => ({
       }
     }
   },
+  MuiBackdrop: {
+    root: {
+      backgroundColor: alpha(theme.palette.common.black, 0.12)
+    }
+  },
   MuiDialog: {
     paper: {
       width: '100%',
