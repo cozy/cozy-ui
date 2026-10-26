@@ -1,3 +1,19 @@
+# [146.0.0](https://github.com/cozy/cozy-ui/compare/v145.0.0...v146.0.0) (2026-10-26)
+
+
+### Features
+
+* **Markdown:** Add getPlainTextFromMarkdown helper ([012ddff](https://github.com/cozy/cozy-ui/commit/012ddff))
+* **MuiCozyTheme:** Lighten the Backdrop to 12% black in light theme ([f5945a5](https://github.com/cozy/cozy-ui/commit/f5945a5))
+* Remove Tile component ([4641542](https://github.com/cozy/cozy-ui/commit/4641542))
+
+
+### BREAKING CHANGES
+
+* Tile has been moved to cozy-ui-plus. Replace
+`import Tile from 'cozy-ui/transpiled/react/Tile'` with
+`import Tile from 'cozy-ui-plus/dist/Tile'`.
+
 # [145.0.0](https://github.com/cozy/cozy-ui/compare/v144.0.0...v145.0.0) (2026-10-22)
 
 
