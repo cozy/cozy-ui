@@ -14,6 +14,11 @@ export const makeDarkOverrides = theme => {
       root: {
         backgroundColor: alpha(theme.palette.common.black, 0.5)
       }
+    },
+    MuiFab: {
+      primary: {
+        color: theme.palette.primary.contrastText
+      }
     }
   })
 
