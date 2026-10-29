@@ -1,3 +1,10 @@
+# [146.1.0](https://github.com/cozy/cozy-ui/compare/v146.0.0...v146.1.0) (2026-10-29)
+
+
+### Features
+
+* **MemberList:** Add the members list, row, role menu and avatars ([f96cadf](https://github.com/cozy/cozy-ui/commit/f96cadf))
+
 # [146.0.0](https://github.com/cozy/cozy-ui/compare/v145.0.0...v146.0.0) (2026-10-26)
 
 
