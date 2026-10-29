@@ -6,7 +6,7 @@ const opacityByTheme = {
   light: {
     action: {
       hoverOpacity: 0.04,
-      selectedOpacity: 0.18,
+      selectedOpacity: 0.08,
       disabledOpacity: 0.32,
       focusOpacity: 0.12,
       activatedOpacity: 0.12,
@@ -24,7 +24,7 @@ const opacityByTheme = {
   dark: {
     action: {
       hoverOpacity: 0.08,
-      selectedOpacity: 0.18,
+      selectedOpacity: 0.16,
       disabledOpacity: 0.32,
       focusOpacity: 0.24,
       activatedOpacity: 0.24,
