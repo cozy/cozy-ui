@@ -11,6 +11,7 @@ export const memberPropType = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   subtitle: PropTypes.node,
+  email: PropTypes.string,
   avatarUrl: PropTypes.string,
   initials: PropTypes.string,
   color: PropTypes.string,
