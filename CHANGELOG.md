@@ -1,3 +1,11 @@
+## [146.2.1](https://github.com/cozy/cozy-ui/compare/v146.2.0...v146.2.1) (2026-11-02)
+
+
+### Bug Fixes
+
+* **MemberRoleMenuHeader:** Register its locales ([396d6b4](https://github.com/cozy/cozy-ui/commit/396d6b4))
+* **MemberRoleMenu:** Show the mobile header only with a member ([59b5d17](https://github.com/cozy/cozy-ui/commit/59b5d17))
+
 # [146.2.0](https://github.com/cozy/cozy-ui/compare/v146.1.0...v146.2.0) (2026-11-02)
 
 
