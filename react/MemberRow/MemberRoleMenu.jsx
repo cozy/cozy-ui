@@ -17,6 +17,7 @@ const MemberRoleMenu = ({ member, value, roles, onChange }) => {
   const [isMenuDisplayed, setMenuDisplayed] = useState(false)
 
   const label = roles.find(role => role.value === value)?.label
+  const isHeaderShown = isMobile && member !== undefined
 
   const handleRoleClick = role => {
     if (role.value !== value) onChange(role.value)
@@ -44,7 +45,7 @@ const MemberRoleMenu = ({ member, value, roles, onChange }) => {
         onClose={() => setMenuDisplayed(false)}
       >
         {/* The header renders nothing on desktop but would still take the initial focus of the menu */}
-        {isMobile && <MemberRoleMenuHeader member={member} />}
+        {isHeaderShown && <MemberRoleMenuHeader member={member} />}
         {roles.map(role => (
           <ActionsMenuItem
             key={role.value}
@@ -62,7 +63,8 @@ const MemberRoleMenu = ({ member, value, roles, onChange }) => {
 }
 
 MemberRoleMenu.propTypes = {
-  member: memberPropType.isRequired,
+  /** Member shown in the header of the menu on mobile */
+  member: memberPropType,
   value: PropTypes.string.isRequired,
   roles: rolesPropType.isRequired,
   onChange: PropTypes.func.isRequired
