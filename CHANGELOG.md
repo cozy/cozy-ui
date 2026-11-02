@@ -1,3 +1,10 @@
+## [146.2.2](https://github.com/cozy/cozy-ui/compare/v146.2.1...v146.2.2) (2026-11-02)
+
+
+### Bug Fixes
+
+* **MuiCozyTheme:** Readable label on a primary Fab in dark mode ([804e3d6](https://github.com/cozy/cozy-ui/commit/804e3d6))
+
 ## [146.2.1](https://github.com/cozy/cozy-ui/compare/v146.2.0...v146.2.1) (2026-11-02)
 
 
