@@ -1,14 +1,16 @@
 import React from 'react'
-import { useI18n } from 'twake-i18n'
+import { useI18n, useExtendI18n } from 'twake-i18n'
 
 import MemberAvatar from './MemberAvatar'
 import MemberGroupAvatar from './MemberGroupAvatar'
+import { locales } from './locales'
 import { memberPropType } from './propTypes'
 import ActionsMenuMobileHeader from '../ActionsMenu/ActionsMenuMobileHeader'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
 
 const MemberRoleMenuHeader = ({ member }) => {
+  useExtendI18n(locales)
   const { t } = useI18n()
   const { name, avatarUrl, initials, color, isGroup, isCurrentUser } = member
 
