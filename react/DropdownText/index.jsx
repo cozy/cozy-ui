@@ -14,15 +14,13 @@ const useStyles = makeStyles(theme => ({
       spaceBetween ? 'space-between' : 'left'
   },
   typography: {
-    color: ({ disabled }) =>
-      disabled ? theme.palette.text.disabled : undefined
+    color: ({ disabled }) => (disabled ? theme.palette.text.disabled : null)
   },
   endIcon: {
     display: 'flex',
     marginLeft: '5px',
-    marginTop: ({ variant }) => (variant === 'body1' ? '3px' : undefined),
-    color: ({ disabled }) =>
-      disabled ? theme.palette.text.disabled : undefined
+    marginTop: ({ variant }) => (variant === 'body1' ? '3px' : null),
+    color: ({ disabled }) => (disabled ? theme.palette.text.disabled : null)
   }
 }))
 
