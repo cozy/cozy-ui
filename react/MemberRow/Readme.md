@@ -7,12 +7,13 @@ Displays a member of a sharing: avatar, name, subtitle, and on the right its rol
 * **subtitle**: email, status… (any node)
 * **avatarUrl** and **initials**: picture of the member, initials when there is no picture or it fails to load
 * **isGroup** and **color**: shows a group avatar
-* **isOwner**: shows the "Owner" label and no action
-* **role** and **roles**: current role, and the roles of this member when they differ from the `roles` of the row
+* **isOwner**: shows the "Owner" label and no action, whatever the other props
+* **role**: current role of the member, among its roles
+* **roles**: roles of this member, when they differ from the `roles` of the row
 * **canChangeRole**: shows the role in a menu, as text otherwise
 * **canRemove**, **removeIcon** and **removeLabel**: remove button, its icon and its accessible label
-* **action**: `{ label, onClick }` button shown in place of the role and the remove button
-* **isPending**: shows a spinner instead of the actions
+* **action**: `{ label, onClick }` button shown in place of the role and the remove button, so `canChangeRole`, `canRemove` and `isPending` are ignored
+* **isPending**: shows a spinner and the role as text, without the role menu and the remove button
 * **onClick**: makes the row clickable
 * **data**: anything the app needs back in its callbacks, not read by the row
 
