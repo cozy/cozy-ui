@@ -1,3 +1,12 @@
+# [146.2.0](https://github.com/cozy/cozy-ui/compare/v146.1.0...v146.2.0) (2026-11-02)
+
+
+### Features
+
+* **Theme:** Make the Secondary ramp the grey of the design ([6f141b0](https://github.com/cozy/cozy-ui/commit/6f141b0))
+* **Theme:** Read the light secondary from Secondary 100 ([ca62795](https://github.com/cozy/cozy-ui/commit/ca62795)), closes [linagora/twake-ui#204](https://github.com/linagora/twake-ui/issues/204)
+* **Theme:** Tint selected items with 8% of their colour ([fc621e1](https://github.com/cozy/cozy-ui/commit/fc621e1)), closes [linagora/twake-ui#204](https://github.com/linagora/twake-ui/issues/204)
+
 # [146.1.0](https://github.com/cozy/cozy-ui/compare/v146.0.0...v146.1.0) (2026-10-29)
 
 
