@@ -11,13 +11,32 @@ import ListItemText from '../ListItemText'
 import Radios from '../Radios'
 import useBreakpoints from '../providers/Breakpoints'
 
-const MemberRoleMenu = ({ member, value, roles, onChange }) => {
+const MemberRoleMenu = ({
+  member,
+  value,
+  roles,
+  size,
+  disabled = false,
+  onChange,
+  onOpen,
+  onClose
+}) => {
   const { isMobile } = useBreakpoints()
   const buttonRef = useRef()
   const [isMenuDisplayed, setMenuDisplayed] = useState(false)
 
   const label = roles.find(role => role.value === value)?.label
   const isHeaderShown = isMobile && member !== undefined
+
+  const openMenu = () => {
+    setMenuDisplayed(true)
+    onOpen?.()
+  }
+
+  const closeMenu = () => {
+    setMenuDisplayed(false)
+    onClose?.()
+  }
 
   const handleRoleClick = role => {
     if (role.value !== value) onChange(role.value)
@@ -29,8 +48,10 @@ const MemberRoleMenu = ({ member, value, roles, onChange }) => {
         ref={buttonRef}
         aria-controls="simple-menu"
         aria-haspopup="true"
-        onClick={() => setMenuDisplayed(true)}
+        onClick={openMenu}
         textVariant="body2"
+        size={size}
+        disabled={disabled}
       >
         {label}
       </DropdownButton>
@@ -42,7 +63,7 @@ const MemberRoleMenu = ({ member, value, roles, onChange }) => {
         transformOrigin={{ vertical: 'top', horizontal: 'left' }}
         keepMounted
         autoClose
-        onClose={() => setMenuDisplayed(false)}
+        onClose={closeMenu}
       >
         {/* The header renders nothing on desktop but would still take the initial focus of the menu */}
         {isHeaderShown && <MemberRoleMenuHeader member={member} />}
@@ -67,7 +88,11 @@ MemberRoleMenu.propTypes = {
   member: memberPropType,
   value: PropTypes.string.isRequired,
   roles: rolesPropType.isRequired,
-  onChange: PropTypes.func.isRequired
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func
 }
 
 export default MemberRoleMenu
