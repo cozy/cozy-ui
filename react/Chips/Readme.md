@@ -212,3 +212,45 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
   )}
 </Variants>
 ```
+
+### Long label
+
+A long label is cut with an ellipsis to fit the room of the chip, or the `maxWidth` given in `style`. The icons keep their size.
+
+```jsx
+import Chip from 'cozy-ui/transpiled/react/Chips'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import { FileOutline, Icon } from '@linagora/twake-icons'
+
+const label = 'a.very.long.address.that.goes.on.and.on.again@example.com'
+
+;
+
+<div style={{ width: 240 }}>
+  <Stack spacing="s">
+    <div>
+      <Chip label={label} onDelete={() => {}} />
+    </div>
+    <div>
+      <Chip label={label} onDelete={() => {}} style={{ maxWidth: 200 }} />
+    </div>
+    <div>
+      <Chip label={label} onDelete={() => {}} size="small" />
+    </div>
+    <div>
+      <Chip
+        icon={<Icon icon={FileOutline} className="u-ml-half" />}
+        label={label}
+        onDelete={() => {}}
+      />
+    </div>
+    <div>
+      <Chip
+        label={label}
+        onDelete={() => {}}
+        deleteIcon={<Icon icon={FileOutline} />}
+      />
+    </div>
+  </Stack>
+</div>
+```

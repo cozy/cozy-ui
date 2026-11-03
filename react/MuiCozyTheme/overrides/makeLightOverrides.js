@@ -1148,6 +1148,10 @@ export const makeLightOverrides = theme => ({
   },
   MuiChip: {
     root: {
+      maxWidth: '100%',
+      '& $icon, & $deleteIcon': {
+        flexShrink: 0
+      },
       '&.noLabel': {
         width: '32px',
         '& $label': {
