@@ -1,3 +1,16 @@
+# [146.3.0](https://github.com/cozy/cozy-ui/compare/v146.2.2...v146.3.0) (2026-11-03)
+
+
+### Bug Fixes
+
+* **DropdownText:** Restore the colors once enabled again ([8d28332](https://github.com/cozy/cozy-ui/commit/8d28332))
+
+
+### Features
+
+* **MemberAutocomplete:** Add the field to pick the members to invite ([ee0250b](https://github.com/cozy/cozy-ui/commit/ee0250b))
+* **MemberRoleMenu:** Add the size, disabled, onOpen and onClose props ([5306f72](https://github.com/cozy/cozy-ui/commit/5306f72))
+
 ## [146.2.2](https://github.com/cozy/cozy-ui/compare/v146.2.1...v146.2.2) (2026-11-02)
 
 
