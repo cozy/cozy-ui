@@ -64,13 +64,17 @@ export const useMemberInput = ({
     }
   }
 
+  const isTextAddedOnBlur =
+    isEmailLike(inputValue) && getKnownMembersFromText(inputValue).length > 0
+
   const handleBlur = () => {
-    if (isEmailLike(inputValue) && addMembersFromText(inputValue)) {
+    if (isTextAddedOnBlur && addMembersFromText(inputValue)) {
       onInputValueChange('')
     }
   }
 
   return {
+    isTextAddedOnBlur,
     handleChange,
     handleInputChange,
     handleKeyDown,
