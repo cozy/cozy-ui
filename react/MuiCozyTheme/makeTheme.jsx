@@ -35,6 +35,14 @@ const themesCommonConfig = {
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
+// Keyframe animations ignore `transitions`, so they would change each screenshot
+const testingOverrides = {
+  MuiCircularProgress: {
+    indeterminate: { animation: 'none' },
+    circleIndeterminate: { animation: 'none' }
+  }
+}
+
 export const makeTheme = type => {
   // to hold the values of css variables, recoverable by getCssVariableValue()
   createNodeWithThemeCssVars(type)
@@ -48,7 +56,10 @@ export const makeTheme = type => {
     palette
   })
 
-  const overrides = makeOverridesByTheme(theme)[type]
+  const overrides = {
+    ...makeOverridesByTheme(theme)[type],
+    ...(isTesting() && testingOverrides)
+  }
 
   return {
     ...theme,
