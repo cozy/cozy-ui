@@ -15,7 +15,15 @@ const sizeToPx = {
   medium: 41
 }
 
-const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
+const ColorList = ({
+  size,
+  selectedColor,
+  getColorLabel,
+  customColorProps,
+  onClick
+}) => {
+  const { enabled: isCustomEnabled, ...customButtonProps } =
+    customColorProps ?? {}
   const { isMobile } = useBreakpoints()
 
   const _size = size || (isMobile ? 'medium' : 'small')
@@ -37,6 +45,8 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
           <ButtonBase
             className="u-bdrs-circle"
             component="div"
+            aria-label={getColorLabel?.(color) ?? color}
+            aria-pressed={selectedColor?.toUpperCase() === color}
             onClick={() => onClick?.(color)}
           >
             <Avatar color={color} size={avatarSize}>
@@ -49,12 +59,13 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
           </ButtonBase>
         </ImageListItem>
       ))}
-      {customColorProps?.enabled && (
+      {isCustomEnabled && (
         <ImageListItem
           className="u-ta-center"
           classes={{ item: 'u-ov-visible' }}
         >
           <Button
+            {...customButtonProps}
             className="u-miw-auto u-mih-auto u-p-0 u-bdrs-circle"
             variant="ghost"
             style={{
@@ -68,7 +79,6 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
             }}
             classes={{ label: 'u-flex u-w-auto' }}
             label={<Icon icon={Palette} size={iconSize} color="#000" />}
-            onClick={ev => customColorProps?.onClick(ev)}
           />
         </ImageListItem>
       )}
@@ -79,9 +89,14 @@ const ColorList = ({ size, selectedColor, customColorProps, onClick }) => {
 ColorList.propTypes = {
   size: propTypes.oneOf(['small', 'medium']),
   selectedColor: propTypes.string,
+  /** Accessible name of a color. Defaults to its hexadecimal code */
+  getColorLabel: propTypes.func,
   customColorProps: propTypes.shape({
     enabled: propTypes.bool,
-    onClick: propTypes.func
+    onClick: propTypes.func,
+    'aria-label': propTypes.string,
+    'aria-pressed': propTypes.bool,
+    'data-testid': propTypes.string
   }),
   onClick: propTypes.func
 }
