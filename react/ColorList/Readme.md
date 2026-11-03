@@ -15,8 +15,10 @@ const ColorPickerDemo = ({ variant }) => {
     <div style={{ width: (variant.medium || isMobile) ? '100%' : 200 }}>
       <ColorList
         size={variant.medium ? 'medium' : undefined}
+        getColorLabel={color => `Color ${color}`}
         customColorProps={{
           enabled: true,
+          'aria-label': 'Custom color',
           onClick: () => {}
         }}
         selectedColor={selectedColor}
