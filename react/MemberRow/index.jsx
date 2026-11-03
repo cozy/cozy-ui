@@ -2,8 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 import { useI18n, useExtendI18n } from 'twake-i18n'
 
-import MemberAvatar from './MemberAvatar'
-import MemberGroupAvatar from './MemberGroupAvatar'
+import MemberOrGroupAvatar from './MemberOrGroupAvatar'
 import MemberRowActions from './MemberRowActions'
 import { locales } from './locales'
 import { memberPropType, rolesPropType } from './propTypes'
@@ -32,18 +31,7 @@ const MemberRow = ({ member, roles, isNew, onRoleChange, onRemove }) => {
   useExtendI18n(locales)
   const { t } = useI18n()
   const { isMobile } = useBreakpoints()
-  const {
-    name,
-    subtitle,
-    avatarUrl,
-    initials,
-    color,
-    isGroup,
-    isOwner,
-    isCurrentUser,
-    action,
-    onClick
-  } = member
+  const { name, subtitle, isOwner, isCurrentUser, action, onClick } = member
 
   const ActionsWrapper = onClick ? ListItemSecondaryAction : Fragment
   const actionsWrapperProps = onClick
@@ -59,11 +47,7 @@ const MemberRow = ({ member, roles, isNew, onRoleChange, onRemove }) => {
         size="small"
       >
         <ListItemIcon>
-          {isGroup ? (
-            <MemberGroupAvatar size="m" color={color} />
-          ) : (
-            <MemberAvatar size="m" initials={initials} avatarUrl={avatarUrl} />
-          )}
+          <MemberOrGroupAvatar member={member} size="m" />
         </ListItemIcon>
         <ListItemText
           primary={
