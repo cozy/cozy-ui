@@ -6,7 +6,7 @@ import { useI18n, useExtendI18n } from 'twake-i18n'
 import MemberAutocompleteActions from './MemberAutocompleteActions'
 import MemberChip from './MemberChip'
 import MemberSuggestion from './MemberSuggestion'
-import { getUnpickedMembers, isEmailLike } from './helpers'
+import { getUnpickedMembers } from './helpers'
 import { locales } from './locales'
 import { useMemberInput } from './useMemberInput'
 import { useMemberSuggestions } from './useMemberSuggestions'
@@ -89,6 +89,7 @@ const MemberAutocomplete = ({
     debounceMs
   })
   const {
+    isTextAddedOnBlur,
     handleChange,
     handleInputChange,
     handleKeyDown,
@@ -112,7 +113,7 @@ const MemberAutocomplete = ({
   const titleId = `${inputId}-title`
   const isTitleShown = title !== undefined
   const isSubmitShown = onSubmit !== undefined
-  const hasMembersToSend = value.length > 0 || isEmailLike(inputValue)
+  const hasMembersToSend = value.length > 0 || isTextAddedOnBlur
   const isLoading = loading || isFetching
   const unpickedSuggestions = getUnpickedMembers(suggestions, value)
   const fieldPlaceholder = value.length === 0 ? placeholder : undefined

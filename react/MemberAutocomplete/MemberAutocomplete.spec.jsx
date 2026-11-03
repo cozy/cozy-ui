@@ -80,4 +80,28 @@ describe('MemberAutocomplete', () => {
 
     expect(input.value).toBe('bo')
   })
+
+  it('enables Send only for a typed text that gives members', () => {
+    const getMembersWithDomain = text =>
+      (text.match(/\S+@\S+\.\S+/g) || []).map(email => ({ id: email }))
+    render(
+      <DemoProvider>
+        <MemberAutocomplete
+          value={[]}
+          getMembersFromText={getMembersWithDomain}
+          placeholder="Add people"
+          onChange={() => {}}
+          onSubmit={() => {}}
+        />
+      </DemoProvider>
+    )
+    const input = screen.getByPlaceholderText('Add people')
+    const send = screen.getByRole('button', { name: 'Send' })
+
+    fireEvent.change(input, { target: { value: 'bob@example' } })
+    expect(send).toBeDisabled()
+
+    fireEvent.change(input, { target: { value: 'bob@example.com' } })
+    expect(send).toBeEnabled()
+  })
 })
