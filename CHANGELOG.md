@@ -1,3 +1,11 @@
+## [146.3.1](https://github.com/cozy/cozy-ui/compare/v146.3.0...v146.3.1) (2026-11-03)
+
+
+### Bug Fixes
+
+* **MemberAutocomplete:** Enable Send only for a text giving members ([6ffaeb0](https://github.com/cozy/cozy-ui/commit/6ffaeb0))
+* **MuiCozyTheme:** Stop the CircularProgress animation in screenshots ([d5025ad](https://github.com/cozy/cozy-ui/commit/d5025ad))
+
 # [146.3.0](https://github.com/cozy/cozy-ui/compare/v146.2.2...v146.3.0) (2026-11-03)
 
 
