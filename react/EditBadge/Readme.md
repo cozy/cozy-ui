@@ -14,6 +14,7 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar'
       src={timestamp => ""}
       onUpload={file => {}}
       onDelete={() => {}}
+      componentsProps={{ button: { 'aria-label': 'Edit avatar' } }}
     >
       <Avatar size={94} alt="Avatar" />
     </EditBadge>
