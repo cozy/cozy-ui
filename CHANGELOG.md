@@ -1,3 +1,10 @@
+# [146.5.0](https://github.com/cozy/cozy-ui/compare/v146.4.0...v146.5.0) (2026-11-04)
+
+
+### Features
+
+* **ColorList:** Name the colors ([886abac](https://github.com/cozy/cozy-ui/commit/886abac))
+
 # [146.4.0](https://github.com/cozy/cozy-ui/compare/v146.3.1...v146.4.0) (2026-11-04)
 
 
