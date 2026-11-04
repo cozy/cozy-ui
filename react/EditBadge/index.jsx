@@ -1,4 +1,5 @@
 import { Icon, Pen } from '@linagora/twake-icons'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useState, useRef } from 'react'
 
@@ -12,6 +13,7 @@ const EditBadge = ({
   onUpload,
   onDelete,
   anchorOrigin,
+  componentsProps,
   children,
   ...props
 }) => {
@@ -28,9 +30,13 @@ const EditBadge = ({
       badgeContent={
         <>
           <Button
+            {...componentsProps?.button}
             ref={menuAnchorRef}
             component="div"
-            className="u-miw-auto u-w-2-half u-h-2-half u-bdrs-circle"
+            className={cx(
+              'u-miw-auto u-w-2-half u-h-2-half u-bdrs-circle',
+              componentsProps?.button?.className
+            )}
             classes={{ label: 'u-flex u-w-auto' }}
             style={{
               outline: '4px solid var(--paperBackgroundColor)'
@@ -74,7 +80,11 @@ EditBadge.defaultProps = {
 EditBadge.propTypes = {
   src: PropTypes.func.isRequired,
   onUpload: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func.isRequired,
+  componentsProps: PropTypes.shape({
+    /** Props spread to the badge button */
+    button: PropTypes.object
+  })
 }
 
 export default EditBadge
