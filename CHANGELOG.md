@@ -1,3 +1,10 @@
+# [146.4.0](https://github.com/cozy/cozy-ui/compare/v146.3.1...v146.4.0) (2026-11-04)
+
+
+### Features
+
+* **EditBadge:** Add componentsProps to customize the badge button ([8248bc7](https://github.com/cozy/cozy-ui/commit/8248bc7))
+
 ## [146.3.1](https://github.com/cozy/cozy-ui/compare/v146.3.0...v146.3.1) (2026-11-03)
 
 
