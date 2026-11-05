@@ -1,3 +1,10 @@
+## [146.5.2](https://github.com/cozy/cozy-ui/compare/v146.5.1...v146.5.2) (2026-11-05)
+
+
+### Bug Fixes
+
+* **MemberRow:** Declare the propTypes of MemberGroupAvatar ([cb72f84](https://github.com/cozy/cozy-ui/commit/cb72f84))
+
 ## [146.5.1](https://github.com/cozy/cozy-ui/compare/v146.5.0...v146.5.1) (2026-11-05)
 
 
