@@ -215,7 +215,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
 
 ### Long label
 
-A long label is cut with an ellipsis to fit the room of the chip, or the `maxWidth` given in `style`. The icons keep their size.
+A long label is cut with an ellipsis to fit the room of the chip, or the `maxWidth` given in `style`. The icons keep their size. A `draggable` chip shows the grab cursor.
 
 ```jsx
 import Chip from 'cozy-ui/transpiled/react/Chips'
@@ -249,6 +249,7 @@ const label = 'a.very.long.address.that.goes.on.and.on.again@example.com'
         label={label}
         onDelete={() => {}}
         deleteIcon={<Icon icon={FileOutline} />}
+        draggable
       />
     </div>
   </Stack>

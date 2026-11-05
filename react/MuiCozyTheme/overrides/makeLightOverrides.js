@@ -1149,6 +1149,9 @@ export const makeLightOverrides = theme => ({
   MuiChip: {
     root: {
       maxWidth: '100%',
+      '&[draggable="true"]': {
+        cursor: 'grab'
+      },
       '& $icon, & $deleteIcon': {
         flexShrink: 0
       },
