@@ -63,3 +63,27 @@ initialState = { members: [], role: 'readWrite' }
   </Variants>
 </DemoProvider>
 ```
+
+### With picked members
+
+```jsx
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import MemberAutocomplete from 'cozy-ui/transpiled/react/MemberAutocomplete'
+
+const members = [
+  { id: 'alice', name: 'Alice Wonderland', subtitle: 'alice@cozy.cc', email: 'alice@cozy.cc', initials: 'AW' },
+  { id: 'bob', name: 'Bob Sponge', subtitle: 'bob@cozy.cc', email: 'bob@cozy.cc', initials: 'BS' },
+  { id: 'family', name: 'Family', subtitle: '3 members', isGroup: true, color: '#FF7F1B' }
+]
+
+;
+
+<DemoProvider>
+  <MemberAutocomplete
+    value={members}
+    title="Add people"
+    onChange={() => {}}
+    onSubmit={() => {}}
+  />
+</DemoProvider>
+```
