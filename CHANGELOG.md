@@ -1,3 +1,11 @@
+## [146.5.1](https://github.com/cozy/cozy-ui/compare/v146.5.0...v146.5.1) (2026-11-05)
+
+
+### Bug Fixes
+
+* **MemberAutocomplete:** Give the chip avatars the chip styles ([1cb1300](https://github.com/cozy/cozy-ui/commit/1cb1300))
+* **MemberList:** Use the mockup illustration in the empty state ([ecccbbd](https://github.com/cozy/cozy-ui/commit/ecccbbd))
+
 # [146.5.0](https://github.com/cozy/cozy-ui/compare/v146.4.0...v146.5.0) (2026-11-04)
 
 
