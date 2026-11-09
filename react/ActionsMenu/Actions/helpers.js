@@ -1,5 +1,3 @@
-import { PDFDocument } from 'pdf-lib'
-
 // Should guarantee good resolution for different uses (printing, downloading, etc.)
 const MAX_RESIZE_IMAGE_SIZE = 3840
 const MAX_IMAGE_SIDE_SIZE = 1920
@@ -150,7 +148,7 @@ const fileToDataUri = async file => {
 
 /**
  * Compress image and add it to pdf
- * @param {PDFDocument} pdfDoc
+ * @param {import('pdf-lib').PDFDocument} pdfDoc
  * @param {File} file
  * @returns {Promise<void>}
  */
@@ -187,11 +185,12 @@ export const fileToArrayBuffer = async file => {
 }
 
 /**
- * @param {PDFDocument} pdfDoc
+ * @param {import('pdf-lib').PDFDocument} pdfDoc
  * @param {File} file
  * @returns {Promise<void>}
  */
 const addPdfToPdf = async (pdfDoc, file) => {
+  const { PDFDocument } = await import('pdf-lib')
   const pdfToAdd = await fileToArrayBuffer(file)
   const document = await PDFDocument.load(pdfToAdd)
   const copiedPages = await pdfDoc.copyPages(
@@ -202,7 +201,7 @@ const addPdfToPdf = async (pdfDoc, file) => {
 }
 
 /**
- * @param {PDFDocument} pdfDoc - Instance of PDFDocument
+ * @param {import('pdf-lib').PDFDocument} pdfDoc - Instance of PDFDocument
  * @param {File} file - File to add in pdf
  * @returns {Promise<ArrayBuffer>} - Data of pdf generated
  */
@@ -224,6 +223,7 @@ export const addFileToPdf = async (pdfDoc, file) => {
  * @returns {Promise<object>} Blob of generated Pdf
  */
 export const makePdfBlob = async ({ client, docs, fetchBlobFileById }) => {
+  const { PDFDocument } = await import('pdf-lib')
   const pdfDoc = await PDFDocument.create()
 
   for (const doc of docs) {

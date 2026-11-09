@@ -1,5 +1,3 @@
-import { PDFDocument, StandardFonts } from 'pdf-lib'
-
 /**
  * Wrap a string into multiple lines based on available width.
  *
@@ -40,7 +38,7 @@ export const wrapTextToLines = ({ font, fontSize, maxLineWidth, line }) => {
  * Add a new page if there is not enough space to draw a new line.
  *
  * @param {object} opts
- * @param {PDFDocument} opts.pdfDoc - pdf-lib document
+ * @param {import('pdf-lib').PDFDocument} opts.pdfDoc - pdf-lib document
  * @param {import('pdf-lib').PDFPage} opts.page - Current page
  * @param {number} opts.y - Current y cursor position
  * @param {number} opts.requiredHeight - Height required before adding a new page
@@ -77,7 +75,7 @@ export const pushNewPageIfNeeded = ({
  * Draws a plain text string onto a PDF, wrapping lines to max width and handling page breaks.
  *
  * @param {object} opts
- * @param {PDFDocument} opts.pdfDoc - pdf-lib document
+ * @param {import('pdf-lib').PDFDocument} opts.pdfDoc - pdf-lib document
  * @param {import('pdf-lib').PDFPage} opts.page - Current page
  * @param {number} opts.y - Current y cursor position
  * @param {string} opts.text - Text to draw
@@ -155,6 +153,7 @@ export const drawWrappedText = ({
  * @returns {Promise<Blob>} PDF file as a Blob
  */
 export const makePdfBlobFromText = async text => {
+  const { PDFDocument, StandardFonts } = await import('pdf-lib')
   const pdfDoc = await PDFDocument.create()
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica)
 
