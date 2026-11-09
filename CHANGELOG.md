@@ -1,3 +1,10 @@
+## [146.5.3](https://github.com/cozy/cozy-ui/compare/v146.5.2...v146.5.3) (2026-11-09)
+
+
+### Bug Fixes
+
+* **ActionsMenu:** Load pdf-lib on demand ([8a614a8](https://github.com/cozy/cozy-ui/commit/8a614a8))
+
 ## [146.5.2](https://github.com/cozy/cozy-ui/compare/v146.5.1...v146.5.2) (2026-11-05)
 
 
