@@ -18,7 +18,7 @@ const ActionsMenuButton = ({ docs, actions }) => {
       <ListItemIcon>
         <IconButton
           ref={actionsRef}
-          arial-label={t('menu')}
+          aria-label={t('menu')}
           onClick={() => setShowActions(true)}
         >
           <Icon icon={Dots} />
