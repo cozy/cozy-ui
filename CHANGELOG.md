@@ -1,3 +1,10 @@
+## [146.5.4](https://github.com/cozy/cozy-ui/compare/v146.5.3...v146.5.4) (2026-11-10)
+
+
+### Bug Fixes
+
+* **ActionsMenuButton:** Give the menu button its aria-label ([e491b82](https://github.com/cozy/cozy-ui/commit/e491b82))
+
 ## [146.5.3](https://github.com/cozy/cozy-ui/compare/v146.5.2...v146.5.3) (2026-11-09)
 
 
