@@ -1033,7 +1033,13 @@ export const makeLightOverrides = theme => ({
       fontSize: '1rem',
       lineHeight: '1.3',
       borderRadius: '4px',
-      padding: '8px 12px'
+      padding: '8px 12px',
+      '&:not($touch)': {
+        [theme.breakpoints.up('md')]: {
+          ...theme.typography.caption,
+          padding: '4px 8px'
+        }
+      }
     }
   },
   MuiAutocomplete: {
