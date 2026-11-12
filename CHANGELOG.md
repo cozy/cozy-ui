@@ -1,3 +1,10 @@
+# [146.6.0](https://github.com/cozy/cozy-ui/compare/v146.5.4...v146.6.0) (2026-11-12)
+
+
+### Features
+
+* **Table:** Select VirtualizedTable rows with the keyboard ([ca2c390](https://github.com/cozy/cozy-ui/commit/ca2c390))
+
 ## [146.5.4](https://github.com/cozy/cozy-ui/compare/v146.5.3...v146.5.4) (2026-11-10)
 
 
