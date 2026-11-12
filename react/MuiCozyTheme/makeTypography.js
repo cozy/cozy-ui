@@ -56,6 +56,12 @@ export const makeTypography = () => ({
     lineHeight: 1.313,
     letterSpacing: '0.25px'
   },
+  body3: {
+    fontSize: 14,
+    fontWeight: 400,
+    lineHeight: 1.313,
+    letterSpacing: '0.25px'
+  },
   button: {
     fontSize: 16,
     fontWeight: 500,
