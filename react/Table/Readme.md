@@ -86,7 +86,7 @@ const initialVariants = [{ grouped: false }]
 const makeGroups = () => ({ groupLabels: ['C', 'D', 'E', 'Others'], groupCounts: [1,1,1,11] })
 
 const ExampleTable = ({ variant, ...props }) => {
-  const { selectedItemsId, isSelectedItem, toggleSelectedItem, toggleSelectAllItems } = useSelection()
+  const { selectedItemsId, isSelectedItem, toggleSelectedItem, toggleSelectAllItems, selectAll } = useSelection()
 
   const onSortChange = ({ order, orderBy }) => {
     console.info('order:', order, 'oderBy:', orderBy)
@@ -101,6 +101,7 @@ const ExampleTable = ({ variant, ...props }) => {
       selectedItems={selectedItemsId}
       isSelectedItem={row => isSelectedItem(row.id)}
       onSortChange={onSortChange}
+      onSelectionChange={rows => selectAll(rows.filter(row => row.id !== 1).map(row => row.id))}
       componentsProps={{
         rowContent: {
           onClick: (row, column) => {
@@ -110,7 +111,7 @@ const ExampleTable = ({ variant, ...props }) => {
           },
           onDoubleClick: (row, column) => {
             row.id !== 1
-              ? console.info(`double click on cell. Row ${row['id']}, Column ${column['id']}`)
+              ? console.info(`double click on cell. Row ${row['id']}, Column ${column ? column.id : 'none'}`)
               : undefined
           },
           onLongPress: (row, column) => {

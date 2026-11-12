@@ -528,6 +528,10 @@ export const makeLightOverrides = theme => ({
         cursor: 'pointer',
         pointerEvents: 'none',
         opacity: 0.5
+      },
+      '&:focus-visible': {
+        outline: `2px solid ${theme.palette.primary.main}`,
+        outlineOffset: -2
       }
     }
   },
