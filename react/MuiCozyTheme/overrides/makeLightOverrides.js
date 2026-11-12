@@ -556,6 +556,21 @@ export const makeLightOverrides = theme => ({
       '& .cozyListItemIcon': {
         width: 16,
         height: 16
+      },
+      // Heights stay those of the 16px text: line height in px
+      [theme.breakpoints.up('md')]: {
+        ...theme.typography.body3,
+        lineHeight: '21px',
+        '& [class*="MuiListItemText-primary"]': {
+          ...theme.typography.body3,
+          lineHeight: '21px'
+        }
+      }
+    },
+    dense: {
+      [theme.breakpoints.up('md')]: {
+        ...theme.typography.body3,
+        lineHeight: '21px'
       }
     },
     gutters: {
@@ -1022,6 +1037,12 @@ export const makeLightOverrides = theme => ({
     }
   },
   MuiAutocomplete: {
+    paper: {
+      [theme.breakpoints.up('md')]: {
+        ...theme.typography.body3,
+        lineHeight: '21px'
+      }
+    },
     inputRoot: {
       '&[class*="MuiInput-root"]': {
         paddingBottom: undefined,
