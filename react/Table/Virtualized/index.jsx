@@ -1,5 +1,11 @@
 import PropTypes from 'prop-types'
-import React, { useMemo, useState, forwardRef } from 'react'
+import React, {
+  useMemo,
+  useState,
+  useRef,
+  useImperativeHandle,
+  forwardRef
+} from 'react'
 import { TableVirtuoso, GroupedTableVirtuoso } from 'react-virtuoso'
 
 export { VirtuosoMockContext } from 'react-virtuoso'
@@ -7,6 +13,7 @@ export { VirtuosoMockContext } from 'react-virtuoso'
 import FixedHeaderContent from './FixedHeaderContent'
 import RowContent from './RowContent'
 import { stableSort, getComparator } from './helpers'
+import { useKeyboardSelection } from './useKeyboardSelection'
 import virtuosoComponents from './virtuosoComponents'
 import TableCell from '../../TableCell'
 
@@ -25,10 +32,14 @@ const VirtualizedTable = forwardRef(
       components,
       onSortChange,
       isNewItem,
+      onSelectionChange,
       ...props
     },
     ref
   ) => {
+    const virtuosoRef = useRef()
+    useImperativeHandle(ref, () => virtuosoRef.current)
+
     const [orderDirection, setOrderDirection] = useState(
       defaultOrder?.direction ?? 'asc'
     )
@@ -43,12 +54,21 @@ const VirtualizedTable = forwardRef(
     )
     const { groupLabels, groupCounts } = groups?.(data) || {}
     const isGroupedTable = !!groupCounts
+    const keyboard = useKeyboardSelection({
+      // custom rows do not read the keyboard props from the context
+      isEnabled: !components || components === virtuosoComponents,
+      rows: data,
+      onSelectionChange,
+      rowContent: componentsProps?.rowContent,
+      virtuosoRef
+    })
     const _context = {
       ...context,
       ...(isGroupedTable && { data }), // we use directly `data` prop if no groupCounts
       isSelectedItem,
       selectedItems,
-      isNewItem
+      isNewItem,
+      keyboard
     }
 
     const handleSort = property => {
@@ -64,11 +84,17 @@ const VirtualizedTable = forwardRef(
     return (
       <Component
         {...props}
-        ref={ref}
+        ref={virtuosoRef}
         data={!isGroupedTable ? data : undefined}
         groupCounts={isGroupedTable ? groupCounts : []}
         context={_context}
         components={components || virtuosoComponents}
+        {...(keyboard && {
+          rangeChanged: range => {
+            keyboard.onRangeChanged(range)
+            props.rangeChanged?.(range)
+          }
+        })}
         fixedHeaderContent={() => (
           <FixedHeaderContent
             {...componentsProps?.fixedHeaderContent}
@@ -127,9 +153,9 @@ VirtualizedTable.propTypes = {
   sortingMode: PropTypes.oneOf(['client', 'server']),
   /** Context object passed down to children and virtuoso */
   context: PropTypes.object,
-  /** Props passed to child components */
+  /** Props passed to child components. With the default `components`, the keyboard reaches the rows: arrows, Home and End move the focus, Space calls `rowContent.onClick` and Enter `rowContent.onDoubleClick`, with `column` set to `null` */
   componentsProps: PropTypes.object,
-  /** Custom components used by react-virtuoso */
+  /** Custom components used by react-virtuoso. They opt out of the keyboard support */
   components: PropTypes.object,
   /** Array of selected items */
   selectedItems: PropTypes.array,
@@ -138,7 +164,9 @@ VirtualizedTable.propTypes = {
   /** Callback called after the sort */
   onSortChange: PropTypes.func,
   /** Function to determine if a row is new */
-  isNewItem: PropTypes.func
+  isNewItem: PropTypes.func,
+  /** Called with the row objects (not their ids) the selection must become. With the default `components`, it adds range selection (Shift+arrows, Shift+click), select all (Ctrl/Cmd+A) and clear (Escape) */
+  onSelectionChange: PropTypes.func
 }
 
 export default VirtualizedTable
