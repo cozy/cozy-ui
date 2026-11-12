@@ -87,7 +87,11 @@ const Alert = forwardRef(
         className={cx(
           className,
           `cozyStyles-${severity}-${variant}`,
-          { block },
+          {
+            block: Boolean(block),
+            blockStart: block === 'start',
+            blockCenter: block === 'center'
+          },
           { action: Boolean(action) }
         )}
         classes={merge(styles, classes)}
@@ -111,7 +115,7 @@ Alert.displayName = 'Alert'
  * @property {string} className - Classname of the alert
  * @property {React.FC<PropTypes.InferProps<typeof Icon.propTypes>>|false} icon - Icon component to display in the alert (or false to hide it)
  * @property {'primary'|'secondary'|'success'|'error'|'warning'|'info'} severity - Severity of the alert (default: primary)
- * @property {boolean} block - Block the alert to the full width of its container (default: false)
+ * @property {boolean|'start'|'center'|'end'} block - Block the alert to the full width of its container, its action on a row of its own aligned to this side (`true` is `'end'`, default: false)
  * @property {string} color - Background color of the alert
  * @property {boolean} square - Square the alert corners (default: false)
  * @property {'standard'|'outlined'|'filled'} variant - Variant of the alert (default: standard)
@@ -128,7 +132,10 @@ export const AlertPropTypes = {
     'warning',
     'info'
   ]),
-  block: PropTypes.bool,
+  block: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['start', 'center', 'end'])
+  ]),
   color: PropTypes.string,
   square: PropTypes.bool,
   variant: PropTypes.oneOf(['standard', 'outlined', 'filled'])
