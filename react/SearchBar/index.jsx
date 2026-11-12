@@ -60,7 +60,9 @@ const useStyles = makeStyles(theme => ({
   },
   inputBase: {
     flex: 1,
-    fontSize: ({ size }) => fontSizeToPixel[size],
+    [theme.breakpoints.down('sm')]: {
+      fontSize: ({ size }) => fontSizeToPixel[size]
+    },
     paddingLeft: ({ icon }) => !icon && '1rem'
   },
   buttonBase: {

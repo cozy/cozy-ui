@@ -24,6 +24,27 @@ export const makeLightOverrides = theme => ({
       '&&': {
         paddingRight: 39
       }
+    },
+    selectMenu: {
+      [theme.breakpoints.up('md')]: {
+        minHeight: 19
+      }
+    }
+  },
+  MuiInputBase: {
+    // Heights stay those of the 16px text: line height and input height in px
+    root: {
+      [theme.breakpoints.up('md')]: {
+        ...theme.typography.body3,
+        lineHeight: '19px'
+      }
+    },
+    input: {
+      '&:not($inputMultiline):not([class*="MuiSelect-selectMenu"])': {
+        [theme.breakpoints.up('md')]: {
+          height: 19
+        }
+      }
     }
   },
   MuiOutlinedInput: {
@@ -53,7 +74,12 @@ export const makeLightOverrides = theme => ({
     },
     notchedOutline: {
       borderColor: theme.palette.border.main,
-      transition: `border-color ${theme.transitions.duration.shorter}ms`
+      transition: `border-color ${theme.transitions.duration.shorter}ms`,
+      [theme.breakpoints.up('md')]: {
+        '& legend': {
+          fontSize: 12
+        }
+      }
     },
     input: {
       textAlign: 'left',
@@ -65,9 +91,32 @@ export const makeLightOverrides = theme => ({
     }
   },
   MuiInputLabel: {
+    // 12px once shrunk, from a 14px label
+    shrink: {
+      [theme.breakpoints.up('md')]: {
+        transform: 'translate(0, 1px) scale(0.857)'
+      }
+    },
+    filled: {
+      '&$shrink': {
+        [theme.breakpoints.up('md')]: {
+          transform: 'translate(12px, 9px) scale(0.857)'
+        }
+      },
+      '&$shrink$marginDense': {
+        [theme.breakpoints.up('md')]: {
+          transform: 'translate(12px, 6px) scale(0.857)'
+        }
+      }
+    },
     outlined: {
       '&$marginDense': {
         transform: 'translate(14px, 14px) scale(1)'
+      },
+      '&$shrink': {
+        [theme.breakpoints.up('md')]: {
+          transform: 'translate(14px, -7px) scale(0.857)'
+        }
       },
       '&:not($shrink)': {
         '&$error': {
@@ -578,6 +627,10 @@ export const makeLightOverrides = theme => ({
       color: theme.palette.text.secondary,
       '&$disabled&$error': {
         color: theme.palette.text.disabled
+      },
+      [theme.breakpoints.up('md')]: {
+        ...theme.typography.body3,
+        lineHeight: '16px'
       }
     }
   },
