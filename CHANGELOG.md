@@ -1,3 +1,17 @@
+# [146.7.0](https://github.com/cozy/cozy-ui/compare/v146.6.0...v146.7.0) (2026-11-17)
+
+
+### Bug Fixes
+
+* **MuiCozyTheme:** Center the resting label of small outlined fields ([7011aa8](https://github.com/cozy/cozy-ui/commit/7011aa8))
+
+
+### Features
+
+* **MuiCozyTheme:** Use 12px text in tooltips on desktop ([ed80df2](https://github.com/cozy/cozy-ui/commit/ed80df2))
+* **MuiCozyTheme:** Use 14px text in fields on desktop ([10a2731](https://github.com/cozy/cozy-ui/commit/10a2731))
+* **MuiCozyTheme:** Use 14px text in menus on desktop ([0808187](https://github.com/cozy/cozy-ui/commit/0808187))
+
 # [146.6.0](https://github.com/cozy/cozy-ui/compare/v146.5.4...v146.6.0) (2026-11-12)
 
 
