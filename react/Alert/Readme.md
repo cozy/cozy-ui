@@ -11,6 +11,8 @@ const initialVariants = [{
   longText: false,
   title: false,
   block: false,
+  blockStart: false,
+  blockCenter: false,
   color: false,
   largeIcon: false,
   noIcon: false,
@@ -29,7 +31,7 @@ const initialVariants = [{
     <Alert
       color={variant.color ? "#EFA82D" : undefined}
       variant={variant.filled ? 'filled' : undefined}
-      block={variant.block}
+      block={variant.blockStart ? 'start' : variant.blockCenter ? 'center' : variant.block}
       square={variant.square}
       icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptop} color="var(--errorColor)" size={32} /> : undefined}
       action={(variant.actionOne || variant.actionTwo || variant.actionThree) ?
