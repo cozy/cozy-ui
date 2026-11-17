@@ -111,7 +111,7 @@ export const makeLightOverrides = theme => ({
     },
     outlined: {
       '&$marginDense': {
-        transform: 'translate(14px, 14px) scale(1)'
+        transform: 'translate(14px, 16px) scale(1)'
       },
       '&$shrink': {
         [theme.breakpoints.up('md')]: {
