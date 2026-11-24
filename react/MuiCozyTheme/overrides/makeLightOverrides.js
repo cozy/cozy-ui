@@ -375,8 +375,13 @@ export const makeLightOverrides = theme => ({
         zIndex: 1,
         borderRadius: '99px',
         minHeight: '2.5rem',
+        // The colours of `textColor="primary"`, whatever textColor the Tabs get
         '&$selected': {
-          color: theme.palette.text.primary
+          color: theme.palette.primary.main
+        },
+        '&$disabled': {
+          color: theme.palette.text.disabled,
+          opacity: 1
         }
       }
     }
