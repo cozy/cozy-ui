@@ -1,3 +1,10 @@
+## [146.7.2](https://github.com/cozy/cozy-ui/compare/v146.7.1...v146.7.2) (2026-11-24)
+
+
+### Bug Fixes
+
+* Write the repository URL the way npm publishes it ([ca629a5](https://github.com/cozy/cozy-ui/commit/ca629a5ca5e847f49737ea5071add67c8b980b0c))
+
 ## [146.7.1](https://github.com/cozy/cozy-ui/compare/v146.7.0...v146.7.1) (2026-11-24)
 
 
