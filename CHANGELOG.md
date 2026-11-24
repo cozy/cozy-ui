@@ -1,3 +1,10 @@
+## [146.7.1](https://github.com/cozy/cozy-ui/compare/v146.7.0...v146.7.1) (2026-11-24)
+
+
+### Bug Fixes
+
+* **MuiCozyTheme:** Show the chosen segmented tab in the primary colour ([a108a1e](https://github.com/cozy/cozy-ui/commit/a108a1e))
+
 # [146.7.0](https://github.com/cozy/cozy-ui/compare/v146.6.0...v146.7.0) (2026-11-17)
 
 
