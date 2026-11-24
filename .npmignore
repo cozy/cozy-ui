@@ -22,4 +22,5 @@ loaders
 # that has already been processed by postcss, it is not necessary.
 postcss.config.js
 
-screenshots/
+# Anchored: an unanchored rule also drops scripts/screenshots/, which the rsg-screenshots bin requires
+/screenshots/
