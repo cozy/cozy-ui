@@ -5,8 +5,6 @@ on:
   pull_request:
 env:
   ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -105,7 +103,15 @@ jobs:
           yarn argos:upload --parallel screenshots/kss/ --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
   deploy:
     needs: [argosUpload, test]
+    # The npm environment only accepts master
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read # the docs, the release commit and the tags are pushed as cozy-bot
+      id-token: write # npm trusted publishing (OIDC)
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -113,5 +119,4 @@ jobs:
       - uses: ./.github/actions/setup_modules
       - uses: ./.github/actions/build_cache_read
       - name: Deploy
-        if: ${{ github.ref_name == 'master' }}
         run: yarn deploy:doc --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
