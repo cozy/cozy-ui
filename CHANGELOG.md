@@ -1,3 +1,10 @@
+## [146.7.3](https://github.com/cozy/cozy-ui/compare/v146.7.2...v146.7.3) (2026-11-24)
+
+
+### Bug Fixes
+
+* Ship the screenshot scripts in the npm package ([3876365](https://github.com/cozy/cozy-ui/commit/3876365e06dc6eb3d5f0a5fc08dea74f84e6ce46))
+
 ## [146.7.2](https://github.com/cozy/cozy-ui/compare/v146.7.1...v146.7.2) (2026-11-24)
 
 
