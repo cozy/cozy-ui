@@ -103,10 +103,10 @@ jobs:
           yarn argos:upload --parallel screenshots/kss/ --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
   deploy:
     needs: [argosUpload, test]
-    # The npm environment only accepts master
+    # No GitHub environment: the plan of the cozy organization has none.
+    # The trusted publisher on npmjs.com is declared without an environment.
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    environment: npm
     permissions:
       contents: read # the docs, the release commit and the tags are pushed as cozy-bot
       id-token: write # npm trusted publishing (OIDC)
