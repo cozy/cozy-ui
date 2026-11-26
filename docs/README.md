@@ -313,8 +313,6 @@ Cozy-ui relies on many packages to work, but we tend to want it to be more agnos
 
 * cozy-device-helper [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/package.json) => Dialog
 * cozy-intent [(see peerDeps)](https://github.com/cozy/cozy-libs/blob/master/packages/cozy-intent/package.json) => ActionsMenu, Dialog, SelectionBar
-* react-dnd => Table/Virtualized/DnD, GridList/Virtualized/DnD
-* react-dnd-html5-backend => Table/Virtualized/DnD, GridList/Virtualized/DnD
 * twake-i18n => lots of component
 
 #### PeerDependencies for deprecated components
