@@ -60,7 +60,9 @@ const useStyles = makeStyles(theme => ({
   },
   inputBase: {
     flex: 1,
-    [theme.breakpoints.down('sm')]: {
+    // Touch screens keep the 16px of InputBase: iOS zooms on a field under
+    // 16px when it takes the focus
+    [`${theme.breakpoints.down('sm')} and (not (pointer: coarse))`]: {
       fontSize: ({ size }) => fontSizeToPixel[size]
     },
     paddingLeft: ({ icon }) => !icon && '1rem'

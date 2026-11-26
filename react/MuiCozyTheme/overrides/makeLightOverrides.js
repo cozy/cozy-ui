@@ -8,6 +8,12 @@ import {
   getFlagshipCssVar
 } from '../helpers'
 
+// Fields, their labels and their options take 14px from md, but not on a touch
+// screen, which keeps 16px as wide (a tablet, a phone held sideways): iOS
+// Safari zooms the page into a field whose text is under 16px
+const makeMouseFromMdQuery = theme =>
+  `${theme.breakpoints.up('md')} and (not (pointer: coarse))`
+
 export const makeLightOverrides = theme => ({
   MuiAppBar: {
     colorDefault: {
@@ -26,7 +32,7 @@ export const makeLightOverrides = theme => ({
       }
     },
     selectMenu: {
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         minHeight: 19
       }
     }
@@ -34,14 +40,14 @@ export const makeLightOverrides = theme => ({
   MuiInputBase: {
     // Heights stay those of the 16px text: line height and input height in px
     root: {
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         ...theme.typography.body3,
         lineHeight: '19px'
       }
     },
     input: {
       '&:not($inputMultiline):not([class*="MuiSelect-selectMenu"])': {
-        [theme.breakpoints.up('md')]: {
+        [makeMouseFromMdQuery(theme)]: {
           height: 19
         }
       }
@@ -75,7 +81,7 @@ export const makeLightOverrides = theme => ({
     notchedOutline: {
       borderColor: theme.palette.border.main,
       transition: `border-color ${theme.transitions.duration.shorter}ms`,
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         '& legend': {
           fontSize: 12
         }
@@ -93,18 +99,18 @@ export const makeLightOverrides = theme => ({
   MuiInputLabel: {
     // 12px once shrunk, from a 14px label
     shrink: {
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         transform: 'translate(0, 1px) scale(0.857)'
       }
     },
     filled: {
       '&$shrink': {
-        [theme.breakpoints.up('md')]: {
+        [makeMouseFromMdQuery(theme)]: {
           transform: 'translate(12px, 9px) scale(0.857)'
         }
       },
       '&$shrink$marginDense': {
-        [theme.breakpoints.up('md')]: {
+        [makeMouseFromMdQuery(theme)]: {
           transform: 'translate(12px, 6px) scale(0.857)'
         }
       }
@@ -114,7 +120,7 @@ export const makeLightOverrides = theme => ({
         transform: 'translate(14px, 16px) scale(1)'
       },
       '&$shrink': {
-        [theme.breakpoints.up('md')]: {
+        [makeMouseFromMdQuery(theme)]: {
           transform: 'translate(14px, -7px) scale(0.857)'
         }
       },
@@ -563,7 +569,7 @@ export const makeLightOverrides = theme => ({
         height: 16
       },
       // Heights stay those of the 16px text: line height in px
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         ...theme.typography.body3,
         lineHeight: '21px',
         '& [class*="MuiListItemText-primary"]': {
@@ -573,7 +579,7 @@ export const makeLightOverrides = theme => ({
       }
     },
     dense: {
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         ...theme.typography.body3,
         lineHeight: '21px'
       }
@@ -648,7 +654,7 @@ export const makeLightOverrides = theme => ({
       '&$disabled&$error': {
         color: theme.palette.text.disabled
       },
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         ...theme.typography.body3,
         lineHeight: '16px'
       }
@@ -1049,7 +1055,7 @@ export const makeLightOverrides = theme => ({
   },
   MuiAutocomplete: {
     paper: {
-      [theme.breakpoints.up('md')]: {
+      [makeMouseFromMdQuery(theme)]: {
         ...theme.typography.body3,
         lineHeight: '21px'
       }
