@@ -1276,6 +1276,14 @@ export const makeLightOverrides = theme => ({
           paddingLeft: 0,
           justifyContent: 'end'
         }
+      },
+      '&.blockStart $action': {
+        justifyContent: 'flex-start',
+        margin: 0
+      },
+      '&.blockCenter $action': {
+        justifyContent: 'center',
+        margin: 0
       }
     },
     message: {
