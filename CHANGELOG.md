@@ -1,3 +1,19 @@
+# [147.0.0](https://github.com/cozy/cozy-ui/compare/v146.7.3...v147.0.0) (2026-11-26)
+
+
+### Features
+
+* Remove drag and drop of virtualized lists ([18ac25d](https://github.com/cozy/cozy-ui/commit/18ac25d68aec004cbd66315e28dc042c46b74374))
+
+
+### BREAKING CHANGES
+
+* `Table/Virtualized/Dnd`, `GridList/Virtualized/Dnd`
+and `utils/Dnd` are removed, and `react-dnd` and
+`react-dnd-html5-backend` are no longer peer dependencies. Apps using
+them must copy these components into their own code and keep
+`react-dnd` and `react-dnd-html5-backend` as direct dependencies.
+
 ## [146.7.3](https://github.com/cozy/cozy-ui/compare/v146.7.2...v146.7.3) (2026-11-24)
 
 
